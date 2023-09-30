@@ -1,5 +1,6 @@
 # ĐỒ ÁN MÔN HỌC SE100.O13.PMCL
 ## Tên đồ án: Phần mềm quản lý quán cafe
+## Công nghệ: Winform - C#
 
 ### Giới thiệu môn học
 - Tên môn học: **Phương pháp phát triển phần mềm hướng đối tượng**
