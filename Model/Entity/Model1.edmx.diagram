@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="395e58a340084d828e6e449b48c65858" Name="Diagram1">
+        <EntityTypeShape EntityType="QLCFModel.BAN" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.CHITIETHOADON" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.CHITIETPHIEUNHAP" Width="1.5" PointX="8" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.CHUCNANG" Width="1.5" PointX="1.5" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.DOUONG" Width="1.5" PointX="3" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.HOADON" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.KHUVUC" Width="1.5" PointX="1.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.LOAIDOUONG" Width="1.5" PointX="0.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.LOAIPHIEUCHI" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.NGUOIDUNG" Width="1.5" PointX="0.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.NHOMNGUOIDUNG" Width="1.5" PointX="1.5" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.PHIEUCHI" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.PHIEUGIAMGIA" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.PHIEUNHAPHANG" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.SOGIONGHI" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.SUKIEN" Width="1.5" PointX="5.25" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.TRANGTHAIBAN" Width="1.5" PointX="1.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QLCFModel.TRANGTHAIHOADON" Width="1.5" PointX="0.75" PointY="28.75" IsExpanded="true" />
+        <AssociationConnector Association="QLCFModel.FK__BAN__MaKhuVuc__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__BAN__TrangThai__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__HOADON__idBan__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__CHITIETHO__idDoU__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__CHITIETHO__idHoa__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__CHITIETPH__idPhi__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__DOUONG__MaLoaiDo__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__HOADON__idKhachH__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__HOADON__idNguoiD__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__HOADON__idTrangT__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__PHIEUGIAM__idKha__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__PHIEUCHI__MaLoai__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__NGUOIDUNG__idNho__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.FK__SOGIONGHI__idNgu__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.CHITIETSUKIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="QLCFModel.PHANQUYEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

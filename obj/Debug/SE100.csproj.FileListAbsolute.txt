@@ -1,0 +1,15 @@
+C:\Users\DELL\Desktop\SE100\bin\Debug\SE100.exe.config
+C:\Users\DELL\Desktop\SE100\bin\Debug\SE100.exe
+C:\Users\DELL\Desktop\SE100\bin\Debug\SE100.pdb
+C:\Users\DELL\Desktop\SE100\bin\Debug\EntityFramework.dll
+C:\Users\DELL\Desktop\SE100\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\Desktop\SE100\bin\Debug\EntityFramework.xml
+C:\Users\DELL\Desktop\SE100\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\Desktop\SE100\obj\Debug\SE100.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\SE100\obj\Debug\SE100.csproj.SuggestedBindingRedirects.cache
+C:\Users\DELL\Desktop\SE100\obj\Debug\SE100.Properties.Resources.resources
+C:\Users\DELL\Desktop\SE100\obj\Debug\SE100.csproj.GenerateResource.cache
+C:\Users\DELL\Desktop\SE100\obj\Debug\SE100.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\SE100\obj\Debug\SE100.csproj.CopyComplete
+C:\Users\DELL\Desktop\SE100\obj\Debug\SE100.exe
+C:\Users\DELL\Desktop\SE100\obj\Debug\SE100.pdb
