@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="814602d2e272405a93374789be2ad079" Name="Diagram1">
+        <EntityTypeShape EntityType="CoffeeStoreModel.BAN" Width="1.5" PointX="0.75" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.CHITIETHOADON" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.CHITIETPHIEUNHAP" Width="1.5" PointX="8" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.CHUCNANG" Width="1.5" PointX="1.5" PointY="26" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.DOUONG" Width="1.5" PointX="3" PointY="31.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.HOADON" Width="1.5" PointX="3" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.KHACHHANG" Width="1.5" PointX="0.75" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.KHUVUC" Width="1.5" PointX="1.5" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.LOAIDOUONG" Width="1.5" PointX="0.75" PointY="32.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.LOAIPHIEUCHI" Width="1.5" PointX="7.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.NGUOIDUNG" Width="1.5" PointX="0.75" PointY="18" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.NHOMNGUOIDUNG" Width="1.5" PointX="1.5" PointY="23" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.PHIEUCHI" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.PHIEUGIAMGIA" Width="1.5" PointX="3" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.PHIEUNHAPHANG" Width="1.5" PointX="5.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.SOGIONGHI" Width="1.5" PointX="3" PointY="19.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.SUKIEN" Width="1.5" PointX="5.25" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.TRANGTHAIBAN" Width="1.5" PointX="1.5" PointY="15.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CoffeeStoreModel.TRANGTHAIHOADON" Width="1.5" PointX="0.75" PointY="28.75" IsExpanded="true" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__BAN__MaKhuVuc__3E52440B" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__BAN__TrangThai__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__HOADON__idBan__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__CHITIETHO__idDoU__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__CHITIETHO__idHoa__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__CHITIETPH__idPhi__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__DOUONG__MaLoaiDo__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__HOADON__idKhachH__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__HOADON__idNguoiD__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__HOADON__idTrangT__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__PHIEUGIAM__idKha__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__PHIEUCHI__MaLoai__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__NGUOIDUNG__idNho__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.FK__SOGIONGHI__idNgu__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.CHITIETSUKIEN" ManuallyRouted="false" />
+        <AssociationConnector Association="CoffeeStoreModel.PHANQUYEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
