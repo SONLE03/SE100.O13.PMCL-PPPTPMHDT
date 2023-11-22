@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="297f049ded534a51965287197e973960" Name="Diagram1">
+        <EntityTypeShape EntityType="CFModel.C_SIZE" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.C_TABLE" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.C_USER" Width="1.5" PointX="0.75" PointY="21.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.AREA" Width="1.5" PointX="1.5" PointY="18.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.BILL" Width="1.5" PointX="3" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.BILL_DETAIL" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.CATEGORY" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.DRINK" Width="1.5" PointX="3" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.DRINKS_SIZE" Width="1.5" PointX="8.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.EVENT" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.GROUPUSER" Width="1.5" PointX="1.5" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.IMPORT_BILL" Width="1.5" PointX="3" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.IMPORT_BILL_DETAIL" Width="1.5" PointX="5.25" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.SERVICE" Width="1.5" PointX="3.75" PointY="26.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CFModel.SUPPLIER" Width="1.5" PointX="0.75" PointY="29.375" IsExpanded="true" />
+        <AssociationConnector Association="CFModel.FK__DRINKS_SI__SizeI__619B8048" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK___TABLE__AreaID__68487DD7" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__BILL__TableID__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK___USER__GroupUser__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__BILL__UserID__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__IMPORT_BI__UserI__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__BILL_DETA__BillI__70DDC3D8" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__BILL_DETA__Drink__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__DRINKS__Category__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__DRINKS__EventID__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__DRINKS_SI__Drink__60A75C0F" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__IMPORT_BI__Impor__7D439ABD" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.FK__IMPORT_BI__Suppl__787EE5A0" ManuallyRouted="false" />
+        <AssociationConnector Association="CFModel.PERMISSION" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

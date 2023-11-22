@@ -1,0 +1,1128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="CFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="_SIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SizeID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="SizeName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="_TABLE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TableID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="TableName" Type="nvarchar(max)" />
+          <Property Name="AreaID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="_USER">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="UserFullName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DateOfBirth" Type="datetime" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Email" Type="varchar(max)" />
+          <Property Name="UserName" Type="varchar" MaxLength="256" Nullable="false" />
+          <Property Name="Password" Type="varchar(max)" Nullable="false" />
+          <Property Name="GroupUserID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AREA">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AreaID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="AreaName" Type="nvarchar(max)" />
+          <Property Name="ExtraFee" Type="float" />
+          <Property Name="Status" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="BILL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="BillID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="BillDate" Type="datetime" Nullable="false" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="TableID" Type="int" />
+          <Property Name="Status" Type="int" Nullable="false" />
+          <Property Name="Note" Type="nvarchar(max)" />
+          <Property Name="Total" Type="float" />
+        </EntityType>
+        <EntityType Name="BILL_DETAIL">
+          <Key>
+            <PropertyRef Name="BillID" />
+            <PropertyRef Name="DrinksID" />
+          </Key>
+          <Property Name="BillID" Type="int" Nullable="false" />
+          <Property Name="DrinksID" Type="int" Nullable="false" />
+          <Property Name="Unit" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Rate" Type="float" Nullable="false" />
+          <Property Name="Amount" Type="float" />
+        </EntityType>
+        <EntityType Name="CATEGORY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CategoryID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="CategoryName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DRINKS">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DrinksID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="DrinksName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="Unit" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Image" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Status" Type="bit" Nullable="false" />
+          <Property Name="EventID" Type="int" />
+        </EntityType>
+        <EntityType Name="DRINKS_SIZE">
+          <Key>
+            <PropertyRef Name="DrinksID" />
+            <PropertyRef Name="SizeID" />
+          </Key>
+          <Property Name="DrinksID" Type="int" Nullable="false" />
+          <Property Name="SizeID" Type="int" Nullable="false" />
+          <Property Name="OriginalPrice" Type="float" Nullable="false" />
+          <Property Name="Discount" Type="float" />
+        </EntityType>
+        <EntityType Name="EVENT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EventID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="EventName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="EventType" Type="bit" Nullable="false" />
+          <Property Name="Unit" Type="nvarchar(max)" />
+          <Property Name="Discount" Type="float" />
+          <Property Name="StartDate" Type="datetime" />
+          <Property Name="DueDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="GROUPUSER">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GroupUserID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="GroupUserName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="IMPORT_BILL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ImportID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="ImportName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ImportDate" Type="datetime" Nullable="false" />
+          <Property Name="SupplierID" Type="int" />
+          <Property Name="UserID" Type="int" />
+          <Property Name="Total" Type="float" />
+        </EntityType>
+        <EntityType Name="IMPORT_BILL_DETAIL">
+          <Key>
+            <PropertyRef Name="No" />
+            <PropertyRef Name="ImportID" />
+          </Key>
+          <Property Name="No" Type="int" Nullable="false" />
+          <Property Name="ImportID" Type="int" Nullable="false" />
+          <Property Name="ImportMName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Unit" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="Rate" Type="float" Nullable="false" />
+          <Property Name="Amount" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PERMISSION">
+          <Key>
+            <PropertyRef Name="GroupUserID" />
+            <PropertyRef Name="ServiceID" />
+          </Key>
+          <Property Name="GroupUserID" Type="int" Nullable="false" />
+          <Property Name="ServiceID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SERVICE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ServiceID" Type="char" MaxLength="5" StoreGeneratedPattern="Computed" />
+          <Property Name="ServiceName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ScreenName" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SUPPLIER">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SupplierID" Type="char" MaxLength="6" StoreGeneratedPattern="Computed" />
+          <Property Name="SupplierName" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK___TABLE__AreaID__68487DD7">
+          <End Role="AREA" Type="Self.AREA" Multiplicity="1" />
+          <End Role="_TABLE" Type="Self._TABLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AREA">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="_TABLE">
+              <PropertyRef Name="AreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK___USER__GroupUser__52593CB8">
+          <End Role="GROUPUSER" Type="Self.GROUPUSER" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="_USER" Type="Self._USER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GROUPUSER">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="_USER">
+              <PropertyRef Name="GroupUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL__TableID__6C190EBB">
+          <End Role="_TABLE" Type="Self._TABLE" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="_TABLE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="TableID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL__UserID__6B24EA82">
+          <End Role="_USER" Type="Self._USER" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="_USER">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL_DETA__BillI__70DDC3D8">
+          <End Role="BILL" Type="Self.BILL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BILL_DETAIL" Type="Self.BILL_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BILL">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BILL_DETAIL">
+              <PropertyRef Name="BillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL_DETA__Drink__71D1E811">
+          <End Role="DRINKS" Type="Self.DRINKS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BILL_DETAIL" Type="Self.BILL_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DRINKS">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BILL_DETAIL">
+              <PropertyRef Name="DrinksID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DRINKS__Category__59FA5E80">
+          <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="1" />
+          <End Role="DRINKS" Type="Self.DRINKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORY">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DRINKS">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DRINKS__EventID__5BE2A6F2">
+          <End Role="EVENT" Type="Self.EVENT" Multiplicity="0..1" />
+          <End Role="DRINKS" Type="Self.DRINKS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EVENT">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DRINKS">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DRINKS_SI__Drink__60A75C0F">
+          <End Role="DRINKS" Type="Self.DRINKS" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DRINKS_SIZE" Type="Self.DRINKS_SIZE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DRINKS">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DRINKS_SIZE">
+              <PropertyRef Name="DrinksID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DRINKS_SI__SizeI__619B8048">
+          <End Role="_SIZE" Type="Self._SIZE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DRINKS_SIZE" Type="Self.DRINKS_SIZE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="_SIZE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DRINKS_SIZE">
+              <PropertyRef Name="SizeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IMPORT_BI__Impor__7D439ABD">
+          <End Role="IMPORT_BILL" Type="Self.IMPORT_BILL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="IMPORT_BILL_DETAIL" Type="Self.IMPORT_BILL_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IMPORT_BILL">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="IMPORT_BILL_DETAIL">
+              <PropertyRef Name="ImportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IMPORT_BI__Suppl__787EE5A0">
+          <End Role="SUPPLIER" Type="Self.SUPPLIER" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="IMPORT_BILL" Type="Self.IMPORT_BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUPPLIER">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="IMPORT_BILL">
+              <PropertyRef Name="SupplierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IMPORT_BI__UserI__797309D9">
+          <End Role="_USER" Type="Self._USER" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="IMPORT_BILL" Type="Self.IMPORT_BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="_USER">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="IMPORT_BILL">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PERMISSIO__Group__4D94879B">
+          <End Role="GROUPUSER" Type="Self.GROUPUSER" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PERMISSION" Type="Self.PERMISSION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GROUPUSER">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PERMISSION">
+              <PropertyRef Name="GroupUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__PERMISSIO__Servi__4E88ABD4">
+          <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="PERMISSION" Type="Self.PERMISSION" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SERVICE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="PERMISSION">
+              <PropertyRef Name="ServiceID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="CFModelStoreContainer">
+          <EntitySet Name="_SIZE" EntityType="Self._SIZE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="_TABLE" EntityType="Self._TABLE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="_USER" EntityType="Self._USER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AREA" EntityType="Self.AREA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BILL" EntityType="Self.BILL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BILL_DETAIL" EntityType="Self.BILL_DETAIL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DRINKS" EntityType="Self.DRINKS" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DRINKS_SIZE" EntityType="Self.DRINKS_SIZE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="EVENT" EntityType="Self.EVENT" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GROUPUSER" EntityType="Self.GROUPUSER" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IMPORT_BILL" EntityType="Self.IMPORT_BILL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="IMPORT_BILL_DETAIL" EntityType="Self.IMPORT_BILL_DETAIL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PERMISSION" EntityType="Self.PERMISSION" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SERVICE" EntityType="Self.SERVICE" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SUPPLIER" EntityType="Self.SUPPLIER" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK___TABLE__AreaID__68487DD7" Association="Self.FK___TABLE__AreaID__68487DD7">
+            <End Role="AREA" EntitySet="AREA" />
+            <End Role="_TABLE" EntitySet="_TABLE" />
+          </AssociationSet>
+          <AssociationSet Name="FK___USER__GroupUser__52593CB8" Association="Self.FK___USER__GroupUser__52593CB8">
+            <End Role="GROUPUSER" EntitySet="GROUPUSER" />
+            <End Role="_USER" EntitySet="_USER" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL__TableID__6C190EBB" Association="Self.FK__BILL__TableID__6C190EBB">
+            <End Role="_TABLE" EntitySet="_TABLE" />
+            <End Role="BILL" EntitySet="BILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL__UserID__6B24EA82" Association="Self.FK__BILL__UserID__6B24EA82">
+            <End Role="_USER" EntitySet="_USER" />
+            <End Role="BILL" EntitySet="BILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL_DETA__BillI__70DDC3D8" Association="Self.FK__BILL_DETA__BillI__70DDC3D8">
+            <End Role="BILL" EntitySet="BILL" />
+            <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL_DETA__Drink__71D1E811" Association="Self.FK__BILL_DETA__Drink__71D1E811">
+            <End Role="DRINKS" EntitySet="DRINKS" />
+            <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DRINKS__Category__59FA5E80" Association="Self.FK__DRINKS__Category__59FA5E80">
+            <End Role="CATEGORY" EntitySet="CATEGORY" />
+            <End Role="DRINKS" EntitySet="DRINKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DRINKS__EventID__5BE2A6F2" Association="Self.FK__DRINKS__EventID__5BE2A6F2">
+            <End Role="EVENT" EntitySet="EVENT" />
+            <End Role="DRINKS" EntitySet="DRINKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DRINKS_SI__Drink__60A75C0F" Association="Self.FK__DRINKS_SI__Drink__60A75C0F">
+            <End Role="DRINKS" EntitySet="DRINKS" />
+            <End Role="DRINKS_SIZE" EntitySet="DRINKS_SIZE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DRINKS_SI__SizeI__619B8048" Association="Self.FK__DRINKS_SI__SizeI__619B8048">
+            <End Role="_SIZE" EntitySet="_SIZE" />
+            <End Role="DRINKS_SIZE" EntitySet="DRINKS_SIZE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IMPORT_BI__Impor__7D439ABD" Association="Self.FK__IMPORT_BI__Impor__7D439ABD">
+            <End Role="IMPORT_BILL" EntitySet="IMPORT_BILL" />
+            <End Role="IMPORT_BILL_DETAIL" EntitySet="IMPORT_BILL_DETAIL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IMPORT_BI__Suppl__787EE5A0" Association="Self.FK__IMPORT_BI__Suppl__787EE5A0">
+            <End Role="SUPPLIER" EntitySet="SUPPLIER" />
+            <End Role="IMPORT_BILL" EntitySet="IMPORT_BILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IMPORT_BI__UserI__797309D9" Association="Self.FK__IMPORT_BI__UserI__797309D9">
+            <End Role="_USER" EntitySet="_USER" />
+            <End Role="IMPORT_BILL" EntitySet="IMPORT_BILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PERMISSIO__Group__4D94879B" Association="Self.FK__PERMISSIO__Group__4D94879B">
+            <End Role="GROUPUSER" EntitySet="GROUPUSER" />
+            <End Role="PERMISSION" EntitySet="PERMISSION" />
+          </AssociationSet>
+          <AssociationSet Name="FK__PERMISSIO__Servi__4E88ABD4" Association="Self.FK__PERMISSIO__Servi__4E88ABD4">
+            <End Role="SERVICE" EntitySet="SERVICE" />
+            <End Role="PERMISSION" EntitySet="PERMISSION" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="CFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="C_SIZE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SizeID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SizeName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="DRINKS_SIZE" Relationship="Self.FK__DRINKS_SI__SizeI__619B8048" FromRole="C_SIZE" ToRole="DRINKS_SIZE" />
+        </EntityType>
+        <EntityType Name="C_TABLE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TableID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="TableName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AreaID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="AREA" Relationship="Self.FK___TABLE__AreaID__68487DD7" FromRole="C_TABLE" ToRole="AREA" />
+          <NavigationProperty Name="BILLs" Relationship="Self.FK__BILL__TableID__6C190EBB" FromRole="C_TABLE" ToRole="BILL" />
+        </EntityType>
+        <EntityType Name="C_USER">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="UserFullName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="GroupUserID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="GROUPUSER" Relationship="Self.FK___USER__GroupUser__52593CB8" FromRole="C_USER" ToRole="GROUPUSER" />
+          <NavigationProperty Name="BILLs" Relationship="Self.FK__BILL__UserID__6B24EA82" FromRole="C_USER" ToRole="BILL" />
+          <NavigationProperty Name="IMPORT_BILL" Relationship="Self.FK__IMPORT_BI__UserI__797309D9" FromRole="C_USER" ToRole="IMPORT_BILL" />
+        </EntityType>
+        <EntityType Name="AREA">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AreaID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="AreaName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ExtraFee" Type="Double" />
+          <Property Name="Status" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="C_TABLE" Relationship="Self.FK___TABLE__AreaID__68487DD7" FromRole="AREA" ToRole="C_TABLE" />
+        </EntityType>
+        <EntityType Name="BILL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="BillID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="BillDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="TableID" Type="Int32" />
+          <Property Name="Status" Type="Int32" Nullable="false" />
+          <Property Name="Note" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Total" Type="Double" />
+          <NavigationProperty Name="C_TABLE" Relationship="Self.FK__BILL__TableID__6C190EBB" FromRole="BILL" ToRole="C_TABLE" />
+          <NavigationProperty Name="C_USER" Relationship="Self.FK__BILL__UserID__6B24EA82" FromRole="BILL" ToRole="C_USER" />
+          <NavigationProperty Name="BILL_DETAIL" Relationship="Self.FK__BILL_DETA__BillI__70DDC3D8" FromRole="BILL" ToRole="BILL_DETAIL" />
+        </EntityType>
+        <EntityType Name="BILL_DETAIL">
+          <Key>
+            <PropertyRef Name="BillID" />
+            <PropertyRef Name="DrinksID" />
+          </Key>
+          <Property Name="BillID" Type="Int32" Nullable="false" />
+          <Property Name="DrinksID" Type="Int32" Nullable="false" />
+          <Property Name="Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Rate" Type="Double" Nullable="false" />
+          <Property Name="Amount" Type="Double" />
+          <NavigationProperty Name="BILL" Relationship="Self.FK__BILL_DETA__BillI__70DDC3D8" FromRole="BILL_DETAIL" ToRole="BILL" />
+          <NavigationProperty Name="DRINK" Relationship="Self.FK__BILL_DETA__Drink__71D1E811" FromRole="BILL_DETAIL" ToRole="DRINKS" />
+        </EntityType>
+        <EntityType Name="CATEGORY">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CategoryID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="CategoryName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="DRINKS" Relationship="Self.FK__DRINKS__Category__59FA5E80" FromRole="CATEGORY" ToRole="DRINKS" />
+        </EntityType>
+        <EntityType Name="DRINK">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DrinksID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="DrinksName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="Boolean" Nullable="false" />
+          <Property Name="EventID" Type="Int32" />
+          <NavigationProperty Name="BILL_DETAIL" Relationship="Self.FK__BILL_DETA__Drink__71D1E811" FromRole="DRINKS" ToRole="BILL_DETAIL" />
+          <NavigationProperty Name="CATEGORY" Relationship="Self.FK__DRINKS__Category__59FA5E80" FromRole="DRINKS" ToRole="CATEGORY" />
+          <NavigationProperty Name="EVENT" Relationship="Self.FK__DRINKS__EventID__5BE2A6F2" FromRole="DRINKS" ToRole="EVENT" />
+          <NavigationProperty Name="DRINKS_SIZE" Relationship="Self.FK__DRINKS_SI__Drink__60A75C0F" FromRole="DRINKS" ToRole="DRINKS_SIZE" />
+        </EntityType>
+        <EntityType Name="DRINKS_SIZE">
+          <Key>
+            <PropertyRef Name="DrinksID" />
+            <PropertyRef Name="SizeID" />
+          </Key>
+          <Property Name="DrinksID" Type="Int32" Nullable="false" />
+          <Property Name="SizeID" Type="Int32" Nullable="false" />
+          <Property Name="OriginalPrice" Type="Double" Nullable="false" />
+          <Property Name="Discount" Type="Double" />
+          <NavigationProperty Name="C_SIZE" Relationship="Self.FK__DRINKS_SI__SizeI__619B8048" FromRole="DRINKS_SIZE" ToRole="C_SIZE" />
+          <NavigationProperty Name="DRINK" Relationship="Self.FK__DRINKS_SI__Drink__60A75C0F" FromRole="DRINKS_SIZE" ToRole="DRINKS" />
+        </EntityType>
+        <EntityType Name="EVENT">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EventID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="EventName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="EventType" Type="Boolean" Nullable="false" />
+          <Property Name="Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Discount" Type="Double" />
+          <Property Name="StartDate" Type="DateTime" Precision="3" />
+          <Property Name="DueDate" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="DRINKS" Relationship="Self.FK__DRINKS__EventID__5BE2A6F2" FromRole="EVENT" ToRole="DRINKS" />
+        </EntityType>
+        <EntityType Name="GROUPUSER">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupUserID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="GroupUserName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="C_USER" Relationship="Self.FK___USER__GroupUser__52593CB8" FromRole="GROUPUSER" ToRole="C_USER" />
+          <NavigationProperty Name="SERVICEs" Relationship="Self.PERMISSION" FromRole="GROUPUSER" ToRole="SERVICE" />
+        </EntityType>
+        <EntityType Name="IMPORT_BILL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ImportID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ImportName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ImportDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SupplierID" Type="Int32" />
+          <Property Name="UserID" Type="Int32" />
+          <Property Name="Total" Type="Double" />
+          <NavigationProperty Name="C_USER" Relationship="Self.FK__IMPORT_BI__UserI__797309D9" FromRole="IMPORT_BILL" ToRole="C_USER" />
+          <NavigationProperty Name="IMPORT_BILL_DETAIL" Relationship="Self.FK__IMPORT_BI__Impor__7D439ABD" FromRole="IMPORT_BILL" ToRole="IMPORT_BILL_DETAIL" />
+          <NavigationProperty Name="SUPPLIER" Relationship="Self.FK__IMPORT_BI__Suppl__787EE5A0" FromRole="IMPORT_BILL" ToRole="SUPPLIER" />
+        </EntityType>
+        <EntityType Name="IMPORT_BILL_DETAIL">
+          <Key>
+            <PropertyRef Name="No" />
+            <PropertyRef Name="ImportID" />
+          </Key>
+          <Property Name="No" Type="Int32" Nullable="false" />
+          <Property Name="ImportID" Type="Int32" Nullable="false" />
+          <Property Name="ImportMName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Unit" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="Rate" Type="Double" Nullable="false" />
+          <Property Name="Amount" Type="Double" Nullable="false" />
+          <NavigationProperty Name="IMPORT_BILL" Relationship="Self.FK__IMPORT_BI__Impor__7D439ABD" FromRole="IMPORT_BILL_DETAIL" ToRole="IMPORT_BILL" />
+        </EntityType>
+        <EntityType Name="SERVICE">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ServiceID" Type="String" MaxLength="5" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="ServiceName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ScreenName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="GROUPUSERs" Relationship="Self.PERMISSION" FromRole="SERVICE" ToRole="GROUPUSER" />
+        </EntityType>
+        <EntityType Name="SUPPLIER">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SupplierID" Type="String" MaxLength="6" FixedLength="true" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="SupplierName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="IMPORT_BILL" Relationship="Self.FK__IMPORT_BI__Suppl__787EE5A0" FromRole="SUPPLIER" ToRole="IMPORT_BILL" />
+        </EntityType>
+        <Association Name="FK__DRINKS_SI__SizeI__619B8048">
+          <End Role="C_SIZE" Type="Self.C_SIZE" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DRINKS_SIZE" Type="Self.DRINKS_SIZE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_SIZE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DRINKS_SIZE">
+              <PropertyRef Name="SizeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK___TABLE__AreaID__68487DD7">
+          <End Role="AREA" Type="Self.AREA" Multiplicity="1" />
+          <End Role="C_TABLE" Type="Self.C_TABLE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AREA">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="C_TABLE">
+              <PropertyRef Name="AreaID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL__TableID__6C190EBB">
+          <End Role="C_TABLE" Type="Self.C_TABLE" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_TABLE">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="TableID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK___USER__GroupUser__52593CB8">
+          <End Role="GROUPUSER" Type="Self.GROUPUSER" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="C_USER" Type="Self.C_USER" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="GROUPUSER">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="C_USER">
+              <PropertyRef Name="GroupUserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL__UserID__6B24EA82">
+          <End Role="C_USER" Type="Self.C_USER" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_USER">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IMPORT_BI__UserI__797309D9">
+          <End Role="C_USER" Type="Self.C_USER" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="IMPORT_BILL" Type="Self.IMPORT_BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="C_USER">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="IMPORT_BILL">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL_DETA__BillI__70DDC3D8">
+          <End Role="BILL" Type="Self.BILL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BILL_DETAIL" Type="Self.BILL_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BILL">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BILL_DETAIL">
+              <PropertyRef Name="BillID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL_DETA__Drink__71D1E811">
+          <End Role="DRINKS" Type="Self.DRINK" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="BILL_DETAIL" Type="Self.BILL_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DRINKS">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="BILL_DETAIL">
+              <PropertyRef Name="DrinksID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DRINKS__Category__59FA5E80">
+          <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="1" />
+          <End Role="DRINKS" Type="Self.DRINK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="CATEGORY">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DRINKS">
+              <PropertyRef Name="CategoryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DRINKS__EventID__5BE2A6F2">
+          <End Role="EVENT" Type="Self.EVENT" Multiplicity="0..1" />
+          <End Role="DRINKS" Type="Self.DRINK" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="EVENT">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DRINKS">
+              <PropertyRef Name="EventID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DRINKS_SI__Drink__60A75C0F">
+          <End Role="DRINKS" Type="Self.DRINK" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="DRINKS_SIZE" Type="Self.DRINKS_SIZE" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DRINKS">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="DRINKS_SIZE">
+              <PropertyRef Name="DrinksID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IMPORT_BI__Impor__7D439ABD">
+          <End Role="IMPORT_BILL" Type="Self.IMPORT_BILL" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="IMPORT_BILL_DETAIL" Type="Self.IMPORT_BILL_DETAIL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="IMPORT_BILL">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="IMPORT_BILL_DETAIL">
+              <PropertyRef Name="ImportID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__IMPORT_BI__Suppl__787EE5A0">
+          <End Role="SUPPLIER" Type="Self.SUPPLIER" Multiplicity="0..1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="IMPORT_BILL" Type="Self.IMPORT_BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SUPPLIER">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="IMPORT_BILL">
+              <PropertyRef Name="SupplierID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PERMISSION">
+          <End Role="GROUPUSER" Type="Self.GROUPUSER" Multiplicity="*" />
+          <End Role="SERVICE" Type="Self.SERVICE" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="CFEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="C_SIZE" EntityType="Self.C_SIZE" />
+          <EntitySet Name="C_TABLE" EntityType="Self.C_TABLE" />
+          <EntitySet Name="C_USER" EntityType="Self.C_USER" />
+          <EntitySet Name="AREAs" EntityType="Self.AREA" />
+          <EntitySet Name="BILLs" EntityType="Self.BILL" />
+          <EntitySet Name="BILL_DETAIL" EntityType="Self.BILL_DETAIL" />
+          <EntitySet Name="CATEGORies" EntityType="Self.CATEGORY" />
+          <EntitySet Name="DRINKS" EntityType="Self.DRINK" />
+          <EntitySet Name="DRINKS_SIZE" EntityType="Self.DRINKS_SIZE" />
+          <EntitySet Name="EVENTs" EntityType="Self.EVENT" />
+          <EntitySet Name="GROUPUSERs" EntityType="Self.GROUPUSER" />
+          <EntitySet Name="IMPORT_BILL" EntityType="Self.IMPORT_BILL" />
+          <EntitySet Name="IMPORT_BILL_DETAIL" EntityType="Self.IMPORT_BILL_DETAIL" />
+          <EntitySet Name="SERVICEs" EntityType="Self.SERVICE" />
+          <EntitySet Name="SUPPLIERs" EntityType="Self.SUPPLIER" />
+          <AssociationSet Name="FK__DRINKS_SI__SizeI__619B8048" Association="Self.FK__DRINKS_SI__SizeI__619B8048">
+            <End Role="C_SIZE" EntitySet="C_SIZE" />
+            <End Role="DRINKS_SIZE" EntitySet="DRINKS_SIZE" />
+          </AssociationSet>
+          <AssociationSet Name="FK___TABLE__AreaID__68487DD7" Association="Self.FK___TABLE__AreaID__68487DD7">
+            <End Role="AREA" EntitySet="AREAs" />
+            <End Role="C_TABLE" EntitySet="C_TABLE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL__TableID__6C190EBB" Association="Self.FK__BILL__TableID__6C190EBB">
+            <End Role="C_TABLE" EntitySet="C_TABLE" />
+            <End Role="BILL" EntitySet="BILLs" />
+          </AssociationSet>
+          <AssociationSet Name="FK___USER__GroupUser__52593CB8" Association="Self.FK___USER__GroupUser__52593CB8">
+            <End Role="GROUPUSER" EntitySet="GROUPUSERs" />
+            <End Role="C_USER" EntitySet="C_USER" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL__UserID__6B24EA82" Association="Self.FK__BILL__UserID__6B24EA82">
+            <End Role="C_USER" EntitySet="C_USER" />
+            <End Role="BILL" EntitySet="BILLs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IMPORT_BI__UserI__797309D9" Association="Self.FK__IMPORT_BI__UserI__797309D9">
+            <End Role="C_USER" EntitySet="C_USER" />
+            <End Role="IMPORT_BILL" EntitySet="IMPORT_BILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL_DETA__BillI__70DDC3D8" Association="Self.FK__BILL_DETA__BillI__70DDC3D8">
+            <End Role="BILL" EntitySet="BILLs" />
+            <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL_DETA__Drink__71D1E811" Association="Self.FK__BILL_DETA__Drink__71D1E811">
+            <End Role="DRINKS" EntitySet="DRINKS" />
+            <End Role="BILL_DETAIL" EntitySet="BILL_DETAIL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DRINKS__Category__59FA5E80" Association="Self.FK__DRINKS__Category__59FA5E80">
+            <End Role="CATEGORY" EntitySet="CATEGORies" />
+            <End Role="DRINKS" EntitySet="DRINKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DRINKS__EventID__5BE2A6F2" Association="Self.FK__DRINKS__EventID__5BE2A6F2">
+            <End Role="EVENT" EntitySet="EVENTs" />
+            <End Role="DRINKS" EntitySet="DRINKS" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DRINKS_SI__Drink__60A75C0F" Association="Self.FK__DRINKS_SI__Drink__60A75C0F">
+            <End Role="DRINKS" EntitySet="DRINKS" />
+            <End Role="DRINKS_SIZE" EntitySet="DRINKS_SIZE" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IMPORT_BI__Impor__7D439ABD" Association="Self.FK__IMPORT_BI__Impor__7D439ABD">
+            <End Role="IMPORT_BILL" EntitySet="IMPORT_BILL" />
+            <End Role="IMPORT_BILL_DETAIL" EntitySet="IMPORT_BILL_DETAIL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__IMPORT_BI__Suppl__787EE5A0" Association="Self.FK__IMPORT_BI__Suppl__787EE5A0">
+            <End Role="SUPPLIER" EntitySet="SUPPLIERs" />
+            <End Role="IMPORT_BILL" EntitySet="IMPORT_BILL" />
+          </AssociationSet>
+          <AssociationSet Name="PERMISSION" Association="Self.PERMISSION">
+            <End Role="GROUPUSER" EntitySet="GROUPUSERs" />
+            <End Role="SERVICE" EntitySet="SERVICEs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="CFModelStoreContainer" CdmEntityContainer="CFEntities">
+          <EntitySetMapping Name="C_SIZE">
+            <EntityTypeMapping TypeName="CFModel.C_SIZE">
+              <MappingFragment StoreEntitySet="_SIZE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+                <ScalarProperty Name="SizeName" ColumnName="SizeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_TABLE">
+            <EntityTypeMapping TypeName="CFModel.C_TABLE">
+              <MappingFragment StoreEntitySet="_TABLE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="TableID" ColumnName="TableID" />
+                <ScalarProperty Name="TableName" ColumnName="TableName" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C_USER">
+            <EntityTypeMapping TypeName="CFModel.C_USER">
+              <MappingFragment StoreEntitySet="_USER">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="UserFullName" ColumnName="UserFullName" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="GroupUserID" ColumnName="GroupUserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AREAs">
+            <EntityTypeMapping TypeName="CFModel.AREA">
+              <MappingFragment StoreEntitySet="AREA">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="AreaID" ColumnName="AreaID" />
+                <ScalarProperty Name="AreaName" ColumnName="AreaName" />
+                <ScalarProperty Name="ExtraFee" ColumnName="ExtraFee" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BILLs">
+            <EntityTypeMapping TypeName="CFModel.BILL">
+              <MappingFragment StoreEntitySet="BILL">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="BillDate" ColumnName="BillDate" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="TableID" ColumnName="TableID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Note" ColumnName="Note" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BILL_DETAIL">
+            <EntityTypeMapping TypeName="CFModel.BILL_DETAIL">
+              <MappingFragment StoreEntitySet="BILL_DETAIL">
+                <ScalarProperty Name="BillID" ColumnName="BillID" />
+                <ScalarProperty Name="DrinksID" ColumnName="DrinksID" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CATEGORies">
+            <EntityTypeMapping TypeName="CFModel.CATEGORY">
+              <MappingFragment StoreEntitySet="CATEGORY">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="CategoryName" ColumnName="CategoryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DRINKS">
+            <EntityTypeMapping TypeName="CFModel.DRINK">
+              <MappingFragment StoreEntitySet="DRINKS">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="DrinksID" ColumnName="DrinksID" />
+                <ScalarProperty Name="DrinksName" ColumnName="DrinksName" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DRINKS_SIZE">
+            <EntityTypeMapping TypeName="CFModel.DRINKS_SIZE">
+              <MappingFragment StoreEntitySet="DRINKS_SIZE">
+                <ScalarProperty Name="DrinksID" ColumnName="DrinksID" />
+                <ScalarProperty Name="SizeID" ColumnName="SizeID" />
+                <ScalarProperty Name="OriginalPrice" ColumnName="OriginalPrice" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="EVENTs">
+            <EntityTypeMapping TypeName="CFModel.EVENT">
+              <MappingFragment StoreEntitySet="EVENT">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="EventID" ColumnName="EventID" />
+                <ScalarProperty Name="EventName" ColumnName="EventName" />
+                <ScalarProperty Name="EventType" ColumnName="EventType" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Discount" ColumnName="Discount" />
+                <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GROUPUSERs">
+            <EntityTypeMapping TypeName="CFModel.GROUPUSER">
+              <MappingFragment StoreEntitySet="GROUPUSER">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="GroupUserID" ColumnName="GroupUserID" />
+                <ScalarProperty Name="GroupUserName" ColumnName="GroupUserName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IMPORT_BILL">
+            <EntityTypeMapping TypeName="CFModel.IMPORT_BILL">
+              <MappingFragment StoreEntitySet="IMPORT_BILL">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ImportID" ColumnName="ImportID" />
+                <ScalarProperty Name="ImportName" ColumnName="ImportName" />
+                <ScalarProperty Name="ImportDate" ColumnName="ImportDate" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Total" ColumnName="Total" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="IMPORT_BILL_DETAIL">
+            <EntityTypeMapping TypeName="CFModel.IMPORT_BILL_DETAIL">
+              <MappingFragment StoreEntitySet="IMPORT_BILL_DETAIL">
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="ImportID" ColumnName="ImportID" />
+                <ScalarProperty Name="ImportMName" ColumnName="ImportMName" />
+                <ScalarProperty Name="Unit" ColumnName="Unit" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SERVICEs">
+            <EntityTypeMapping TypeName="CFModel.SERVICE">
+              <MappingFragment StoreEntitySet="SERVICE">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="ServiceID" ColumnName="ServiceID" />
+                <ScalarProperty Name="ServiceName" ColumnName="ServiceName" />
+                <ScalarProperty Name="ScreenName" ColumnName="ScreenName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SUPPLIERs">
+            <EntityTypeMapping TypeName="CFModel.SUPPLIER">
+              <MappingFragment StoreEntitySet="SUPPLIER">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+                <ScalarProperty Name="SupplierName" ColumnName="SupplierName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="PERMISSION" TypeName="CFModel.PERMISSION" StoreEntitySet="PERMISSION">
+            <EndProperty Name="GROUPUSER">
+              <ScalarProperty Name="id" ColumnName="GroupUserID" />
+            </EndProperty>
+            <EndProperty Name="SERVICE">
+              <ScalarProperty Name="id" ColumnName="ServiceID" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
