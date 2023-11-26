@@ -67,24 +67,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\EnterCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EnterCode.Designer.cs">
+      <DependentUpon>EnterCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="GetEmailCode.cs">
+    <Compile Include="Form\GetEmailCode.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GetEmailCode.Designer.cs">
+    <Compile Include="Form\GetEmailCode.Designer.cs">
       <DependentUpon>GetEmailCode.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\EnterCode.resx">
+      <DependentUpon>EnterCode.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GetEmailCode.resx">
+    <EmbeddedResource Include="Form\GetEmailCode.resx">
       <DependentUpon>GetEmailCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
