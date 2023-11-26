@@ -41,8 +41,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.picture_product = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel_quantity = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbQuantity = new System.Windows.Forms.Label();
+            this.panel_size = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbSize = new System.Windows.Forms.Label();
+            this.panel_price = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbUPrice = new System.Windows.Forms.Label();
             this.panel_productname = new Guna.UI2.WinForms.Guna2Panel();
             this.lb_productname = new System.Windows.Forms.Label();
             this.panel_unit = new Guna.UI2.WinForms.Guna2Panel();
@@ -51,24 +55,22 @@
             this.panel_describe = new Guna.UI2.WinForms.Guna2Panel();
             this.lbDescribe = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.panel_price = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbUPrice = new System.Windows.Forms.Label();
-            this.panel_size = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbSize = new System.Windows.Forms.Label();
-            this.panel_quantity = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbQuantity = new System.Windows.Forms.Label();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.label10 = new System.Windows.Forms.Label();
+            this.picture_product = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_product)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel_quantity.SuspendLayout();
+            this.panel_size.SuspendLayout();
+            this.panel_price.SuspendLayout();
             this.panel_productname.SuspendLayout();
             this.panel_unit.SuspendLayout();
             this.panel_describe.SuspendLayout();
-            this.panel_price.SuspendLayout();
-            this.panel_size.SuspendLayout();
-            this.panel_quantity.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_product)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_Edit
@@ -85,7 +87,7 @@
             this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Edit.ForeColor = System.Drawing.Color.White;
             this.btn_Edit.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Edit.Location = new System.Drawing.Point(538, 586);
+            this.btn_Edit.Location = new System.Drawing.Point(541, 586);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(125, 41);
             this.btn_Edit.TabIndex = 46;
@@ -149,7 +151,7 @@
             this.btn_OK.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_OK.ForeColor = System.Drawing.Color.White;
             this.btn_OK.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_OK.Location = new System.Drawing.Point(257, 586);
+            this.btn_OK.Location = new System.Drawing.Point(264, 586);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.Size = new System.Drawing.Size(125, 41);
             this.btn_OK.TabIndex = 45;
@@ -218,31 +220,78 @@
             this.guna2Panel1.Size = new System.Drawing.Size(810, 94);
             this.guna2Panel1.TabIndex = 43;
             // 
-            // picture_product
+            // panel_quantity
             // 
-            this.picture_product.BackColor = System.Drawing.Color.Transparent;
-            this.picture_product.BorderRadius = 20;
-            this.picture_product.Image = global::GUI.Properties.Resources.milkco;
-            this.picture_product.ImageRotate = 0F;
-            this.picture_product.Location = new System.Drawing.Point(68, 100);
-            this.picture_product.Name = "picture_product";
-            this.picture_product.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.picture_product.Size = new System.Drawing.Size(328, 297);
-            this.picture_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_product.TabIndex = 34;
-            this.picture_product.TabStop = false;
-            this.picture_product.UseTransparentBackground = true;
+            this.panel_quantity.BackColor = System.Drawing.Color.Transparent;
+            this.panel_quantity.BorderColor = System.Drawing.Color.Silver;
+            this.panel_quantity.BorderRadius = 10;
+            this.panel_quantity.BorderThickness = 2;
+            this.panel_quantity.Controls.Add(this.lbQuantity);
+            this.panel_quantity.Location = new System.Drawing.Point(630, 28);
+            this.panel_quantity.Name = "panel_quantity";
+            this.panel_quantity.Size = new System.Drawing.Size(139, 40);
+            this.panel_quantity.TabIndex = 54;
             // 
-            // pictureBox1
+            // lbQuantity
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.raucu;
-            this.pictureBox1.Location = new System.Drawing.Point(-9, -28);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(942, 703);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 32;
-            this.pictureBox1.TabStop = false;
+            this.lbQuantity.AutoSize = true;
+            this.lbQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.lbQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbQuantity.ForeColor = System.Drawing.Color.Gray;
+            this.lbQuantity.Location = new System.Drawing.Point(16, 9);
+            this.lbQuantity.Name = "lbQuantity";
+            this.lbQuantity.Size = new System.Drawing.Size(46, 23);
+            this.lbQuantity.TabIndex = 49;
+            this.lbQuantity.Text = "0000";
+            // 
+            // panel_size
+            // 
+            this.panel_size.BackColor = System.Drawing.Color.Transparent;
+            this.panel_size.BorderColor = System.Drawing.Color.Silver;
+            this.panel_size.BorderRadius = 10;
+            this.panel_size.BorderThickness = 1;
+            this.panel_size.Controls.Add(this.lbSize);
+            this.panel_size.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
+            this.panel_size.Location = new System.Drawing.Point(80, 28);
+            this.panel_size.Name = "panel_size";
+            this.panel_size.Size = new System.Drawing.Size(94, 40);
+            this.panel_size.TabIndex = 53;
+            // 
+            // lbSize
+            // 
+            this.lbSize.AutoSize = true;
+            this.lbSize.BackColor = System.Drawing.Color.Transparent;
+            this.lbSize.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbSize.ForeColor = System.Drawing.Color.White;
+            this.lbSize.Location = new System.Drawing.Point(16, 9);
+            this.lbSize.Name = "lbSize";
+            this.lbSize.Size = new System.Drawing.Size(21, 23);
+            this.lbSize.TabIndex = 49;
+            this.lbSize.Text = "A";
+            // 
+            // panel_price
+            // 
+            this.panel_price.BackColor = System.Drawing.Color.Transparent;
+            this.panel_price.BorderColor = System.Drawing.Color.Silver;
+            this.panel_price.BorderRadius = 10;
+            this.panel_price.BorderThickness = 2;
+            this.panel_price.Controls.Add(this.lbUPrice);
+            this.panel_price.Location = new System.Drawing.Point(356, 28);
+            this.panel_price.Name = "panel_price";
+            this.panel_price.Size = new System.Drawing.Size(139, 40);
+            this.panel_price.TabIndex = 52;
+            // 
+            // lbUPrice
+            // 
+            this.lbUPrice.AutoSize = true;
+            this.lbUPrice.BackColor = System.Drawing.Color.Transparent;
+            this.lbUPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUPrice.ForeColor = System.Drawing.Color.Gray;
+            this.lbUPrice.Location = new System.Drawing.Point(16, 9);
+            this.lbUPrice.Name = "lbUPrice";
+            this.lbUPrice.Size = new System.Drawing.Size(99, 23);
+            this.lbUPrice.TabIndex = 49;
+            this.lbUPrice.Text = "000.000.000";
             // 
             // panel_productname
             // 
@@ -340,79 +389,6 @@
             this.label9.TabIndex = 50;
             this.label9.Text = "Description";
             // 
-            // panel_price
-            // 
-            this.panel_price.BackColor = System.Drawing.Color.Transparent;
-            this.panel_price.BorderColor = System.Drawing.Color.Silver;
-            this.panel_price.BorderRadius = 10;
-            this.panel_price.BorderThickness = 2;
-            this.panel_price.Controls.Add(this.lbUPrice);
-            this.panel_price.Location = new System.Drawing.Point(356, 28);
-            this.panel_price.Name = "panel_price";
-            this.panel_price.Size = new System.Drawing.Size(139, 40);
-            this.panel_price.TabIndex = 52;
-            // 
-            // lbUPrice
-            // 
-            this.lbUPrice.AutoSize = true;
-            this.lbUPrice.BackColor = System.Drawing.Color.Transparent;
-            this.lbUPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUPrice.ForeColor = System.Drawing.Color.Gray;
-            this.lbUPrice.Location = new System.Drawing.Point(16, 9);
-            this.lbUPrice.Name = "lbUPrice";
-            this.lbUPrice.Size = new System.Drawing.Size(99, 23);
-            this.lbUPrice.TabIndex = 49;
-            this.lbUPrice.Text = "000.000.000";
-            // 
-            // panel_size
-            // 
-            this.panel_size.BackColor = System.Drawing.Color.Transparent;
-            this.panel_size.BorderColor = System.Drawing.Color.Silver;
-            this.panel_size.BorderRadius = 10;
-            this.panel_size.BorderThickness = 1;
-            this.panel_size.Controls.Add(this.lbSize);
-            this.panel_size.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
-            this.panel_size.Location = new System.Drawing.Point(80, 28);
-            this.panel_size.Name = "panel_size";
-            this.panel_size.Size = new System.Drawing.Size(94, 40);
-            this.panel_size.TabIndex = 53;
-            // 
-            // lbSize
-            // 
-            this.lbSize.AutoSize = true;
-            this.lbSize.BackColor = System.Drawing.Color.Transparent;
-            this.lbSize.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbSize.ForeColor = System.Drawing.Color.White;
-            this.lbSize.Location = new System.Drawing.Point(16, 9);
-            this.lbSize.Name = "lbSize";
-            this.lbSize.Size = new System.Drawing.Size(21, 23);
-            this.lbSize.TabIndex = 49;
-            this.lbSize.Text = "A";
-            // 
-            // panel_quantity
-            // 
-            this.panel_quantity.BackColor = System.Drawing.Color.Transparent;
-            this.panel_quantity.BorderColor = System.Drawing.Color.Silver;
-            this.panel_quantity.BorderRadius = 10;
-            this.panel_quantity.BorderThickness = 2;
-            this.panel_quantity.Controls.Add(this.lbQuantity);
-            this.panel_quantity.Location = new System.Drawing.Point(630, 28);
-            this.panel_quantity.Name = "panel_quantity";
-            this.panel_quantity.Size = new System.Drawing.Size(139, 40);
-            this.panel_quantity.TabIndex = 54;
-            // 
-            // lbQuantity
-            // 
-            this.lbQuantity.AutoSize = true;
-            this.lbQuantity.BackColor = System.Drawing.Color.Transparent;
-            this.lbQuantity.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbQuantity.ForeColor = System.Drawing.Color.Gray;
-            this.lbQuantity.Location = new System.Drawing.Point(16, 9);
-            this.lbQuantity.Name = "lbQuantity";
-            this.lbQuantity.Size = new System.Drawing.Size(46, 23);
-            this.lbQuantity.TabIndex = 49;
-            this.lbQuantity.Text = "0000";
-            // 
             // guna2Panel5
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
@@ -438,12 +414,71 @@
             this.label10.TabIndex = 49;
             this.label10.Text = "Category";
             // 
+            // picture_product
+            // 
+            this.picture_product.BackColor = System.Drawing.Color.Transparent;
+            this.picture_product.BorderRadius = 20;
+            this.picture_product.Image = global::GUI.Properties.Resources.milkco;
+            this.picture_product.ImageRotate = 0F;
+            this.picture_product.Location = new System.Drawing.Point(68, 100);
+            this.picture_product.Name = "picture_product";
+            this.picture_product.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.picture_product.Size = new System.Drawing.Size(328, 297);
+            this.picture_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_product.TabIndex = 34;
+            this.picture_product.TabStop = false;
+            this.picture_product.UseTransparentBackground = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.raucu;
+            this.pictureBox1.Location = new System.Drawing.Point(-9, -28);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(942, 703);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 32;
+            this.pictureBox1.TabStop = false;
+            // 
+            // guna2ControlBox3
+            // 
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.Animated = true;
+            this.guna2ControlBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.BorderRadius = 10;
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox3.CustomIconSize = 20F;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(821, 16);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 30);
+            this.guna2ControlBox3.TabIndex = 56;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.Animated = true;
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.BorderRadius = 10;
+            this.guna2ControlBox1.CustomIconSize = 20F;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(866, 16);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
+            this.guna2ControlBox1.TabIndex = 55;
+            // 
             // ProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(930, 670);
+            this.Controls.Add(this.guna2ControlBox3);
+            this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.guna2Panel5);
             this.Controls.Add(this.panel_describe);
             this.Controls.Add(this.label9);
@@ -465,22 +500,22 @@
             this.Text = "ProductDetail";
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_product)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel_quantity.ResumeLayout(false);
+            this.panel_quantity.PerformLayout();
+            this.panel_size.ResumeLayout(false);
+            this.panel_size.PerformLayout();
+            this.panel_price.ResumeLayout(false);
+            this.panel_price.PerformLayout();
             this.panel_productname.ResumeLayout(false);
             this.panel_productname.PerformLayout();
             this.panel_unit.ResumeLayout(false);
             this.panel_unit.PerformLayout();
             this.panel_describe.ResumeLayout(false);
             this.panel_describe.PerformLayout();
-            this.panel_price.ResumeLayout(false);
-            this.panel_price.PerformLayout();
-            this.panel_size.ResumeLayout(false);
-            this.panel_size.PerformLayout();
-            this.panel_quantity.ResumeLayout(false);
-            this.panel_quantity.PerformLayout();
             this.guna2Panel5.ResumeLayout(false);
             this.guna2Panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_product)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -517,5 +552,7 @@
         private System.Windows.Forms.Label lbSize;
         private Guna.UI2.WinForms.Guna2Panel panel_price;
         private System.Windows.Forms.Label lbUPrice;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }
