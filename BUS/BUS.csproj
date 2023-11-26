@@ -51,6 +51,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUSArea.cs" />
+    <Compile Include="BUSCategory.cs" />
+    <Compile Include="BUSDrink.cs" />
+    <Compile Include="BUSDrink_Size.cs" />
+    <Compile Include="BUSEvent.cs" />
+    <Compile Include="BUSGroupUser.cs" />
+    <Compile Include="BUSImportBill.cs" />
+    <Compile Include="BUSImportBillDetail.cs" />
+    <Compile Include="BUSOrder.cs" />
+    <Compile Include="BUSOrderDetail.cs" />
+    <Compile Include="BUSService.cs" />
+    <Compile Include="BUSSize.cs" />
+    <Compile Include="BUSSupplier.cs" />
+    <Compile Include="BUSTable.cs" />
+    <Compile Include="BUSUser.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
