@@ -50,10 +50,12 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -104,6 +106,12 @@
     <Compile Include="DRINKS_SIZE.cs">
       <DependentUpon>Coffee.tt</DependentUpon>
     </Compile>
+    <Compile Include="EnterCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EnterCode.Designer.cs">
+      <DependentUpon>EnterCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="EVENT.cs">
       <DependentUpon>Coffee.tt</DependentUpon>
     </Compile>
@@ -149,6 +157,11 @@
       <DependentUpon>Coffee.edmx</DependentUpon>
       <LastGenOutput>Coffee.cs</LastGenOutput>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EnterCode.resx">
+      <DependentUpon>EnterCode.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
