@@ -278,6 +278,9 @@
   <ItemGroup>
     <None Include="Resources\icon _settings_hover.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _log out.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

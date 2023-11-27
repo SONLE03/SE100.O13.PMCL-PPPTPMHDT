@@ -183,6 +183,16 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon__log_out {
+            get {
+                object obj = ResourceManager.GetObject("icon _log out", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon__menu_scale {
             get {
                 object obj = ResourceManager.GetObject("icon _menu scale", resourceCulture);
