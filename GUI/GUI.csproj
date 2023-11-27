@@ -109,6 +109,12 @@
     <Compile Include="Form\ProductDetail.Designer.cs">
       <DependentUpon>ProductDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form\HomeManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\HomeManager.Designer.cs">
+      <DependentUpon>HomeManager.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form\AddSize.resx">
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\ProductDetail.resx">
       <DependentUpon>ProductDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\HomeManager.resx">
+      <DependentUpon>HomeManager.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -199,6 +208,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\milkco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _menu scale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CafeStore.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-bean %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _menu scale_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home simple door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _home simple door_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _coffee cup_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _coffee cup_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _table_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _table_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_Bill.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _google docs_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _event_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _truck_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _truck_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _user bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _user bag_hover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _page edit_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _page edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon _settings_hover.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
