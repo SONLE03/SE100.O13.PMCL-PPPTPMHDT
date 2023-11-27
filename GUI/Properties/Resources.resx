@@ -145,8 +145,8 @@
   <data name="icon _user bag_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon _user bag_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="raucu" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\raucu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon _home simple door_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon _home simple door_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="trash" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\trash.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,6 +169,9 @@
   <data name="icon _event_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon _event_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="raucu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\raucu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon_Bill" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon_Bill.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -178,8 +181,14 @@
   <data name="Ellipse 5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Ellipse 5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icon _log out" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon _log out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="icon _page edit_ (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon _page edit_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CafeStore" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CafeStore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon _truck_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon _truck_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,14 +202,8 @@
   <data name="icon _event" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon _event.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon _home simple door_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon _home simple door_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="icon _user bag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon _user bag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon _google docs_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon _google docs_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cake" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cake.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,8 +211,8 @@
   <data name="coffee-bean (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\coffee-bean (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CafeStore" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CafeStore.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon _google docs_hover" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon _google docs_hover.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icon _menu scale" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon _menu scale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -217,7 +220,7 @@
   <data name="icon _coffee cup_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icon _coffee cup_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon _log out" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icon _log out.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Avatar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Avatar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

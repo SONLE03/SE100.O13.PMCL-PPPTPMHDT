@@ -41,6 +41,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescibe = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btn_Delete = new System.Windows.Forms.PictureBox();
             this.txtQuantity = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,7 +52,6 @@
             this.btn_AddSize = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Cancel = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btn_Delete = new System.Windows.Forms.PictureBox();
             this.picture_product = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -74,10 +74,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackColor = System.Drawing.Color.AliceBlue;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label1.Location = new System.Drawing.Point(368, 34);
+            this.label1.Location = new System.Drawing.Point(368, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(199, 31);
             this.label1.TabIndex = 1;
@@ -236,6 +236,17 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(810, 94);
             this.guna2Panel1.TabIndex = 28;
+            // 
+            // btn_Delete
+            // 
+            this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Delete.Image = global::GUI.Properties.Resources.trash;
+            this.btn_Delete.Location = new System.Drawing.Point(752, 29);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(36, 36);
+            this.btn_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Delete.TabIndex = 34;
+            this.btn_Delete.TabStop = false;
             // 
             // txtQuantity
             // 
@@ -404,17 +415,6 @@
             this.btn_Cancel.Size = new System.Drawing.Size(125, 41);
             this.btn_Cancel.TabIndex = 31;
             this.btn_Cancel.Text = "Cancel";
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Delete.Image = global::GUI.Properties.Resources.trash;
-            this.btn_Delete.Location = new System.Drawing.Point(752, 29);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(36, 36);
-            this.btn_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Delete.TabIndex = 34;
-            this.btn_Delete.TabStop = false;
             // 
             // picture_product
             // 
