@@ -24,7 +24,7 @@ namespace GUI
             btnShow.Visible = false;
             btnHide.Visible = true;
             Menu.Visible = false;
-            Menu.Width = 245;
+            Menu.Width = 199;
             guna2Transition1.ShowSync(Menu);
         }
 
@@ -35,8 +35,13 @@ namespace GUI
             Menu.Visible = false;
             btnHide.Visible = false;
             btnShow.Visible = true;
-            Menu.Width = 80;
+            Menu.Width = 75;
             guna2Transition1.ShowSync(Menu);
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
