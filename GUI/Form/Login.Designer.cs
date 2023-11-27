@@ -179,6 +179,7 @@
             this.btn_login.Size = new System.Drawing.Size(154, 41);
             this.btn_login.TabIndex = 7;
             this.btn_login.Text = "Login";
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // link_forgot_pass
             // 
