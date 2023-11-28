@@ -207,6 +207,18 @@
     <Compile Include="TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\UCHome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\UCHome.Designer.cs">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\UCProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\UCProducts.Designer.cs">
+      <DependentUpon>UCProducts.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserGroupDetails.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -270,6 +282,12 @@
     </Compile>
     <EmbeddedResource Include="Form\SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\UCHome.resx">
+      <DependentUpon>UCHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\UCProducts.resx">
+      <DependentUpon>UCProducts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

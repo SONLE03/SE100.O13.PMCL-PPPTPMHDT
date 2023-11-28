@@ -14,34 +14,13 @@ namespace GUI
     public partial class HomeManager : Form
     {
         private C_USER user;
-        public HomeManager(C_USER user)
+        public HomeManager()//C_USER user)
         {
             InitializeComponent();
             this.user = user;
         }
 
-        private void btnShow_Click(object sender, EventArgs e)
-        {
-            guna2CirclePictureBox1.Visible = true;
-            pictureBox1.Visible = true;
-            btnShow.Visible = false;
-            btnHide.Visible = true;
-            Menu.Visible = false;
-            Menu.Width = 199;
-            guna2Transition1.ShowSync(Menu);
-        }
-
-        private void btnHide_Click(object sender, EventArgs e)
-        {
-            guna2CirclePictureBox1.Visible = false;
-            pictureBox1.Visible = false;
-            Menu.Visible = false;
-            btnHide.Visible = false;
-            btnShow.Visible = true;
-            Menu.Width = 75;
-            guna2Transition1.ShowSync(Menu);
-        }
-
+        
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -55,6 +34,32 @@ namespace GUI
                 Login login = new Login();
                 login.Show();
             }    
+        }
+
+        bool menuExpand = false;
+        private void MouseDetect_Tick(object sender, EventArgs e)
+        {
+            if (!guna2Transition1.IsCompleted) return;
+            if (Menu.ClientRectangle.Contains(PointToClient(Control.MousePosition)))
+            {
+                if (!menuExpand)
+                {
+                    menuExpand = true;
+                    Menu.Visible = false;
+                    Menu.Width = 200;
+                    guna2Transition1.Show(Menu);
+                }
+            }
+            else
+            {
+                if (menuExpand)
+                {
+                    menuExpand = false;
+                    Menu.Visible = false;
+                    Menu.Width = 72;
+                    guna2Transition1.Show(Menu);
+                }
+            }
         }
     }
 }
