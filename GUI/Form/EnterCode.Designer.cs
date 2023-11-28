@@ -54,9 +54,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label1.Location = new System.Drawing.Point(154, 82);
+            this.label1.Location = new System.Drawing.Point(116, 67);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 32);
+            this.label1.Size = new System.Drawing.Size(306, 26);
             this.label1.TabIndex = 6;
             this.label1.Text = "We have sent to your registered email ";
             // 
@@ -73,13 +74,13 @@
             this.txtEmailCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmailCode.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmailCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailCode.Location = new System.Drawing.Point(216, 201);
-            this.txtEmailCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtEmailCode.Location = new System.Drawing.Point(162, 163);
+            this.txtEmailCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEmailCode.Name = "txtEmailCode";
             this.txtEmailCode.PasswordChar = '\0';
             this.txtEmailCode.PlaceholderText = "Enter code";
             this.txtEmailCode.SelectedText = "";
-            this.txtEmailCode.Size = new System.Drawing.Size(285, 40);
+            this.txtEmailCode.Size = new System.Drawing.Size(214, 32);
             this.txtEmailCode.TabIndex = 7;
             // 
             // btn_confirm
@@ -95,11 +96,13 @@
             this.btn_confirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirm.ForeColor = System.Drawing.Color.White;
             this.btn_confirm.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_confirm.Location = new System.Drawing.Point(272, 276);
+            this.btn_confirm.Location = new System.Drawing.Point(204, 224);
+            this.btn_confirm.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_confirm.Name = "btn_confirm";
-            this.btn_confirm.Size = new System.Drawing.Size(154, 41);
+            this.btn_confirm.Size = new System.Drawing.Size(116, 33);
             this.btn_confirm.TabIndex = 11;
             this.btn_confirm.Text = "Confirm";
+            this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
             // 
             // label2
             // 
@@ -107,9 +110,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label2.Location = new System.Drawing.Point(258, 114);
+            this.label2.Location = new System.Drawing.Point(194, 93);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(207, 30);
+            this.label2.Size = new System.Drawing.Size(173, 25);
             this.label2.TabIndex = 12;
             this.label2.Text = "A verification code";
             // 
@@ -119,9 +123,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(209, 149);
+            this.label3.Location = new System.Drawing.Point(157, 121);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(301, 30);
+            this.label3.Size = new System.Drawing.Size(249, 25);
             this.label3.TabIndex = 13;
             this.label3.Text = "Please enter your code here";
             // 
@@ -132,13 +137,15 @@
             this.link_get_again.DisabledLinkColor = System.Drawing.Color.Transparent;
             this.link_get_again.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_get_again.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.link_get_again.Location = new System.Drawing.Point(207, 352);
+            this.link_get_again.Location = new System.Drawing.Point(155, 286);
+            this.link_get_again.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.link_get_again.Name = "link_get_again";
-            this.link_get_again.Size = new System.Drawing.Size(293, 28);
+            this.link_get_again.Size = new System.Drawing.Size(235, 21);
             this.link_get_again.TabIndex = 14;
             this.link_get_again.TabStop = true;
             this.link_get_again.Text = "Haven\'t received any code yet?";
             this.link_get_again.UseWaitCursor = true;
+            this.link_get_again.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_get_again_LinkClicked);
             // 
             // guna2ControlBox1
             // 
@@ -149,9 +156,10 @@
             this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(655, 12);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(491, 10);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 15;
             // 
             // guna2ControlBox3
@@ -164,16 +172,17 @@
             this.guna2ControlBox3.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(604, 12);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(453, 10);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 30);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 16;
             // 
             // EnterCode
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 453);
+            this.ClientSize = new System.Drawing.Size(534, 368);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.link_get_again);
@@ -184,6 +193,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EnterCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EnterCode";

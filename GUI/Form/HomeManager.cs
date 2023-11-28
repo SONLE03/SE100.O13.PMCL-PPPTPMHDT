@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace GUI
 {
     public partial class HomeManager : Form
     {
-        public HomeManager()
+        private C_USER user;
+        public HomeManager(C_USER user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void btnShow_Click(object sender, EventArgs e)
@@ -42,6 +45,16 @@ namespace GUI
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Log_out_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to log out ?", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+            }    
         }
     }
 }

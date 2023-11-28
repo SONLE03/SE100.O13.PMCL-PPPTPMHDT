@@ -62,9 +62,10 @@
             this.guna2ControlBox3.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(605, 12);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(454, 10);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 30);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 18;
             // 
             // guna2ControlBox1
@@ -76,9 +77,10 @@
             this.guna2ControlBox1.FillColor = System.Drawing.SystemColors.Control;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(655, 12);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(491, 10);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 17;
             // 
             // txtPass
@@ -94,13 +96,13 @@
             this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPass.Location = new System.Drawing.Point(216, 138);
-            this.txtPass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPass.Location = new System.Drawing.Point(162, 112);
+            this.txtPass.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPass.Name = "txtPass";
             this.txtPass.PasswordChar = '\0';
             this.txtPass.PlaceholderText = "Password";
             this.txtPass.SelectedText = "";
-            this.txtPass.Size = new System.Drawing.Size(285, 40);
+            this.txtPass.Size = new System.Drawing.Size(214, 32);
             this.txtPass.TabIndex = 19;
             // 
             // label1
@@ -109,9 +111,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label1.Location = new System.Drawing.Point(239, 76);
+            this.label1.Location = new System.Drawing.Point(179, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 30);
+            this.label1.Size = new System.Drawing.Size(192, 25);
             this.label1.TabIndex = 20;
             this.label1.Text = "Create new password";
             // 
@@ -128,13 +131,13 @@
             this.txtRetypePass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRetypePass.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRetypePass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRetypePass.Location = new System.Drawing.Point(216, 216);
-            this.txtRetypePass.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtRetypePass.Location = new System.Drawing.Point(162, 176);
+            this.txtRetypePass.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtRetypePass.Name = "txtRetypePass";
             this.txtRetypePass.PasswordChar = '\0';
             this.txtRetypePass.PlaceholderText = "Retype password";
             this.txtRetypePass.SelectedText = "";
-            this.txtRetypePass.Size = new System.Drawing.Size(285, 40);
+            this.txtRetypePass.Size = new System.Drawing.Size(214, 32);
             this.txtRetypePass.TabIndex = 21;
             // 
             // btn_SaveChange
@@ -150,11 +153,13 @@
             this.btn_SaveChange.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_SaveChange.ForeColor = System.Drawing.Color.White;
             this.btn_SaveChange.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_SaveChange.Location = new System.Drawing.Point(277, 296);
+            this.btn_SaveChange.Location = new System.Drawing.Point(224, 240);
+            this.btn_SaveChange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_SaveChange.Name = "btn_SaveChange";
-            this.btn_SaveChange.Size = new System.Drawing.Size(154, 41);
+            this.btn_SaveChange.Size = new System.Drawing.Size(100, 33);
             this.btn_SaveChange.TabIndex = 22;
             this.btn_SaveChange.Text = "Save change";
+            this.btn_SaveChange.Click += new System.EventHandler(this.btn_SaveChange_Click);
             // 
             // link_Back
             // 
@@ -163,21 +168,24 @@
             this.link_Back.DisabledLinkColor = System.Drawing.Color.Transparent;
             this.link_Back.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_Back.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.link_Back.Location = new System.Drawing.Point(293, 368);
+            this.link_Back.Location = new System.Drawing.Point(220, 299);
+            this.link_Back.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.link_Back.Name = "link_Back";
-            this.link_Back.Size = new System.Drawing.Size(131, 28);
+            this.link_Back.Size = new System.Drawing.Size(105, 21);
             this.link_Back.TabIndex = 23;
             this.link_Back.TabStop = true;
             this.link_Back.Text = "Back to login";
             this.link_Back.UseWaitCursor = true;
+            this.link_Back.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_Back_LinkClicked);
             // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Image = global::GUI.Properties.Resources.password;
-            this.pictureBox3.Location = new System.Drawing.Point(170, 138);
+            this.pictureBox3.Location = new System.Drawing.Point(128, 112);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.Size = new System.Drawing.Size(30, 32);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 24;
             this.pictureBox3.TabStop = false;
@@ -186,18 +194,19 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GUI.Properties.Resources.password__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(170, 216);
+            this.pictureBox1.Location = new System.Drawing.Point(128, 176);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 32);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 25;
             this.pictureBox1.TabStop = false;
             // 
             // ChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 453);
+            this.ClientSize = new System.Drawing.Size(534, 368);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.link_Back);
@@ -209,6 +218,7 @@
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ChangePassword";

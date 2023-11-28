@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,36 @@ namespace DTO
 {
     public partial class EnterCode : Form
     {
-        public EnterCode()
+        private C_USER user;
+        private string otp;
+
+        public EnterCode(C_USER user, string otp)
         {
             InitializeComponent();
+            this.user = user;
+            this.otp = otp;
         }
 
-        
+        private void btn_confirm_Click(object sender, EventArgs e)
+        {
+            string inputOTP = txtEmailCode.Text.ToString();
+            if (otp.Equals(inputOTP))
+            {
+                ChangePassword changePassword = new ChangePassword(user);
+                changePassword.Show();
+                this.Hide();
+            }   
+            else
+            {
+                MessageBox.Show("Wrong OTP recovery code");
+            }    
+        }
+
+        private void link_get_again_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            GetEmailCode getEmailCode = new GetEmailCode(user.UserName);
+            getEmailCode.ShowDialog();
+        }
     }
 }
