@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBConnection.cs" />
     <Compile Include="Form\AddArea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +189,7 @@
     <Compile Include="Form\HomeManager.Designer.cs">
       <DependentUpon>HomeManager.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeLogic.cs" />
     <Compile Include="ImportOrderDetails.cs">
       <SubType>Form</SubType>
     </Compile>

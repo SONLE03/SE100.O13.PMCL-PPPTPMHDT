@@ -41,8 +41,8 @@
             this.btnToday = new Guna.UI2.WinForms.Guna2Button();
             this.btn_ThisQuarter = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustom = new Guna.UI2.WinForms.Guna2Button();
-            this.FromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.ToDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpEndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnOK = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -74,6 +74,10 @@
             this.lbTotalSuppliers = new System.Windows.Forms.Label();
             this.lbTotalProducts = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbStartDate = new System.Windows.Forms.Label();
+            this.lbEndDate = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.guna2CustomGradientPanel2.SuspendLayout();
             this.guna2CustomGradientPanel3.SuspendLayout();
@@ -91,6 +95,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel4.SuspendLayout();
+            this.guna2Panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnThisweek
@@ -172,40 +178,40 @@
             this.btnCustom.Size = new System.Drawing.Size(185, 50);
             this.btnCustom.TabIndex = 4;
             this.btnCustom.Text = "Custom";
+            this.btnCustom.Click += new System.EventHandler(this.btnCustom_Click);
             // 
-            // FromDate
+            // dtpStartDate
             // 
-            this.FromDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.FromDate.BorderRadius = 10;
-            this.FromDate.BorderThickness = 2;
-            this.FromDate.Checked = true;
-            this.FromDate.FillColor = System.Drawing.Color.White;
-            this.FromDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.FromDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.FromDate.Location = new System.Drawing.Point(18, 17);
-            this.FromDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.FromDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.FromDate.Name = "FromDate";
-            this.FromDate.Size = new System.Drawing.Size(264, 49);
-            this.FromDate.TabIndex = 5;
-            this.FromDate.Value = new System.DateTime(2023, 11, 28, 20, 41, 51, 410);
+            this.dtpStartDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.dtpStartDate.BorderRadius = 10;
+            this.dtpStartDate.Checked = true;
+            this.dtpStartDate.FillColor = System.Drawing.Color.White;
+            this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpStartDate.Location = new System.Drawing.Point(10, 5);
+            this.dtpStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(247, 40);
+            this.dtpStartDate.TabIndex = 5;
+            this.dtpStartDate.Value = new System.DateTime(2023, 11, 28, 20, 41, 51, 410);
             // 
-            // ToDate
+            // dtpEndDate
             // 
-            this.ToDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.ToDate.BorderRadius = 10;
-            this.ToDate.BorderThickness = 2;
-            this.ToDate.Checked = true;
-            this.ToDate.FillColor = System.Drawing.Color.White;
-            this.ToDate.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.ToDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.ToDate.Location = new System.Drawing.Point(303, 17);
-            this.ToDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.ToDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.ToDate.Name = "ToDate";
-            this.ToDate.Size = new System.Drawing.Size(264, 49);
-            this.ToDate.TabIndex = 6;
-            this.ToDate.Value = new System.DateTime(2023, 11, 28, 20, 41, 51, 410);
+            this.dtpEndDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.dtpEndDate.BorderRadius = 10;
+            this.dtpEndDate.BorderThickness = 2;
+            this.dtpEndDate.Checked = true;
+            this.dtpEndDate.FillColor = System.Drawing.Color.White;
+            this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpEndDate.Location = new System.Drawing.Point(9, 5);
+            this.dtpEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(247, 40);
+            this.dtpEndDate.TabIndex = 6;
+            this.dtpEndDate.Value = new System.DateTime(2023, 11, 28, 20, 41, 51, 410);
             // 
             // btnOK
             // 
@@ -281,9 +287,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(34, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(188, 41);
+            this.label1.Size = new System.Drawing.Size(270, 41);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Daily orders";
+            this.label1.Text = "Number of orders";
             // 
             // lbDailyOrder
             // 
@@ -350,7 +356,7 @@
             this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.GhostWhite;
             this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.GhostWhite;
             this.guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.GhostWhite;
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(17, 296);
+            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(17, 307);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
             this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(1090, 695);
             this.guna2CustomGradientPanel4.TabIndex = 13;
@@ -365,7 +371,7 @@
             this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.GhostWhite;
             this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.GhostWhite;
             this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.GhostWhite;
-            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(1173, 296);
+            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(1173, 307);
             this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
             this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(599, 463);
             this.guna2CustomGradientPanel5.TabIndex = 14;
@@ -489,7 +495,7 @@
             this.guna2CustomGradientPanel6.FillColor2 = System.Drawing.Color.GhostWhite;
             this.guna2CustomGradientPanel6.FillColor3 = System.Drawing.Color.GhostWhite;
             this.guna2CustomGradientPanel6.FillColor4 = System.Drawing.Color.GhostWhite;
-            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(1173, 786);
+            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(1173, 797);
             this.guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
             this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(599, 205);
             this.guna2CustomGradientPanel6.TabIndex = 16;
@@ -673,10 +679,65 @@
             this.label7.TabIndex = 5;
             this.label7.Text = "Overview";
             // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2Panel4.BorderRadius = 15;
+            this.guna2Panel4.BorderThickness = 2;
+            this.guna2Panel4.Controls.Add(this.lbEndDate);
+            this.guna2Panel4.Controls.Add(this.dtpEndDate);
+            this.guna2Panel4.FillColor = System.Drawing.Color.GhostWhite;
+            this.guna2Panel4.Location = new System.Drawing.Point(302, 17);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(266, 50);
+            this.guna2Panel4.TabIndex = 18;
+            // 
+            // guna2Panel5
+            // 
+            this.guna2Panel5.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2Panel5.BorderRadius = 15;
+            this.guna2Panel5.BorderThickness = 2;
+            this.guna2Panel5.Controls.Add(this.lbStartDate);
+            this.guna2Panel5.Controls.Add(this.dtpStartDate);
+            this.guna2Panel5.FillColor = System.Drawing.Color.GhostWhite;
+            this.guna2Panel5.Location = new System.Drawing.Point(18, 18);
+            this.guna2Panel5.Name = "guna2Panel5";
+            this.guna2Panel5.Size = new System.Drawing.Size(266, 50);
+            this.guna2Panel5.TabIndex = 19;
+            // 
+            // lbStartDate
+            // 
+            this.lbStartDate.BackColor = System.Drawing.Color.GhostWhite;
+            this.lbStartDate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbStartDate.ForeColor = System.Drawing.Color.DimGray;
+            this.lbStartDate.Location = new System.Drawing.Point(10, 5);
+            this.lbStartDate.Name = "lbStartDate";
+            this.lbStartDate.Size = new System.Drawing.Size(247, 40);
+            this.lbStartDate.TabIndex = 28;
+            this.lbStartDate.Text = "29 Nov 2023";
+            this.lbStartDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbEndDate
+            // 
+            this.lbEndDate.BackColor = System.Drawing.Color.GhostWhite;
+            this.lbEndDate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold);
+            this.lbEndDate.ForeColor = System.Drawing.Color.DimGray;
+            this.lbEndDate.Location = new System.Drawing.Point(9, 4);
+            this.lbEndDate.Name = "lbEndDate";
+            this.lbEndDate.Size = new System.Drawing.Size(247, 43);
+            this.lbEndDate.TabIndex = 42;
+            this.lbEndDate.Text = "29 Nov 2023";
+            this.lbEndDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UCHome
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2Panel5);
+            this.Controls.Add(this.guna2Panel4);
             this.Controls.Add(this.guna2CustomGradientPanel6);
             this.Controls.Add(this.guna2CustomGradientPanel5);
             this.Controls.Add(this.guna2CustomGradientPanel4);
@@ -684,15 +745,13 @@
             this.Controls.Add(this.guna2CustomGradientPanel2);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.ToDate);
-            this.Controls.Add(this.FromDate);
             this.Controls.Add(this.btnCustom);
             this.Controls.Add(this.btn_ThisQuarter);
             this.Controls.Add(this.btnToday);
             this.Controls.Add(this.btnThismonth);
             this.Controls.Add(this.btnThisweek);
             this.Name = "UCHome";
-            this.Size = new System.Drawing.Size(1790, 1010);
+            this.Size = new System.Drawing.Size(1790, 1021);
             this.Load += new System.EventHandler(this.UCHome_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
@@ -718,6 +777,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -729,8 +790,8 @@
         private Guna.UI2.WinForms.Guna2Button btnToday;
         private Guna.UI2.WinForms.Guna2Button btn_ThisQuarter;
         private Guna.UI2.WinForms.Guna2Button btnCustom;
-        private Guna.UI2.WinForms.Guna2DateTimePicker FromDate;
-        private Guna.UI2.WinForms.Guna2DateTimePicker ToDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtpEndDate;
         private Guna.UI2.WinForms.Guna2Button btnOK;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
@@ -762,5 +823,9 @@
         private System.Windows.Forms.Label lbTotalSuppliers;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lbTotalEmployees;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
+        private System.Windows.Forms.Label lbEndDate;
+        private System.Windows.Forms.Label lbStartDate;
     }
 }

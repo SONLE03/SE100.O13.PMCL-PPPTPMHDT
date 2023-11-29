@@ -20,56 +20,53 @@ namespace GUI
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            HomeManager home = new HomeManager();
-            home.Show();
-            this.Hide();
-            //string userName = txtUsername.Text.ToString();
-            //string passWord = txtPass.Text.ToString();
+            string userName = txtUsername.Text.ToString();
+            string passWord = txtPass.Text.ToString();
 
-            //var user = BUSUser.Instance.GetUserByUsername(userName); 
+            var user = BUSUser.Instance.GetUserByUsername(userName);
 
-            //if (user != null)
-            //{
-            //    if (user.GROUPUSER.GroupUserName.Equals("Manager"))
-            //    {
-            //        HomeManager home = new HomeManager(user);
-            //        home.Show();
-            //        this.Hide();
-            //    }
-            //    else
-            //    {
-            //        // Staff screen
-            //    }    
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Failed to authenticate, please check your username and password");
-            //}
+            if (user != null)
+            {
+                if (user.GROUPUSER.GroupUserName.Equals("Manager"))
+                {
+                    HomeManager home = new HomeManager(user);
+                    home.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    // Staff screen
+                }
+            }
+            else
+            {
+                MessageBox.Show("Failed to authenticate, please check your username and password");
+            }
         }
 
         private void checkbox_male_Click(object sender, EventArgs e)
         {
-            //if (checkbox_male.Checked == true)
-            //{
-            //    txtPass.PasswordChar = '\0';
-            //}    
-            //else
-            //{
-            //    txtPass.PasswordChar = '*';
-            //}    
+            if (checkbox_male.Checked == true)
+            {
+                txtPass.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPass.PasswordChar = '*';
+            }
         }
 
         private void label9_Click(object sender, EventArgs e)
         {
-            //checkbox_male.Checked = !checkbox_male.Checked;
-            //if (checkbox_male.Checked == true)
-            //{
-            //    txtPass.PasswordChar = '\0';
-            //}
-            //else
-            //{
-            //    txtPass.PasswordChar = '*';
-            //}
+            checkbox_male.Checked = !checkbox_male.Checked;
+            if (checkbox_male.Checked == true)
+            {
+                txtPass.PasswordChar = '\0';
+            }
+            else
+            {
+                txtPass.PasswordChar = '*';
+            }
         }
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
@@ -84,9 +81,9 @@ namespace GUI
 
         private void link_forgot_pass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            //GetEmailCode getEmailCode = new GetEmailCode();
-            //this.Hide();
-            //getEmailCode.Show();
+            GetEmailCode getEmailCode = new GetEmailCode();
+            this.Hide();
+            getEmailCode.Show();
         }
     }
 }

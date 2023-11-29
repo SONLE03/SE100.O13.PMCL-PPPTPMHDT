@@ -14,7 +14,7 @@ namespace GUI
     public partial class HomeManager : Form
     {
         private C_USER user;
-        public HomeManager()//C_USER user)
+        public HomeManager(C_USER user)
         {
             InitializeComponent();
             this.user = user;
