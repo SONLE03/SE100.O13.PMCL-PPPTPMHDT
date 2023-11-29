@@ -56,10 +56,18 @@ namespace GUI
                 {
                     menuExpand = false;
                     Menu.Visible = false;
-                    Menu.Width = 72;
+                    Menu.Width = 75;
                     guna2Transition1.Show(Menu);
                 }
             }
+        }
+
+        private void Home_Click(object sender, EventArgs e)
+        {
+            ucHome = new UCHome();
+            ucHome.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucHome);
         }
     }
 }

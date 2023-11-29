@@ -56,6 +56,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -421,6 +422,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food-delivery.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\potential-customers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\division.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\division1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dolly.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\coffee-bean %281%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

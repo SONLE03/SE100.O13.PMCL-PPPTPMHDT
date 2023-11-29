@@ -16,5 +16,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void UCHome_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

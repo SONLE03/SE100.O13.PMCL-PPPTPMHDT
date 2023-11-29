@@ -39,20 +39,20 @@
             this.Report = new Guna.UI2.WinForms.Guna2Button();
             this.Employees = new Guna.UI2.WinForms.Guna2Button();
             this.Import = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.lbRole = new System.Windows.Forms.Label();
             this.Log_out = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Settings = new Guna.UI2.WinForms.Guna2Button();
             this.Events = new Guna.UI2.WinForms.Guna2Button();
             this.Tables = new Guna.UI2.WinForms.Guna2Button();
             this.Bills = new Guna.UI2.WinForms.Guna2Button();
             this.Products = new Guna.UI2.WinForms.Guna2Button();
             this.Home = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.MouseDetect = new System.Windows.Forms.Timer(this.components);
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
+            this.TabUC = new Guna.UI2.WinForms.Guna2Panel();
+            this.MouseDetect = new System.Windows.Forms.Timer(this.components);
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
@@ -144,7 +144,7 @@
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(85, 1080);
+            this.Menu.Size = new System.Drawing.Size(86, 1080);
             this.Menu.TabIndex = 60;
             // 
             // Report
@@ -243,6 +243,22 @@
             this.Import.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Import.TextOffset = new System.Drawing.Point(77, 0);
             // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.coffee_bean__1_;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(21, 14);
+            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 46);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 11;
+            this.guna2CirclePictureBox1.TabStop = false;
+            this.guna2CirclePictureBox1.UseTransparentBackground = true;
+            // 
             // lbRole
             // 
             this.lbRole.AutoSize = true;
@@ -283,6 +299,21 @@
             this.Log_out.Text = "Log out";
             this.Log_out.TextOffset = new System.Drawing.Point(15, 0);
             this.Log_out.Click += new System.EventHandler(this.Log_out_Click);
+            // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.guna2CirclePictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2CirclePictureBox2.Image = global::GUI.Properties.Resources.Ellipse_5;
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(16, 944);
+            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(53, 53);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox2.TabIndex = 8;
+            this.guna2CirclePictureBox2.TabStop = false;
             // 
             // Settings
             // 
@@ -475,6 +506,20 @@
             this.Home.Text = "Home";
             this.Home.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Home.TextOffset = new System.Drawing.Point(77, 0);
+            this.Home.Click += new System.EventHandler(this.Home_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Transition1.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.pictureBox1.Image = global::GUI.Properties.Resources.CafeStore;
+            this.pictureBox1.Location = new System.Drawing.Point(102, 35);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(116, 27);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // guna2Transition1
             // 
@@ -497,73 +542,29 @@
             animation1.TransparencyCoeff = 0F;
             this.guna2Transition1.DefaultAnimation = animation1;
             // 
-            // guna2Panel1
+            // TabUC
             // 
-            this.guna2Panel1.BorderRadius = 15;
-            this.guna2Transition1.SetDecoration(this.guna2Panel1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Panel1.Location = new System.Drawing.Point(101, 50);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1800, 1010);
-            this.guna2Panel1.TabIndex = 61;
-            this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            this.TabUC.BorderRadius = 15;
+            this.guna2Transition1.SetDecoration(this.TabUC, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.TabUC.Location = new System.Drawing.Point(108, 50);
+            this.TabUC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TabUC.Name = "TabUC";
+            this.TabUC.Size = new System.Drawing.Size(1790, 1010);
+            this.TabUC.TabIndex = 61;
+            this.TabUC.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
             // 
             // MouseDetect
             // 
             this.MouseDetect.Enabled = true;
             this.MouseDetect.Tick += new System.EventHandler(this.MouseDetect_Tick);
             // 
-            // guna2CirclePictureBox1
-            // 
-            this.guna2CirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.guna2CirclePictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.coffee_bean__1_;
-            this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(18, 14);
-            this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 46);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox1.TabIndex = 11;
-            this.guna2CirclePictureBox1.TabStop = false;
-            this.guna2CirclePictureBox1.UseTransparentBackground = true;
-            // 
-            // guna2CirclePictureBox2
-            // 
-            this.guna2CirclePictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.guna2CirclePictureBox2, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2CirclePictureBox2.Image = global::GUI.Properties.Resources.Ellipse_5;
-            this.guna2CirclePictureBox2.ImageRotate = 0F;
-            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(16, 944);
-            this.guna2CirclePictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
-            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(53, 53);
-            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2CirclePictureBox2.TabIndex = 8;
-            this.guna2CirclePictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.pictureBox1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.pictureBox1.Image = global::GUI.Properties.Resources.CafeStore;
-            this.pictureBox1.Location = new System.Drawing.Point(96, 35);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(116, 27);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // HomeManager
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1920, 1080);
-            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.Menu);
+            this.Controls.Add(this.TabUC);
             this.Controls.Add(this.btnMaximize);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnClose);
@@ -605,8 +606,9 @@
         private Guna.UI2.WinForms.Guna2ControlBox btnMinimize;
         private Guna.UI2.WinForms.Guna2ControlBox btnClose;
         private Guna.UI2.WinForms.Guna2Transition guna2Transition1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel TabUC;
         private Guna.UI2.WinForms.Guna2Button Report;
         private System.Windows.Forms.Timer MouseDetect;
+        private static UCHome ucHome;
     }
 }

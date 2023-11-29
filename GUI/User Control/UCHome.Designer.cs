@@ -28,18 +28,739 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            this.btnThisweek = new Guna.UI2.WinForms.Guna2Button();
+            this.btnThismonth = new Guna.UI2.WinForms.Guna2Button();
+            this.btnToday = new Guna.UI2.WinForms.Guna2Button();
+            this.btn_ThisQuarter = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCustom = new Guna.UI2.WinForms.Guna2Button();
+            this.FromDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.ToDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btnOK = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbDailyOrder = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lbTotalCustomers = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbTotalRevenue = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel4 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2CustomGradientPanel5 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.chartTotalRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartTop5 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.guna2CustomGradientPanel6 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.guna2CirclePictureBox3 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox2 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lbTotalEmployees = new System.Windows.Forms.Label();
+            this.lbTotalSuppliers = new System.Windows.Forms.Label();
+            this.lbTotalProducts = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.guna2CustomGradientPanel1.SuspendLayout();
+            this.guna2CustomGradientPanel2.SuspendLayout();
+            this.guna2CustomGradientPanel3.SuspendLayout();
+            this.guna2CustomGradientPanel4.SuspendLayout();
+            this.guna2CustomGradientPanel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotalRevenue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTop5)).BeginInit();
+            this.guna2CustomGradientPanel6.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // btnThisweek
+            // 
+            this.btnThisweek.BorderRadius = 15;
+            this.btnThisweek.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThisweek.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThisweek.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThisweek.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThisweek.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
+            this.btnThisweek.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThisweek.ForeColor = System.Drawing.Color.White;
+            this.btnThisweek.Location = new System.Drawing.Point(1173, 17);
+            this.btnThisweek.Name = "btnThisweek";
+            this.btnThisweek.Size = new System.Drawing.Size(185, 50);
+            this.btnThisweek.TabIndex = 0;
+            this.btnThisweek.Text = "This week";
+            // 
+            // btnThismonth
+            // 
+            this.btnThismonth.BorderRadius = 15;
+            this.btnThismonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThismonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThismonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThismonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThismonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
+            this.btnThismonth.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThismonth.ForeColor = System.Drawing.Color.White;
+            this.btnThismonth.Location = new System.Drawing.Point(1381, 18);
+            this.btnThismonth.Name = "btnThismonth";
+            this.btnThismonth.Size = new System.Drawing.Size(185, 50);
+            this.btnThismonth.TabIndex = 1;
+            this.btnThismonth.Text = "This month";
+            // 
+            // btnToday
+            // 
+            this.btnToday.BorderRadius = 15;
+            this.btnToday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnToday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnToday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnToday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnToday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
+            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnToday.ForeColor = System.Drawing.Color.White;
+            this.btnToday.Location = new System.Drawing.Point(966, 18);
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(185, 50);
+            this.btnToday.TabIndex = 2;
+            this.btnToday.Text = "Today";
+            // 
+            // btn_ThisQuarter
+            // 
+            this.btn_ThisQuarter.BorderRadius = 15;
+            this.btn_ThisQuarter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThisQuarter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_ThisQuarter.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_ThisQuarter.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_ThisQuarter.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
+            this.btn_ThisQuarter.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btn_ThisQuarter.ForeColor = System.Drawing.Color.White;
+            this.btn_ThisQuarter.Location = new System.Drawing.Point(1587, 17);
+            this.btn_ThisQuarter.Name = "btn_ThisQuarter";
+            this.btn_ThisQuarter.Size = new System.Drawing.Size(185, 50);
+            this.btn_ThisQuarter.TabIndex = 3;
+            this.btn_ThisQuarter.Text = "This Quarter";
+            // 
+            // btnCustom
+            // 
+            this.btnCustom.BorderRadius = 15;
+            this.btnCustom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCustom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCustom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCustom.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
+            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnCustom.ForeColor = System.Drawing.Color.White;
+            this.btnCustom.Location = new System.Drawing.Point(758, 18);
+            this.btnCustom.Name = "btnCustom";
+            this.btnCustom.Size = new System.Drawing.Size(185, 50);
+            this.btnCustom.TabIndex = 4;
+            this.btnCustom.Text = "Custom";
+            // 
+            // FromDate
+            // 
+            this.FromDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.FromDate.BorderRadius = 10;
+            this.FromDate.BorderThickness = 2;
+            this.FromDate.Checked = true;
+            this.FromDate.FillColor = System.Drawing.Color.White;
+            this.FromDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.FromDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.FromDate.Location = new System.Drawing.Point(18, 17);
+            this.FromDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.FromDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.FromDate.Name = "FromDate";
+            this.FromDate.Size = new System.Drawing.Size(264, 49);
+            this.FromDate.TabIndex = 5;
+            this.FromDate.Value = new System.DateTime(2023, 11, 28, 20, 41, 51, 410);
+            // 
+            // ToDate
+            // 
+            this.ToDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.ToDate.BorderRadius = 10;
+            this.ToDate.BorderThickness = 2;
+            this.ToDate.Checked = true;
+            this.ToDate.FillColor = System.Drawing.Color.White;
+            this.ToDate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.ToDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.ToDate.Location = new System.Drawing.Point(303, 17);
+            this.ToDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.ToDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.ToDate.Name = "ToDate";
+            this.ToDate.Size = new System.Drawing.Size(264, 49);
+            this.ToDate.TabIndex = 6;
+            this.ToDate.Value = new System.DateTime(2023, 11, 28, 20, 41, 51, 410);
+            // 
+            // btnOK
+            // 
+            this.btnOK.BorderRadius = 15;
+            this.btnOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnOK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnOK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
+            this.btnOK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Location = new System.Drawing.Point(587, 17);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(68, 50);
+            this.btnOK.TabIndex = 7;
+            this.btnOK.Text = "OK";
+            // 
+            // guna2CustomGradientPanel1
+            // 
+            this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel1.BorderRadius = 35;
+            this.guna2CustomGradientPanel1.Controls.Add(this.lbDailyOrder);
+            this.guna2CustomGradientPanel1.Controls.Add(this.label1);
+            this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox1);
+            this.guna2CustomGradientPanel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel1.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel1.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel1.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(18, 110);
+            this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
+            this.guna2CustomGradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(500, 140);
+            this.guna2CustomGradientPanel1.TabIndex = 9;
+            // 
+            // guna2CustomGradientPanel2
+            // 
+            this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel2.BorderRadius = 35;
+            this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox3);
+            this.guna2CustomGradientPanel2.Controls.Add(this.lbTotalRevenue);
+            this.guna2CustomGradientPanel2.Controls.Add(this.label3);
+            this.guna2CustomGradientPanel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel2.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel2.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(1272, 110);
+            this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
+            this.guna2CustomGradientPanel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(500, 140);
+            this.guna2CustomGradientPanel2.TabIndex = 10;
+            // 
+            // guna2CustomGradientPanel3
+            // 
+            this.guna2CustomGradientPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel3.BorderRadius = 35;
+            this.guna2CustomGradientPanel3.Controls.Add(this.pictureBox2);
+            this.guna2CustomGradientPanel3.Controls.Add(this.lbTotalCustomers);
+            this.guna2CustomGradientPanel3.Controls.Add(this.label2);
+            this.guna2CustomGradientPanel3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel3.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel3.FillColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel3.FillColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(164)))), ((int)(((byte)(101)))));
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(637, 110);
+            this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
+            this.guna2CustomGradientPanel3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(514, 140);
+            this.guna2CustomGradientPanel3.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(34, 18);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(188, 41);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Daily orders";
+            // 
+            // lbDailyOrder
+            // 
+            this.lbDailyOrder.AutoSize = true;
+            this.lbDailyOrder.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lbDailyOrder.ForeColor = System.Drawing.Color.White;
+            this.lbDailyOrder.Location = new System.Drawing.Point(34, 76);
+            this.lbDailyOrder.Name = "lbDailyOrder";
+            this.lbDailyOrder.Size = new System.Drawing.Size(86, 41);
+            this.lbDailyOrder.TabIndex = 2;
+            this.lbDailyOrder.Text = "0000";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(40, 18);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(239, 41);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Total customers";
+            // 
+            // lbTotalCustomers
+            // 
+            this.lbTotalCustomers.AutoSize = true;
+            this.lbTotalCustomers.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lbTotalCustomers.ForeColor = System.Drawing.Color.White;
+            this.lbTotalCustomers.Location = new System.Drawing.Point(40, 76);
+            this.lbTotalCustomers.Name = "lbTotalCustomers";
+            this.lbTotalCustomers.Size = new System.Drawing.Size(86, 41);
+            this.lbTotalCustomers.TabIndex = 3;
+            this.lbTotalCustomers.Text = "0000";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(55, 19);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(208, 41);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "Total revenue";
+            // 
+            // lbTotalRevenue
+            // 
+            this.lbTotalRevenue.AutoSize = true;
+            this.lbTotalRevenue.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lbTotalRevenue.ForeColor = System.Drawing.Color.White;
+            this.lbTotalRevenue.Location = new System.Drawing.Point(55, 76);
+            this.lbTotalRevenue.Name = "lbTotalRevenue";
+            this.lbTotalRevenue.Size = new System.Drawing.Size(86, 41);
+            this.lbTotalRevenue.TabIndex = 4;
+            this.lbTotalRevenue.Text = "0000";
+            // 
+            // guna2CustomGradientPanel4
+            // 
+            this.guna2CustomGradientPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2CustomGradientPanel4.BorderRadius = 30;
+            this.guna2CustomGradientPanel4.BorderThickness = 2;
+            this.guna2CustomGradientPanel4.Controls.Add(this.chartTotalRevenue);
+            this.guna2CustomGradientPanel4.FillColor = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel4.FillColor2 = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel4.FillColor3 = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel4.FillColor4 = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(17, 296);
+            this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
+            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(1090, 695);
+            this.guna2CustomGradientPanel4.TabIndex = 13;
+            // 
+            // guna2CustomGradientPanel5
+            // 
+            this.guna2CustomGradientPanel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2CustomGradientPanel5.BorderRadius = 30;
+            this.guna2CustomGradientPanel5.BorderThickness = 2;
+            this.guna2CustomGradientPanel5.Controls.Add(this.chartTop5);
+            this.guna2CustomGradientPanel5.FillColor = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel5.FillColor2 = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel5.FillColor3 = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel5.FillColor4 = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(1173, 296);
+            this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
+            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(599, 463);
+            this.guna2CustomGradientPanel5.TabIndex = 14;
+            // 
+            // chartTotalRevenue
+            // 
+            this.chartTotalRevenue.BackColor = System.Drawing.Color.GhostWhite;
+            this.chartTotalRevenue.BorderlineColor = System.Drawing.Color.RosyBrown;
+            chartArea1.AxisX.IsMarginVisible = false;
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.MidnightBlue;
+            chartArea1.AxisX.LineColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MajorGrid.LineWidth = 0;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea1.AxisX.ScaleBreakStyle.LineColor = System.Drawing.Color.Gainsboro;
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.Gainsboro;
+            chartArea1.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisX2.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea1.AxisY.LineWidth = 0;
+            chartArea1.AxisY.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea1.BackColor = System.Drawing.Color.GhostWhite;
+            chartArea1.BorderColor = System.Drawing.Color.WhiteSmoke;
+            chartArea1.Name = "ChartArea1";
+            this.chartTotalRevenue.ChartAreas.Add(chartArea1);
+            legend1.BackColor = System.Drawing.Color.GhostWhite;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.ForeColor = System.Drawing.Color.White;
+            legend1.Name = "Legend1";
+            legend1.ShadowColor = System.Drawing.Color.White;
+            legend1.Title = "Revenue";
+            legend1.TitleAlignment = System.Drawing.StringAlignment.Near;
+            legend1.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            legend1.TitleSeparatorColor = System.Drawing.Color.Bisque;
+            this.chartTotalRevenue.Legends.Add(legend1);
+            this.chartTotalRevenue.Location = new System.Drawing.Point(14, 18);
+            this.chartTotalRevenue.Name = "chartTotalRevenue";
+            series1.BackSecondaryColor = System.Drawing.Color.MediumTurquoise;
+            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(91)))), ((int)(((byte)(170)))));
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(91)))), ((int)(((byte)(170)))));
+            series1.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series1.LabelBackColor = System.Drawing.Color.White;
+            series1.Legend = "Legend1";
+            series1.LegendText = "Over time";
+            series1.MarkerColor = System.Drawing.Color.LavenderBlush;
+            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series1.Name = "Series1";
+            this.chartTotalRevenue.Series.Add(series1);
+            this.chartTotalRevenue.Size = new System.Drawing.Size(1054, 657);
+            this.chartTotalRevenue.TabIndex = 27;
+            this.chartTotalRevenue.Text = "chart2";
+            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            title1.Name = "Title1";
+            title1.Text = "Total Revenue";
+            this.chartTotalRevenue.Titles.Add(title1);
+            // 
+            // chartTop5
+            // 
+            this.chartTop5.BackColor = System.Drawing.Color.GhostWhite;
+            chartArea2.BackColor = System.Drawing.Color.GhostWhite;
+            chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            chartArea2.BorderColor = System.Drawing.Color.GhostWhite;
+            chartArea2.Name = "ChartArea1";
+            this.chartTop5.ChartAreas.Add(chartArea2);
+            legend2.BackColor = System.Drawing.Color.GhostWhite;
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend2.Name = "Legend1";
+            this.chartTop5.Legends.Add(legend2);
+            this.chartTop5.Location = new System.Drawing.Point(19, 8);
+            this.chartTop5.Name = "chartTop5";
+            this.chartTop5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
+            this.chartTop5.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.MediumBlue,
+        System.Drawing.Color.DeepSkyBlue,
+        System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(153)))), ((int)(((byte)(254)))))};
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series2.BackSecondaryColor = System.Drawing.Color.MediumOrchid;
+            series2.BorderColor = System.Drawing.Color.GhostWhite;
+            series2.BorderWidth = 5;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series2.IsValueShownAsLabel = true;
+            series2.LabelForeColor = System.Drawing.Color.White;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartTop5.Series.Add(series2);
+            this.chartTop5.Size = new System.Drawing.Size(559, 446);
+            this.chartTop5.TabIndex = 28;
+            this.chartTop5.Text = "Top 6 best selling products";
+            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title2.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            title2.Name = "Title1";
+            title2.Text = "Top 6 best selling products";
+            this.chartTop5.Titles.Add(title2);
+            // 
+            // guna2CustomGradientPanel6
+            // 
+            this.guna2CustomGradientPanel6.BackColor = System.Drawing.Color.Transparent;
+            this.guna2CustomGradientPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2CustomGradientPanel6.BorderRadius = 30;
+            this.guna2CustomGradientPanel6.BorderThickness = 2;
+            this.guna2CustomGradientPanel6.Controls.Add(this.label7);
+            this.guna2CustomGradientPanel6.Controls.Add(this.guna2Panel3);
+            this.guna2CustomGradientPanel6.Controls.Add(this.guna2Panel2);
+            this.guna2CustomGradientPanel6.Controls.Add(this.guna2Panel1);
+            this.guna2CustomGradientPanel6.FillColor = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel6.FillColor2 = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel6.FillColor3 = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel6.FillColor4 = System.Drawing.Color.GhostWhite;
+            this.guna2CustomGradientPanel6.Location = new System.Drawing.Point(1173, 786);
+            this.guna2CustomGradientPanel6.Name = "guna2CustomGradientPanel6";
+            this.guna2CustomGradientPanel6.Size = new System.Drawing.Size(599, 205);
+            this.guna2CustomGradientPanel6.TabIndex = 16;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.lbTotalEmployees);
+            this.guna2Panel1.Controls.Add(this.label4);
+            this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.guna2Panel1.Location = new System.Drawing.Point(3, 48);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(593, 47);
+            this.guna2Panel1.TabIndex = 0;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.lbTotalSuppliers);
+            this.guna2Panel2.Controls.Add(this.label5);
+            this.guna2Panel2.Controls.Add(this.guna2CirclePictureBox2);
+            this.guna2Panel2.Location = new System.Drawing.Point(3, 99);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(593, 47);
+            this.guna2Panel2.TabIndex = 1;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.Controls.Add(this.lbTotalProducts);
+            this.guna2Panel3.Controls.Add(this.label6);
+            this.guna2Panel3.Controls.Add(this.guna2CirclePictureBox3);
+            this.guna2Panel3.Location = new System.Drawing.Point(4, 150);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.Size = new System.Drawing.Size(593, 51);
+            this.guna2Panel3.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.DimGray;
+            this.label4.Location = new System.Drawing.Point(91, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(181, 30);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Total employees";
+            // 
+            // guna2CirclePictureBox3
+            // 
+            this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.guna2CirclePictureBox3.Image = global::GUI.Properties.Resources.coffee_bean__1_1;
+            this.guna2CirclePictureBox3.ImageRotate = 0F;
+            this.guna2CirclePictureBox3.Location = new System.Drawing.Point(25, 3);
+            this.guna2CirclePictureBox3.Name = "guna2CirclePictureBox3";
+            this.guna2CirclePictureBox3.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox3.Size = new System.Drawing.Size(45, 45);
+            this.guna2CirclePictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox3.TabIndex = 1;
+            this.guna2CirclePictureBox3.TabStop = false;
+            // 
+            // guna2CirclePictureBox2
+            // 
+            this.guna2CirclePictureBox2.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.guna2CirclePictureBox2.Image = global::GUI.Properties.Resources.dolly;
+            this.guna2CirclePictureBox2.ImageRotate = 0F;
+            this.guna2CirclePictureBox2.Location = new System.Drawing.Point(26, 1);
+            this.guna2CirclePictureBox2.Name = "guna2CirclePictureBox2";
+            this.guna2CirclePictureBox2.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox2.Size = new System.Drawing.Size(45, 45);
+            this.guna2CirclePictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox2.TabIndex = 1;
+            this.guna2CirclePictureBox2.TabStop = false;
+            // 
+            // guna2CirclePictureBox1
+            // 
+            this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.MediumSlateBlue;
+            this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.division1;
+            this.guna2CirclePictureBox1.ImageRotate = 0F;
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(26, 1);
+            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
+            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2CirclePictureBox1.TabIndex = 0;
+            this.guna2CirclePictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::GUI.Properties.Resources.potential_customers;
+            this.pictureBox2.Location = new System.Drawing.Point(360, 16);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(110, 110);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 4;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::GUI.Properties.Resources.profit;
+            this.pictureBox3.Location = new System.Drawing.Point(345, 15);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(110, 110);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::GUI.Properties.Resources.food_delivery;
+            this.pictureBox1.Location = new System.Drawing.Point(351, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(110, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.DimGray;
+            this.label5.Location = new System.Drawing.Point(91, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 30);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Total suppliers";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.DimGray;
+            this.label6.Location = new System.Drawing.Point(90, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(163, 30);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Total products";
+            // 
+            // lbTotalEmployees
+            // 
+            this.lbTotalEmployees.AutoSize = true;
+            this.lbTotalEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(253)))), ((int)(((byte)(243)))));
+            this.lbTotalEmployees.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lbTotalEmployees.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(122)))), ((int)(((byte)(72)))));
+            this.lbTotalEmployees.Location = new System.Drawing.Point(473, 8);
+            this.lbTotalEmployees.Name = "lbTotalEmployees";
+            this.lbTotalEmployees.Size = new System.Drawing.Size(65, 30);
+            this.lbTotalEmployees.TabIndex = 5;
+            this.lbTotalEmployees.Text = "0000";
+            // 
+            // lbTotalSuppliers
+            // 
+            this.lbTotalSuppliers.AutoSize = true;
+            this.lbTotalSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(253)))), ((int)(((byte)(243)))));
+            this.lbTotalSuppliers.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lbTotalSuppliers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(122)))), ((int)(((byte)(72)))));
+            this.lbTotalSuppliers.Location = new System.Drawing.Point(473, 9);
+            this.lbTotalSuppliers.Name = "lbTotalSuppliers";
+            this.lbTotalSuppliers.Size = new System.Drawing.Size(65, 30);
+            this.lbTotalSuppliers.TabIndex = 6;
+            this.lbTotalSuppliers.Text = "0000";
+            // 
+            // lbTotalProducts
+            // 
+            this.lbTotalProducts.AutoSize = true;
+            this.lbTotalProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(253)))), ((int)(((byte)(243)))));
+            this.lbTotalProducts.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lbTotalProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(122)))), ((int)(((byte)(72)))));
+            this.lbTotalProducts.Location = new System.Drawing.Point(472, 11);
+            this.lbTotalProducts.Name = "lbTotalProducts";
+            this.lbTotalProducts.Size = new System.Drawing.Size(65, 30);
+            this.lbTotalProducts.TabIndex = 7;
+            this.lbTotalProducts.Text = "0000";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.DimGray;
+            this.label7.Location = new System.Drawing.Point(23, 4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(112, 30);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Overview";
             // 
             // UCHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.guna2CustomGradientPanel6);
+            this.Controls.Add(this.guna2CustomGradientPanel5);
+            this.Controls.Add(this.guna2CustomGradientPanel4);
+            this.Controls.Add(this.guna2CustomGradientPanel3);
+            this.Controls.Add(this.guna2CustomGradientPanel2);
+            this.Controls.Add(this.guna2CustomGradientPanel1);
+            this.Controls.Add(this.btnOK);
+            this.Controls.Add(this.ToDate);
+            this.Controls.Add(this.FromDate);
+            this.Controls.Add(this.btnCustom);
+            this.Controls.Add(this.btn_ThisQuarter);
+            this.Controls.Add(this.btnToday);
+            this.Controls.Add(this.btnThismonth);
+            this.Controls.Add(this.btnThisweek);
             this.Name = "UCHome";
-            this.Size = new System.Drawing.Size(1800, 1010);
+            this.Size = new System.Drawing.Size(1790, 1010);
+            this.Load += new System.EventHandler(this.UCHome_Load);
+            this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.guna2CustomGradientPanel1.PerformLayout();
+            this.guna2CustomGradientPanel2.ResumeLayout(false);
+            this.guna2CustomGradientPanel2.PerformLayout();
+            this.guna2CustomGradientPanel3.ResumeLayout(false);
+            this.guna2CustomGradientPanel3.PerformLayout();
+            this.guna2CustomGradientPanel4.ResumeLayout(false);
+            this.guna2CustomGradientPanel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotalRevenue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTop5)).EndInit();
+            this.guna2CustomGradientPanel6.ResumeLayout(false);
+            this.guna2CustomGradientPanel6.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Guna.UI2.WinForms.Guna2Button btnThisweek;
+        private Guna.UI2.WinForms.Guna2Button btnThismonth;
+        private Guna.UI2.WinForms.Guna2Button btnToday;
+        private Guna.UI2.WinForms.Guna2Button btn_ThisQuarter;
+        private Guna.UI2.WinForms.Guna2Button btnCustom;
+        private Guna.UI2.WinForms.Guna2DateTimePicker FromDate;
+        private Guna.UI2.WinForms.Guna2DateTimePicker ToDate;
+        private Guna.UI2.WinForms.Guna2Button btnOK;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel2;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lbDailyOrder;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label lbTotalCustomers;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lbTotalRevenue;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTotalRevenue;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel5;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTop5;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel6;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox2;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbTotalProducts;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbTotalSuppliers;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbTotalEmployees;
     }
 }
