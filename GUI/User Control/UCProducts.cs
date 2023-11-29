@@ -16,5 +16,10 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void ucProductMiniItem2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

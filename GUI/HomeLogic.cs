@@ -182,7 +182,7 @@ namespace GUI
         private void GetProductAnalys()
         {
             TopProduct = new List<KeyValuePair<string, int>>();
-            Stock = new List<KeyValuePair<string, int>>();
+            //Stock = new List<KeyValuePair<string, int>>();
 
             using (var connect = GetConnection())
             {

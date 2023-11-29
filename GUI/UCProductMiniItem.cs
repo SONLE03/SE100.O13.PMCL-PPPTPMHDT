@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class AddNewProduct : Form
+    public partial class UCProductMiniItem : UserControl
     {
-        public AddNewProduct()
+        public UCProductMiniItem()
         {
             InitializeComponent();
-        }
-
-        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }
