@@ -210,6 +210,24 @@
     <Compile Include="TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\Employees\UCEmployees-TabUserGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Employees\UCEmployees-TabUserGroup.Designer.cs">
+      <DependentUpon>UCEmployees-TabUserGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Employees\UCEmployees-TabEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Employees\UCEmployees-TabEmployees.Designer.cs">
+      <DependentUpon>UCEmployees-TabEmployees.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Employees\UCEmployees.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Employees\UCEmployees.Designer.cs">
+      <DependentUpon>UCEmployees.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Import\UCImport-TabImportOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -345,6 +363,15 @@
     </Compile>
     <EmbeddedResource Include="Form\SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Employees\UCEmployees-TabUserGroup.resx">
+      <DependentUpon>UCEmployees-TabUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Employees\UCEmployees-TabEmployees.resx">
+      <DependentUpon>UCEmployees-TabEmployees.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Employees\UCEmployees.resx">
+      <DependentUpon>UCEmployees.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Import\UCImport-TabImportOrder.resx">
       <DependentUpon>UCImport-TabImportOrder.cs</DependentUpon>
