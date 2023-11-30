@@ -210,6 +210,12 @@
     <Compile Include="TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCEvents.Designer.cs">
+      <DependentUpon>UCEvents.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Bills\UCMiniProductChoosen.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -321,6 +327,9 @@
     </Compile>
     <EmbeddedResource Include="Form\SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCEvents.resx">
+      <DependentUpon>UCEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Bills\UCBill.resx">
       <DependentUpon>UCBill.cs</DependentUpon>
