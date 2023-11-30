@@ -210,6 +210,12 @@
     <Compile Include="TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSettings.Designer.cs">
+      <DependentUpon>UCSettings.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Employees\UCEmployees-TabUserGroup.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -363,6 +369,9 @@
     </Compile>
     <EmbeddedResource Include="Form\SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSettings.resx">
+      <DependentUpon>UCSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Employees\UCEmployees-TabUserGroup.resx">
       <DependentUpon>UCEmployees-TabUserGroup.cs</DependentUpon>
@@ -569,7 +578,12 @@
   <ItemGroup>
     <None Include="Resources\searches.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Ellipse 51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Engman.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
