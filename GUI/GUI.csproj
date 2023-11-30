@@ -210,10 +210,28 @@
     <Compile Include="TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCEvents.cs">
+    <Compile Include="User Control\Import\UCImport-TabImportOrder.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCEvents.Designer.cs">
+    <Compile Include="User Control\Import\UCImport-TabImportOrder.Designer.cs">
+      <DependentUpon>UCImport-TabImportOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Import\UCImport-TabSupplier.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Import\UCImport-TabSupplier.Designer.cs">
+      <DependentUpon>UCImport-TabSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Import\UCImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Import\UCImport.Designer.cs">
+      <DependentUpon>UCImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\UCEvents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\UCEvents.Designer.cs">
       <DependentUpon>UCEvents.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\Bills\UCMiniProductChoosen.cs">
@@ -328,7 +346,16 @@
     <EmbeddedResource Include="Form\SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCEvents.resx">
+    <EmbeddedResource Include="User Control\Import\UCImport-TabImportOrder.resx">
+      <DependentUpon>UCImport-TabImportOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Import\UCImport-TabSupplier.resx">
+      <DependentUpon>UCImport-TabSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Import\UCImport.resx">
+      <DependentUpon>UCImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\UCEvents.resx">
       <DependentUpon>UCEvents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Bills\UCBill.resx">
