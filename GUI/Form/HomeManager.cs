@@ -69,5 +69,10 @@ namespace GUI
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucHome);
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

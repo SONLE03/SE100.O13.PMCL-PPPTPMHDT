@@ -216,6 +216,24 @@
     <Compile Include="UCProductMiniItem.Designer.cs">
       <DependentUpon>UCProductMiniItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCTables-TabAreas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTables-TabAreas.Designer.cs">
+      <DependentUpon>UCTables-TabAreas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTables-TabTables.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTables-TabTables.Designer.cs">
+      <DependentUpon>UCTables-TabTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTables.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTables.Designer.cs">
+      <DependentUpon>UCTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\UCHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -294,6 +312,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UCProductMiniItem.resx">
       <DependentUpon>UCProductMiniItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTables-TabAreas.resx">
+      <DependentUpon>UCTables-TabAreas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTables-TabTables.resx">
+      <DependentUpon>UCTables-TabTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTables.resx">
+      <DependentUpon>UCTables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\UCHome.resx">
       <DependentUpon>UCHome.cs</DependentUpon>
@@ -457,6 +484,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\milkco1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searches.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
