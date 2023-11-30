@@ -210,28 +210,40 @@
     <Compile Include="TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCProductMiniItem.cs">
+    <Compile Include="User Control\Bills\UCMiniProductChoosen.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCProductMiniItem.Designer.cs">
+    <Compile Include="User Control\Bills\UCMiniProductChoosen.Designer.cs">
+      <DependentUpon>UCMiniProductChoosen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Bills\UCBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Bills\UCBill.Designer.cs">
+      <DependentUpon>UCBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Products\UCProductMiniItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Products\UCProductMiniItem.Designer.cs">
       <DependentUpon>UCProductMiniItem.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCTables-TabAreas.cs">
+    <Compile Include="User Control\Tables\UCTables-TabAreas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCTables-TabAreas.Designer.cs">
+    <Compile Include="User Control\Tables\UCTables-TabAreas.Designer.cs">
       <DependentUpon>UCTables-TabAreas.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCTables-TabTables.cs">
+    <Compile Include="User Control\Tables\UCTables-TabTables.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCTables-TabTables.Designer.cs">
+    <Compile Include="User Control\Tables\UCTables-TabTables.Designer.cs">
       <DependentUpon>UCTables-TabTables.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCTables.cs">
+    <Compile Include="User Control\Tables\UCTables.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCTables.Designer.cs">
+    <Compile Include="User Control\Tables\UCTables.Designer.cs">
       <DependentUpon>UCTables.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\UCHome.cs">
@@ -240,10 +252,10 @@
     <Compile Include="User Control\UCHome.Designer.cs">
       <DependentUpon>UCHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\UCProducts.cs">
+    <Compile Include="User Control\Products\UCProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="User Control\UCProducts.Designer.cs">
+    <Compile Include="User Control\Products\UCProducts.Designer.cs">
       <DependentUpon>UCProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="UserGroupDetails.cs">
@@ -310,22 +322,28 @@
     <EmbeddedResource Include="Form\SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCProductMiniItem.resx">
+    <EmbeddedResource Include="User Control\Bills\UCBill.resx">
+      <DependentUpon>UCBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Bills\UCMiniProductChoosen.resx">
+      <DependentUpon>UCMiniProductChoosen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Products\UCProductMiniItem.resx">
       <DependentUpon>UCProductMiniItem.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCTables-TabAreas.resx">
+    <EmbeddedResource Include="User Control\Tables\UCTables-TabAreas.resx">
       <DependentUpon>UCTables-TabAreas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCTables-TabTables.resx">
+    <EmbeddedResource Include="User Control\Tables\UCTables-TabTables.resx">
       <DependentUpon>UCTables-TabTables.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCTables.resx">
+    <EmbeddedResource Include="User Control\Tables\UCTables.resx">
       <DependentUpon>UCTables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\UCHome.resx">
       <DependentUpon>UCHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\UCProducts.resx">
+    <EmbeddedResource Include="User Control\Products\UCProducts.resx">
       <DependentUpon>UCProducts.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -488,6 +506,7 @@
   <ItemGroup>
     <None Include="Resources\searches.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
