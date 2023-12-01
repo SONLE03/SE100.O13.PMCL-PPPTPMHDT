@@ -37,7 +37,7 @@ namespace BUS
             return DALDrink.Instance.GetDrinkByCode(DrinksID);
         }
 
-        public bool AddDrink(string DrinksName, CATEGORY drinkCategory, string Unit,
+        public int AddDrink(string DrinksName, CATEGORY drinkCategory, string Unit,
             string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs)
         {
             return DALDrink.Instance.AddDrink(DrinksName, drinkCategory, Unit, Description, Image, idEV, Drink_SIZEs);

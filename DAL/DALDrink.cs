@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Net.Mime.MediaTypeNames;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -48,7 +49,7 @@ namespace DAL
             return res;
         }
 
-        public bool AddDrink(string DrinksName, CATEGORY drinkCategory, string Unit, 
+        public int AddDrink(string DrinksName, CATEGORY drinkCategory, string Unit, 
             string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs)
         {
             try
@@ -65,11 +66,11 @@ namespace DAL
                 CFEntities.Instance.DRINKS.Add(Drink);
                 CFEntities.Instance.SaveChanges();
 
-                return true;
+                return Drink.id;
             }
-            catch
+            catch (Exception e)
             {
-                return false;
+                return -1;
             }
         }
        

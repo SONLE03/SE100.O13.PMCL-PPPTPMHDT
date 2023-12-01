@@ -25,5 +25,10 @@ namespace BUS
         {
             return DALDrink_Size.Instance.AddDrink_Size(idDrink, idSize, price);
         }
+
+        public List<DTO.C_SIZE> GetAllSize()
+        {
+            return DALDrink_Size.Instance.GetAllSize();
+        }
     }
 }

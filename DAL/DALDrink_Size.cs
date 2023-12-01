@@ -20,6 +20,11 @@ namespace DAL
             set => instance = value;
         }
 
+        public List<C_SIZE> GetAllSize()
+        {
+            return CFEntities.Instance.C_SIZE.AsNoTracking().ToList();
+        }
+
         public bool AddDrink_Size(int idDrink, int idSize, double price)
         {
             try

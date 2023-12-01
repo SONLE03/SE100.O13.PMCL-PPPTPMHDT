@@ -74,5 +74,13 @@ namespace GUI
         {
 
         }
+
+        private void Products_Click(object sender, EventArgs e)
+        {
+            ucProducts = new UCProducts();
+            ucProducts.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucProducts);
+        }
     }
 }

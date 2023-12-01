@@ -29,19 +29,8 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucProductMiniItem1 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem2 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem3 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem4 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem5 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem6 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem7 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem8 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem9 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem10 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem11 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem12 = new GUI.UCProductMiniItem();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_AddSize = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -55,11 +44,22 @@
             this.btnProductList = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnCategory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ucProductMiniItem1 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem2 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem3 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem4 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem5 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem6 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem7 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem8 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem9 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem10 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem11 = new GUI.UCProductMiniItem();
+            this.ucProductMiniItem12 = new GUI.UCProductMiniItem();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -85,6 +85,18 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1677, 858);
             this.guna2CustomGradientPanel1.TabIndex = 23;
+            this.guna2CustomGradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.searches;
+            this.pictureBox1.Location = new System.Drawing.Point(391, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(39, 36);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
             // 
             // flowLayoutPanel
             // 
@@ -107,114 +119,6 @@
             this.flowLayoutPanel.Size = new System.Drawing.Size(1574, 663);
             this.flowLayoutPanel.TabIndex = 33;
             // 
-            // ucProductMiniItem1
-            // 
-            this.ucProductMiniItem1.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem1.Location = new System.Drawing.Point(2, 2);
-            this.ucProductMiniItem1.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem1.Name = "ucProductMiniItem1";
-            this.ucProductMiniItem1.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem1.TabIndex = 0;
-            // 
-            // ucProductMiniItem2
-            // 
-            this.ucProductMiniItem2.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem2.Location = new System.Drawing.Point(389, 2);
-            this.ucProductMiniItem2.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem2.Name = "ucProductMiniItem2";
-            this.ucProductMiniItem2.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem2.TabIndex = 1;
-            // 
-            // ucProductMiniItem3
-            // 
-            this.ucProductMiniItem3.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem3.Location = new System.Drawing.Point(776, 2);
-            this.ucProductMiniItem3.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem3.Name = "ucProductMiniItem3";
-            this.ucProductMiniItem3.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem3.TabIndex = 2;
-            // 
-            // ucProductMiniItem4
-            // 
-            this.ucProductMiniItem4.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem4.Location = new System.Drawing.Point(1163, 2);
-            this.ucProductMiniItem4.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem4.Name = "ucProductMiniItem4";
-            this.ucProductMiniItem4.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem4.TabIndex = 3;
-            // 
-            // ucProductMiniItem5
-            // 
-            this.ucProductMiniItem5.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem5.Location = new System.Drawing.Point(2, 342);
-            this.ucProductMiniItem5.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem5.Name = "ucProductMiniItem5";
-            this.ucProductMiniItem5.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem5.TabIndex = 4;
-            // 
-            // ucProductMiniItem6
-            // 
-            this.ucProductMiniItem6.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem6.Location = new System.Drawing.Point(389, 342);
-            this.ucProductMiniItem6.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem6.Name = "ucProductMiniItem6";
-            this.ucProductMiniItem6.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem6.TabIndex = 5;
-            // 
-            // ucProductMiniItem7
-            // 
-            this.ucProductMiniItem7.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem7.Location = new System.Drawing.Point(776, 342);
-            this.ucProductMiniItem7.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem7.Name = "ucProductMiniItem7";
-            this.ucProductMiniItem7.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem7.TabIndex = 6;
-            // 
-            // ucProductMiniItem8
-            // 
-            this.ucProductMiniItem8.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem8.Location = new System.Drawing.Point(1163, 342);
-            this.ucProductMiniItem8.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem8.Name = "ucProductMiniItem8";
-            this.ucProductMiniItem8.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem8.TabIndex = 7;
-            // 
-            // ucProductMiniItem9
-            // 
-            this.ucProductMiniItem9.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem9.Location = new System.Drawing.Point(2, 682);
-            this.ucProductMiniItem9.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem9.Name = "ucProductMiniItem9";
-            this.ucProductMiniItem9.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem9.TabIndex = 8;
-            // 
-            // ucProductMiniItem10
-            // 
-            this.ucProductMiniItem10.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem10.Location = new System.Drawing.Point(389, 682);
-            this.ucProductMiniItem10.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem10.Name = "ucProductMiniItem10";
-            this.ucProductMiniItem10.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem10.TabIndex = 9;
-            // 
-            // ucProductMiniItem11
-            // 
-            this.ucProductMiniItem11.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem11.Location = new System.Drawing.Point(776, 682);
-            this.ucProductMiniItem11.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem11.Name = "ucProductMiniItem11";
-            this.ucProductMiniItem11.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem11.TabIndex = 10;
-            // 
-            // ucProductMiniItem12
-            // 
-            this.ucProductMiniItem12.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem12.Location = new System.Drawing.Point(1163, 682);
-            this.ucProductMiniItem12.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem12.Name = "ucProductMiniItem12";
-            this.ucProductMiniItem12.Size = new System.Drawing.Size(383, 336);
-            this.ucProductMiniItem12.TabIndex = 11;
-            // 
             // btnAddProduct
             // 
             this.btnAddProduct.BackColor = System.Drawing.Color.Transparent;
@@ -235,6 +139,7 @@
             this.btnAddProduct.Size = new System.Drawing.Size(165, 41);
             this.btnAddProduct.TabIndex = 32;
             this.btnAddProduct.Text = "Add product";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // btn_AddSize
             // 
@@ -433,16 +338,113 @@
             this.pictureBox4.TabIndex = 21;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox1
+            // ucProductMiniItem1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.searches;
-            this.pictureBox1.Location = new System.Drawing.Point(391, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(39, 36);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
+            this.ucProductMiniItem1.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem1.Location = new System.Drawing.Point(2, 2);
+            this.ucProductMiniItem1.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem1.Name = "ucProductMiniItem1";
+            this.ucProductMiniItem1.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem1.TabIndex = 0;
+            // 
+            // ucProductMiniItem2
+            // 
+            this.ucProductMiniItem2.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem2.Location = new System.Drawing.Point(389, 2);
+            this.ucProductMiniItem2.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem2.Name = "ucProductMiniItem2";
+            this.ucProductMiniItem2.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem2.TabIndex = 1;
+            // 
+            // ucProductMiniItem3
+            // 
+            this.ucProductMiniItem3.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem3.Location = new System.Drawing.Point(776, 2);
+            this.ucProductMiniItem3.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem3.Name = "ucProductMiniItem3";
+            this.ucProductMiniItem3.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem3.TabIndex = 2;
+            // 
+            // ucProductMiniItem4
+            // 
+            this.ucProductMiniItem4.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem4.Location = new System.Drawing.Point(1163, 2);
+            this.ucProductMiniItem4.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem4.Name = "ucProductMiniItem4";
+            this.ucProductMiniItem4.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem4.TabIndex = 3;
+            // 
+            // ucProductMiniItem5
+            // 
+            this.ucProductMiniItem5.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem5.Location = new System.Drawing.Point(2, 342);
+            this.ucProductMiniItem5.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem5.Name = "ucProductMiniItem5";
+            this.ucProductMiniItem5.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem5.TabIndex = 4;
+            // 
+            // ucProductMiniItem6
+            // 
+            this.ucProductMiniItem6.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem6.Location = new System.Drawing.Point(389, 342);
+            this.ucProductMiniItem6.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem6.Name = "ucProductMiniItem6";
+            this.ucProductMiniItem6.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem6.TabIndex = 5;
+            // 
+            // ucProductMiniItem7
+            // 
+            this.ucProductMiniItem7.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem7.Location = new System.Drawing.Point(776, 342);
+            this.ucProductMiniItem7.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem7.Name = "ucProductMiniItem7";
+            this.ucProductMiniItem7.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem7.TabIndex = 6;
+            // 
+            // ucProductMiniItem8
+            // 
+            this.ucProductMiniItem8.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem8.Location = new System.Drawing.Point(1163, 342);
+            this.ucProductMiniItem8.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem8.Name = "ucProductMiniItem8";
+            this.ucProductMiniItem8.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem8.TabIndex = 7;
+            // 
+            // ucProductMiniItem9
+            // 
+            this.ucProductMiniItem9.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem9.Location = new System.Drawing.Point(2, 682);
+            this.ucProductMiniItem9.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem9.Name = "ucProductMiniItem9";
+            this.ucProductMiniItem9.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem9.TabIndex = 8;
+            // 
+            // ucProductMiniItem10
+            // 
+            this.ucProductMiniItem10.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem10.Location = new System.Drawing.Point(389, 682);
+            this.ucProductMiniItem10.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem10.Name = "ucProductMiniItem10";
+            this.ucProductMiniItem10.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem10.TabIndex = 9;
+            // 
+            // ucProductMiniItem11
+            // 
+            this.ucProductMiniItem11.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem11.Location = new System.Drawing.Point(776, 682);
+            this.ucProductMiniItem11.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem11.Name = "ucProductMiniItem11";
+            this.ucProductMiniItem11.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem11.TabIndex = 10;
+            // 
+            // ucProductMiniItem12
+            // 
+            this.ucProductMiniItem12.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductMiniItem12.Location = new System.Drawing.Point(1163, 682);
+            this.ucProductMiniItem12.Margin = new System.Windows.Forms.Padding(2);
+            this.ucProductMiniItem12.Name = "ucProductMiniItem12";
+            this.ucProductMiniItem12.Size = new System.Drawing.Size(383, 336);
+            this.ucProductMiniItem12.TabIndex = 11;
             // 
             // UCProducts
             // 
@@ -457,9 +459,9 @@
             this.Size = new System.Drawing.Size(1800, 1020);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.flowLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

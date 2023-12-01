@@ -21,5 +21,16 @@ namespace GUI
         {
 
         }
+
+        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            var addNewProduct = new AddNewProduct();
+            addNewProduct.Show();
+        }
     }
 }

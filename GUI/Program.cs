@@ -14,9 +14,10 @@ namespace GUI
         [STAThread]
         static void Main()
         {
+            var user = BUS.BUSUser.Instance.GetUserByUsername("manager");
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new HomeManager(user));
         }
     }
 }
