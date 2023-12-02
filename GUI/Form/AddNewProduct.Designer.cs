@@ -47,17 +47,14 @@
             this.combobox_size = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Cancel = new Guna.UI2.WinForms.Guna2GradientButton();
+
+            this.picture_product = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.picture_product = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtDescibe = new Guna.UI2.WinForms.Guna2TextBox();
+//>>>>>>> e8a87afe6479223f9aed9069b1600cde59dc47bb
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_product)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -72,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.AliceBlue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label1.Location = new System.Drawing.Point(276, 22);
@@ -255,7 +252,9 @@
             this.btn_AddSize.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_AddSize.ForeColor = System.Drawing.Color.White;
             this.btn_AddSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_AddSize.Location = new System.Drawing.Point(175, 24);
+
+            this.btn_AddSize.Location = new System.Drawing.Point(156, 24);
+//>>>>>>> e8a87afe6479223f9aed9069b1600cde59dc47bb
             this.btn_AddSize.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AddSize.Name = "btn_AddSize";
             this.btn_AddSize.Size = new System.Drawing.Size(90, 33);
@@ -292,7 +291,8 @@
             this.combobox_size.Location = new System.Drawing.Point(53, 24);
             this.combobox_size.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_size.Name = "combobox_size";
-            this.combobox_size.Size = new System.Drawing.Size(113, 36);
+            this.combobox_size.Size = new System.Drawing.Size(81, 36);
+//>>>>>>> e8a87afe6479223f9aed9069b1600cde59dc47bb
             this.combobox_size.TabIndex = 29;
             // 
             // btn_Add
@@ -339,82 +339,7 @@
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
-            // guna2ControlBox3
-            // 
-            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox3.Animated = true;
-            this.guna2ControlBox3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox3.BorderRadius = 10;
-            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
-            this.guna2ControlBox3.CustomIconSize = 20F;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(614, 14);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
-            this.guna2ControlBox3.TabIndex = 33;
-            // 
-            // guna2ControlBox1
-            // 
-            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2ControlBox1.Animated = true;
-            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ControlBox1.BorderRadius = 10;
-            this.guna2ControlBox1.CustomIconSize = 20F;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
-            this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(647, 14);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
-            this.guna2ControlBox1.TabIndex = 32;
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.BorderRadius = 15;
-            this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnUpdate.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnUpdate.Location = new System.Drawing.Point(429, 486);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(94, 33);
-            this.btnUpdate.TabIndex = 34;
-            this.btnUpdate.Text = "Update";
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BorderRadius = 15;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnDelete.Location = new System.Drawing.Point(297, 486);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(94, 33);
-            this.btnDelete.TabIndex = 35;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
+
             // picture_product
             // 
             this.picture_product.BackColor = System.Drawing.Color.Transparent;
@@ -432,46 +357,49 @@
             this.picture_product.UseTransparentBackground = true;
             this.picture_product.Click += new System.EventHandler(this.picture_product_Click);
             // 
-            // pictureBox1
+//>>>>>>> e8a87afe6479223f9aed9069b1600cde59dc47bb
+            // guna2ControlBox3
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.raucu;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(698, 551);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox3.Animated = true;
+            this.guna2ControlBox3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.BorderRadius = 10;
+            this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.guna2ControlBox3.CustomIconSize = 20F;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox3.Location = new System.Drawing.Point(614, 14);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ControlBox3.Name = "guna2ControlBox3";
+            this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
+            this.guna2ControlBox3.TabIndex = 33;
             // 
-            // txtDescibe
+            // guna2ControlBox1
             // 
-            this.txtDescibe.BackColor = System.Drawing.Color.Transparent;
-            this.txtDescibe.BorderColor = System.Drawing.Color.Silver;
-            this.txtDescibe.BorderRadius = 15;
-            this.txtDescibe.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescibe.DefaultText = "";
-            this.txtDescibe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDescibe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDescibe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescibe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescibe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescibe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDescibe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescibe.Location = new System.Drawing.Point(385, 235);
-            this.txtDescibe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtDescibe.Name = "txtDescibe";
-            this.txtDescibe.PasswordChar = '\0';
-            this.txtDescibe.PlaceholderText = "Description";
-            this.txtDescibe.SelectedText = "";
-            this.txtDescibe.Size = new System.Drawing.Size(268, 73);
-            this.txtDescibe.TabIndex = 36;
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.Animated = true;
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.BorderRadius = 10;
+            this.guna2ControlBox1.CustomIconSize = 20F;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(647, 14);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
+            this.guna2ControlBox1.TabIndex = 32;
             // 
+
+//>>>>>>> e8a87afe6479223f9aed9069b1600cde59dc47bb
             // AddNewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::GUI.Properties.Resources.raucu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(698, 544);
             this.Controls.Add(this.txtDescibe);
             this.Controls.Add(this.btnDelete);
@@ -488,7 +416,7 @@
             this.Controls.Add(this.txtProductname);
             this.Controls.Add(this.picture_product);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -499,7 +427,6 @@
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_product)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -508,7 +435,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox picture_product;
         private Guna.UI2.WinForms.Guna2TextBox txtProductname;

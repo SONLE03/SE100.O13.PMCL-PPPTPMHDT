@@ -20,7 +20,7 @@ namespace GUI
             this.user = user;
         }
 
-        
+
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -81,6 +81,14 @@ namespace GUI
             ucProducts.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucProducts);
+        }
+
+        private void Tables_Click(object sender, EventArgs e)
+        {
+            ucTables = new UCTables();
+            ucTables.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucTables);
         }
     }
 }
