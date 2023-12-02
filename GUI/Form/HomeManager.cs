@@ -82,5 +82,13 @@ namespace GUI
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucProducts);
         }
+
+        private void Tables_Click(object sender, EventArgs e)
+        {
+            ucTables = new UCTables();
+            ucTables.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucTables);
+        }
     }
 }

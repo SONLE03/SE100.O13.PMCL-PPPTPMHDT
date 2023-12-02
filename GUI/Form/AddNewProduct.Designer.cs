@@ -43,19 +43,17 @@
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_AddSize = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label6 = new System.Windows.Forms.Label();
+            this.combobox_size = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Cancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.picture_product = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btn_AddSize = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.combobox_size = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_product)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -70,7 +68,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.AliceBlue;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label1.Location = new System.Drawing.Point(276, 22);
@@ -262,6 +260,28 @@
             this.panel1.Size = new System.Drawing.Size(4, 29);
             this.panel1.TabIndex = 30;
             // 
+            // btn_AddSize
+            // 
+            this.btn_AddSize.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AddSize.BorderRadius = 15;
+            this.btn_AddSize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_AddSize.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_AddSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_AddSize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_AddSize.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_AddSize.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddSize.ForeColor = System.Drawing.Color.White;
+            this.btn_AddSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btn_AddSize.Location = new System.Drawing.Point(156, 24);
+            this.btn_AddSize.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AddSize.Name = "btn_AddSize";
+            this.btn_AddSize.Size = new System.Drawing.Size(90, 33);
+            this.btn_AddSize.TabIndex = 29;
+            this.btn_AddSize.Text = "Add size";
+            this.btn_AddSize.Click += new System.EventHandler(this.btn_AddSize_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -274,6 +294,25 @@
             this.label6.Size = new System.Drawing.Size(36, 19);
             this.label6.TabIndex = 29;
             this.label6.Text = "Size";
+            // 
+            // combobox_size
+            // 
+            this.combobox_size.BackColor = System.Drawing.Color.Transparent;
+            this.combobox_size.BorderColor = System.Drawing.Color.Black;
+            this.combobox_size.BorderRadius = 10;
+            this.combobox_size.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combobox_size.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_size.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.combobox_size.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_size.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_size.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.combobox_size.ForeColor = System.Drawing.Color.White;
+            this.combobox_size.ItemHeight = 30;
+            this.combobox_size.Location = new System.Drawing.Point(53, 24);
+            this.combobox_size.Margin = new System.Windows.Forms.Padding(2);
+            this.combobox_size.Name = "combobox_size";
+            this.combobox_size.Size = new System.Drawing.Size(81, 36);
+            this.combobox_size.TabIndex = 29;
             // 
             // btn_Add
             // 
@@ -336,18 +375,6 @@
             this.picture_product.UseTransparentBackground = true;
             this.picture_product.Click += new System.EventHandler(this.picture_product_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.raucu;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(698, 551);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // guna2ControlBox3
             // 
             this.guna2ControlBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -356,7 +383,7 @@
             this.guna2ControlBox3.BorderRadius = 10;
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.CustomIconSize = 20F;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox3.Location = new System.Drawing.Point(614, 14);
@@ -372,7 +399,7 @@
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.BorderRadius = 10;
             this.guna2ControlBox1.CustomIconSize = 20F;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox1.Location = new System.Drawing.Point(647, 14);
@@ -381,52 +408,13 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 32;
             // 
-            // btn_AddSize
-            // 
-            this.btn_AddSize.BackColor = System.Drawing.Color.Transparent;
-            this.btn_AddSize.BorderRadius = 15;
-            this.btn_AddSize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_AddSize.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_AddSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_AddSize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_AddSize.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_AddSize.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddSize.ForeColor = System.Drawing.Color.White;
-            this.btn_AddSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_AddSize.Location = new System.Drawing.Point(156, 24);
-            this.btn_AddSize.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_AddSize.Name = "btn_AddSize";
-            this.btn_AddSize.Size = new System.Drawing.Size(90, 33);
-            this.btn_AddSize.TabIndex = 29;
-            this.btn_AddSize.Text = "Add size";
-            this.btn_AddSize.Click += new System.EventHandler(this.btn_AddSize_Click);
-            // 
-            // combobox_size
-            // 
-            this.combobox_size.BackColor = System.Drawing.Color.Transparent;
-            this.combobox_size.BorderColor = System.Drawing.Color.Black;
-            this.combobox_size.BorderRadius = 10;
-            this.combobox_size.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combobox_size.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_size.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.combobox_size.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_size.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_size.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.combobox_size.ForeColor = System.Drawing.Color.White;
-            this.combobox_size.ItemHeight = 30;
-            this.combobox_size.Location = new System.Drawing.Point(53, 24);
-            this.combobox_size.Margin = new System.Windows.Forms.Padding(2);
-            this.combobox_size.Name = "combobox_size";
-            this.combobox_size.Size = new System.Drawing.Size(81, 36);
-            this.combobox_size.TabIndex = 29;
-            // 
             // AddNewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = global::GUI.Properties.Resources.raucu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(698, 544);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox1);
@@ -441,7 +429,7 @@
             this.Controls.Add(this.txtProductname);
             this.Controls.Add(this.picture_product);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -452,7 +440,6 @@
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Delete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_product)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -461,7 +448,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2PictureBox picture_product;
         private Guna.UI2.WinForms.Guna2TextBox txtProductname;

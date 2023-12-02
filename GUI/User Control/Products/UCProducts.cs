@@ -32,5 +32,20 @@ namespace GUI
             var addNewProduct = new AddNewProduct();
             addNewProduct.Show();
         }
+
+        private void btnProductList_Click(object sender, EventArgs e)
+        {
+            PanelProductlist.Visible = true;
+            PanelCategory.Visible = false;
+
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            PanelProductlist.Visible = false;
+            PanelCategory.Visible = true;
+        }
+
+        
     }
 }
