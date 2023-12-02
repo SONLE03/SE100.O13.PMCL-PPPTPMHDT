@@ -37,21 +37,23 @@
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtDescibe = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.btn_Delete = new System.Windows.Forms.PictureBox();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btn_AddSize = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label6 = new System.Windows.Forms.Label();
+            this.combobox_size = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Cancel = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.picture_product = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.btn_AddSize = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.combobox_size = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.picture_product = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtDescibe = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Delete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_product)).BeginInit();
@@ -162,29 +164,6 @@
             this.label5.TabIndex = 27;
             this.label5.Text = "Description";
             // 
-            // txtDescibe
-            // 
-            this.txtDescibe.BackColor = System.Drawing.Color.Transparent;
-            this.txtDescibe.BorderColor = System.Drawing.Color.Silver;
-            this.txtDescibe.BorderRadius = 15;
-            this.txtDescibe.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDescibe.DefaultText = "";
-            this.txtDescibe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtDescibe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtDescibe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescibe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtDescibe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescibe.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtDescibe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDescibe.Location = new System.Drawing.Point(387, 223);
-            this.txtDescibe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtDescibe.Name = "txtDescibe";
-            this.txtDescibe.PasswordChar = '\0';
-            this.txtDescibe.PlaceholderText = "Description";
-            this.txtDescibe.SelectedText = "";
-            this.txtDescibe.Size = new System.Drawing.Size(268, 54);
-            this.txtDescibe.TabIndex = 26;
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
@@ -219,7 +198,7 @@
             // 
             // txtPrice
             // 
-            this.txtPrice.BackColor = System.Drawing.Color.Transparent;
+            this.txtPrice.BackColor = System.Drawing.Color.White;
             this.txtPrice.BorderColor = System.Drawing.Color.Silver;
             this.txtPrice.BorderRadius = 10;
             this.txtPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -231,7 +210,7 @@
             this.txtPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPrice.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPrice.Location = new System.Drawing.Point(394, 24);
+            this.txtPrice.Location = new System.Drawing.Point(436, 24);
             this.txtPrice.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.PasswordChar = '\0';
@@ -246,7 +225,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(269, 29);
+            this.label7.Location = new System.Drawing.Point(311, 29);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 19);
@@ -262,6 +241,28 @@
             this.panel1.Size = new System.Drawing.Size(4, 29);
             this.panel1.TabIndex = 30;
             // 
+            // btn_AddSize
+            // 
+            this.btn_AddSize.BackColor = System.Drawing.Color.Transparent;
+            this.btn_AddSize.BorderRadius = 15;
+            this.btn_AddSize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_AddSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_AddSize.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_AddSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_AddSize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_AddSize.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_AddSize.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_AddSize.ForeColor = System.Drawing.Color.White;
+            this.btn_AddSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btn_AddSize.Location = new System.Drawing.Point(175, 24);
+            this.btn_AddSize.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_AddSize.Name = "btn_AddSize";
+            this.btn_AddSize.Size = new System.Drawing.Size(90, 33);
+            this.btn_AddSize.TabIndex = 29;
+            this.btn_AddSize.Text = "Add size";
+            this.btn_AddSize.Click += new System.EventHandler(this.btn_AddSize_Click);
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -274,6 +275,25 @@
             this.label6.Size = new System.Drawing.Size(36, 19);
             this.label6.TabIndex = 29;
             this.label6.Text = "Size";
+            // 
+            // combobox_size
+            // 
+            this.combobox_size.BackColor = System.Drawing.Color.Transparent;
+            this.combobox_size.BorderColor = System.Drawing.Color.Black;
+            this.combobox_size.BorderRadius = 10;
+            this.combobox_size.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combobox_size.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_size.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.combobox_size.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_size.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_size.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.combobox_size.ForeColor = System.Drawing.Color.White;
+            this.combobox_size.ItemHeight = 30;
+            this.combobox_size.Location = new System.Drawing.Point(53, 24);
+            this.combobox_size.Margin = new System.Windows.Forms.Padding(2);
+            this.combobox_size.Name = "combobox_size";
+            this.combobox_size.Size = new System.Drawing.Size(113, 36);
+            this.combobox_size.TabIndex = 29;
             // 
             // btn_Add
             // 
@@ -289,7 +309,7 @@
             this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Add.Location = new System.Drawing.Point(405, 486);
+            this.btn_Add.Location = new System.Drawing.Point(429, 486);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(94, 33);
@@ -311,42 +331,13 @@
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Cancel.Location = new System.Drawing.Point(198, 486);
+            this.btn_Cancel.Location = new System.Drawing.Point(168, 486);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(94, 33);
             this.btn_Cancel.TabIndex = 31;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
-            // 
-            // picture_product
-            // 
-            this.picture_product.BackColor = System.Drawing.Color.Transparent;
-            this.picture_product.BorderRadius = 20;
-            this.picture_product.Image = global::GUI.Properties.Resources.cake;
-            this.picture_product.ImageRotate = 0F;
-            this.picture_product.Location = new System.Drawing.Point(34, 80);
-            this.picture_product.Margin = new System.Windows.Forms.Padding(2);
-            this.picture_product.Name = "picture_product";
-            this.picture_product.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.picture_product.Size = new System.Drawing.Size(258, 243);
-            this.picture_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_product.TabIndex = 2;
-            this.picture_product.TabStop = false;
-            this.picture_product.UseTransparentBackground = true;
-            this.picture_product.Click += new System.EventHandler(this.picture_product_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.raucu;
-            this.pictureBox1.Location = new System.Drawing.Point(-2, -3);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(698, 551);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // guna2ControlBox3
             // 
@@ -381,46 +372,100 @@
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 32;
             // 
-            // btn_AddSize
+            // btnUpdate
             // 
-            this.btn_AddSize.BackColor = System.Drawing.Color.Transparent;
-            this.btn_AddSize.BorderRadius = 15;
-            this.btn_AddSize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_AddSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_AddSize.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_AddSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_AddSize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_AddSize.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_AddSize.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_AddSize.ForeColor = System.Drawing.Color.White;
-            this.btn_AddSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_AddSize.Location = new System.Drawing.Point(156, 24);
-            this.btn_AddSize.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_AddSize.Name = "btn_AddSize";
-            this.btn_AddSize.Size = new System.Drawing.Size(90, 33);
-            this.btn_AddSize.TabIndex = 29;
-            this.btn_AddSize.Text = "Add size";
-            this.btn_AddSize.Click += new System.EventHandler(this.btn_AddSize_Click);
+            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
+            this.btnUpdate.BorderRadius = 15;
+            this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnUpdate.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.White;
+            this.btnUpdate.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnUpdate.Location = new System.Drawing.Point(429, 486);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(94, 33);
+            this.btnUpdate.TabIndex = 34;
+            this.btnUpdate.Text = "Update";
             // 
-            // combobox_size
+            // btnDelete
             // 
-            this.combobox_size.BackColor = System.Drawing.Color.Transparent;
-            this.combobox_size.BorderColor = System.Drawing.Color.Black;
-            this.combobox_size.BorderRadius = 10;
-            this.combobox_size.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combobox_size.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_size.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.combobox_size.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_size.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_size.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.combobox_size.ForeColor = System.Drawing.Color.White;
-            this.combobox_size.ItemHeight = 30;
-            this.combobox_size.Location = new System.Drawing.Point(53, 24);
-            this.combobox_size.Margin = new System.Windows.Forms.Padding(2);
-            this.combobox_size.Name = "combobox_size";
-            this.combobox_size.Size = new System.Drawing.Size(81, 36);
-            this.combobox_size.TabIndex = 29;
+            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnDelete.BorderRadius = 15;
+            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnDelete.Location = new System.Drawing.Point(297, 486);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(94, 33);
+            this.btnDelete.TabIndex = 35;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // picture_product
+            // 
+            this.picture_product.BackColor = System.Drawing.Color.Transparent;
+            this.picture_product.BorderRadius = 20;
+            this.picture_product.Image = global::GUI.Properties.Resources.cake;
+            this.picture_product.ImageRotate = 0F;
+            this.picture_product.Location = new System.Drawing.Point(34, 80);
+            this.picture_product.Margin = new System.Windows.Forms.Padding(2);
+            this.picture_product.Name = "picture_product";
+            this.picture_product.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.picture_product.Size = new System.Drawing.Size(258, 243);
+            this.picture_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_product.TabIndex = 2;
+            this.picture_product.TabStop = false;
+            this.picture_product.UseTransparentBackground = true;
+            this.picture_product.Click += new System.EventHandler(this.picture_product_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.raucu;
+            this.pictureBox1.Location = new System.Drawing.Point(-2, -3);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(698, 551);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtDescibe
+            // 
+            this.txtDescibe.BackColor = System.Drawing.Color.Transparent;
+            this.txtDescibe.BorderColor = System.Drawing.Color.Silver;
+            this.txtDescibe.BorderRadius = 15;
+            this.txtDescibe.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescibe.DefaultText = "";
+            this.txtDescibe.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDescibe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDescibe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescibe.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescibe.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescibe.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDescibe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescibe.Location = new System.Drawing.Point(385, 235);
+            this.txtDescibe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDescibe.Name = "txtDescibe";
+            this.txtDescibe.PasswordChar = '\0';
+            this.txtDescibe.PlaceholderText = "Description";
+            this.txtDescibe.SelectedText = "";
+            this.txtDescibe.Size = new System.Drawing.Size(268, 73);
+            this.txtDescibe.TabIndex = 36;
             // 
             // AddNewProduct
             // 
@@ -428,13 +473,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(698, 544);
+            this.Controls.Add(this.txtDescibe);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox1);
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.btn_Add);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDescibe);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.combobox_category);
             this.Controls.Add(this.label2);
@@ -472,7 +519,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox txtDescibe;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2ComboBox combobox_category;
         private Guna.UI2.WinForms.Guna2GradientButton btn_Add;
@@ -482,5 +528,8 @@
         private System.Windows.Forms.PictureBox btn_Delete;
         private Guna.UI2.WinForms.Guna2GradientButton btn_AddSize;
         private Guna.UI2.WinForms.Guna2ComboBox combobox_size;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
+        private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
+        private Guna.UI2.WinForms.Guna2TextBox txtDescibe;
     }
 }

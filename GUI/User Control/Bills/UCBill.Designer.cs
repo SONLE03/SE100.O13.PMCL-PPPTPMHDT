@@ -62,10 +62,10 @@
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucProductMiniItem1 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem2 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem3 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem4 = new GUI.UCProductMiniItem();
+            //this.ucProductMiniItem1 = new GUI.UCProductMiniItem();
+            //this.ucProductMiniItem2 = new GUI.UCProductMiniItem();
+            //this.ucProductMiniItem3 = new GUI.UCProductMiniItem();
+            //this.ucProductMiniItem4 = new GUI.UCProductMiniItem();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();

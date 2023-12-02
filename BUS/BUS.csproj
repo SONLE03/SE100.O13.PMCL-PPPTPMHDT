@@ -76,6 +76,7 @@
     <Compile Include="BUSTable.cs" />
     <Compile Include="BUSUser.cs" />
     <Compile Include="Class1.cs" />
+    <Compile Include="FileProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

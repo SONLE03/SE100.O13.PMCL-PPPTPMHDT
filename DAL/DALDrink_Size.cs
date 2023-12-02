@@ -10,6 +10,8 @@ namespace DAL
     public class DALDrink_Size
     {
         private static DALDrink_Size instance;
+
+        private static bool check = false;
         public static DALDrink_Size Instance
         {
             get
@@ -20,9 +22,9 @@ namespace DAL
             set => instance = value;
         }
 
-        public List<C_SIZE> GetAllSize()
+        public List<DRINKS_SIZE> GetAllSize()
         {
-            return CFEntities.Instance.C_SIZE.AsNoTracking().ToList();
+            return CFEntities.Instance.DRINKS_SIZE.AsNoTracking().ToList();
         }
 
         public bool AddDrink_Size(int idDrink, int idSize, double price)
@@ -52,6 +54,7 @@ namespace DAL
                     Discount = discount
                     
                 };
+                CFEntities.Instance.Entry(ct).State = System.Data.Entity.EntityState.Added;
                 CFEntities.Instance.DRINKS_SIZE.Add(ct);
                 CFEntities.Instance.SaveChanges();
                 return true;
@@ -60,6 +63,48 @@ namespace DAL
             {
                 Console.WriteLine(ex.InnerException.ToString());
                 return false;
+            }
+        }
+
+        public bool delDrinkSize(DRINKS_SIZE drinkSize, DRINK drink, C_SIZE size)
+        {
+            using (var transaction = CFEntities.Instance.Database.BeginTransaction())
+            {
+                try
+                {
+                    CFEntities.Instance.DRINKS_SIZE.Remove(drinkSize);
+                    CFEntities.Instance.SaveChanges();
+                    transaction.Commit();
+                    return true;
+
+                }
+                catch (Exception ex)
+                {
+                    var existingDrinkSize = (from p in GetAllSize() where p.C_SIZE.id == size.id && p.DrinksID == drink.id select p).FirstOrDefault();
+                    
+                    if (existingDrinkSize != null)
+                    {
+                        if (check == false)
+                        {
+                            if (CFEntities.Instance.Entry(existingDrinkSize).State == System.Data.Entity.EntityState.Detached)
+                            {
+                                CFEntities.Instance.DRINKS_SIZE.Attach(existingDrinkSize);
+                                CFEntities.Instance.Entry(existingDrinkSize).State = System.Data.Entity.EntityState.Unchanged;
+                            }
+                        }
+
+                        CFEntities.Instance.DRINKS_SIZE.Remove(existingDrinkSize);
+                        CFEntities.Instance.SaveChanges();
+                        transaction.Commit();
+                        return true;
+                    }
+                    else
+                    {
+                        Console.WriteLine(ex.InnerException.ToString());
+                        transaction.Rollback();
+                        return false;
+                    }
+                }
             }
         }
     }

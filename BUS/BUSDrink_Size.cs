@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DTO;
 
 namespace BUS
 {
@@ -26,9 +27,15 @@ namespace BUS
             return DALDrink_Size.Instance.AddDrink_Size(idDrink, idSize, price);
         }
 
-        public List<DTO.C_SIZE> GetAllSize()
+        public List<DTO.DRINKS_SIZE> GetAllSize()
         {
             return DALDrink_Size.Instance.GetAllSize();
         }
+
+        public bool delDrinkSize(DRINKS_SIZE drinkSize, DRINK drink, C_SIZE size)
+        {
+            return DALDrink_Size.Instance.delDrinkSize(drinkSize, drink, size);
+        }
+
     }
 }
