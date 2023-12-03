@@ -17,7 +17,16 @@ namespace GUI
     {
         public string filePath { get; set; }
         private List<string> categories = new List<string>();
-        private List<string> size = new List<string>();
+        private List<string> sizes = new List<string>();
+        private bool isDeleted = false;
+        private bool isUpdated = false;
+        private bool isAdded = false;
+        private DRINK drink = new DRINK();
+        private DRINKS_SIZE drinkSize = new DRINKS_SIZE();
+        private C_SIZE size = new C_SIZE();
+        private bool canUpdate = false;
+        private bool isChangedImage = false;
+        private static int index = 1;
 
         public AddNewProduct()
         {
@@ -31,6 +40,47 @@ namespace GUI
             {
                 combobox_size.Items.Add(p.SizeName);
             });
+
+            btnDelete.Visible = false;
+            btnUpdate.Visible = false;
+            btn_Add.Visible = true;
+            isChangedImage = false;
+            canUpdate = false;
+        }
+
+        public AddNewProduct(DRINK drink, C_SIZE size, DRINKS_SIZE drinkSize)
+        {
+            InitializeComponent();
+
+            this.drink = drink;
+            this.drinkSize = drinkSize;
+            this.size = size;
+
+            BUS.BUSCategory.Instance.GetAllCategory().ToList().ForEach(p =>
+            {
+                combobox_category.Items.Add(p.CategoryName);
+            });
+            BUS.BUSSize.Instance.GetAllSize().ToList().ForEach(p =>
+            {
+                combobox_size.Items.Add(p.SizeName);
+            });
+
+            combobox_category.SelectedItem = BUS.BUSCategory.Instance.GetCategoryById(drink.CategoryID).CategoryName;
+            combobox_size.SelectedItem = size.SizeName;
+            txtProductname.Text = drink.DrinksName;
+            txtDescibe.Text = drink.Description;
+            txtPrice.Text = drinkSize.OriginalPrice.ToString();
+
+            picture_product.Image = new Bitmap(drink.Image);
+
+            btn_Add.Visible = false;
+            btnDelete.Visible = true;
+            btnUpdate.Visible = true;
+            canUpdate = true;
+            isChangedImage = false;
+            isDeleted = false;
+            isUpdated = false;
+            isAdded = false;
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -49,7 +99,11 @@ namespace GUI
 
                 if (!String.IsNullOrEmpty(filePath))
                 {
-                    picture_product.Image = new System.Drawing.Bitmap(filePath);
+                    picture_product.Image = new Bitmap(filePath);
+                    if (canUpdate == true)
+                    {
+                        isChangedImage = true;
+                    }    
                 }
                 else
                 {
@@ -63,6 +117,21 @@ namespace GUI
 
         }
 
+        public bool anyDeleted()
+        {
+            return isDeleted;
+        }
+
+        public bool anyUpdated()
+        {
+            return isUpdated;
+        }
+
+        public bool anyAdded()
+        {
+            return isAdded;
+        }
+
         private void btn_AddSize_Click(object sender, EventArgs e)
         {
             AddSize addSize = new AddSize();
@@ -70,7 +139,7 @@ namespace GUI
             string newSize = addSize.getSizeName();
             if (!String.IsNullOrEmpty(newSize))
             {
-                size.Add(newSize);
+                //size.Add(newSize);
                 combobox_size.Items.Add(newSize);
             }    
         }
@@ -87,7 +156,7 @@ namespace GUI
                 string fileName = Path.GetFileName(filePath);
                 string resourcesFolder = Path.Combine(Application.StartupPath, "Resources");
                 resourcesFolder = resourcesFolder.Replace("\\bin\\Debug", "");
-                string destinationPath = Path.Combine(resourcesFolder, fileName);
+                string destinationPath = Path.Combine(resourcesFolder, index + fileName);
 
                 File.Copy(filePath, destinationPath, true);
 
@@ -97,31 +166,33 @@ namespace GUI
                                          where p.CategoryName.Equals(combobox_category.SelectedItem.ToString())
                                          select p).FirstOrDefault();
 
-                    DTO.C_SIZE size = (from p in BUS.BUSDrink_Size.Instance.GetAllSize()
+                    DTO.C_SIZE size = (from p in BUS.BUSSize.Instance.GetAllSize()
                                        where p.SizeName.Equals(combobox_size.SelectedItem.ToString())
                                        select p).FirstOrDefault();
 
 
-                    var id = BUS.BUSDrink.Instance.AddDrink(txtProductname.Text.ToString(), category, "none", txtDescibe.Text.ToString(), destinationPath, null, null);
+                    var drink = BUS.BUSDrink.Instance.AddDrink(txtProductname.Text.ToString(), category, "none", txtDescibe.Text.ToString(), destinationPath, null, null);
 
-                    if (id == -1)
+                    if (drink == null)
                     {
                         MessageBox.Show("Added failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        if (BUS.BUSDrink_Size.Instance.AddDrink_Size(id, size.id, double.Parse(txtPrice.Text)))
+                        if (BUS.BUSDrink_Size.Instance.AddDrink_Size(drink, size, double.Parse(txtPrice.Text)))
                         {
                             MessageBox.Show("Added successful", "Add new size for product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            index++;
                             DialogResult result = MessageBox.Show("Do you want to add for other size ?", "Add other size", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                             if (result == DialogResult.No)
                             {
+                                isAdded = true;
                                 this.Hide();
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Added failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Can't found this product in database", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }
@@ -134,6 +205,160 @@ namespace GUI
             {
                 MessageBox.Show("Choose image for drink before adding", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Are you sure to delete this product ?", "Delete product", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+            {
+                if (BUS.BUSDrink_Size.Instance.delDrinkSize(drinkSize, drink, size))
+                {
+                    if (BUS.BUSDrink.Instance.DelDrink(drink.id))
+                    {
+                        deleteFile(drink.Image);
+                        MessageBox.Show("Deleted successfully", "Delete product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        isDeleted = true;
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Deleted failed", "Delete product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Deleted failed", "Delete product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void copyFile(string source, string destination, bool mode)
+        {
+            File.Copy(source, destination, mode);
+        }
+
+        private static void deleteFile(string path)
+        {
+            try
+            {
+                System.GC.Collect();
+                System.GC.WaitForPendingFinalizers();
+                File.Delete(path);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            var newSize = (from p in BUS.BUSSize.Instance.GetAllSize() where p.SizeName.Equals(combobox_size.SelectedItem.ToString()) select p).FirstOrDefault();
+            if (combobox_category.SelectedItem.ToString().Equals(BUS.BUSCategory.Instance.GetCategoryById(drink.CategoryID).CategoryName))
+            {
+                if (canUpdate == true && isChangedImage == true)
+                {
+                    string fileName = Path.GetFileName(filePath);
+                    string resourcesFolder = Path.Combine(Application.StartupPath, "Resources");
+                    resourcesFolder = resourcesFolder.Replace("\\bin\\Debug", "");
+                    string destinationPath = Path.Combine(resourcesFolder, BUS.BUSDrink.Instance.GetAllDrink().Count + fileName);
+
+                    copyFile(filePath, destinationPath, true);
+
+                    string lastPathofImage = drink.Image;
+
+                    if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, BUS.BUSCategory.Instance.GetCategoryById(drink.CategoryID), "none", txtDescibe.Text, destinationPath, null, null, true))
+                    {
+                        MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        deleteFile(lastPathofImage);
+                        if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
+                        {
+                            index++;
+                            isUpdated = true;
+                            this.Hide();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, BUS.BUSCategory.Instance.GetCategoryById(drink.CategoryID), "none", txtDescibe.Text, drink.Image, null, null, true))
+                    {
+                        MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
+                        {
+                            index++;
+                            isUpdated = true;
+                            this.Hide();
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
+            {
+                var category = (from p in BUS.BUSCategory.Instance.GetAllCategory() where p.CategoryName.Equals(combobox_category.SelectedItem.ToString()) select p).FirstOrDefault();
+                if (category != null)
+                {
+                    if (canUpdate == true && isChangedImage == true)
+                    {
+                        string fileName = Path.GetFileName(filePath);
+                        string resourcesFolder = Path.Combine(Application.StartupPath, "Resources");
+                        resourcesFolder = resourcesFolder.Replace("\\bin\\Debug", "");
+                        string destinationPath = Path.Combine(resourcesFolder, BUS.BUSDrink.Instance.GetAllDrink().Count + fileName);
+
+                        File.Copy(filePath, destinationPath, true);
+
+                        string lastPathofImage = drink.Image;
+
+                        if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, category, "none", txtDescibe.Text, destinationPath, null, null, true))
+                        {
+                            MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            File.Delete(lastPathofImage);
+
+                            if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
+                            {
+                                index++;
+                                isUpdated = true;
+                                this.Hide();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, category, "none", txtDescibe.Text, drink.Image, null, null, true))
+                        {
+                            MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
+                            {
+                                index++;
+                                isUpdated = true;
+                                this.Hide();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Can't found category", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }    
         }
     }
 }

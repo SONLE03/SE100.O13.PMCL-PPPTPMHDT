@@ -49,7 +49,7 @@ namespace DAL
             return res;
         }
 
-        public int AddDrink(string DrinksName, CATEGORY drinkCategory, string Unit, 
+        public DRINK AddDrink(string DrinksName, CATEGORY drinkCategory, string Unit, 
             string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs)
         {
             try
@@ -62,15 +62,15 @@ namespace DAL
                 Drink.Image = Image;
                 Drink.Status = true;
                 Drink.EventID = idEV;
-                Drink.DRINKS_SIZE = Drink_SIZEs;
+                //Drink.DRINKS_SIZE = new List<DRINKS_SIZE>();
                 CFEntities.Instance.DRINKS.Add(Drink);
                 CFEntities.Instance.SaveChanges();
 
-                return Drink.id;
+                return Drink;
             }
             catch (Exception e)
             {
-                return -1;
+                return null;
             }
         }
        

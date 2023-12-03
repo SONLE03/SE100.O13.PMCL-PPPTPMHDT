@@ -28,19 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelProductlist = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucProductMiniItem1 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem2 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem3 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem4 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem5 = new GUI.UCProductMiniItem();
-            this.ucProductMiniItem6 = new GUI.UCProductMiniItem();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -66,7 +60,6 @@
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.PanelProductlist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.flowLayoutPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.PanelCategory.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -111,70 +104,10 @@
             // 
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel.Controls.Add(this.ucProductMiniItem1);
-            this.flowLayoutPanel.Controls.Add(this.ucProductMiniItem2);
-            this.flowLayoutPanel.Controls.Add(this.ucProductMiniItem3);
-            this.flowLayoutPanel.Controls.Add(this.ucProductMiniItem4);
-            this.flowLayoutPanel.Controls.Add(this.ucProductMiniItem5);
-            this.flowLayoutPanel.Controls.Add(this.ucProductMiniItem6);
             this.flowLayoutPanel.Location = new System.Drawing.Point(40, 133);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(948, 514);
             this.flowLayoutPanel.TabIndex = 33;
-            // 
-            // ucProductMiniItem1
-            // 
-            this.ucProductMiniItem1.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem1.Location = new System.Drawing.Point(2, 2);
-            this.ucProductMiniItem1.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem1.Name = "ucProductMiniItem1";
-            this.ucProductMiniItem1.Size = new System.Drawing.Size(305, 258);
-            this.ucProductMiniItem1.TabIndex = 0;
-            // 
-            // ucProductMiniItem2
-            // 
-            this.ucProductMiniItem2.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem2.Location = new System.Drawing.Point(311, 2);
-            this.ucProductMiniItem2.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem2.Name = "ucProductMiniItem2";
-            this.ucProductMiniItem2.Size = new System.Drawing.Size(305, 258);
-            this.ucProductMiniItem2.TabIndex = 1;
-            // 
-            // ucProductMiniItem3
-            // 
-            this.ucProductMiniItem3.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem3.Location = new System.Drawing.Point(620, 2);
-            this.ucProductMiniItem3.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem3.Name = "ucProductMiniItem3";
-            this.ucProductMiniItem3.Size = new System.Drawing.Size(305, 258);
-            this.ucProductMiniItem3.TabIndex = 2;
-            // 
-            // ucProductMiniItem4
-            // 
-            this.ucProductMiniItem4.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem4.Location = new System.Drawing.Point(2, 264);
-            this.ucProductMiniItem4.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem4.Name = "ucProductMiniItem4";
-            this.ucProductMiniItem4.Size = new System.Drawing.Size(305, 258);
-            this.ucProductMiniItem4.TabIndex = 3;
-            // 
-            // ucProductMiniItem5
-            // 
-            this.ucProductMiniItem5.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem5.Location = new System.Drawing.Point(311, 264);
-            this.ucProductMiniItem5.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem5.Name = "ucProductMiniItem5";
-            this.ucProductMiniItem5.Size = new System.Drawing.Size(305, 258);
-            this.ucProductMiniItem5.TabIndex = 4;
-            // 
-            // ucProductMiniItem6
-            // 
-            this.ucProductMiniItem6.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductMiniItem6.Location = new System.Drawing.Point(620, 264);
-            this.ucProductMiniItem6.Margin = new System.Windows.Forms.Padding(2);
-            this.ucProductMiniItem6.Name = "ucProductMiniItem6";
-            this.ucProductMiniItem6.Size = new System.Drawing.Size(305, 258);
-            this.ucProductMiniItem6.TabIndex = 5;
             // 
             // btnAddProduct
             // 
@@ -229,6 +162,7 @@
             this.combobox_category.Name = "combobox_category";
             this.combobox_category.Size = new System.Drawing.Size(223, 36);
             this.combobox_category.TabIndex = 26;
+            this.combobox_category.SelectedValueChanged += new System.EventHandler(this.combobox_category_SelectedValueChanged);
             // 
             // panel1
             // 
@@ -279,6 +213,7 @@
             this.txtEmailCode.SelectedText = "";
             this.txtEmailCode.Size = new System.Drawing.Size(279, 36);
             this.txtEmailCode.TabIndex = 8;
+            this.txtEmailCode.TextChanged += new System.EventHandler(this.txtEmailCode_TextChanged);
             // 
             // btnProductList
             // 
@@ -396,16 +331,16 @@
             // 
             // gridviewTable
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gridviewTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            this.gridviewTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridviewTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
             this.gridviewTable.ColumnHeadersHeight = 40;
             this.gridviewTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -414,21 +349,21 @@
             this.Category_name,
             this.Edit,
             this.Delete});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridviewTable.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridviewTable.DefaultCellStyle = dataGridViewCellStyle11;
             this.gridviewTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewTable.Location = new System.Drawing.Point(2, 74);
             this.gridviewTable.Name = "gridviewTable";
             this.gridviewTable.RowHeadersVisible = false;
             this.gridviewTable.RowHeadersWidth = 50;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewTable.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridviewTable.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.gridviewTable.Size = new System.Drawing.Size(920, 389);
             this.gridviewTable.TabIndex = 40;
             this.gridviewTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -574,7 +509,6 @@
             this.PanelProductlist.ResumeLayout(false);
             this.PanelProductlist.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.flowLayoutPanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.PanelCategory.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
@@ -599,12 +533,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnCategory;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
-        private UCProductMiniItem ucProductMiniItem1;
-        private UCProductMiniItem ucProductMiniItem2;
-        private UCProductMiniItem ucProductMiniItem3;
-        private UCProductMiniItem ucProductMiniItem4;
-        private UCProductMiniItem ucProductMiniItem5;
-        private UCProductMiniItem ucProductMiniItem6;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelCategory;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddCategory;

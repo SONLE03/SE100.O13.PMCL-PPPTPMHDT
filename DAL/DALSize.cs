@@ -49,6 +49,7 @@ namespace DAL
             {
                 var obj = new C_SIZE();
                 obj.SizeName = sizeName;
+                obj.DRINKS_SIZE = new List<DRINKS_SIZE>();
                 CFEntities.Instance.C_SIZE.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;
