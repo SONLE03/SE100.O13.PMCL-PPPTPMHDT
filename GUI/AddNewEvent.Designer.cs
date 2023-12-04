@@ -36,7 +36,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewEvent));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.panel_EventID = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelEventID = new Guna.UI2.WinForms.Guna2Panel();
             this.lbAreaID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEventname = new Guna.UI2.WinForms.Guna2TextBox();
@@ -70,7 +70,7 @@
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnCreate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.bthCancel = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.panel_EventID.SuspendLayout();
+            this.panelEventID.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewEvent)).BeginInit();
@@ -91,24 +91,24 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label1.Location = new System.Drawing.Point(313, 19);
+            this.label1.Location = new System.Drawing.Point(313, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 31);
             this.label1.TabIndex = 2;
             this.label1.Text = "Add new event";
             // 
-            // panel_EventID
+            // panelEventID
             // 
-            this.panel_EventID.BackColor = System.Drawing.Color.Transparent;
-            this.panel_EventID.BorderColor = System.Drawing.Color.Silver;
-            this.panel_EventID.BorderRadius = 10;
-            this.panel_EventID.BorderThickness = 2;
-            this.panel_EventID.Controls.Add(this.lbAreaID);
-            this.panel_EventID.FillColor = System.Drawing.Color.White;
-            this.panel_EventID.Location = new System.Drawing.Point(76, 85);
-            this.panel_EventID.Name = "panel_EventID";
-            this.panel_EventID.Size = new System.Drawing.Size(297, 40);
-            this.panel_EventID.TabIndex = 81;
+            this.panelEventID.BackColor = System.Drawing.Color.Transparent;
+            this.panelEventID.BorderColor = System.Drawing.Color.Silver;
+            this.panelEventID.BorderRadius = 10;
+            this.panelEventID.BorderThickness = 2;
+            this.panelEventID.Controls.Add(this.lbAreaID);
+            this.panelEventID.FillColor = System.Drawing.Color.White;
+            this.panelEventID.Location = new System.Drawing.Point(76, 85);
+            this.panelEventID.Name = "panelEventID";
+            this.panelEventID.Size = new System.Drawing.Size(297, 40);
+            this.panelEventID.TabIndex = 81;
             // 
             // lbAreaID
             // 
@@ -644,18 +644,17 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtEventname);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.panel_EventID);
+            this.Controls.Add(this.panelEventID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "AddNewEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.panel_EventID.ResumeLayout(false);
-            this.panel_EventID.PerformLayout();
+            this.panelEventID.ResumeLayout(false);
+            this.panelEventID.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
@@ -670,7 +669,7 @@
 
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2Panel panel_EventID;
+        private Guna.UI2.WinForms.Guna2Panel panelEventID;
         private System.Windows.Forms.Label lbAreaID;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpStartDate;
