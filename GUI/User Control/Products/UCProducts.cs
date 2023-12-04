@@ -17,6 +17,7 @@ namespace GUI
         private List<DRINK> listDrink;
         private List<DRINKS_SIZE> listDrinkSize;
         private List<C_SIZE> listSize;
+        private List<CATEGORY> listCategories;
         public UCProducts()
         {
             InitializeComponent();
@@ -24,6 +25,8 @@ namespace GUI
             listDrink = BUS.BUSDrink.Instance.GetAllDrink();
             listDrinkSize = BUS.BUSDrink_Size.Instance.GetAllDrinkSize();
             listSize = BUS.BUSSize.Instance.GetAllSize();
+            listCategories = BUS.BUSCategory.Instance.GetAllCategory();
+            gridviewTable.DataSource = listCategories;
             combobox_category.Items.Add("All");
             combobox_category.SelectedItem = "All";
             BUS.BUSCategory.Instance.GetAllCategory().ToList().ForEach(p =>
@@ -192,6 +195,17 @@ namespace GUI
                                                   BUS.BUSDrink_Size.Instance.GetAllDrinkSize(),
                                                   BUS.BUSSize.Instance.GetAllSize());
             }
+        }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            AddCategory addCategory = new AddCategory();
+            addCategory.ShowDialog();
+            if (addCategory.anyAdded())
+            {
+                listCategories = BUS.BUSCategory.Instance.GetAllCategory();
+                gridviewTable.DataSource = listCategories;
+            }    
         }
     }
 }

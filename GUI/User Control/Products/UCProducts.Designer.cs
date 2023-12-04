@@ -28,19 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.PanelProductlist = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.label4 = new System.Windows.Forms.Label();
-            this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.txtEmailCode = new Guna.UI2.WinForms.Guna2TextBox();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnProductList = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnCategory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -58,162 +49,23 @@
             this.btnAddCategory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.PanelProductlist.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.txtEmailCode = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.PanelProductlist = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.PanelCategory.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelProductlist.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // PanelProductlist
-            // 
-            this.PanelProductlist.BackColor = System.Drawing.Color.Transparent;
-            this.PanelProductlist.BorderColor = System.Drawing.Color.DarkGray;
-            this.PanelProductlist.BorderRadius = 40;
-            this.PanelProductlist.BorderThickness = 1;
-            this.PanelProductlist.Controls.Add(this.pictureBox1);
-            this.PanelProductlist.Controls.Add(this.flowLayoutPanel);
-            this.PanelProductlist.Controls.Add(this.btnAddProduct);
-            this.PanelProductlist.Controls.Add(this.label4);
-            this.PanelProductlist.Controls.Add(this.combobox_category);
-            this.PanelProductlist.Controls.Add(this.panel1);
-            this.PanelProductlist.Controls.Add(this.guna2Button1);
-            this.PanelProductlist.Controls.Add(this.txtEmailCode);
-            this.PanelProductlist.Location = new System.Drawing.Point(52, 91);
-            this.PanelProductlist.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelProductlist.Name = "PanelProductlist";
-            this.PanelProductlist.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.PanelProductlist.Size = new System.Drawing.Size(1017, 665);
-            this.PanelProductlist.TabIndex = 23;
-            this.PanelProductlist.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.searches;
-            this.pictureBox1.Location = new System.Drawing.Point(380, 23);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 49;
-            this.pictureBox1.TabStop = false;
-            // 
-            // flowLayoutPanel
-            // 
-            this.flowLayoutPanel.AutoScroll = true;
-            this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(40, 133);
-            this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(948, 514);
-            this.flowLayoutPanel.TabIndex = 33;
-            // 
-            // btnAddProduct
-            // 
-            this.btnAddProduct.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddProduct.BorderRadius = 15;
-            this.btnAddProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddProduct.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btnAddProduct.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
-            this.btnAddProduct.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddProduct.Location = new System.Drawing.Point(855, 69);
-            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(133, 41);
-            this.btnAddProduct.TabIndex = 32;
-            this.btnAddProduct.Text = "Add product";
-            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(582, 26);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 25);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "Category";
-            // 
-            // combobox_category
-            // 
-            this.combobox_category.BackColor = System.Drawing.Color.Transparent;
-            this.combobox_category.BorderColor = System.Drawing.Color.Black;
-            this.combobox_category.BorderRadius = 10;
-            this.combobox_category.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combobox_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.combobox_category.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_category.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_category.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.combobox_category.ForeColor = System.Drawing.Color.White;
-            this.combobox_category.ItemHeight = 30;
-            this.combobox_category.Location = new System.Drawing.Point(765, 21);
-            this.combobox_category.Margin = new System.Windows.Forms.Padding(2);
-            this.combobox_category.Name = "combobox_category";
-            this.combobox_category.Size = new System.Drawing.Size(223, 36);
-            this.combobox_category.TabIndex = 26;
-            this.combobox_category.SelectedValueChanged += new System.EventHandler(this.combobox_category_SelectedValueChanged);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.panel1.Location = new System.Drawing.Point(572, 21);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(6, 36);
-            this.panel1.TabIndex = 10;
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(44, 21);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(99, 36);
-            this.guna2Button1.TabIndex = 9;
-            this.guna2Button1.Text = "All category";
-            // 
-            // txtEmailCode
-            // 
-            this.txtEmailCode.BackColor = System.Drawing.Color.Transparent;
-            this.txtEmailCode.BorderColor = System.Drawing.Color.Gray;
-            this.txtEmailCode.BorderRadius = 10;
-            this.txtEmailCode.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmailCode.DefaultText = "";
-            this.txtEmailCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmailCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmailCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmailCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmailCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailCode.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtEmailCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailCode.Location = new System.Drawing.Point(142, 21);
-            this.txtEmailCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtEmailCode.Name = "txtEmailCode";
-            this.txtEmailCode.PasswordChar = '\0';
-            this.txtEmailCode.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtEmailCode.PlaceholderText = "Search products";
-            this.txtEmailCode.SelectedText = "";
-            this.txtEmailCode.Size = new System.Drawing.Size(279, 36);
-            this.txtEmailCode.TabIndex = 8;
-            this.txtEmailCode.TextChanged += new System.EventHandler(this.txtEmailCode_TextChanged);
             // 
             // btnProductList
             // 
@@ -331,16 +183,16 @@
             // 
             // gridviewTable
             // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            this.gridviewTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.gridviewTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridviewTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.gridviewTable.ColumnHeadersHeight = 40;
             this.gridviewTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -349,21 +201,21 @@
             this.Category_name,
             this.Edit,
             this.Delete});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridviewTable.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridviewTable.DefaultCellStyle = dataGridViewCellStyle15;
             this.gridviewTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewTable.Location = new System.Drawing.Point(2, 74);
             this.gridviewTable.Name = "gridviewTable";
             this.gridviewTable.RowHeadersVisible = false;
             this.gridviewTable.RowHeadersWidth = 50;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewTable.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridviewTable.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.gridviewTable.Size = new System.Drawing.Size(920, 389);
             this.gridviewTable.TabIndex = 40;
             this.gridviewTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -449,6 +301,7 @@
             this.btnAddCategory.Size = new System.Drawing.Size(133, 41);
             this.btnAddCategory.TabIndex = 32;
             this.btnAddCategory.Text = "Add category";
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // guna2Button2
             // 
@@ -491,6 +344,154 @@
             this.guna2TextBox1.Size = new System.Drawing.Size(279, 36);
             this.guna2TextBox1.TabIndex = 8;
             // 
+            // txtEmailCode
+            // 
+            this.txtEmailCode.BackColor = System.Drawing.Color.Transparent;
+            this.txtEmailCode.BorderColor = System.Drawing.Color.Gray;
+            this.txtEmailCode.BorderRadius = 10;
+            this.txtEmailCode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmailCode.DefaultText = "";
+            this.txtEmailCode.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmailCode.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmailCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmailCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmailCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmailCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmailCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmailCode.Location = new System.Drawing.Point(142, 21);
+            this.txtEmailCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEmailCode.Name = "txtEmailCode";
+            this.txtEmailCode.PasswordChar = '\0';
+            this.txtEmailCode.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtEmailCode.PlaceholderText = "Search products";
+            this.txtEmailCode.SelectedText = "";
+            this.txtEmailCode.Size = new System.Drawing.Size(279, 36);
+            this.txtEmailCode.TabIndex = 8;
+            this.txtEmailCode.TextChanged += new System.EventHandler(this.txtEmailCode_TextChanged);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 10;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(44, 21);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(99, 36);
+            this.guna2Button1.TabIndex = 9;
+            this.guna2Button1.Text = "All category";
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.panel1.Location = new System.Drawing.Point(572, 21);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(6, 36);
+            this.panel1.TabIndex = 10;
+            // 
+            // combobox_category
+            // 
+            this.combobox_category.BackColor = System.Drawing.Color.Transparent;
+            this.combobox_category.BorderColor = System.Drawing.Color.Black;
+            this.combobox_category.BorderRadius = 10;
+            this.combobox_category.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combobox_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.combobox_category.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_category.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_category.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.combobox_category.ForeColor = System.Drawing.Color.White;
+            this.combobox_category.ItemHeight = 30;
+            this.combobox_category.Location = new System.Drawing.Point(765, 21);
+            this.combobox_category.Margin = new System.Windows.Forms.Padding(2);
+            this.combobox_category.Name = "combobox_category";
+            this.combobox_category.Size = new System.Drawing.Size(223, 36);
+            this.combobox_category.TabIndex = 26;
+            this.combobox_category.SelectedValueChanged += new System.EventHandler(this.combobox_category_SelectedValueChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(582, 26);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 25);
+            this.label4.TabIndex = 27;
+            this.label4.Text = "Category";
+            // 
+            // btnAddProduct
+            // 
+            this.btnAddProduct.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddProduct.BorderRadius = 15;
+            this.btnAddProduct.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddProduct.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddProduct.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddProduct.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddProduct.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnAddProduct.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.ForeColor = System.Drawing.Color.White;
+            this.btnAddProduct.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnAddProduct.Location = new System.Drawing.Point(855, 69);
+            this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(133, 41);
+            this.btnAddProduct.TabIndex = 32;
+            this.btnAddProduct.Text = "Add product";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
+            // 
+            // flowLayoutPanel
+            // 
+            this.flowLayoutPanel.AutoScroll = true;
+            this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(40, 133);
+            this.flowLayoutPanel.Name = "flowLayoutPanel";
+            this.flowLayoutPanel.Size = new System.Drawing.Size(948, 514);
+            this.flowLayoutPanel.TabIndex = 33;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.searches;
+            this.pictureBox1.Location = new System.Drawing.Point(380, 23);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 49;
+            this.pictureBox1.TabStop = false;
+            // 
+            // PanelProductlist
+            // 
+            this.PanelProductlist.BackColor = System.Drawing.Color.Transparent;
+            this.PanelProductlist.BorderColor = System.Drawing.Color.DarkGray;
+            this.PanelProductlist.BorderRadius = 40;
+            this.PanelProductlist.BorderThickness = 1;
+            this.PanelProductlist.Controls.Add(this.pictureBox1);
+            this.PanelProductlist.Controls.Add(this.btnAddProduct);
+            this.PanelProductlist.Controls.Add(this.label4);
+            this.PanelProductlist.Controls.Add(this.combobox_category);
+            this.PanelProductlist.Controls.Add(this.panel1);
+            this.PanelProductlist.Controls.Add(this.guna2Button1);
+            this.PanelProductlist.Controls.Add(this.txtEmailCode);
+            this.PanelProductlist.Controls.Add(this.flowLayoutPanel);
+            this.PanelProductlist.Location = new System.Drawing.Point(52, 91);
+            this.PanelProductlist.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelProductlist.Name = "PanelProductlist";
+            this.PanelProductlist.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.PanelProductlist.Size = new System.Drawing.Size(1017, 665);
+            this.PanelProductlist.TabIndex = 23;
+            this.PanelProductlist.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
+            // 
             // UCProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -499,22 +500,22 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.btnCategory);
             this.Controls.Add(this.btnProductList);
-            this.Controls.Add(this.PanelProductlist);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.PanelCategory);
+            this.Controls.Add(this.PanelProductlist);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCProducts";
             this.Size = new System.Drawing.Size(1124, 800);
-            this.PanelProductlist.ResumeLayout(false);
-            this.PanelProductlist.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.PanelCategory.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelProductlist.ResumeLayout(false);
+            this.PanelProductlist.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -522,17 +523,8 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelProductlist;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmailCode;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2ComboBox combobox_category;
-        private Guna.UI2.WinForms.Guna2GradientButton btnAddProduct;
         private Guna.UI2.WinForms.Guna2GradientButton btnProductList;
         private Guna.UI2.WinForms.Guna2GradientButton btnCategory;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelCategory;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddCategory;
@@ -547,5 +539,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Category_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Edit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Delete;
+        private Guna.UI2.WinForms.Guna2TextBox txtEmailCode;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Panel panel1;
+        private Guna.UI2.WinForms.Guna2ComboBox combobox_category;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAddProduct;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelProductlist;
     }
 }
