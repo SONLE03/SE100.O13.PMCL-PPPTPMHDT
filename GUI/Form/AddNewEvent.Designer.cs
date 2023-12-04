@@ -61,7 +61,7 @@
             this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.gridviewEvent = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.gridviewEventAppliedProduct = new Guna.UI2.WinForms.Guna2DataGridView();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,7 +73,7 @@
             this.panelEventID.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewEvent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewEventAppliedProduct)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -449,7 +449,7 @@
             this.guna2Panel2.BorderRadius = 35;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label14);
-            this.guna2Panel2.Controls.Add(this.gridviewEvent);
+            this.guna2Panel2.Controls.Add(this.gridviewEventAppliedProduct);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(50, 350);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -469,10 +469,10 @@
             this.label14.TabIndex = 41;
             this.label14.Text = "Event Applied Product";
             // 
-            // gridviewEvent
+            // gridviewEventAppliedProduct
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gridviewEvent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridviewEventAppliedProduct.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
@@ -480,10 +480,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewEvent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridviewEvent.ColumnHeadersHeight = 30;
-            this.gridviewEvent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridviewEvent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridviewEventAppliedProduct.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridviewEventAppliedProduct.ColumnHeadersHeight = 30;
+            this.gridviewEventAppliedProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gridviewEventAppliedProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Number,
             this.Product_name,
             this.Category_name,
@@ -497,38 +497,38 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridviewEvent.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridviewEvent.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewEvent.Location = new System.Drawing.Point(1, 30);
-            this.gridviewEvent.Margin = new System.Windows.Forms.Padding(4);
-            this.gridviewEvent.Name = "gridviewEvent";
-            this.gridviewEvent.RowHeadersVisible = false;
-            this.gridviewEvent.RowHeadersWidth = 50;
+            this.gridviewEventAppliedProduct.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridviewEventAppliedProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridviewEventAppliedProduct.Location = new System.Drawing.Point(1, 30);
+            this.gridviewEventAppliedProduct.Margin = new System.Windows.Forms.Padding(4);
+            this.gridviewEventAppliedProduct.Name = "gridviewEventAppliedProduct";
+            this.gridviewEventAppliedProduct.RowHeadersVisible = false;
+            this.gridviewEventAppliedProduct.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewEvent.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewEvent.Size = new System.Drawing.Size(695, 171);
-            this.gridviewEvent.TabIndex = 40;
-            this.gridviewEvent.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewEvent.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gridviewEvent.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gridviewEvent.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gridviewEvent.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gridviewEvent.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewEvent.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewEvent.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gridviewEvent.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gridviewEvent.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridviewEvent.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gridviewEvent.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridviewEvent.ThemeStyle.HeaderStyle.Height = 30;
-            this.gridviewEvent.ThemeStyle.ReadOnly = false;
-            this.gridviewEvent.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewEvent.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridviewEvent.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridviewEvent.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridviewEvent.ThemeStyle.RowsStyle.Height = 22;
-            this.gridviewEvent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewEvent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridviewEventAppliedProduct.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridviewEventAppliedProduct.Size = new System.Drawing.Size(695, 171);
+            this.gridviewEventAppliedProduct.TabIndex = 40;
+            this.gridviewEventAppliedProduct.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridviewEventAppliedProduct.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gridviewEventAppliedProduct.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gridviewEventAppliedProduct.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gridviewEventAppliedProduct.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gridviewEventAppliedProduct.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gridviewEventAppliedProduct.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridviewEventAppliedProduct.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gridviewEventAppliedProduct.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gridviewEventAppliedProduct.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridviewEventAppliedProduct.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gridviewEventAppliedProduct.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gridviewEventAppliedProduct.ThemeStyle.HeaderStyle.Height = 30;
+            this.gridviewEventAppliedProduct.ThemeStyle.ReadOnly = false;
+            this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.Height = 22;
+            this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // Number
             // 
@@ -659,7 +659,7 @@
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewEvent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewEventAppliedProduct)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -694,7 +694,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btn_Add;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2DataGridView gridviewEvent;
+        private Guna.UI2.WinForms.Guna2DataGridView gridviewEventAppliedProduct;
         private Guna.UI2.WinForms.Guna2GradientButton btnCreate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product_name;

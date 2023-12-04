@@ -95,10 +95,10 @@
     <Compile Include="Form\AddNewEmployee.Designer.cs">
       <DependentUpon>AddNewEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewEvent.cs">
+    <Compile Include="Form\AddNewEvent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewEvent.Designer.cs">
+    <Compile Include="Form\AddNewEvent.Designer.cs">
       <DependentUpon>AddNewEvent.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\AddNewSupplier.cs">
@@ -137,10 +137,10 @@
     <Compile Include="Form\EmployeeDetails.Designer.cs">
       <DependentUpon>EmployeeDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="EventDetails.cs">
+    <Compile Include="Form\EventDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EventDetails.Designer.cs">
+    <Compile Include="Form\EventDetails.Designer.cs">
       <DependentUpon>EventDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\AddSize.cs">
@@ -314,10 +314,13 @@
     <Compile Include="UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddNewEvent.resx">
+    <EmbeddedResource Include="AddImportOrder.resx">
+      <DependentUpon>AddImportOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\AddNewEvent.resx">
       <DependentUpon>AddNewEvent.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EventDetails.resx">
+    <EmbeddedResource Include="Form\EventDetails.resx">
       <DependentUpon>EventDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\AddNewSupplier.resx">
