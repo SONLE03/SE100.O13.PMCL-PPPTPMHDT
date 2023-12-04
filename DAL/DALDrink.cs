@@ -99,6 +99,22 @@ namespace DAL
             }
         }
 
+        public bool UpdDrinkImageNotFound(int idDrink, string Image)
+        {
+            try
+            {
+                DRINK Drink = CFEntities.Instance.DRINKS.Find(idDrink);
+                if (Image != null) Drink.Image = Image;
+                CFEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
+
         public bool DelDrink(int id)
         {
             using (var transaction = CFEntities.Instance.Database.BeginTransaction())

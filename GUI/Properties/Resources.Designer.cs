@@ -403,6 +403,36 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_about_100px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_about_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_about_100px1 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_about_100px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_here_100px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_here_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap locked {
             get {
                 object obj = ResourceManager.GetObject("locked", resourceCulture);
@@ -436,6 +466,16 @@ namespace GUI.Properties {
         internal static System.Drawing.Bitmap milkco1 {
             get {
                 object obj = ResourceManager.GetObject("milkco1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap NotFoundImage {
+            get {
+                object obj = ResourceManager.GetObject("NotFoundImage", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

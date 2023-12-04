@@ -586,6 +586,11 @@
   <ItemGroup>
     <None Include="Resources\Engman.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_here_100px.png" />
+    <None Include="Resources\icons8_about_100px.png" />
+    <Content Include="Resources\NotFoundImage.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

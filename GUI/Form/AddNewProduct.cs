@@ -70,8 +70,7 @@ namespace GUI
             txtProductname.Text = drink.DrinksName;
             txtDescibe.Text = drink.Description;
             txtPrice.Text = drinkSize.OriginalPrice.ToString();
-
-            picture_product.Image = new Bitmap(drink.Image);
+            picture_product.Image = new System.Drawing.Bitmap(drink.Image);
 
             btn_Add.Visible = false;
             btnDelete.Visible = true;

@@ -364,7 +364,7 @@
             // 
             this.picture_product.BackColor = System.Drawing.Color.Transparent;
             this.picture_product.BorderRadius = 20;
-            this.picture_product.Image = global::GUI.Properties.Resources.cake;
+            this.picture_product.Image = global::GUI.Properties.Resources.NotFoundImage;
             this.picture_product.ImageRotate = 0F;
             this.picture_product.Location = new System.Drawing.Point(34, 80);
             this.picture_product.Margin = new System.Windows.Forms.Padding(2);

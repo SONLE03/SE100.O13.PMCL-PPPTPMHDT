@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,13 +23,25 @@ namespace GUI
 
         public void loadData(int idProduct, string pathImage, string productName, double price, string sizeName, string description)
         {
-            guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(pathImage);
-            lbName.Text = productName;
-            lbPrice.Text = price.ToString() + " VND";
-            lbDescribe.Text = description;
-            textBox1.Text = sizeName;
-            labelID.Text = idProduct.ToString();
-            labelID.Visible = false;
+            try
+            {
+                lbName.Text = productName;
+                lbPrice.Text = price.ToString() + " VND";
+                lbDescribe.Text = description;
+                textBox1.Text = sizeName;
+                labelID.Text = idProduct.ToString();
+                labelID.Visible = false;
+                guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(pathImage);
+            }
+            catch (Exception ex)
+            {
+                string resourcesFolder = Path.Combine(Application.StartupPath, "Resources");
+                resourcesFolder = resourcesFolder.Replace("\\bin\\Debug", "");
+                string imagePathError = Path.Combine(resourcesFolder, "NotFoundImage.png");
+                guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(imagePathError);
+
+                BUS.BUSDrink.Instance.UpdateImageErrorNotFound(idProduct, imagePathError);
+            }
         }
 
         //private void pictureBox1_Click(object sender, EventArgs e)

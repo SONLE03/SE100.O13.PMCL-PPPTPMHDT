@@ -49,6 +49,11 @@ namespace BUS
             return DALDrink.Instance.UpdDrink(idDrink, DrinksName, drinkCategory, Unit, Description, Image, idEV, Drink_SIZEs, Status);
         }
 
+        public bool UpdateImageErrorNotFound(int idDrink, string Image)
+        {
+            return DALDrink.Instance.UpdDrinkImageNotFound(idDrink, Image);
+        }
+
         public bool DelDrink(int id)
         {
             return DALDrink.Instance.DelDrink(id);
