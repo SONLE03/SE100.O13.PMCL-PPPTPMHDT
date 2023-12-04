@@ -314,6 +314,9 @@
     <Compile Include="UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddImportOrder.resx">
+      <DependentUpon>AddImportOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\AddNewSupplier.resx">
       <DependentUpon>AddNewSupplier.cs</DependentUpon>
     </EmbeddedResource>
@@ -589,6 +592,7 @@
   <ItemGroup>
     <None Include="Resources\icons8_here_100px.png" />
     <None Include="Resources\icons8_about_100px.png" />
+    <None Include="Resources\info.png" />
     <Content Include="Resources\NotFoundImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
