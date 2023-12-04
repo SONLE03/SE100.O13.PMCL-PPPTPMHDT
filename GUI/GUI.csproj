@@ -83,10 +83,10 @@
     <Compile Include="Form\AddCategory.Designer.cs">
       <DependentUpon>AddCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddImportOrder.cs">
+    <Compile Include="Form\AddImportOrder.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddImportOrder.Designer.cs">
+    <Compile Include="Form\AddImportOrder.Designer.cs">
       <DependentUpon>AddImportOrder.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\AddNewEmployee.cs">
@@ -192,10 +192,10 @@
       <DependentUpon>HomeManager.cs</DependentUpon>
     </Compile>
     <Compile Include="HomeLogic.cs" />
-    <Compile Include="ImportOrderDetails.cs">
+    <Compile Include="Form\ImportOrderDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ImportOrderDetails.Designer.cs">
+    <Compile Include="Form\ImportOrderDetails.Designer.cs">
       <DependentUpon>ImportOrderDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -314,7 +314,7 @@
     <Compile Include="UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddImportOrder.resx">
+    <EmbeddedResource Include="Form\AddImportOrder.resx">
       <DependentUpon>AddImportOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\AddNewEvent.resx">
@@ -367,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\HomeManager.resx">
       <DependentUpon>HomeManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\ImportOrderDetails.resx">
+      <DependentUpon>ImportOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
