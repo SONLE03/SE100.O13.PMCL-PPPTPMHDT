@@ -81,6 +81,7 @@
             this.labelID.Size = new System.Drawing.Size(131, 25);
             this.labelID.TabIndex = 8;
             this.labelID.Text = "Product name";
+            this.labelID.Visible = false;
             // 
             // guna2Panel1
             // 
@@ -89,7 +90,7 @@
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.textBox1);
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
-            this.guna2Panel1.Location = new System.Drawing.Point(213, 112);
+            this.guna2Panel1.Location = new System.Drawing.Point(217, 112);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(40, 40);
@@ -113,7 +114,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(162, 121);
+            this.label1.Location = new System.Drawing.Point(175, 121);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 20);
@@ -124,7 +125,7 @@
             // 
             this.lbDescribe.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.lbDescribe.ForeColor = System.Drawing.Color.DimGray;
-            this.lbDescribe.Location = new System.Drawing.Point(14, 173);
+            this.lbDescribe.Location = new System.Drawing.Point(14, 175);
             this.lbDescribe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbDescribe.Name = "lbDescribe";
             this.lbDescribe.Size = new System.Drawing.Size(244, 55);
@@ -135,7 +136,7 @@
             // 
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lbPrice.Location = new System.Drawing.Point(25, 132);
+            this.lbPrice.Location = new System.Drawing.Point(14, 132);
             this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(80, 20);
@@ -144,19 +145,20 @@
             // 
             // lbName
             // 
+            this.lbName.AllowDrop = true;
             this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lbName.Location = new System.Drawing.Point(138, 65);
             this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(131, 25);
+            this.lbName.Size = new System.Drawing.Size(117, 21);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Product name";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_about_100px1;
-            this.pictureBox1.Location = new System.Drawing.Point(220, 11);
+            this.pictureBox1.Image = global::GUI.Properties.Resources.info;
+            this.pictureBox1.Location = new System.Drawing.Point(217, 8);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(40, 40);
@@ -169,7 +171,7 @@
             // 
             this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.milkco1;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(17, 19);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(18, 21);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;

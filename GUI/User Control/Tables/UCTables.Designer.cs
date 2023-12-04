@@ -35,14 +35,14 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.GhostWhite;
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.DarkGray;
             this.guna2Panel1.BorderRadius = 40;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(63, 100);
+            this.guna2Panel1.Location = new System.Drawing.Point(58, 99);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1677, 858);
+            this.guna2Panel1.Size = new System.Drawing.Size(1010, 655);
             this.guna2Panel1.TabIndex = 23;
             // 
             // btnArea
@@ -59,10 +59,10 @@
             this.btnArea.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnArea.ForeColor = System.Drawing.Color.White;
             this.btnArea.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnArea.Location = new System.Drawing.Point(1020, 29);
+            this.btnArea.Location = new System.Drawing.Point(681, 29);
             this.btnArea.Margin = new System.Windows.Forms.Padding(2);
             this.btnArea.Name = "btnArea";
-            this.btnArea.Size = new System.Drawing.Size(149, 41);
+            this.btnArea.Size = new System.Drawing.Size(117, 41);
             this.btnArea.TabIndex = 36;
             this.btnArea.Text = "Area";
             // 
@@ -80,10 +80,10 @@
             this.btnTable.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnTable.ForeColor = System.Drawing.Color.White;
             this.btnTable.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnTable.Location = new System.Drawing.Point(522, 29);
+            this.btnTable.Location = new System.Drawing.Point(318, 29);
             this.btnTable.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable.Name = "btnTable";
-            this.btnTable.Size = new System.Drawing.Size(149, 41);
+            this.btnTable.Size = new System.Drawing.Size(129, 41);
             this.btnTable.TabIndex = 35;
             this.btnTable.Text = "Tables";
             // 
@@ -91,11 +91,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GUI.Properties.Resources.raucu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.btnArea);
             this.Controls.Add(this.btnTable);
             this.Controls.Add(this.guna2Panel1);
+            this.DoubleBuffered = true;
             this.Name = "UCTables";
-            this.Size = new System.Drawing.Size(1800, 1201);
+            this.Size = new System.Drawing.Size(1124, 800);
             this.ResumeLayout(false);
 
         }

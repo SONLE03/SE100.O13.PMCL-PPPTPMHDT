@@ -592,6 +592,7 @@
   <ItemGroup>
     <None Include="Resources\icons8_here_100px.png" />
     <None Include="Resources\icons8_about_100px.png" />
+    <None Include="Resources\info.png" />
     <Content Include="Resources\NotFoundImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
