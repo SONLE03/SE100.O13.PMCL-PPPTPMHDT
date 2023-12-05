@@ -39,19 +39,19 @@
             this.panelUserGroupID = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.gridviewImportedProducts = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.gridviewAddNewUserGroup = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.MF_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Function_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Screen_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnAdd = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.txtUserGroupName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.Checkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.MF_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Function_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Screen_Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panelUserGroupID.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewImportedProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewAddNewUserGroup)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,10 +116,10 @@
             this.label14.TabIndex = 41;
             this.label14.Text = "List of managed functions";
             // 
-            // gridviewImportedProducts
+            // gridviewAddNewUserGroup
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.gridviewAddNewUserGroup.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
@@ -127,10 +127,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewImportedProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridviewImportedProducts.ColumnHeadersHeight = 30;
-            this.gridviewImportedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridviewImportedProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridviewAddNewUserGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.gridviewAddNewUserGroup.ColumnHeadersHeight = 30;
+            this.gridviewAddNewUserGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gridviewAddNewUserGroup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Checkbox,
             this.MF_ID,
             this.Function_Name,
@@ -142,38 +142,68 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridviewImportedProducts.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridviewImportedProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewImportedProducts.Location = new System.Drawing.Point(4, 29);
-            this.gridviewImportedProducts.Margin = new System.Windows.Forms.Padding(4);
-            this.gridviewImportedProducts.Name = "gridviewImportedProducts";
-            this.gridviewImportedProducts.RowHeadersVisible = false;
-            this.gridviewImportedProducts.RowHeadersWidth = 50;
+            this.gridviewAddNewUserGroup.DefaultCellStyle = dataGridViewCellStyle3;
+            this.gridviewAddNewUserGroup.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridviewAddNewUserGroup.Location = new System.Drawing.Point(4, 29);
+            this.gridviewAddNewUserGroup.Margin = new System.Windows.Forms.Padding(4);
+            this.gridviewAddNewUserGroup.Name = "gridviewAddNewUserGroup";
+            this.gridviewAddNewUserGroup.RowHeadersVisible = false;
+            this.gridviewAddNewUserGroup.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewImportedProducts.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewImportedProducts.Size = new System.Drawing.Size(362, 171);
-            this.gridviewImportedProducts.TabIndex = 40;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gridviewImportedProducts.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.Height = 30;
-            this.gridviewImportedProducts.ThemeStyle.ReadOnly = false;
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.Height = 22;
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridviewAddNewUserGroup.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.gridviewAddNewUserGroup.Size = new System.Drawing.Size(362, 231);
+            this.gridviewAddNewUserGroup.TabIndex = 40;
+            this.gridviewAddNewUserGroup.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridviewAddNewUserGroup.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.gridviewAddNewUserGroup.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.gridviewAddNewUserGroup.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.gridviewAddNewUserGroup.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.gridviewAddNewUserGroup.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.gridviewAddNewUserGroup.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridviewAddNewUserGroup.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gridviewAddNewUserGroup.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.gridviewAddNewUserGroup.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridviewAddNewUserGroup.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.gridviewAddNewUserGroup.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.gridviewAddNewUserGroup.ThemeStyle.HeaderStyle.Height = 30;
+            this.gridviewAddNewUserGroup.ThemeStyle.ReadOnly = false;
+            this.gridviewAddNewUserGroup.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.gridviewAddNewUserGroup.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.gridviewAddNewUserGroup.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gridviewAddNewUserGroup.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridviewAddNewUserGroup.ThemeStyle.RowsStyle.Height = 22;
+            this.gridviewAddNewUserGroup.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.gridviewAddNewUserGroup.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Checkbox
+            // 
+            this.Checkbox.FillWeight = 15F;
+            this.Checkbox.HeaderText = "";
+            this.Checkbox.MinimumWidth = 6;
+            this.Checkbox.Name = "Checkbox";
+            this.Checkbox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Checkbox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // MF_ID
+            // 
+            this.MF_ID.FillWeight = 50F;
+            this.MF_ID.HeaderText = "MF ID";
+            this.MF_ID.MinimumWidth = 6;
+            this.MF_ID.Name = "MF_ID";
+            // 
+            // Function_Name
+            // 
+            this.Function_Name.FillWeight = 70F;
+            this.Function_Name.HeaderText = "Function Name";
+            this.Function_Name.MinimumWidth = 6;
+            this.Function_Name.Name = "Function_Name";
+            // 
+            // Screen_Name
+            // 
+            this.Screen_Name.FillWeight = 50F;
+            this.Screen_Name.HeaderText = "Screen Name";
+            this.Screen_Name.MinimumWidth = 6;
+            this.Screen_Name.Name = "Screen_Name";
             // 
             // label2
             // 
@@ -236,7 +266,7 @@
             this.guna2Panel2.BorderRadius = 35;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label14);
-            this.guna2Panel2.Controls.Add(this.gridviewImportedProducts);
+            this.guna2Panel2.Controls.Add(this.gridviewAddNewUserGroup);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(165, 282);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -279,36 +309,6 @@
             this.txtUserGroupName.Size = new System.Drawing.Size(370, 40);
             this.txtUserGroupName.TabIndex = 171;
             // 
-            // Checkbox
-            // 
-            this.Checkbox.FillWeight = 15F;
-            this.Checkbox.HeaderText = "";
-            this.Checkbox.MinimumWidth = 6;
-            this.Checkbox.Name = "Checkbox";
-            this.Checkbox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Checkbox.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // MF_ID
-            // 
-            this.MF_ID.FillWeight = 50F;
-            this.MF_ID.HeaderText = "MF ID";
-            this.MF_ID.MinimumWidth = 6;
-            this.MF_ID.Name = "MF_ID";
-            // 
-            // Function_Name
-            // 
-            this.Function_Name.FillWeight = 70F;
-            this.Function_Name.HeaderText = "Function Name";
-            this.Function_Name.MinimumWidth = 6;
-            this.Function_Name.Name = "Function_Name";
-            // 
-            // Screen_Name
-            // 
-            this.Screen_Name.FillWeight = 50F;
-            this.Screen_Name.HeaderText = "Screen Name";
-            this.Screen_Name.MinimumWidth = 6;
-            this.Screen_Name.Name = "Screen_Name";
-            // 
             // AddNewUserGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -324,13 +324,15 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.guna2Panel2);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AddNewUserGroup";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewUserGroup";
             this.panelUserGroupID.ResumeLayout(false);
             this.panelUserGroupID.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewImportedProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewAddNewUserGroup)).EndInit();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -344,7 +346,7 @@
         private Guna.UI2.WinForms.Guna2Panel panelUserGroupID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2DataGridView gridviewImportedProducts;
+        private Guna.UI2.WinForms.Guna2DataGridView gridviewAddNewUserGroup;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientButton btnCancel;
         private Guna.UI2.WinForms.Guna2GradientButton btnAdd;

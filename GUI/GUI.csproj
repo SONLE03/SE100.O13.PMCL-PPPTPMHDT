@@ -113,10 +113,10 @@
     <Compile Include="AddNewTable.Designer.cs">
       <DependentUpon>AddNewTable.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewUserGroup.cs">
+    <Compile Include="Form\AddNewUserGroup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewUserGroup.Designer.cs">
+    <Compile Include="Form\AddNewUserGroup.Designer.cs">
       <DependentUpon>AddNewUserGroup.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\EditArea.cs">
@@ -308,13 +308,13 @@
     <Compile Include="User Control\Products\UCProducts.Designer.cs">
       <DependentUpon>UCProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserGroupDetails.cs">
+    <Compile Include="Form\UserGroupDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserGroupDetails.Designer.cs">
+    <Compile Include="Form\UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddNewUserGroup.resx">
+    <EmbeddedResource Include="Form\AddNewUserGroup.resx">
       <DependentUpon>AddNewUserGroup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\AddImportOrder.resx">
@@ -434,6 +434,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Products\UCProducts.resx">
       <DependentUpon>UCProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\UserGroupDetails.resx">
+      <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
