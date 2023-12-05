@@ -387,6 +387,9 @@
     <EmbeddedResource Include="Form\SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TableDetails.resx">
+      <DependentUpon>TableDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UCSettings.resx">
       <DependentUpon>UCSettings.cs</DependentUpon>
     </EmbeddedResource>
