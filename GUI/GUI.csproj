@@ -314,6 +314,9 @@
     <Compile Include="UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddNewUserGroup.resx">
+      <DependentUpon>AddNewUserGroup.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\AddImportOrder.resx">
       <DependentUpon>AddImportOrder.cs</DependentUpon>
     </EmbeddedResource>
