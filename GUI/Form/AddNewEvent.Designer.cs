@@ -49,7 +49,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.checkboxSaleSamePrice = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.guna2CustomCheckBox1 = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            this.checkboxSalePercentage = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtVND = new Guna.UI2.WinForms.Guna2TextBox();
             this.label10 = new System.Windows.Forms.Label();
@@ -57,7 +57,7 @@
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.comboboxProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
@@ -69,7 +69,7 @@
             this.Unit_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnCreate = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.bthCancel = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelEventID.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -280,22 +280,22 @@
             this.label7.TabIndex = 100;
             this.label7.Text = "Sale %";
             // 
-            // guna2CustomCheckBox1
+            // checkboxSalePercentage
             // 
-            this.guna2CustomCheckBox1.Animated = true;
-            this.guna2CustomCheckBox1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
-            this.guna2CustomCheckBox1.CheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.CheckedState.BorderThickness = 0;
-            this.guna2CustomCheckBox1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
-            this.guna2CustomCheckBox1.Location = new System.Drawing.Point(296, 230);
-            this.guna2CustomCheckBox1.Name = "guna2CustomCheckBox1";
-            this.guna2CustomCheckBox1.Size = new System.Drawing.Size(23, 23);
-            this.guna2CustomCheckBox1.TabIndex = 99;
-            this.guna2CustomCheckBox1.Text = "Male";
-            this.guna2CustomCheckBox1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.guna2CustomCheckBox1.UncheckedState.BorderRadius = 2;
-            this.guna2CustomCheckBox1.UncheckedState.BorderThickness = 1;
-            this.guna2CustomCheckBox1.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.checkboxSalePercentage.Animated = true;
+            this.checkboxSalePercentage.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
+            this.checkboxSalePercentage.CheckedState.BorderRadius = 2;
+            this.checkboxSalePercentage.CheckedState.BorderThickness = 0;
+            this.checkboxSalePercentage.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
+            this.checkboxSalePercentage.Location = new System.Drawing.Point(296, 230);
+            this.checkboxSalePercentage.Name = "checkboxSalePercentage";
+            this.checkboxSalePercentage.Size = new System.Drawing.Size(23, 23);
+            this.checkboxSalePercentage.TabIndex = 99;
+            this.checkboxSalePercentage.Text = "Male";
+            this.checkboxSalePercentage.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.checkboxSalePercentage.UncheckedState.BorderRadius = 2;
+            this.checkboxSalePercentage.UncheckedState.BorderThickness = 1;
+            this.checkboxSalePercentage.UncheckedState.FillColor = System.Drawing.Color.White;
             // 
             // label8
             // 
@@ -402,24 +402,24 @@
             this.label12.TabIndex = 49;
             this.label12.Text = "Product";
             // 
-            // guna2ComboBox1
+            // comboboxProduct
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderColor = System.Drawing.Color.Black;
-            this.guna2ComboBox1.BorderRadius = 10;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(504, 289);
-            this.guna2ComboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.Size = new System.Drawing.Size(209, 36);
-            this.guna2ComboBox1.TabIndex = 107;
+            this.comboboxProduct.BackColor = System.Drawing.Color.Transparent;
+            this.comboboxProduct.BorderColor = System.Drawing.Color.Black;
+            this.comboboxProduct.BorderRadius = 10;
+            this.comboboxProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.comboboxProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboboxProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.comboboxProduct.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboboxProduct.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboboxProduct.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.comboboxProduct.ForeColor = System.Drawing.Color.White;
+            this.comboboxProduct.ItemHeight = 30;
+            this.comboboxProduct.Location = new System.Drawing.Point(504, 289);
+            this.comboboxProduct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboboxProduct.Name = "comboboxProduct";
+            this.comboboxProduct.Size = new System.Drawing.Size(214, 36);
+            this.comboboxProduct.TabIndex = 107;
             // 
             // btn_Add
             // 
@@ -435,7 +435,7 @@
             this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Add.Location = new System.Drawing.Point(724, 289);
+            this.btn_Add.Location = new System.Drawing.Point(729, 289);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(58, 37);
@@ -594,26 +594,26 @@
             this.btnCreate.TabIndex = 110;
             this.btnCreate.Text = "Create";
             // 
-            // bthCancel
+            // btnCancel
             // 
-            this.bthCancel.BackColor = System.Drawing.Color.Transparent;
-            this.bthCancel.BorderRadius = 10;
-            this.bthCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.bthCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.bthCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bthCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.bthCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.bthCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.bthCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.bthCancel.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.bthCancel.ForeColor = System.Drawing.Color.White;
-            this.bthCancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.bthCancel.Location = new System.Drawing.Point(194, 595);
-            this.bthCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.bthCancel.Name = "bthCancel";
-            this.bthCancel.Size = new System.Drawing.Size(99, 37);
-            this.bthCancel.TabIndex = 111;
-            this.bthCancel.Text = "Cancel";
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnCancel.Location = new System.Drawing.Point(194, 595);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(99, 37);
+            this.btnCancel.TabIndex = 111;
+            this.btnCancel.Text = "Cancel";
             // 
             // AddNewEvent
             // 
@@ -622,11 +622,11 @@
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 666);
-            this.Controls.Add(this.bthCancel);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnCreate);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.btn_Add);
-            this.Controls.Add(this.guna2ComboBox1);
+            this.Controls.Add(this.comboboxProduct);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.combobox_category);
             this.Controls.Add(this.label11);
@@ -634,7 +634,7 @@
             this.Controls.Add(this.txtVND);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.guna2CustomCheckBox1);
+            this.Controls.Add(this.checkboxSalePercentage);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.checkboxSaleSamePrice);
             this.Controls.Add(this.label6);
@@ -680,7 +680,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private Guna.UI2.WinForms.Guna2CustomCheckBox guna2CustomCheckBox1;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox checkboxSalePercentage;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2CustomCheckBox checkboxSaleSamePrice;
         private System.Windows.Forms.Label label11;
@@ -690,7 +690,7 @@
         private Guna.UI2.WinForms.Guna2ComboBox combobox_category;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox comboboxProduct;
         private Guna.UI2.WinForms.Guna2GradientButton btn_Add;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label14;
@@ -702,6 +702,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit_price;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
-        private Guna.UI2.WinForms.Guna2GradientButton bthCancel;
+        private Guna.UI2.WinForms.Guna2GradientButton btnCancel;
     }
 }

@@ -107,10 +107,10 @@
     <Compile Include="Form\AddNewSupplier.Designer.cs">
       <DependentUpon>AddNewSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddNewTable.cs">
+    <Compile Include="Form\AddNewTable.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddNewTable.Designer.cs">
+    <Compile Include="Form\AddNewTable.Designer.cs">
       <DependentUpon>AddNewTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\AddNewUserGroup.cs">
@@ -206,10 +206,10 @@
     <Compile Include="Form\SupplierDetails.Designer.cs">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="TableDetails.cs">
+    <Compile Include="Form\TableDetails.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TableDetails.Designer.cs">
+    <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="UCSettings.cs">
@@ -314,6 +314,9 @@
     <Compile Include="Form\UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\AddNewTable.resx">
+      <DependentUpon>AddNewTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\AddNewUserGroup.resx">
       <DependentUpon>AddNewUserGroup.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,7 +390,7 @@
     <EmbeddedResource Include="Form\SupplierDetails.resx">
       <DependentUpon>SupplierDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TableDetails.resx">
+    <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCSettings.resx">
