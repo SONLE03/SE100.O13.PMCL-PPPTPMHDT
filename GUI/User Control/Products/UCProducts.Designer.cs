@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnProductList = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnCategory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -40,17 +40,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gridviewTable = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Avatar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Category_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddCategory = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtFindCategory = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmailCode = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -131,8 +127,7 @@
             this.PanelCategory.Controls.Add(this.guna2Panel1);
             this.PanelCategory.Controls.Add(this.pictureBox2);
             this.PanelCategory.Controls.Add(this.btnAddCategory);
-            this.PanelCategory.Controls.Add(this.guna2Button2);
-            this.PanelCategory.Controls.Add(this.guna2TextBox1);
+            this.PanelCategory.Controls.Add(this.txtFindCategory);
             this.PanelCategory.Location = new System.Drawing.Point(51, 91);
             this.PanelCategory.Margin = new System.Windows.Forms.Padding(2);
             this.PanelCategory.Name = "PanelCategory";
@@ -183,39 +178,37 @@
             // 
             // gridviewTable
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gridviewTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
+            this.gridviewTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridviewTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.gridviewTable.ColumnHeadersHeight = 40;
             this.gridviewTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Avatar,
-            this.Category_ID,
-            this.Category_name,
-            this.Edit,
-            this.Delete});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridviewTable.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ID,
+            this.CategoryID,
+            this.Category_name});
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.gridviewTable.DefaultCellStyle = dataGridViewCellStyle15;
             this.gridviewTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewTable.Location = new System.Drawing.Point(2, 74);
             this.gridviewTable.Name = "gridviewTable";
             this.gridviewTable.RowHeadersVisible = false;
             this.gridviewTable.RowHeadersWidth = 50;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewTable.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridviewTable.RowsDefaultCellStyle = dataGridViewCellStyle16;
             this.gridviewTable.Size = new System.Drawing.Size(920, 389);
             this.gridviewTable.TabIndex = 40;
             this.gridviewTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -239,36 +232,24 @@
             this.gridviewTable.ThemeStyle.RowsStyle.Height = 22;
             this.gridviewTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridviewTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewTable_CellDoubleClick);
             // 
-            // Avatar
+            // ID
             // 
-            this.Avatar.FillWeight = 200F;
-            this.Avatar.HeaderText = "Avatar";
-            this.Avatar.Name = "Avatar";
-            this.Avatar.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Avatar.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ID.FillWeight = 150F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
             // 
-            // Category_ID
+            // CategoryID
             // 
-            this.Category_ID.FillWeight = 150F;
-            this.Category_ID.HeaderText = "Category ID";
-            this.Category_ID.Name = "Category_ID";
+            this.CategoryID.FillWeight = 200F;
+            this.CategoryID.HeaderText = "Category ID";
+            this.CategoryID.Name = "CategoryID";
             // 
             // Category_name
             // 
-            this.Category_name.FillWeight = 200F;
-            this.Category_name.HeaderText = "Category name";
+            this.Category_name.HeaderText = "Category Name";
             this.Category_name.Name = "Category_name";
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
             // 
             // pictureBox2
             // 
@@ -303,46 +284,30 @@
             this.btnAddCategory.Text = "Add category";
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
-            // guna2Button2
+            // txtFindCategory
             // 
-            this.guna2Button2.BorderRadius = 10;
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(44, 31);
-            this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(99, 36);
-            this.guna2Button2.TabIndex = 9;
-            this.guna2Button2.Text = "All category";
-            // 
-            // guna2TextBox1
-            // 
-            this.guna2TextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox1.BorderColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.BorderRadius = 10;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(142, 31);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PasswordChar = '\0';
-            this.guna2TextBox1.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.guna2TextBox1.PlaceholderText = "Search categories";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(279, 36);
-            this.guna2TextBox1.TabIndex = 8;
+            this.txtFindCategory.BackColor = System.Drawing.Color.Transparent;
+            this.txtFindCategory.BorderColor = System.Drawing.Color.Gray;
+            this.txtFindCategory.BorderRadius = 10;
+            this.txtFindCategory.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtFindCategory.DefaultText = "";
+            this.txtFindCategory.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtFindCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtFindCategory.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFindCategory.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtFindCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFindCategory.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtFindCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtFindCategory.Location = new System.Drawing.Point(47, 31);
+            this.txtFindCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtFindCategory.Name = "txtFindCategory";
+            this.txtFindCategory.PasswordChar = '\0';
+            this.txtFindCategory.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtFindCategory.PlaceholderText = "Search categories";
+            this.txtFindCategory.SelectedText = "";
+            this.txtFindCategory.Size = new System.Drawing.Size(374, 36);
+            this.txtFindCategory.TabIndex = 8;
+            this.txtFindCategory.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
             // 
             // txtEmailCode
             // 
@@ -358,33 +323,16 @@
             this.txtEmailCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmailCode.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmailCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailCode.Location = new System.Drawing.Point(142, 21);
+            this.txtEmailCode.Location = new System.Drawing.Point(44, 21);
             this.txtEmailCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEmailCode.Name = "txtEmailCode";
             this.txtEmailCode.PasswordChar = '\0';
             this.txtEmailCode.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtEmailCode.PlaceholderText = "Search products";
             this.txtEmailCode.SelectedText = "";
-            this.txtEmailCode.Size = new System.Drawing.Size(279, 36);
+            this.txtEmailCode.Size = new System.Drawing.Size(377, 36);
             this.txtEmailCode.TabIndex = 8;
             this.txtEmailCode.TextChanged += new System.EventHandler(this.txtEmailCode_TextChanged);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(44, 21);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(99, 36);
-            this.guna2Button1.TabIndex = 9;
-            this.guna2Button1.Text = "All category";
             // 
             // panel1
             // 
@@ -481,7 +429,6 @@
             this.PanelProductlist.Controls.Add(this.label4);
             this.PanelProductlist.Controls.Add(this.combobox_category);
             this.PanelProductlist.Controls.Add(this.panel1);
-            this.PanelProductlist.Controls.Add(this.guna2Button1);
             this.PanelProductlist.Controls.Add(this.txtEmailCode);
             this.PanelProductlist.Controls.Add(this.flowLayoutPanel);
             this.PanelProductlist.Location = new System.Drawing.Point(52, 91);
@@ -501,8 +448,8 @@
             this.Controls.Add(this.btnCategory);
             this.Controls.Add(this.btnProductList);
             this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.PanelCategory);
             this.Controls.Add(this.PanelProductlist);
+            this.Controls.Add(this.PanelCategory);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCProducts";
@@ -528,19 +475,12 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelCategory;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddCategory;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtFindCategory;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView gridviewTable;
-        private System.Windows.Forms.DataGridViewImageColumn Avatar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Delete;
         private Guna.UI2.WinForms.Guna2TextBox txtEmailCode;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2ComboBox combobox_category;
         private System.Windows.Forms.Label label4;
@@ -548,5 +488,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelProductlist;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category_name;
     }
 }

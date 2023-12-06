@@ -29,7 +29,7 @@ namespace GUI
         {
             string userName = txtUsername.Text.ToString();
             string passWord = txtPass.Text.ToString();
-            var user = BUSLogin.Instance.checkValidLogin(userName, passWord);
+            var user = BUS.BUSUser.Instance.GetUserByUsername(userName);
 
             if (String.IsNullOrEmpty(userName) || String.IsNullOrEmpty(passWord))
             {
@@ -37,7 +37,7 @@ namespace GUI
                                 MessageBoxIcon.Warning);
                 this.resetTextboxs();
             }
-            else if (user != null)
+            else if (user != null && passWord.Equals(user.Password))
             {
                 MessageBox.Show("Logged in successfully!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
