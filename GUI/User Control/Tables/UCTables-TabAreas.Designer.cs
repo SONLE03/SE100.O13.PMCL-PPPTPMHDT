@@ -86,9 +86,9 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(73, 144);
+            this.guna2Panel1.Location = new System.Drawing.Point(56, 119);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1539, 670);
+            this.guna2Panel1.Size = new System.Drawing.Size(900, 395);
             this.guna2Panel1.TabIndex = 49;
             // 
             // gridviewArea
@@ -97,13 +97,13 @@
             this.gridviewArea.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewArea.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridviewArea.ColumnHeadersHeight = 40;
+            this.gridviewArea.ColumnHeadersHeight = 30;
             this.gridviewArea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewArea.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Area_ID,
@@ -120,13 +120,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewArea.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewArea.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewArea.Location = new System.Drawing.Point(3, 81);
+            this.gridviewArea.Location = new System.Drawing.Point(3, 71);
             this.gridviewArea.Name = "gridviewArea";
             this.gridviewArea.RowHeadersVisible = false;
             this.gridviewArea.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewArea.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewArea.Size = new System.Drawing.Size(1533, 546);
+            this.gridviewArea.Size = new System.Drawing.Size(894, 303);
             this.gridviewArea.TabIndex = 43;
             this.gridviewArea.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewArea.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -140,7 +140,7 @@
             this.gridviewArea.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridviewArea.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.gridviewArea.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridviewArea.ThemeStyle.HeaderStyle.Height = 40;
+            this.gridviewArea.ThemeStyle.HeaderStyle.Height = 30;
             this.gridviewArea.ThemeStyle.ReadOnly = false;
             this.gridviewArea.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewArea.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -191,10 +191,10 @@
             this.btnAddArea.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddArea.ForeColor = System.Drawing.Color.White;
             this.btnAddArea.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddArea.Location = new System.Drawing.Point(1443, 43);
+            this.btnAddArea.Location = new System.Drawing.Point(811, 31);
             this.btnAddArea.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddArea.Name = "btnAddArea";
-            this.btnAddArea.Size = new System.Drawing.Size(169, 47);
+            this.btnAddArea.Size = new System.Drawing.Size(142, 41);
             this.btnAddArea.TabIndex = 47;
             this.btnAddArea.Text = "Add area";
             // 
@@ -208,10 +208,10 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(75, 43);
+            this.guna2Button1.Location = new System.Drawing.Point(56, 34);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(97, 47);
+            this.guna2Button1.Size = new System.Drawing.Size(97, 41);
             this.guna2Button1.TabIndex = 43;
             this.guna2Button1.Text = "All area";
             // 
@@ -229,21 +229,21 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(168, 43);
+            this.txtSearch.Location = new System.Drawing.Point(152, 34);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtSearch.PlaceholderText = "Search area";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(350, 47);
+            this.txtSearch.Size = new System.Drawing.Size(288, 41);
             this.txtSearch.TabIndex = 42;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::GUI.Properties.Resources.searches;
-            this.pictureBox1.Location = new System.Drawing.Point(458, 48);
+            this.pictureBox1.Location = new System.Drawing.Point(385, 36);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(46, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -254,13 +254,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnAddArea);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.txtSearch);
             this.Name = "UCTables_TabAreas";
-            this.Size = new System.Drawing.Size(1677, 858);
+            this.Size = new System.Drawing.Size(1010, 555);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewArea)).EndInit();

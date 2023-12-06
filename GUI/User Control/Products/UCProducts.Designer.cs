@@ -66,12 +66,12 @@
             //this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             //this.PanelProductlist.SuspendLayout();
 //>>>>>>> e8a87afe6479223f9aed9069b1600cde59dc47bb
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+           // ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             //this.PanelCategory.SuspendLayout();
             //this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.gridviewTable)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelProductlist

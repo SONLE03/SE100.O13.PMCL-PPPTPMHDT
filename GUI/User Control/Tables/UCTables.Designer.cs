@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.PanelTables = new Guna.UI2.WinForms.Guna2Panel();
             this.btnArea = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnTable = new Guna.UI2.WinForms.Guna2GradientButton();
             this.SuspendLayout();
             // 
-            // guna2Panel1
+            // PanelTables
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.GhostWhite;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Panel1.BorderRadius = 40;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(63, 100);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1677, 858);
-            this.guna2Panel1.TabIndex = 23;
+            this.PanelTables.BackColor = System.Drawing.Color.GhostWhite;
+            this.PanelTables.BorderColor = System.Drawing.Color.DarkGray;
+            this.PanelTables.BorderRadius = 40;
+            this.PanelTables.BorderThickness = 1;
+            this.PanelTables.FillColor = System.Drawing.Color.White;
+            this.PanelTables.Location = new System.Drawing.Point(56, 109);
+            this.PanelTables.Name = "PanelTables";
+            this.PanelTables.Size = new System.Drawing.Size(1010, 555);
+            this.PanelTables.TabIndex = 23;
             // 
             // btnArea
             // 
@@ -59,12 +59,13 @@
             this.btnArea.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnArea.ForeColor = System.Drawing.Color.White;
             this.btnArea.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnArea.Location = new System.Drawing.Point(1020, 29);
+            this.btnArea.Location = new System.Drawing.Point(678, 33);
             this.btnArea.Margin = new System.Windows.Forms.Padding(2);
             this.btnArea.Name = "btnArea";
             this.btnArea.Size = new System.Drawing.Size(149, 41);
             this.btnArea.TabIndex = 36;
             this.btnArea.Text = "Area";
+            this.btnArea.Click += new System.EventHandler(this.btnArea_Click);
             // 
             // btnTable
             // 
@@ -80,29 +81,37 @@
             this.btnTable.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnTable.ForeColor = System.Drawing.Color.White;
             this.btnTable.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnTable.Location = new System.Drawing.Point(522, 29);
+            this.btnTable.Location = new System.Drawing.Point(311, 33);
             this.btnTable.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable.Name = "btnTable";
             this.btnTable.Size = new System.Drawing.Size(149, 41);
             this.btnTable.TabIndex = 35;
             this.btnTable.Text = "Tables";
+            this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
             // 
             // UCTables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GUI.Properties.Resources.raucu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.btnArea);
             this.Controls.Add(this.btnTable);
-            this.Controls.Add(this.guna2Panel1);
+            this.Controls.Add(this.PanelTables);
+            this.DoubleBuffered = true;
             this.Name = "UCTables";
-            this.Size = new System.Drawing.Size(1800, 1201);
+            this.Size = new System.Drawing.Size(1124, 800);
+            this.Load += new System.EventHandler(this.UCTables_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel PanelTables;
         private Guna.UI2.WinForms.Guna2GradientButton btnArea;
         private Guna.UI2.WinForms.Guna2GradientButton btnTable;
+        private UCTables_TabTables ucTables_Tables;
+        private UCTables_TabAreas ucTables_Areas;
+
     }
 }
