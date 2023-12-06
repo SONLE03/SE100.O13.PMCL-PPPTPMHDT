@@ -420,6 +420,7 @@
             this.Bills.Text = "Bills";
             this.Bills.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Bills.TextOffset = new System.Drawing.Point(77, 0);
+            this.Bills.Click += new System.EventHandler(this.Bills_Click);
             // 
             // Products
             // 
@@ -602,5 +603,6 @@
         private static UCHome ucHome;
         private static UCProducts ucProducts;
         private static UCTables ucTables;
+        private static UCBill ucBills;
     }
 }
