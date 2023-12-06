@@ -43,12 +43,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSearch = new System.Windows.Forms.PictureBox();
-            this.Table_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Table_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Area = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.State = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.TableID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TableName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AreaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewTable)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
@@ -74,6 +72,7 @@
             this.btnAddTable.Size = new System.Drawing.Size(127, 42);
             this.btnAddTable.TabIndex = 38;
             this.btnAddTable.Text = "Add Table";
+            this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
             // label4
             // 
@@ -172,12 +171,10 @@
             this.gridviewTable.ColumnHeadersHeight = 40;
             this.gridviewTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Table_ID,
-            this.Table_name,
-            this.Area,
-            this.State,
-            this.Edit,
-            this.Delete});
+            this.TableID,
+            this.TableName,
+            this.AreaID,
+            this.Status});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -269,48 +266,34 @@
             this.btnSearch.TabIndex = 39;
             this.btnSearch.TabStop = false;
             // 
-            // Table_ID
+            // TableID
             // 
-            this.Table_ID.FillWeight = 150F;
-            this.Table_ID.HeaderText = "Table ID";
-            this.Table_ID.Name = "Table_ID";
+            this.TableID.FillWeight = 150F;
+            this.TableID.HeaderText = "Table ID";
+            this.TableID.Name = "TableID";
             // 
-            // Table_name
+            // TableName
             // 
-            this.Table_name.FillWeight = 150F;
-            this.Table_name.HeaderText = "Table name";
-            this.Table_name.Name = "Table_name";
+            this.TableName.FillWeight = 150F;
+            this.TableName.HeaderText = "Table name";
+            this.TableName.Name = "TableName";
             // 
-            // Area
+            // AreaID
             // 
-            this.Area.FillWeight = 150F;
-            this.Area.HeaderText = "Area";
-            this.Area.Name = "Area";
+            this.AreaID.FillWeight = 150F;
+            this.AreaID.HeaderText = "Area";
+            this.AreaID.Name = "AreaID";
             // 
-            // State
+            // Status
             // 
-            this.State.HeaderText = "State";
-            this.State.Name = "State";
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Status.HeaderText = "State";
+            this.Status.Name = "Status";
             // 
             // UCTables_TabTables
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.btnAddTable);
@@ -345,11 +328,9 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Table_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Table_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Area;
-        private System.Windows.Forms.DataGridViewTextBoxColumn State;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TableID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TableName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AreaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

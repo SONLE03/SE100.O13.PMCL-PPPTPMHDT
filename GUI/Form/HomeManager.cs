@@ -90,5 +90,13 @@ namespace GUI
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucTables);
         }
+
+        private void Bills_Click(object sender, EventArgs e)
+        {
+            ucBills = new UCBill();
+            ucBills.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucBills);
+        }
     }
 }

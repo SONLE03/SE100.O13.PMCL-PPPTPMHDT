@@ -37,14 +37,12 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.gridviewArea = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnAddArea = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Area_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Area_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Surcharge = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.AreaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Areaname = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ExtraFee = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewArea)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,11 +104,10 @@
             this.gridviewArea.ColumnHeadersHeight = 35;
             this.gridviewArea.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewArea.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Area_ID,
-            this.Area_name,
-            this.Surcharge,
-            this.Edit,
-            this.Delete});
+            this.AreaID,
+            this.Areaname,
+            this.ExtraFee,
+            this.Status});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,6 +146,7 @@
             this.gridviewArea.ThemeStyle.RowsStyle.Height = 22;
             this.gridviewArea.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewArea.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridviewArea.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewArea_CellDoubleClick);
             // 
             // btnAddArea
             // 
@@ -170,23 +168,7 @@
             this.btnAddArea.Size = new System.Drawing.Size(140, 41);
             this.btnAddArea.TabIndex = 47;
             this.btnAddArea.Text = "Add area";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(54, 30);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(97, 41);
-            this.guna2Button1.TabIndex = 43;
-            this.guna2Button1.Text = "All area";
+            this.btnAddArea.Click += new System.EventHandler(this.btnAddArea_Click);
             // 
             // txtSearch
             // 
@@ -202,15 +184,16 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(149, 30);
+            this.txtSearch.Location = new System.Drawing.Point(57, 30);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtSearch.PlaceholderText = "Search area";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(350, 41);
+            this.txtSearch.Size = new System.Drawing.Size(442, 41);
             this.txtSearch.TabIndex = 42;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // pictureBox1
             // 
@@ -223,46 +206,36 @@
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
-            // Area_ID
+            // AreaID
             // 
-            this.Area_ID.FillWeight = 150F;
-            this.Area_ID.HeaderText = "Area ID";
-            this.Area_ID.Name = "Area_ID";
+            this.AreaID.FillWeight = 150F;
+            this.AreaID.HeaderText = "Area ID";
+            this.AreaID.Name = "AreaID";
             // 
-            // Area_name
+            // Areaname
             // 
-            this.Area_name.FillWeight = 150F;
-            this.Area_name.HeaderText = "Area name";
-            this.Area_name.Name = "Area_name";
+            this.Areaname.FillWeight = 150F;
+            this.Areaname.HeaderText = "Area name";
+            this.Areaname.Name = "Areaname";
             // 
-            // Surcharge
+            // ExtraFee
             // 
-            this.Surcharge.HeaderText = "Surcharge";
-            this.Surcharge.Name = "Surcharge";
+            this.ExtraFee.HeaderText = "ExtraFee";
+            this.ExtraFee.Name = "ExtraFee";
             // 
-            // Edit
+            // Status
             // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Status.HeaderText = "Status";
+            this.Status.Name = "Status";
             // 
             // UCTables_TabAreas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnAddArea);
-            this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.txtSearch);
             this.Name = "UCTables_TabAreas";
             this.Size = new System.Drawing.Size(1010, 655);
@@ -281,13 +254,11 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddArea;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2DataGridView gridviewArea;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Area_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Area_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Surcharge;
-        private System.Windows.Forms.DataGridViewButtonColumn Edit;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn AreaID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Areaname;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ExtraFee;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
     }
 }

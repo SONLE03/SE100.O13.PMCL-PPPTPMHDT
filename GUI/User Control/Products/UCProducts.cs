@@ -26,13 +26,23 @@ namespace GUI
             listDrinkSize = BUS.BUSDrink_Size.Instance.GetAllDrinkSize();
             listSize = BUS.BUSSize.Instance.GetAllSize();
             listCategories = BUS.BUSCategory.Instance.GetAllCategory();
-            gridviewTable.DataSource = listCategories;
+            LoadCategory(BUS.BUSCategory.Instance.GetAllCategory());
             combobox_category.Items.Add("All");
             combobox_category.SelectedItem = "All";
             BUS.BUSCategory.Instance.GetAllCategory().ToList().ForEach(p =>
             {
                 combobox_category.Items.Add(p.CategoryName);
             });
+        }
+
+        private void LoadCategory(List<CATEGORY> listCategory)
+        {
+            gridviewTable.Rows.Clear();
+            gridviewTable.Refresh();
+            foreach (var category in listCategory)
+            {
+                gridviewTable.Rows.Add(category.id, category.CategoryID, category.CategoryName);
+            }
         }
 
         public void LoadProductInFlowLayoutPanel(List<DRINK> listDrink, List<DRINKS_SIZE> listDrinkSize, List<C_SIZE> listSize)
@@ -203,9 +213,42 @@ namespace GUI
             addCategory.ShowDialog();
             if (addCategory.anyAdded())
             {
-                listCategories = BUS.BUSCategory.Instance.GetAllCategory();
-                gridviewTable.DataSource = listCategories;
+                LoadCategory(BUS.BUSCategory.Instance.GetAllCategory());
             }    
+        }
+
+        private void gridviewTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+                return;
+            }
+            if (e.ColumnIndex == gridviewTable.Columns["ID"].Index || e.ColumnIndex == gridviewTable.Columns["CategoryID"].Index || e.ColumnIndex == gridviewTable.Columns["Category_name"].Index)
+            {
+                AddCategory addCategory = new AddCategory((Convert.ToInt32(gridviewTable.Rows[e.RowIndex].Cells["id"].Value)));
+                addCategory.ShowDialog();
+                if (addCategory.anyDeleted() || addCategory.anyUpdated())
+                {
+                    LoadCategory(BUS.BUSCategory.Instance.GetAllCategory());
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please double click at rows to update or delete", "Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+            var listCategories = new List<CATEGORY>();
+            BUS.BUSCategory.Instance.GetAllCategory().ToList().ForEach(p =>
+            {
+                if (p.CategoryName.Contains(txtFindCategory.Text))
+                {
+                    listCategories.Add(p);
+                }    
+            });
+            LoadCategory(listCategories);
         }
     }
 }

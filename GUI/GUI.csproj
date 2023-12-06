@@ -212,10 +212,16 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCSettings.cs">
+    <Compile Include="UCProductsMiniForBills.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCSettings.Designer.cs">
+    <Compile Include="UCProductsMiniForBills.Designer.cs">
+      <DependentUpon>UCProductsMiniForBills.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\UCSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\UCSettings.Designer.cs">
       <DependentUpon>UCSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\Employees\UCEmployees-TabUserGroup.cs">
@@ -393,7 +399,10 @@
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCSettings.resx">
+    <EmbeddedResource Include="UCProductsMiniForBills.resx">
+      <DependentUpon>UCProductsMiniForBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\UCSettings.resx">
       <DependentUpon>UCSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Employees\UCEmployees-TabUserGroup.resx">
