@@ -37,6 +37,12 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
+            this.ucProductsMiniForBills1 = new GUI.UCProductsMiniForBills();
+            this.ucProductsMiniForBills2 = new GUI.UCProductsMiniForBills();
+            this.ucProductsMiniForBills3 = new GUI.UCProductsMiniForBills();
+            this.ucProductsMiniForBills4 = new GUI.UCProductsMiniForBills();
+            this.ucProductsMiniForBills5 = new GUI.UCProductsMiniForBills();
+            this.ucProductsMiniForBills6 = new GUI.UCProductsMiniForBills();
             this.label5 = new System.Windows.Forms.Label();
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -54,19 +60,14 @@
             this.lbSubTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
+            this.lbOrderID = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.ucMiniProductChoosen1 = new GUI.UCMiniProductChoosen();
             this.ucMiniProductChoosen2 = new GUI.UCMiniProductChoosen();
             this.ucMiniProductChoosen3 = new GUI.UCMiniProductChoosen();
             this.ucMiniProductChoosen4 = new GUI.UCMiniProductChoosen();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.lbOrderID = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ucProductsMiniForBills1 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills2 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills3 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills4 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills5 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills6 = new GUI.UCProductsMiniForBills();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.flowLayoutPanelProducts.SuspendLayout();
@@ -235,6 +236,54 @@
             this.flowLayoutPanelProducts.Size = new System.Drawing.Size(667, 387);
             this.flowLayoutPanelProducts.TabIndex = 55;
             // 
+            // ucProductsMiniForBills1
+            // 
+            this.ucProductsMiniForBills1.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductsMiniForBills1.Location = new System.Drawing.Point(3, 3);
+            this.ucProductsMiniForBills1.Name = "ucProductsMiniForBills1";
+            this.ucProductsMiniForBills1.Size = new System.Drawing.Size(215, 187);
+            this.ucProductsMiniForBills1.TabIndex = 0;
+            // 
+            // ucProductsMiniForBills2
+            // 
+            this.ucProductsMiniForBills2.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductsMiniForBills2.Location = new System.Drawing.Point(224, 3);
+            this.ucProductsMiniForBills2.Name = "ucProductsMiniForBills2";
+            this.ucProductsMiniForBills2.Size = new System.Drawing.Size(215, 187);
+            this.ucProductsMiniForBills2.TabIndex = 1;
+            // 
+            // ucProductsMiniForBills3
+            // 
+            this.ucProductsMiniForBills3.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductsMiniForBills3.Location = new System.Drawing.Point(445, 3);
+            this.ucProductsMiniForBills3.Name = "ucProductsMiniForBills3";
+            this.ucProductsMiniForBills3.Size = new System.Drawing.Size(215, 187);
+            this.ucProductsMiniForBills3.TabIndex = 2;
+            // 
+            // ucProductsMiniForBills4
+            // 
+            this.ucProductsMiniForBills4.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductsMiniForBills4.Location = new System.Drawing.Point(3, 196);
+            this.ucProductsMiniForBills4.Name = "ucProductsMiniForBills4";
+            this.ucProductsMiniForBills4.Size = new System.Drawing.Size(215, 187);
+            this.ucProductsMiniForBills4.TabIndex = 3;
+            // 
+            // ucProductsMiniForBills5
+            // 
+            this.ucProductsMiniForBills5.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductsMiniForBills5.Location = new System.Drawing.Point(224, 196);
+            this.ucProductsMiniForBills5.Name = "ucProductsMiniForBills5";
+            this.ucProductsMiniForBills5.Size = new System.Drawing.Size(215, 187);
+            this.ucProductsMiniForBills5.TabIndex = 4;
+            // 
+            // ucProductsMiniForBills6
+            // 
+            this.ucProductsMiniForBills6.BackColor = System.Drawing.Color.Transparent;
+            this.ucProductsMiniForBills6.Location = new System.Drawing.Point(445, 196);
+            this.ucProductsMiniForBills6.Name = "ucProductsMiniForBills6";
+            this.ucProductsMiniForBills6.Size = new System.Drawing.Size(215, 187);
+            this.ucProductsMiniForBills6.TabIndex = 5;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -316,13 +365,16 @@
             this.guna2Panel3.Controls.Add(this.lbOrderID);
             this.guna2Panel3.Controls.Add(this.label1);
             this.guna2Panel3.FillColor = System.Drawing.Color.White;
-            this.guna2Panel3.Location = new System.Drawing.Point(744, 30);
+            this.guna2Panel3.Location = new System.Drawing.Point(744, 39);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(343, 739);
+            this.guna2Panel3.Size = new System.Drawing.Size(343, 730);
             this.guna2Panel3.TabIndex = 26;
             // 
             // btnAddtocart
             // 
+            this.btnAddtocart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddtocart.BackColor = System.Drawing.Color.Transparent;
             this.btnAddtocart.BorderRadius = 15;
             this.btnAddtocart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -344,6 +396,9 @@
             // 
             // guna2Panel5
             // 
+            this.guna2Panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel5.BackColor = System.Drawing.Color.White;
             this.guna2Panel5.BorderRadius = 15;
             this.guna2Panel5.Controls.Add(this.LbTotal);
@@ -388,6 +443,9 @@
             // 
             // guna2Panel4
             // 
+            this.guna2Panel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel4.BackColor = System.Drawing.Color.White;
             this.guna2Panel4.BorderRadius = 25;
             this.guna2Panel4.Controls.Add(this.lbSurcharge);
@@ -511,43 +569,14 @@
             this.flowLayoutPanel.Controls.Add(this.ucMiniProductChoosen4);
             this.flowLayoutPanel.Location = new System.Drawing.Point(3, 62);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(336, 420);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(336, 411);
             this.flowLayoutPanel.TabIndex = 45;
-            // 
-            // ucMiniProductChoosen1
-            // 
-            this.ucMiniProductChoosen1.BackColor = System.Drawing.Color.White;
-            this.ucMiniProductChoosen1.Location = new System.Drawing.Point(3, 3);
-            this.ucMiniProductChoosen1.Name = "ucMiniProductChoosen1";
-            this.ucMiniProductChoosen1.Size = new System.Drawing.Size(336, 93);
-            this.ucMiniProductChoosen1.TabIndex = 0;
-            // 
-            // ucMiniProductChoosen2
-            // 
-            this.ucMiniProductChoosen2.BackColor = System.Drawing.Color.White;
-            this.ucMiniProductChoosen2.Location = new System.Drawing.Point(3, 102);
-            this.ucMiniProductChoosen2.Name = "ucMiniProductChoosen2";
-            this.ucMiniProductChoosen2.Size = new System.Drawing.Size(336, 93);
-            this.ucMiniProductChoosen2.TabIndex = 1;
-            // 
-            // ucMiniProductChoosen3
-            // 
-            this.ucMiniProductChoosen3.BackColor = System.Drawing.Color.White;
-            this.ucMiniProductChoosen3.Location = new System.Drawing.Point(3, 201);
-            this.ucMiniProductChoosen3.Name = "ucMiniProductChoosen3";
-            this.ucMiniProductChoosen3.Size = new System.Drawing.Size(336, 93);
-            this.ucMiniProductChoosen3.TabIndex = 2;
-            // 
-            // ucMiniProductChoosen4
-            // 
-            this.ucMiniProductChoosen4.BackColor = System.Drawing.Color.White;
-            this.ucMiniProductChoosen4.Location = new System.Drawing.Point(3, 300);
-            this.ucMiniProductChoosen4.Name = "ucMiniProductChoosen4";
-            this.ucMiniProductChoosen4.Size = new System.Drawing.Size(336, 93);
-            this.ucMiniProductChoosen4.TabIndex = 3;
             // 
             // guna2Button4
             // 
+            this.guna2Button4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Button4.BorderRadius = 15;
             this.guna2Button4.BorderThickness = 1;
             this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -565,6 +594,9 @@
             // 
             // lbOrderID
             // 
+            this.lbOrderID.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbOrderID.AutoSize = true;
             this.lbOrderID.BackColor = System.Drawing.Color.Transparent;
             this.lbOrderID.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
@@ -578,6 +610,9 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
@@ -589,53 +624,37 @@
             this.label1.TabIndex = 42;
             this.label1.Text = "Order";
             // 
-            // ucProductsMiniForBills1
+            // ucMiniProductChoosen1
             // 
-            this.ucProductsMiniForBills1.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills1.Location = new System.Drawing.Point(3, 3);
-            this.ucProductsMiniForBills1.Name = "ucProductsMiniForBills1";
-            this.ucProductsMiniForBills1.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills1.TabIndex = 0;
+            this.ucMiniProductChoosen1.BackColor = System.Drawing.Color.White;
+            this.ucMiniProductChoosen1.Location = new System.Drawing.Point(3, 3);
+            this.ucMiniProductChoosen1.Name = "ucMiniProductChoosen1";
+            this.ucMiniProductChoosen1.Size = new System.Drawing.Size(330, 93);
+            this.ucMiniProductChoosen1.TabIndex = 0;
             // 
-            // ucProductsMiniForBills2
+            // ucMiniProductChoosen2
             // 
-            this.ucProductsMiniForBills2.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills2.Location = new System.Drawing.Point(224, 3);
-            this.ucProductsMiniForBills2.Name = "ucProductsMiniForBills2";
-            this.ucProductsMiniForBills2.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills2.TabIndex = 1;
+            this.ucMiniProductChoosen2.BackColor = System.Drawing.Color.White;
+            this.ucMiniProductChoosen2.Location = new System.Drawing.Point(3, 102);
+            this.ucMiniProductChoosen2.Name = "ucMiniProductChoosen2";
+            this.ucMiniProductChoosen2.Size = new System.Drawing.Size(330, 93);
+            this.ucMiniProductChoosen2.TabIndex = 1;
             // 
-            // ucProductsMiniForBills3
+            // ucMiniProductChoosen3
             // 
-            this.ucProductsMiniForBills3.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills3.Location = new System.Drawing.Point(445, 3);
-            this.ucProductsMiniForBills3.Name = "ucProductsMiniForBills3";
-            this.ucProductsMiniForBills3.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills3.TabIndex = 2;
+            this.ucMiniProductChoosen3.BackColor = System.Drawing.Color.White;
+            this.ucMiniProductChoosen3.Location = new System.Drawing.Point(3, 201);
+            this.ucMiniProductChoosen3.Name = "ucMiniProductChoosen3";
+            this.ucMiniProductChoosen3.Size = new System.Drawing.Size(330, 93);
+            this.ucMiniProductChoosen3.TabIndex = 2;
             // 
-            // ucProductsMiniForBills4
+            // ucMiniProductChoosen4
             // 
-            this.ucProductsMiniForBills4.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills4.Location = new System.Drawing.Point(3, 196);
-            this.ucProductsMiniForBills4.Name = "ucProductsMiniForBills4";
-            this.ucProductsMiniForBills4.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills4.TabIndex = 3;
-            // 
-            // ucProductsMiniForBills5
-            // 
-            this.ucProductsMiniForBills5.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills5.Location = new System.Drawing.Point(224, 196);
-            this.ucProductsMiniForBills5.Name = "ucProductsMiniForBills5";
-            this.ucProductsMiniForBills5.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills5.TabIndex = 4;
-            // 
-            // ucProductsMiniForBills6
-            // 
-            this.ucProductsMiniForBills6.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills6.Location = new System.Drawing.Point(445, 196);
-            this.ucProductsMiniForBills6.Name = "ucProductsMiniForBills6";
-            this.ucProductsMiniForBills6.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills6.TabIndex = 5;
+            this.ucMiniProductChoosen4.BackColor = System.Drawing.Color.White;
+            this.ucMiniProductChoosen4.Location = new System.Drawing.Point(3, 300);
+            this.ucMiniProductChoosen4.Name = "ucMiniProductChoosen4";
+            this.ucMiniProductChoosen4.Size = new System.Drawing.Size(330, 93);
+            this.ucMiniProductChoosen4.TabIndex = 3;
             // 
             // UCBill
             // 
@@ -699,15 +718,16 @@
         private UCProductMiniItem ucProductMiniItem2;
         private UCProductMiniItem ucProductMiniItem3;
         private UCProductMiniItem ucProductMiniItem4;
-        private UCMiniProductChoosen ucMiniProductChoosen1;
-        private UCMiniProductChoosen ucMiniProductChoosen2;
-        private UCMiniProductChoosen ucMiniProductChoosen3;
-        private UCMiniProductChoosen ucMiniProductChoosen4;
         private UCProductsMiniForBills ucProductsMiniForBills1;
         private UCProductsMiniForBills ucProductsMiniForBills2;
         private UCProductsMiniForBills ucProductsMiniForBills3;
         private UCProductsMiniForBills ucProductsMiniForBills4;
         private UCProductsMiniForBills ucProductsMiniForBills5;
         private UCProductsMiniForBills ucProductsMiniForBills6;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private UCMiniProductChoosen ucMiniProductChoosen1;
+        private UCMiniProductChoosen ucMiniProductChoosen2;
+        private UCMiniProductChoosen ucMiniProductChoosen3;
+        private UCMiniProductChoosen ucMiniProductChoosen4;
     }
 }

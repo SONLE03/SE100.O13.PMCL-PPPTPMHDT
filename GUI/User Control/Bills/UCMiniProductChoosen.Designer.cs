@@ -56,9 +56,9 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.lbPrice);
             this.guna2CustomGradientPanel1.Controls.Add(this.lbName);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(5, 6);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(9, 6);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(326, 81);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(315, 81);
             this.guna2CustomGradientPanel1.TabIndex = 2;
             // 
             // guna2NumericUpDown1
@@ -70,9 +70,9 @@
             this.guna2NumericUpDown1.BorderRadius = 10;
             this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(238, 26);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(223, 34);
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(84, 30);
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(73, 30);
             this.guna2NumericUpDown1.TabIndex = 4;
             this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
             // 
@@ -120,7 +120,7 @@
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(49, 60);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 1;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -132,7 +132,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCMiniProductChoosen";
-            this.Size = new System.Drawing.Size(336, 93);
+            this.Size = new System.Drawing.Size(330, 93);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).EndInit();
