@@ -212,10 +212,10 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCProductsMiniForBills.cs">
+    <Compile Include="User Control\Bills\UCProductsMiniForBills.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCProductsMiniForBills.Designer.cs">
+    <Compile Include="User Control\Bills\UCProductsMiniForBills.Designer.cs">
       <DependentUpon>UCProductsMiniForBills.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\UCSettings.cs">
@@ -242,17 +242,17 @@
     <Compile Include="User Control\Employees\UCEmployees.Designer.cs">
       <DependentUpon>UCEmployees.cs</DependentUpon>
     </Compile>
-    <Compile Include="User Control\Import\UCImport-TabImportOrder.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="User Control\Import\UCImport-TabImportOrder.Designer.cs">
-      <DependentUpon>UCImport-TabImportOrder.cs</DependentUpon>
-    </Compile>
     <Compile Include="User Control\Import\UCImport-TabSupplier.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="User Control\Import\UCImport-TabSupplier.Designer.cs">
       <DependentUpon>UCImport-TabSupplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Import\UCImport-TabImportOrders.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Import\UCImport-TabImportOrders.Designer.cs">
+      <DependentUpon>UCImport-TabImportOrders.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\Import\UCImport.cs">
       <SubType>UserControl</SubType>
@@ -399,7 +399,7 @@
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCProductsMiniForBills.resx">
+    <EmbeddedResource Include="User Control\Bills\UCProductsMiniForBills.resx">
       <DependentUpon>UCProductsMiniForBills.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\UCSettings.resx">
@@ -414,11 +414,11 @@
     <EmbeddedResource Include="User Control\Employees\UCEmployees.resx">
       <DependentUpon>UCEmployees.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="User Control\Import\UCImport-TabImportOrder.resx">
-      <DependentUpon>UCImport-TabImportOrder.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="User Control\Import\UCImport-TabSupplier.resx">
       <DependentUpon>UCImport-TabSupplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Import\UCImport-TabImportOrders.resx">
+      <DependentUpon>UCImport-TabImportOrders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Import\UCImport.resx">
       <DependentUpon>UCImport.cs</DependentUpon>

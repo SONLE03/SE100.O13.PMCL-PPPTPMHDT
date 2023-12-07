@@ -30,13 +30,12 @@
         {
             this.btnImportOrder = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSupplier = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.PanelImport = new Guna.UI2.WinForms.Guna2Panel();
             this.SuspendLayout();
             // 
             // btnImportOrder
             // 
+            this.btnImportOrder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnImportOrder.BackColor = System.Drawing.Color.Transparent;
             this.btnImportOrder.BorderRadius = 15;
             this.btnImportOrder.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -49,12 +48,13 @@
             this.btnImportOrder.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnImportOrder.ForeColor = System.Drawing.Color.White;
             this.btnImportOrder.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnImportOrder.Location = new System.Drawing.Point(999, 29);
+            this.btnImportOrder.Location = new System.Drawing.Point(661, 29);
             this.btnImportOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnImportOrder.Name = "btnImportOrder";
             this.btnImportOrder.Size = new System.Drawing.Size(170, 41);
             this.btnImportOrder.TabIndex = 40;
             this.btnImportOrder.Text = "Import order";
+            this.btnImportOrder.Click += new System.EventHandler(this.btnImportOrder_Click);
             // 
             // btnSupplier
             // 
@@ -70,48 +70,42 @@
             this.btnSupplier.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnSupplier.ForeColor = System.Drawing.Color.White;
             this.btnSupplier.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnSupplier.Location = new System.Drawing.Point(522, 29);
+            this.btnSupplier.Location = new System.Drawing.Point(287, 29);
             this.btnSupplier.Margin = new System.Windows.Forms.Padding(2);
             this.btnSupplier.Name = "btnSupplier";
             this.btnSupplier.Size = new System.Drawing.Size(171, 41);
             this.btnSupplier.TabIndex = 39;
             this.btnSupplier.Text = "Supplier";
+            this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
             // 
-            // guna2Panel1
+            // PanelImport
             // 
-            this.guna2Panel1.BackColor = System.Drawing.Color.GhostWhite;
-            this.guna2Panel1.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Panel1.BorderRadius = 40;
-            this.guna2Panel1.BorderThickness = 1;
-            this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(63, 100);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1677, 858);
-            this.guna2Panel1.TabIndex = 38;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox4.Image = global::GUI.Properties.Resources.raucu;
-            this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(1800, 1020);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 37;
-            this.pictureBox4.TabStop = false;
+            this.PanelImport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelImport.BackColor = System.Drawing.Color.GhostWhite;
+            this.PanelImport.BorderColor = System.Drawing.Color.DarkGray;
+            this.PanelImport.BorderRadius = 40;
+            this.PanelImport.BorderThickness = 1;
+            this.PanelImport.FillColor = System.Drawing.Color.White;
+            this.PanelImport.Location = new System.Drawing.Point(59, 98);
+            this.PanelImport.Name = "PanelImport";
+            this.PanelImport.Size = new System.Drawing.Size(1010, 655);
+            this.PanelImport.TabIndex = 38;
             // 
             // UCImport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::GUI.Properties.Resources.raucu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.btnImportOrder);
             this.Controls.Add(this.btnSupplier);
-            this.Controls.Add(this.guna2Panel1);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.PanelImport);
+            this.DoubleBuffered = true;
             this.Name = "UCImport";
-            this.Size = new System.Drawing.Size(1800, 1020);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.Size = new System.Drawing.Size(1124, 800);
+            this.Load += new System.EventHandler(this.UCImport_Load);
             this.ResumeLayout(false);
 
         }
@@ -120,7 +114,8 @@
 
         private Guna.UI2.WinForms.Guna2GradientButton btnImportOrder;
         private Guna.UI2.WinForms.Guna2GradientButton btnSupplier;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI2.WinForms.Guna2Panel PanelImport;
+        private UCImport_TabSupplier ucSuppliers;
+        private UCImport_TabImportOrder ucIO;
     }
 }

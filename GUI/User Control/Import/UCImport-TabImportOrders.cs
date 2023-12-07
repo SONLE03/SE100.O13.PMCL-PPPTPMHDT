@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class UCImport_TabImportOrder : UserControl
+    public partial class UCImport_TabSupplier : UserControl
     {
-        public UCImport_TabImportOrder()
+        public UCImport_TabSupplier()
         {
             InitializeComponent();
         }

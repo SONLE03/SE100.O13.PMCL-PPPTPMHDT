@@ -28,14 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title6 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.btnThisweek = new Guna.UI2.WinForms.Guna2Button();
             this.btnThismonth = new Guna.UI2.WinForms.Guna2Button();
             this.btnToday = new Guna.UI2.WinForms.Guna2Button();
@@ -101,6 +101,7 @@
             // 
             // btnThisweek
             // 
+            this.btnThisweek.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThisweek.BorderRadius = 15;
             this.btnThisweek.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThisweek.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -118,6 +119,7 @@
             // 
             // btnThismonth
             // 
+            this.btnThismonth.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThismonth.BorderRadius = 15;
             this.btnThismonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThismonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -135,6 +137,7 @@
             // 
             // btnToday
             // 
+            this.btnToday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnToday.BorderRadius = 15;
             this.btnToday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnToday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -152,6 +155,7 @@
             // 
             // btn_ThisQuarter
             // 
+            this.btn_ThisQuarter.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btn_ThisQuarter.BorderRadius = 15;
             this.btn_ThisQuarter.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btn_ThisQuarter.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -169,6 +173,7 @@
             // 
             // btnCustom
             // 
+            this.btnCustom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCustom.BorderRadius = 15;
             this.btnCustom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCustom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
@@ -187,6 +192,9 @@
             // 
             // dtpStartDate
             // 
+            this.dtpStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpStartDate.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.dtpStartDate.BorderRadius = 10;
             this.dtpStartDate.Checked = true;
@@ -292,6 +300,7 @@
             // 
             // guna2CustomGradientPanel2
             // 
+            this.guna2CustomGradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel2.BorderRadius = 25;
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox3);
@@ -345,6 +354,7 @@
             // 
             // guna2CustomGradientPanel3
             // 
+            this.guna2CustomGradientPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.guna2CustomGradientPanel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel3.BorderRadius = 25;
             this.guna2CustomGradientPanel3.Controls.Add(this.pictureBox2);
@@ -398,6 +408,9 @@
             // 
             // guna2CustomGradientPanel4
             // 
+            this.guna2CustomGradientPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2CustomGradientPanel4.BorderRadius = 30;
@@ -415,69 +428,74 @@
             // 
             // chartTotalRevenue
             // 
+            this.chartTotalRevenue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chartTotalRevenue.BackColor = System.Drawing.Color.GhostWhite;
             this.chartTotalRevenue.BorderlineColor = System.Drawing.Color.RosyBrown;
-            chartArea3.AxisX.IsMarginVisible = false;
-            chartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.MidnightBlue;
-            chartArea3.AxisX.LineColor = System.Drawing.Color.WhiteSmoke;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.MajorGrid.LineWidth = 0;
-            chartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.MinorGrid.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.MinorTickMark.LineColor = System.Drawing.Color.Transparent;
-            chartArea3.AxisX.ScaleBreakStyle.LineColor = System.Drawing.Color.Gainsboro;
-            chartArea3.AxisX.TitleForeColor = System.Drawing.Color.Gainsboro;
-            chartArea3.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX2.MinorGrid.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX2.MinorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
-            chartArea3.AxisY.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisY.LineWidth = 0;
-            chartArea3.AxisY.MinorTickMark.LineColor = System.Drawing.Color.White;
-            chartArea3.BackColor = System.Drawing.Color.GhostWhite;
-            chartArea3.BorderColor = System.Drawing.Color.WhiteSmoke;
-            chartArea3.Name = "ChartArea1";
-            this.chartTotalRevenue.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.Color.GhostWhite;
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.ForeColor = System.Drawing.Color.White;
-            legend3.Name = "Legend1";
-            legend3.ShadowColor = System.Drawing.Color.White;
-            legend3.Title = "Revenue";
-            legend3.TitleAlignment = System.Drawing.StringAlignment.Near;
-            legend3.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            legend3.TitleSeparatorColor = System.Drawing.Color.Bisque;
-            this.chartTotalRevenue.Legends.Add(legend3);
+            chartArea5.AxisX.IsMarginVisible = false;
+            chartArea5.AxisX.LabelStyle.ForeColor = System.Drawing.Color.MidnightBlue;
+            chartArea5.AxisX.LineColor = System.Drawing.Color.WhiteSmoke;
+            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX.MajorGrid.LineWidth = 0;
+            chartArea5.AxisX.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX.MinorTickMark.LineColor = System.Drawing.Color.Transparent;
+            chartArea5.AxisX.ScaleBreakStyle.LineColor = System.Drawing.Color.Gainsboro;
+            chartArea5.AxisX.TitleForeColor = System.Drawing.Color.Gainsboro;
+            chartArea5.AxisX2.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX2.MajorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX2.MinorGrid.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisX2.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisY.LabelStyle.ForeColor = System.Drawing.Color.White;
+            chartArea5.AxisY.LineColor = System.Drawing.Color.White;
+            chartArea5.AxisY.LineWidth = 0;
+            chartArea5.AxisY.MinorTickMark.LineColor = System.Drawing.Color.White;
+            chartArea5.BackColor = System.Drawing.Color.GhostWhite;
+            chartArea5.BorderColor = System.Drawing.Color.WhiteSmoke;
+            chartArea5.Name = "ChartArea1";
+            this.chartTotalRevenue.ChartAreas.Add(chartArea5);
+            legend5.BackColor = System.Drawing.Color.GhostWhite;
+            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend5.ForeColor = System.Drawing.Color.White;
+            legend5.Name = "Legend1";
+            legend5.ShadowColor = System.Drawing.Color.White;
+            legend5.Title = "Revenue";
+            legend5.TitleAlignment = System.Drawing.StringAlignment.Near;
+            legend5.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            legend5.TitleSeparatorColor = System.Drawing.Color.Bisque;
+            this.chartTotalRevenue.Legends.Add(legend5);
             this.chartTotalRevenue.Location = new System.Drawing.Point(13, 15);
             this.chartTotalRevenue.Margin = new System.Windows.Forms.Padding(2);
             this.chartTotalRevenue.Name = "chartTotalRevenue";
-            series3.BackSecondaryColor = System.Drawing.Color.MediumTurquoise;
-            series3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(91)))), ((int)(((byte)(170)))));
-            series3.BorderWidth = 3;
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(91)))), ((int)(((byte)(170)))));
-            series3.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series3.LabelBackColor = System.Drawing.Color.White;
-            series3.Legend = "Legend1";
-            series3.LegendText = "Over time";
-            series3.MarkerColor = System.Drawing.Color.LavenderBlush;
-            series3.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series3.Name = "Series1";
-            this.chartTotalRevenue.Series.Add(series3);
+            series5.BackSecondaryColor = System.Drawing.Color.MediumTurquoise;
+            series5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(91)))), ((int)(((byte)(170)))));
+            series5.BorderWidth = 3;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedArea;
+            series5.Color = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(91)))), ((int)(((byte)(170)))));
+            series5.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series5.LabelBackColor = System.Drawing.Color.White;
+            series5.Legend = "Legend1";
+            series5.LegendText = "Over time";
+            series5.MarkerColor = System.Drawing.Color.LavenderBlush;
+            series5.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series5.Name = "Series1";
+            this.chartTotalRevenue.Series.Add(series5);
             this.chartTotalRevenue.Size = new System.Drawing.Size(580, 498);
             this.chartTotalRevenue.TabIndex = 27;
             this.chartTotalRevenue.Text = "chart2";
-            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            title3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            title3.Name = "Title1";
-            title3.Text = "Total Revenue";
-            this.chartTotalRevenue.Titles.Add(title3);
+            title5.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            title5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            title5.Name = "Title1";
+            title5.Text = "Total Revenue";
+            this.chartTotalRevenue.Titles.Add(title5);
             // 
             // guna2CustomGradientPanel5
             // 
+            this.guna2CustomGradientPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2CustomGradientPanel5.BorderRadius = 30;
@@ -496,16 +514,19 @@
             // 
             // chartTop5
             // 
+            this.chartTop5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.chartTop5.BackColor = System.Drawing.Color.GhostWhite;
-            chartArea4.BackColor = System.Drawing.Color.GhostWhite;
-            chartArea4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
-            chartArea4.BorderColor = System.Drawing.Color.GhostWhite;
-            chartArea4.Name = "ChartArea1";
-            this.chartTop5.ChartAreas.Add(chartArea4);
-            legend4.BackColor = System.Drawing.Color.GhostWhite;
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend4.Name = "Legend1";
-            this.chartTop5.Legends.Add(legend4);
+            chartArea6.BackColor = System.Drawing.Color.GhostWhite;
+            chartArea6.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            chartArea6.BorderColor = System.Drawing.Color.GhostWhite;
+            chartArea6.Name = "ChartArea1";
+            this.chartTop5.ChartAreas.Add(chartArea6);
+            legend6.BackColor = System.Drawing.Color.GhostWhite;
+            legend6.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend6.Name = "Legend1";
+            this.chartTop5.Legends.Add(legend6);
             this.chartTop5.Location = new System.Drawing.Point(14, 11);
             this.chartTop5.Margin = new System.Windows.Forms.Padding(2);
             this.chartTop5.Name = "chartTop5";
@@ -516,30 +537,31 @@
         System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(88)))), ((int)(((byte)(127))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255))))),
         System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(153)))), ((int)(((byte)(254)))))};
-            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
-            series4.BackSecondaryColor = System.Drawing.Color.MediumOrchid;
-            series4.BorderColor = System.Drawing.Color.GhostWhite;
-            series4.BorderWidth = 5;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series4.IsValueShownAsLabel = true;
-            series4.LabelForeColor = System.Drawing.Color.White;
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartTop5.Series.Add(series4);
+            series6.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.DiagonalLeft;
+            series6.BackSecondaryColor = System.Drawing.Color.MediumOrchid;
+            series6.BorderColor = System.Drawing.Color.GhostWhite;
+            series6.BorderWidth = 5;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series6.IsValueShownAsLabel = true;
+            series6.LabelForeColor = System.Drawing.Color.White;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chartTop5.Series.Add(series6);
             this.chartTop5.Size = new System.Drawing.Size(347, 314);
             this.chartTop5.TabIndex = 28;
             this.chartTop5.Text = "Top 6 best selling products";
-            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title4.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            title4.Name = "Title1";
-            title4.Text = "Top 6 best selling products";
-            this.chartTop5.Titles.Add(title4);
+            title6.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title6.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            title6.Name = "Title1";
+            title6.Text = "Top 6 best selling products";
+            this.chartTop5.Titles.Add(title6);
             // 
             // guna2CustomGradientPanel6
             // 
+            this.guna2CustomGradientPanel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel6.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2CustomGradientPanel6.BorderRadius = 30;
@@ -560,6 +582,8 @@
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.DimGray;
@@ -583,6 +607,7 @@
             // 
             // lbTotalProducts
             // 
+            this.lbTotalProducts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotalProducts.AutoSize = true;
             this.lbTotalProducts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(253)))), ((int)(((byte)(243)))));
             this.lbTotalProducts.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
@@ -596,6 +621,8 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.DimGray;
@@ -608,6 +635,8 @@
             // 
             // guna2CirclePictureBox3
             // 
+            this.guna2CirclePictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2CirclePictureBox3.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.guna2CirclePictureBox3.Image = global::GUI.Properties.Resources.coffee_bean__1_1;
             this.guna2CirclePictureBox3.ImageRotate = 0F;
@@ -622,6 +651,9 @@
             // 
             // guna2Panel2
             // 
+            this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel2.Controls.Add(this.lbTotalSuppliers);
             this.guna2Panel2.Controls.Add(this.label5);
             this.guna2Panel2.Controls.Add(this.guna2CirclePictureBox2);
@@ -633,6 +665,7 @@
             // 
             // lbTotalSuppliers
             // 
+            this.lbTotalSuppliers.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotalSuppliers.AutoSize = true;
             this.lbTotalSuppliers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(253)))), ((int)(((byte)(243)))));
             this.lbTotalSuppliers.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
@@ -646,6 +679,8 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.DimGray;
@@ -658,6 +693,8 @@
             // 
             // guna2CirclePictureBox2
             // 
+            this.guna2CirclePictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2CirclePictureBox2.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.guna2CirclePictureBox2.Image = global::GUI.Properties.Resources.dolly;
             this.guna2CirclePictureBox2.ImageRotate = 0F;
@@ -672,6 +709,9 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.Controls.Add(this.lbTotalEmployees);
             this.guna2Panel1.Controls.Add(this.label4);
             this.guna2Panel1.Controls.Add(this.guna2CirclePictureBox1);
@@ -683,6 +723,7 @@
             // 
             // lbTotalEmployees
             // 
+            this.lbTotalEmployees.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbTotalEmployees.AutoSize = true;
             this.lbTotalEmployees.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(236)))), ((int)(((byte)(253)))), ((int)(((byte)(243)))));
             this.lbTotalEmployees.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
@@ -696,6 +737,8 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.DimGray;
@@ -708,6 +751,8 @@
             // 
             // guna2CirclePictureBox1
             // 
+            this.guna2CirclePictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.MediumSlateBlue;
             this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.division1;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
@@ -765,13 +810,16 @@
             // 
             // lbStartDate
             // 
+            this.lbStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbStartDate.BackColor = System.Drawing.Color.GhostWhite;
             this.lbStartDate.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             this.lbStartDate.ForeColor = System.Drawing.Color.DimGray;
-            this.lbStartDate.Location = new System.Drawing.Point(10, 5);
+            this.lbStartDate.Location = new System.Drawing.Point(9, 4);
             this.lbStartDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbStartDate.Name = "lbStartDate";
-            this.lbStartDate.Size = new System.Drawing.Size(147, 28);
+            this.lbStartDate.Size = new System.Drawing.Size(148, 28);
             this.lbStartDate.TabIndex = 28;
             this.lbStartDate.Text = "29 Nov 2023";
             this.lbStartDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

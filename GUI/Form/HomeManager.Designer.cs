@@ -50,13 +50,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.TabUC = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.MouseDetect = new System.Windows.Forms.Timer(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.TabUC.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMinimize
@@ -71,7 +71,7 @@
             this.btnMinimize.FillColor = System.Drawing.Color.Transparent;
             this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMinimize.IconColor = System.Drawing.Color.Brown;
-            this.btnMinimize.Location = new System.Drawing.Point(1039, 11);
+            this.btnMinimize.Location = new System.Drawing.Point(1077, 11);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.Size = new System.Drawing.Size(31, 17);
@@ -120,7 +120,7 @@
             this.Menu.Location = new System.Drawing.Point(0, 0);
             this.Menu.Margin = new System.Windows.Forms.Padding(2);
             this.Menu.Name = "Menu";
-            this.Menu.Size = new System.Drawing.Size(77, 800);
+            this.Menu.Size = new System.Drawing.Size(72, 800);
             this.Menu.TabIndex = 60;
             // 
             // Report
@@ -218,6 +218,7 @@
             this.Import.Text = "Import";
             this.Import.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Import.TextOffset = new System.Drawing.Point(77, 0);
+            this.Import.Click += new System.EventHandler(this.Import_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -237,6 +238,7 @@
             // 
             // lbRole
             // 
+            this.lbRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lbRole.AutoSize = true;
             this.lbRole.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.lbRole, Guna.UI2.AnimatorNS.DecorationType.None);
@@ -251,6 +253,7 @@
             // 
             // Log_out
             // 
+            this.Log_out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Log_out.BackColor = System.Drawing.Color.Transparent;
             this.Log_out.BorderRadius = 10;
             this.Log_out.CustomImages.Image = global::GUI.Properties.Resources.icon__log_out;
@@ -279,6 +282,7 @@
             // 
             // Avatar
             // 
+            this.Avatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.Avatar.BackColor = System.Drawing.Color.Transparent;
             this.guna2Transition1.SetDecoration(this.Avatar, Guna.UI2.AnimatorNS.DecorationType.None);
             this.Avatar.Image = global::GUI.Properties.Resources.Ellipse_5;
@@ -355,6 +359,7 @@
             this.Events.Text = "Events";
             this.Events.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.Events.TextOffset = new System.Drawing.Point(77, 0);
+            this.Events.Click += new System.EventHandler(this.Events_Click);
             // 
             // Tables
             // 
@@ -524,17 +529,36 @@
             // 
             // TabUC
             // 
+            this.TabUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.TabUC.BackColor = System.Drawing.Color.Transparent;
             this.TabUC.BorderRadius = 15;
-            this.TabUC.Controls.Add(this.btnMinimize);
             this.guna2Transition1.SetDecoration(this.TabUC, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.TabUC.Dock = System.Windows.Forms.DockStyle.Right;
             this.TabUC.Location = new System.Drawing.Point(76, 0);
             this.TabUC.Margin = new System.Windows.Forms.Padding(2);
             this.TabUC.Name = "TabUC";
             this.TabUC.Size = new System.Drawing.Size(1124, 800);
             this.TabUC.TabIndex = 61;
             this.TabUC.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.Animated = true;
+            this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.BorderRadius = 5;
+            this.guna2ControlBox1.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MaximizeBox;
+            this.guna2ControlBox1.CustomIconSize = 20F;
+            this.guna2Transition1.SetDecoration(this.guna2ControlBox1, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1112, 11);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(34, 17);
+            this.guna2ControlBox1.TabIndex = 62;
             // 
             // MouseDetect
             // 
@@ -557,6 +581,8 @@
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1200, 800);
+            this.Controls.Add(this.guna2ControlBox1);
+            this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.Menu);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.TabUC);
@@ -573,7 +599,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.TabUC.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -600,9 +625,13 @@
         private Guna.UI2.WinForms.Guna2Button Report;
         private System.Windows.Forms.Timer MouseDetect;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private static UCHome ucHome;
         private static UCProducts ucProducts;
         private static UCTables ucTables;
         private static UCBill ucBills;
+        private static UCEvents ucEvents;
+        private static UCImport ucImport;
+
     }
 }

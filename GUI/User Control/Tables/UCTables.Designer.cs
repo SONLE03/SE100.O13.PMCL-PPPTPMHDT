@@ -35,6 +35,9 @@
             // 
             // PanelTables
             // 
+            this.PanelTables.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelTables.BackColor = System.Drawing.Color.Transparent;
             this.PanelTables.BorderColor = System.Drawing.Color.DarkGray;
             this.PanelTables.BorderRadius = 40;
@@ -47,6 +50,7 @@
             // 
             // btnArea
             // 
+            this.btnArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnArea.BackColor = System.Drawing.Color.Transparent;
             this.btnArea.BorderRadius = 15;
             this.btnArea.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
