@@ -65,7 +65,7 @@ namespace GUI
             List<AREA> listArea = new List<AREA>();
             BUS.BUSArea.Instance.GetAllArea().ToList().ForEach(p =>
             {
-                if (p.AreaName.Contains(txtSearch.Text))
+                if (p.AreaName.ToLower().Contains(txtSearch.Text.ToLower()))
                 {
                     listArea.Add(p);
                 }    
