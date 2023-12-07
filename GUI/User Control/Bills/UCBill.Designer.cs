@@ -37,18 +37,11 @@
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
-            this.ucProductsMiniForBills1 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills2 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills3 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills4 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills5 = new GUI.UCProductsMiniForBills();
-            this.ucProductsMiniForBills6 = new GUI.UCProductsMiniForBills();
             this.label5 = new System.Windows.Forms.Label();
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtEmailCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAddtocart = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.LbTotal = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -64,18 +57,13 @@
             this.lbOrderID = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.ucMiniProductChoosen1 = new GUI.UCMiniProductChoosen();
-            this.ucMiniProductChoosen2 = new GUI.UCMiniProductChoosen();
-            this.ucMiniProductChoosen3 = new GUI.UCMiniProductChoosen();
-            this.ucMiniProductChoosen4 = new GUI.UCMiniProductChoosen();
+            this.btnAddtocart = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
-            this.flowLayoutPanelProducts.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
-            this.flowLayoutPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel1
@@ -225,64 +213,10 @@
             // 
             this.flowLayoutPanelProducts.AutoScroll = true;
             this.flowLayoutPanelProducts.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanelProducts.Controls.Add(this.ucProductsMiniForBills1);
-            this.flowLayoutPanelProducts.Controls.Add(this.ucProductsMiniForBills2);
-            this.flowLayoutPanelProducts.Controls.Add(this.ucProductsMiniForBills3);
-            this.flowLayoutPanelProducts.Controls.Add(this.ucProductsMiniForBills4);
-            this.flowLayoutPanelProducts.Controls.Add(this.ucProductsMiniForBills5);
-            this.flowLayoutPanelProducts.Controls.Add(this.ucProductsMiniForBills6);
             this.flowLayoutPanelProducts.Location = new System.Drawing.Point(3, 103);
             this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
             this.flowLayoutPanelProducts.Size = new System.Drawing.Size(667, 387);
             this.flowLayoutPanelProducts.TabIndex = 55;
-            // 
-            // ucProductsMiniForBills1
-            // 
-            this.ucProductsMiniForBills1.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills1.Location = new System.Drawing.Point(3, 3);
-            this.ucProductsMiniForBills1.Name = "ucProductsMiniForBills1";
-            this.ucProductsMiniForBills1.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills1.TabIndex = 0;
-            // 
-            // ucProductsMiniForBills2
-            // 
-            this.ucProductsMiniForBills2.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills2.Location = new System.Drawing.Point(224, 3);
-            this.ucProductsMiniForBills2.Name = "ucProductsMiniForBills2";
-            this.ucProductsMiniForBills2.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills2.TabIndex = 1;
-            // 
-            // ucProductsMiniForBills3
-            // 
-            this.ucProductsMiniForBills3.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills3.Location = new System.Drawing.Point(445, 3);
-            this.ucProductsMiniForBills3.Name = "ucProductsMiniForBills3";
-            this.ucProductsMiniForBills3.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills3.TabIndex = 2;
-            // 
-            // ucProductsMiniForBills4
-            // 
-            this.ucProductsMiniForBills4.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills4.Location = new System.Drawing.Point(3, 196);
-            this.ucProductsMiniForBills4.Name = "ucProductsMiniForBills4";
-            this.ucProductsMiniForBills4.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills4.TabIndex = 3;
-            // 
-            // ucProductsMiniForBills5
-            // 
-            this.ucProductsMiniForBills5.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills5.Location = new System.Drawing.Point(224, 196);
-            this.ucProductsMiniForBills5.Name = "ucProductsMiniForBills5";
-            this.ucProductsMiniForBills5.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills5.TabIndex = 4;
-            // 
-            // ucProductsMiniForBills6
-            // 
-            this.ucProductsMiniForBills6.BackColor = System.Drawing.Color.Transparent;
-            this.ucProductsMiniForBills6.Location = new System.Drawing.Point(445, 196);
-            this.ucProductsMiniForBills6.Name = "ucProductsMiniForBills6";
-            this.ucProductsMiniForBills6.Size = new System.Drawing.Size(215, 187);
-            this.ucProductsMiniForBills6.TabIndex = 5;
             // 
             // label5
             // 
@@ -315,6 +249,7 @@
             this.combobox_category.Name = "combobox_category";
             this.combobox_category.Size = new System.Drawing.Size(139, 36);
             this.combobox_category.TabIndex = 53;
+            this.combobox_category.SelectedValueChanged += new System.EventHandler(this.combobox_category_SelectedValueChanged);
             // 
             // pictureBox1
             // 
@@ -350,6 +285,7 @@
             this.txtEmailCode.SelectedText = "";
             this.txtEmailCode.Size = new System.Drawing.Size(264, 36);
             this.txtEmailCode.TabIndex = 50;
+            this.txtEmailCode.TextChanged += new System.EventHandler(this.txtEmailCode_TextChanged);
             // 
             // guna2Panel3
             // 
@@ -369,30 +305,6 @@
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(343, 730);
             this.guna2Panel3.TabIndex = 26;
-            // 
-            // btnAddtocart
-            // 
-            this.btnAddtocart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddtocart.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddtocart.BorderRadius = 15;
-            this.btnAddtocart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddtocart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddtocart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddtocart.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddtocart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddtocart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btnAddtocart.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btnAddtocart.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.btnAddtocart.ForeColor = System.Drawing.Color.White;
-            this.btnAddtocart.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddtocart.Location = new System.Drawing.Point(96, 685);
-            this.btnAddtocart.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddtocart.Name = "btnAddtocart";
-            this.btnAddtocart.Size = new System.Drawing.Size(159, 36);
-            this.btnAddtocart.TabIndex = 48;
-            this.btnAddtocart.Text = "Add to cart";
             // 
             // guna2Panel5
             // 
@@ -563,10 +475,6 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel.Controls.Add(this.ucMiniProductChoosen1);
-            this.flowLayoutPanel.Controls.Add(this.ucMiniProductChoosen2);
-            this.flowLayoutPanel.Controls.Add(this.ucMiniProductChoosen3);
-            this.flowLayoutPanel.Controls.Add(this.ucMiniProductChoosen4);
             this.flowLayoutPanel.Location = new System.Drawing.Point(3, 62);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(336, 411);
@@ -591,6 +499,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(111, 36);
             this.guna2Button4.TabIndex = 44;
             this.guna2Button4.Text = "Clear all";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // lbOrderID
             // 
@@ -624,37 +533,30 @@
             this.label1.TabIndex = 42;
             this.label1.Text = "Order";
             // 
-            // ucMiniProductChoosen1
+            // btnAddtocart
             // 
-            this.ucMiniProductChoosen1.BackColor = System.Drawing.Color.White;
-            this.ucMiniProductChoosen1.Location = new System.Drawing.Point(3, 3);
-            this.ucMiniProductChoosen1.Name = "ucMiniProductChoosen1";
-            this.ucMiniProductChoosen1.Size = new System.Drawing.Size(330, 93);
-            this.ucMiniProductChoosen1.TabIndex = 0;
-            // 
-            // ucMiniProductChoosen2
-            // 
-            this.ucMiniProductChoosen2.BackColor = System.Drawing.Color.White;
-            this.ucMiniProductChoosen2.Location = new System.Drawing.Point(3, 102);
-            this.ucMiniProductChoosen2.Name = "ucMiniProductChoosen2";
-            this.ucMiniProductChoosen2.Size = new System.Drawing.Size(330, 93);
-            this.ucMiniProductChoosen2.TabIndex = 1;
-            // 
-            // ucMiniProductChoosen3
-            // 
-            this.ucMiniProductChoosen3.BackColor = System.Drawing.Color.White;
-            this.ucMiniProductChoosen3.Location = new System.Drawing.Point(3, 201);
-            this.ucMiniProductChoosen3.Name = "ucMiniProductChoosen3";
-            this.ucMiniProductChoosen3.Size = new System.Drawing.Size(330, 93);
-            this.ucMiniProductChoosen3.TabIndex = 2;
-            // 
-            // ucMiniProductChoosen4
-            // 
-            this.ucMiniProductChoosen4.BackColor = System.Drawing.Color.White;
-            this.ucMiniProductChoosen4.Location = new System.Drawing.Point(3, 300);
-            this.ucMiniProductChoosen4.Name = "ucMiniProductChoosen4";
-            this.ucMiniProductChoosen4.Size = new System.Drawing.Size(330, 93);
-            this.ucMiniProductChoosen4.TabIndex = 3;
+            this.btnAddtocart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddtocart.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddtocart.BorderRadius = 15;
+            this.btnAddtocart.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddtocart.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddtocart.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddtocart.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddtocart.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddtocart.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnAddtocart.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnAddtocart.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.btnAddtocart.ForeColor = System.Drawing.Color.White;
+            this.btnAddtocart.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnAddtocart.Location = new System.Drawing.Point(96, 685);
+            this.btnAddtocart.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddtocart.Name = "btnAddtocart";
+            this.btnAddtocart.Size = new System.Drawing.Size(159, 36);
+            this.btnAddtocart.TabIndex = 48;
+            this.btnAddtocart.Text = "Add to cart";
+            this.btnAddtocart.Click += new System.EventHandler(this.btnAddtocart_Click_1);
             // 
             // UCBill
             // 
@@ -668,10 +570,10 @@
             this.DoubleBuffered = true;
             this.Name = "UCBill";
             this.Size = new System.Drawing.Size(1124, 800);
+            this.Load += new System.EventHandler(this.UCBill_Load);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            this.flowLayoutPanelProducts.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
@@ -679,7 +581,6 @@
             this.guna2Panel5.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
-            this.flowLayoutPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -708,7 +609,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbSubTotal;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2GradientButton btnAddtocart;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtEmailCode;
         private System.Windows.Forms.Label label5;
@@ -718,16 +618,11 @@
         private UCProductMiniItem ucProductMiniItem2;
         private UCProductMiniItem ucProductMiniItem3;
         private UCProductMiniItem ucProductMiniItem4;
-        private UCProductsMiniForBills ucProductsMiniForBills1;
-        private UCProductsMiniForBills ucProductsMiniForBills2;
-        private UCProductsMiniForBills ucProductsMiniForBills3;
-        private UCProductsMiniForBills ucProductsMiniForBills4;
-        private UCProductsMiniForBills ucProductsMiniForBills5;
-        private UCProductsMiniForBills ucProductsMiniForBills6;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private UCMiniProductChoosen ucMiniProductChoosen1;
         private UCMiniProductChoosen ucMiniProductChoosen2;
         private UCMiniProductChoosen ucMiniProductChoosen3;
         private UCMiniProductChoosen ucMiniProductChoosen4;
+        private Guna.UI2.WinForms.Guna2GradientButton btnAddtocart;
     }
 }

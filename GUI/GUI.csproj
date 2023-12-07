@@ -623,6 +623,8 @@
     <None Include="Resources\icons8_here_100px.png" />
     <None Include="Resources\icons8_about_100px.png" />
     <None Include="Resources\info.png" />
+    <Content Include="Resources\icons8_add_shopping_cart_100px.png" />
+    <None Include="Resources\icons8_clear_symbol_100px_3.png" />
     <Content Include="Resources\NotFoundImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

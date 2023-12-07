@@ -423,6 +423,26 @@ namespace GUI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_add_shopping_cart_100px {
+            get {
+                object obj = ResourceManager.GetObject("icons8_add_shopping_cart_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_clear_symbol_100px_3 {
+            get {
+                object obj = ResourceManager.GetObject("icons8_clear_symbol_100px_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_here_100px {
             get {
                 object obj = ResourceManager.GetObject("icons8_here_100px", resourceCulture);

@@ -12,9 +12,21 @@ namespace GUI
 {
     public partial class UCMiniProductChoosen : UserControl
     {
-        public UCMiniProductChoosen()
+        private UCBill ucBill;
+
+        public UCMiniProductChoosen(UCBill ucBill, string image, string productName, string price)
         {
             InitializeComponent();
+            guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(image);
+            lbName.Text = productName;
+            lbPrice.Text = price;
+            this.ucBill = ucBill;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            ucBill.deleteMiniItemProduct(this);
+            ucBill.Show();
         }
     }
 }

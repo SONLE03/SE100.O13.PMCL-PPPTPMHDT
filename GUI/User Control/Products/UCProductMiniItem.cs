@@ -15,10 +15,19 @@ namespace GUI
     {
         private bool anyChanged = false;
         private UCProducts ucProduct;
+        private UCBill ucBill;
         public UCProductMiniItem(UCProducts ucProduct)
         {
             InitializeComponent();
             this.ucProduct = ucProduct;
+            pictureBox2.Visible = false;
+        }
+
+        public UCProductMiniItem(UCBill uCBill)
+        {
+            InitializeComponent();
+            this.ucBill = uCBill;
+            pictureBox1.Visible = false;
         }
 
         public void loadData(int idProduct, string pathImage, string productName, double price, string sizeName, string description)
@@ -99,6 +108,17 @@ namespace GUI
             {
                 ucProduct.updateMiniItem(this);
                 ucProduct.Show();
+            }    
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            if (ucBill != null)
+            {
+                var drink = BUS.BUSDrink.Instance.GetDrinkById(int.Parse(labelID.Text.ToString()));
+                UCMiniProductChoosen ucMiniProductChoosen = new UCMiniProductChoosen(ucBill, drink.Image, lbName.Text, lbPrice.Text);
+                ucBill.addMiniItemProduct(ucMiniProductChoosen);
+                ucBill.Show();
             }    
         }
     }

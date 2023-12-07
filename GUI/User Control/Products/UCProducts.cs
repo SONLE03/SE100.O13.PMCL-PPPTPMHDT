@@ -69,7 +69,6 @@ namespace GUI
                     }
                 }
             }
-
         }
 
         public void deleteMiniItem(UCProductMiniItem uc)
