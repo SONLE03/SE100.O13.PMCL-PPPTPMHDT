@@ -111,6 +111,8 @@ namespace GUI
             }   
         }
 
+
+
         private void combobox_category_SelectedValueChanged(object sender, EventArgs e)
         {
 
