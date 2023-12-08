@@ -34,9 +34,9 @@ namespace BUS
         {
             return DALOrder.Instance.GetBillByMa(BillID);
         }
-        public bool AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note)
+        public int AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note, double total)
         {
-            return DALOrder.Instance.AddBill(BillDate, Status, UserID, TableID, Note);
+            return DALOrder.Instance.AddBill(BillDate, Status, UserID, TableID, Note, total);
         }
         public bool DelBill(int idBill)
         {

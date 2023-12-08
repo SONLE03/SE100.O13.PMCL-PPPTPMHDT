@@ -13,6 +13,7 @@ namespace GUI
     public partial class UCMiniProductChoosen : UserControl
     {
         private UCBill ucBill;
+        private int quantity;
 
         public UCMiniProductChoosen(UCBill ucBill, string image, string productName, string price)
         {
@@ -21,12 +22,41 @@ namespace GUI
             lbName.Text = productName;
             lbPrice.Text = price;
             this.ucBill = ucBill;
+            quantity = 1;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ucBill.deleteMiniItemProduct(this);
             ucBill.Show();
+        }
+
+        public double getPrice()
+        {
+            return double.Parse(lbPrice.Text.Replace("VND", "")) * ((int)guna2NumericUpDown1.Value);
+        }
+
+        public int getQuantity()
+        {
+            return ((int)guna2NumericUpDown1.Value);
+        }
+
+        public string getProductName()
+        {
+            return lbName.Text;
+        }
+
+        private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            if (quantity > ((int)guna2NumericUpDown1.Value))
+            {
+                ucBill.deleteQuantity(double.Parse(lbPrice.Text.Replace("VND", "")));
+            }    
+            else
+            {
+                ucBill.addQuantity(double.Parse(lbPrice.Text.Replace("VND", "")));
+            }
+            quantity = ((int)guna2NumericUpDown1.Value);
         }
     }
 }

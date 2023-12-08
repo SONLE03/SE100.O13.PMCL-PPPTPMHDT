@@ -45,25 +45,25 @@ namespace DAL
             if (BillDate != null) res = res.Where(t => t.BillDate == BillDate).Select(t => t).ToList();
             return res;
         }
-        public bool AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note)
+        public int AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note, double total)
         {
             try
             {
                 var obj = new BILL();
                 obj.BillDate = BillDate;
                 obj.UserID = UserID;
-                obj.Total = 0;
+                obj.Total = total;
                 obj.TableID = TableID;
                 obj.Status = Status;
                 obj.Note = Note;
                 CFEntities.Instance.BILLs.Add(obj);
                 CFEntities.Instance.SaveChanges();
-                return true;
+                return obj.id;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.ToString());
-                return false;
+                return -1;
             }
         }
         public bool DelBill(int idBill)

@@ -93,7 +93,7 @@ namespace GUI
 
         private void Bills_Click(object sender, EventArgs e)
         {
-            ucBills = new UCBill();
+            ucBills = new UCBill(user);
             ucBills.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucBills);

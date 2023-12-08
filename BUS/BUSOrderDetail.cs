@@ -32,7 +32,7 @@ namespace BUS
 
         public bool AddBillDetail(int idBill, int DrinksID, string Unit, int Quantity, float Rate)
         {
-            return AddBillDetail(idBill, DrinksID, Unit, Quantity, Rate);
+            return DALOrderDetail.Instance.AddBillDetail(idBill, DrinksID, Unit, Quantity, Rate);
         }
     }
 }

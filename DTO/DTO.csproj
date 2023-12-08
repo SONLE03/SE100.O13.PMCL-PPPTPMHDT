@@ -70,6 +70,7 @@
     <Compile Include="BILL.cs">
       <DependentUpon>Coffee.tt</DependentUpon>
     </Compile>
+    <Compile Include="BillDetail.cs" />
     <Compile Include="BILL_DETAIL.cs">
       <DependentUpon>Coffee.tt</DependentUpon>
     </Compile>

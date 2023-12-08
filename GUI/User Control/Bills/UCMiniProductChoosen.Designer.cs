@@ -67,7 +67,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_clear_symbol_100px_3;
-            this.pictureBox1.Location = new System.Drawing.Point(264, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(285, -6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -89,6 +89,12 @@
             this.guna2NumericUpDown1.Size = new System.Drawing.Size(73, 30);
             this.guna2NumericUpDown1.TabIndex = 4;
             this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.guna2NumericUpDown1.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.guna2NumericUpDown1.ValueChanged += new System.EventHandler(this.guna2NumericUpDown1_ValueChanged);
             // 
             // lbPrice
             // 

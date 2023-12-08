@@ -49,8 +49,6 @@
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbSurcharge = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbDiscount = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbSubTotal = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
@@ -125,6 +123,7 @@
             this.combobox_SelectArea.Name = "combobox_SelectArea";
             this.combobox_SelectArea.Size = new System.Drawing.Size(251, 36);
             this.combobox_SelectArea.TabIndex = 49;
+            this.combobox_SelectArea.SelectedValueChanged += new System.EventHandler(this.combobox_SelectArea_SelectedValueChanged);
             // 
             // guna2Button3
             // 
@@ -338,7 +337,7 @@
             this.btnAddtocart.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.btnAddtocart.ForeColor = System.Drawing.Color.White;
             this.btnAddtocart.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddtocart.Location = new System.Drawing.Point(96, 685);
+            this.btnAddtocart.Location = new System.Drawing.Point(98, 649);
             this.btnAddtocart.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddtocart.Name = "btnAddtocart";
             this.btnAddtocart.Size = new System.Drawing.Size(159, 36);
@@ -356,7 +355,7 @@
             this.guna2Panel5.Controls.Add(this.LbTotal);
             this.guna2Panel5.Controls.Add(this.label10);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel5.Location = new System.Drawing.Point(21, 619);
+            this.guna2Panel5.Location = new System.Drawing.Point(21, 575);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(301, 38);
             this.guna2Panel5.TabIndex = 47;
@@ -395,14 +394,12 @@
             this.guna2Panel4.BorderRadius = 25;
             this.guna2Panel4.Controls.Add(this.lbSurcharge);
             this.guna2Panel4.Controls.Add(this.label4);
-            this.guna2Panel4.Controls.Add(this.lbDiscount);
-            this.guna2Panel4.Controls.Add(this.label3);
             this.guna2Panel4.Controls.Add(this.lbSubTotal);
             this.guna2Panel4.Controls.Add(this.label2);
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.guna2Panel4.Location = new System.Drawing.Point(21, 501);
+            this.guna2Panel4.Location = new System.Drawing.Point(21, 491);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(301, 102);
+            this.guna2Panel4.Size = new System.Drawing.Size(301, 69);
             this.guna2Panel4.TabIndex = 46;
             // 
             // lbSurcharge
@@ -412,7 +409,7 @@
             this.lbSurcharge.BackColor = System.Drawing.Color.Transparent;
             this.lbSurcharge.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lbSurcharge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbSurcharge.Location = new System.Drawing.Point(183, 70);
+            this.lbSurcharge.Location = new System.Drawing.Point(183, 37);
             this.lbSurcharge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSurcharge.Name = "lbSurcharge";
             this.lbSurcharge.Size = new System.Drawing.Size(108, 21);
@@ -426,40 +423,12 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(16, 70);
+            this.label4.Location = new System.Drawing.Point(16, 37);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 21);
             this.label4.TabIndex = 47;
             this.label4.Text = "Surcharge";
-            // 
-            // lbDiscount
-            // 
-            this.lbDiscount.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lbDiscount.AutoSize = true;
-            this.lbDiscount.BackColor = System.Drawing.Color.Transparent;
-            this.lbDiscount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lbDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbDiscount.Location = new System.Drawing.Point(183, 40);
-            this.lbDiscount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbDiscount.Name = "lbDiscount";
-            this.lbDiscount.Size = new System.Drawing.Size(108, 21);
-            this.lbDiscount.TabIndex = 46;
-            this.lbDiscount.Text = "$000.000.000";
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(16, 40);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 21);
-            this.label3.TabIndex = 45;
-            this.label3.Text = "Discount";
             // 
             // lbSubTotal
             // 
@@ -592,8 +561,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
         private System.Windows.Forms.Label lbSurcharge;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbDiscount;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbSubTotal;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
