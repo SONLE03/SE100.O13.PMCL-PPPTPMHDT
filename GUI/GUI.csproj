@@ -71,6 +71,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Form\EditImportOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EditImportOrder.Designer.cs">
+      <DependentUpon>EditImportOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\EditProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EditProduct.Designer.cs">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\AddArea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +224,30 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\Products\UCProducts-TabProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Products\UCProducts-TabProducts.Designer.cs">
+      <DependentUpon>UCProducts-TabProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Products\UCProducts-TabCategory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Products\UCProducts-TabCategory.Designer.cs">
+      <DependentUpon>UCProducts-TabCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Bills\UCMiniSizeForBill.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Bills\UCMiniSizeForBill.Designer.cs">
+      <DependentUpon>UCMiniSizeForBill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Products\UCMiniSize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Products\UCMiniSize.Designer.cs">
+      <DependentUpon>UCMiniSize.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Bills\UCProductsMiniForBills.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -320,6 +356,12 @@
     <Compile Include="Form\UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\EditImportOrder.resx">
+      <DependentUpon>EditImportOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\EditProduct.resx">
+      <DependentUpon>EditProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\AddNewTable.resx">
       <DependentUpon>AddNewTable.cs</DependentUpon>
     </EmbeddedResource>
@@ -399,8 +441,20 @@
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Bills\UCMiniSizeForBill.resx">
+      <DependentUpon>UCMiniSizeForBill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Products\UCMiniSize.resx">
+      <DependentUpon>UCMiniSize.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\Bills\UCProductsMiniForBills.resx">
       <DependentUpon>UCProductsMiniForBills.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Products\UCProducts-TabCategory.resx">
+      <DependentUpon>UCProducts-TabCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Products\UCProducts-TabProducts.resx">
+      <DependentUpon>UCProducts-TabProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\UCSettings.resx">
       <DependentUpon>UCSettings.cs</DependentUpon>

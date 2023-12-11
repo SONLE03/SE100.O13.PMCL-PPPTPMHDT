@@ -103,14 +103,14 @@ namespace GUI
 
         private void btnProductList_Click(object sender, EventArgs e)
         {
-            PanelProductlist.Visible = true;
+            PanelDisplayTabs.Visible = true;
             PanelCategory.Visible = false;
 
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            PanelProductlist.Visible = false;
+            PanelDisplayTabs.Visible = false;
             PanelCategory.Visible = true;
         }
 
