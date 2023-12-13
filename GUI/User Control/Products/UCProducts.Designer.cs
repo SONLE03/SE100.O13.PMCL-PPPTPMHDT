@@ -106,7 +106,6 @@
             this.PanelDisplayTabs.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.PanelDisplayTabs.Size = new System.Drawing.Size(1017, 665);
             this.PanelDisplayTabs.TabIndex = 23;
-            this.PanelDisplayTabs.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2CustomGradientPanel1_Paint);
             // 
             // UCProducts
             // 
@@ -122,6 +121,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCProducts";
             this.Size = new System.Drawing.Size(1124, 800);
+            this.Load += new System.EventHandler(this.UCProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
 
@@ -133,5 +133,8 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnProductList;
         private Guna.UI2.WinForms.Guna2GradientButton btnCategory;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelDisplayTabs;
+        private UCProducts_TabProducts uCProducts_TabProducts;
+        private UCProducts_TabCategory uCProducts_TabCategory; 
+
     }
 }

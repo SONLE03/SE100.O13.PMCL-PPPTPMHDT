@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.PanelProductlist = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnSearch = new System.Windows.Forms.PictureBox();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtEmailCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSearch = new System.Windows.Forms.PictureBox();
             this.PanelProductlist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +63,17 @@
             this.PanelProductlist.Size = new System.Drawing.Size(1017, 653);
             this.PanelProductlist.TabIndex = 24;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::GUI.Properties.Resources.searches;
+            this.btnSearch.Location = new System.Drawing.Point(353, 23);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(32, 32);
+            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSearch.TabIndex = 49;
+            this.btnSearch.TabStop = false;
+            // 
             // btnAddProduct
             // 
             this.btnAddProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -84,6 +95,7 @@
             this.btnAddProduct.Size = new System.Drawing.Size(133, 41);
             this.btnAddProduct.TabIndex = 32;
             this.btnAddProduct.Text = "Add product";
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // label4
             // 
@@ -118,6 +130,7 @@
             this.combobox_category.Name = "combobox_category";
             this.combobox_category.Size = new System.Drawing.Size(223, 36);
             this.combobox_category.TabIndex = 26;
+            this.combobox_category.SelectedValueChanged += new System.EventHandler(this.combobox_category_SelectedValueChanged);
             // 
             // panel1
             // 
@@ -152,6 +165,7 @@
             this.txtEmailCode.SelectedText = "";
             this.txtEmailCode.Size = new System.Drawing.Size(377, 36);
             this.txtEmailCode.TabIndex = 8;
+            this.txtEmailCode.TextChanged += new System.EventHandler(this.txtEmailCode_TextChanged);
             // 
             // flowLayoutPanel
             // 
@@ -163,17 +177,6 @@
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(960, 514);
             this.flowLayoutPanel.TabIndex = 33;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::GUI.Properties.Resources.searches;
-            this.btnSearch.Location = new System.Drawing.Point(353, 23);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(32, 32);
-            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSearch.TabIndex = 49;
-            this.btnSearch.TabStop = false;
             // 
             // UCProducts_TabProducts
             // 

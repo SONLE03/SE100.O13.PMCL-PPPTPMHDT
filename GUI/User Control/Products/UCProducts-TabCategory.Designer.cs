@@ -40,9 +40,9 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddCategory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtFindCategory = new Guna.UI2.WinForms.Guna2TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelCategory.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewTable)).BeginInit();
@@ -172,6 +172,7 @@
             this.gridviewTable.ThemeStyle.RowsStyle.Height = 22;
             this.gridviewTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridviewTable.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewTable_CellContentDoubleClick);
             // 
             // ID
             // 
@@ -189,6 +190,17 @@
             // 
             this.Category_name.HeaderText = "Category Name";
             this.Category_name.Name = "Category_name";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.White;
+            this.pictureBox2.Image = global::GUI.Properties.Resources.searches;
+            this.pictureBox2.Location = new System.Drawing.Point(380, 33);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 49;
+            this.pictureBox2.TabStop = false;
             // 
             // btnAddCategory
             // 
@@ -211,6 +223,7 @@
             this.btnAddCategory.Size = new System.Drawing.Size(133, 41);
             this.btnAddCategory.TabIndex = 32;
             this.btnAddCategory.Text = "Add category";
+            this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
             // txtFindCategory
             // 
@@ -235,17 +248,7 @@
             this.txtFindCategory.SelectedText = "";
             this.txtFindCategory.Size = new System.Drawing.Size(374, 36);
             this.txtFindCategory.TabIndex = 8;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Image = global::GUI.Properties.Resources.searches;
-            this.pictureBox2.Location = new System.Drawing.Point(380, 33);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 49;
-            this.pictureBox2.TabStop = false;
+            this.txtFindCategory.TextChanged += new System.EventHandler(this.txtFindCategory_TextChanged);
             // 
             // UCProducts_TabCategory
             // 

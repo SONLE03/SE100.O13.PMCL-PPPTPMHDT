@@ -37,18 +37,16 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.gridviewEvent = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnAddEvent = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.Event_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Event_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Start_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.End_date = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Event_type = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddEvent = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewEvent)).BeginInit();
@@ -133,9 +131,7 @@
             this.Start_date,
             this.End_date,
             this.Event_type,
-            this.Unit,
-            this.Edit,
-            this.Delete});
+            this.Unit});
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -175,47 +171,6 @@
             this.gridviewEvent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewEvent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Event_ID
-            // 
-            this.Event_ID.HeaderText = "Event ID";
-            this.Event_ID.Name = "Event_ID";
-            // 
-            // Event_name
-            // 
-            this.Event_name.FillWeight = 150F;
-            this.Event_name.HeaderText = "Event name";
-            this.Event_name.Name = "Event_name";
-            // 
-            // Start_date
-            // 
-            this.Start_date.HeaderText = "Start date";
-            this.Start_date.Name = "Start_date";
-            // 
-            // End_date
-            // 
-            this.End_date.HeaderText = "End date";
-            this.End_date.Name = "End_date";
-            // 
-            // Event_type
-            // 
-            this.Event_type.HeaderText = "Event type";
-            this.Event_type.Name = "Event_type";
-            // 
-            // Unit
-            // 
-            this.Unit.HeaderText = "Unit";
-            this.Unit.Name = "Unit";
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.Name = "Edit";
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.Name = "Delete";
-            // 
             // btnAddEvent
             // 
             this.btnAddEvent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -237,6 +192,7 @@
             this.btnAddEvent.Size = new System.Drawing.Size(154, 42);
             this.btnAddEvent.TabIndex = 47;
             this.btnAddEvent.Text = "Add event";
+            this.btnAddEvent.Click += new System.EventHandler(this.btnAddEvent_Click);
             // 
             // guna2Button1
             // 
@@ -299,6 +255,37 @@
             this.guna2Panel2.Size = new System.Drawing.Size(1002, 679);
             this.guna2Panel2.TabIndex = 50;
             // 
+            // Event_ID
+            // 
+            this.Event_ID.HeaderText = "Event ID";
+            this.Event_ID.Name = "Event_ID";
+            // 
+            // Event_name
+            // 
+            this.Event_name.FillWeight = 150F;
+            this.Event_name.HeaderText = "Event name";
+            this.Event_name.Name = "Event_name";
+            // 
+            // Start_date
+            // 
+            this.Start_date.HeaderText = "Start date";
+            this.Start_date.Name = "Start_date";
+            // 
+            // End_date
+            // 
+            this.End_date.HeaderText = "End date";
+            this.End_date.Name = "End_date";
+            // 
+            // Event_type
+            // 
+            this.Event_type.HeaderText = "Event type";
+            this.Event_type.Name = "Event_type";
+            // 
+            // Unit
+            // 
+            this.Unit.HeaderText = "Unit";
+            this.Unit.Name = "Unit";
+            // 
             // UCEvents
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,7 +321,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn End_date;
         private System.Windows.Forms.DataGridViewTextBoxColumn Event_type;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Delete;
     }
 }

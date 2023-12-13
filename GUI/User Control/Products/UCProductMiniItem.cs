@@ -14,9 +14,9 @@ namespace GUI
     public partial class UCProductMiniItem : UserControl
     {
         private bool anyChanged = false;
-        private UCProducts ucProduct;
+        private UCProducts_TabProducts ucProduct;
         private UCBill ucBill;
-        public UCProductMiniItem(UCProducts ucProduct)
+        public UCProductMiniItem(UCProducts_TabProducts ucProduct)
         {
             InitializeComponent();
             this.ucProduct = ucProduct;
