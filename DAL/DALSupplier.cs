@@ -43,7 +43,7 @@ namespace DAL
             if (SupplierName != null) res = res.Where(t => t.SupplierName == SupplierName).Select(t => t).ToList();
             return res;
         }
-        public bool AddNhaCungCap(string SupplierName, string Address, string Phone)
+        public bool AddSupplier(string SupplierName, string Address, string Phone)
         {
             try
             {
@@ -61,7 +61,7 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdNhaCungCap(int SupplierID, string SupplierName, string Address, string Phone)
+        public bool UpdSupplier(int SupplierID, string SupplierName, string Address, string Phone)
         {
             try
             {

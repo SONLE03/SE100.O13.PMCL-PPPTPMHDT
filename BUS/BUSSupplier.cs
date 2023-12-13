@@ -33,13 +33,13 @@ namespace BUS
         {
             return DALSupplier.Instance.GetSupplierByMa(SupplierID);
         }
-        public bool AddNhaCungCap(string SupplierName, string Address, string Phone)
+        public bool AddSupplier(string SupplierName, string Address, string Phone)
         {
-            return DALSupplier.Instance.AddNhaCungCap(SupplierName, Address, Phone);
+            return DALSupplier.Instance.AddSupplier(SupplierName, Address, Phone);
         }
-        public bool UpdNhaCungCap(int SupplierID, string SupplierName, string Address, string Phone)
+        public bool UpdSupplier(int SupplierID, string SupplierName, string Address, string Phone)
         {
-            return DALSupplier.Instance.UpdNhaCungCap(SupplierID, SupplierName, Address, Phone);
+            return DALSupplier.Instance.UpdSupplier(SupplierID, SupplierName, Address, Phone);
         }
         public bool DelNhaCungCap(int SupplierID)
         {

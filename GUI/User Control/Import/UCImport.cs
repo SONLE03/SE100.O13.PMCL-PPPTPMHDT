@@ -15,6 +15,7 @@ namespace GUI
         public UCImport()
         {
             InitializeComponent();
+          
         }
 
         private void btnSupplier_Click(object sender, EventArgs e)
