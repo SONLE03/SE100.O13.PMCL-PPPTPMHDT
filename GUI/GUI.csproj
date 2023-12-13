@@ -71,6 +71,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Form\EditTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EditTable.Designer.cs">
+      <DependentUpon>EditTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\EditSupplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EditSupplier.Designer.cs">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\EditImportOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -356,6 +368,12 @@
     <Compile Include="Form\UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\EditTable.resx">
+      <DependentUpon>EditTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\EditSupplier.resx">
+      <DependentUpon>EditSupplier.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\EditImportOrder.resx">
       <DependentUpon>EditImportOrder.cs</DependentUpon>
     </EmbeddedResource>
