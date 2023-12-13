@@ -7,14 +7,38 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO;
 namespace GUI
 {
     public partial class UCMiniSize : UserControl
     {
-        public UCMiniSize()
+        private UCProductMiniItem productMiniItem;
+        private string id;
+        public UCMiniSize(C_SIZE size, UCProductMiniItem productMiniItem, string id)
         {
             InitializeComponent();
+            this.productMiniItem = productMiniItem;
+            this.id = id;
+            txtSize.Text = size.SizeName;
+        }
+
+        private void txtSize_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void UCMiniSize_Click(object sender, EventArgs e)
+        {
+            var drinkSize = (from p in BUS.BUSDrink_Size.Instance.GetAllDrinkSize() where p.C_SIZE.SizeName.Equals(txtSize.Text) && p.DRINK.id.ToString().Equals(id) select p).FirstOrDefault();
+            productMiniItem.updatePrice(drinkSize.OriginalPrice.ToString());
+            productMiniItem.Show();
+        }
+
+        private void txtSize_Click(object sender, EventArgs e)
+        {
+            var drinkSize = (from p in BUS.BUSDrink_Size.Instance.GetAllDrinkSize() where p.C_SIZE.SizeName.Equals(txtSize.Text) && p.DRINK.id.ToString().Equals(id) select p).FirstOrDefault();
+            productMiniItem.updatePrice(drinkSize.OriginalPrice.ToString());
+            productMiniItem.Show();
         }
     }
 }

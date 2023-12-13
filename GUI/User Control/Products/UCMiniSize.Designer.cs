@@ -47,6 +47,8 @@
             this.txtSize.TabIndex = 1;
             this.txtSize.Text = "L";
             this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSize.Click += new System.EventHandler(this.txtSize_Click);
+            this.txtSize.TextChanged += new System.EventHandler(this.txtSize_TextChanged);
             // 
             // UCMiniSize
             // 
@@ -56,6 +58,7 @@
             this.Controls.Add(this.txtSize);
             this.Name = "UCMiniSize";
             this.Size = new System.Drawing.Size(30, 35);
+            this.Click += new System.EventHandler(this.UCMiniSize_Click);
             this.ResumeLayout(false);
             this.PerformLayout();
 

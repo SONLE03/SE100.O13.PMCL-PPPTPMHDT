@@ -42,6 +42,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtDescibe = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnAddDrinkSize = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,8 +58,6 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAddDrinkSize = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Size_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
@@ -140,7 +139,7 @@
             this.combobox_category.ForeColor = System.Drawing.Color.White;
             this.combobox_category.ItemHeight = 30;
             this.combobox_category.Location = new System.Drawing.Point(541, 165);
-            this.combobox_category.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combobox_category.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_category.Name = "combobox_category";
             this.combobox_category.Size = new System.Drawing.Size(183, 36);
             this.combobox_category.TabIndex = 24;
@@ -211,11 +210,33 @@
             this.guna2Panel1.Controls.Add(this.combobox_size);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(40, 325);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(684, 85);
             this.guna2Panel1.TabIndex = 28;
             this.guna2Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel1_Paint);
+            // 
+            // btnAddDrinkSize
+            // 
+            this.btnAddDrinkSize.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddDrinkSize.BorderRadius = 15;
+            this.btnAddDrinkSize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDrinkSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddDrinkSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddDrinkSize.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddDrinkSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddDrinkSize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnAddDrinkSize.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnAddDrinkSize.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.btnAddDrinkSize.ForeColor = System.Drawing.Color.White;
+            this.btnAddDrinkSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnAddDrinkSize.Location = new System.Drawing.Point(549, 24);
+            this.btnAddDrinkSize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddDrinkSize.Name = "btnAddDrinkSize";
+            this.btnAddDrinkSize.Size = new System.Drawing.Size(125, 33);
+            this.btnAddDrinkSize.TabIndex = 32;
+            this.btnAddDrinkSize.Text = "Add drink size";
+            this.btnAddDrinkSize.Click += new System.EventHandler(this.btnAddDrinkSize_Click);
             // 
             // txtPrice
             // 
@@ -257,7 +278,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
             this.panel1.Location = new System.Drawing.Point(9, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(4, 29);
             this.panel1.TabIndex = 30;
@@ -277,7 +298,7 @@
             this.btn_AddSize.ForeColor = System.Drawing.Color.White;
             this.btn_AddSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_AddSize.Location = new System.Drawing.Point(162, 24);
-            this.btn_AddSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_AddSize.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AddSize.Name = "btn_AddSize";
             this.btn_AddSize.Size = new System.Drawing.Size(116, 33);
             this.btn_AddSize.TabIndex = 29;
@@ -311,7 +332,7 @@
             this.combobox_size.ForeColor = System.Drawing.Color.White;
             this.combobox_size.ItemHeight = 30;
             this.combobox_size.Location = new System.Drawing.Point(54, 24);
-            this.combobox_size.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combobox_size.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_size.Name = "combobox_size";
             this.combobox_size.Size = new System.Drawing.Size(99, 36);
             this.combobox_size.TabIndex = 29;
@@ -331,7 +352,7 @@
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_Add.Location = new System.Drawing.Point(449, 568);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(115, 45);
             this.btn_Add.TabIndex = 30;
@@ -353,7 +374,7 @@
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_Cancel.Location = new System.Drawing.Point(189, 568);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(115, 45);
             this.btn_Cancel.TabIndex = 31;
@@ -367,7 +388,7 @@
             this.picture_product.Image = global::GUI.Properties.Resources.NotFoundImage;
             this.picture_product.ImageRotate = 0F;
             this.picture_product.Location = new System.Drawing.Point(82, 78);
-            this.picture_product.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picture_product.Margin = new System.Windows.Forms.Padding(2);
             this.picture_product.Name = "picture_product";
             this.picture_product.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.picture_product.Size = new System.Drawing.Size(200, 190);
@@ -389,7 +410,7 @@
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox3.Location = new System.Drawing.Point(685, 14);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 33;
@@ -405,7 +426,7 @@
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox1.Location = new System.Drawing.Point(718, 14);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 32;
@@ -425,7 +446,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnDelete.Location = new System.Drawing.Point(189, 568);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(115, 45);
             this.btnDelete.TabIndex = 34;
@@ -447,7 +468,7 @@
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnUpdate.Location = new System.Drawing.Point(449, 568);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(115, 45);
             this.btnUpdate.TabIndex = 35;
@@ -470,7 +491,6 @@
             this.guna2DataGridView1.ColumnHeadersHeight = 20;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
             this.Size_name,
             this.Price,
             this.Delete});
@@ -509,6 +529,7 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.Height = 22;
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.guna2DataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellClick);
             // 
             // guna2Panel2
             // 
@@ -522,33 +543,6 @@
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(684, 98);
             this.guna2Panel2.TabIndex = 36;
-            // 
-            // btnAddDrinkSize
-            // 
-            this.btnAddDrinkSize.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddDrinkSize.BorderRadius = 15;
-            this.btnAddDrinkSize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddDrinkSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddDrinkSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddDrinkSize.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddDrinkSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddDrinkSize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btnAddDrinkSize.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btnAddDrinkSize.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
-            this.btnAddDrinkSize.ForeColor = System.Drawing.Color.White;
-            this.btnAddDrinkSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddDrinkSize.Location = new System.Drawing.Point(549, 24);
-            this.btnAddDrinkSize.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddDrinkSize.Name = "btnAddDrinkSize";
-            this.btnAddDrinkSize.Size = new System.Drawing.Size(125, 33);
-            this.btnAddDrinkSize.TabIndex = 32;
-            this.btnAddDrinkSize.Text = "Add drink size";
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.Visible = false;
             // 
             // Size_name
             // 
@@ -599,7 +593,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddNewProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewProduct";
@@ -640,7 +634,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2DataGridView guna2DataGridView1;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddDrinkSize;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Size_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewImageColumn Delete;

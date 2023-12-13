@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DTO;
 namespace GUI
 {
     public partial class UCProductMiniItem : UserControl
@@ -21,6 +21,7 @@ namespace GUI
             InitializeComponent();
             this.ucProduct = ucProduct;
             pictureBox2.Visible = false;
+            guna2Panel1.Visible = false;
         }
 
         public UCProductMiniItem(UCBill uCBill)
@@ -28,19 +29,31 @@ namespace GUI
             InitializeComponent();
             this.ucBill = uCBill;
             pictureBox1.Visible = false;
+            guna2Panel1.Visible = false;
         }
 
-        public void loadData(int idProduct, string pathImage, string productName, double price, string sizeName, string description)
+        public void updatePrice(string price)
+        {
+            lbPrice.Text = price + " VND";
+        }
+
+        public void loadData(DRINK drink, List<int> sizes)
         {
             try
             {
-                lbName.Text = productName;
-                lbPrice.Text = price.ToString() + " VND";
-                lbDescribe.Text = description;
-                textBox1.Text = sizeName;
-                labelID.Text = idProduct.ToString();
+                lbName.Text = drink.DrinksName;
+                lbPrice.Text = "0 VND";
+                lbDescribe.Text = drink.Description;
+                //textBox1.Text = sizeName;
+                labelID.Text = drink.id.ToString();
                 labelID.Visible = false;
-                guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(pathImage);
+                guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(drink.Image);
+
+                foreach(var p in sizes)
+                {
+                    UCMiniSize uCMiniSize = new UCMiniSize(BUS.BUSSize.Instance.GetSizeById(p), this, labelID.Text);
+                    flowLayoutPanel1.Controls.Add(uCMiniSize);
+                }    
             }
             catch (Exception ex)
             {
@@ -49,7 +62,7 @@ namespace GUI
                 string imagePathError = Path.Combine(resourcesFolder, "NotFoundImage.png");
                 guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(imagePathError);
 
-                BUS.BUSDrink.Instance.UpdateImageErrorNotFound(idProduct, imagePathError);
+                BUS.BUSDrink.Instance.UpdateImageErrorNotFound(drink.id, imagePathError);
             }
         }
 

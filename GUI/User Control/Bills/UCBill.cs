@@ -70,7 +70,7 @@ namespace GUI
                             if (size.id == drinkSize.SizeID)
                             {
                                 UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
-                                productMiniItem.loadData(drink.id, drink.Image, drink.DrinksName, drinkSize.OriginalPrice, size.SizeName, drink.Description);
+                                //productMiniItem.loadData(drink.id, drink.Image, drink.DrinksName, drinkSize.OriginalPrice, size.SizeName, drink.Description);
                                 //listMiniItem.Add(productMiniItem);
                                 flowLayoutPanelProducts.Controls.Add(productMiniItem);
                             }

@@ -89,7 +89,7 @@ namespace DAL
             {
                 try
                 {
-                    drink.DRINKS_SIZE.Remove(drinkSize);
+                    //drink.DRINKS_SIZE.Remove(drinkSize);
                     CFEntities.Instance.DRINKS_SIZE.Remove(drinkSize);
                     CFEntities.Instance.SaveChanges();
                     transaction.Commit();
