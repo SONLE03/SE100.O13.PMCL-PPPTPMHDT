@@ -36,6 +36,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.gridviewSupplier = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Supplier_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Supllier_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddsupplier = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -54,7 +59,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
             this.label2.Location = new System.Drawing.Point(32, 48);
             this.label2.Name = "label2";
@@ -66,11 +71,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(32, 5);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(261, 35);
+            this.label1.Size = new System.Drawing.Size(199, 25);
             this.label1.TabIndex = 41;
             this.label1.Text = "Supplier information";
             // 
@@ -135,7 +140,7 @@
             this.gridviewSupplier.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewSupplier.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewSupplier.Size = new System.Drawing.Size(1193, 486);
+            this.gridviewSupplier.Size = new System.Drawing.Size(895, 395);
             this.gridviewSupplier.TabIndex = 43;
             this.gridviewSupplier.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewSupplier.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -159,6 +164,45 @@
             this.gridviewSupplier.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewSupplier.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridviewSupplier.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewSupplier_CellClick);
+
+            // 
+            // Supplier_ID
+            // 
+            this.Supplier_ID.FillWeight = 150F;
+            this.Supplier_ID.HeaderText = "Supplier ID";
+            this.Supplier_ID.MinimumWidth = 6;
+            this.Supplier_ID.Name = "Supplier_ID";
+            this.Supplier_ID.ReadOnly = true;
+            // 
+            // Supllier_name
+            // 
+            this.Supllier_name.FillWeight = 150F;
+            this.Supllier_name.HeaderText = "Supplier name";
+            this.Supllier_name.MinimumWidth = 6;
+            this.Supllier_name.Name = "Supllier_name";
+            this.Supllier_name.ReadOnly = true;
+            // 
+            // Address
+            // 
+            this.Address.FillWeight = 200F;
+            this.Address.HeaderText = "Address";
+            this.Address.MinimumWidth = 6;
+            this.Address.Name = "Address";
+            this.Address.ReadOnly = true;
+            // 
+            // Phone
+            // 
+            this.Phone.HeaderText = "Phone";
+            this.Phone.MinimumWidth = 6;
+            this.Phone.Name = "Phone";
+            this.Phone.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
             // 
             // btnAddsupplier
             // 
@@ -175,8 +219,8 @@
             this.btnAddsupplier.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnAddsupplier.ForeColor = System.Drawing.Color.White;
             this.btnAddsupplier.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddsupplier.Location = new System.Drawing.Point(1045, 46);
-            this.btnAddsupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddsupplier.Location = new System.Drawing.Point(784, 37);
+            this.btnAddsupplier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddsupplier.Name = "btnAddsupplier";
             this.btnAddsupplier.Size = new System.Drawing.Size(225, 52);
             this.btnAddsupplier.TabIndex = 52;
@@ -193,8 +237,8 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(67, 39);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Button1.Location = new System.Drawing.Point(50, 32);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(207, 58);
             this.guna2Button1.TabIndex = 51;
@@ -311,6 +355,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Supllier_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Edit;
     }
 }
