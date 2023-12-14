@@ -48,10 +48,10 @@
             this.btnImportOrder.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnImportOrder.ForeColor = System.Drawing.Color.White;
             this.btnImportOrder.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnImportOrder.Location = new System.Drawing.Point(661, 29);
-            this.btnImportOrder.Margin = new System.Windows.Forms.Padding(2);
+            this.btnImportOrder.Location = new System.Drawing.Point(881, 36);
+            this.btnImportOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnImportOrder.Name = "btnImportOrder";
-            this.btnImportOrder.Size = new System.Drawing.Size(170, 41);
+            this.btnImportOrder.Size = new System.Drawing.Size(227, 50);
             this.btnImportOrder.TabIndex = 40;
             this.btnImportOrder.Text = "Import order";
             this.btnImportOrder.Click += new System.EventHandler(this.btnImportOrder_Click);
@@ -70,10 +70,10 @@
             this.btnSupplier.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnSupplier.ForeColor = System.Drawing.Color.White;
             this.btnSupplier.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnSupplier.Location = new System.Drawing.Point(287, 29);
-            this.btnSupplier.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSupplier.Location = new System.Drawing.Point(383, 36);
+            this.btnSupplier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSupplier.Name = "btnSupplier";
-            this.btnSupplier.Size = new System.Drawing.Size(171, 41);
+            this.btnSupplier.Size = new System.Drawing.Size(228, 50);
             this.btnSupplier.TabIndex = 39;
             this.btnSupplier.Text = "Supplier";
             this.btnSupplier.Click += new System.EventHandler(this.btnSupplier_Click);
@@ -88,14 +88,15 @@
             this.PanelImport.BorderRadius = 40;
             this.PanelImport.BorderThickness = 1;
             this.PanelImport.FillColor = System.Drawing.Color.White;
-            this.PanelImport.Location = new System.Drawing.Point(59, 98);
+            this.PanelImport.Location = new System.Drawing.Point(79, 121);
+            this.PanelImport.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PanelImport.Name = "PanelImport";
-            this.PanelImport.Size = new System.Drawing.Size(1010, 655);
+            this.PanelImport.Size = new System.Drawing.Size(1347, 806);
             this.PanelImport.TabIndex = 38;
             // 
             // UCImport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -103,8 +104,9 @@
             this.Controls.Add(this.btnSupplier);
             this.Controls.Add(this.PanelImport);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCImport";
-            this.Size = new System.Drawing.Size(1124, 800);
+            this.Size = new System.Drawing.Size(1499, 985);
             this.Load += new System.EventHandler(this.UCImport_Load);
             this.ResumeLayout(false);
 
