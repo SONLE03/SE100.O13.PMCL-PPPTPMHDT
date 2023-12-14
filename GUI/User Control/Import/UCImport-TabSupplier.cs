@@ -56,7 +56,9 @@ namespace GUI
             if (idx < 0) return;
             if (e.ColumnIndex == gridviewSupplier.Columns["Edit"].Index)
             {
-
+                EditSupplier editSupplier = new EditSupplier(Convert.ToInt32(gridviewSupplier.Rows[idx].Cells["Supplier_ID"].Value));
+                editSupplier.ShowDialog();
+                Binding(BUSSupplier.Instance.GetAllSupplier());
             }
         }
     }
