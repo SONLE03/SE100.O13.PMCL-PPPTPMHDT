@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,31 +16,35 @@ namespace GUI
         public UCImport()
         {
             InitializeComponent();
-          
+            InitializeContainer();
+        }
+        private UCImport_TabSupplier _tabSupplier;
+        private UCImport_TabImportOrder _tabImportOrder;
+
+        private void InitializeContainer()
+        {
+            this.PanelImport.Controls.Clear();
+            _tabImportOrder = new UCImport_TabImportOrder() { Dock = DockStyle.Fill, Name = "IO" };
+            _tabSupplier = new UCImport_TabSupplier() { Dock = DockStyle.Fill, Name = "IS" };
+            this.PanelImport.Controls.Add(_tabSupplier);
+            this.PanelImport.Controls.Add(_tabImportOrder);
         }
 
         private void btnSupplier_Click(object sender, EventArgs e)
         {
-            ucSuppliers = new UCImport_TabSupplier();
-            ucSuppliers.Dock = DockStyle.Fill;
-            this.PanelImport.Controls.Clear();
-            this.PanelImport.Controls.Add(ucSuppliers);
+            Control[] con = PanelImport.Controls.Find("IS", false);
+            con[0].BringToFront();
         }
 
         private void btnImportOrder_Click(object sender, EventArgs e)
         {
-            ucIO = new UCImport_TabImportOrder();
-            ucIO.Dock = DockStyle.Fill;
-            this.PanelImport.Controls.Clear();
-            this.PanelImport.Controls.Add(ucIO);
+            Control[] con = PanelImport.Controls.Find("IO", false);
+            con[0].BringToFront();
         }
 
         private void UCImport_Load(object sender, EventArgs e)
         {
-            ucSuppliers = new UCImport_TabSupplier();
-            ucSuppliers.Dock = DockStyle.Fill;
-            this.PanelImport.Controls.Clear();
-            this.PanelImport.Controls.Add(ucSuppliers);
+          
         }
     }
 }

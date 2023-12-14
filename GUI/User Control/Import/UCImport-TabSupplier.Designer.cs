@@ -44,7 +44,7 @@
             this.Supllier_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Address = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewSupplier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -228,7 +228,6 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.searches;
             this.pictureBox1.Location = new System.Drawing.Point(669, 47);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
@@ -274,6 +273,8 @@
             this.Edit.MinimumWidth = 6;
             this.Edit.Name = "Edit";
             this.Edit.ReadOnly = true;
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // UCImport_TabImportOrder
             // 
@@ -310,6 +311,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Supllier_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Address;
         private System.Windows.Forms.DataGridViewTextBoxColumn Phone;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Edit;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
     }
 }
