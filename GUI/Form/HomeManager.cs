@@ -112,6 +112,15 @@ namespace GUI
             ucImport = new UCImport();
             ucImport.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
-            this.TabUC.Controls.Add(ucImport);        }
+            this.TabUC.Controls.Add(ucImport);        
+        }
+
+        private void Employees_Click(object sender, EventArgs e)
+        {
+            ucEmployees = new UCEmployees();
+            ucEmployees.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucEmployees);
+        }
     }
 }

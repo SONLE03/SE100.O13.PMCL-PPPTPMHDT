@@ -49,24 +49,22 @@
             this.panel_Address = new Guna.UI2.WinForms.Guna2Panel();
             this.lbAddress = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lbGender = new System.Windows.Forms.Label();
             this.panel_Birthday = new Guna.UI2.WinForms.Guna2Panel();
             this.lbBirthday = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.picture_employee = new Guna.UI2.WinForms.Guna2PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.panel_Username = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbUsername = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbUserGroup = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel_pass = new Guna.UI2.WinForms.Guna2Panel();
             this.lbPassword = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbUserGroup = new System.Windows.Forms.Label();
+            this.panel_Username = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbUsername = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.btn_OK = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_Edit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel_areacode.SuspendLayout();
@@ -78,9 +76,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picture_employee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
-            this.panel_Username.SuspendLayout();
-            this.panel_pass.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            this.panel_pass.SuspendLayout();
+            this.panel_Username.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -319,30 +317,6 @@
             this.label10.TabIndex = 72;
             this.label10.Text = "Address";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label2.Location = new System.Drawing.Point(193, 469);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 23);
-            this.label2.TabIndex = 74;
-            this.label2.Text = "Gender";
-            // 
-            // lbGender
-            // 
-            this.lbGender.AutoSize = true;
-            this.lbGender.BackColor = System.Drawing.Color.Transparent;
-            this.lbGender.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lbGender.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbGender.Location = new System.Drawing.Point(344, 469);
-            this.lbGender.Name = "lbGender";
-            this.lbGender.Size = new System.Drawing.Size(68, 23);
-            this.lbGender.TabIndex = 75;
-            this.lbGender.Text = "Gender";
-            // 
             // panel_Birthday
             // 
             this.panel_Birthday.BackColor = System.Drawing.Color.Transparent;
@@ -425,17 +399,78 @@
             this.guna2Panel1.Size = new System.Drawing.Size(802, 166);
             this.guna2Panel1.TabIndex = 78;
             // 
-            // label5
+            // guna2Panel2
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label5.Location = new System.Drawing.Point(8, 5);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(139, 23);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "User information";
+            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.White;
+            this.guna2Panel2.BorderRadius = 10;
+            this.guna2Panel2.Controls.Add(this.lbUserGroup);
+            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
+            this.guna2Panel2.Location = new System.Drawing.Point(444, 54);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.Size = new System.Drawing.Size(312, 36);
+            this.guna2Panel2.TabIndex = 75;
+            // 
+            // lbUserGroup
+            // 
+            this.lbUserGroup.AutoSize = true;
+            this.lbUserGroup.BackColor = System.Drawing.Color.Transparent;
+            this.lbUserGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.lbUserGroup.ForeColor = System.Drawing.Color.White;
+            this.lbUserGroup.Location = new System.Drawing.Point(16, 8);
+            this.lbUserGroup.Name = "lbUserGroup";
+            this.lbUserGroup.Size = new System.Drawing.Size(86, 20);
+            this.lbUserGroup.TabIndex = 49;
+            this.lbUserGroup.Text = "User group";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label9.Location = new System.Drawing.Point(441, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(69, 15);
+            this.label9.TabIndex = 74;
+            this.label9.Text = "User group";
+            // 
+            // panel_pass
+            // 
+            this.panel_pass.BackColor = System.Drawing.Color.Transparent;
+            this.panel_pass.BorderColor = System.Drawing.Color.Silver;
+            this.panel_pass.BorderRadius = 10;
+            this.panel_pass.BorderThickness = 2;
+            this.panel_pass.Controls.Add(this.lbPassword);
+            this.panel_pass.FillColor = System.Drawing.Color.White;
+            this.panel_pass.Location = new System.Drawing.Point(12, 119);
+            this.panel_pass.Name = "panel_pass";
+            this.panel_pass.Size = new System.Drawing.Size(312, 36);
+            this.panel_pass.TabIndex = 73;
+            // 
+            // lbPassword
+            // 
+            this.lbPassword.AutoSize = true;
+            this.lbPassword.BackColor = System.Drawing.Color.Transparent;
+            this.lbPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
+            this.lbPassword.ForeColor = System.Drawing.Color.Gray;
+            this.lbPassword.Location = new System.Drawing.Point(16, 8);
+            this.lbPassword.Name = "lbPassword";
+            this.lbPassword.Size = new System.Drawing.Size(65, 20);
+            this.lbPassword.TabIndex = 49;
+            this.lbPassword.Text = "********";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label12.Location = new System.Drawing.Point(9, 99);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 15);
+            this.label12.TabIndex = 72;
+            this.label12.Text = "Password";
             // 
             // panel_Username
             // 
@@ -474,78 +509,17 @@
             this.label11.TabIndex = 70;
             this.label11.Text = "User name";
             // 
-            // panel_pass
+            // label5
             // 
-            this.panel_pass.BackColor = System.Drawing.Color.Transparent;
-            this.panel_pass.BorderColor = System.Drawing.Color.Silver;
-            this.panel_pass.BorderRadius = 10;
-            this.panel_pass.BorderThickness = 2;
-            this.panel_pass.Controls.Add(this.lbPassword);
-            this.panel_pass.FillColor = System.Drawing.Color.White;
-            this.panel_pass.Location = new System.Drawing.Point(12, 119);
-            this.panel_pass.Name = "panel_pass";
-            this.panel_pass.Size = new System.Drawing.Size(312, 36);
-            this.panel_pass.TabIndex = 73;
-            // 
-            // lbPassword
-            // 
-            this.lbPassword.AutoSize = true;
-            this.lbPassword.BackColor = System.Drawing.Color.Transparent;
-            this.lbPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.lbPassword.ForeColor = System.Drawing.Color.Gray;
-            this.lbPassword.Location = new System.Drawing.Point(16, 8);
-            this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(73, 20);
-            this.lbPassword.TabIndex = 49;
-            this.lbPassword.Text = "Password";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label12.Location = new System.Drawing.Point(9, 99);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 15);
-            this.label12.TabIndex = 72;
-            this.label12.Text = "Password";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label9.Location = new System.Drawing.Point(441, 34);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(69, 15);
-            this.label9.TabIndex = 74;
-            this.label9.Text = "User group";
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel2.BorderColor = System.Drawing.Color.White;
-            this.guna2Panel2.BorderRadius = 10;
-            this.guna2Panel2.Controls.Add(this.lbUserGroup);
-            this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(444, 54);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(312, 36);
-            this.guna2Panel2.TabIndex = 75;
-            // 
-            // lbUserGroup
-            // 
-            this.lbUserGroup.AutoSize = true;
-            this.lbUserGroup.BackColor = System.Drawing.Color.Transparent;
-            this.lbUserGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.lbUserGroup.ForeColor = System.Drawing.Color.White;
-            this.lbUserGroup.Location = new System.Drawing.Point(16, 8);
-            this.lbUserGroup.Name = "lbUserGroup";
-            this.lbUserGroup.Size = new System.Drawing.Size(86, 20);
-            this.lbUserGroup.TabIndex = 49;
-            this.lbUserGroup.Text = "User group";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label5.Location = new System.Drawing.Point(8, 5);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 23);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "User information";
             // 
             // btn_OK
             // 
@@ -598,8 +572,6 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel_Birthday);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.lbGender);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.panel_Address);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel_Email);
@@ -636,12 +608,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
-            this.panel_Username.ResumeLayout(false);
-            this.panel_Username.PerformLayout();
-            this.panel_pass.ResumeLayout(false);
-            this.panel_pass.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            this.panel_pass.ResumeLayout(false);
+            this.panel_pass.PerformLayout();
+            this.panel_Username.ResumeLayout(false);
+            this.panel_Username.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -673,8 +645,6 @@
         private Guna.UI2.WinForms.Guna2Panel panel_Birthday;
         private System.Windows.Forms.Label lbBirthday;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label lbGender;
-        private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2Panel panel_Username;
         private System.Windows.Forms.Label lbUsername;
