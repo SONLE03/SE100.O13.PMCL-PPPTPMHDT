@@ -21,10 +21,12 @@ namespace GUI
         }
          public void Binding(List<SUPPLIER> supplier)
         {
+            Image edit_img = Properties.Resources.edit_icon;
+            edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
             gridviewSupplier.Rows.Clear();
             foreach(SUPPLIER s in supplier)
             {
-                gridviewSupplier.Rows.Add(s.id, s.SupplierName, s.Address, s.Phone, "1", "1");
+                gridviewSupplier.Rows.Add(s.id, s.SupplierName, s.Address, s.Phone, edit_img);
             }
         }
 
@@ -54,7 +56,9 @@ namespace GUI
             if (idx < 0) return;
             if (e.ColumnIndex == gridviewSupplier.Columns["Edit"].Index)
             {
-
+                EditSupplier editSupplier = new EditSupplier(Convert.ToInt32(gridviewSupplier.Rows[idx].Cells["Supplier_ID"].Value));
+                editSupplier.ShowDialog();
+                Binding(BUSSupplier.Instance.GetAllSupplier());
             }
         }
     }
