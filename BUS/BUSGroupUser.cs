@@ -22,9 +22,9 @@ namespace BUS
             set { instance = value; }
         }
 
-        public List<GROUPUSER> GetAllNhomNguoiDung()
+        public List<GROUPUSER> GetAllGroupUser()
         {
-            return DALGroupUser.Instance.GetAllNhomNguoiDung();
+            return DALGroupUser.Instance.GetAllGroupUser();
         }
 
         public GROUPUSER GetGroupUserById(int id)

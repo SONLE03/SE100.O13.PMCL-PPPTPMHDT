@@ -21,7 +21,7 @@ namespace DAL
             set => instance = value;
         }
 
-        public List<GROUPUSER> GetAllNhomNguoiDung()
+        public List<GROUPUSER> GetAllGroupUser()
         {
             return CFEntities.Instance.GROUPUSERs.AsNoTracking().ToList();
         }
