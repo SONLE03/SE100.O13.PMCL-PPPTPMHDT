@@ -34,13 +34,13 @@ namespace BUS
         {
             return DALEvent.Instance.GetEventByCode(EventID);
         }
-        public bool AddEvent(string EventName, bool EventType, DateTime StartDate, DateTime DueDate, float Discount)
+        public bool AddEvent(string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks)
         {
-            return DALEvent.Instance.AddEvent(EventName, EventType, StartDate, DueDate, Discount);
+            return DALEvent.Instance.AddEvent(EventName, EventType, Unit, StartDate, DueDate, Discount, drinks);
         }
-        public bool UpdEvent(int idEV, DateTime DueDate, float Discount)
+        public bool UpdEvent(int idEV, DateTime DueDate, float Discount, List<DRINK> drinks, string Status)
         {
-            return DALEvent.Instance.UpdEvent(idEV, DueDate, Discount);
+            return DALEvent.Instance.UpdEvent(idEV, DueDate, Discount, Status, drinks);
         }
         public bool DelEvent(int idEV)
         {

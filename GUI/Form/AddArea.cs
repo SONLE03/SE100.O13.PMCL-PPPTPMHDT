@@ -28,7 +28,6 @@ namespace GUI
             id = i;
             var area = BUS.BUSArea.Instance.GetAreaById(id);
             txtAreaname.Text = area.AreaName;
-            txtSurcharge.Text = area.ExtraFee.ToString();
             lbAreaID.Text = area.AreaID;
             btn_Add.Visible = false;
             btn_Cancel.Visible = false;

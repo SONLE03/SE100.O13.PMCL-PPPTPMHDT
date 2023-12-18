@@ -26,6 +26,10 @@ namespace BUS
         {
             return DALTable.Instance.GetAllTable();
         }
+        public List<C_TABLE> GetAllTableActive()
+        {
+            return DALTable.Instance.GetAllTableActive();
+        }
         public C_TABLE GetTableById(int id)
         {
             return DALTable.Instance.GetTableById(id);

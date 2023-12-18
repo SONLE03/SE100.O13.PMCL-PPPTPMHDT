@@ -10,14 +10,12 @@
 namespace DTO
 {
     using System;
-    using System.Data;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
     public partial class CFEntities : DbContext
     {
         private static CFEntities instance;
-
         public static CFEntities Instance
         {
             get
@@ -27,6 +25,7 @@ namespace DTO
             }
             set => instance = value;
         }
+
         public CFEntities()
             : base("name=CFEntities")
         {
@@ -37,6 +36,7 @@ namespace DTO
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<C_RULE> C_RULE { get; set; }
         public virtual DbSet<C_SIZE> C_SIZE { get; set; }
         public virtual DbSet<C_TABLE> C_TABLE { get; set; }
         public virtual DbSet<C_USER> C_USER { get; set; }

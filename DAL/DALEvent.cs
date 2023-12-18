@@ -24,6 +24,12 @@ namespace DAL
         {
             return CFEntities.Instance.EVENTs.AsNoTracking().ToList();
         }
+
+        public List<EVENT> GetAllEventActive()
+        {
+            return CFEntities.Instance.EVENTs.AsNoTracking().Where(m => m.Status == "Active").ToList();
+        }
+
         public EVENT GetEventById(int id)
         {
             return CFEntities.Instance.EVENTs.Find(id);
@@ -43,9 +49,8 @@ namespace DAL
             if (EventID != null) res = res.Where(t => t.EventID == EventID).Select(t => t).ToList();
             return res;
         }
-        public bool AddEvent (string EventName, bool EventType, DateTime StartDate, DateTime DueDate, float Discount)
+        public bool AddEvent (string EventName, bool EventType, string Unit,  DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks)
         {
-            string Unit = (EventType == false) ? "%" : "VND";
             try
             {
                 var obj = new EVENT();
@@ -55,6 +60,8 @@ namespace DAL
                 obj.Discount = Discount;
                 obj.EventType = EventType;
                 obj.Unit = Unit;
+                obj.Status = "Active";
+                obj.DRINKS = drinks;
                 CFEntities.Instance.EVENTs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;
@@ -65,7 +72,7 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdEvent(int idEV, DateTime DueDate, float Discount)
+        public bool UpdEvent(int idEV, DateTime DueDate, float Discount, string status, List<DRINK> drinks)
         {
             try
             {
@@ -73,6 +80,8 @@ namespace DAL
                 if (ev == null) return false;
                 if (DueDate != null) ev.DueDate = DueDate;
                 if (Discount != ev.Discount) ev.Discount = Discount;
+                if (status != ev.Status) ev.Status = status;
+                if (drinks != null) ev.DRINKS = drinks;
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

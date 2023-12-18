@@ -36,16 +36,16 @@ namespace DAL
             }
             return null;
         }
-        public List<BILL> FindPhieuNhap(DateTime BillDate, int? Status, int? UserID, int? TableID)
-        {
-            var res = CFEntities.Instance.BILLs.ToList();
-            if (Status != null) res = res.Where(t => t.Status == Status).Select(t => t).ToList();
-            if (UserID != null) res = res.Where(t => t.UserID == UserID).Select(t => t).ToList();
-            if (TableID != null) res = res.Where(t => t.TableID == TableID).Select(t => t).ToList();
-            if (BillDate != null) res = res.Where(t => t.BillDate == BillDate).Select(t => t).ToList();
-            return res;
-        }
-        public int AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note, double total)
+        //public List<BILL> FindPhieuNhap(DateTime BillDate, int? Status, int? UserID, int? TableID)
+        //{
+        //    var res = CFEntities.Instance.BILLs.ToList();
+        //    if (Status != null) res = res.Where(t => t.Status == Status).Select(t => t).ToList();
+        //    if (UserID != null) res = res.Where(t => t.UserID == UserID).Select(t => t).ToList();
+        //    if (TableID != null) res = res.Where(t => t.TableID == TableID).Select(t => t).ToList();
+        //    if (BillDate != null) res = res.Where(t => t.BillDate == BillDate).Select(t => t).ToList();
+        //    return res;
+        //}
+        public int AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note, double total, float tax)
         {
             try
             {
@@ -54,8 +54,9 @@ namespace DAL
                 obj.UserID = UserID;
                 obj.Total = total;
                 obj.TableID = TableID;
-                obj.Status = Status;
+                obj.Status = "Paid";
                 obj.Note = Note;
+                obj.Tax = tax;
                 CFEntities.Instance.BILLs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return obj.id;
@@ -86,15 +87,19 @@ namespace DAL
                 }
             }
         }
-        public bool UpdBill(int id, double? Total, int? Status, int? TableID)
+        public bool UpdBill(int id, double? SubTotal, string Status, int? TableID)
         {
             try
             {
                 BILL Bill = CFEntities.Instance.BILLs.Find(id);
                 if (Bill == null) return false;
-                if (Total != null) Bill.Total = Total.Value;
+                if (SubTotal != null)
+                {
+                    Bill.SubTotal = SubTotal.Value;
+                    Bill.Total = Bill.SubTotal * (100 + Bill.Tax)/100;
+                }
                 if (TableID != null) Bill.TableID = TableID;
-                if (Status != Bill.Status) Bill.Status = (int)Status;
+                if (Status != Bill.Status) Bill.Status = Status;
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

@@ -26,6 +26,10 @@ namespace BUS
         {
             return DALUser.Instance.GetAllUser();
         }
+        public List<C_USER> GetAllUserActive()
+        {
+            return DALUser.Instance.GetAllUserActive();
+        }
 
         public C_USER GetUserById(int id)
         {
@@ -51,14 +55,14 @@ namespace BUS
         }
 
         public int AddUser(string UserFullName, DateTime DateofBirth, string Address, string Phone,
-                                 string UserName, string Password, string Email, int GroupUserID)
+                                 string UserName, string Password, string Email, int GroupUserID, string image)
         {
-            return DALUser.Instance.AddUser(UserFullName, DateofBirth, Address, Phone, UserName, Password, Email, GroupUserID);
+            return DALUser.Instance.AddUser(UserFullName, DateofBirth, Address, Phone, UserName, Password, Email, GroupUserID, image);
         }
         public bool UpdUser(int id, string UserFullName, DateTime? DateofBirth, string Address, string Email, string Phone,
-                                 int? GroupUserID)
+                                 int? GroupUserID, string status, string image)
         {
-            return DALUser.Instance.UpdUser(id, UserFullName, DateofBirth, Address, Email, Phone, GroupUserID);
+            return DALUser.Instance.UpdUser(id, UserFullName, DateofBirth, Address, Email, Phone, GroupUserID, status, image);
         }
         public bool DelUser(int id)
         {

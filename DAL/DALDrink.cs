@@ -26,6 +26,10 @@ namespace DAL
         {
             return CFEntities.Instance.DRINKS.AsNoTracking().ToList();
         }
+        public List<DRINK> GetAllDrinkActive()
+        {
+            return CFEntities.Instance.DRINKS.AsNoTracking().Where(t => t.Status == DALStatus.active.ToString()).ToList();
+        }
 
         public DRINK GetDrinkById(int id)
         {
@@ -41,28 +45,24 @@ namespace DAL
         }
       
 
-        public List<DRINK> FindDrink(string DrinkName, int? idEV)
+        public List<DRINK> FindDrink(string DrinkName)
         {
             List<DRINK> res = CFEntities.Instance.DRINKS.AsNoTracking().ToList();
             if (DrinkName != null) res = res.Where(t => t.DrinksName == DrinkName).Select(t => t).ToList();
-            if (idEV != null) res = res.Where(t => t.EventID == idEV).Select(t => t).ToList();
             return res;
         }
 
-        public DRINK AddDrink(string DrinksName, CATEGORY drinkCategory, string Unit, 
-            string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs)
+        public DRINK AddDrink(string DrinksName, CATEGORY drinkCategory, 
+            string Description, string Image)
         {
             try
             {
                 DRINK Drink = new DRINK();
                 Drink.DrinksName = DrinksName;
                 Drink.CategoryID = drinkCategory.id;
-                Drink.Unit = Unit;
                 Drink.Description = Description;
                 Drink.Image = Image;
-                Drink.Status = true;
-                Drink.EventID = idEV;
-                //Drink.DRINKS_SIZE = new List<DRINKS_SIZE>();
+                Drink.Status = DALStatus.active.ToString();
                 CFEntities.Instance.DRINKS.Add(Drink);
                 CFEntities.Instance.SaveChanges();
 
@@ -73,9 +73,9 @@ namespace DAL
                 return null;
             }
         }
-       
-        public bool UpdDrink(int idDrink, string DrinksName, CATEGORY drinkCategory, string Unit,
-            string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs, bool Status)
+
+        public bool UpdDrink(int idDrink, string DrinksName, CATEGORY drinkCategory,
+            string Description, string Image, List<DRINKS_SIZE> Drink_SIZEs, string Status)
         {
             try
             {
@@ -83,11 +83,9 @@ namespace DAL
                 if (Drink == null) return false;
                 if (DrinksName != null) Drink.DrinksName = DrinksName;
                 if (drinkCategory != null) Drink.CategoryID = drinkCategory.id;
-                if (Unit != null) Drink.Unit = Unit;
                 if (Description != null) Drink.Description = Description;
                 if (Image != null) Drink.Image = Image;
                 if (Status != Drink.Status) Drink.Status = Status;
-                if (idEV != null) Drink.EventID = idEV;
                 if (Drink_SIZEs != null) Drink.DRINKS_SIZE = Drink_SIZEs;
                 CFEntities.Instance.SaveChanges();
                 return true;

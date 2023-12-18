@@ -25,6 +25,11 @@ namespace DAL
         {
             return CFEntities.Instance.C_USER.AsNoTracking().ToList();
         }
+        public List<C_USER> GetAllUserActive()
+        {
+            return CFEntities.Instance.C_USER.AsNoTracking().Where(n => n.Status == DALStatus.active.ToString()).ToList();
+        }
+
 
         public C_USER GetUserById(int id)
         {
@@ -62,7 +67,7 @@ namespace DAL
         }
 
         public int AddUser(string UserFullName, DateTime DateofBirth, string Address, string Phone,
-                                 string UserName, string Password, string Email, int GroupUserID)
+                                 string UserName, string Password, string Email, int GroupUserID, string Image)
         {
             try
             {
@@ -76,6 +81,8 @@ namespace DAL
                     UserName = UserName,
                     Password = Password,
                     GroupUserID = GroupUserID,
+                    Status = "Active",
+                    Image  = Image,
                     GROUPUSER = DALGroupUser.Instance.GetGroupUserById(GroupUserID)
                 };
                 CFEntities.Instance.C_USER.Add(us);
@@ -88,7 +95,7 @@ namespace DAL
             }
         }
         public bool UpdUser(int id, string UserFullName, DateTime? DateofBirth, string Address, string Email, string Phone,
-                                 int? GroupUserID)
+                                 int? GroupUserID, string Status, string Image)
         {
             try
             {
@@ -100,6 +107,8 @@ namespace DAL
                 if (Address != null) us.Address = Address;
                 if (GroupUserID != null) us.GroupUserID = (int)GroupUserID;
                 if (Email != null) us.Email = Email;
+                if (Status != us.Status) us.Status = Status;
+                if (Image != us.Image) us.Image = Image;
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

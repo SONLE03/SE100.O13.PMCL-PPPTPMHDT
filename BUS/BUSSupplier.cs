@@ -25,6 +25,10 @@ namespace BUS
         {
             return DALSupplier.Instance.GetAllSupplier();
         }
+        public List<SUPPLIER> GetAllSupplierActive()
+        {
+            return DALSupplier.Instance.GetAllSupplierActive();
+        }
         public SUPPLIER GetSupplierById(int id)
         {
             return DALSupplier.Instance.GetSupplierById(id);
@@ -37,9 +41,9 @@ namespace BUS
         {
             return DALSupplier.Instance.AddSupplier(SupplierName, Address, Phone);
         }
-        public bool UpdSupplier(int SupplierID, string SupplierName, string Address, string Phone)
+        public bool UpdSupplier(int SupplierID, string SupplierName, string Address, string Phone, string status)
         {
-            return DALSupplier.Instance.UpdSupplier(SupplierID, SupplierName, Address, Phone);
+            return DALSupplier.Instance.UpdSupplier(SupplierID, SupplierName, Address, Phone, status);
         }
         public bool DelNhaCungCap(int SupplierID)
         {

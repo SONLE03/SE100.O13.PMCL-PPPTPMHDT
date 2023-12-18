@@ -24,6 +24,10 @@ namespace DAL
         {
             return CFEntities.Instance.C_TABLE.AsNoTracking().ToList();
         }
+        public List<C_TABLE> GetAllTableActive()
+        {
+            return CFEntities.Instance.C_TABLE.AsNoTracking().Where(m => m.Status == DALStatus.active.ToString()).ToList();
+        }
         public C_TABLE GetTableById(int id)
         {
             return CFEntities.Instance.C_TABLE.Find(id);
@@ -69,7 +73,7 @@ namespace DAL
                 if (table == null) return false;
                 if (tableName != null) table.TableName = tableName;
                 if (area != null) table.AreaID = area.id;
-                if (status != null) table.Status = status;
+                if (status != table.Status) table.Status = status;
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

@@ -12,15 +12,13 @@ namespace DTO
     using System;
     using System.Collections.Generic;
     
-    public partial class BILL_DETAIL
+    public partial class C_RULE
     {
-        public int BillID { get; set; }
-        public int DrinksID { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public double Rate { get; set; }
-        public Nullable<double> Amount { get; set; }
-    
-        public virtual BILL BILL { get; set; }
-        public virtual DRINK DRINK { get; set; }
+        public int id { get; set; }
+        public int MinimumAge { get; set; }
+        public int MaximumAge { get; set; }
+        public int Tax { get; set; }
+        public int MinimumPrice { get; set; }
+        public int MaximumPrice { get; set; }
     }
 }

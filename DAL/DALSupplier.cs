@@ -23,6 +23,10 @@ namespace DAL
         {
             return CFEntities.Instance.SUPPLIERs.AsNoTracking().ToList();
         }
+        public List<SUPPLIER> GetAllSupplierActive()
+        {
+            return CFEntities.Instance.SUPPLIERs.AsNoTracking().Where(m => m.Status == DALStatus.active.ToString()).ToList();
+        }
         public SUPPLIER GetSupplierById(int id)
         {
             return CFEntities.Instance.SUPPLIERs.Find(id);
@@ -51,6 +55,7 @@ namespace DAL
                 obj.SupplierName = SupplierName;
                 obj.Address = Address;
                 obj.Phone = Phone;
+                obj.Status = "Active";
                 CFEntities.Instance.SUPPLIERs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;
@@ -61,7 +66,7 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdSupplier(int SupplierID, string SupplierName, string Address, string Phone)
+        public bool UpdSupplier(int SupplierID, string SupplierName, string Address, string Phone, string Status)
         {
             try
             {
@@ -70,6 +75,7 @@ namespace DAL
                 if (SupplierName != null) obj.SupplierName = SupplierName;
                 if (Address != null) obj.Address = Address;
                 if (Phone != null) obj.Phone = Phone;
+                if (Status != obj.Status) obj.Status = Status;
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

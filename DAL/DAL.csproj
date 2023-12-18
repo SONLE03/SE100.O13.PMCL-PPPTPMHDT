@@ -61,6 +61,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DALRule.cs" />
+    <Compile Include="DALStatus.cs" />
     <Compile Include="DALTable.cs" />
     <Compile Include="DALService.cs" />
     <Compile Include="DALOrderDetail.cs" />

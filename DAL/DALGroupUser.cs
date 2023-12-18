@@ -25,6 +25,10 @@ namespace DAL
         {
             return CFEntities.Instance.GROUPUSERs.AsNoTracking().ToList();
         }
+        public List<GROUPUSER> GetAllGroupUserActive()
+        {
+            return CFEntities.Instance.GROUPUSERs.AsNoTracking().Where(n => n.Status == "Active").ToList();
+        }
 
         public GROUPUSER GetGroupUserById(int id)
         {
@@ -43,7 +47,8 @@ namespace DAL
             {
                 var nhom = new GROUPUSER
                 {
-                    GroupUserName = GroupUserName
+                    GroupUserName = GroupUserName,
+                    Status = "Active"
                 };
                 CFEntities.Instance.GROUPUSERs.Add(nhom);
                 CFEntities.Instance.SaveChanges();
@@ -56,13 +61,24 @@ namespace DAL
             }
         }
 
-        public bool UpdGroupUser(int id, string GroupUserName)
+        public bool UpdGroupUser(int id, string GroupUserName, string Status)
         {
             try
             {
                 var group = GetGroupUserById(id);
                 if (group == null) return false;
-                group.GroupUserName = GroupUserName;
+                if (GroupUserName != group.GroupUserName)
+                {
+                    group.GroupUserName = GroupUserName;
+                }
+                if (Status != group.Status)
+                {
+                    group.Status = Status;
+                    foreach(var us in group.C_USER)
+                    {
+                        us.Status = Status;
+                    }
+                }
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

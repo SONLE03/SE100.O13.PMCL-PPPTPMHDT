@@ -34,15 +34,15 @@ namespace BUS
         {
             return DALOrder.Instance.GetBillByMa(BillID);
         }
-        public int AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note, double total)
+        public int AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note, double total, float tax)
         {
-            return DALOrder.Instance.AddBill(BillDate, Status, UserID, TableID, Note, total);
+            return DALOrder.Instance.AddBill(BillDate, Status, UserID, TableID, Note, total, tax);
         }
         public bool DelBill(int idBill)
         {
             return DALOrder.Instance.DelBill(idBill);
         }
-        public bool UpdBill(int id, double? Total, int? Status, int? TableID)
+        public bool UpdBill(int id, double? Total, string Status, int? TableID)
         {
             return DALOrder.Instance.UpdBill(id, Total, Status, TableID);
         }

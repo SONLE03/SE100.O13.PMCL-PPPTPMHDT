@@ -24,6 +24,7 @@ namespace DTO
         public int id { get; set; }
         public string GroupUserID { get; set; }
         public string GroupUserName { get; set; }
+        public string Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<C_USER> C_USER { get; set; }

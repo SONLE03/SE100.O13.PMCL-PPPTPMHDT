@@ -25,8 +25,10 @@ namespace DTO
         public System.DateTime BillDate { get; set; }
         public Nullable<int> UserID { get; set; }
         public Nullable<int> TableID { get; set; }
-        public int Status { get; set; }
+        public string Status { get; set; }
         public string Note { get; set; }
+        public Nullable<double> SubTotal { get; set; }
+        public Nullable<double> Tax { get; set; }
         public Nullable<double> Total { get; set; }
     
         public virtual C_TABLE C_TABLE { get; set; }

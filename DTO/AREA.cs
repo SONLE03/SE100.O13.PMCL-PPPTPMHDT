@@ -23,7 +23,6 @@ namespace DTO
         public int id { get; set; }
         public string AreaID { get; set; }
         public string AreaName { get; set; }
-        public Nullable<double> ExtraFee { get; set; }
         public string Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
