@@ -62,13 +62,13 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.gridviewEventAppliedProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnCreate = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit_price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.btnCreate = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panelEventID.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -106,7 +106,7 @@
             this.panelEventID.Controls.Add(this.lbAreaID);
             this.panelEventID.FillColor = System.Drawing.Color.White;
             this.panelEventID.Location = new System.Drawing.Point(57, 69);
-            this.panelEventID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelEventID.Margin = new System.Windows.Forms.Padding(2);
             this.panelEventID.Name = "panelEventID";
             this.panelEventID.Size = new System.Drawing.Size(223, 32);
             this.panelEventID.TabIndex = 81;
@@ -197,7 +197,7 @@
             this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpStartDate.Location = new System.Drawing.Point(110, 125);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpStartDate.Name = "dtpStartDate";
@@ -214,7 +214,7 @@
             this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpEndDate.Location = new System.Drawing.Point(359, 125);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpEndDate.Name = "dtpEndDate";
@@ -269,7 +269,7 @@
             this.checkboxSaleSamePrice.CheckedState.BorderThickness = 0;
             this.checkboxSaleSamePrice.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
             this.checkboxSaleSamePrice.Location = new System.Drawing.Point(115, 187);
-            this.checkboxSaleSamePrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkboxSaleSamePrice.Margin = new System.Windows.Forms.Padding(2);
             this.checkboxSaleSamePrice.Name = "checkboxSaleSamePrice";
             this.checkboxSaleSamePrice.Size = new System.Drawing.Size(17, 19);
             this.checkboxSaleSamePrice.TabIndex = 97;
@@ -300,7 +300,7 @@
             this.checkboxSalePercentage.CheckedState.BorderThickness = 0;
             this.checkboxSalePercentage.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
             this.checkboxSalePercentage.Location = new System.Drawing.Point(222, 187);
-            this.checkboxSalePercentage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkboxSalePercentage.Margin = new System.Windows.Forms.Padding(2);
             this.checkboxSalePercentage.Name = "checkboxSalePercentage";
             this.checkboxSalePercentage.Size = new System.Drawing.Size(17, 19);
             this.checkboxSalePercentage.TabIndex = 99;
@@ -388,7 +388,7 @@
             this.combobox_category.ForeColor = System.Drawing.Color.White;
             this.combobox_category.ItemHeight = 30;
             this.combobox_category.Location = new System.Drawing.Point(115, 235);
-            this.combobox_category.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combobox_category.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_category.Name = "combobox_category";
             this.combobox_category.Size = new System.Drawing.Size(147, 36);
             this.combobox_category.TabIndex = 105;
@@ -402,7 +402,7 @@
             this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2Panel1.ForeColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(316, 232);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(58, 32);
             this.guna2Panel1.TabIndex = 106;
@@ -434,7 +434,7 @@
             this.comboboxProduct.ForeColor = System.Drawing.Color.White;
             this.comboboxProduct.ItemHeight = 30;
             this.comboboxProduct.Location = new System.Drawing.Point(378, 235);
-            this.comboboxProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboboxProduct.Margin = new System.Windows.Forms.Padding(2);
             this.comboboxProduct.Name = "comboboxProduct";
             this.comboboxProduct.Size = new System.Drawing.Size(162, 36);
             this.comboboxProduct.TabIndex = 107;
@@ -454,7 +454,7 @@
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_Add.Location = new System.Drawing.Point(547, 235);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(44, 30);
             this.btn_Add.TabIndex = 108;
@@ -546,48 +546,7 @@
             this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.Height = 22;
             this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // btnCreate
-            // 
-            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
-            this.btnCreate.BorderRadius = 10;
-            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnCreate.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.btnCreate.ForeColor = System.Drawing.Color.White;
-            this.btnCreate.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnCreate.Location = new System.Drawing.Point(359, 483);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCreate.Name = "btnCreate";
-            this.btnCreate.Size = new System.Drawing.Size(74, 30);
-            this.btnCreate.TabIndex = 110;
-            this.btnCreate.Text = "Create";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.BorderRadius = 10;
-            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnCancel.Location = new System.Drawing.Point(146, 483);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(74, 30);
-            this.btnCancel.TabIndex = 111;
-            this.btnCancel.Text = "Cancel";
+            this.gridviewEventAppliedProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewEventAppliedProduct_CellClick);
             // 
             // Number
             // 
@@ -625,6 +584,50 @@
             this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // btnCreate
+            // 
+            this.btnCreate.BackColor = System.Drawing.Color.Transparent;
+            this.btnCreate.BorderRadius = 10;
+            this.btnCreate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCreate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCreate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCreate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCreate.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCreate.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnCreate.ForeColor = System.Drawing.Color.White;
+            this.btnCreate.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnCreate.Location = new System.Drawing.Point(359, 483);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCreate.Name = "btnCreate";
+            this.btnCreate.Size = new System.Drawing.Size(74, 30);
+            this.btnCreate.TabIndex = 110;
+            this.btnCreate.Text = "Create";
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnCancel.Location = new System.Drawing.Point(146, 483);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(74, 30);
+            this.btnCancel.TabIndex = 111;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // AddNewEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -660,7 +663,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddNewEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";

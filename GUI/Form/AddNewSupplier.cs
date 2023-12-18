@@ -34,17 +34,18 @@ namespace GUI
                 {
                     if(BUSSupplier.Instance.AddSupplier(supplierName, address, phone))
                     {
-                        MessageBox.Show("Them thanh cong");
+                        MessageBox.Show("Added successfully");
                         Clear();
+                        this.Hide();
                     }
                     else
                     {
-                        MessageBox.Show("Them that bai");
+                        MessageBox.Show("Added failed");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Thong tin khong day du");
+                    MessageBox.Show("You must fill all the information");
                 }
             }catch(Exception ex)
             {
