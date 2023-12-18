@@ -19,23 +19,23 @@ namespace DTO
         {
             this.BILL_DETAIL = new HashSet<BILL_DETAIL>();
             this.DRINKS_SIZE = new HashSet<DRINKS_SIZE>();
+            this.EVENTs = new HashSet<EVENT>();
         }
     
         public int id { get; set; }
         public string DrinksID { get; set; }
         public string DrinksName { get; set; }
         public int CategoryID { get; set; }
-        public string Unit { get; set; }
         public string Description { get; set; }
         public string Image { get; set; }
-        public bool Status { get; set; }
-        public Nullable<int> EventID { get; set; }
+        public string Status { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BILL_DETAIL> BILL_DETAIL { get; set; }
         public virtual CATEGORY CATEGORY { get; set; }
-        public virtual EVENT EVENT { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DRINKS_SIZE> DRINKS_SIZE { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EVENT> EVENTs { get; set; }
     }
 }

@@ -26,6 +26,10 @@ namespace BUS
         {
             return DALGroupUser.Instance.GetAllGroupUser();
         }
+        public List<GROUPUSER> GetAllGroupUserActive()
+        {
+            return DALGroupUser.Instance.GetAllGroupUserActive();
+        }
 
         public GROUPUSER GetGroupUserById(int id)
         {
@@ -42,9 +46,9 @@ namespace BUS
             return DALGroupUser.Instance.AddGroupUser(GroupUserName);
         }
 
-        public bool UpdGroupUser(int id, string GroupUserName)
+        public bool UpdGroupUser(int id, string GroupUserName, string status)
         {
-            return DALGroupUser.Instance.UpdGroupUser(id, GroupUserName);
+            return DALGroupUser.Instance.UpdGroupUser(id, GroupUserName, status);
         }
         public bool DelGroupUser(int id)
         {

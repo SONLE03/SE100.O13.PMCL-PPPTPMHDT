@@ -26,6 +26,10 @@ namespace BUS
         {
             return DALArea.Instance.GetAllArea();
         }
+        public List<AREA> GetAllAreaActive()
+        {
+            return DALArea.Instance.GetAllAreaActive();
+        }
         public AREA GetAreaById(int id)
         {
             return DALArea.Instance.GetAreaById(id);
@@ -34,13 +38,13 @@ namespace BUS
         {
             return DALArea.Instance.GetAreaByCode(AreaId);
         }
-        public bool AddArea(string AreaName, double ExtraFee)
+        public bool AddArea(string AreaName)
         {
-            return DALArea.Instance.AddArea(AreaName, ExtraFee);
+            return DALArea.Instance.AddArea(AreaName);
         }
-        public bool UpdArea(int idArea, string AreaName, double ExtraFee, string Status)
+        public bool UpdArea(int idArea, string AreaName, string Status)
         {
-            return DALArea.Instance.UpdArea(idArea, AreaName, ExtraFee, Status);
+            return DALArea.Instance.UpdArea(idArea, AreaName, Status);
         }
         public bool DelArea(int idArea)
         {

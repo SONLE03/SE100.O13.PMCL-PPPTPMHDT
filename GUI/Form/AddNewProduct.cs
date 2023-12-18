@@ -288,7 +288,7 @@ namespace GUI
 
                     string lastPathofImage = drink.Image;
 
-                    if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, BUS.BUSCategory.Instance.GetCategoryById(drink.CategoryID), "none", txtDescibe.Text, destinationPath, null, null, true))
+                    if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, BUS.BUSCategory.Instance.GetCategoryById(drink.CategoryID), "none", txtDescibe.Text, destinationPath, null, null, "active"))
                     {
                         MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         deleteFile(lastPathofImage);

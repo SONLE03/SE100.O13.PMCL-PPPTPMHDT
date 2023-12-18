@@ -87,7 +87,7 @@ namespace GUI
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if (BUS.BUSCategory.Instance.UpdCategory(id, txtCategoryname.Text))
+            if (BUS.BUSCategory.Instance.UpdCategory(id, txtCategoryname.Text, "active"))
             {
                 MessageBox.Show("Updated successfully", "Update category", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 isUpdated = true;

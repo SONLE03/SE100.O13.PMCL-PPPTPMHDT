@@ -24,6 +24,10 @@ namespace DAL
         {
             return CFEntities.Instance.AREAs.AsNoTracking().ToList();
         }
+        public List<AREA> GetAllAreaActive()
+        {
+            return CFEntities.Instance.AREAs.AsNoTracking().Where(m => m.Status == "Active").ToList();
+        }
         public AREA GetAreaById(int id)
         {
             return CFEntities.Instance.AREAs.Find(id);
@@ -37,21 +41,19 @@ namespace DAL
             }
             return null;
         }
-        public List<AREA> FindArea(string name, double extraFee)
+        public List<AREA> FindArea(string name)
         {
             var res = CFEntities.Instance.AREAs.ToList();
             if (name != null) res = res.Where(t => t.AreaName == name).Select(t => t).ToList();
-            if (extraFee != 0) res = res.Where(e => e.ExtraFee == extraFee).Select(e => e).ToList();
             return res;
         }
-        public bool AddArea(string AreaName, double ExtraFee)
+        public bool AddArea(string AreaName)
         {
             try
             {
                 var obj = new AREA();
                 obj.AreaName = AreaName;
-                obj.ExtraFee = ExtraFee;
-                obj.Status = "active";
+                obj.Status = "Active";
                 CFEntities.Instance.AREAs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;
@@ -62,15 +64,14 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdArea(int idArea, string AreaName, double ExtraFee, string Status)
+        public bool UpdArea(int idArea, string AreaName, string Status)
         {
             try
             {
                 AREA area = GetAreaById(idArea);
                 if (area == null) return false;
                 if (AreaName != null) area.AreaName = AreaName;
-                if (ExtraFee != 0) area.ExtraFee = ExtraFee;
-                if (Status != null)
+                if (Status != area.Status)
                 {
                     area.Status = Status;
                     bool checkTableStatus = area.C_TABLE.Any(table => table.Status == "Customer");
@@ -89,6 +90,20 @@ namespace DAL
             {
                 return false;
             }
+        }
+
+        public bool UpdArea(AREA area)
+        {
+            try
+            {
+                CFEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+           
         }
         public bool DelArea(int idArea)
         {

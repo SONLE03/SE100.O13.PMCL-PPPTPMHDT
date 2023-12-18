@@ -28,7 +28,7 @@ namespace DAL
             return CFEntities.Instance.BILL_DETAIL.Find(new object[] { idBill, idDrink });
         }
 
-        public bool AddBillDetail(int idBill, int DrinksID, string Unit, int Quantity, float Rate)
+        public bool AddBillDetail(int idBill, int DrinksID, int Quantity, float Rate)
         {
             try
             {
@@ -39,13 +39,12 @@ namespace DAL
                     BillID = idBill,
                     BILL = bill,
                     DrinksID = DrinksID,
-                    Unit = Unit,
                     Quantity = Quantity,
                     Rate = Rate,
                     Amount = Quantity * Rate
                 };
                 CFEntities.Instance.BILL_DETAIL.Add(dt);
-                //DALOrder.Instance.UpdBill(idBill, bill.Total + dt.Amount, null, null);
+                DALOrder.Instance.UpdBill(idBill, bill.Total + dt.Amount, null, null);
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

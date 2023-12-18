@@ -26,6 +26,10 @@ namespace BUS
         {
             return DALDrink.Instance.GetAllDrink();
         }
+        public List<DRINK> GetAllDrinkActive()
+        {
+            return DALDrink.Instance.GetAllDrinkActive();
+        }
 
         public DRINK GetDrinkById(int id)
         {
@@ -40,13 +44,13 @@ namespace BUS
         public DRINK AddDrink(string DrinksName, CATEGORY drinkCategory, string Unit,
             string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs)
         {
-            return DALDrink.Instance.AddDrink(DrinksName, drinkCategory, Unit, Description, Image, idEV, Drink_SIZEs);
+            return DALDrink.Instance.AddDrink(DrinksName, drinkCategory, Description, Image);
         }
 
         public bool UpdDrink(int idDrink, string DrinksName, CATEGORY drinkCategory, string Unit,
-            string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs, bool Status)
+            string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs, string Status)
         {
-            return DALDrink.Instance.UpdDrink(idDrink, DrinksName, drinkCategory, Unit, Description, Image, idEV, Drink_SIZEs, Status);
+            return DALDrink.Instance.UpdDrink(idDrink, DrinksName, drinkCategory, Description, Image, Drink_SIZEs, Status);
         }
 
         public bool UpdateImageErrorNotFound(int idDrink, string Image)

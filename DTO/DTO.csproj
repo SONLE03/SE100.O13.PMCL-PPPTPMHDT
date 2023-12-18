@@ -92,6 +92,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Coffee.edmx</DependentUpon>
     </Compile>
+    <Compile Include="C_RULE.cs">
+      <DependentUpon>Coffee.tt</DependentUpon>
+    </Compile>
     <Compile Include="C_SIZE.cs">
       <DependentUpon>Coffee.tt</DependentUpon>
     </Compile>

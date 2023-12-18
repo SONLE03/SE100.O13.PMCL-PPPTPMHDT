@@ -24,6 +24,10 @@ namespace DAL
         {
             return CFEntities.Instance.CATEGORies.AsNoTracking().ToList();
         }
+        public List<CATEGORY> GetAllCategoryActive()
+        {
+            return CFEntities.Instance.CATEGORies.AsNoTracking().Where(m => m.Status == "Active").ToList();
+        }
         public CATEGORY GetCategoryById(int id)
         {
             return CFEntities.Instance.CATEGORies.Find(id);
@@ -50,6 +54,7 @@ namespace DAL
             {
                 var obj = new CATEGORY();
                 obj.CategoryName = CategoryName;
+                obj.Status = "Active";
                 CFEntities.Instance.CATEGORies.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;
@@ -60,14 +65,21 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdCategory(int idCat, string CategoryName)
+        public bool UpdCategory(int idCat, string CategoryName, string Status)
         {
             try
             {
                 CATEGORY cat = GetCategoryById(idCat);
                 if (cat == null) return false;
                 if (CategoryName != null) cat.CategoryName = CategoryName;
-
+                if (Status != cat.Status)
+                {
+                    cat.Status = Status;
+                    foreach(var drink in cat.DRINKS)
+                    {
+                        drink.Status = Status;
+                    }
+                }
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

@@ -32,17 +32,6 @@ namespace DAL
             {
                 if (Drink == null || Size == null) return false;
                 double discount = 0;
-                if (Drink.EVENT != null)
-                {
-                    if (Drink.EVENT.EventType == true)
-                    {
-                        discount = (double)(price - Drink.EVENT.Discount);
-                    }
-                    else
-                    {
-                        discount = (double)(price * Drink.EVENT.Discount) / 100;
-                    }
-                }
                 var ct = new DRINKS_SIZE
                 {
                     DrinksID = Drink.id,
@@ -51,8 +40,6 @@ namespace DAL
                     Discount = discount
 
                 };
-                if (Size.DRINKS_SIZE == null) Size.DRINKS_SIZE = new List<DRINKS_SIZE>();
-                if (Drink.DRINKS_SIZE == null) Drink.DRINKS_SIZE = new List<DRINKS_SIZE>();
                 Drink.DRINKS_SIZE.Add(ct);
                 CFEntities.Instance.DRINKS_SIZE.Add(ct);
                 CFEntities.Instance.SaveChanges();
