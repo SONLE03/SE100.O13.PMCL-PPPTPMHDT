@@ -33,7 +33,7 @@ namespace GUI
         private void btnAddsupplier_Click(object sender, EventArgs e)
         {
             AddNewSupplier addNewSupplier = new AddNewSupplier();
-            addNewSupplier.Show();
+            addNewSupplier.ShowDialog();
             Binding(BUSSupplier.Instance.GetAllSupplier());
         }
 

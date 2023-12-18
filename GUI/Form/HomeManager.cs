@@ -122,5 +122,13 @@ namespace GUI
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucEmployees);
         }
+
+        private void Settings_Click(object sender, EventArgs e)
+        {
+            var ucSetting = new UCSettings(user);
+            ucSetting.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucSetting);
+        }
     }
 }
