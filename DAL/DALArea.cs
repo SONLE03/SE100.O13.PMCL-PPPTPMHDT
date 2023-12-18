@@ -47,13 +47,13 @@ namespace DAL
             if (name != null) res = res.Where(t => t.AreaName == name).Select(t => t).ToList();
             return res;
         }
-        public bool AddArea(string AreaName)
+        public bool AddArea(string AreaName, string status)
         {
             try
             {
                 var obj = new AREA();
                 obj.AreaName = AreaName;
-                obj.Status = "Active";
+                obj.Status = status;
                 CFEntities.Instance.AREAs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;

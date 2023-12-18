@@ -38,10 +38,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.gridviewTable = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TableID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TableName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AreaID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -83,7 +85,7 @@
             this.label4.Location = new System.Drawing.Point(502, 43);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 25);
+            this.label4.Size = new System.Drawing.Size(61, 30);
             this.label4.TabIndex = 37;
             this.label4.Text = "Area";
             // 
@@ -143,6 +145,8 @@
             // 
             // gridviewTable
             // 
+            this.gridviewTable.AllowUserToAddRows = false;
+            this.gridviewTable.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.gridviewTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridviewTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -159,10 +163,12 @@
             this.gridviewTable.ColumnHeadersHeight = 40;
             this.gridviewTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.TableID,
             this.TableName,
             this.AreaID,
-            this.Status});
+            this.Status,
+            this.Edit});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -174,6 +180,7 @@
             this.gridviewTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewTable.Location = new System.Drawing.Point(3, 74);
             this.gridviewTable.Name = "gridviewTable";
+            this.gridviewTable.ReadOnly = true;
             this.gridviewTable.RowHeadersVisible = false;
             this.gridviewTable.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -193,7 +200,7 @@
             this.gridviewTable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.gridviewTable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewTable.ThemeStyle.HeaderStyle.Height = 40;
-            this.gridviewTable.ThemeStyle.ReadOnly = false;
+            this.gridviewTable.ThemeStyle.ReadOnly = true;
             this.gridviewTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewTable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridviewTable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -201,30 +208,53 @@
             this.gridviewTable.ThemeStyle.RowsStyle.Height = 22;
             this.gridviewTable.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewTable.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridviewTable.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewTable_CellDoubleClick);
+            this.gridviewTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewTable_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
             // TableID
             // 
             this.TableID.FillWeight = 150F;
             this.TableID.HeaderText = "Table ID";
+            this.TableID.MinimumWidth = 6;
             this.TableID.Name = "TableID";
+            this.TableID.ReadOnly = true;
             // 
             // TableName
             // 
             this.TableName.FillWeight = 150F;
             this.TableName.HeaderText = "Table name";
+            this.TableName.MinimumWidth = 6;
             this.TableName.Name = "TableName";
+            this.TableName.ReadOnly = true;
             // 
             // AreaID
             // 
             this.AreaID.FillWeight = 150F;
             this.AreaID.HeaderText = "Area";
+            this.AreaID.MinimumWidth = 6;
             this.AreaID.Name = "AreaID";
+            this.AreaID.ReadOnly = true;
             // 
             // Status
             // 
             this.Status.HeaderText = "State";
+            this.Status.MinimumWidth = 6;
             this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
             // 
             // guna2Panel1
             // 
@@ -253,7 +283,7 @@
             this.label2.Location = new System.Drawing.Point(24, 39);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(350, 20);
+            this.label2.Size = new System.Drawing.Size(442, 25);
             this.label2.TabIndex = 42;
             this.label2.Text = "These are list of all tables in our store up to now ";
             // 
@@ -266,7 +296,7 @@
             this.label1.Location = new System.Drawing.Point(24, 4);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(163, 25);
+            this.label1.Size = new System.Drawing.Size(196, 30);
             this.label1.TabIndex = 41;
             this.label1.Text = "Table information";
             // 
@@ -283,7 +313,7 @@
             // 
             // UCTables_TabTables
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel1);
@@ -318,9 +348,11 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TableID;
         private System.Windows.Forms.DataGridViewTextBoxColumn TableName;
         private System.Windows.Forms.DataGridViewTextBoxColumn AreaID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
     }
 }

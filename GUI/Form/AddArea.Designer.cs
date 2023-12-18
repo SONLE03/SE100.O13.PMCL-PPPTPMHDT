@@ -41,9 +41,9 @@
             this.lbAreaID = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtSurcharge = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel_areacode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -220,34 +220,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label4.Location = new System.Drawing.Point(99, 263);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 15);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 70;
-            this.label4.Text = "Surcharge (VNĐ)";
-            // 
-            // txtSurcharge
-            // 
-            this.txtSurcharge.BackColor = System.Drawing.Color.Transparent;
-            this.txtSurcharge.BorderColor = System.Drawing.Color.Gray;
-            this.txtSurcharge.BorderRadius = 15;
-            this.txtSurcharge.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSurcharge.DefaultText = "";
-            this.txtSurcharge.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSurcharge.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSurcharge.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSurcharge.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSurcharge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSurcharge.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSurcharge.ForeColor = System.Drawing.Color.Gray;
-            this.txtSurcharge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSurcharge.Location = new System.Drawing.Point(97, 283);
-            this.txtSurcharge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSurcharge.Name = "txtSurcharge";
-            this.txtSurcharge.PasswordChar = '\0';
-            this.txtSurcharge.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtSurcharge.PlaceholderText = "000.000.000";
-            this.txtSurcharge.SelectedText = "";
-            this.txtSurcharge.Size = new System.Drawing.Size(297, 39);
-            this.txtSurcharge.TabIndex = 69;
+            this.label4.Text = "Status";
             // 
             // guna2BorderlessForm1
             // 
@@ -271,14 +246,33 @@
             this.pictureBox1.TabIndex = 59;
             this.pictureBox1.TabStop = false;
             // 
+            // cbStatus
+            // 
+            this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.BorderRadius = 15;
+            this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Active",
+            "InActive"});
+            this.cbStatus.Location = new System.Drawing.Point(97, 299);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(297, 36);
+            this.cbStatus.TabIndex = 71;
+            // 
             // AddArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(488, 432);
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtSurcharge);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel_areacode);
             this.Controls.Add(this.guna2ControlBox3);
@@ -316,7 +310,7 @@
         private Guna.UI2.WinForms.Guna2Panel panel_areacode;
         private System.Windows.Forms.Label lbAreaID;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtSurcharge;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
     }
 }

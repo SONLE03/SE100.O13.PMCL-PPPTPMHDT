@@ -40,10 +40,10 @@
             this.txtAreaname = new Guna.UI2.WinForms.Guna2TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtSurcharge = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel_areacode.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -122,6 +122,7 @@
             this.btn_Cancel.Size = new System.Drawing.Size(97, 37);
             this.btn_Cancel.TabIndex = 76;
             this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_OK
             // 
@@ -142,6 +143,7 @@
             this.btn_OK.Size = new System.Drawing.Size(97, 37);
             this.btn_OK.TabIndex = 75;
             this.btn_OK.Text = "OK";
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // label2
             // 
@@ -200,34 +202,9 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label4.Location = new System.Drawing.Point(97, 262);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 15);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 82;
-            this.label4.Text = "Surcharge (VNĐ)";
-            // 
-            // txtSurcharge
-            // 
-            this.txtSurcharge.BackColor = System.Drawing.Color.Transparent;
-            this.txtSurcharge.BorderColor = System.Drawing.Color.Gray;
-            this.txtSurcharge.BorderRadius = 15;
-            this.txtSurcharge.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSurcharge.DefaultText = "";
-            this.txtSurcharge.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSurcharge.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSurcharge.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSurcharge.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSurcharge.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSurcharge.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSurcharge.ForeColor = System.Drawing.Color.Gray;
-            this.txtSurcharge.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSurcharge.Location = new System.Drawing.Point(95, 281);
-            this.txtSurcharge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSurcharge.Name = "txtSurcharge";
-            this.txtSurcharge.PasswordChar = '\0';
-            this.txtSurcharge.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtSurcharge.PlaceholderText = "000.000.000";
-            this.txtSurcharge.SelectedText = "";
-            this.txtSurcharge.Size = new System.Drawing.Size(297, 40);
-            this.txtSurcharge.TabIndex = 81;
+            this.label4.Text = "Status";
             // 
             // label3
             // 
@@ -262,11 +239,31 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // cbStatus
+            // 
+            this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.BorderRadius = 15;
+            this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Active",
+            "InActive"});
+            this.cbStatus.Location = new System.Drawing.Point(95, 291);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(297, 36);
+            this.cbStatus.TabIndex = 83;
+            // 
             // EditArea
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(489, 432);
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.panel_areacode);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox1);
@@ -276,7 +273,6 @@
             this.Controls.Add(this.txtAreaname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.txtSurcharge);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -305,8 +301,8 @@
         private Guna.UI2.WinForms.Guna2TextBox txtAreaname;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtSurcharge;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
     }
 }

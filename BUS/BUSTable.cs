@@ -38,13 +38,21 @@ namespace BUS
         {
             return DALTable.Instance.GetTableByCode(idTable);
         }
-        public bool AddTable(string tableName, AREA area)
+        public bool AddTable(string tableName, int areaid, string status)
         {
-            return DALTable.Instance.AddTable(tableName, area);
+            if(!checkAreaStatus(areaid, status)) return false;          
+            return DALTable.Instance.AddTable(tableName, areaid, status);
         }
-        public bool UpdTable(int tableID, string tableName, AREA area, string status)
+        public bool UpdTable(int tableID, string tableName, int areaid, string status)
         {
-            return DALTable.Instance.UpdTable(tableID, tableName, area, status);
+            if (!checkAreaStatus(areaid, status)) return false;
+            return DALTable.Instance.UpdTable(tableID, tableName, areaid, status);
+        }
+        public bool checkAreaStatus(int areaid, string status)
+        {
+            AREA area = DALArea.Instance.GetAreaById(areaid);
+            if (area.Status.Equals("InActive") && status.Equals("Active")) return false;
+            return true;
         }
     }
 }

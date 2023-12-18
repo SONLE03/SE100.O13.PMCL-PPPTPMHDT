@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,45 +14,49 @@ namespace GUI
 {
     public partial class AddNewTable : Form
     {
-        private bool anyChanged = false;
-
         public AddNewTable()
         {
             InitializeComponent();
-            BUS.BUSArea.Instance.GetAllArea().ToList().ForEach(p =>
-            {
-                comboboxArea.Items.Add(p.AreaName);
-            });
+            getAreas();
         }
 
-        public bool getAnyChanged()
+        private void getAreas()
         {
-            return anyChanged;
+            var listAreas = BUSArea.Instance.GetAllArea();
+            comboboxArea.DataSource = listAreas;
+            comboboxArea.ValueMember = "id";
+            comboboxArea.DisplayMember = "AreaName";
         }
 
         private void bthCancel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            var area = (from p in BUS.BUSArea.Instance.GetAllArea() where p.AreaName.Equals(comboboxArea.SelectedItem.ToString()) select p).FirstOrDefault();
-            if (area == null)
+            try
             {
-                MessageBox.Show("Can't find area. please start your application again", "Add table", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }    
-
-            if (BUS.BUSTable.Instance.AddTable(txtTableName.Text, area))
-            {
-                MessageBox.Show("Added successfully", "Add table", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                anyChanged = true;
-                this.Hide();
+                if(!String.IsNullOrEmpty(txtTableName.Text) || !String.IsNullOrEmpty(comboboxArea.Text) || !String.IsNullOrEmpty(cbStatus.Text))
+                {
+                    bool isSuccess = BUSTable.Instance.AddTable(txtTableName.Text, Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text);
+                    if (isSuccess)
+                    {
+                        MessageBox.Show("Add Table Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Add Failure Table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Add Failure Table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch
             {
-                MessageBox.Show("Added failed", "Add table", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
         }
     }

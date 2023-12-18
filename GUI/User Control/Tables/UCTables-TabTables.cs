@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 using DTO;
+using static System.Windows.Forms.MonthCalendar;
 
 namespace GUI
 {
@@ -17,6 +19,22 @@ namespace GUI
         {
             InitializeComponent();
             LoadTable(BUS.BUSTable.Instance.GetAllTable());
+            LoadArea();
+        }
+
+        public void LoadTable(List<C_TABLE> listTables)
+        {
+            Image edit_img = Properties.Resources.edit_icon;
+            edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
+            gridviewTable.Rows.Clear();
+            gridviewTable.Refresh();
+            listTables.ForEach(p =>
+            {
+                gridviewTable.Rows.Add(p.id, p.TableID, p.TableName, p.AREA.AreaName, p.Status, edit_img);
+            });
+        }
+        public void LoadArea()
+        {
             combobox_area.Items.Add("All");
             BUS.BUSArea.Instance.GetAllArea().ToList().ForEach(p =>
             {
@@ -24,133 +42,77 @@ namespace GUI
             });
             combobox_area.SelectedItem = "All";
         }
-
-        public void LoadTable(List<C_TABLE> listTables)
-        {
-            gridviewTable.Rows.Clear();
-            gridviewTable.Refresh();
-            listTables.ForEach(p =>
-            {
-                gridviewTable.Rows.Add(p.TableID, p.TableName, p.AREA.AreaName, p.Status);
-            });
-        }
-
         private void btnAddTable_Click(object sender, EventArgs e)
         {
             AddNewTable addNewTable = new AddNewTable();
             addNewTable.ShowDialog();
-            if (addNewTable.getAnyChanged())
-            {
-                LoadTable(BUS.BUSTable.Instance.GetAllTable());
-            }    
+            LoadTable(BUS.BUSTable.Instance.GetAllTable());   
         }
 
-        private void gridviewTable_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void Search()
         {
-            if (e.RowIndex == -1)
+            List<C_TABLE> listTable = new List<C_TABLE>();
+            if (String.IsNullOrEmpty(txtSearch.Text.ToString()) && !combobox_area.SelectedItem.ToString().Equals("All"))
             {
-                return;
-            }
-            if (e.ColumnIndex == gridviewTable.Columns["TableID"].Index || e.ColumnIndex == gridviewTable.Columns["TableName"].Index || e.ColumnIndex == gridviewTable.Columns["AreaID"].Index || e.ColumnIndex == gridviewTable.Columns["Status"].Index)
-            {
-                TableDetails addNewTable = new TableDetails(gridviewTable.Rows[e.RowIndex].Cells["TableID"].Value.ToString());
-                addNewTable.ShowDialog();
-                if (addNewTable.getAnyChanged())
+                BUSTable.Instance.GetAllTable().ToList().ForEach(p =>
                 {
-                    LoadTable(BUS.BUSTable.Instance.GetAllTable());
-                }
+                    if (p.AREA.AreaName.Equals(combobox_area.SelectedItem.ToString()))
+                    {
+                        listTable.Add(p);
+                    }
+                });
+            }
+            else if (!String.IsNullOrEmpty(txtSearch.Text.ToString()) && !combobox_area.SelectedItem.ToString().Equals("All"))
+            {
+                BUSTable.Instance.GetAllTable().ToList().ForEach(p =>
+                {
+                    if (p.TableName.ToLower().Contains(txtSearch.Text.ToString().ToLower()) && p.AREA.AreaName.Equals(combobox_area.SelectedItem.ToString()))
+                    {
+                        listTable.Add(p);
+                    }
+                });
+            }
+            else if (!String.IsNullOrEmpty(txtSearch.Text.ToString()) && combobox_area.SelectedItem.ToString().Equals("All"))
+            {
+                BUSTable.Instance.GetAllTable().ToList().ForEach(p =>
+                {
+                    if (p.TableName.ToLower().Contains(txtSearch.Text.ToString().ToLower()))
+                    {
+                        listTable.Add(p);
+                    }
+                });
             }
             else
             {
-                MessageBox.Show("Please double click at rows to update or delete", "Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                listTable = BUSTable.Instance.GetAllTable();
             }
+            LoadTable(listTable);
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (!combobox_area.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<C_TABLE> listTableByAreaAndSearching = new List<C_TABLE>();
-                foreach (var p in BUS.BUSTable.Instance.GetAllTable())
-                {
-                    if (p.TableName.ToLower().Contains(txtSearch.Text.ToString().ToLower()) && p.AREA.AreaName.Equals(combobox_area.SelectedItem.ToString()))
-                    {
-                        listTableByAreaAndSearching.Add(p);
-                    }
-                }
-                LoadTable(listTableByAreaAndSearching);
-            }
-            else if (!combobox_area.SelectedItem.ToString().Equals("All") && String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<C_TABLE> listTableByAreaAndSearching = new List<C_TABLE>();
-                foreach (var p in BUS.BUSTable.Instance.GetAllTable())
-                {
-                    if (p.AREA.AreaName.Equals(combobox_area.SelectedItem.ToString()))
-                    {
-                        listTableByAreaAndSearching.Add(p);
-                    }
-                }
-                LoadTable(listTableByAreaAndSearching);
-            }
-            else if (combobox_area.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<C_TABLE> listTableByAreaAndSearching = new List<C_TABLE>();
-                foreach (var p in BUS.BUSTable.Instance.GetAllTable())
-                {
-                    if (p.TableName.ToLower().Contains(txtSearch.Text.ToString().ToLower()))
-                    {
-                        listTableByAreaAndSearching.Add(p);
-                    }
-                }
-                LoadTable(listTableByAreaAndSearching);
-            }
-            else
-            {
-                LoadTable(BUS.BUSTable.Instance.GetAllTable());
-            }
+            Search();
         }
 
         private void combobox_area_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (!combobox_area.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtSearch.Text.ToString()))
+            Search();
+        }
+
+        private void gridviewTable_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            if (idx < 0) return;
+            if (e.ColumnIndex == gridviewTable.Columns["Edit"].Index)
             {
-                List<C_TABLE> listTableByAreaAndSearching = new List<C_TABLE>();
-                foreach (var p in BUS.BUSTable.Instance.GetAllTable())
-                {
-                    if (p.TableName.ToLower().Contains(txtSearch.Text.ToString().ToLower()) && p.AREA.AreaName.Equals(combobox_area.SelectedItem.ToString()))
-                    {
-                        listTableByAreaAndSearching.Add(p);
-                    }
-                }
-                LoadTable(listTableByAreaAndSearching);
-            }
-            else if (!combobox_area.SelectedItem.ToString().Equals("All") && String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<C_TABLE> listTableByAreaAndSearching = new List<C_TABLE>();
-                foreach (var p in BUS.BUSTable.Instance.GetAllTable())
-                {
-                    if (p.AREA.AreaName.Equals(combobox_area.SelectedItem.ToString()))
-                    {
-                        listTableByAreaAndSearching.Add(p);
-                    }
-                }
-                LoadTable(listTableByAreaAndSearching);
-            }
-            else if (combobox_area.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<C_TABLE> listTableByAreaAndSearching = new List<C_TABLE>();
-                foreach (var p in BUS.BUSTable.Instance.GetAllTable())
-                {
-                    if (p.TableName.ToLower().Contains(txtSearch.Text.ToString().ToLower()))
-                    {
-                        listTableByAreaAndSearching.Add(p);
-                    }
-                }
-                LoadTable(listTableByAreaAndSearching);
+                EditTable editTable = new EditTable(Convert.ToInt32(gridviewTable.Rows[idx].Cells["ID"].Value));
+                editTable.ShowDialog();
+                LoadTable(BUSTable.Instance.GetAllTable());
             }
             else
             {
-                LoadTable(BUS.BUSTable.Instance.GetAllTable());
+                TableDetails tableDetail = new TableDetails(Convert.ToInt32(gridviewTable.Rows[idx].Cells["ID"].Value));
+                tableDetail.ShowDialog();
             }
         }
     }

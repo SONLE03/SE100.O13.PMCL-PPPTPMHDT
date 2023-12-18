@@ -47,14 +47,14 @@ namespace DAL
             if (name != null) res = res.Where(t => t.TableName == name).Select(t => t).ToList();
             return res;
         }
-        public bool AddTable(string tableName, AREA area)
+        public bool AddTable(string tableName, int area, string status)
         {
             try
             {
                 var obj = new C_TABLE();
                 obj.TableName = tableName;
-                obj.AreaID = area.id;   
-                obj.Status = "Active";
+                obj.AreaID = area;
+                obj.Status = status;
                 CFEntities.Instance.C_TABLE.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;
@@ -65,14 +65,14 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdTable(int tableID, string tableName, AREA area, string status)
+        public bool UpdTable(int tableID, string tableName, int area, string status)
         {
             try
             {
                 C_TABLE table = GetTableById(tableID);
                 if (table == null) return false;
                 if (tableName != null) table.TableName = tableName;
-                if (area != null) table.AreaID = area.id;
+                if (area != table.AreaID) table.AreaID = area;
                 if (status != table.Status) table.Status = status;
                 CFEntities.Instance.SaveChanges();
                 return true;

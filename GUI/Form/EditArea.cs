@@ -25,7 +25,39 @@ namespace GUI
         {
             lbAreaID.Text = area.AreaID;
             txtAreaname.Text = area.AreaName;
-            
+            cbStatus.Text = area.Status;
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!String.IsNullOrEmpty(txtAreaname.Text) || !String.IsNullOrEmpty(cbStatus.Text))
+                {
+                    bool isSuccess = BUSArea.Instance.UpdArea(area.id, txtAreaname.Text, cbStatus.Text);
+                    if (isSuccess)
+                    {
+                        MessageBox.Show("Update Area Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Update Failure Area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Update Failure Area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }

@@ -19,7 +19,14 @@ namespace DTO
         {
             this.C_TABLE = new HashSet<C_TABLE>();
         }
-    
+        public AREA(int id, string areaID, string areaName, string status)
+        {
+            this.id = id;
+            AreaID = areaID;
+            AreaName = areaName;
+            Status = status;
+        }
+
         public int id { get; set; }
         public string AreaID { get; set; }
         public string AreaName { get; set; }

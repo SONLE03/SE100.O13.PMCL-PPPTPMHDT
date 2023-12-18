@@ -38,9 +38,9 @@ namespace BUS
         {
             return DALArea.Instance.GetAreaByCode(AreaId);
         }
-        public bool AddArea(string AreaName)
+        public bool AddArea(string AreaName, string Status)
         {
-            return DALArea.Instance.AddArea(AreaName);
+            return DALArea.Instance.AddArea(AreaName, Status);
         }
         public bool UpdArea(int idArea, string AreaName, string Status)
         {
