@@ -56,10 +56,14 @@ namespace GUI
             if (idx < 0) return;
             if (e.ColumnIndex == gridviewEmployee.Columns["Edit"].Index)
             {
-               
+                EditEmployee edit_em = new EditEmployee(Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["Employee_ID"].Value));
+                edit_em.ShowDialog();
             }
-            EmployeeDetails details = new EmployeeDetails(Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["Employee_ID"].Value));
-            details.ShowDialog();
+            else
+            {
+                EmployeeDetails details = new EmployeeDetails(Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["Employee_ID"].Value));
+                details.ShowDialog();
+            }
             Binding(BUSUser.Instance.GetAllUser());
         }
     }

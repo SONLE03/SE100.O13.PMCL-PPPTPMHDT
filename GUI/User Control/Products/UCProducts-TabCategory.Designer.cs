@@ -40,6 +40,7 @@
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoryID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnAddCategory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.txtFindCategory = new Guna.UI2.WinForms.Guna2TextBox();
@@ -63,10 +64,10 @@
             this.PanelCategory.Controls.Add(this.btnAddCategory);
             this.PanelCategory.Controls.Add(this.txtFindCategory);
             this.PanelCategory.Location = new System.Drawing.Point(0, 1);
-            this.PanelCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.PanelCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PanelCategory.Name = "PanelCategory";
             this.PanelCategory.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.PanelCategory.Size = new System.Drawing.Size(1017, 653);
+            this.PanelCategory.Size = new System.Drawing.Size(1356, 804);
             this.PanelCategory.TabIndex = 36;
             // 
             // guna2Panel1
@@ -82,9 +83,10 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.gridviewTable);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(45, 128);
+            this.guna2Panel1.Location = new System.Drawing.Point(60, 158);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(924, 480);
+            this.guna2Panel1.Size = new System.Drawing.Size(1232, 591);
             this.guna2Panel1.TabIndex = 50;
             // 
             // label2
@@ -93,10 +95,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(24, 39);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(32, 48);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(380, 20);
+            this.label2.Size = new System.Drawing.Size(481, 25);
             this.label2.TabIndex = 42;
             this.label2.Text = "These are list of all categories in our store up to now ";
             // 
@@ -106,15 +107,16 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(24, 8);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 21);
+            this.label1.Size = new System.Drawing.Size(217, 28);
             this.label1.TabIndex = 41;
             this.label1.Text = "Category information";
             // 
             // gridviewTable
             // 
+            this.gridviewTable.AllowUserToAddRows = false;
+            this.gridviewTable.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.gridviewTable.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridviewTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -133,7 +135,8 @@
             this.gridviewTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
             this.CategoryID,
-            this.Category_name});
+            this.Category_name,
+            this.Edit});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,13 +146,15 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewTable.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewTable.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewTable.Location = new System.Drawing.Point(2, 74);
+            this.gridviewTable.Location = new System.Drawing.Point(3, 91);
+            this.gridviewTable.Margin = new System.Windows.Forms.Padding(4);
             this.gridviewTable.Name = "gridviewTable";
+            this.gridviewTable.ReadOnly = true;
             this.gridviewTable.RowHeadersVisible = false;
             this.gridviewTable.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewTable.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewTable.Size = new System.Drawing.Size(920, 377);
+            this.gridviewTable.Size = new System.Drawing.Size(1227, 464);
             this.gridviewTable.TabIndex = 40;
             this.gridviewTable.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewTable.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -164,7 +169,7 @@
             this.gridviewTable.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.gridviewTable.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewTable.ThemeStyle.HeaderStyle.Height = 40;
-            this.gridviewTable.ThemeStyle.ReadOnly = false;
+            this.gridviewTable.ThemeStyle.ReadOnly = true;
             this.gridviewTable.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewTable.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridviewTable.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -178,26 +183,40 @@
             // 
             this.ID.FillWeight = 150F;
             this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
             // 
             // CategoryID
             // 
             this.CategoryID.FillWeight = 200F;
             this.CategoryID.HeaderText = "Category ID";
+            this.CategoryID.MinimumWidth = 6;
             this.CategoryID.Name = "CategoryID";
+            this.CategoryID.ReadOnly = true;
             // 
             // Category_name
             // 
             this.Category_name.HeaderText = "Category Name";
+            this.Category_name.MinimumWidth = 6;
             this.Category_name.Name = "Category_name";
+            this.Category_name.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.White;
             this.pictureBox2.Image = global::GUI.Properties.Resources.searches;
-            this.pictureBox2.Location = new System.Drawing.Point(380, 33);
+            this.pictureBox2.Location = new System.Drawing.Point(507, 41);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(43, 39);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 49;
             this.pictureBox2.TabStop = false;
@@ -217,10 +236,10 @@
             this.btnAddCategory.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCategory.ForeColor = System.Drawing.Color.White;
             this.btnAddCategory.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddCategory.Location = new System.Drawing.Point(835, 26);
-            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddCategory.Location = new System.Drawing.Point(1113, 32);
+            this.btnAddCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddCategory.Name = "btnAddCategory";
-            this.btnAddCategory.Size = new System.Drawing.Size(133, 41);
+            this.btnAddCategory.Size = new System.Drawing.Size(177, 50);
             this.btnAddCategory.TabIndex = 32;
             this.btnAddCategory.Text = "Add category";
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
@@ -239,25 +258,26 @@
             this.txtFindCategory.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtFindCategory.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtFindCategory.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtFindCategory.Location = new System.Drawing.Point(47, 31);
-            this.txtFindCategory.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtFindCategory.Location = new System.Drawing.Point(63, 38);
+            this.txtFindCategory.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFindCategory.Name = "txtFindCategory";
             this.txtFindCategory.PasswordChar = '\0';
             this.txtFindCategory.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtFindCategory.PlaceholderText = "Search categories";
             this.txtFindCategory.SelectedText = "";
-            this.txtFindCategory.Size = new System.Drawing.Size(374, 36);
+            this.txtFindCategory.Size = new System.Drawing.Size(499, 44);
             this.txtFindCategory.TabIndex = 8;
             this.txtFindCategory.TextChanged += new System.EventHandler(this.txtFindCategory_TextChanged);
             // 
             // UCProducts_TabCategory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.PanelCategory);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCProducts_TabCategory";
-            this.Size = new System.Drawing.Size(1017, 655);
+            this.Size = new System.Drawing.Size(1356, 806);
             this.PanelCategory.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
@@ -274,11 +294,12 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2DataGridView gridviewTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category_name;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2GradientButton btnAddCategory;
         private Guna.UI2.WinForms.Guna2TextBox txtFindCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CategoryID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category_name;
+        private System.Windows.Forms.DataGridViewImageColumn Edit;
     }
 }

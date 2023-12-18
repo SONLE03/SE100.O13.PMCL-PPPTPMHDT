@@ -19,7 +19,14 @@ namespace DTO
         {
             this.DRINKS = new HashSet<DRINK>();
         }
-    
+
+        public CATEGORY(int id, string categoryID, string categoryName)
+        {
+            this.id = id;
+            CategoryID = categoryID;
+            CategoryName = categoryName;
+        }
+
         public int id { get; set; }
         public string CategoryID { get; set; }
         public string CategoryName { get; set; }
