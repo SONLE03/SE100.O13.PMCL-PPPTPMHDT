@@ -26,22 +26,22 @@ namespace GUI
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (txtSupname.Text == "")
-                {
-                    MessageBox.Show("Chưa nhập tên nhà cung cấp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                Boolean err = BUSSupplier.Instance.UpdSupplier(supplier.id, txtSupname.Text, txtAddress.Text, txtPhone.Text);
-                if (err == true) MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                else MessageBox.Show("Cập nhật không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Close();
-            }
-            catch
-            {
+            //try
+            //{
+            //    if (txtSupname.Text == "")
+            //    {
+            //        MessageBox.Show("Chưa nhập tên nhà cung cấp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //        return;
+            //    }
+            //    Boolean err = BUSSupplier.Instance.UpdSupplier(supplier.id, txtSupname.Text, txtAddress.Text, txtPhone.Text);
+            //    if (err == true) MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //    else MessageBox.Show("Cập nhật không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    this.Close();
+            //}
+            //catch
+            //{
 
-            }
+            //}
            
         }
     }

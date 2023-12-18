@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using DTO;
 using System.Windows.Forms;
+using BUS;
 
 namespace GUI
 {
@@ -21,11 +22,13 @@ namespace GUI
 
         public void LoadArea(List<AREA> listAreas)
         {
+            Image edit_img = Properties.Resources.edit_icon;
+            edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
             gridviewArea.Rows.Clear();
             gridviewArea.Refresh();
             listAreas.ForEach(p =>
             {
-                gridviewArea.Rows.Add(p.AreaID, p.AreaName, p.ExtraFee, p.Status);
+                gridviewArea.Rows.Add(p.id, p.AreaID, p.AreaName, p.Status, edit_img);
             });
         }
 
@@ -33,31 +36,7 @@ namespace GUI
         {
             AddArea addArea = new AddArea();
             addArea.ShowDialog();
-            if (addArea.getAnyChanged())
-            {
-                LoadArea(BUS.BUSArea.Instance.GetAllArea());
-            }    
-        }
-
-        private void gridviewArea_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex == -1)
-            {
-                return;
-            }
-            if (e.ColumnIndex == gridviewArea.Columns["AreaID"].Index || e.ColumnIndex == gridviewArea.Columns["Areaname"].Index || e.ColumnIndex == gridviewArea.Columns["ExtraFee"].Index || e.ColumnIndex == gridviewArea.Columns["Status"].Index)
-            {
-                AddArea addArea = new AddArea(BUS.BUSArea.Instance.GetAreaByCode(gridviewArea.Rows[e.RowIndex].Cells["AreaID"].Value.ToString()).id);
-                addArea.ShowDialog();
-                if (addArea.getAnyChanged())
-                {
-                    LoadArea(BUS.BUSArea.Instance.GetAllArea());
-                }
-            }
-            else
-            {
-                MessageBox.Show("Please double click at rows to update or delete", "Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            LoadArea(BUS.BUSArea.Instance.GetAllArea());
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -71,6 +50,18 @@ namespace GUI
                 }    
             });
             LoadArea(listArea);
+        }
+
+        private void gridviewArea_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            if (idx < 0) return;
+            if (e.ColumnIndex == gridviewArea.Columns["Edit"].Index)
+            {
+                EditArea editArea = new EditArea(Convert.ToInt32(gridviewArea.Rows[idx].Cells["ID"].Value));
+                editArea.ShowDialog();
+                LoadArea(BUS.BUSArea.Instance.GetAllArea());
+            }
         }
     }
 }

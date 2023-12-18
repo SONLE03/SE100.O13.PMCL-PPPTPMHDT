@@ -306,77 +306,77 @@ namespace GUI
                 }
                 else
                 {
-                    if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, BUS.BUSCategory.Instance.GetCategoryById(drink.CategoryID), "none", txtDescibe.Text, drink.Image, null, null, true))
-                    {
-                        MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
-                        {
-                            index++;
-                            isUpdated = true;
-                            this.Hide();
-                        }
-                    }
-                    else
-                    {
-                        MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    //if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, BUS.BUSCategory.Instance.GetCategoryById(drink.CategoryID), "none", txtDescibe.Text, drink.Image, null, null, true))
+                    //{
+                    //    MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    //    if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
+                    //    {
+                    //        index++;
+                    //        isUpdated = true;
+                    //        this.Hide();
+                    //    }
+                    //}
+                    //else
+                    //{
+                    //    MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //}
                 }
             }
             else
             {
-                var category = (from p in BUS.BUSCategory.Instance.GetAllCategory() where p.CategoryName.Equals(combobox_category.SelectedItem.ToString()) select p).FirstOrDefault();
-                if (category != null)
-                {
-                    if (canUpdate == true && isChangedImage == true)
-                    {
-                        string fileName = Path.GetFileName(filePath);
-                        string resourcesFolder = Path.Combine(Application.StartupPath, "Resources");
-                        resourcesFolder = resourcesFolder.Replace("\\bin\\Debug", "");
-                        string destinationPath = Path.Combine(resourcesFolder, BUS.BUSDrink.Instance.GetAllDrink().Count + fileName);
+                //var category = (from p in BUS.BUSCategory.Instance.GetAllCategory() where p.CategoryName.Equals(combobox_category.SelectedItem.ToString()) select p).FirstOrDefault();
+                //if (category != null)
+                //{
+                //    if (canUpdate == true && isChangedImage == true)
+                //    {
+                //        string fileName = Path.GetFileName(filePath);
+                //        string resourcesFolder = Path.Combine(Application.StartupPath, "Resources");
+                //        resourcesFolder = resourcesFolder.Replace("\\bin\\Debug", "");
+                //        string destinationPath = Path.Combine(resourcesFolder, BUS.BUSDrink.Instance.GetAllDrink().Count + fileName);
 
-                        File.Copy(filePath, destinationPath, true);
+                //        File.Copy(filePath, destinationPath, true);
 
-                        string lastPathofImage = drink.Image;
+                //        string lastPathofImage = drink.Image;
 
-                        if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, category, "none", txtDescibe.Text, destinationPath, null, null, true))
-                        {
-                            MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            File.Delete(lastPathofImage);
+                //        if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, category, "none", txtDescibe.Text, destinationPath, null, null, true))
+                //        {
+                //            MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //            File.Delete(lastPathofImage);
 
-                            if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
-                            {
-                                index++;
-                                isUpdated = true;
-                                this.Hide();
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                    else
-                    {
-                        if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, category, "none", txtDescibe.Text, drink.Image, null, null, true))
-                        {
-                            MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
-                            {
-                                index++;
-                                isUpdated = true;
-                                this.Hide();
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Can't found category", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                //            if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
+                //            {
+                //                index++;
+                //                isUpdated = true;
+                //                this.Hide();
+                //            }
+                //        }
+                //        else
+                //        {
+                //            MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //        }
+                //    }
+                //    else
+                //    {
+                //        if (BUS.BUSDrink.Instance.UpdDrink(drink.id, txtProductname.Text, category, "none", txtDescibe.Text, drink.Image, null, null, true))
+                //        {
+                //            MessageBox.Show("Update Successfully", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                //            if (BUS.BUSDrink_Size.Instance.UpdDrinkSize(drink.id, newSize.id, double.Parse(txtPrice.Text.ToString())))
+                //            {
+                //                index++;
+                //                isUpdated = true;
+                //                this.Hide();
+                //            }
+                //        }
+                //        else
+                //        {
+                //            MessageBox.Show("Update Failed", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //        }
+                //    }
+                //}
+                //else
+                //{
+                //    MessageBox.Show("Can't found category", "Update product", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //}
             }    
         }
 

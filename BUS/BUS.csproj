@@ -70,6 +70,7 @@
     <Compile Include="BUSImportBillDetail.cs" />
     <Compile Include="BUSOrder.cs" />
     <Compile Include="BUSOrderDetail.cs" />
+    <Compile Include="BUSRule.cs" />
     <Compile Include="BUSService.cs" />
     <Compile Include="BUSSize.cs" />
     <Compile Include="BUSSupplier.cs" />

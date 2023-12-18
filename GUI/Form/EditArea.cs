@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,18 @@ namespace GUI
 {
     public partial class EditArea : Form
     {
-        public EditArea()
+        private AREA area;
+        public EditArea(int id)
         {
             InitializeComponent();
+            area = BUSArea.Instance.GetAreaById(id);
+            LoadData(area);
+        }
+        private void LoadData(AREA area)
+        {
+            lbAreaID.Text = area.AreaID;
+            txtAreaname.Text = area.AreaName;
+            
         }
     }
 }

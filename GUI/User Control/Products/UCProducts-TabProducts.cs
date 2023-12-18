@@ -28,13 +28,13 @@ namespace GUI
         }
         private void LoadCategory()
         {        
-            CATEGORY cat = new CATEGORY(0,"0","All");
-            var listCategories = new List<CATEGORY>();
-            listCategories.Add(cat);
-            listCategories.AddRange(BUSCategory.Instance.GetAllCategory());
-            combobox_category.DataSource = listCategories;
-            combobox_category.ValueMember = "id";
-            combobox_category.DisplayMember = "CategoryName";
+            //CATEGORY cat = new CATEGORY(0,"0","All");
+            //var listCategories = new List<CATEGORY>();
+            //listCategories.Add(cat);
+            //listCategories.AddRange(BUSCategory.Instance.GetAllCategory());
+            //combobox_category.DataSource = listCategories;
+            //combobox_category.ValueMember = "id";
+            //combobox_category.DisplayMember = "CategoryName";
         }
         public void LoadProductInFlowLayoutPanel(List<DRINK> listDrink, List<DRINKS_SIZE> listDrinkSize, List<C_SIZE> listSize)
         {
