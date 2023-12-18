@@ -58,27 +58,24 @@ namespace GUI
         {
             flowLayoutPanelProducts.Controls.Clear();
 
+            var list = new List<int>();
             // Load data for user control
             foreach (var drink in listDrink)
             {
+                list = new List<int>();
+
                 foreach (var drinkSize in listDrinkSize)
                 {
                     if (drink.id == drinkSize.DrinksID)
                     {
-                        foreach (var size in listSize)
-                        {
-                            if (size.id == drinkSize.SizeID)
-                            {
-                                UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
-                                //productMiniItem.loadData(drink.id, drink.Image, drink.DrinksName, drinkSize.OriginalPrice, size.SizeName, drink.Description);
-                                //listMiniItem.Add(productMiniItem);
-                                flowLayoutPanelProducts.Controls.Add(productMiniItem);
-                            }
-                        }
+                        list.Add(drinkSize.SizeID);
                     }
                 }
+                UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
+                productMiniItem.loadData(drink, list);
+                //listMiniItem.Add(productMiniItem);
+                flowLayoutPanelProducts.Controls.Add(productMiniItem);
             }
-
         }
 
         public void addMiniItemProduct(UCMiniProductChoosen product)
