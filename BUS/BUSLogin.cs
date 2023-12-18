@@ -10,6 +10,7 @@ namespace BUS
 {
     public class BUSLogin
     {
+        private C_USER c_user;
         private static BUSLogin instance;
         public static BUSLogin Instance
         {
@@ -27,10 +28,16 @@ namespace BUS
             {
                 if (user.UserName.Equals(usrname) && user.Password.Equals(usrpwd))
                 {
-                    return user;
+                    c_user = user;
+                    return c_user;
                 }
             }
             return null;
+        }
+        public bool checkStatus(C_USER c_user)
+        {
+            if (string.Equals(c_user.Status, "Active", StringComparison.OrdinalIgnoreCase)) return true;
+            return false;
         }
     }
 }

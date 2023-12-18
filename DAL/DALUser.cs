@@ -30,7 +30,6 @@ namespace DAL
             return CFEntities.Instance.C_USER.AsNoTracking().Where(n => n.Status == DALStatus.active.ToString()).ToList();
         }
 
-
         public C_USER GetUserById(int id)
         {
             return CFEntities.Instance.C_USER.Find(id);

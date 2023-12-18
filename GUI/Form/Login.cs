@@ -29,25 +29,31 @@ namespace GUI
         {
             string userName = txtUsername.Text.ToString();
             string passWord = txtPass.Text.ToString();
-            var user = BUS.BUSUser.Instance.GetUserByUsername(userName);
+            var user = BUSLogin.Instance.checkValidLogin(userName, passWord);
 
             if (String.IsNullOrEmpty(userName) || String.IsNullOrEmpty(passWord))
             {
                 MessageBox.Show("Login information is missing!", "Notification", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                 this.resetTextboxs();
+                return;
             }
-            else if (user != null && passWord.Equals(user.Password))
+            if (user != null)
             {
+                if (!BUSLogin.Instance.checkStatus(user))
+                {
+                    MessageBox.Show("Failed to authenticate, The account is inactive", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 MessageBox.Show("Logged in successfully!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 var f = new HomeManager(user);
                 f.ShowDialog();
-
             }
             else
             {
                 MessageBox.Show("Failed to authenticate, please check your username and password", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                resetTextboxs();
             }
         }
 

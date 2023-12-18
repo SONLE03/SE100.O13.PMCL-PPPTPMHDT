@@ -68,6 +68,7 @@
     <Compile Include="BUSGroupUser.cs" />
     <Compile Include="BUSImportBill.cs" />
     <Compile Include="BUSImportBillDetail.cs" />
+    <Compile Include="BUSLogin.cs" />
     <Compile Include="BUSOrder.cs" />
     <Compile Include="BUSOrderDetail.cs" />
     <Compile Include="BUSRule.cs" />
