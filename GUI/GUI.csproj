@@ -248,6 +248,18 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\Bills\UCBills-TabInvoices.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Bills\UCBills-TabInvoices.Designer.cs">
+      <DependentUpon>UCBills-TabInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\Bills\UCBills-TabOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Bills\UCBills-TabOrder.Designer.cs">
+      <DependentUpon>UCBills-TabOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Products\UCSize.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -482,6 +494,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Bills\UCBills-TabInvoices.resx">
+      <DependentUpon>UCBills-TabInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Bills\UCBills-TabOrder.resx">
+      <DependentUpon>UCBills-TabOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Products\UCSize.resx">
       <DependentUpon>UCSize.cs</DependentUpon>

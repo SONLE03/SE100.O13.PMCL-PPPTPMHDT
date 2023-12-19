@@ -37,6 +37,7 @@ namespace GUI
             // 
             // btnUsergroup
             // 
+            this.btnUsergroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnUsergroup.BackColor = System.Drawing.Color.Transparent;
             this.btnUsergroup.BorderRadius = 15;
             this.btnUsergroup.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -49,10 +50,10 @@ namespace GUI
             this.btnUsergroup.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUsergroup.ForeColor = System.Drawing.Color.White;
             this.btnUsergroup.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnUsergroup.Location = new System.Drawing.Point(900, 36);
-            this.btnUsergroup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUsergroup.Location = new System.Drawing.Point(675, 29);
+            this.btnUsergroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUsergroup.Name = "btnUsergroup";
-            this.btnUsergroup.Size = new System.Drawing.Size(188, 50);
+            this.btnUsergroup.Size = new System.Drawing.Size(141, 41);
             this.btnUsergroup.TabIndex = 44;
             this.btnUsergroup.Text = "User group";
             this.btnUsergroup.Click += new System.EventHandler(this.btnUsergroup_Click);
@@ -71,30 +72,32 @@ namespace GUI
             this.btnEmployees.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnEmployees.ForeColor = System.Drawing.Color.White;
             this.btnEmployees.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnEmployees.Location = new System.Drawing.Point(376, 36);
-            this.btnEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEmployees.Location = new System.Drawing.Point(282, 29);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEmployees.Name = "btnEmployees";
-            this.btnEmployees.Size = new System.Drawing.Size(187, 50);
+            this.btnEmployees.Size = new System.Drawing.Size(140, 41);
             this.btnEmployees.TabIndex = 43;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
             // 
             // panelControl
             // 
+            this.panelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl.BackColor = System.Drawing.Color.GhostWhite;
             this.panelControl.BorderColor = System.Drawing.Color.DarkGray;
             this.panelControl.BorderRadius = 40;
             this.panelControl.BorderThickness = 1;
             this.panelControl.FillColor = System.Drawing.Color.White;
-            this.panelControl.Location = new System.Drawing.Point(76, 123);
-            this.panelControl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelControl.Location = new System.Drawing.Point(57, 100);
             this.panelControl.Name = "panelControl";
-            this.panelControl.Size = new System.Drawing.Size(1347, 806);
+            this.panelControl.Size = new System.Drawing.Size(1010, 655);
             this.panelControl.TabIndex = 42;
             // 
             // UCEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -102,9 +105,8 @@ namespace GUI
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.panelControl);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCEmployees";
-            this.Size = new System.Drawing.Size(1499, 985);
+            this.Size = new System.Drawing.Size(1124, 800);
             this.ResumeLayout(false);
 
         }
