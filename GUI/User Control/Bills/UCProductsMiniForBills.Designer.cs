@@ -30,17 +30,16 @@
         {
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.labelID = new System.Windows.Forms.Label();
-            this.lbDescribe = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbPrice = new System.Windows.Forms.Label();
-            this.lbName = new System.Windows.Forms.Label();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnInfo = new System.Windows.Forms.PictureBox();
-            this.ProductImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.ucMiniSizeForBill1 = new GUI.UCMiniSizeForBill();
             this.ucMiniSizeForBill2 = new GUI.UCMiniSizeForBill();
             this.ucMiniSizeForBill3 = new GUI.UCMiniSizeForBill();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbPrice = new System.Windows.Forms.Label();
+            this.btnInfo = new System.Windows.Forms.PictureBox();
+            this.lbName = new System.Windows.Forms.Label();
+            this.ProductImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
@@ -58,7 +57,6 @@
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.BorderThickness = 1;
             this.guna2Panel1.Controls.Add(this.labelID);
-            this.guna2Panel1.Controls.Add(this.lbDescribe);
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.lbPrice);
@@ -86,21 +84,6 @@
             this.labelID.Text = "ID";
             this.labelID.Visible = false;
             // 
-            // lbDescribe
-            // 
-            this.lbDescribe.AllowDrop = true;
-            this.lbDescribe.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbDescribe.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lbDescribe.ForeColor = System.Drawing.Color.DimGray;
-            this.lbDescribe.Location = new System.Drawing.Point(10, 120);
-            this.lbDescribe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbDescribe.Name = "lbDescribe";
-            this.lbDescribe.Size = new System.Drawing.Size(188, 55);
-            this.lbDescribe.TabIndex = 12;
-            this.lbDescribe.Text = "Description";
-            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -111,54 +94,11 @@
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.flowLayoutPanel1);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(111, 80);
+            this.guna2Panel2.Location = new System.Drawing.Point(57, 130);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(87, 30);
             this.guna2Panel2.TabIndex = 11;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(81, 86);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(30, 15);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Size";
-            // 
-            // lbPrice
-            // 
-            this.lbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lbPrice.Location = new System.Drawing.Point(8, 89);
-            this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(62, 15);
-            this.lbPrice.TabIndex = 9;
-            this.lbPrice.Text = "$ 000.000";
-            // 
-            // lbName
-            // 
-            this.lbName.AllowDrop = true;
-            this.lbName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbName.AutoSize = true;
-            this.lbName.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lbName.Location = new System.Drawing.Point(83, 43);
-            this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(85, 15);
-            this.lbName.TabIndex = 3;
-            this.lbName.Text = "Product name";
             // 
             // flowLayoutPanel1
             // 
@@ -169,33 +109,6 @@
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(86, 26);
             this.flowLayoutPanel1.TabIndex = 0;
-            // 
-            // btnInfo
-            // 
-            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnInfo.Image = global::GUI.Properties.Resources.info;
-            this.btnInfo.Location = new System.Drawing.Point(171, 8);
-            this.btnInfo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(25, 25);
-            this.btnInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnInfo.TabIndex = 8;
-            this.btnInfo.TabStop = false;
-            // 
-            // ProductImage
-            // 
-            this.ProductImage.Image = global::GUI.Properties.Resources.milkco1;
-            this.ProductImage.ImageRotate = 0F;
-            this.ProductImage.Location = new System.Drawing.Point(11, 18);
-            this.ProductImage.Margin = new System.Windows.Forms.Padding(2);
-            this.ProductImage.Name = "ProductImage";
-            this.ProductImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.ProductImage.Size = new System.Drawing.Size(60, 60);
-            this.ProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ProductImage.TabIndex = 2;
-            this.ProductImage.TabStop = false;
             // 
             // ucMiniSizeForBill1
             // 
@@ -220,6 +133,76 @@
             this.ucMiniSizeForBill3.Name = "ucMiniSizeForBill3";
             this.ucMiniSizeForBill3.Size = new System.Drawing.Size(22, 26);
             this.ucMiniSizeForBill3.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label1.Location = new System.Drawing.Point(17, 136);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(30, 15);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Size";
+            // 
+            // lbPrice
+            // 
+            this.lbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbPrice.AutoSize = true;
+            this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lbPrice.Location = new System.Drawing.Point(85, 85);
+            this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPrice.Name = "lbPrice";
+            this.lbPrice.Size = new System.Drawing.Size(62, 15);
+            this.lbPrice.TabIndex = 9;
+            this.lbPrice.Text = "$ 000.000";
+            // 
+            // btnInfo
+            // 
+            this.btnInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnInfo.Image = global::GUI.Properties.Resources.info;
+            this.btnInfo.Location = new System.Drawing.Point(169, 8);
+            this.btnInfo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(28, 28);
+            this.btnInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnInfo.TabIndex = 8;
+            this.btnInfo.TabStop = false;
+            // 
+            // lbName
+            // 
+            this.lbName.AllowDrop = true;
+            this.lbName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbName.AutoSize = true;
+            this.lbName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lbName.Location = new System.Drawing.Point(85, 57);
+            this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbName.Name = "lbName";
+            this.lbName.Size = new System.Drawing.Size(103, 19);
+            this.lbName.TabIndex = 3;
+            this.lbName.Text = "Product name";
+            // 
+            // ProductImage
+            // 
+            this.ProductImage.Image = global::GUI.Properties.Resources.milkco1;
+            this.ProductImage.ImageRotate = 0F;
+            this.ProductImage.Location = new System.Drawing.Point(10, 36);
+            this.ProductImage.Margin = new System.Windows.Forms.Padding(2);
+            this.ProductImage.Name = "ProductImage";
+            this.ProductImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ProductImage.Size = new System.Drawing.Size(65, 65);
+            this.ProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProductImage.TabIndex = 2;
+            this.ProductImage.TabStop = false;
             // 
             // UCProductsMiniForBills
             // 
@@ -248,7 +231,6 @@
         private System.Windows.Forms.Label lbPrice;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbDescribe;
         private System.Windows.Forms.Label labelID;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private UCMiniSizeForBill ucMiniSizeForBill1;

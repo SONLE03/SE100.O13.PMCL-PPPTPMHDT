@@ -248,6 +248,12 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\Products\UCSize.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\Products\UCSize.Designer.cs">
+      <DependentUpon>UCSize.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Products\UCProducts-TabProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -476,6 +482,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\Products\UCSize.resx">
+      <DependentUpon>UCSize.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Bills\UCMiniSizeForBill.resx">
       <DependentUpon>UCMiniSizeForBill.cs</DependentUpon>

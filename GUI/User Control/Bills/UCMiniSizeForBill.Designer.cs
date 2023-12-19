@@ -28,25 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtSize = new System.Windows.Forms.TextBox();
+            this.txtSize = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtSize
             // 
-            this.txtSize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
-            this.txtSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSize.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
-            this.txtSize.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtSize.Location = new System.Drawing.Point(3, 5);
-            this.txtSize.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSize.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSize.ForeColor = System.Drawing.Color.White;
+            this.txtSize.Location = new System.Drawing.Point(0, 2);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(15, 16);
-            this.txtSize.TabIndex = 1;
+            this.txtSize.Size = new System.Drawing.Size(22, 23);
+            this.txtSize.TabIndex = 0;
             this.txtSize.Text = "L";
-            this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtSize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UCMiniSizeForBill
             // 
@@ -57,12 +51,11 @@
             this.Name = "UCMiniSizeForBill";
             this.Size = new System.Drawing.Size(22, 26);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtSize;
+        private System.Windows.Forms.Label txtSize;
     }
 }

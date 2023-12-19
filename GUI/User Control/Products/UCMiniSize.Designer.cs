@@ -28,27 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtSize = new System.Windows.Forms.TextBox();
+            this.txtSize = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtSize
             // 
-            this.txtSize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
-            this.txtSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSize.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
-            this.txtSize.ForeColor = System.Drawing.SystemColors.Window;
-            this.txtSize.Location = new System.Drawing.Point(2, 7);
-            this.txtSize.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSize.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtSize.Location = new System.Drawing.Point(0, 7);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(26, 20);
-            this.txtSize.TabIndex = 1;
+            this.txtSize.Size = new System.Drawing.Size(41, 23);
+            this.txtSize.TabIndex = 0;
             this.txtSize.Text = "L";
-            this.txtSize.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtSize.Click += new System.EventHandler(this.txtSize_Click);
-            this.txtSize.TextChanged += new System.EventHandler(this.txtSize_TextChanged);
+            this.txtSize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UCMiniSize
             // 
@@ -57,15 +49,14 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
             this.Controls.Add(this.txtSize);
             this.Name = "UCMiniSize";
-            this.Size = new System.Drawing.Size(30, 35);
+            this.Size = new System.Drawing.Size(41, 36);
             this.Click += new System.EventHandler(this.UCMiniSize_Click);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtSize;
+        private System.Windows.Forms.Label txtSize;
     }
 }

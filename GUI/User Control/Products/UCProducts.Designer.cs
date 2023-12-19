@@ -32,6 +32,7 @@
             this.btnCategory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.PanelDisplayTabs = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.btnSize = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,7 @@
             this.btnProductList.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnProductList.ForeColor = System.Drawing.Color.White;
             this.btnProductList.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnProductList.Location = new System.Drawing.Point(281, 27);
+            this.btnProductList.Location = new System.Drawing.Point(206, 27);
             this.btnProductList.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductList.Name = "btnProductList";
             this.btnProductList.Size = new System.Drawing.Size(135, 37);
@@ -72,7 +73,7 @@
             this.btnCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnCategory.ForeColor = System.Drawing.Color.White;
             this.btnCategory.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnCategory.Location = new System.Drawing.Point(698, 27);
+            this.btnCategory.Location = new System.Drawing.Point(787, 27);
             this.btnCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.Size = new System.Drawing.Size(135, 37);
@@ -100,12 +101,34 @@
             this.PanelDisplayTabs.BorderColor = System.Drawing.Color.DarkGray;
             this.PanelDisplayTabs.BorderRadius = 40;
             this.PanelDisplayTabs.BorderThickness = 1;
-            this.PanelDisplayTabs.Location = new System.Drawing.Point(52, 91);
+            this.PanelDisplayTabs.Location = new System.Drawing.Point(53, 91);
             this.PanelDisplayTabs.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDisplayTabs.Name = "PanelDisplayTabs";
             this.PanelDisplayTabs.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.PanelDisplayTabs.Size = new System.Drawing.Size(1017, 665);
             this.PanelDisplayTabs.TabIndex = 23;
+            // 
+            // btnSize
+            // 
+            this.btnSize.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSize.BackColor = System.Drawing.Color.Transparent;
+            this.btnSize.BorderRadius = 15;
+            this.btnSize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSize.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSize.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSize.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnSize.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnSize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSize.ForeColor = System.Drawing.Color.White;
+            this.btnSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnSize.Location = new System.Drawing.Point(498, 27);
+            this.btnSize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSize.Name = "btnSize";
+            this.btnSize.Size = new System.Drawing.Size(135, 37);
+            this.btnSize.TabIndex = 35;
+            this.btnSize.Text = "Size list";
             // 
             // UCProducts
             // 
@@ -113,6 +136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.btnSize);
             this.Controls.Add(this.btnCategory);
             this.Controls.Add(this.btnProductList);
             this.Controls.Add(this.pictureBox4);
@@ -134,7 +158,7 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnCategory;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelDisplayTabs;
         private UCProducts_TabProducts uCProducts_TabProducts;
-        private UCProducts_TabCategory uCProducts_TabCategory; 
-
+        private UCProducts_TabCategory uCProducts_TabCategory;
+        private Guna.UI2.WinForms.Guna2GradientButton btnSize;
     }
 }
