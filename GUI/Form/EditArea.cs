@@ -37,7 +37,7 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtAreaname.Text) || !String.IsNullOrEmpty(cbStatus.Text))
+                if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
                 {
                     bool isSuccess = BUSArea.Instance.UpdArea(area.id, txtAreaname.Text, cbStatus.Text);
                     if (isSuccess)

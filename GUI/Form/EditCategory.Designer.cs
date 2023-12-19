@@ -42,10 +42,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picture_category = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel_CategoryID.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_category)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -133,6 +133,7 @@
             this.btn_Cancel.Size = new System.Drawing.Size(97, 37);
             this.btn_Cancel.TabIndex = 76;
             this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // btn_Edit
             // 
@@ -153,6 +154,7 @@
             this.btn_Edit.Size = new System.Drawing.Size(97, 37);
             this.btn_Edit.TabIndex = 75;
             this.btn_Edit.Text = "Edit";
+            this.btn_Edit.Click += new System.EventHandler(this.btn_Edit_Click);
             // 
             // label2
             // 
@@ -224,26 +226,44 @@
             this.pictureBox1.TabIndex = 71;
             this.pictureBox1.TabStop = false;
             // 
-            // picture_category
+            // label4
             // 
-            this.picture_category.BackColor = System.Drawing.Color.Transparent;
-            this.picture_category.BorderRadius = 20;
-            this.picture_category.Image = global::GUI.Properties.Resources.milkco;
-            this.picture_category.ImageRotate = 0F;
-            this.picture_category.Location = new System.Drawing.Point(48, 99);
-            this.picture_category.Name = "picture_category";
-            this.picture_category.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.picture_category.Size = new System.Drawing.Size(154, 154);
-            this.picture_category.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_category.TabIndex = 81;
-            this.picture_category.TabStop = false;
-            this.picture_category.UseTransparentBackground = true;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label4.Location = new System.Drawing.Point(47, 128);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 15);
+            this.label4.TabIndex = 81;
+            this.label4.Text = "Status";
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.BorderRadius = 15;
+            this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Active",
+            "InActive"});
+            this.cbStatus.Location = new System.Drawing.Point(46, 194);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(297, 36);
+            this.cbStatus.TabIndex = 82;
             // 
             // EditCategory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(526, 373);
+            this.Controls.Add(this.cbStatus);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.panel_CategoryID);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox1);
@@ -252,7 +272,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtCategoryname);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.picture_category);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -262,7 +281,6 @@
             this.panel_CategoryID.ResumeLayout(false);
             this.panel_CategoryID.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_category)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -281,7 +299,8 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2TextBox txtCategoryname;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2PictureBox picture_category;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
     }
 }

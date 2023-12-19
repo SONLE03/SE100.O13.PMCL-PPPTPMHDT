@@ -30,6 +30,10 @@ namespace BUS
         {
             return DALCategory.Instance.GetAllCategoryActive();
         }
+        public List<CATEGORY> GetAllCategoryInActive()
+        {
+            return DALCategory.Instance.GetAllCategoryInActive();
+        }
         public CATEGORY GetCategoryById(int id)
         {
             return DALCategory.Instance.GetCategoryById(id);
@@ -38,9 +42,9 @@ namespace BUS
         {
             return DALCategory.Instance.GetCategoryByCode(cateID);
         }       
-        public bool AddCategory(string CategoryName)
+        public bool AddCategory(string CategoryName, string status)
         {
-            return DALCategory.Instance.AddCategory(CategoryName);
+            return DALCategory.Instance.AddCategory(CategoryName, status);
         }
         public bool UpdCategory(int idCat, string CategoryName, string Status)
         {

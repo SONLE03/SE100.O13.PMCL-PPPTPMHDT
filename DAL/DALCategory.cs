@@ -28,6 +28,10 @@ namespace DAL
         {
             return CFEntities.Instance.CATEGORies.AsNoTracking().Where(m => m.Status == "Active").ToList();
         }
+        public List<CATEGORY> GetAllCategoryInActive()
+        {
+            return CFEntities.Instance.CATEGORies.AsNoTracking().Where(m => m.Status == "InActive").ToList();
+        }
         public CATEGORY GetCategoryById(int id)
         {
             return CFEntities.Instance.CATEGORies.Find(id);
@@ -48,13 +52,13 @@ namespace DAL
             if (CategoryName != null) res = res.Where(t => t.CategoryName == CategoryName).Select(t => t).ToList();
             return res;
         }
-        public bool AddCategory(string CategoryName)
+        public bool AddCategory(string CategoryName, string status)
         {
             try
             {
                 var obj = new CATEGORY();
                 obj.CategoryName = CategoryName;
-                obj.Status = "Active";
+                obj.Status = status;
                 CFEntities.Instance.CATEGORies.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;

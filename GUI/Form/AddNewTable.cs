@@ -37,7 +37,7 @@ namespace GUI
         {
             try
             {
-                if(!String.IsNullOrEmpty(txtTableName.Text) || !String.IsNullOrEmpty(comboboxArea.Text) || !String.IsNullOrEmpty(cbStatus.Text))
+                if(!String.IsNullOrEmpty(txtTableName.Text) && !String.IsNullOrEmpty(comboboxArea.Text) && !String.IsNullOrEmpty(cbStatus.Text))
                 {
                     addNewTable();
                 }

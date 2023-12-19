@@ -26,7 +26,7 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtAreaname.Text) || !String.IsNullOrEmpty(cbStatus.Text))
+                if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
                 {
                     bool isSuccess = BUSArea.Instance.AddArea(txtAreaname.Text, cbStatus.Text);
                     if (isSuccess)
