@@ -17,7 +17,13 @@ namespace GUI
         public UCTables_TabAreas()
         {
             InitializeComponent();
-            LoadArea(BUS.BUSArea.Instance.GetAllArea());
+            setAreaStatus();
+        }
+
+        private void setAreaStatus()
+        {
+            cbStatus.Items.AddRange(new string[] { "All", "Active", "InActive" });
+            cbStatus.SelectedIndex = 0;
         }
 
         public void LoadArea(List<AREA> listAreas)
@@ -39,17 +45,28 @@ namespace GUI
             LoadArea(BUS.BUSArea.Instance.GetAllArea());
         }
 
+        private void Search()
+        {
+            List<AREA> listArea;
+            if (string.Equals(cbStatus.Text, "All", StringComparison.OrdinalIgnoreCase))
+            {
+                listArea = BUSArea.Instance.GetAllArea();
+            }
+            else if(string.Equals(cbStatus.Text, "Active", StringComparison.OrdinalIgnoreCase))
+            {
+                listArea = BUS.BUSArea.Instance.GetAllAreaActive();
+            }
+            else
+            {
+                listArea = BUS.BUSArea.Instance.GetAllAreaInActive();
+            }
+            List<AREA> filteredList = listArea.Where(p => p.AreaName.ToLower().Contains(txtSearch.Text.ToLower())).ToList();
+            LoadArea(filteredList);
+        }
+
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            List<AREA> listArea = new List<AREA>();
-            BUS.BUSArea.Instance.GetAllArea().ToList().ForEach(p =>
-            {
-                if (p.AreaName.ToLower().Contains(txtSearch.Text.ToLower()))
-                {
-                    listArea.Add(p);
-                }    
-            });
-            LoadArea(listArea);
+            Search();
         }
 
         private void gridviewArea_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -62,6 +79,11 @@ namespace GUI
                 editArea.ShowDialog();
                 LoadArea(BUS.BUSArea.Instance.GetAllArea());
             }
+        }
+
+        private void cbStatus_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Search();
         }
     }
 }

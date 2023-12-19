@@ -15,20 +15,27 @@ namespace GUI
 {
     public partial class UCTables_TabTables : UserControl
     {
+        private List<C_TABLE> listTables;
         public UCTables_TabTables()
         {
             InitializeComponent();
-            LoadTable(BUS.BUSTable.Instance.GetAllTable());
             LoadArea();
+            LoadTable(BUSTable.Instance.GetAllTable());
+            setTableStatus();
         }
 
-        public void LoadTable(List<C_TABLE> listTables)
+        private void setTableStatus()
+        {
+            cbStatus.Items.AddRange(new string[] { "All", "Active", "InUse", "InActive" });
+            cbStatus.SelectedIndex = 0;
+        }
+        public void LoadTable(List<C_TABLE> listTable)
         {
             Image edit_img = Properties.Resources.edit_icon;
             edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
             gridviewTable.Rows.Clear();
             gridviewTable.Refresh();
-            listTables.ForEach(p =>
+            listTable.ForEach(p =>
             {
                 gridviewTable.Rows.Add(p.id, p.TableID, p.TableName, p.AREA.AreaName, p.Status, edit_img);
             });
@@ -51,42 +58,15 @@ namespace GUI
 
         private void Search()
         {
-            List<C_TABLE> listTable = new List<C_TABLE>();
-            if (String.IsNullOrEmpty(txtSearch.Text.ToString()) && !combobox_area.SelectedItem.ToString().Equals("All"))
-            {
-                BUSTable.Instance.GetAllTable().ToList().ForEach(p =>
-                {
-                    if (p.AREA.AreaName.Equals(combobox_area.SelectedItem.ToString()))
-                    {
-                        listTable.Add(p);
-                    }
-                });
-            }
-            else if (!String.IsNullOrEmpty(txtSearch.Text.ToString()) && !combobox_area.SelectedItem.ToString().Equals("All"))
-            {
-                BUSTable.Instance.GetAllTable().ToList().ForEach(p =>
-                {
-                    if (p.TableName.ToLower().Contains(txtSearch.Text.ToString().ToLower()) && p.AREA.AreaName.Equals(combobox_area.SelectedItem.ToString()))
-                    {
-                        listTable.Add(p);
-                    }
-                });
-            }
-            else if (!String.IsNullOrEmpty(txtSearch.Text.ToString()) && combobox_area.SelectedItem.ToString().Equals("All"))
-            {
-                BUSTable.Instance.GetAllTable().ToList().ForEach(p =>
-                {
-                    if (p.TableName.ToLower().Contains(txtSearch.Text.ToString().ToLower()))
-                    {
-                        listTable.Add(p);
-                    }
-                });
-            }
-            else
-            {
-                listTable = BUSTable.Instance.GetAllTable();
-            }
-            LoadTable(listTable);
+            string searchText = txtSearch.Text.Trim().ToLower();
+            string selectedArea = combobox_area.SelectedItem?.ToString();
+            string selectedStatus = cbStatus.Text;
+            LoadTable(BUSTable.Instance.Search(searchText, selectedArea, selectedStatus));
+        }
+
+        private void cbStatus_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Search();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -115,5 +95,7 @@ namespace GUI
                 tableDetail.ShowDialog();
             }
         }
+
+       
     }
 }

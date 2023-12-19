@@ -26,7 +26,15 @@ namespace DAL
         }
         public List<C_TABLE> GetAllTableActive()
         {
-            return CFEntities.Instance.C_TABLE.AsNoTracking().Where(m => m.Status == DALStatus.active.ToString()).ToList();
+            return CFEntities.Instance.C_TABLE.AsNoTracking().Where(m => m.Status == "Active").ToList();
+        }
+        public List<C_TABLE> GetAllTableInActive()
+        {
+            return CFEntities.Instance.C_TABLE.AsNoTracking().Where(m => m.Status == "InActive").ToList();
+        }
+        public List<C_TABLE> GetAllTableInUse()
+        {
+            return CFEntities.Instance.C_TABLE.AsNoTracking().Where(m => m.Status == "InUse").ToList();
         }
         public C_TABLE GetTableById(int id)
         {
@@ -41,11 +49,18 @@ namespace DAL
             }
             return null;
         }
-        public List<C_TABLE> FindTable(string name)
+        public List<C_TABLE> SearchTable(string searchText, string selectedArea, string selectedStatus)
         {
-            var res = CFEntities.Instance.C_TABLE.ToList();
-            if (name != null) res = res.Where(t => t.TableName == name).Select(t => t).ToList();
-            return res;
+            List<C_TABLE> listTables = CFEntities.Instance.C_TABLE.ToList();
+            List<C_TABLE> filteredList = new List<C_TABLE>();
+            filteredList = listTables
+                .Where(p =>
+                    (string.IsNullOrEmpty(searchText) || p.TableName.ToLower().Contains(searchText)) &&
+                    (selectedArea == "All" || string.Equals(p.AREA.AreaName, selectedArea, StringComparison.OrdinalIgnoreCase)) &&
+                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                )
+                .ToList();
+            return filteredList;
         }
         public bool AddTable(string tableName, int area, string status)
         {

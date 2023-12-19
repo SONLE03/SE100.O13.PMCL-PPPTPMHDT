@@ -28,6 +28,10 @@ namespace DAL
         {
             return CFEntities.Instance.AREAs.AsNoTracking().Where(m => m.Status == "Active").ToList();
         }
+        public List<AREA> GetAllAreaInActive()
+        {
+            return CFEntities.Instance.AREAs.AsNoTracking().Where(m => m.Status == "InActive").ToList();
+        }
         public AREA GetAreaById(int id)
         {
             return CFEntities.Instance.AREAs.Find(id);
@@ -74,7 +78,7 @@ namespace DAL
                 if (Status != area.Status)
                 {
                     area.Status = Status;
-                    bool checkTableStatus = area.C_TABLE.Any(table => table.Status == "Customer");
+                    bool checkTableStatus = area.C_TABLE.Any(table => table.Status == "InUse");
                     if(!checkTableStatus)
                     {
                         foreach(var table in area.C_TABLE)

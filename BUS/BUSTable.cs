@@ -3,6 +3,7 @@ using DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -30,6 +31,14 @@ namespace BUS
         {
             return DALTable.Instance.GetAllTableActive();
         }
+        public List<C_TABLE> GetAllTableInActive()
+        {
+            return DALTable.Instance.GetAllTableInActive();
+        }
+        public List<C_TABLE> GetAllTableInUse()
+        {
+            return DALTable.Instance.GetAllTableInUse();
+        }
         public C_TABLE GetTableById(int id)
         {
             return DALTable.Instance.GetTableById(id);
@@ -53,6 +62,10 @@ namespace BUS
             AREA area = DALArea.Instance.GetAreaById(areaid);
             if (area.Status.Equals("InActive") && status.Equals("Active")) return false;
             return true;
+        }
+        public List<C_TABLE> Search(string searchText, string selectedArea, string selectedStatus)
+        {
+           return DALTable.Instance.SearchTable(searchText, selectedArea, selectedStatus);
         }
     }
 }

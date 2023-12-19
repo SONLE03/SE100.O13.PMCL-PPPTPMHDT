@@ -30,6 +30,10 @@ namespace BUS
         {
             return DALArea.Instance.GetAllAreaActive();
         }
+        public List<AREA> GetAllAreaInActive()
+        {
+            return DALArea.Instance.GetAllAreaInActive();
+        }
         public AREA GetAreaById(int id)
         {
             return DALArea.Instance.GetAreaById(id);

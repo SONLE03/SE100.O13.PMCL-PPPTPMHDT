@@ -39,15 +39,7 @@ namespace GUI
             {
                 if(!String.IsNullOrEmpty(txtTableName.Text) || !String.IsNullOrEmpty(comboboxArea.Text) || !String.IsNullOrEmpty(cbStatus.Text))
                 {
-                    bool isSuccess = BUSTable.Instance.AddTable(txtTableName.Text, Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text);
-                    if (isSuccess)
-                    {
-                        MessageBox.Show("Add Table Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Add Failure Table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    addNewTable();
                 }
                 else
                 {
@@ -58,6 +50,40 @@ namespace GUI
             {
 
             }
+        }
+        private void addNewTable()
+        {
+            try
+            {
+                int quantity = 1;
+                int i = 1;
+                if (!String.IsNullOrEmpty(txtQuantity.Text))
+                {
+                    quantity = Convert.ToInt32(txtQuantity.Text);
+                }
+                for (i = 1; i <= quantity; i++)
+                {
+                    BUSTable.Instance.AddTable(txtTableName.Text + i.ToString(), Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text);
+                }
+                if (i == quantity + 1)
+                {
+                    MessageBox.Show("Add Table Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Add Failure Table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }
