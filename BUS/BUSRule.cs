@@ -38,18 +38,6 @@ namespace BUS
                 return "";
             return "Error";
         }
-        public string UpdMinimumPrice(int price)
-        {
-            if (DALRule.Instance.UpdMinimumPrice(price))
-                return "";
-            return "Error";
-        }
-        public string UpdMaximumPrice(int price)
-        {
-            if (DALRule.Instance.UpdMaximumPrice(price))
-                return "";
-            return "Error";
-        }
         public string UpdTax(int tax)
         {
             if (DALRule.Instance.UpdTax(tax))

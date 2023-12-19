@@ -20,16 +20,14 @@ namespace GUI
         {
             InitializeComponent();
             this.ucProduct = ucProduct;
-            pictureBox2.Visible = false;
-            guna2Panel1.Visible = false;
+            pic_AddToCart.Visible = false;
         }
 
         public UCProductMiniItem(UCBill uCBill)
         {
             InitializeComponent();
             this.ucBill = uCBill;
-            pictureBox1.Visible = false;
-            guna2Panel1.Visible = false;
+            pic_edit.Visible = false;
         }
 
         public void updatePrice(string price)
@@ -43,88 +41,26 @@ namespace GUI
             {
                 lbName.Text = drink.DrinksName;
                 lbPrice.Text = "0 VND";
-                lbDescribe.Text = drink.Description;
-                //textBox1.Text = sizeName;
                 labelID.Text = drink.id.ToString();
-                labelID.Visible = false;
-                guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(drink.Image);
+                drinkPicture.Image = new System.Drawing.Bitmap(drink.Image);
 
-                foreach(var p in sizes)
+                foreach (var p in sizes)
                 {
                     UCMiniSize uCMiniSize = new UCMiniSize(BUS.BUSSize.Instance.GetSizeById(p), this, labelID.Text);
                     flowLayoutPanel1.Controls.Add(uCMiniSize);
-                }    
+                }
             }
             catch (Exception ex)
             {
                 string resourcesFolder = Path.Combine(Application.StartupPath, "Resources");
                 resourcesFolder = resourcesFolder.Replace("\\bin\\Debug", "");
                 string imagePathError = Path.Combine(resourcesFolder, "NotFoundImage.png");
-                guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(imagePathError);
-
+                drinkPicture.Image = new System.Drawing.Bitmap(imagePathError);
                 BUS.BUSDrink.Instance.UpdateImageErrorNotFound(drink.id, imagePathError);
             }
         }
 
-        //private void pictureBox1_Click(object sender, EventArgs e)
-        //{
-        //    var drink = BUS.BUSDrink.Instance.GetDrinkById(int.Parse(labelID.Text.ToString()));
-        //    var size = (from p in BUS.BUSSize.Instance.GetAllSize() where p.SizeName.Equals(textBox1.Text.ToString()) select p).FirstOrDefault();
-        //    var drinkSize = (from p in BUS.BUSDrink_Size.Instance.GetAllDrinkSize() where p.SizeID.Equals(size.id) && p.DrinksID.Equals(drink.id) select p).FirstOrDefault();
-
-        //    AddNewProduct addNewProduct = new AddNewProduct(drink, size, drinkSize);
-        //    addNewProduct.ShowDialog();
-
-        //    anyChanged = true;
-
-        //    if (addNewProduct.getAnyChanged())
-        //    {
-        //        ucProduct.deleteMiniItem(this);
-        //        ucProduct.Show();
-        //    }
-        //}
-
-        public bool getAnyChanged()
-        {
-            return anyChanged;
-        }
-
-        public void setAnyChanged(bool anyChanged)
-        {
-            this.anyChanged = anyChanged;
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-            var drink = BUS.BUSDrink.Instance.GetDrinkById(int.Parse(labelID.Text.ToString()));
-            var size = (from p in BUS.BUSSize.Instance.GetAllSize() where p.SizeName.Equals(textBox1.Text.ToString()) select p).FirstOrDefault();
-            DTO.DRINKS_SIZE drinkSize = new DTO.DRINKS_SIZE();
-            foreach (var p in BUS.BUSDrink_Size.Instance.GetAllDrinkSize())
-            {
-                if (p.SizeID == size.id && p.DrinksID == drink.id)
-                {
-                    drinkSize = p;
-                }
-            }    
-
-            AddNewProduct addNewProduct = new AddNewProduct(drink, size, drinkSize);
-            addNewProduct.ShowDialog();
-
-            anyChanged = true;
-
-            if (addNewProduct.anyDeleted())
-            {
-                ucProduct.deleteMiniItem(this);
-                ucProduct.Show();
-            }
-            if (addNewProduct.anyUpdated())
-            {
-                ucProduct.updateMiniItem(this);
-                ucProduct.Show();
-            }    
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
+        private void pic_AddToCart_Click(object sender, EventArgs e)
         {
             if (ucBill != null)
             {
@@ -132,12 +68,21 @@ namespace GUI
                 UCMiniProductChoosen ucMiniProductChoosen = new UCMiniProductChoosen(ucBill, drink.Image, lbName.Text, lbPrice.Text);
                 ucBill.addMiniItemProduct(ucMiniProductChoosen);
                 ucBill.Show();
-            }    
+            }
         }
 
-        private void guna2CustomGradientPanel1_Paint(object sender, PaintEventArgs e)
+        private void panelProduct_Click(object sender, EventArgs e)
         {
+            ProductDetail productDetail = new ProductDetail(Convert.ToInt32(labelID.Text.ToString()));
+            productDetail.ShowDialog();
+        }
 
+        private void pic_edit_Click(object sender, EventArgs e)
+        {
+            EditProduct editProduct = new EditProduct(Convert.ToInt32(labelID.Text.ToString()));
+            editProduct.ShowDialog();
+            ucProduct.updateMiniItem(this);
+            ucProduct.Show();
         }
     }
 }

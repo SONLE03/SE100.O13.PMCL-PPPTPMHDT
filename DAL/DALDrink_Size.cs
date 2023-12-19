@@ -26,16 +26,16 @@ namespace DAL
             return CFEntities.Instance.DRINKS_SIZE.AsNoTracking().ToList();
         }
 
-        public bool AddDrink_Size(DRINK Drink, C_SIZE Size, double price)
+        public bool AddDrink_Size(DRINK Drink, int? SizeId, double price)
         {
             try
             {
-                if (Drink == null || Size == null) return false;
+                if (Drink == null || SizeId == null) return false;
                 double discount = 0;
                 var ct = new DRINKS_SIZE
                 {
                     DrinksID = Drink.id,
-                    SizeID = Size.id,
+                    SizeID = (int)SizeId,
                     OriginalPrice = price,
                     Discount = discount
 

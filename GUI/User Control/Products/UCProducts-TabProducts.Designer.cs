@@ -36,6 +36,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.PanelProductlist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.SuspendLayout();
@@ -49,6 +52,9 @@
             this.PanelProductlist.BorderColor = System.Drawing.Color.DarkGray;
             this.PanelProductlist.BorderRadius = 40;
             this.PanelProductlist.BorderThickness = 1;
+            this.PanelProductlist.Controls.Add(this.label1);
+            this.PanelProductlist.Controls.Add(this.cbStatus);
+            this.PanelProductlist.Controls.Add(this.panel2);
             this.PanelProductlist.Controls.Add(this.btnSearch);
             this.PanelProductlist.Controls.Add(this.btnAddProduct);
             this.PanelProductlist.Controls.Add(this.label4);
@@ -68,7 +74,7 @@
             this.btnSearch.BackColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::GUI.Properties.Resources.searches;
             this.btnSearch.Location = new System.Drawing.Point(471, 28);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(43, 39);
             this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -174,10 +180,52 @@
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel.Location = new System.Drawing.Point(37, 149);
-            this.flowLayoutPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(1280, 633);
             this.flowLayoutPanel.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label1.Location = new System.Drawing.Point(754, 102);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(77, 30);
+            this.label1.TabIndex = 58;
+            this.label1.Text = "Status";
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.BorderColor = System.Drawing.Color.Black;
+            this.cbStatus.BorderRadius = 10;
+            this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cbStatus.ForeColor = System.Drawing.Color.White;
+            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.Location = new System.Drawing.Point(851, 96);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(216, 36);
+            this.cbStatus.TabIndex = 57;
+            this.cbStatus.SelectedValueChanged += new System.EventHandler(this.cbStatus_SelectedValueChanged);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.panel2.Location = new System.Drawing.Point(745, 95);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(5, 42);
+            this.panel2.TabIndex = 56;
             // 
             // UCProducts_TabProducts
             // 
@@ -185,7 +233,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.PanelProductlist);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCProducts_TabProducts";
             this.Size = new System.Drawing.Size(1356, 806);
             this.PanelProductlist.ResumeLayout(false);
@@ -205,5 +253,8 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
+        private System.Windows.Forms.Panel panel2;
     }
 }

@@ -54,5 +54,9 @@ namespace BUS
         {
             return DALCategory.Instance.DelCategory(idCat);
         }
+        public bool categoryIsBlocked(int id)
+        {
+            return DALCategory.Instance.categoryIsBlocked(id);
+        }
     }
 }

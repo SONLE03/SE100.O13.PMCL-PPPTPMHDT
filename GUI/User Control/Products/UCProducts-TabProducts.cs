@@ -21,45 +21,63 @@ namespace GUI
             listMiniItem = new List<UCProductMiniItem>();
             LoadCategory();
             LoadProduct();
+            setProductStatus();
         }
         private void LoadProduct()
         {
             LoadProductInFlowLayoutPanel(BUSDrink.Instance.GetAllDrink(), BUSDrink_Size.Instance.GetAllDrinkSize(), BUSSize.Instance.GetAllSize());
         }
+        private void setProductStatus()
+        {
+            cbStatus.Items.AddRange(new string[] { "All", "Active", "InActive" });
+            cbStatus.SelectedIndex = 0;
+        }
         private void LoadCategory()
-        {        
-            //CATEGORY cat = new CATEGORY(0,"0","All");
-            //var listCategories = new List<CATEGORY>();
-            //listCategories.Add(cat);
-            //listCategories.AddRange(BUSCategory.Instance.GetAllCategory());
-            //combobox_category.DataSource = listCategories;
-            //combobox_category.ValueMember = "id";
-            //combobox_category.DisplayMember = "CategoryName";
+        {
+            combobox_category.Items.Add("All");
+            BUSCategory.Instance.GetAllCategory().ToList().ForEach(p =>
+            {
+                combobox_category.Items.Add(p.CategoryName);
+            });
+            combobox_category.SelectedItem = "All";
         }
         public void LoadProductInFlowLayoutPanel(List<DRINK> listDrink, List<DRINKS_SIZE> listDrinkSize, List<C_SIZE> listSize)
         {
-            flowLayoutPanel.Controls.Clear();
-
-            var list = new List<int>();
-            // Load data for user control
-            foreach (var drink in listDrink)
+            try
             {
-                list = new List<int>();
-                
-                foreach (var drinkSize in listDrinkSize)
+                flowLayoutPanel.Controls.Clear();
+
+                var list = new List<int>();
+                // Load data for user control
+                foreach (var drink in listDrink)
                 {
-                    if (drink.id == drinkSize.DrinksID)
+                    list = new List<int>();
+
+                    foreach (var drinkSize in listDrinkSize)
                     {
-                        list.Add(drinkSize.SizeID);
+                        if (drink.id == drinkSize.DrinksID)
+                        {
+                            list.Add(drinkSize.SizeID);
+                        }
                     }
+                    UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
+                    productMiniItem.loadData(drink, list);
+                    listMiniItem.Add(productMiniItem);
+                    flowLayoutPanel.Controls.Add(productMiniItem);
                 }
-                UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
-                productMiniItem.loadData(drink, list);
-                listMiniItem.Add(productMiniItem);
-                flowLayoutPanel.Controls.Add(productMiniItem);
             }
+            catch
+            {
+
+            } 
         }
 
+        private void btnAddProduct_Click(object sender, EventArgs e)
+        {
+            var addNewProduct = new AddNewProduct();
+            addNewProduct.ShowDialog();
+            LoadProduct();
+        } 
 
         public void deleteMiniItem(UCProductMiniItem uc)
         {
@@ -71,106 +89,35 @@ namespace GUI
             LoadProduct();
         }
 
-        private void btnAddProduct_Click(object sender, EventArgs e)
+        private void Search()
         {
-            var addNewProduct = new AddNewProduct();
-            addNewProduct.ShowDialog();
-            if (addNewProduct.anyAdded())
+            try
             {
-                LoadProduct();
+                string searchText = txtSearch.Text.Trim().ToLower();
+                string selectedCategory = combobox_category.SelectedItem?.ToString();
+                string selectedStatus = cbStatus.Text;
+                List<DRINK> listDrinks = BUSDrink.Instance.SearchDrinks(searchText, selectedCategory, selectedStatus);
+                LoadProductInFlowLayoutPanel(listDrinks, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
             }
+            catch
+            {
+
+            }     
         }
 
         private void combobox_category_SelectedValueChanged(object sender, EventArgs e)
         {
-            if (!combobox_category.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<DRINK> listDrinkbyCategoryAndSearching = new List<DRINK>();
-                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
-                {
-                    if (p.DrinksName.ToLower().Contains(txtSearch.Text.ToString().ToLower()) && p.CATEGORY.CategoryName.Equals(combobox_category.SelectedItem.ToString()))
-                    {
-                        listDrinkbyCategoryAndSearching.Add(p);
-                    }
-                }
-                LoadProductInFlowLayoutPanel(listDrinkbyCategoryAndSearching, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
-            }
-            else if (!combobox_category.SelectedItem.ToString().Equals("All") && String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<DRINK> listDrinkbyCategory = new List<DRINK>();
-                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
-                {
-                    if (p.CATEGORY.CategoryName.Equals(combobox_category.SelectedItem.ToString()))
-                    {
-                        listDrinkbyCategory.Add(p);
-                    }
-                }
-                LoadProductInFlowLayoutPanel(listDrinkbyCategory, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
-            }
-            else if (combobox_category.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<DRINK> listDrinkbySearching = new List<DRINK>();
-                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
-                {
-                    if (p.DrinksName.ToLower().Contains(txtSearch.Text.ToString().ToLower()))
-                    {
-                        listDrinkbySearching.Add(p);
-                    }
-                }
-                LoadProductInFlowLayoutPanel(listDrinkbySearching, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
-            }
-            else
-            {
-                LoadProductInFlowLayoutPanel(BUS.BUSDrink.Instance.GetAllDrink(),
-                                                  BUS.BUSDrink_Size.Instance.GetAllDrinkSize(),
-                                                  BUS.BUSSize.Instance.GetAllSize());
-            }
+            Search();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            if (!combobox_category.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<DRINK> listDrinkbyCategoryAndSearching = new List<DRINK>();
-                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
-                {
-                    if (p.DrinksName.ToLower().Contains(txtSearch.Text.ToString().ToLower()) && p.CATEGORY.CategoryName.Equals(combobox_category.SelectedItem.ToString()))
-                    {
-                        listDrinkbyCategoryAndSearching.Add(p);
-                    }
-                }
-                LoadProductInFlowLayoutPanel(listDrinkbyCategoryAndSearching, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
-            }
-            else if (!combobox_category.SelectedItem.ToString().Equals("All") && String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<DRINK> listDrinkbyCategory = new List<DRINK>();
-                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
-                {
-                    if (p.CATEGORY.CategoryName.Equals(combobox_category.SelectedItem.ToString()))
-                    {
-                        listDrinkbyCategory.Add(p);
-                    }
-                }
-                LoadProductInFlowLayoutPanel(listDrinkbyCategory, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
-            }
-            else if (combobox_category.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtSearch.Text.ToString()))
-            {
-                List<DRINK> listDrinkbySearching = new List<DRINK>();
-                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
-                {
-                    if (p.DrinksName.ToLower().Contains(txtSearch.Text.ToString().ToLower()))
-                    {
-                        listDrinkbySearching.Add(p);
-                    }
-                }
-                LoadProductInFlowLayoutPanel(listDrinkbySearching, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
-            }
-            else
-            {
-                LoadProductInFlowLayoutPanel(BUS.BUSDrink.Instance.GetAllDrink(),
-                                                  BUS.BUSDrink_Size.Instance.GetAllDrinkSize(),
-                                                  BUS.BUSSize.Instance.GetAllSize());
-            }
+            Search();
+        }
+
+        private void cbStatus_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Search();
         }
     }
 }

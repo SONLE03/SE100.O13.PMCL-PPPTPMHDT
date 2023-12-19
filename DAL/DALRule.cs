@@ -30,8 +30,6 @@ namespace DAL
                     MinimumAge = 18,
                     MaximumAge = 25,
                     Tax = 8,
-                    MinimumPrice = 20000,
-                    MaximumPrice = 65000,
                 });
                 CFEntities.Instance.SaveChanges();
             }
@@ -62,36 +60,6 @@ namespace DAL
             {
                 C_RULE ts = GetAllRule();
                 ts.MaximumAge = age;
-                CFEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-
-        }
-        public bool UpdMinimumPrice(int price)
-        {
-            try
-            {
-                C_RULE ts = GetAllRule();
-                ts.MinimumPrice = price;
-                CFEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
-
-        }
-        public bool UpdMaximumPrice(int price)
-        {
-            try
-            {
-                C_RULE ts = GetAllRule();
-                ts.MaximumPrice = price;
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

@@ -22,9 +22,9 @@ namespace BUS
             set { instance = value; }
         }
 
-        public bool AddDrink_Size(DRINK Drink, C_SIZE Size, double price)
+        public bool AddDrink_Size(DRINK Drink, int SizeId, double price)
         {
-            return DALDrink_Size.Instance.AddDrink_Size(Drink, Size, price);
+            return DALDrink_Size.Instance.AddDrink_Size(Drink, SizeId, price);
         }
 
         public List<DTO.DRINKS_SIZE> GetAllDrinkSize()

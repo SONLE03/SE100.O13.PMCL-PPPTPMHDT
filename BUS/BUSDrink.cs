@@ -40,16 +40,24 @@ namespace BUS
         {
             return DALDrink.Instance.GetDrinkByCode(DrinksID);
         }
-
-        public DRINK AddDrink(string DrinksName, CATEGORY drinkCategory, string Unit,
-            string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs)
+        public bool checkCategoryStatus(int catId, string status)
         {
-            return DALDrink.Instance.AddDrink(DrinksName, drinkCategory, Description, Image);
+            CATEGORY cat = DALCategory.Instance.GetCategoryById(catId);
+            if (cat.Status.Equals("InActive") && status.Equals("Active")) return false;
+            return true;
         }
 
-        public bool UpdDrink(int idDrink, string DrinksName, CATEGORY drinkCategory, string Unit,
-            string Description, string Image, int? idEV, List<DRINKS_SIZE> Drink_SIZEs, string Status)
+        public DRINK AddDrink(string DrinksName, int drinkCategory,
+            string Description, string Image, string status)
         {
+            if (!checkCategoryStatus(drinkCategory, status)) return null;
+            return DALDrink.Instance.AddDrink(DrinksName, drinkCategory, Description, Image, status);
+        }
+
+        public bool UpdDrink(int idDrink, string DrinksName, int drinkCategory,
+            string Description, string Image, List<DRINKS_SIZE> Drink_SIZEs, string Status)
+        {
+            if (!checkCategoryStatus(drinkCategory, Status)) return false;
             return DALDrink.Instance.UpdDrink(idDrink, DrinksName, drinkCategory, Description, Image, Drink_SIZEs, Status);
         }
 
@@ -61,6 +69,10 @@ namespace BUS
         public bool DelDrink(int id)
         {
             return DALDrink.Instance.DelDrink(id);
+        }
+        public List<DRINK> SearchDrinks(string searchText, string selectedCategory, string selectedStatus)
+        {
+            return DALDrink.Instance.SearchDrinks(searchText, selectedCategory, selectedStatus);
         }
     }
 }

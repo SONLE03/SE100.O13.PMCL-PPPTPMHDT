@@ -36,6 +36,12 @@ namespace DAL
         {
             return CFEntities.Instance.CATEGORies.Find(id);
         }
+        public bool categoryIsBlocked(int id)
+        {
+            CATEGORY category = GetCategoryById(id);
+            if (category.Status.Equals("Active")) return false;
+            return true;
+        }
         public CATEGORY GetCategoryByCode(string cateID)
         {
             var res = CFEntities.Instance.CATEGORies.AsNoTracking().Where(m => m.CategoryID == cateID);
