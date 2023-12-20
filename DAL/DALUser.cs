@@ -76,8 +76,8 @@ namespace DAL
             return false;
         }
 
-        public int AddUser(string UserFullName, DateTime DateofBirth, string Address, string Phone,
-                                 string UserName, string Password, string Email, int GroupUserID, string Image)
+        public bool AddUser(string UserFullName, DateTime DateofBirth, string Address, string Phone,
+                                 string UserName, string Password, string Email, int GroupUserID, string Image, string status)
         {
             try
             {
@@ -91,21 +91,21 @@ namespace DAL
                     UserName = UserName,
                     Password = Password,
                     GroupUserID = GroupUserID,
-                    Status = "Active",
+                    Status = status,
                     Image  = Image,
                     GROUPUSER = DALGroupUser.Instance.GetGroupUserById(GroupUserID)
                 };
                 CFEntities.Instance.C_USER.Add(us);
                 CFEntities.Instance.SaveChanges();
-                return us.id;
+                return true;
             }
             catch (Exception)
             {
-                return -1;
+                return false;
             }
         }
         public bool UpdUser(int id, string UserFullName, DateTime? DateofBirth, string Address, string Email, string Phone,
-                                 int? GroupUserID, string Status, string Image)
+                                 int GroupUserID, string Status, string Image)
         {
             try
             {
@@ -115,10 +115,25 @@ namespace DAL
                 if (Phone != null) us.Phone = Phone;
                 if (DateofBirth != null) us.DateOfBirth = DateofBirth;
                 if (Address != null) us.Address = Address;
-                if (GroupUserID != null) us.GroupUserID = (int)GroupUserID;
+                if (GroupUserID != us.GroupUserID) us.GroupUserID = GroupUserID;
                 if (Email != null) us.Email = Email;
                 if (Status != us.Status) us.Status = Status;
                 if (Image != us.Image) us.Image = Image;
+                CFEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
+        }
+        public bool UpUserImageNotFound(int idUser, string Image)
+        {
+            try
+            {
+                C_USER user = CFEntities.Instance.C_USER.Find(idUser);
+                if (Image != null) user.Image = Image;
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

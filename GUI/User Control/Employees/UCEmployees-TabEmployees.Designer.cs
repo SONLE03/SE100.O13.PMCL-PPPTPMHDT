@@ -58,10 +58,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(24, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(32, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(383, 20);
+            this.label2.Size = new System.Drawing.Size(484, 25);
             this.label2.TabIndex = 42;
             this.label2.Text = "These are list of all employees in our store up to now ";
             // 
@@ -71,10 +70,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(24, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(201, 25);
+            this.label1.Size = new System.Drawing.Size(242, 30);
             this.label1.TabIndex = 41;
             this.label1.Text = "Employee information";
             // 
@@ -273,7 +271,7 @@
             this.btnSearch.Location = new System.Drawing.Point(51, 44);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(134, 38);
+            this.btnSearch.Size = new System.Drawing.Size(179, 47);
             this.btnSearch.TabIndex = 56;
             this.btnSearch.Text = "Search employee";
             // 
@@ -326,7 +324,7 @@
             // 
             // UCEmployees_TabEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.cbStatus);
@@ -334,9 +332,9 @@
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
-            this.Margin = new System.Windows.Forms.Padding(4);
+            this.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.Name = "UCEmployees_TabEmployees";
-            this.Size = new System.Drawing.Size(1010, 655);
+            this.Size = new System.Drawing.Size(1347, 806);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewEmployee)).EndInit();

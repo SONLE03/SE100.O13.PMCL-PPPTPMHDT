@@ -60,15 +60,6 @@ namespace GUI
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            //List<C_USER> list = new List<C_USER>();
-            //foreach (var us in BUSUser.Instance.GetAllUser())
-            //{
-            //    if (us.UserFullName.ToLower().Contains(txtSearch.Text.ToLower()) || us.UserName.ToLower().Contains(txtSearch.Text.ToLower()) || us.GROUPUSER.GroupUserName.ToLower().Contains(txtSearch.Text.ToLower()))
-            //    {
-            //        list.Add(us);
-            //    }
-            //}
-            //Binding(list);
             Search();
         }
 
@@ -76,14 +67,20 @@ namespace GUI
         {
             int idx = e.RowIndex;
             if (idx < 0) return;
+            int idUser = Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["ID"].Value);
             if (e.ColumnIndex == gridviewEmployee.Columns["Edit"].Index)
             {
-                EditEmployee edit_em = new EditEmployee(Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["ID"].Value));
+                if(idUser == 1 && idUser != BUSUser.Instance.idUserLogin)
+                {
+                    MessageBox.Show("This user cannot be modified", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                EditEmployee edit_em = new EditEmployee(idUser);
                 edit_em.ShowDialog();
             }
             else
             {
-                EmployeeDetails details = new EmployeeDetails(Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["ID"].Value));
+                EmployeeDetails details = new EmployeeDetails(idUser);
                 details.ShowDialog();
             }
             Binding(BUSUser.Instance.GetAllUser());
