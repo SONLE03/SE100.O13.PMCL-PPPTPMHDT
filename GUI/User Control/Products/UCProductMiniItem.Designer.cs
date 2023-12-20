@@ -70,9 +70,10 @@
             this.panelProduct.Controls.Add(this.drinkPicture);
             this.panelProduct.Controls.Add(this.pic_edit);
             this.panelProduct.Controls.Add(this.pic_AddToCart);
-            this.panelProduct.Location = new System.Drawing.Point(25, 9);
+            this.panelProduct.Location = new System.Drawing.Point(23, 7);
+            this.panelProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelProduct.Name = "panelProduct";
-            this.panelProduct.Size = new System.Drawing.Size(279, 239);
+            this.panelProduct.Size = new System.Drawing.Size(271, 214);
             this.panelProduct.TabIndex = 1;
             this.panelProduct.Click += new System.EventHandler(this.panelProduct_Click);
             // 
@@ -86,18 +87,19 @@
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.flowLayoutPanel1);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(92, 219);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(69, 161);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(139, 43);
+            this.guna2Panel2.Size = new System.Drawing.Size(133, 40);
             this.guna2Panel2.TabIndex = 11;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 1);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 1);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(219, 47);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(130, 38);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // labelID
@@ -107,9 +109,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.labelID.Location = new System.Drawing.Point(163, 10);
+            this.labelID.Location = new System.Drawing.Point(122, 8);
+            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(36, 30);
+            this.labelID.Size = new System.Drawing.Size(31, 25);
             this.labelID.TabIndex = 8;
             this.labelID.Text = "ID";
             this.labelID.Visible = false;
@@ -121,9 +124,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(29, 233);
+            this.label1.Location = new System.Drawing.Point(21, 172);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 25);
+            this.label1.Size = new System.Drawing.Size(36, 20);
             this.label1.TabIndex = 5;
             this.label1.Text = "Size";
             // 
@@ -134,9 +138,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lbPrice.Location = new System.Drawing.Point(175, 135);
+            this.lbPrice.Location = new System.Drawing.Point(131, 100);
+            this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(107, 28);
+            this.lbPrice.Size = new System.Drawing.Size(81, 21);
             this.lbPrice.TabIndex = 3;
             this.lbPrice.Text = "$ 000.000";
             // 
@@ -148,9 +153,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lbName.Location = new System.Drawing.Point(175, 87);
+            this.lbName.Location = new System.Drawing.Point(131, 69);
+            this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(144, 28);
+            this.lbName.Size = new System.Drawing.Size(117, 21);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Product name";
             // 
@@ -161,25 +167,23 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.drinkPicture.Image = global::GUI.Properties.Resources.milkco1;
             this.drinkPicture.ImageRotate = 0F;
-            this.drinkPicture.Location = new System.Drawing.Point(15, 31);
+            this.drinkPicture.Location = new System.Drawing.Point(16, 31);
             this.drinkPicture.Margin = new System.Windows.Forms.Padding(2);
             this.drinkPicture.Name = "drinkPicture";
             this.drinkPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.drinkPicture.Size = new System.Drawing.Size(109, 110);
+            this.drinkPicture.Size = new System.Drawing.Size(100, 100);
             this.drinkPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.drinkPicture.TabIndex = 1;
             this.drinkPicture.TabStop = false;
             // 
             // pic_edit
             // 
-            this.pic_edit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_edit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_edit.Image = global::GUI.Properties.Resources.info;
-            this.pic_edit.Location = new System.Drawing.Point(227, 12);
+            this.pic_edit.Location = new System.Drawing.Point(208, 10);
             this.pic_edit.Margin = new System.Windows.Forms.Padding(2);
             this.pic_edit.Name = "pic_edit";
-            this.pic_edit.Size = new System.Drawing.Size(39, 40);
+            this.pic_edit.Size = new System.Drawing.Size(42, 42);
             this.pic_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_edit.TabIndex = 7;
             this.pic_edit.TabStop = false;
@@ -187,14 +191,12 @@
             // 
             // pic_AddToCart
             // 
-            this.pic_AddToCart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_AddToCart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_AddToCart.Image = global::GUI.Properties.Resources.icons8_add_shopping_cart_100px;
-            this.pic_AddToCart.Location = new System.Drawing.Point(225, 12);
+            this.pic_AddToCart.Location = new System.Drawing.Point(207, 10);
             this.pic_AddToCart.Margin = new System.Windows.Forms.Padding(2);
             this.pic_AddToCart.Name = "pic_AddToCart";
-            this.pic_AddToCart.Size = new System.Drawing.Size(39, 40);
+            this.pic_AddToCart.Size = new System.Drawing.Size(42, 42);
             this.pic_AddToCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_AddToCart.TabIndex = 9;
             this.pic_AddToCart.TabStop = false;
@@ -202,13 +204,13 @@
             // 
             // UCProductMiniItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panelProduct);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UCProductMiniItem";
-            this.Size = new System.Drawing.Size(331, 258);
+            this.Size = new System.Drawing.Size(325, 230);
             this.panelProduct.ResumeLayout(false);
             this.panelProduct.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
