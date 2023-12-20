@@ -43,7 +43,7 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Added failed", "Add category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lack of information", "Add category", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch

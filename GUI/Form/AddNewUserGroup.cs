@@ -72,7 +72,7 @@ namespace GUI
                 }
                 else
                 {
-                    MessageBox.Show("Added failed", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch

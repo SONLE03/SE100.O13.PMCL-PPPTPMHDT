@@ -57,26 +57,26 @@ namespace GUI
 
         public void LoadProductInFlowLayoutPanel(List<DRINK> listDrink, List<DRINKS_SIZE> listDrinkSize, List<C_SIZE> listSize)
         {
-            flowLayoutPanelProducts.Controls.Clear();
+            //flowLayoutPanelProducts.Controls.Clear();
 
-            var list = new List<int>();
-            // Load data for user control
-            foreach (var drink in listDrink)
-            {
-                list = new List<int>();
+            //var list = new List<int>();
+            //// Load data for user control
+            //foreach (var drink in listDrink)
+            //{
+            //    list = new List<int>();
 
-                foreach (var drinkSize in listDrinkSize)
-                {
-                    if (drink.id == drinkSize.DrinksID)
-                    {
-                        list.Add(drinkSize.SizeID);
-                    }
-                }
-                UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
-                productMiniItem.loadData(drink, list);
-                //listMiniItem.Add(productMiniItem);
-                flowLayoutPanelProducts.Controls.Add(productMiniItem);
-            }
+            //    foreach (var drinkSize in listDrinkSize)
+            //    {
+            //        if (drink.id == drinkSize.DrinksID)
+            //        {
+            //            list.Add(drinkSize.SizeID);
+            //        }
+            //    }
+            //    UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
+            //    productMiniItem.loadData(drink, list);
+            //    //listMiniItem.Add(productMiniItem);
+            //    flowLayoutPanelProducts.Controls.Add(productMiniItem);
+            //}
         }
 
         public void addMiniItemProduct(UCMiniProductChoosen product)
@@ -105,20 +105,20 @@ namespace GUI
 
         public void deleteMiniItemProduct(UCMiniProductChoosen product)
         {
-            flowLayoutPanel.Controls.Remove(product);
-            BillDetail billDetail = new BillDetail();
-            foreach (var p in nameProductInBill)
-            {
-                if (p.productName.Equals(product.getProductName()) && p.quantity.Equals(product.getQuantity()))
-                {
-                    billDetail = p;
-                    break;
-                }    
-            }
-            nameProductInBill.Remove(billDetail);
-            sum -= product.getPrice();
-            lbSubTotal.Text = sum.ToString() + " VND";
-            LbTotal.Text = (sum + extraFee).ToString() + " VND";
+            //flowLayoutPanel.Controls.Remove(product);
+            //BillDetail billDetail = new BillDetail();
+            //foreach (var p in nameProductInBill)
+            //{
+            //    if (p.productName.Equals(product.getProductName()) && p.quantity.Equals(product.getQuantity()))
+            //    {
+            //        billDetail = p;
+            //        break;
+            //    }    
+            //}
+            //nameProductInBill.Remove(billDetail);
+            //sum -= product.getPrice();
+            //lbSubTotal.Text = sum.ToString() + " VND";
+            //LbTotal.Text = (sum + extraFee).ToString() + " VND";
 
         }
 
@@ -281,14 +281,14 @@ namespace GUI
 
         private void guna2Button4_Click(object sender, EventArgs e)
         {
-            flowLayoutPanel.Controls.Clear();
-            nameProductInBill = new List<BillDetail>();
-            sum = 0;
-            lbSubTotal.Text = sum.ToString() + " VND";
-            lbSurcharge.Text = extraFee.ToString() + " VND";
-            LbTotal.Text = (sum + extraFee).ToString() + " VND";
+            //flowLayoutPanel.Controls.Clear();
+            //nameProductInBill = new List<BillDetail>();
+            //sum = 0;
+            //lbSubTotal.Text = sum.ToString() + " VND";
+            //lbSurcharge.Text = extraFee.ToString() + " VND";
+            //LbTotal.Text = (sum + extraFee).ToString() + " VND";
 
-        //}
+        }
 
         //public void LoadTotalPrice()
         //{

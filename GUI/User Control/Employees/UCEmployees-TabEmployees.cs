@@ -27,7 +27,7 @@ namespace GUI
             gridviewEmployee.Rows.Clear();
             foreach (C_USER us in users)
             {
-                gridviewEmployee.Rows.Add(us.id, us.UserFullName, us.Phone, us.UserName, us.GROUPUSER.GroupUserName, edit_img, edit_img);
+                gridviewEmployee.Rows.Add(us.id, us.UserID, us.UserFullName, us.Phone, us.GROUPUSER.GroupUserName, us.Status, edit_img);
             }
         }
         private void btnAddEmployee_Click(object sender, EventArgs e)
