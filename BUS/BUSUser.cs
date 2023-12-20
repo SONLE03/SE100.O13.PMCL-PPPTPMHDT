@@ -1,10 +1,16 @@
 ﻿using DAL;
 using DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BUS
 {
@@ -62,16 +68,92 @@ namespace BUS
         {
             return DALUser.Instance.GetUserByIDGroupUser(idGU);
         }
-
-        public int AddUser(string UserFullName, DateTime DateofBirth, string Address, string Phone,
-                                 string UserName, string Password, string Email, int GroupUserID, string image)
+        public bool checkGroupUserStatus(int groupUserID, string status)
         {
-            return DALUser.Instance.AddUser(UserFullName, DateofBirth, Address, Phone, UserName, Password, Email, GroupUserID, image);
+            GROUPUSER groupUser = BUSGroupUser.Instance.GetGroupUserById(groupUserID);
+            if (groupUser.Status.Equals("InActive") && status.Equals("Active")) return false;
+            return true;
         }
-        public bool UpdUser(int id, string UserFullName, DateTime? DateofBirth, string Address, string Email, string Phone,
-                                 int? GroupUserID, string status, string image)
+
+        private bool PhoneNumberValidator(string phoneNumber)
         {
-            return DALUser.Instance.UpdUser(id, UserFullName, DateofBirth, Address, Email, Phone, GroupUserID, status, image);
+            return phoneNumber.Length == 10 && phoneNumber.StartsWith("0");
+        }
+        private bool PasswordValidator(string password, string retypePass)
+        {
+            return password.Length >= 8 && password.Equals(retypePass) && Regex.IsMatch(password, "[a-zA-Z]") && Regex.IsMatch(password, "\\d");
+        }
+        private bool DateOfBirthValidator(DateTime DateofBirth)
+        {
+            DateTime createDate = DateTime.Now;
+            int gap = createDate.Year - DateofBirth.Year;
+            if (createDate.Month < DateofBirth.Month || (createDate.Month == DateofBirth.Month && createDate.Day < DateofBirth.Day))
+                gap -= 1;
+            return gap >= BUSRule.Instance.GetAllThamSo().MinimumAge;
+        }
+        private bool EmailValidator(string email)
+        {
+            return Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@gmail\.com$");
+        }
+        private bool CheckValidator(DateTime DateofBirth, string Phone, string UserName,string Password
+                                    ,string retypePass, string Email, int GroupUserID, string status)
+        {
+            if (!checkGroupUserStatus(GroupUserID, status))
+            {
+                MessageBox.Show("Add Failure User, User Group Is Blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (GetUserByUsername(UserName) != null)
+            {
+                MessageBox.Show("The UserName already exists!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!PhoneNumberValidator(Phone))
+            {
+                MessageBox.Show("Invalid phone number", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!PasswordValidator(Password, retypePass))
+            {
+                MessageBox.Show("Password validation failed. Please make sure the passwords match and meet the requirements.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!DateOfBirthValidator(DateofBirth))
+            {
+                MessageBox.Show("User must be over 18 years old", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!EmailValidator(Email))
+            {
+                MessageBox.Show("Invalid email address format. The template is \"example@gmail.com\"", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+        public bool AddUser(string UserFullName, DateTime DateofBirth, string Address, string Phone, string UserName, 
+                            string Password, string retypePass, string Email, int GroupUserID, string image, string status)
+        {
+            if (!CheckValidator(DateofBirth, Phone, UserName, Password, retypePass, Email, GroupUserID, status)) return false;
+            
+            if (!DALUser.Instance.AddUser(UserFullName, DateofBirth, Address, Phone, UserName, Password, Email, GroupUserID, image, status))
+            {
+                MessageBox.Show("Add failure user", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            MessageBox.Show("Add new user successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
+        }
+        public bool UpdUser(int id, string UserFullName, DateTime DateofBirth, string Address, string Email, string Phone,
+                                 int GroupUserID, string status, string image, string password)
+        {
+            if(!CheckValidator(DateofBirth, Phone, null, password, password, Email, GroupUserID, status)) return false;
+            if(!DALUser.Instance.UpdUser(id, UserFullName, DateofBirth, Address, Email, Phone, GroupUserID, status, image))
+            {
+                MessageBox.Show("Update failure user", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            MessageBox.Show("Update user information successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return true;
         }
         public bool DelUser(int id)
         {
@@ -84,6 +166,10 @@ namespace BUS
         public List<C_USER> SearchUser(string searchText, string selectedStatus)
         {
             return DALUser.Instance.SearchUser(searchText, selectedStatus);
+        }
+        public bool UpdateImageErrorNotFound(int idUser, string Image)
+        {
+            return DALUser.Instance.UpUserImageNotFound(idUser, Image);
         }
     }
 }
