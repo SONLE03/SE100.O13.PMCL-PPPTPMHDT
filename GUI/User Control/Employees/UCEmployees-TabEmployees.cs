@@ -18,6 +18,7 @@ namespace GUI
         {
             InitializeComponent();
             Binding(BUSUser.Instance.GetAllUser());
+            setUserStatus();
         }
 
         public void Binding(List<C_USER> users)
@@ -30,24 +31,45 @@ namespace GUI
                 gridviewEmployee.Rows.Add(us.id, us.UserID, us.UserFullName, us.Phone, us.GROUPUSER.GroupUserName, us.Status, edit_img);
             }
         }
+        private void setUserStatus()
+        {
+            cbStatus.Items.AddRange(new string[] { "All", "Active", "InActive" });
+            cbStatus.SelectedIndex = 0;
+        }
+
         private void btnAddEmployee_Click(object sender, EventArgs e)
         {
             AddNewEmployee add_employees = new AddNewEmployee();
             add_employees.ShowDialog();
             Binding(BUSUser.Instance.GetAllUser());
         }
+        private void Search()
+        {
+            try
+            {
+                string searchText = txtSearch.Text.Trim().ToLower();
+                string selectedStatus = cbStatus.Text;
+                List<C_USER> listUser = BUSUser.Instance.SearchUser(searchText, selectedStatus);
+                Binding(listUser);
+            }
+            catch
+            {
+
+            }
+        }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            List<C_USER> list = new List<C_USER>();
-            foreach (var us in BUSUser.Instance.GetAllUser())
-            {
-                if (us.UserFullName.ToLower().Contains(txtSearch.Text.ToLower()) || us.UserName.ToLower().Contains(txtSearch.Text.ToLower()) || us.GROUPUSER.GroupUserName.ToLower().Contains(txtSearch.Text.ToLower()))
-                {
-                    list.Add(us);
-                }
-            }
-            Binding(list);
+            //List<C_USER> list = new List<C_USER>();
+            //foreach (var us in BUSUser.Instance.GetAllUser())
+            //{
+            //    if (us.UserFullName.ToLower().Contains(txtSearch.Text.ToLower()) || us.UserName.ToLower().Contains(txtSearch.Text.ToLower()) || us.GROUPUSER.GroupUserName.ToLower().Contains(txtSearch.Text.ToLower()))
+            //    {
+            //        list.Add(us);
+            //    }
+            //}
+            //Binding(list);
+            Search();
         }
 
         private void gridviewEmployee_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -56,15 +78,20 @@ namespace GUI
             if (idx < 0) return;
             if (e.ColumnIndex == gridviewEmployee.Columns["Edit"].Index)
             {
-                EditEmployee edit_em = new EditEmployee(Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["Employee_ID"].Value));
+                EditEmployee edit_em = new EditEmployee(Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["ID"].Value));
                 edit_em.ShowDialog();
             }
             else
             {
-                EmployeeDetails details = new EmployeeDetails(Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["Employee_ID"].Value));
+                EmployeeDetails details = new EmployeeDetails(Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["ID"].Value));
                 details.ShowDialog();
             }
             Binding(BUSUser.Instance.GetAllUser());
+        }
+
+        private void cbStatus_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Search();
         }
     }
 }

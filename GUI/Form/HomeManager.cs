@@ -74,7 +74,7 @@ namespace GUI
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         private void Products_Click(object sender, EventArgs e)

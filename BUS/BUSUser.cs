@@ -81,5 +81,9 @@ namespace BUS
         {
             return DALUser.Instance.UpdPassword(id, password);
         }
+        public List<C_USER> SearchUser(string searchText, string selectedStatus)
+        {
+            return DALUser.Instance.SearchUser(searchText, selectedStatus);
+        }
     }
 }

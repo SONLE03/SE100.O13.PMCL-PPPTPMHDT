@@ -56,7 +56,18 @@ namespace DAL
                 return res.FirstOrDefault();
             return null;
         }
-
+        public List<C_USER> SearchUser(string searchText, string selectedStatus)
+        {
+            List<C_USER> listUser = CFEntities.Instance.C_USER.ToList();
+            List<C_USER> filteredList = new List<C_USER>();
+            filteredList = listUser
+                .Where(p =>
+                    (string.IsNullOrEmpty(searchText) || p.UserFullName.ToLower().Contains(searchText.ToLower())) &&
+                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                )
+                .ToList();
+            return filteredList;
+        }
         public bool GetUserByIDGroupUser(int idGU)
         {
             var res = CFEntities.Instance.C_USER.AsNoTracking().Where(n => n.GroupUserID == idGU);
