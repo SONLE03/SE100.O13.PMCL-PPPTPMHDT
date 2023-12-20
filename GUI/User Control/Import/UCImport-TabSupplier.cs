@@ -12,19 +12,20 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class UCImport_TabImportOrder : UserControl
+    public partial class UCImport_TabSupplier : UserControl
     {
-        public UCImport_TabImportOrder()
+        public UCImport_TabSupplier()
         {
             InitializeComponent();
             Binding(BUSSupplier.Instance.GetAllSupplier());
         }
-         public void Binding(List<SUPPLIER> supplier)
+
+        public void Binding(List<SUPPLIER> supplier)
         {
             Image edit_img = Properties.Resources.edit_icon;
             edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
             gridviewSupplier.Rows.Clear();
-            foreach(SUPPLIER s in supplier)
+            foreach (SUPPLIER s in supplier)
             {
                 gridviewSupplier.Rows.Add(s.id, s.SupplierName, s.Address, s.Phone, edit_img);
             }

@@ -49,9 +49,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.guna2Panel1.BorderRadius = 20;
@@ -64,9 +62,9 @@
             this.guna2Panel1.Controls.Add(this.lbName);
             this.guna2Panel1.Controls.Add(this.ProductImage);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(3, 3);
+            this.guna2Panel1.Location = new System.Drawing.Point(11, 6);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(209, 181);
+            this.guna2Panel1.Size = new System.Drawing.Size(208, 181);
             this.guna2Panel1.TabIndex = 0;
             // 
             // labelID
@@ -97,7 +95,7 @@
             this.guna2Panel2.Location = new System.Drawing.Point(57, 130);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(87, 30);
+            this.guna2Panel2.Size = new System.Drawing.Size(86, 30);
             this.guna2Panel2.TabIndex = 11;
             // 
             // flowLayoutPanel1
@@ -155,7 +153,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.lbPrice.Location = new System.Drawing.Point(85, 85);
+            this.lbPrice.Location = new System.Drawing.Point(87, 85);
             this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(62, 15);
@@ -171,7 +169,7 @@
             this.btnInfo.Location = new System.Drawing.Point(169, 8);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(2);
             this.btnInfo.Name = "btnInfo";
-            this.btnInfo.Size = new System.Drawing.Size(28, 28);
+            this.btnInfo.Size = new System.Drawing.Size(27, 28);
             this.btnInfo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnInfo.TabIndex = 8;
             this.btnInfo.TabStop = false;
@@ -199,7 +197,7 @@
             this.ProductImage.Margin = new System.Windows.Forms.Padding(2);
             this.ProductImage.Name = "ProductImage";
             this.ProductImage.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.ProductImage.Size = new System.Drawing.Size(65, 65);
+            this.ProductImage.Size = new System.Drawing.Size(67, 67);
             this.ProductImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProductImage.TabIndex = 2;
             this.ProductImage.TabStop = false;
@@ -211,7 +209,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel1);
             this.Name = "UCProductsMiniForBills";
-            this.Size = new System.Drawing.Size(215, 187);
+            this.Size = new System.Drawing.Size(231, 193);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);

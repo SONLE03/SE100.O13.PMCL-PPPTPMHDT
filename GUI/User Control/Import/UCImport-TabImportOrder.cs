@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class UCImport_TabSupplier : UserControl
+    public partial class UCImport_TabImportOrder : UserControl
     {
-        public UCImport_TabSupplier()
+        public UCImport_TabImportOrder()
         {
             InitializeComponent();
             Binding(BUSImportBill.Instance.GetAllImportBill());
@@ -25,7 +25,7 @@ namespace GUI
             Image edit_img = Properties.Resources.edit_icon;
             edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
             gridviewImportOrder.Rows.Clear();
-            foreach(IMPORT_BILL im in import)
+            foreach (IMPORT_BILL im in import)
             {
                 gridviewImportOrder.Rows.Add(im.id, im.ImportName, im.ImportDate, im.SUPPLIER.SupplierName, im.IMPORT_BILL_DETAIL.Count, im.Total, edit_img);
             }
