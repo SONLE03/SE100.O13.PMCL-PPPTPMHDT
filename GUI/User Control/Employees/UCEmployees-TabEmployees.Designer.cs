@@ -47,6 +47,7 @@
             this.btnAddEmployee = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewEmployee)).BeginInit();
             this.SuspendLayout();
@@ -90,7 +91,8 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(54, 128);
+            this.guna2Panel1.Location = new System.Drawing.Point(72, 158);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(903, 481);
             this.guna2Panel1.TabIndex = 59;
@@ -133,7 +135,8 @@
             dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewEmployee.DefaultCellStyle = dataGridViewCellStyle8;
             this.gridviewEmployee.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewEmployee.Location = new System.Drawing.Point(3, 75);
+            this.gridviewEmployee.Location = new System.Drawing.Point(4, 92);
+            this.gridviewEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.gridviewEmployee.Name = "gridviewEmployee";
             this.gridviewEmployee.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -300,15 +303,38 @@
             this.txtSearch.TabIndex = 55;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // cbStatus
+            // 
+            this.cbStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.BorderColor = System.Drawing.Color.Black;
+            this.cbStatus.BorderRadius = 10;
+            this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cbStatus.ForeColor = System.Drawing.Color.White;
+            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.Location = new System.Drawing.Point(753, 49);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(216, 36);
+            this.cbStatus.TabIndex = 65;
+            this.cbStatus.SelectedValueChanged += new System.EventHandler(this.cbStatus_SelectedValueChanged);
+            // 
             // UCEmployees_TabEmployees
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
+            this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnAddEmployee);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCEmployees_TabEmployees";
             this.Size = new System.Drawing.Size(1010, 655);
             this.guna2Panel1.ResumeLayout(false);
@@ -334,5 +360,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn User_group;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
     }
 }
