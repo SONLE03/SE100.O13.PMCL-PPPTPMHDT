@@ -29,10 +29,28 @@ namespace DAL
         {
             return CFEntities.Instance.GROUPUSERs.AsNoTracking().Where(n => n.Status == "Active").ToList();
         }
-
+        public bool GetGroupUserByName(string name)
+        {
+            var res = CFEntities.Instance.GROUPUSERs.AsNoTracking().Where(n => n.GroupUserName.ToLower().Contains(name)).ToList();
+            if (res.Any())
+                return true;
+            return false;
+        }
         public GROUPUSER GetGroupUserById(int id)
         {
             return CFEntities.Instance.GROUPUSERs.Find(id);
+        }
+        public List<GROUPUSER> SearchGroupUser(string searchText, string selectedStatus)
+        {
+            List<GROUPUSER> listGroupUser = CFEntities.Instance.GROUPUSERs.ToList();
+            List<GROUPUSER> filteredList = new List<GROUPUSER>();
+            filteredList = listGroupUser
+                .Where(p =>
+                    (string.IsNullOrEmpty(searchText) || p.GroupUserName.ToLower().Contains(searchText.ToLower())) &&
+                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                )
+                .ToList();
+            return filteredList;
         }
 
         public GROUPUSER GetGroupUserByCode(string GroupUserID)
@@ -41,18 +59,18 @@ namespace DAL
             return (res.Any() ? res.First() : null);
         }
 
-        public int AddGroupUser(string GroupUserName)
+        public int AddGroupUser(string GroupUserName, string status)
         {
             try
             {
-                var nhom = new GROUPUSER
+                var group = new GROUPUSER
                 {
                     GroupUserName = GroupUserName,
-                    Status = "Active"
+                    Status = status
                 };
-                CFEntities.Instance.GROUPUSERs.Add(nhom);
+                CFEntities.Instance.GROUPUSERs.Add(group);
                 CFEntities.Instance.SaveChanges();
-                return nhom.id;
+                return group.id;
             }
             catch (Exception ex)
             {
@@ -61,7 +79,7 @@ namespace DAL
             }
         }
 
-        public bool UpdGroupUser(int id, string GroupUserName, string Status)
+        public bool UpdGroupUser(int id, string GroupUserName, string Status, List<SERVICE> service)
         {
             try
             {
@@ -78,6 +96,10 @@ namespace DAL
                     {
                         us.Status = Status;
                     }
+                }
+                if (service != null)
+                {
+                    group.SERVICEs = service;
                 }
                 CFEntities.Instance.SaveChanges();
                 return true;

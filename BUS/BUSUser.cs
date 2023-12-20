@@ -21,7 +21,7 @@ namespace BUS
             }
             set { instance = value; }
         }
-
+        public int idUserLogin { get; set; }
         public List<C_USER> GetAllUser()
         {
             return DALUser.Instance.GetAllUser();
@@ -39,6 +39,15 @@ namespace BUS
         public C_USER GetUserByCode(string UserID)
         {
             return DALUser.Instance.GetUserByCode(UserID);
+        }
+        public bool checkUserInUserGroupLogin(int idGroupUser)
+        {
+            C_USER user = BUSUser.instance.GetUserById(idUserLogin);
+            if (user.GroupUserID == idGroupUser)
+            {
+                return true;
+            }
+            return false;
         }
         public C_USER GetUserByUsername(string username)
         {

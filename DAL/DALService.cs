@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,10 @@ namespace DAL
         public List<SERVICE> GetAllService()
         {
             return CFEntities.Instance.SERVICEs.AsNoTracking().ToList();
+        }
+        public List<SERVICE> GetService()
+        {
+            return CFEntities.Instance.SERVICEs.Where(service => service.id != 11).AsNoTracking().ToList();
         }
 
         public SERVICE GetServiceById(int id)

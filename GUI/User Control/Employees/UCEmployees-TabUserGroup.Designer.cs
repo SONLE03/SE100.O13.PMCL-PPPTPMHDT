@@ -37,13 +37,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.gridviewUserGroup = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.UG_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UG_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnAddUsergroup = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UG_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UG_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewUserGroup)).BeginInit();
             this.SuspendLayout();
@@ -54,10 +58,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(24, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(32, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(391, 20);
+            this.label2.Size = new System.Drawing.Size(497, 25);
             this.label2.TabIndex = 42;
             this.label2.Text = "These are list of all user groups in our store up to now ";
             // 
@@ -67,10 +70,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(24, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 25);
+            this.label1.Size = new System.Drawing.Size(257, 30);
             this.label1.TabIndex = 41;
             this.label1.Text = "User group information";
             // 
@@ -87,9 +89,10 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(51, 132);
+            this.guna2Panel1.Location = new System.Drawing.Point(68, 162);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(906, 479);
+            this.guna2Panel1.Size = new System.Drawing.Size(1208, 590);
             this.guna2Panel1.TabIndex = 63;
             // 
             // gridviewUserGroup
@@ -112,10 +115,11 @@
             this.gridviewUserGroup.ColumnHeadersHeight = 40;
             this.gridviewUserGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewUserGroup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.UG_ID,
             this.UG_name,
-            this.Edit,
-            this.Delete});
+            this.Status,
+            this.Edit});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -125,7 +129,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewUserGroup.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewUserGroup.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewUserGroup.Location = new System.Drawing.Point(3, 76);
+            this.gridviewUserGroup.Location = new System.Drawing.Point(4, 94);
+            this.gridviewUserGroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridviewUserGroup.Name = "gridviewUserGroup";
             this.gridviewUserGroup.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -142,7 +147,7 @@
             this.gridviewUserGroup.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gridviewUserGroup.RowTemplate.Height = 40;
             this.gridviewUserGroup.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewUserGroup.Size = new System.Drawing.Size(900, 368);
+            this.gridviewUserGroup.Size = new System.Drawing.Size(1200, 453);
             this.gridviewUserGroup.TabIndex = 43;
             this.gridviewUserGroup.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewUserGroup.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -167,38 +172,6 @@
             this.gridviewUserGroup.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridviewUserGroup.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewUserGroup_CellClick);
             // 
-            // UG_ID
-            // 
-            this.UG_ID.FillWeight = 150F;
-            this.UG_ID.HeaderText = "User group ID";
-            this.UG_ID.MinimumWidth = 6;
-            this.UG_ID.Name = "UG_ID";
-            this.UG_ID.ReadOnly = true;
-            // 
-            // UG_name
-            // 
-            this.UG_name.FillWeight = 200F;
-            this.UG_name.HeaderText = "User group name";
-            this.UG_name.MinimumWidth = 6;
-            this.UG_name.Name = "UG_name";
-            this.UG_name.ReadOnly = true;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // btnAddUsergroup
             // 
             this.btnAddUsergroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -214,10 +187,10 @@
             this.btnAddUsergroup.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUsergroup.ForeColor = System.Drawing.Color.White;
             this.btnAddUsergroup.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddUsergroup.Location = new System.Drawing.Point(788, 32);
-            this.btnAddUsergroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddUsergroup.Location = new System.Drawing.Point(1051, 39);
+            this.btnAddUsergroup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAddUsergroup.Name = "btnAddUsergroup";
-            this.btnAddUsergroup.Size = new System.Drawing.Size(169, 39);
+            this.btnAddUsergroup.Size = new System.Drawing.Size(225, 48);
             this.btnAddUsergroup.TabIndex = 62;
             this.btnAddUsergroup.Text = "Add user group";
             this.btnAddUsergroup.Click += new System.EventHandler(this.btnAddUsergroup_Click);
@@ -236,10 +209,10 @@
             this.btnSearch.HoverState.FillColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnSearch.Location = new System.Drawing.Point(51, 32);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Location = new System.Drawing.Point(68, 39);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(155, 39);
+            this.btnSearch.Size = new System.Drawing.Size(207, 48);
             this.btnSearch.TabIndex = 61;
             this.btnSearch.Text = "Search user group";
             // 
@@ -258,32 +231,121 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeftCursor = System.Windows.Forms.Cursors.No;
-            this.txtSearch.Location = new System.Drawing.Point(204, 33);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSearch.Location = new System.Drawing.Point(272, 41);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtSearch.PlaceholderText = "Search user group";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(330, 38);
+            this.txtSearch.Size = new System.Drawing.Size(440, 47);
             this.txtSearch.TabIndex = 60;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label4.Location = new System.Drawing.Point(728, 46);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(77, 30);
+            this.label4.TabIndex = 66;
+            this.label4.Text = "Status";
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.BorderColor = System.Drawing.Color.Black;
+            this.cbStatus.BorderRadius = 10;
+            this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cbStatus.ForeColor = System.Drawing.Color.White;
+            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.Location = new System.Drawing.Point(820, 41);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(216, 36);
+            this.cbStatus.TabIndex = 65;
+            this.cbStatus.SelectedValueChanged += new System.EventHandler(this.cbStatus_SelectedValueChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.panel1.Location = new System.Drawing.Point(720, 42);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(5, 42);
+            this.panel1.TabIndex = 64;
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // UG_ID
+            // 
+            this.UG_ID.FillWeight = 150F;
+            this.UG_ID.HeaderText = "User group ID";
+            this.UG_ID.MinimumWidth = 6;
+            this.UG_ID.Name = "UG_ID";
+            this.UG_ID.ReadOnly = true;
+            // 
+            // UG_name
+            // 
+            this.UG_name.FillWeight = 200F;
+            this.UG_name.HeaderText = "User group name";
+            this.UG_name.MinimumWidth = 6;
+            this.UG_name.Name = "UG_name";
+            this.UG_name.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            this.Edit.HeaderText = "Edit";
+            this.Edit.Image = global::GUI.Properties.Resources.edit_icon;
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // UCEmployees_TabUserGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cbStatus);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnAddUsergroup);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCEmployees_TabUserGroup";
-            this.Size = new System.Drawing.Size(1010, 655);
+            this.Size = new System.Drawing.Size(1347, 806);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewUserGroup)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -296,9 +358,13 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnAddUsergroup;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn UG_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn UG_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }
