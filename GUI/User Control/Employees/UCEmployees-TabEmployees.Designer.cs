@@ -58,9 +58,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(32, 52);
+            this.label2.Location = new System.Drawing.Point(24, 42);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(484, 25);
+            this.label2.Size = new System.Drawing.Size(383, 20);
             this.label2.TabIndex = 42;
             this.label2.Text = "These are list of all employees in our store up to now ";
             // 
@@ -70,9 +71,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(32, 9);
+            this.label1.Location = new System.Drawing.Point(24, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(242, 30);
+            this.label1.Size = new System.Drawing.Size(201, 25);
             this.label1.TabIndex = 41;
             this.label1.Text = "Employee information";
             // 
@@ -92,7 +94,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(72, 158);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1204, 592);
+            this.guna2Panel1.Size = new System.Drawing.Size(903, 481);
             this.guna2Panel1.TabIndex = 59;
             // 
             // gridviewEmployee
@@ -153,7 +155,7 @@
             this.gridviewEmployee.RowsDefaultCellStyle = dataGridViewCellStyle10;
             this.gridviewEmployee.RowTemplate.Height = 40;
             this.gridviewEmployee.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewEmployee.Size = new System.Drawing.Size(1196, 463);
+            this.gridviewEmployee.Size = new System.Drawing.Size(897, 376);
             this.gridviewEmployee.TabIndex = 43;
             this.gridviewEmployee.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewEmployee.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -246,10 +248,10 @@
             this.btnAddEmployee.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddEmployee.ForeColor = System.Drawing.Color.White;
             this.btnAddEmployee.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddEmployee.Location = new System.Drawing.Point(1017, 38);
-            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAddEmployee.Location = new System.Drawing.Point(785, 43);
+            this.btnAddEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddEmployee.Name = "btnAddEmployee";
-            this.btnAddEmployee.Size = new System.Drawing.Size(225, 47);
+            this.btnAddEmployee.Size = new System.Drawing.Size(169, 38);
             this.btnAddEmployee.TabIndex = 57;
             this.btnAddEmployee.Text = "Add employee";
             this.btnAddEmployee.Click += new System.EventHandler(this.btnAddEmployee_Click);
@@ -268,10 +270,10 @@
             this.btnSearch.HoverState.FillColor = System.Drawing.Color.White;
             this.btnSearch.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnSearch.Location = new System.Drawing.Point(72, 38);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Location = new System.Drawing.Point(51, 44);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(179, 47);
+            this.btnSearch.Size = new System.Drawing.Size(134, 38);
             this.btnSearch.TabIndex = 56;
             this.btnSearch.Text = "Search employee";
             // 
@@ -290,14 +292,14 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeftCursor = System.Windows.Forms.Cursors.No;
-            this.txtSearch.Location = new System.Drawing.Point(249, 39);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Location = new System.Drawing.Point(184, 44);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtSearch.PlaceholderText = "Search employees";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(440, 46);
+            this.txtSearch.Size = new System.Drawing.Size(330, 37);
             this.txtSearch.TabIndex = 55;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -324,7 +326,7 @@
             // 
             // UCEmployees_TabEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.cbStatus);
@@ -334,7 +336,7 @@
             this.Controls.Add(this.txtSearch);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCEmployees_TabEmployees";
-            this.Size = new System.Drawing.Size(1347, 806);
+            this.Size = new System.Drawing.Size(1010, 655);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewEmployee)).EndInit();
