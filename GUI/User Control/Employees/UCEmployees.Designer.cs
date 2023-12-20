@@ -51,7 +51,7 @@ namespace GUI
             this.btnUsergroup.ForeColor = System.Drawing.Color.White;
             this.btnUsergroup.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnUsergroup.Location = new System.Drawing.Point(675, 29);
-            this.btnUsergroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUsergroup.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsergroup.Name = "btnUsergroup";
             this.btnUsergroup.Size = new System.Drawing.Size(141, 41);
             this.btnUsergroup.TabIndex = 44;
@@ -73,7 +73,7 @@ namespace GUI
             this.btnEmployees.ForeColor = System.Drawing.Color.White;
             this.btnEmployees.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnEmployees.Location = new System.Drawing.Point(282, 29);
-            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2);
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(140, 41);
             this.btnEmployees.TabIndex = 43;

@@ -209,13 +209,12 @@
             // 
             // flowLayoutPanel
             // 
-            this.flowLayoutPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(24, 128);
+            this.flowLayoutPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.flowLayoutPanel.Location = new System.Drawing.Point(0, 147);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(968, 506);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(1017, 506);
             this.flowLayoutPanel.TabIndex = 33;
             // 
             // btnSearch

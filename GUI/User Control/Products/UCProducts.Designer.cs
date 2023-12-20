@@ -40,6 +40,10 @@
             // 
             this.btnProductList.BackColor = System.Drawing.Color.Transparent;
             this.btnProductList.BorderRadius = 15;
+            this.btnProductList.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnProductList.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnProductList.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductList.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnProductList.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnProductList.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnProductList.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -50,6 +54,10 @@
             this.btnProductList.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnProductList.ForeColor = System.Drawing.Color.White;
             this.btnProductList.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnProductList.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnProductList.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnProductList.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductList.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnProductList.Location = new System.Drawing.Point(206, 27);
             this.btnProductList.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductList.Name = "btnProductList";
@@ -61,8 +69,14 @@
             // btnCategory
             // 
             this.btnCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCategory.Animated = true;
+            this.btnCategory.AnimatedGIF = true;
             this.btnCategory.BackColor = System.Drawing.Color.Transparent;
             this.btnCategory.BorderRadius = 15;
+            this.btnCategory.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCategory.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCategory.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnCategory.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnCategory.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnCategory.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -73,6 +87,10 @@
             this.btnCategory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnCategory.ForeColor = System.Drawing.Color.White;
             this.btnCategory.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnCategory.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCategory.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCategory.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCategory.Location = new System.Drawing.Point(787, 27);
             this.btnCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategory.Name = "btnCategory";
@@ -113,6 +131,10 @@
             this.btnSize.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSize.BackColor = System.Drawing.Color.Transparent;
             this.btnSize.BorderRadius = 15;
+            this.btnSize.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnSize.CheckedState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnSize.CheckedState.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSize.CheckedState.ForeColor = System.Drawing.Color.White;
             this.btnSize.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSize.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSize.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -123,12 +145,17 @@
             this.btnSize.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnSize.ForeColor = System.Drawing.Color.White;
             this.btnSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnSize.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnSize.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnSize.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSize.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnSize.Location = new System.Drawing.Point(498, 27);
             this.btnSize.Margin = new System.Windows.Forms.Padding(2);
             this.btnSize.Name = "btnSize";
             this.btnSize.Size = new System.Drawing.Size(135, 37);
             this.btnSize.TabIndex = 35;
             this.btnSize.Text = "Size list";
+            this.btnSize.Click += new System.EventHandler(this.btnSize_Click);
             // 
             // UCProducts
             // 
@@ -159,6 +186,7 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel PanelDisplayTabs;
         private UCProducts_TabProducts uCProducts_TabProducts;
         private UCProducts_TabCategory uCProducts_TabCategory;
+        private UCSize ucSize;
         private Guna.UI2.WinForms.Guna2GradientButton btnSize;
     }
 }

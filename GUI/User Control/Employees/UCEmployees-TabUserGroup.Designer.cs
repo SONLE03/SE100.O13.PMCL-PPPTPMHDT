@@ -37,13 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.gridviewUserGroup = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnAddUsergroup = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.UG_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.UG_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
             this.Delete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnAddUsergroup = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewUserGroup)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,8 @@
             this.gridviewUserGroup.AllowUserToAddRows = false;
             this.gridviewUserGroup.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.gridviewUserGroup.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridviewUserGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
@@ -105,7 +107,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewUserGroup.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -118,10 +120,10 @@
             this.Delete});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewUserGroup.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewUserGroup.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
@@ -132,12 +134,14 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewUserGroup.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.gridviewUserGroup.RowHeadersVisible = false;
             this.gridviewUserGroup.RowHeadersWidth = 50;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewUserGroup.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gridviewUserGroup.RowTemplate.Height = 40;
@@ -167,38 +171,6 @@
             this.gridviewUserGroup.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridviewUserGroup.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewUserGroup_CellClick);
             // 
-            // UG_ID
-            // 
-            this.UG_ID.FillWeight = 150F;
-            this.UG_ID.HeaderText = "User group ID";
-            this.UG_ID.MinimumWidth = 6;
-            this.UG_ID.Name = "UG_ID";
-            this.UG_ID.ReadOnly = true;
-            // 
-            // UG_name
-            // 
-            this.UG_name.FillWeight = 200F;
-            this.UG_name.HeaderText = "User group name";
-            this.UG_name.MinimumWidth = 6;
-            this.UG_name.Name = "UG_name";
-            this.UG_name.ReadOnly = true;
-            // 
-            // Edit
-            // 
-            this.Edit.HeaderText = "Edit";
-            this.Edit.MinimumWidth = 6;
-            this.Edit.Name = "Edit";
-            this.Edit.ReadOnly = true;
-            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Delete
-            // 
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
             // btnAddUsergroup
             // 
             this.btnAddUsergroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -215,7 +187,7 @@
             this.btnAddUsergroup.ForeColor = System.Drawing.Color.White;
             this.btnAddUsergroup.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnAddUsergroup.Location = new System.Drawing.Point(788, 32);
-            this.btnAddUsergroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddUsergroup.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddUsergroup.Name = "btnAddUsergroup";
             this.btnAddUsergroup.Size = new System.Drawing.Size(169, 39);
             this.btnAddUsergroup.TabIndex = 62;
@@ -237,9 +209,9 @@
             this.btnSearch.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnSearch.Location = new System.Drawing.Point(51, 32);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(155, 39);
+            this.btnSearch.Size = new System.Drawing.Size(141, 39);
             this.btnSearch.TabIndex = 61;
             this.btnSearch.Text = "Search user group";
             // 
@@ -258,7 +230,7 @@
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeftCursor = System.Windows.Forms.Cursors.No;
-            this.txtSearch.Location = new System.Drawing.Point(204, 33);
+            this.txtSearch.Location = new System.Drawing.Point(192, 33);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -269,11 +241,45 @@
             this.txtSearch.TabIndex = 60;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // UG_ID
+            // 
+            this.UG_ID.FillWeight = 150F;
+            this.UG_ID.HeaderText = "User group ID";
+            this.UG_ID.MinimumWidth = 6;
+            this.UG_ID.Name = "UG_ID";
+            this.UG_ID.ReadOnly = true;
+            // 
+            // UG_name
+            // 
+            this.UG_name.FillWeight = 200F;
+            this.UG_name.HeaderText = "User group name";
+            this.UG_name.MinimumWidth = 6;
+            this.UG_name.Name = "UG_name";
+            this.UG_name.ReadOnly = true;
+            // 
+            // Edit
+            // 
+            this.Edit.FillWeight = 50F;
+            this.Edit.HeaderText = "Edit";
+            this.Edit.MinimumWidth = 6;
+            this.Edit.Name = "Edit";
+            this.Edit.ReadOnly = true;
+            this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Delete
+            // 
+            this.Delete.FillWeight = 50F;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
             // UCEmployees_TabUserGroup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnAddUsergroup);
             this.Controls.Add(this.btnSearch);

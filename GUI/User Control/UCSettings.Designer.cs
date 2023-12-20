@@ -45,11 +45,11 @@
             this.btnChangePass = new Guna.UI2.WinForms.Guna2GradientButton();
             this.tbName = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbDoB = new Guna.UI2.WinForms.Guna2TextBox();
-            this.tbPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.tbAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbPhone = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbDoB = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.guna2Panel2.SuspendLayout();
@@ -64,7 +64,7 @@
             this.AvatarPic.Location = new System.Drawing.Point(63, 43);
             this.AvatarPic.Name = "AvatarPic";
             this.AvatarPic.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.AvatarPic.Size = new System.Drawing.Size(260, 260);
+            this.AvatarPic.Size = new System.Drawing.Size(130, 130);
             this.AvatarPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AvatarPic.TabIndex = 49;
             this.AvatarPic.TabStop = false;
@@ -326,74 +326,28 @@
             this.guna2Panel1.Size = new System.Drawing.Size(1677, 521);
             this.guna2Panel1.TabIndex = 46;
             // 
-            // tbUsername
+            // tbAddress
             // 
-            this.tbUsername.BackColor = System.Drawing.Color.Transparent;
-            this.tbUsername.BorderColor = System.Drawing.Color.Silver;
-            this.tbUsername.BorderRadius = 15;
-            this.tbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbUsername.DefaultText = "";
-            this.tbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.tbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbUsername.Location = new System.Drawing.Point(1033, 51);
-            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tbUsername.Name = "tbUsername";
-            this.tbUsername.PasswordChar = '\0';
-            this.tbUsername.PlaceholderText = "";
-            this.tbUsername.SelectedText = "";
-            this.tbUsername.Size = new System.Drawing.Size(512, 53);
-            this.tbUsername.TabIndex = 66;
-            // 
-            // tbEmail
-            // 
-            this.tbEmail.BackColor = System.Drawing.Color.Transparent;
-            this.tbEmail.BorderColor = System.Drawing.Color.Silver;
-            this.tbEmail.BorderRadius = 15;
-            this.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbEmail.DefaultText = "";
-            this.tbEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.tbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbEmail.Location = new System.Drawing.Point(1033, 153);
-            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tbEmail.Name = "tbEmail";
-            this.tbEmail.PasswordChar = '\0';
-            this.tbEmail.PlaceholderText = "";
-            this.tbEmail.SelectedText = "";
-            this.tbEmail.Size = new System.Drawing.Size(512, 53);
-            this.tbEmail.TabIndex = 67;
-            // 
-            // tbDoB
-            // 
-            this.tbDoB.BackColor = System.Drawing.Color.Transparent;
-            this.tbDoB.BorderColor = System.Drawing.Color.Silver;
-            this.tbDoB.BorderRadius = 15;
-            this.tbDoB.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbDoB.DefaultText = "";
-            this.tbDoB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbDoB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbDoB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbDoB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbDoB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbDoB.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.tbDoB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbDoB.Location = new System.Drawing.Point(107, 153);
-            this.tbDoB.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tbDoB.Name = "tbDoB";
-            this.tbDoB.PasswordChar = '\0';
-            this.tbDoB.PlaceholderText = "";
-            this.tbDoB.SelectedText = "";
-            this.tbDoB.Size = new System.Drawing.Size(512, 53);
-            this.tbDoB.TabIndex = 68;
+            this.tbAddress.BackColor = System.Drawing.Color.Transparent;
+            this.tbAddress.BorderColor = System.Drawing.Color.Silver;
+            this.tbAddress.BorderRadius = 15;
+            this.tbAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbAddress.DefaultText = "";
+            this.tbAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.tbAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbAddress.Location = new System.Drawing.Point(104, 354);
+            this.tbAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tbAddress.Name = "tbAddress";
+            this.tbAddress.PasswordChar = '\0';
+            this.tbAddress.PlaceholderText = "";
+            this.tbAddress.SelectedText = "";
+            this.tbAddress.Size = new System.Drawing.Size(1441, 53);
+            this.tbAddress.TabIndex = 70;
             // 
             // tbPhone
             // 
@@ -418,28 +372,74 @@
             this.tbPhone.Size = new System.Drawing.Size(512, 53);
             this.tbPhone.TabIndex = 69;
             // 
-            // tbAddress
+            // tbDoB
             // 
-            this.tbAddress.BackColor = System.Drawing.Color.Transparent;
-            this.tbAddress.BorderColor = System.Drawing.Color.Silver;
-            this.tbAddress.BorderRadius = 15;
-            this.tbAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tbAddress.DefaultText = "";
-            this.tbAddress.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.tbAddress.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.tbAddress.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbAddress.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.tbAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAddress.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.tbAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAddress.Location = new System.Drawing.Point(104, 354);
-            this.tbAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.tbAddress.Name = "tbAddress";
-            this.tbAddress.PasswordChar = '\0';
-            this.tbAddress.PlaceholderText = "";
-            this.tbAddress.SelectedText = "";
-            this.tbAddress.Size = new System.Drawing.Size(1441, 53);
-            this.tbAddress.TabIndex = 70;
+            this.tbDoB.BackColor = System.Drawing.Color.Transparent;
+            this.tbDoB.BorderColor = System.Drawing.Color.Silver;
+            this.tbDoB.BorderRadius = 15;
+            this.tbDoB.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbDoB.DefaultText = "";
+            this.tbDoB.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbDoB.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbDoB.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbDoB.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbDoB.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbDoB.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.tbDoB.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbDoB.Location = new System.Drawing.Point(107, 153);
+            this.tbDoB.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tbDoB.Name = "tbDoB";
+            this.tbDoB.PasswordChar = '\0';
+            this.tbDoB.PlaceholderText = "";
+            this.tbDoB.SelectedText = "";
+            this.tbDoB.Size = new System.Drawing.Size(512, 53);
+            this.tbDoB.TabIndex = 68;
+            // 
+            // tbEmail
+            // 
+            this.tbEmail.BackColor = System.Drawing.Color.Transparent;
+            this.tbEmail.BorderColor = System.Drawing.Color.Silver;
+            this.tbEmail.BorderRadius = 15;
+            this.tbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbEmail.DefaultText = "";
+            this.tbEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbEmail.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.tbEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbEmail.Location = new System.Drawing.Point(1033, 153);
+            this.tbEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tbEmail.Name = "tbEmail";
+            this.tbEmail.PasswordChar = '\0';
+            this.tbEmail.PlaceholderText = "";
+            this.tbEmail.SelectedText = "";
+            this.tbEmail.Size = new System.Drawing.Size(512, 53);
+            this.tbEmail.TabIndex = 67;
+            // 
+            // tbUsername
+            // 
+            this.tbUsername.BackColor = System.Drawing.Color.Transparent;
+            this.tbUsername.BorderColor = System.Drawing.Color.Silver;
+            this.tbUsername.BorderRadius = 15;
+            this.tbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tbUsername.DefaultText = "";
+            this.tbUsername.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.tbUsername.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.tbUsername.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbUsername.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.tbUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUsername.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.tbUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.tbUsername.Location = new System.Drawing.Point(1033, 51);
+            this.tbUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.PasswordChar = '\0';
+            this.tbUsername.PlaceholderText = "";
+            this.tbUsername.SelectedText = "";
+            this.tbUsername.Size = new System.Drawing.Size(512, 53);
+            this.tbUsername.TabIndex = 66;
             // 
             // UCSettings
             // 

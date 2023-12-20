@@ -70,9 +70,9 @@
             this.panelProduct.Controls.Add(this.drinkPicture);
             this.panelProduct.Controls.Add(this.pic_edit);
             this.panelProduct.Controls.Add(this.pic_AddToCart);
-            this.panelProduct.Location = new System.Drawing.Point(12, 9);
+            this.panelProduct.Location = new System.Drawing.Point(25, 9);
             this.panelProduct.Name = "panelProduct";
-            this.panelProduct.Size = new System.Drawing.Size(280, 239);
+            this.panelProduct.Size = new System.Drawing.Size(279, 239);
             this.panelProduct.TabIndex = 1;
             this.panelProduct.Click += new System.EventHandler(this.panelProduct_Click);
             // 
@@ -89,13 +89,13 @@
             this.guna2Panel2.Location = new System.Drawing.Point(69, 178);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(140, 43);
+            this.guna2Panel2.Size = new System.Drawing.Size(139, 43);
             this.guna2Panel2.TabIndex = 11;
             // 
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.AutoScroll = true;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 3);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(134, 38);
             this.flowLayoutPanel1.TabIndex = 10;
@@ -166,10 +166,10 @@
             this.drinkPicture.Image = global::GUI.Properties.Resources.milkco1;
             this.drinkPicture.ImageRotate = 0F;
             this.drinkPicture.Location = new System.Drawing.Point(15, 31);
-            this.drinkPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.drinkPicture.Margin = new System.Windows.Forms.Padding(2);
             this.drinkPicture.Name = "drinkPicture";
             this.drinkPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.drinkPicture.Size = new System.Drawing.Size(110, 110);
+            this.drinkPicture.Size = new System.Drawing.Size(109, 110);
             this.drinkPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.drinkPicture.TabIndex = 1;
             this.drinkPicture.TabStop = false;
@@ -181,9 +181,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_edit.Image = global::GUI.Properties.Resources.info;
             this.pic_edit.Location = new System.Drawing.Point(227, 12);
-            this.pic_edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_edit.Margin = new System.Windows.Forms.Padding(2);
             this.pic_edit.Name = "pic_edit";
-            this.pic_edit.Size = new System.Drawing.Size(40, 40);
+            this.pic_edit.Size = new System.Drawing.Size(39, 40);
             this.pic_edit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_edit.TabIndex = 7;
             this.pic_edit.TabStop = false;
@@ -196,9 +196,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_AddToCart.Image = global::GUI.Properties.Resources.icons8_add_shopping_cart_100px;
             this.pic_AddToCart.Location = new System.Drawing.Point(225, 12);
-            this.pic_AddToCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pic_AddToCart.Margin = new System.Windows.Forms.Padding(2);
             this.pic_AddToCart.Name = "pic_AddToCart";
-            this.pic_AddToCart.Size = new System.Drawing.Size(40, 40);
+            this.pic_AddToCart.Size = new System.Drawing.Size(39, 40);
             this.pic_AddToCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_AddToCart.TabIndex = 9;
             this.pic_AddToCart.TabStop = false;
@@ -212,7 +212,7 @@
             this.Controls.Add(this.panelProduct);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "UCProductMiniItem";
-            this.Size = new System.Drawing.Size(305, 258);
+            this.Size = new System.Drawing.Size(331, 258);
             this.panelProduct.ResumeLayout(false);
             this.panelProduct.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);

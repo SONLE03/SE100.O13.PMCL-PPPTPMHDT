@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Guna.UI2.WinForms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +19,26 @@ namespace GUI
         {
             InitializeComponent();
             InitializeContainer();
+            CheckedBtnState(btnEmployees);
+        }
+
+        private Guna2GradientButton CurrentBtn;
+
+        private void CheckedBtnState(object button)
+        {
+            var btn = (Guna2GradientButton)button;
+            btn.BackColor = Color.Transparent;
+            btn.FillColor = Color.FromArgb(147, 90, 21);
+            btn.FillColor2 = Color.FromArgb(147, 90, 21);
+            btn.ForeColor = Color.White;
+
+            if (CurrentBtn != null && CurrentBtn != btn)
+            {
+                CurrentBtn.FillColor = Color.FromArgb(234, 182, 134);
+                CurrentBtn.FillColor2 = Color.FromArgb(234, 182, 134);
+                CurrentBtn.ForeColor = Color.White;
+            }
+            CurrentBtn = btn;
         }
         private void InitializeContainer()
         {
@@ -32,12 +53,14 @@ namespace GUI
         {
             Control[] con = panelControl.Controls.Find("IE", false);
             con[0].BringToFront();
+            CheckedBtnState(sender);
         }
 
         private void btnUsergroup_Click(object sender, EventArgs e)
         {
             Control[] con = panelControl.Controls.Find("IU", false);
             con[0].BringToFront();
+            CheckedBtnState(sender);
         }
     }
 }
