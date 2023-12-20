@@ -86,8 +86,8 @@
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.flowLayoutPanel1);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(69, 178);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Location = new System.Drawing.Point(92, 219);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(139, 43);
             this.guna2Panel2.TabIndex = 11;
@@ -97,7 +97,7 @@
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 1);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(134, 38);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(219, 47);
             this.flowLayoutPanel1.TabIndex = 10;
             // 
             // labelID
@@ -107,10 +107,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.labelID.Location = new System.Drawing.Point(122, 8);
-            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelID.Location = new System.Drawing.Point(163, 10);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(31, 25);
+            this.labelID.Size = new System.Drawing.Size(36, 30);
             this.labelID.TabIndex = 8;
             this.labelID.Text = "ID";
             this.labelID.Visible = false;
@@ -122,10 +121,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(22, 189);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(29, 233);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(36, 20);
+            this.label1.Size = new System.Drawing.Size(47, 25);
             this.label1.TabIndex = 5;
             this.label1.Text = "Size";
             // 
@@ -136,10 +134,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPrice.AutoSize = true;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lbPrice.Location = new System.Drawing.Point(131, 110);
-            this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPrice.Location = new System.Drawing.Point(175, 135);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(81, 21);
+            this.lbPrice.Size = new System.Drawing.Size(107, 28);
             this.lbPrice.TabIndex = 3;
             this.lbPrice.Text = "$ 000.000";
             // 
@@ -151,10 +148,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbName.AutoSize = true;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lbName.Location = new System.Drawing.Point(131, 71);
-            this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbName.Location = new System.Drawing.Point(175, 87);
             this.lbName.Name = "lbName";
-            this.lbName.Size = new System.Drawing.Size(117, 21);
+            this.lbName.Size = new System.Drawing.Size(144, 28);
             this.lbName.TabIndex = 2;
             this.lbName.Text = "Product name";
             // 
@@ -206,11 +202,11 @@
             // 
             // UCProductMiniItem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.panelProduct);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCProductMiniItem";
             this.Size = new System.Drawing.Size(331, 258);
             this.panelProduct.ResumeLayout(false);

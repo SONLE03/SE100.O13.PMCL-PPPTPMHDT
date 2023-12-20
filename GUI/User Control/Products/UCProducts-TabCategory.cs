@@ -14,8 +14,6 @@ namespace GUI
 {
     public partial class UCProducts_TabCategory : UserControl
     {
-        private List<UCProductMiniItem> listMiniItem;
-
         public UCProducts_TabCategory()
         {
             InitializeComponent();

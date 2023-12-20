@@ -54,10 +54,9 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(24, 42);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(32, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(391, 20);
+            this.label2.Size = new System.Drawing.Size(497, 25);
             this.label2.TabIndex = 42;
             this.label2.Text = "These are list of all user groups in our store up to now ";
             // 
@@ -67,10 +66,9 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(24, 7);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(32, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 25);
+            this.label1.Size = new System.Drawing.Size(257, 30);
             this.label1.TabIndex = 41;
             this.label1.Text = "User group information";
             // 
@@ -87,9 +85,10 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(51, 132);
+            this.guna2Panel1.Location = new System.Drawing.Point(68, 162);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(906, 479);
+            this.guna2Panel1.Size = new System.Drawing.Size(1208, 590);
             this.guna2Panel1.TabIndex = 63;
             // 
             // gridviewUserGroup
@@ -114,10 +113,11 @@
             this.gridviewUserGroup.ColumnHeadersHeight = 40;
             this.gridviewUserGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewUserGroup.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.UG_ID,
             this.UG_name,
-            this.Edit,
-            this.Delete});
+            this.Status,
+            this.Edit});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
@@ -127,7 +127,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewUserGroup.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewUserGroup.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewUserGroup.Location = new System.Drawing.Point(3, 76);
+            this.gridviewUserGroup.Location = new System.Drawing.Point(4, 94);
+            this.gridviewUserGroup.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gridviewUserGroup.Name = "gridviewUserGroup";
             this.gridviewUserGroup.ReadOnly = true;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -146,7 +147,7 @@
             this.gridviewUserGroup.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.gridviewUserGroup.RowTemplate.Height = 40;
             this.gridviewUserGroup.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewUserGroup.Size = new System.Drawing.Size(900, 368);
+            this.gridviewUserGroup.Size = new System.Drawing.Size(1200, 453);
             this.gridviewUserGroup.TabIndex = 43;
             this.gridviewUserGroup.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewUserGroup.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -189,7 +190,7 @@
             this.btnAddUsergroup.Location = new System.Drawing.Point(788, 32);
             this.btnAddUsergroup.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddUsergroup.Name = "btnAddUsergroup";
-            this.btnAddUsergroup.Size = new System.Drawing.Size(169, 39);
+            this.btnAddUsergroup.Size = new System.Drawing.Size(225, 48);
             this.btnAddUsergroup.TabIndex = 62;
             this.btnAddUsergroup.Text = "Add user group";
             this.btnAddUsergroup.Click += new System.EventHandler(this.btnAddUsergroup_Click);
@@ -237,7 +238,7 @@
             this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtSearch.PlaceholderText = "Search user group";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(330, 38);
+            this.txtSearch.Size = new System.Drawing.Size(440, 47);
             this.txtSearch.TabIndex = 60;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -277,19 +278,21 @@
             // 
             // UCEmployees_TabUserGroup
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnAddUsergroup);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCEmployees_TabUserGroup";
-            this.Size = new System.Drawing.Size(1010, 655);
+            this.Size = new System.Drawing.Size(1347, 806);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewUserGroup)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -302,9 +305,13 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnAddUsergroup;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn UG_ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn UG_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewImageColumn Edit;
-        private System.Windows.Forms.DataGridViewImageColumn Delete;
     }
 }

@@ -48,54 +48,35 @@ namespace GUI
             //});
             //combobox_category.SelectedItem = "All";
 
-            LoadProductInFlowLayoutPanel(BUS.BUSDrink.Instance.GetAllDrink(),
-                                                              BUS.BUSDrink_Size.Instance.GetAllDrinkSize(),
-                                                              BUS.BUSSize.Instance.GetAllSize());
+            //LoadProductInFlowLayoutPanel(BUS.BUSDrink.Instance.GetAllDrink(),
+            //                                                  BUS.BUSDrink_Size.Instance.GetAllDrinkSize(),
+            //                                                  BUS.BUSSize.Instance.GetAllSize());
 
             //flowLayoutPanel.Refresh();
         }
 
-        private Guna2GradientButton CurrentBtn;
-
-        private void CheckedBtnState(object button)
-        {
-            var btn = (Guna2GradientButton)button;
-            btn.BackColor = Color.Transparent;
-            btn.FillColor = Color.FromArgb(147, 90, 21);
-            btn.FillColor2 = Color.FromArgb(147, 90, 21);
-            btn.ForeColor = Color.White;
-
-            if (CurrentBtn != null && CurrentBtn != btn)
-            {
-                CurrentBtn.FillColor = Color.FromArgb(234, 182, 134);
-                CurrentBtn.FillColor2 = Color.FromArgb(234, 182, 134);
-                CurrentBtn.ForeColor = Color.White;
-            }
-            CurrentBtn = btn;
-        }
-
         public void LoadProductInFlowLayoutPanel(List<DRINK> listDrink, List<DRINKS_SIZE> listDrinkSize, List<C_SIZE> listSize)
         {
-        //    flowLayoutPanelProducts.Controls.Clear();
+            flowLayoutPanelProducts.Controls.Clear();
 
-        //    var list = new List<int>();
-        //    // Load data for user control
-        //    foreach (var drink in listDrink)
-        //    {
-        //        list = new List<int>();
+            var list = new List<int>();
+            // Load data for user control
+            foreach (var drink in listDrink)
+            {
+                list = new List<int>();
 
-        //        foreach (var drinkSize in listDrinkSize)
-        //        {
-        //            if (drink.id == drinkSize.DrinksID)
-        //            {
-        //                list.Add(drinkSize.SizeID);
-        //            }
-        //        }
-        //        UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
-        //        productMiniItem.loadData(drink, list);
-        //        //listMiniItem.Add(productMiniItem);
-        //        flowLayoutPanelProducts.Controls.Add(productMiniItem);
-        //    }
+                foreach (var drinkSize in listDrinkSize)
+                {
+                    if (drink.id == drinkSize.DrinksID)
+                    {
+                        list.Add(drinkSize.SizeID);
+                    }
+                }
+                UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
+                productMiniItem.loadData(drink, list);
+                //listMiniItem.Add(productMiniItem);
+                flowLayoutPanelProducts.Controls.Add(productMiniItem);
+            }
         }
 
         public void addMiniItemProduct(UCMiniProductChoosen product)
@@ -124,20 +105,20 @@ namespace GUI
 
         public void deleteMiniItemProduct(UCMiniProductChoosen product)
         {
-            //flowLayoutPanel.Controls.Remove(product);
-            //BillDetail billDetail = new BillDetail();
-            //foreach (var p in nameProductInBill)
-            //{
-            //    if (p.productName.Equals(product.getProductName()) && p.quantity.Equals(product.getQuantity()))
-            //    {
-            //        billDetail = p;
-            //        break;
-            //    }
-            //}
-            //nameProductInBill.Remove(billDetail);
-            //sum -= product.getPrice();
-            //lbSubTotal.Text = sum.ToString() + " VND";
-            //LbTotal.Text = (sum + extraFee).ToString() + " VND";
+            flowLayoutPanel.Controls.Remove(product);
+            BillDetail billDetail = new BillDetail();
+            foreach (var p in nameProductInBill)
+            {
+                if (p.productName.Equals(product.getProductName()) && p.quantity.Equals(product.getQuantity()))
+                {
+                    billDetail = p;
+                    break;
+                }    
+            }
+            nameProductInBill.Remove(billDetail);
+            sum -= product.getPrice();
+            lbSubTotal.Text = sum.ToString() + " VND";
+            LbTotal.Text = (sum + extraFee).ToString() + " VND";
 
         }
 
@@ -298,14 +279,14 @@ namespace GUI
             //}
         }
 
-        //private void guna2Button4_Click(object sender, EventArgs e)
-        //{
-        //    flowLayoutPanel.Controls.Clear();
-        //    nameProductInBill = new List<BillDetail>();
-        //    sum = 0;
-        //    lbSubTotal.Text = sum.ToString() + " VND";
-        //    lbSurcharge.Text = extraFee.ToString() + " VND";
-        //    LbTotal.Text = (sum + extraFee).ToString() + " VND";
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel.Controls.Clear();
+            nameProductInBill = new List<BillDetail>();
+            sum = 0;
+            lbSubTotal.Text = sum.ToString() + " VND";
+            lbSurcharge.Text = extraFee.ToString() + " VND";
+            LbTotal.Text = (sum + extraFee).ToString() + " VND";
 
         //}
 

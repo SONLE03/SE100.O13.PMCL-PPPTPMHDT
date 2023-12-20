@@ -23,17 +23,7 @@ namespace GUI
             showOriginalPriceOfSize();
         }
 
-        private void txtSize_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void UCMiniSize_Click(object sender, EventArgs e)
-        {
-            showOriginalPriceOfSize();
-        }
-
-        private void txtSize_Click(object sender, EventArgs e)
         {
             showOriginalPriceOfSize();
         }
@@ -42,6 +32,11 @@ namespace GUI
             var drinkSize = (from p in BUS.BUSDrink_Size.Instance.GetAllDrinkSize() where p.C_SIZE.SizeName.Equals(txtSize.Text) && p.DRINK.id.ToString().Equals(id) select p).FirstOrDefault();
             productMiniItem.updatePrice(drinkSize.OriginalPrice.ToString());
             productMiniItem.Show();
+        }
+
+        private void txtSize_Click_1(object sender, EventArgs e)
+        {
+            showOriginalPriceOfSize();
         }
     }
 }

@@ -40,15 +40,17 @@ namespace BUS
         {
             return DALGroupUser.Instance.GetGroupUserByCode(GroupUserID);
         }
-
-        public int AddGroupUser(string GroupUserName)
+        public int AddGroupUser(string GroupUserName, string status)
         {
-            return DALGroupUser.Instance.AddGroupUser(GroupUserName);
+            return DALGroupUser.Instance.AddGroupUser(GroupUserName, status);
         }
-
-        public bool UpdGroupUser(int id, string GroupUserName, string status)
+        public bool GetGroupUserByName(string GroupUserName)
         {
-            return DALGroupUser.Instance.UpdGroupUser(id, GroupUserName, status);
+            return DALGroupUser.Instance.GetGroupUserByName(GroupUserName);
+        }
+        public bool UpdGroupUser(int id, string GroupUserName, string status, List<SERVICE> service)
+        {
+            return DALGroupUser.Instance.UpdGroupUser(id, GroupUserName, status, service);
         }
         public bool DelGroupUser(int id)
         {
@@ -62,6 +64,10 @@ namespace BUS
         public bool DelGroupService(int id, List<SERVICE> listService)
         {
             return DALGroupUser.Instance.DelGroupService(id, listService);
+        }
+        public List<GROUPUSER> SearchGroupUser(string searchText, string selectedStatus)
+        {
+            return DALGroupUser.Instance.SearchGroupUser(searchText, selectedStatus);
         }
     }
 }

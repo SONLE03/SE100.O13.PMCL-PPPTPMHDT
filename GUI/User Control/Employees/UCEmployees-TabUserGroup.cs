@@ -17,6 +17,7 @@ namespace GUI
         public UCEmployees_TabUserGroup()
         {
             InitializeComponent();
+            setUserGroupStatus();
             Binding(BUSGroupUser.Instance.GetAllGroupUser());
         }
         public void Binding(List<GROUPUSER> groupUser)
@@ -26,8 +27,13 @@ namespace GUI
             gridviewUserGroup.Rows.Clear();
             foreach (GROUPUSER us in groupUser)
             {
-                gridviewUserGroup.Rows.Add(us.id, us.GroupUserName, edit_img, edit_img);
+                gridviewUserGroup.Rows.Add(us.id, us.GroupUserID, us.GroupUserName, us.Status, edit_img);
             }
+        }
+        private void setUserGroupStatus()
+        {
+            cbStatus.Items.AddRange(new string[] { "All", "Active", "InActive" });
+            cbStatus.SelectedIndex = 0;
         }
 
         private void btnAddUsergroup_Click(object sender, EventArgs e)
@@ -41,26 +47,52 @@ namespace GUI
         {
             int idx = e.RowIndex;
             if (idx < 0) return;
+            int userGroupId = Convert.ToInt32(gridviewUserGroup.Rows[idx].Cells["ID"].Value);
             if (e.ColumnIndex == gridviewUserGroup.Columns["Edit"].Index)
             {
+                if (userGroupId == 1 || userGroupId == 2)
+                {
+                    MessageBox.Show("This user group cannot be modified", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }else if (BUSUser.Instance.checkUserInUserGroupLogin(userGroupId))
+                {
+                    MessageBox.Show("This user group cannot be modified, Account is logged in", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                EditUserGroup editUserGroup = new EditUserGroup(userGroupId);
+                editUserGroup.ShowDialog();
+                Binding(BUSGroupUser.Instance.GetAllGroupUser());
+            }
+            else
+            {
+                UserGroupDetails userGroupDetails = new UserGroupDetails(userGroupId);
+                userGroupDetails.ShowDialog();
+            }
+            
+
+        }
+        private void Search()
+        {
+            try
+            {
+                string searchText = txtSearch.Text.Trim().ToLower();
+                string selectedStatus = cbStatus.Text;
+                List<GROUPUSER> listGroupUser = BUSGroupUser.Instance.SearchGroupUser(searchText, selectedStatus);
+                Binding(listGroupUser);
+            }
+            catch
+            {
 
             }
-            //EmployeeDetails details = new EmployeeDetails(Convert.ToInt32(gridviewUserGroup.Rows[idx].Cells["UG_name"].Value));
-            //details.ShowDialog();
-            Binding(BUSGroupUser.Instance.GetAllGroupUser());
         }
-
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            List<GROUPUSER> list = new List<GROUPUSER>();
-            foreach (var us in BUSGroupUser.Instance.GetAllGroupUser())
-            {
-                if (us.GroupUserName.ToLower().Contains(txtSearch.Text.ToLower()))
-                {
-                    list.Add(us);
-                }
-            }
-            Binding(list);
+            Search();
+        }
+
+        private void cbStatus_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Search();
         }
     }
 }

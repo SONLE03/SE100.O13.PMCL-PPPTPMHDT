@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,7 @@ namespace GUI
         {
             InitializeComponent();
             this.user = user;
+            BUSUser.Instance.idUserLogin = user.id;
         }
 
 

@@ -25,6 +25,10 @@ namespace BUS
         {
             return DALService.Instance.GetAllService();
         }
+        public List<SERVICE> GetService()
+        {
+            return DALService.Instance.GetService();
+        }
 
         public SERVICE GetServiceById(int id)
         {
