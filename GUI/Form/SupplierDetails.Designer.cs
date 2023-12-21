@@ -42,7 +42,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_supname = new Guna.UI2.WinForms.Guna2Panel();
             this.lbSupName = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -57,8 +56,6 @@
             this.lbStatus = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.gridviewImport = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Import_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Import_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -66,8 +63,9 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Print = new System.Windows.Forms.DataGridViewImageColumn();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel_supID.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_supname.SuspendLayout();
             this.panel_phone.SuspendLayout();
             this.panel_Address.SuspendLayout();
@@ -84,9 +82,10 @@
             this.panel_supID.BorderThickness = 2;
             this.panel_supID.Controls.Add(this.lbSupplierID);
             this.panel_supID.FillColor = System.Drawing.Color.White;
-            this.panel_supID.Location = new System.Drawing.Point(96, 122);
+            this.panel_supID.Location = new System.Drawing.Point(46, 99);
+            this.panel_supID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_supID.Name = "panel_supID";
-            this.panel_supID.Size = new System.Drawing.Size(297, 40);
+            this.panel_supID.Size = new System.Drawing.Size(254, 32);
             this.panel_supID.TabIndex = 93;
             // 
             // lbSupplierID
@@ -95,9 +94,10 @@
             this.lbSupplierID.BackColor = System.Drawing.Color.Transparent;
             this.lbSupplierID.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSupplierID.ForeColor = System.Drawing.Color.Gray;
-            this.lbSupplierID.Location = new System.Drawing.Point(16, 9);
+            this.lbSupplierID.Location = new System.Drawing.Point(12, 7);
+            this.lbSupplierID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSupplierID.Name = "lbSupplierID";
-            this.lbSupplierID.Size = new System.Drawing.Size(94, 23);
+            this.lbSupplierID.Size = new System.Drawing.Size(79, 19);
             this.lbSupplierID.TabIndex = 49;
             this.lbSupplierID.Text = "Supplier ID";
             // 
@@ -109,12 +109,13 @@
             this.guna2ControlBox3.BorderRadius = 5;
             this.guna2ControlBox3.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
             this.guna2ControlBox3.CustomIconSize = 20F;
-            this.guna2ControlBox3.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox3.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox3.Location = new System.Drawing.Point(896, 14);
+            this.guna2ControlBox3.Location = new System.Drawing.Point(562, 11);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
-            this.guna2ControlBox3.Size = new System.Drawing.Size(45, 30);
+            this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 92;
             // 
             // guna2ControlBox1
@@ -124,12 +125,13 @@
             this.guna2ControlBox1.BackColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.BorderRadius = 5;
             this.guna2ControlBox1.CustomIconSize = 20F;
-            this.guna2ControlBox1.FillColor = System.Drawing.Color.White;
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
-            this.guna2ControlBox1.Location = new System.Drawing.Point(939, 14);
+            this.guna2ControlBox1.Location = new System.Drawing.Point(594, 11);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
-            this.guna2ControlBox1.Size = new System.Drawing.Size(45, 30);
+            this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 91;
             // 
             // btn_Cancel
@@ -146,9 +148,10 @@
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Cancel.Location = new System.Drawing.Point(445, 909);
+            this.btn_Cancel.Location = new System.Drawing.Point(261, 678);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(161, 37);
+            this.btn_Cancel.Size = new System.Drawing.Size(121, 34);
             this.btn_Cancel.TabIndex = 90;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -159,9 +162,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label2.Location = new System.Drawing.Point(98, 102);
+            this.label2.Location = new System.Drawing.Point(48, 83);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 15);
+            this.label2.Size = new System.Drawing.Size(57, 12);
             this.label2.TabIndex = 88;
             this.label2.Text = "Supplier ID";
             // 
@@ -171,9 +175,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label1.Location = new System.Drawing.Point(155, 35);
+            this.label1.Location = new System.Drawing.Point(257, 25);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 31);
+            this.label1.Size = new System.Drawing.Size(149, 25);
             this.label1.TabIndex = 86;
             this.label1.Text = "Supplier details";
             // 
@@ -187,17 +192,6 @@
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::GUI.Properties.Resources.raucu;
-            this.pictureBox1.Location = new System.Drawing.Point(-3, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 1000);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 85;
-            this.pictureBox1.TabStop = false;
-            // 
             // panel_supname
             // 
             this.panel_supname.BackColor = System.Drawing.Color.Transparent;
@@ -206,9 +200,10 @@
             this.panel_supname.BorderThickness = 2;
             this.panel_supname.Controls.Add(this.lbSupName);
             this.panel_supname.FillColor = System.Drawing.Color.White;
-            this.panel_supname.Location = new System.Drawing.Point(96, 204);
+            this.panel_supname.Location = new System.Drawing.Point(346, 99);
+            this.panel_supname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_supname.Name = "panel_supname";
-            this.panel_supname.Size = new System.Drawing.Size(297, 40);
+            this.panel_supname.Size = new System.Drawing.Size(254, 32);
             this.panel_supname.TabIndex = 100;
             // 
             // lbSupName
@@ -217,9 +212,10 @@
             this.lbSupName.BackColor = System.Drawing.Color.Transparent;
             this.lbSupName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbSupName.ForeColor = System.Drawing.Color.Gray;
-            this.lbSupName.Location = new System.Drawing.Point(16, 9);
+            this.lbSupName.Location = new System.Drawing.Point(12, 7);
+            this.lbSupName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbSupName.Name = "lbSupName";
-            this.lbSupName.Size = new System.Drawing.Size(120, 23);
+            this.lbSupName.Size = new System.Drawing.Size(99, 19);
             this.lbSupName.TabIndex = 49;
             this.lbSupName.Text = "Supplier name";
             // 
@@ -229,9 +225,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label6.Location = new System.Drawing.Point(98, 184);
+            this.label6.Location = new System.Drawing.Point(348, 83);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(87, 15);
+            this.label6.Size = new System.Drawing.Size(72, 12);
             this.label6.TabIndex = 99;
             this.label6.Text = "Supplier name";
             // 
@@ -243,9 +240,10 @@
             this.panel_phone.BorderThickness = 2;
             this.panel_phone.Controls.Add(this.lbPhone);
             this.panel_phone.FillColor = System.Drawing.Color.White;
-            this.panel_phone.Location = new System.Drawing.Point(96, 286);
+            this.panel_phone.Location = new System.Drawing.Point(46, 182);
+            this.panel_phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_phone.Name = "panel_phone";
-            this.panel_phone.Size = new System.Drawing.Size(297, 40);
+            this.panel_phone.Size = new System.Drawing.Size(254, 32);
             this.panel_phone.TabIndex = 102;
             // 
             // lbPhone
@@ -254,9 +252,10 @@
             this.lbPhone.BackColor = System.Drawing.Color.Transparent;
             this.lbPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPhone.ForeColor = System.Drawing.Color.Gray;
-            this.lbPhone.Location = new System.Drawing.Point(16, 9);
+            this.lbPhone.Location = new System.Drawing.Point(12, 7);
+            this.lbPhone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPhone.Name = "lbPhone";
-            this.lbPhone.Size = new System.Drawing.Size(59, 23);
+            this.lbPhone.Size = new System.Drawing.Size(48, 19);
             this.lbPhone.TabIndex = 49;
             this.lbPhone.Text = "Phone";
             // 
@@ -266,9 +265,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(98, 266);
+            this.label4.Location = new System.Drawing.Point(48, 168);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 15);
+            this.label4.Size = new System.Drawing.Size(34, 12);
             this.label4.TabIndex = 101;
             this.label4.Text = "Phone";
             // 
@@ -280,9 +280,10 @@
             this.panel_Address.BorderThickness = 2;
             this.panel_Address.Controls.Add(this.lbAddress);
             this.panel_Address.FillColor = System.Drawing.Color.White;
-            this.panel_Address.Location = new System.Drawing.Point(96, 371);
+            this.panel_Address.Location = new System.Drawing.Point(46, 275);
+            this.panel_Address.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_Address.Name = "panel_Address";
-            this.panel_Address.Size = new System.Drawing.Size(297, 70);
+            this.panel_Address.Size = new System.Drawing.Size(550, 57);
             this.panel_Address.TabIndex = 104;
             // 
             // lbAddress
@@ -291,9 +292,10 @@
             this.lbAddress.BackColor = System.Drawing.Color.Transparent;
             this.lbAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAddress.ForeColor = System.Drawing.Color.Gray;
-            this.lbAddress.Location = new System.Drawing.Point(15, 7);
+            this.lbAddress.Location = new System.Drawing.Point(11, 6);
+            this.lbAddress.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbAddress.Name = "lbAddress";
-            this.lbAddress.Size = new System.Drawing.Size(70, 23);
+            this.lbAddress.Size = new System.Drawing.Size(58, 19);
             this.lbAddress.TabIndex = 49;
             this.lbAddress.Text = "Address";
             // 
@@ -303,9 +305,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label5.Location = new System.Drawing.Point(98, 351);
+            this.label5.Location = new System.Drawing.Point(48, 258);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 15);
+            this.label5.Size = new System.Drawing.Size(41, 12);
             this.label5.TabIndex = 103;
             this.label5.Text = "Address";
             // 
@@ -315,9 +318,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(442, 194);
+            this.label3.Location = new System.Drawing.Point(348, 168);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 15);
+            this.label3.Size = new System.Drawing.Size(34, 12);
             this.label3.TabIndex = 105;
             this.label3.Text = "Status";
             // 
@@ -329,9 +333,10 @@
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.lbStatus);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(399, 250);
+            this.guna2Panel1.Location = new System.Drawing.Point(346, 182);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(297, 40);
+            this.guna2Panel1.Size = new System.Drawing.Size(254, 32);
             this.guna2Panel1.TabIndex = 103;
             // 
             // lbStatus
@@ -340,9 +345,10 @@
             this.lbStatus.BackColor = System.Drawing.Color.Transparent;
             this.lbStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.ForeColor = System.Drawing.Color.Gray;
-            this.lbStatus.Location = new System.Drawing.Point(16, 9);
+            this.lbStatus.Location = new System.Drawing.Point(12, 7);
+            this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbStatus.Name = "lbStatus";
-            this.lbStatus.Size = new System.Drawing.Size(57, 23);
+            this.lbStatus.Size = new System.Drawing.Size(48, 19);
             this.lbStatus.TabIndex = 49;
             this.lbStatus.Text = "Status";
             // 
@@ -359,10 +365,9 @@
             this.guna2Panel2.Controls.Add(this.label7);
             this.guna2Panel2.Controls.Add(this.label8);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(19, 486);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Location = new System.Drawing.Point(43, 370);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(965, 377);
+            this.guna2Panel2.Size = new System.Drawing.Size(553, 285);
             this.guna2Panel2.TabIndex = 106;
             // 
             // gridviewImport
@@ -378,7 +383,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -403,15 +408,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewImport.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewImport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewImport.Location = new System.Drawing.Point(4, 97);
-            this.gridviewImport.Margin = new System.Windows.Forms.Padding(4);
+            this.gridviewImport.Location = new System.Drawing.Point(3, 79);
             this.gridviewImport.Name = "gridviewImport";
             this.gridviewImport.ReadOnly = true;
             this.gridviewImport.RowHeadersVisible = false;
             this.gridviewImport.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewImport.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewImport.Size = new System.Drawing.Size(957, 245);
+            this.gridviewImport.Size = new System.Drawing.Size(547, 173);
             this.gridviewImport.TabIndex = 43;
             this.gridviewImport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewImport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -435,30 +439,6 @@
             this.gridviewImport.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewImport.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridviewImport.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewImport_CellClick);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.label7.ForeColor = System.Drawing.Color.DarkGray;
-            this.label7.Location = new System.Drawing.Point(25, 49);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(532, 28);
-            this.label7.TabIndex = 42;
-            this.label7.Text = "This is a list of all supplier receipts in our store to date";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(24, 10);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(238, 32);
-            this.label8.TabIndex = 41;
-            this.label8.Text = "Import information";
             // 
             // ID
             // 
@@ -516,11 +496,39 @@
             this.Print.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Print.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.DarkGray;
+            this.label7.Location = new System.Drawing.Point(19, 40);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(387, 20);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "This is a list of all supplier receipts in our store to date";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(18, 8);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(158, 21);
+            this.label8.TabIndex = 41;
+            this.label8.Text = "Import information";
+            // 
             // SupplierDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 1000);
+            this.BackgroundImage = global::GUI.Properties.Resources.raucu;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(640, 737);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label3);
@@ -536,15 +544,15 @@
             this.Controls.Add(this.btn_Cancel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "SupplierDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SupplierDetails";
             this.panel_supID.ResumeLayout(false);
             this.panel_supID.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel_supname.ResumeLayout(false);
             this.panel_supname.PerformLayout();
             this.panel_phone.ResumeLayout(false);
@@ -565,7 +573,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel panel_supID;
         private System.Windows.Forms.Label lbSupplierID;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2GradientButton btn_Cancel;

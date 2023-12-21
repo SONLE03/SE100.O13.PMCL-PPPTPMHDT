@@ -64,9 +64,9 @@
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.txtTotalPrice = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btn_Delete = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.btn_Delete = new System.Windows.Forms.PictureBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2.SuspendLayout();
@@ -312,12 +312,12 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel2.BorderRadius = 35;
+            this.guna2Panel2.BorderRadius = 25;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label14);
             this.guna2Panel2.Controls.Add(this.gridviewSelectedProducts);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(47, 322);
+            this.guna2Panel2.Location = new System.Drawing.Point(47, 328);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(643, 211);
             this.guna2Panel2.TabIndex = 162;
@@ -328,7 +328,7 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(23, 10);
+            this.label14.Location = new System.Drawing.Point(23, 6);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(108, 15);
@@ -365,7 +365,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewSelectedProducts.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewSelectedProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewSelectedProducts.Location = new System.Drawing.Point(3, 34);
+            this.gridviewSelectedProducts.Location = new System.Drawing.Point(3, 32);
             this.gridviewSelectedProducts.Name = "gridviewSelectedProducts";
             this.gridviewSelectedProducts.RowHeadersVisible = false;
             this.gridviewSelectedProducts.RowHeadersWidth = 50;
@@ -539,7 +539,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(43, 116);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(647, 189);
+            this.guna2Panel1.Size = new System.Drawing.Size(647, 193);
             this.guna2Panel1.TabIndex = 165;
             // 
             // label9
@@ -578,6 +578,18 @@
             this.txtTotalPrice.Size = new System.Drawing.Size(245, 30);
             this.txtTotalPrice.TabIndex = 125;
             // 
+            // btn_Delete
+            // 
+            this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Delete.Image = global::GUI.Properties.Resources.trash;
+            this.btn_Delete.Location = new System.Drawing.Point(607, 11);
+            this.btn_Delete.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_Delete.Name = "btn_Delete";
+            this.btn_Delete.Size = new System.Drawing.Size(27, 29);
+            this.btn_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btn_Delete.TabIndex = 34;
+            this.btn_Delete.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -599,18 +611,6 @@
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // btn_Delete
-            // 
-            this.btn_Delete.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Delete.Image = global::GUI.Properties.Resources.trash;
-            this.btn_Delete.Location = new System.Drawing.Point(607, 11);
-            this.btn_Delete.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Delete.Name = "btn_Delete";
-            this.btn_Delete.Size = new System.Drawing.Size(27, 29);
-            this.btn_Delete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btn_Delete.TabIndex = 34;
-            this.btn_Delete.TabStop = false;
             // 
             // guna2ControlBox3
             // 
@@ -663,6 +663,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label1);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "EditImportOrder";
