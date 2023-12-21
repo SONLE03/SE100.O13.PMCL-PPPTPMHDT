@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,21 @@ namespace GUI
 {
     public partial class SupplierDetails : Form
     {
-        public SupplierDetails()
+        SUPPLIER supplier;
+        public SupplierDetails(int id)
         {
             InitializeComponent();
+            supplier = BUSSupplier.Instance.GetSupplierById(id);
+            lbAddress.Text = supplier.Address;
+            lbSupplierID.Text = supplier.SupplierID;
+            lbSupName.Text = supplier.SupplierName;
+            lbPhone.Text = supplier.Phone;
+            lbStatus.Text = supplier.Status;
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

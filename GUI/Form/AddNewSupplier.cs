@@ -28,29 +28,35 @@ namespace GUI
             string supplierName = txtSupname.Text;
             string phone = txtPhone.Text;
             string address = txtAddress.Text;
+            string status = cbStatus.Text;
             try
             {
-                if (!String.IsNullOrEmpty(supplierName))
+                if (!String.IsNullOrEmpty(supplierName) && !String.IsNullOrEmpty(phone) && !String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(status))
                 {
-                    if(BUSSupplier.Instance.AddSupplier(supplierName, address, phone))
+                    if(BUSSupplier.Instance.AddSupplier(supplierName, address, phone, status))
                     {
-                        MessageBox.Show("Added successfully");
                         Clear();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Added failed");
                     }
                 }
                 else
                 {
-                    MessageBox.Show("You must fill all the information");
+                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void txtPhone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

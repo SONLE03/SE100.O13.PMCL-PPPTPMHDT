@@ -40,14 +40,20 @@ namespace DAL
             }
             return null;
         }
-        public List<SUPPLIER> FindSupplier(string SupplierID, string SupplierName)
+        public List<SUPPLIER> SearchSupplier(string searchText, string selectedStatus)
         {
-            var res = CFEntities.Instance.SUPPLIERs.ToList();
-            if (SupplierID != null) res = res.Where(t => t.SupplierID == SupplierID).Select(t => t).ToList();
-            if (SupplierName != null) res = res.Where(t => t.SupplierName == SupplierName).Select(t => t).ToList();
-            return res;
+            List<SUPPLIER> listSupplier = CFEntities.Instance.SUPPLIERs.ToList();
+            List<SUPPLIER> filteredList = new List<SUPPLIER>();
+            filteredList = listSupplier
+                .Where(p =>
+                    (string.IsNullOrEmpty(searchText) || p.SupplierName.ToLower().Contains(searchText.ToLower())) &&
+                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                )
+                .ToList();
+            return filteredList;
         }
-        public bool AddSupplier(string SupplierName, string Address, string Phone)
+
+        public bool AddSupplier(string SupplierName, string Address, string Phone, string Status)
         {
             try
             {
@@ -55,7 +61,7 @@ namespace DAL
                 obj.SupplierName = SupplierName;
                 obj.Address = Address;
                 obj.Phone = Phone;
-                obj.Status = "Active";
+                obj.Status = Status;
                 CFEntities.Instance.SUPPLIERs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;

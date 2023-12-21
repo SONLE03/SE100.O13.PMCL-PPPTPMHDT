@@ -74,11 +74,6 @@ namespace BUS
             if (groupUser.Status.Equals("InActive") && status.Equals("Active")) return false;
             return true;
         }
-
-        private bool PhoneNumberValidator(string phoneNumber)
-        {
-            return phoneNumber.Length == 10 && phoneNumber.StartsWith("0");
-        }
         private bool PasswordValidator(string password, string retypePass)
         {
             return password.Length >= 8 && password.Equals(retypePass) && Regex.IsMatch(password, "[a-zA-Z]") && Regex.IsMatch(password, "\\d");
@@ -108,7 +103,7 @@ namespace BUS
                 MessageBox.Show("The UserName already exists!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            else if (!PhoneNumberValidator(Phone))
+            else if (!BUSConstraint.Instance.PhoneNumberValidator(Phone))
             {
                 MessageBox.Show("Invalid phone number", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

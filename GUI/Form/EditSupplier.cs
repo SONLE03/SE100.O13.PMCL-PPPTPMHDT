@@ -22,27 +22,37 @@ namespace GUI
             txtSupname.Text = supplier.SupplierName;
             txtAddress.Text = supplier.Address;
             txtPhone.Text = supplier.Phone;
+            txtAddress.Text = supplier.Address;
+            cbStatus.Text = supplier.Status;
+            lbSupplierID.Text = supplier.SupplierID;
         }
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    if (txtSupname.Text == "")
-            //    {
-            //        MessageBox.Show("Chưa nhập tên nhà cung cấp!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //        return;
-            //    }
-            //    Boolean err = BUSSupplier.Instance.UpdSupplier(supplier.id, txtSupname.Text, txtAddress.Text, txtPhone.Text);
-            //    if (err == true) MessageBox.Show("Cập nhật thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //    else MessageBox.Show("Cập nhật không thành công!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    this.Close();
-            //}
-            //catch
-            //{
+            string supplierName = txtSupname.Text;
+            string phone = txtPhone.Text;
+            string address = txtAddress.Text;
+            string status = cbStatus.Text;
+            try
+            {
+                if (!String.IsNullOrEmpty(supplierName) && !String.IsNullOrEmpty(phone) && !String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(status))
+                {
+                    BUSSupplier.Instance.UpdSupplier(supplier.id, supplierName, address, phone, status);
+                }
+                else
+                {
+                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
-            //}
-           
+        private void btn_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

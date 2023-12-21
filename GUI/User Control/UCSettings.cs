@@ -19,12 +19,12 @@ namespace GUI
         {
             InitializeComponent();
             this.user = user;
-            tbAddress.Text = user.Address;
-            tbDoB.Text = user.DateOfBirth.ToString();
-            tbEmail.Text = user.Email;
-            tbName.Text = user.UserFullName;
-            tbPhone.Text = user.Phone.ToString();
-            tbUsername.Text = user.UserName;
+            //tbAddress.Text = user.Address;
+            //tbDoB.Text = user.DateOfBirth.ToString();
+            //tbEmail.Text = user.Email;
+            //tbName.Text = user.UserFullName;
+            //tbPhone.Text = user.Phone.ToString();
+            //tbUsername.Text = user.UserName;
 
             
         }

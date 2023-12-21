@@ -18,6 +18,12 @@ namespace GUI
         {
             InitializeComponent();
             Binding(BUSSupplier.Instance.GetAllSupplier());
+            setSupplierStatus();
+        }
+        private void setSupplierStatus()
+        {
+            cbStatus.Items.AddRange(new string[] { "All", "Active", "InActive" });
+            cbStatus.SelectedIndex = 0;
         }
 
         public void Binding(List<SUPPLIER> supplier)
@@ -27,7 +33,7 @@ namespace GUI
             gridviewSupplier.Rows.Clear();
             foreach (SUPPLIER s in supplier)
             {
-                gridviewSupplier.Rows.Add(s.id, s.SupplierName, s.Address, s.Phone, edit_img);
+                gridviewSupplier.Rows.Add(s.id, s.SupplierID, s.SupplierName, s.Phone, s.Address, s.Status, edit_img);
             }
         }
 
@@ -37,30 +43,46 @@ namespace GUI
             addNewSupplier.ShowDialog();
             Binding(BUSSupplier.Instance.GetAllSupplier());
         }
+        private void Search()
+        {
+            try
+            {
+                string searchText = txtSearch.Text.Trim().ToLower();
+                string selectedStatus = cbStatus.Text;
+                List<SUPPLIER> listSupplier = BUSSupplier.Instance.SearchSupplier(searchText, selectedStatus);
+                Binding(listSupplier);
+            }
+            catch
+            {
 
+            }
+        }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            List<SUPPLIER> list = new List<SUPPLIER>();
-            foreach (var p in BUSSupplier.Instance.GetAllSupplier())
-            {
-                if (p.SupplierName.ToLower().Contains(txtSearch.Text.ToLower()))
-                {
-                    list.Add(p);
-                }
-            }
-            Binding(list);
+            Search();
         }
 
         private void gridviewSupplier_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int idx = e.RowIndex;
             if (idx < 0) return;
+            int supplierId = Convert.ToInt32(gridviewSupplier.Rows[idx].Cells["ID"].Value);
             if (e.ColumnIndex == gridviewSupplier.Columns["Edit"].Index)
             {
-                EditSupplier editSupplier = new EditSupplier(Convert.ToInt32(gridviewSupplier.Rows[idx].Cells["Supplier_ID"].Value));
+                EditSupplier editSupplier = new EditSupplier(supplierId);
                 editSupplier.ShowDialog();
                 Binding(BUSSupplier.Instance.GetAllSupplier());
             }
+            else
+            {
+                SupplierDetails supplierDetails = new SupplierDetails(supplierId);
+                supplierDetails.Show();
+            }
+        }
+
+        private void cbStatus_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Search();
         }
     }
 }

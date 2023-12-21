@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="BUSArea.cs" />
     <Compile Include="BUSCategory.cs" />
+    <Compile Include="BUSConstraint.cs" />
     <Compile Include="BUSDrink.cs" />
     <Compile Include="BUSDrink_Size.cs" />
     <Compile Include="BUSEvent.cs" />
