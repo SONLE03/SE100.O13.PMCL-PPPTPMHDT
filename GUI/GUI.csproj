@@ -71,6 +71,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Form\EditSize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EditSize.Designer.cs">
+      <DependentUpon>EditSize.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\EditUserGroup.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -398,6 +404,9 @@
     <Compile Include="Form\UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\EditSize.resx">
+      <DependentUpon>EditSize.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\EditUserGroup.resx">
       <DependentUpon>EditUserGroup.cs</DependentUpon>
     </EmbeddedResource>
