@@ -31,9 +31,9 @@ namespace BUS
             return DALImportBillDetail.Instance.GetCTPhieuNhap(No, idIB);
         }
 
-        public bool AddImportBillDetail(int idIB, string Name, string Unit, int Quantity, float Rate)
+        public bool AddImportBillDetail(int idx, int idIB, string Name, string Unit, int Quantity, double Rate)
         {
-            return DALImportBillDetail.Instance.AddImportBillDetail(idIB, Name, Unit, Quantity, Rate);
+            return DALImportBillDetail.Instance.AddImportBillDetail(idx, idIB, Name, Unit, Quantity, Rate);
         }
     }
 }

@@ -27,7 +27,7 @@ namespace GUI
             gridviewImportOrder.Rows.Clear();
             foreach (IMPORT_BILL im in import)
             {
-                gridviewImportOrder.Rows.Add(im.id, im.ImportName, im.ImportDate, im.SUPPLIER.SupplierName, im.IMPORT_BILL_DETAIL.Count, im.Total, edit_img);
+                gridviewImportOrder.Rows.Add(im.id, im.ImportID, im.ImportName, im.ImportDate, im.SUPPLIER.SupplierName, im.IMPORT_BILL_DETAIL.Count, im.Total, edit_img);
             }
         }
 
@@ -53,14 +53,11 @@ namespace GUI
 
         private void gridviewImportOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            //int idx = e.RowIndex;
-            //if (idx < 0) return;
-            //if (e.ColumnIndex == gridviewImportOrder.Columns["Edit"].Index)
-            //{
-            //    EditSupplier editSupplier = new EditSupplier(Convert.ToInt32(gridviewImportOrder.Rows[idx].Cells["Supplier_ID"].Value));
-            //    editSupplier.ShowDialog();
-            //    Binding(BUSImportBill.Instance.GetAllImportBill());
-            //}
+            int idx = e.RowIndex;
+            if (idx < 0) return;
+            int impId = Convert.ToInt32(gridviewImportOrder.Rows[idx].Cells["ID"].Value);
+            ImportOrderDetails importOrderDetail = new ImportOrderDetails(impId);
+            importOrderDetail.Show();
         }
     }
 }

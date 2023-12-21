@@ -25,7 +25,7 @@ namespace DAL
         }
         public List<SUPPLIER> GetAllSupplierActive()
         {
-            return CFEntities.Instance.SUPPLIERs.AsNoTracking().Where(m => m.Status == DALStatus.active.ToString()).ToList();
+            return CFEntities.Instance.SUPPLIERs.AsNoTracking().Where(m => m.Status == "Active").ToList();
         }
         public SUPPLIER GetSupplierById(int id)
         {

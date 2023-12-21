@@ -1,9 +1,11 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -28,7 +30,7 @@ namespace DAL
             return CFEntities.Instance.IMPORT_BILL_DETAIL.Find(new object[] { No, idIB });
         }
 
-        public bool AddImportBillDetail(int idIB, string Name, string Unit, int Quantity, float Rate)
+        public bool AddImportBillDetail(int idx, int idIB, string Name, string Unit, int Quantity, double Rate)
         {
             try
             {
@@ -36,6 +38,7 @@ namespace DAL
                 if (bill == null) return false;
                 var ct = new IMPORT_BILL_DETAIL
                 {
+                    No = idx,
                     ImportID = idIB,
                     IMPORT_BILL = DALImportBill.Instance.GetImportBillById(idIB),
                     ImportMName = Name,
@@ -53,6 +56,27 @@ namespace DAL
             {
                 Console.WriteLine(ex.InnerException.ToString());
                 return false;
+            }
+        }
+        public void DeleteImportBillDetail(int idIB, DbContextTransaction transaction)
+        {
+            try
+            {
+                List<IMPORT_BILL_DETAIL> importBillDetails = CFEntities.Instance.IMPORT_BILL_DETAIL.Where(p => p.ImportID == idIB).ToList();
+                if (importBillDetails.Any())
+                {
+                    foreach (var importBillDetail in importBillDetails)
+                    {
+                        CFEntities.Instance.IMPORT_BILL_DETAIL.Remove(importBillDetail);
+                    }
+                    CFEntities.Instance.SaveChanges();
+                }
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+                transaction.Rollback();
+                return;
             }
         }
     }
