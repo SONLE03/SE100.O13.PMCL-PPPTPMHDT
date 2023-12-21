@@ -85,7 +85,7 @@
             this.panel_supID.Location = new System.Drawing.Point(46, 99);
             this.panel_supID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_supID.Name = "panel_supID";
-            this.panel_supID.Size = new System.Drawing.Size(254, 32);
+            this.panel_supID.Size = new System.Drawing.Size(254, 36);
             this.panel_supID.TabIndex = 93;
             // 
             // lbSupplierID
@@ -160,12 +160,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label2.Location = new System.Drawing.Point(48, 83);
+            this.label2.Location = new System.Drawing.Point(48, 81);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 12);
+            this.label2.Size = new System.Drawing.Size(69, 15);
             this.label2.TabIndex = 88;
             this.label2.Text = "Supplier ID";
             // 
@@ -203,7 +203,7 @@
             this.panel_supname.Location = new System.Drawing.Point(346, 99);
             this.panel_supname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_supname.Name = "panel_supname";
-            this.panel_supname.Size = new System.Drawing.Size(254, 32);
+            this.panel_supname.Size = new System.Drawing.Size(254, 36);
             this.panel_supname.TabIndex = 100;
             // 
             // lbSupName
@@ -223,12 +223,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label6.Location = new System.Drawing.Point(348, 83);
+            this.label6.Location = new System.Drawing.Point(348, 81);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(72, 12);
+            this.label6.Size = new System.Drawing.Size(87, 15);
             this.label6.TabIndex = 99;
             this.label6.Text = "Supplier name";
             // 
@@ -243,7 +243,7 @@
             this.panel_phone.Location = new System.Drawing.Point(46, 182);
             this.panel_phone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_phone.Name = "panel_phone";
-            this.panel_phone.Size = new System.Drawing.Size(254, 32);
+            this.panel_phone.Size = new System.Drawing.Size(254, 36);
             this.panel_phone.TabIndex = 102;
             // 
             // lbPhone
@@ -263,12 +263,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(48, 168);
+            this.label4.Location = new System.Drawing.Point(48, 166);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 12);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 101;
             this.label4.Text = "Phone";
             // 
@@ -303,12 +303,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label5.Location = new System.Drawing.Point(48, 258);
+            this.label5.Location = new System.Drawing.Point(48, 256);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.Size = new System.Drawing.Size(51, 15);
             this.label5.TabIndex = 103;
             this.label5.Text = "Address";
             // 
@@ -316,12 +316,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(348, 168);
+            this.label3.Location = new System.Drawing.Point(348, 166);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 12);
+            this.label3.Size = new System.Drawing.Size(42, 15);
             this.label3.TabIndex = 105;
             this.label3.Text = "Status";
             // 
@@ -336,7 +336,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(346, 182);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(254, 32);
+            this.guna2Panel1.Size = new System.Drawing.Size(254, 36);
             this.guna2Panel1.TabIndex = 103;
             // 
             // lbStatus
@@ -408,14 +408,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewImport.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewImport.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewImport.Location = new System.Drawing.Point(3, 79);
+            this.gridviewImport.Location = new System.Drawing.Point(3, 58);
             this.gridviewImport.Name = "gridviewImport";
             this.gridviewImport.ReadOnly = true;
             this.gridviewImport.RowHeadersVisible = false;
             this.gridviewImport.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewImport.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewImport.Size = new System.Drawing.Size(547, 173);
+            this.gridviewImport.Size = new System.Drawing.Size(547, 201);
             this.gridviewImport.TabIndex = 43;
             this.gridviewImport.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewImport.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -502,7 +502,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.DarkGray;
-            this.label7.Location = new System.Drawing.Point(19, 40);
+            this.label7.Location = new System.Drawing.Point(19, 30);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(387, 20);
@@ -515,7 +515,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(18, 8);
+            this.label8.Location = new System.Drawing.Point(18, 5);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(158, 21);

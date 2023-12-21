@@ -162,7 +162,7 @@
             this.txtCategoryname.PasswordChar = '\0';
             this.txtCategoryname.PlaceholderText = "Enter category name";
             this.txtCategoryname.SelectedText = "";
-            this.txtCategoryname.Size = new System.Drawing.Size(244, 41);
+            this.txtCategoryname.Size = new System.Drawing.Size(244, 35);
             this.txtCategoryname.TabIndex = 61;
             // 
             // label1
@@ -184,7 +184,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(79, 164);
+            this.label4.Location = new System.Drawing.Point(79, 163);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 15);
@@ -198,10 +198,11 @@
             this.cbStatus.BorderRadius = 15;
             this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbStatus.ForeColor = System.Drawing.Color.White;
             this.cbStatus.ItemHeight = 30;
             this.cbStatus.Items.AddRange(new object[] {
             "Active",

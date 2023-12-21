@@ -40,6 +40,12 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.ImportedProducts = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.panel_ImportOrderID = new Guna.UI2.WinForms.Guna2Panel();
@@ -58,12 +64,8 @@
             this.panelTotalExpenses = new Guna.UI2.WinForms.Guna2Panel();
             this.lbTotal = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImportedProducts)).BeginInit();
             this.panel_ImportOrderID.SuspendLayout();
@@ -80,9 +82,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(444, 72);
+            this.label3.Location = new System.Drawing.Point(333, 58);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(118, 15);
+            this.label3.Size = new System.Drawing.Size(97, 12);
             this.label3.TabIndex = 142;
             this.label3.Text = "Import Order Name";
             // 
@@ -92,9 +95,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label2.Location = new System.Drawing.Point(49, 72);
+            this.label2.Location = new System.Drawing.Point(37, 58);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 15);
+            this.label2.Size = new System.Drawing.Size(80, 12);
             this.label2.TabIndex = 140;
             this.label2.Text = "Import Order ID";
             // 
@@ -112,10 +116,10 @@
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.btnCancel.ForeColor = System.Drawing.Color.White;
             this.btnCancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnCancel.Location = new System.Drawing.Point(312, 585);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(213, 485);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(231, 37);
+            this.btnCancel.Size = new System.Drawing.Size(173, 33);
             this.btnCancel.TabIndex = 145;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -124,15 +128,14 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel2.BorderRadius = 35;
+            this.guna2Panel2.BorderRadius = 25;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label14);
             this.guna2Panel2.Controls.Add(this.ImportedProducts);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(51, 337);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel2.Location = new System.Drawing.Point(38, 274);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(700, 227);
+            this.guna2Panel2.Size = new System.Drawing.Size(525, 184);
             this.guna2Panel2.TabIndex = 143;
             // 
             // label14
@@ -141,9 +144,10 @@
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(31, 9);
+            this.label14.Location = new System.Drawing.Point(17, 6);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(141, 20);
+            this.label14.Size = new System.Drawing.Size(112, 15);
             this.label14.TabIndex = 41;
             this.label14.Text = "Imported products";
             // 
@@ -179,15 +183,14 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.ImportedProducts.DefaultCellStyle = dataGridViewCellStyle3;
             this.ImportedProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.ImportedProducts.Location = new System.Drawing.Point(2, 30);
-            this.ImportedProducts.Margin = new System.Windows.Forms.Padding(4);
+            this.ImportedProducts.Location = new System.Drawing.Point(2, 27);
             this.ImportedProducts.Name = "ImportedProducts";
             this.ImportedProducts.ReadOnly = true;
             this.ImportedProducts.RowHeadersVisible = false;
             this.ImportedProducts.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.ImportedProducts.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.ImportedProducts.Size = new System.Drawing.Size(695, 171);
+            this.ImportedProducts.Size = new System.Drawing.Size(521, 139);
             this.ImportedProducts.TabIndex = 40;
             this.ImportedProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.ImportedProducts.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -210,225 +213,6 @@
             this.ImportedProducts.ThemeStyle.RowsStyle.Height = 22;
             this.ImportedProducts.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.ImportedProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label1.Location = new System.Drawing.Point(278, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 31);
-            this.label1.TabIndex = 139;
-            this.label1.Text = "Import Order Details";
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.AnimationInterval = 250;
-            this.guna2BorderlessForm1.BorderRadius = 35;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // panel_ImportOrderID
-            // 
-            this.panel_ImportOrderID.BackColor = System.Drawing.Color.Transparent;
-            this.panel_ImportOrderID.BorderColor = System.Drawing.Color.Silver;
-            this.panel_ImportOrderID.BorderRadius = 10;
-            this.panel_ImportOrderID.BorderThickness = 2;
-            this.panel_ImportOrderID.Controls.Add(this.lbImportOrderID);
-            this.panel_ImportOrderID.FillColor = System.Drawing.Color.White;
-            this.panel_ImportOrderID.Location = new System.Drawing.Point(51, 90);
-            this.panel_ImportOrderID.Name = "panel_ImportOrderID";
-            this.panel_ImportOrderID.Size = new System.Drawing.Size(297, 40);
-            this.panel_ImportOrderID.TabIndex = 147;
-            // 
-            // lbImportOrderID
-            // 
-            this.lbImportOrderID.AutoSize = true;
-            this.lbImportOrderID.BackColor = System.Drawing.Color.Transparent;
-            this.lbImportOrderID.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImportOrderID.ForeColor = System.Drawing.Color.Gray;
-            this.lbImportOrderID.Location = new System.Drawing.Point(16, 9);
-            this.lbImportOrderID.Name = "lbImportOrderID";
-            this.lbImportOrderID.Size = new System.Drawing.Size(152, 23);
-            this.lbImportOrderID.TabIndex = 49;
-            this.lbImportOrderID.Text = "Imported Order ID";
-            // 
-            // panel_ImportOrderName
-            // 
-            this.panel_ImportOrderName.BackColor = System.Drawing.Color.Transparent;
-            this.panel_ImportOrderName.BorderColor = System.Drawing.Color.Silver;
-            this.panel_ImportOrderName.BorderRadius = 10;
-            this.panel_ImportOrderName.BorderThickness = 2;
-            this.panel_ImportOrderName.Controls.Add(this.lbImportOrderName);
-            this.panel_ImportOrderName.FillColor = System.Drawing.Color.White;
-            this.panel_ImportOrderName.Location = new System.Drawing.Point(447, 90);
-            this.panel_ImportOrderName.Name = "panel_ImportOrderName";
-            this.panel_ImportOrderName.Size = new System.Drawing.Size(297, 40);
-            this.panel_ImportOrderName.TabIndex = 148;
-            // 
-            // lbImportOrderName
-            // 
-            this.lbImportOrderName.AutoSize = true;
-            this.lbImportOrderName.BackColor = System.Drawing.Color.Transparent;
-            this.lbImportOrderName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImportOrderName.ForeColor = System.Drawing.Color.Gray;
-            this.lbImportOrderName.Location = new System.Drawing.Point(16, 9);
-            this.lbImportOrderName.Name = "lbImportOrderName";
-            this.lbImportOrderName.Size = new System.Drawing.Size(181, 23);
-            this.lbImportOrderName.TabIndex = 49;
-            this.lbImportOrderName.Text = "Imported Order Name";
-            // 
-            // panel_ImportOrderDate
-            // 
-            this.panel_ImportOrderDate.BackColor = System.Drawing.Color.Transparent;
-            this.panel_ImportOrderDate.BorderColor = System.Drawing.Color.Silver;
-            this.panel_ImportOrderDate.BorderRadius = 10;
-            this.panel_ImportOrderDate.BorderThickness = 2;
-            this.panel_ImportOrderDate.Controls.Add(this.lbImportOrderDate);
-            this.panel_ImportOrderDate.FillColor = System.Drawing.Color.White;
-            this.panel_ImportOrderDate.Location = new System.Drawing.Point(51, 171);
-            this.panel_ImportOrderDate.Name = "panel_ImportOrderDate";
-            this.panel_ImportOrderDate.Size = new System.Drawing.Size(297, 40);
-            this.panel_ImportOrderDate.TabIndex = 150;
-            // 
-            // lbImportOrderDate
-            // 
-            this.lbImportOrderDate.AutoSize = true;
-            this.lbImportOrderDate.BackColor = System.Drawing.Color.Transparent;
-            this.lbImportOrderDate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImportOrderDate.ForeColor = System.Drawing.Color.Gray;
-            this.lbImportOrderDate.Location = new System.Drawing.Point(16, 9);
-            this.lbImportOrderDate.Name = "lbImportOrderDate";
-            this.lbImportOrderDate.Size = new System.Drawing.Size(90, 23);
-            this.lbImportOrderDate.TabIndex = 49;
-            this.lbImportOrderDate.Text = "01/01/2001";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label6.Location = new System.Drawing.Point(49, 153);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 15);
-            this.label6.TabIndex = 149;
-            this.label6.Text = "Import Order Date";
-            // 
-            // panelSupplierName
-            // 
-            this.panelSupplierName.BackColor = System.Drawing.Color.Transparent;
-            this.panelSupplierName.BorderColor = System.Drawing.Color.Silver;
-            this.panelSupplierName.BorderRadius = 10;
-            this.panelSupplierName.BorderThickness = 2;
-            this.panelSupplierName.Controls.Add(this.lbImportOrderSupplier);
-            this.panelSupplierName.FillColor = System.Drawing.Color.White;
-            this.panelSupplierName.Location = new System.Drawing.Point(447, 171);
-            this.panelSupplierName.Name = "panelSupplierName";
-            this.panelSupplierName.Size = new System.Drawing.Size(297, 40);
-            this.panelSupplierName.TabIndex = 152;
-            // 
-            // lbImportOrderSupplier
-            // 
-            this.lbImportOrderSupplier.AutoSize = true;
-            this.lbImportOrderSupplier.BackColor = System.Drawing.Color.Transparent;
-            this.lbImportOrderSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImportOrderSupplier.ForeColor = System.Drawing.Color.Gray;
-            this.lbImportOrderSupplier.Location = new System.Drawing.Point(16, 9);
-            this.lbImportOrderSupplier.Name = "lbImportOrderSupplier";
-            this.lbImportOrderSupplier.Size = new System.Drawing.Size(102, 23);
-            this.lbImportOrderSupplier.TabIndex = 49;
-            this.lbImportOrderSupplier.Text = "Supplier 001";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label8.Location = new System.Drawing.Point(445, 153);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 15);
-            this.label8.TabIndex = 151;
-            this.label8.Text = "Supplier Name";
-            // 
-            // panelStaffName
-            // 
-            this.panelStaffName.BackColor = System.Drawing.Color.Transparent;
-            this.panelStaffName.BorderColor = System.Drawing.Color.Silver;
-            this.panelStaffName.BorderRadius = 10;
-            this.panelStaffName.BorderThickness = 2;
-            this.panelStaffName.Controls.Add(this.lbImportOrderUser);
-            this.panelStaffName.FillColor = System.Drawing.Color.White;
-            this.panelStaffName.Location = new System.Drawing.Point(51, 253);
-            this.panelStaffName.Name = "panelStaffName";
-            this.panelStaffName.Size = new System.Drawing.Size(297, 40);
-            this.panelStaffName.TabIndex = 154;
-            // 
-            // lbImportOrderUser
-            // 
-            this.lbImportOrderUser.AutoSize = true;
-            this.lbImportOrderUser.BackColor = System.Drawing.Color.Transparent;
-            this.lbImportOrderUser.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImportOrderUser.ForeColor = System.Drawing.Color.Gray;
-            this.lbImportOrderUser.Location = new System.Drawing.Point(16, 9);
-            this.lbImportOrderUser.Name = "lbImportOrderUser";
-            this.lbImportOrderUser.Size = new System.Drawing.Size(71, 23);
-            this.lbImportOrderUser.TabIndex = 49;
-            this.lbImportOrderUser.Text = "Staff001";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label10.Location = new System.Drawing.Point(49, 235);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 15);
-            this.label10.TabIndex = 153;
-            this.label10.Text = "User Name";
-            // 
-            // panelTotalExpenses
-            // 
-            this.panelTotalExpenses.BackColor = System.Drawing.Color.Transparent;
-            this.panelTotalExpenses.BorderColor = System.Drawing.Color.Silver;
-            this.panelTotalExpenses.BorderRadius = 10;
-            this.panelTotalExpenses.BorderThickness = 2;
-            this.panelTotalExpenses.Controls.Add(this.lbTotal);
-            this.panelTotalExpenses.FillColor = System.Drawing.Color.White;
-            this.panelTotalExpenses.Location = new System.Drawing.Point(447, 253);
-            this.panelTotalExpenses.Name = "panelTotalExpenses";
-            this.panelTotalExpenses.Size = new System.Drawing.Size(297, 40);
-            this.panelTotalExpenses.TabIndex = 156;
-            // 
-            // lbTotal
-            // 
-            this.lbTotal.AutoSize = true;
-            this.lbTotal.BackColor = System.Drawing.Color.Transparent;
-            this.lbTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTotal.ForeColor = System.Drawing.Color.Gray;
-            this.lbTotal.Location = new System.Drawing.Point(16, 9);
-            this.lbTotal.Name = "lbTotal";
-            this.lbTotal.Size = new System.Drawing.Size(97, 23);
-            this.lbTotal.TabIndex = 49;
-            this.lbTotal.Text = "100.000.000";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label12.Location = new System.Drawing.Point(445, 235);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(125, 15);
-            this.label12.TabIndex = 155;
-            this.label12.Text = "Total Expenses (VND)";
             // 
             // No
             // 
@@ -476,13 +260,284 @@
             this.Total_Price.Name = "Total_Price";
             this.Total_Price.ReadOnly = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label1.Location = new System.Drawing.Point(200, 14);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(196, 25);
+            this.label1.TabIndex = 139;
+            this.label1.Text = "Import Order Details";
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 250;
+            this.guna2BorderlessForm1.BorderRadius = 35;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
+            // panel_ImportOrderID
+            // 
+            this.panel_ImportOrderID.BackColor = System.Drawing.Color.Transparent;
+            this.panel_ImportOrderID.BorderColor = System.Drawing.Color.Silver;
+            this.panel_ImportOrderID.BorderRadius = 10;
+            this.panel_ImportOrderID.BorderThickness = 2;
+            this.panel_ImportOrderID.Controls.Add(this.lbImportOrderID);
+            this.panel_ImportOrderID.FillColor = System.Drawing.Color.White;
+            this.panel_ImportOrderID.Location = new System.Drawing.Point(38, 73);
+            this.panel_ImportOrderID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_ImportOrderID.Name = "panel_ImportOrderID";
+            this.panel_ImportOrderID.Size = new System.Drawing.Size(223, 32);
+            this.panel_ImportOrderID.TabIndex = 147;
+            // 
+            // lbImportOrderID
+            // 
+            this.lbImportOrderID.AutoSize = true;
+            this.lbImportOrderID.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderID.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderID.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderID.Location = new System.Drawing.Point(12, 7);
+            this.lbImportOrderID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbImportOrderID.Name = "lbImportOrderID";
+            this.lbImportOrderID.Size = new System.Drawing.Size(124, 19);
+            this.lbImportOrderID.TabIndex = 49;
+            this.lbImportOrderID.Text = "Imported Order ID";
+            // 
+            // panel_ImportOrderName
+            // 
+            this.panel_ImportOrderName.BackColor = System.Drawing.Color.Transparent;
+            this.panel_ImportOrderName.BorderColor = System.Drawing.Color.Silver;
+            this.panel_ImportOrderName.BorderRadius = 10;
+            this.panel_ImportOrderName.BorderThickness = 2;
+            this.panel_ImportOrderName.Controls.Add(this.lbImportOrderName);
+            this.panel_ImportOrderName.FillColor = System.Drawing.Color.White;
+            this.panel_ImportOrderName.Location = new System.Drawing.Point(335, 73);
+            this.panel_ImportOrderName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_ImportOrderName.Name = "panel_ImportOrderName";
+            this.panel_ImportOrderName.Size = new System.Drawing.Size(223, 32);
+            this.panel_ImportOrderName.TabIndex = 148;
+            // 
+            // lbImportOrderName
+            // 
+            this.lbImportOrderName.AutoSize = true;
+            this.lbImportOrderName.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderName.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderName.Location = new System.Drawing.Point(12, 7);
+            this.lbImportOrderName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbImportOrderName.Name = "lbImportOrderName";
+            this.lbImportOrderName.Size = new System.Drawing.Size(147, 19);
+            this.lbImportOrderName.TabIndex = 49;
+            this.lbImportOrderName.Text = "Imported Order Name";
+            // 
+            // panel_ImportOrderDate
+            // 
+            this.panel_ImportOrderDate.BackColor = System.Drawing.Color.Transparent;
+            this.panel_ImportOrderDate.BorderColor = System.Drawing.Color.Silver;
+            this.panel_ImportOrderDate.BorderRadius = 10;
+            this.panel_ImportOrderDate.BorderThickness = 2;
+            this.panel_ImportOrderDate.Controls.Add(this.lbImportOrderDate);
+            this.panel_ImportOrderDate.FillColor = System.Drawing.Color.White;
+            this.panel_ImportOrderDate.Location = new System.Drawing.Point(38, 139);
+            this.panel_ImportOrderDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_ImportOrderDate.Name = "panel_ImportOrderDate";
+            this.panel_ImportOrderDate.Size = new System.Drawing.Size(223, 32);
+            this.panel_ImportOrderDate.TabIndex = 150;
+            // 
+            // lbImportOrderDate
+            // 
+            this.lbImportOrderDate.AutoSize = true;
+            this.lbImportOrderDate.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderDate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderDate.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderDate.Location = new System.Drawing.Point(12, 7);
+            this.lbImportOrderDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbImportOrderDate.Name = "lbImportOrderDate";
+            this.lbImportOrderDate.Size = new System.Drawing.Size(79, 19);
+            this.lbImportOrderDate.TabIndex = 49;
+            this.lbImportOrderDate.Text = "01/01/2001";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label6.Location = new System.Drawing.Point(37, 124);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 12);
+            this.label6.TabIndex = 149;
+            this.label6.Text = "Import Order Date";
+            // 
+            // panelSupplierName
+            // 
+            this.panelSupplierName.BackColor = System.Drawing.Color.Transparent;
+            this.panelSupplierName.BorderColor = System.Drawing.Color.Silver;
+            this.panelSupplierName.BorderRadius = 10;
+            this.panelSupplierName.BorderThickness = 2;
+            this.panelSupplierName.Controls.Add(this.lbImportOrderSupplier);
+            this.panelSupplierName.FillColor = System.Drawing.Color.White;
+            this.panelSupplierName.Location = new System.Drawing.Point(335, 139);
+            this.panelSupplierName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelSupplierName.Name = "panelSupplierName";
+            this.panelSupplierName.Size = new System.Drawing.Size(223, 32);
+            this.panelSupplierName.TabIndex = 152;
+            // 
+            // lbImportOrderSupplier
+            // 
+            this.lbImportOrderSupplier.AutoSize = true;
+            this.lbImportOrderSupplier.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderSupplier.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderSupplier.Location = new System.Drawing.Point(12, 7);
+            this.lbImportOrderSupplier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbImportOrderSupplier.Name = "lbImportOrderSupplier";
+            this.lbImportOrderSupplier.Size = new System.Drawing.Size(87, 19);
+            this.lbImportOrderSupplier.TabIndex = 49;
+            this.lbImportOrderSupplier.Text = "Supplier 001";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label8.Location = new System.Drawing.Point(334, 124);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(74, 12);
+            this.label8.TabIndex = 151;
+            this.label8.Text = "Supplier Name";
+            // 
+            // panelStaffName
+            // 
+            this.panelStaffName.BackColor = System.Drawing.Color.Transparent;
+            this.panelStaffName.BorderColor = System.Drawing.Color.Silver;
+            this.panelStaffName.BorderRadius = 10;
+            this.panelStaffName.BorderThickness = 2;
+            this.panelStaffName.Controls.Add(this.lbImportOrderUser);
+            this.panelStaffName.FillColor = System.Drawing.Color.White;
+            this.panelStaffName.Location = new System.Drawing.Point(38, 206);
+            this.panelStaffName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelStaffName.Name = "panelStaffName";
+            this.panelStaffName.Size = new System.Drawing.Size(223, 32);
+            this.panelStaffName.TabIndex = 154;
+            // 
+            // lbImportOrderUser
+            // 
+            this.lbImportOrderUser.AutoSize = true;
+            this.lbImportOrderUser.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderUser.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderUser.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderUser.Location = new System.Drawing.Point(12, 7);
+            this.lbImportOrderUser.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbImportOrderUser.Name = "lbImportOrderUser";
+            this.lbImportOrderUser.Size = new System.Drawing.Size(61, 19);
+            this.lbImportOrderUser.TabIndex = 49;
+            this.lbImportOrderUser.Text = "Staff001";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label10.Location = new System.Drawing.Point(37, 191);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(55, 12);
+            this.label10.TabIndex = 153;
+            this.label10.Text = "User Name";
+            // 
+            // panelTotalExpenses
+            // 
+            this.panelTotalExpenses.BackColor = System.Drawing.Color.Transparent;
+            this.panelTotalExpenses.BorderColor = System.Drawing.Color.Silver;
+            this.panelTotalExpenses.BorderRadius = 10;
+            this.panelTotalExpenses.BorderThickness = 2;
+            this.panelTotalExpenses.Controls.Add(this.lbTotal);
+            this.panelTotalExpenses.FillColor = System.Drawing.Color.White;
+            this.panelTotalExpenses.Location = new System.Drawing.Point(335, 206);
+            this.panelTotalExpenses.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelTotalExpenses.Name = "panelTotalExpenses";
+            this.panelTotalExpenses.Size = new System.Drawing.Size(223, 32);
+            this.panelTotalExpenses.TabIndex = 156;
+            // 
+            // lbTotal
+            // 
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lbTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.ForeColor = System.Drawing.Color.Gray;
+            this.lbTotal.Location = new System.Drawing.Point(12, 7);
+            this.lbTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(85, 19);
+            this.lbTotal.TabIndex = 49;
+            this.lbTotal.Text = "100.000.000";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label12.Location = new System.Drawing.Point(334, 191);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(105, 12);
+            this.label12.TabIndex = 155;
+            this.label12.Text = "Total Expenses (VND)";
+            // 
+            // btnMinimize
+            // 
+            this.btnMinimize.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimize.Animated = true;
+            this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.BorderRadius = 5;
+            this.btnMinimize.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
+            this.btnMinimize.CustomIconSize = 20F;
+            this.btnMinimize.FillColor = System.Drawing.Color.Transparent;
+            this.btnMinimize.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimize.IconColor = System.Drawing.Color.Brown;
+            this.btnMinimize.Location = new System.Drawing.Point(523, 11);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(31, 17);
+            this.btnMinimize.TabIndex = 158;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.Animated = true;
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.BorderRadius = 5;
+            this.btnClose.CustomIconSize = 20F;
+            this.btnClose.FillColor = System.Drawing.Color.Transparent;
+            this.btnClose.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.IconColor = System.Drawing.Color.Brown;
+            this.btnClose.Location = new System.Drawing.Point(558, 11);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(31, 17);
+            this.btnClose.TabIndex = 157;
+            // 
             // ImportOrderDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 666);
+            this.ClientSize = new System.Drawing.Size(600, 541);
+            this.Controls.Add(this.btnMinimize);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panelTotalExpenses);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.panelStaffName);
@@ -501,6 +556,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ImportOrderDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ImportOrderDetails";
@@ -555,5 +611,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit_Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Price;
+        private Guna.UI2.WinForms.Guna2ControlBox btnMinimize;
+        private Guna.UI2.WinForms.Guna2ControlBox btnClose;
     }
 }

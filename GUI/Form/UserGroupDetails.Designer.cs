@@ -65,12 +65,12 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label10.Location = new System.Drawing.Point(93, 132);
+            this.label10.Location = new System.Drawing.Point(91, 138);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(87, 12);
+            this.label10.Size = new System.Drawing.Size(107, 15);
             this.label10.TabIndex = 178;
             this.label10.Text = "User Group Name";
             // 
@@ -80,7 +80,7 @@
             this.lbGUID.BackColor = System.Drawing.Color.Transparent;
             this.lbGUID.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGUID.ForeColor = System.Drawing.Color.Gray;
-            this.lbGUID.Location = new System.Drawing.Point(4, 7);
+            this.lbGUID.Location = new System.Drawing.Point(4, 8);
             this.lbGUID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbGUID.Name = "lbGUID";
             this.lbGUID.Size = new System.Drawing.Size(51, 19);
@@ -98,7 +98,7 @@
             this.panelUserGroupID.Location = new System.Drawing.Point(92, 83);
             this.panelUserGroupID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelUserGroupID.Name = "panelUserGroupID";
-            this.panelUserGroupID.Size = new System.Drawing.Size(346, 32);
+            this.panelUserGroupID.Size = new System.Drawing.Size(346, 36);
             this.panelUserGroupID.TabIndex = 177;
             // 
             // label1
@@ -215,12 +215,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label2.Location = new System.Drawing.Point(94, 64);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 12);
+            this.label2.Size = new System.Drawing.Size(87, 15);
             this.label2.TabIndex = 173;
             this.label2.Text = "User Group ID";
             // 
@@ -238,7 +238,7 @@
             this.btnCanel.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.btnCanel.ForeColor = System.Drawing.Color.White;
             this.btnCanel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnCanel.Location = new System.Drawing.Point(170, 488);
+            this.btnCanel.Location = new System.Drawing.Point(172, 524);
             this.btnCanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCanel.Name = "btnCanel";
             this.btnCanel.Size = new System.Drawing.Size(185, 30);
@@ -250,12 +250,12 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel2.BorderRadius = 35;
+            this.guna2Panel2.BorderRadius = 25;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label14);
             this.guna2Panel2.Controls.Add(this.gridService);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(92, 267);
+            this.guna2Panel2.Location = new System.Drawing.Point(92, 302);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(346, 198);
             this.guna2Panel2.TabIndex = 174;
@@ -277,10 +277,10 @@
             this.panelUserGroupName.BorderThickness = 2;
             this.panelUserGroupName.Controls.Add(this.lbGUName);
             this.panelUserGroupName.FillColor = System.Drawing.Color.White;
-            this.panelUserGroupName.Location = new System.Drawing.Point(92, 149);
+            this.panelUserGroupName.Location = new System.Drawing.Point(90, 157);
             this.panelUserGroupName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelUserGroupName.Name = "panelUserGroupName";
-            this.panelUserGroupName.Size = new System.Drawing.Size(346, 32);
+            this.panelUserGroupName.Size = new System.Drawing.Size(346, 36);
             this.panelUserGroupName.TabIndex = 179;
             // 
             // lbGUName
@@ -289,7 +289,7 @@
             this.lbGUName.BackColor = System.Drawing.Color.Transparent;
             this.lbGUName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGUName.ForeColor = System.Drawing.Color.Gray;
-            this.lbGUName.Location = new System.Drawing.Point(4, 7);
+            this.lbGUName.Location = new System.Drawing.Point(4, 8);
             this.lbGUName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbGUName.Name = "lbGUName";
             this.lbGUName.Size = new System.Drawing.Size(64, 19);
@@ -333,12 +333,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(87, 196);
+            this.label4.Location = new System.Drawing.Point(87, 211);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 12);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 182;
             this.label4.Text = "Status";
             // 
@@ -350,10 +350,10 @@
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.lbStatus);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(89, 211);
+            this.guna2Panel1.Location = new System.Drawing.Point(89, 229);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(346, 32);
+            this.guna2Panel1.Size = new System.Drawing.Size(346, 36);
             this.guna2Panel1.TabIndex = 180;
             // 
             // lbStatus
@@ -362,7 +362,7 @@
             this.lbStatus.BackColor = System.Drawing.Color.Transparent;
             this.lbStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbStatus.ForeColor = System.Drawing.Color.Gray;
-            this.lbStatus.Location = new System.Drawing.Point(4, 7);
+            this.lbStatus.Location = new System.Drawing.Point(4, 8);
             this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.Size = new System.Drawing.Size(48, 19);
@@ -375,7 +375,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(525, 541);
+            this.ClientSize = new System.Drawing.Size(525, 576);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.guna2ControlBox3);

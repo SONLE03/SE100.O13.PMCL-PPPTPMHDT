@@ -113,7 +113,7 @@
             this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Add.Location = new System.Drawing.Point(216, 191);
+            this.btn_Add.Location = new System.Drawing.Point(211, 191);
             this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.Size = new System.Drawing.Size(90, 33);

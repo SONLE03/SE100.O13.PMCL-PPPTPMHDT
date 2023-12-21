@@ -85,5 +85,10 @@ namespace GUI
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
         }
+
+        private void comboboxArea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

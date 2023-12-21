@@ -97,7 +97,7 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel2.BorderRadius = 35;
+            this.guna2Panel2.BorderRadius = 25;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label14);
             this.guna2Panel2.Controls.Add(this.gridviewEventAppliedProductDetails);
@@ -149,7 +149,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewEventAppliedProductDetails.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewEventAppliedProductDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewEventAppliedProductDetails.Location = new System.Drawing.Point(1, 24);
+            this.gridviewEventAppliedProductDetails.Location = new System.Drawing.Point(1, 27);
             this.gridviewEventAppliedProductDetails.Name = "gridviewEventAppliedProductDetails";
             this.gridviewEventAppliedProductDetails.RowHeadersVisible = false;
             this.gridviewEventAppliedProductDetails.RowHeadersWidth = 50;
@@ -240,7 +240,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label8.Location = new System.Drawing.Point(319, 202);
+            this.label8.Location = new System.Drawing.Point(319, 208);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(31, 15);
@@ -396,7 +396,7 @@
             this.panelUnit.BorderThickness = 2;
             this.panelUnit.Controls.Add(this.label15);
             this.panelUnit.FillColor = System.Drawing.Color.White;
-            this.panelUnit.Location = new System.Drawing.Point(321, 221);
+            this.panelUnit.Location = new System.Drawing.Point(321, 225);
             this.panelUnit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelUnit.Name = "panelUnit";
             this.panelUnit.Size = new System.Drawing.Size(242, 35);
@@ -421,7 +421,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(130, 226);
+            this.label7.Location = new System.Drawing.Point(130, 229);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 19);

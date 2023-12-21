@@ -54,12 +54,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label6.Location = new System.Drawing.Point(81, 249);
+            this.label6.Location = new System.Drawing.Point(82, 232);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 19);
+            this.label6.Size = new System.Drawing.Size(33, 15);
             this.label6.TabIndex = 142;
             this.label6.Text = "Area";
             // 
@@ -210,9 +210,10 @@
             // 
             // comboboxArea
             // 
+            this.comboboxArea.AutoRoundedCorners = true;
             this.comboboxArea.BackColor = System.Drawing.Color.Transparent;
             this.comboboxArea.BorderColor = System.Drawing.Color.Black;
-            this.comboboxArea.BorderRadius = 10;
+            this.comboboxArea.BorderRadius = 17;
             this.comboboxArea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboboxArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxArea.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -221,42 +222,45 @@
             this.comboboxArea.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboboxArea.ForeColor = System.Drawing.Color.White;
             this.comboboxArea.ItemHeight = 30;
-            this.comboboxArea.Location = new System.Drawing.Point(218, 249);
+            this.comboboxArea.Location = new System.Drawing.Point(85, 249);
             this.comboboxArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboboxArea.Name = "comboboxArea";
-            this.comboboxArea.Size = new System.Drawing.Size(147, 36);
+            this.comboboxArea.Size = new System.Drawing.Size(280, 36);
             this.comboboxArea.TabIndex = 148;
+            this.comboboxArea.SelectedIndexChanged += new System.EventHandler(this.comboboxArea_SelectedIndexChanged);
             // 
             // cbStatus
             // 
             this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.BorderColor = System.Drawing.Color.Empty;
             this.cbStatus.BorderRadius = 15;
             this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbStatus.ForeColor = System.Drawing.Color.White;
             this.cbStatus.ItemHeight = 30;
             this.cbStatus.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.cbStatus.Location = new System.Drawing.Point(218, 396);
+            this.cbStatus.Location = new System.Drawing.Point(85, 400);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(147, 36);
+            this.cbStatus.Size = new System.Drawing.Size(280, 36);
             this.cbStatus.TabIndex = 149;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(89, 403);
+            this.label4.Location = new System.Drawing.Point(82, 382);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(49, 19);
+            this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 150;
             this.label4.Text = "Status";
             // 

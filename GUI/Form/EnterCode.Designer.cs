@@ -80,7 +80,7 @@
             this.txtEmailCode.PasswordChar = '\0';
             this.txtEmailCode.PlaceholderText = "Enter code";
             this.txtEmailCode.SelectedText = "";
-            this.txtEmailCode.Size = new System.Drawing.Size(214, 32);
+            this.txtEmailCode.Size = new System.Drawing.Size(214, 35);
             this.txtEmailCode.TabIndex = 7;
             // 
             // btn_confirm
@@ -96,10 +96,10 @@
             this.btn_confirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirm.ForeColor = System.Drawing.Color.White;
             this.btn_confirm.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_confirm.Location = new System.Drawing.Point(204, 224);
+            this.btn_confirm.Location = new System.Drawing.Point(207, 242);
             this.btn_confirm.Margin = new System.Windows.Forms.Padding(2);
             this.btn_confirm.Name = "btn_confirm";
-            this.btn_confirm.Size = new System.Drawing.Size(116, 33);
+            this.btn_confirm.Size = new System.Drawing.Size(116, 35);
             this.btn_confirm.TabIndex = 11;
             this.btn_confirm.Text = "Confirm";
             this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);

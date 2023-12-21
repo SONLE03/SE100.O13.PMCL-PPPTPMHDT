@@ -272,7 +272,7 @@
             this.txtUGName.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUGName.ForeColor = System.Drawing.Color.DimGray;
             this.txtUGName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUGName.Location = new System.Drawing.Point(204, 145);
+            this.txtUGName.Location = new System.Drawing.Point(204, 144);
             this.txtUGName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtUGName.Name = "txtUGName";
             this.txtUGName.PasswordChar = '\0';
@@ -291,7 +291,7 @@
             this.guna2Panel2.Controls.Add(this.label14);
             this.guna2Panel2.Controls.Add(this.gridviewUserGroupDetails);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(55, 274);
+            this.guna2Panel2.Location = new System.Drawing.Point(55, 281);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(420, 228);
             this.guna2Panel2.TabIndex = 185;

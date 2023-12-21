@@ -399,7 +399,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(47, 428);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(602, 135);
+            this.guna2Panel1.Size = new System.Drawing.Size(602, 115);
             this.guna2Panel1.TabIndex = 78;
             // 
             // guna2Panel2
@@ -409,10 +409,10 @@
             this.guna2Panel2.BorderRadius = 10;
             this.guna2Panel2.Controls.Add(this.lbUserGroup);
             this.guna2Panel2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.guna2Panel2.Location = new System.Drawing.Point(333, 44);
+            this.guna2Panel2.Location = new System.Drawing.Point(333, 54);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(234, 29);
+            this.guna2Panel2.Size = new System.Drawing.Size(234, 36);
             this.guna2Panel2.TabIndex = 75;
             // 
             // lbUserGroup
@@ -421,7 +421,7 @@
             this.lbUserGroup.BackColor = System.Drawing.Color.Transparent;
             this.lbUserGroup.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lbUserGroup.ForeColor = System.Drawing.Color.White;
-            this.lbUserGroup.Location = new System.Drawing.Point(12, 6);
+            this.lbUserGroup.Location = new System.Drawing.Point(12, 8);
             this.lbUserGroup.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUserGroup.Name = "lbUserGroup";
             this.lbUserGroup.Size = new System.Drawing.Size(65, 15);
@@ -432,12 +432,12 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label9.Location = new System.Drawing.Point(331, 28);
+            this.label9.Location = new System.Drawing.Point(331, 38);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(56, 12);
+            this.label9.Size = new System.Drawing.Size(65, 13);
             this.label9.TabIndex = 74;
             this.label9.Text = "User group";
             // 
@@ -449,10 +449,10 @@
             this.panel_Username.BorderThickness = 2;
             this.panel_Username.Controls.Add(this.lbStatus);
             this.panel_Username.FillColor = System.Drawing.Color.White;
-            this.panel_Username.Location = new System.Drawing.Point(9, 44);
+            this.panel_Username.Location = new System.Drawing.Point(9, 54);
             this.panel_Username.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_Username.Name = "panel_Username";
-            this.panel_Username.Size = new System.Drawing.Size(234, 29);
+            this.panel_Username.Size = new System.Drawing.Size(234, 33);
             this.panel_Username.TabIndex = 71;
             // 
             // lbStatus
@@ -461,7 +461,7 @@
             this.lbStatus.BackColor = System.Drawing.Color.Transparent;
             this.lbStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lbStatus.ForeColor = System.Drawing.Color.Gray;
-            this.lbStatus.Location = new System.Drawing.Point(12, 6);
+            this.lbStatus.Location = new System.Drawing.Point(12, 9);
             this.lbStatus.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbStatus.Name = "lbStatus";
             this.lbStatus.Size = new System.Drawing.Size(40, 15);
@@ -472,12 +472,12 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label11.Location = new System.Drawing.Point(7, 28);
+            this.label11.Location = new System.Drawing.Point(7, 38);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 12);
+            this.label11.Size = new System.Drawing.Size(39, 13);
             this.label11.TabIndex = 70;
             this.label11.Text = "Status";
             // 
@@ -508,10 +508,10 @@
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Cancel.Location = new System.Drawing.Point(294, 585);
+            this.btn_Cancel.Location = new System.Drawing.Point(292, 574);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(125, 30);
+            this.btn_Cancel.Size = new System.Drawing.Size(125, 33);
             this.btn_Cancel.TabIndex = 79;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);

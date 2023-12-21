@@ -274,10 +274,10 @@
             this.btn_Update.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Update.ForeColor = System.Drawing.Color.White;
             this.btn_Update.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Update.Location = new System.Drawing.Point(279, 481);
+            this.btn_Update.Location = new System.Drawing.Point(266, 482);
             this.btn_Update.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Update.Name = "btn_Update";
-            this.btn_Update.Size = new System.Drawing.Size(81, 38);
+            this.btn_Update.Size = new System.Drawing.Size(85, 38);
             this.btn_Update.TabIndex = 89;
             this.btn_Update.Text = "Update";
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
@@ -286,12 +286,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label6.Location = new System.Drawing.Point(62, 243);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 19);
+            this.label6.Size = new System.Drawing.Size(42, 15);
             this.label6.TabIndex = 99;
             this.label6.Text = "Status";
             // 
@@ -301,18 +301,19 @@
             this.cbStatus.BorderRadius = 15;
             this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbStatus.ForeColor = System.Drawing.Color.White;
             this.cbStatus.ItemHeight = 30;
             this.cbStatus.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.cbStatus.Location = new System.Drawing.Point(204, 238);
+            this.cbStatus.Location = new System.Drawing.Point(194, 238);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(178, 36);
+            this.cbStatus.Size = new System.Drawing.Size(188, 36);
             this.cbStatus.TabIndex = 100;
             // 
             // btn_Cancel
@@ -332,7 +333,7 @@
             this.btn_Cancel.Location = new System.Drawing.Point(90, 482);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(81, 38);
+            this.btn_Cancel.Size = new System.Drawing.Size(85, 38);
             this.btn_Cancel.TabIndex = 90;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);

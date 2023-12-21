@@ -179,7 +179,7 @@
             this.lbEmployeeID.BackColor = System.Drawing.Color.Transparent;
             this.lbEmployeeID.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             this.lbEmployeeID.ForeColor = System.Drawing.Color.Gray;
-            this.lbEmployeeID.Location = new System.Drawing.Point(12, 7);
+            this.lbEmployeeID.Location = new System.Drawing.Point(12, 8);
             this.lbEmployeeID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbEmployeeID.Name = "lbEmployeeID";
             this.lbEmployeeID.Size = new System.Drawing.Size(46, 15);
@@ -391,9 +391,10 @@
             // 
             // combobox_usergroup
             // 
+            this.combobox_usergroup.AutoRoundedCorners = true;
             this.combobox_usergroup.BackColor = System.Drawing.Color.Transparent;
             this.combobox_usergroup.BorderColor = System.Drawing.Color.Black;
-            this.combobox_usergroup.BorderRadius = 10;
+            this.combobox_usergroup.BorderRadius = 17;
             this.combobox_usergroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combobox_usergroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_usergroup.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -402,10 +403,10 @@
             this.combobox_usergroup.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.combobox_usergroup.ForeColor = System.Drawing.Color.White;
             this.combobox_usergroup.ItemHeight = 30;
-            this.combobox_usergroup.Location = new System.Drawing.Point(448, 27);
+            this.combobox_usergroup.Location = new System.Drawing.Point(438, 27);
             this.combobox_usergroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combobox_usergroup.Name = "combobox_usergroup";
-            this.combobox_usergroup.Size = new System.Drawing.Size(138, 36);
+            this.combobox_usergroup.Size = new System.Drawing.Size(148, 36);
             this.combobox_usergroup.TabIndex = 88;
             // 
             // label15
@@ -619,9 +620,10 @@
             // 
             // cbStatus
             // 
+            this.cbStatus.AutoRoundedCorners = true;
             this.cbStatus.BackColor = System.Drawing.Color.Transparent;
             this.cbStatus.BorderColor = System.Drawing.Color.Black;
-            this.cbStatus.BorderRadius = 10;
+            this.cbStatus.BorderRadius = 17;
             this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -633,10 +635,10 @@
             this.cbStatus.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.cbStatus.Location = new System.Drawing.Point(429, 416);
+            this.cbStatus.Location = new System.Drawing.Point(495, 416);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(220, 36);
+            this.cbStatus.Size = new System.Drawing.Size(153, 36);
             this.cbStatus.TabIndex = 89;
             // 
             // label8

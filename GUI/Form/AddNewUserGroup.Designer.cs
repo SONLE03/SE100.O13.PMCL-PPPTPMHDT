@@ -67,7 +67,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label10.Location = new System.Drawing.Point(47, 144);
+            this.label10.Location = new System.Drawing.Point(47, 142);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(129, 19);
@@ -98,7 +98,7 @@
             this.panelUserGroupID.Location = new System.Drawing.Point(197, 68);
             this.panelUserGroupID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelUserGroupID.Name = "panelUserGroupID";
-            this.panelUserGroupID.Size = new System.Drawing.Size(278, 36);
+            this.panelUserGroupID.Size = new System.Drawing.Size(278, 34);
             this.panelUserGroupID.TabIndex = 163;
             // 
             // label1
@@ -341,7 +341,7 @@
             this.txtUserGroupName.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtUserGroupName.PlaceholderText = "Enter UG name";
             this.txtUserGroupName.SelectedText = "";
-            this.txtUserGroupName.Size = new System.Drawing.Size(278, 36);
+            this.txtUserGroupName.Size = new System.Drawing.Size(278, 34);
             this.txtUserGroupName.TabIndex = 171;
             // 
             // label4
@@ -350,7 +350,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(50, 213);
+            this.label4.Location = new System.Drawing.Point(51, 211);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 19);
@@ -372,7 +372,7 @@
             this.cbStatus.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.cbStatus.Location = new System.Drawing.Point(197, 201);
+            this.cbStatus.Location = new System.Drawing.Point(197, 203);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(275, 36);

@@ -80,12 +80,12 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label10.Location = new System.Drawing.Point(349, 80);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 12);
+            this.label10.Size = new System.Drawing.Size(92, 13);
             this.label10.TabIndex = 124;
             this.label10.Text = "Unit price (VND)";
             // 
@@ -116,12 +116,12 @@
             // 
             this.label11.AutoSize = true;
             this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label11.Location = new System.Drawing.Point(349, 28);
+            this.label11.Location = new System.Drawing.Point(349, 25);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(70, 12);
+            this.label11.Size = new System.Drawing.Size(80, 13);
             this.label11.TabIndex = 122;
             this.label11.Text = "Product name";
             // 
@@ -152,14 +152,14 @@
             // 
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label8.Location = new System.Drawing.Point(15, 132);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(33, 12);
+            this.label8.Size = new System.Drawing.Size(52, 13);
             this.label8.TabIndex = 120;
-            this.label8.Text = "label8";
+            this.label8.Text = "Quantity";
             // 
             // txtQuantity
             // 
@@ -234,12 +234,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label6.Location = new System.Drawing.Point(10, 25);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(43, 12);
+            this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 116;
             this.label6.Text = "Number";
             // 
@@ -280,7 +280,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnDelete.Location = new System.Drawing.Point(185, 559);
+            this.btnDelete.Location = new System.Drawing.Point(185, 567);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(94, 39);
@@ -301,7 +301,7 @@
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnUpdate.Location = new System.Drawing.Point(447, 559);
+            this.btnUpdate.Location = new System.Drawing.Point(447, 567);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(92, 39);
@@ -317,7 +317,7 @@
             this.guna2Panel2.Controls.Add(this.label14);
             this.guna2Panel2.Controls.Add(this.gridviewSelectedProducts);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(47, 328);
+            this.guna2Panel2.Location = new System.Drawing.Point(47, 332);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(643, 211);
             this.guna2Panel2.TabIndex = 162;
@@ -440,12 +440,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(10, 5);
+            this.label5.Location = new System.Drawing.Point(10, 4);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(71, 12);
+            this.label5.Size = new System.Drawing.Size(81, 13);
             this.label5.TabIndex = 114;
             this.label5.Text = "Type products";
             // 
@@ -493,12 +493,12 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label7.Location = new System.Drawing.Point(13, 80);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(25, 12);
+            this.label7.Size = new System.Drawing.Size(29, 13);
             this.label7.TabIndex = 118;
             this.label7.Text = "Unit";
             // 
@@ -536,7 +536,7 @@
             this.guna2Panel1.Controls.Add(this.label5);
             this.guna2Panel1.Controls.Add(this.btn_Delete);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(43, 116);
+            this.guna2Panel1.Location = new System.Drawing.Point(43, 119);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(647, 193);
@@ -546,12 +546,12 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label9.Location = new System.Drawing.Point(351, 132);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 12);
+            this.label9.Size = new System.Drawing.Size(95, 13);
             this.label9.TabIndex = 126;
             this.label9.Text = "Total price (VND)";
             // 

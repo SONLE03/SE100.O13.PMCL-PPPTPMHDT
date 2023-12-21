@@ -380,9 +380,10 @@
             // 
             // combobox_category
             // 
+            this.combobox_category.AutoRoundedCorners = true;
             this.combobox_category.BackColor = System.Drawing.Color.Transparent;
             this.combobox_category.BorderColor = System.Drawing.Color.Black;
-            this.combobox_category.BorderRadius = 10;
+            this.combobox_category.BorderRadius = 17;
             this.combobox_category.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combobox_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -426,9 +427,10 @@
             // 
             // comboboxProduct
             // 
+            this.comboboxProduct.AutoRoundedCorners = true;
             this.comboboxProduct.BackColor = System.Drawing.Color.Transparent;
             this.comboboxProduct.BorderColor = System.Drawing.Color.Black;
-            this.comboboxProduct.BorderRadius = 10;
+            this.comboboxProduct.BorderRadius = 17;
             this.comboboxProduct.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboboxProduct.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxProduct.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));

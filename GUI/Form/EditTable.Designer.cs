@@ -96,12 +96,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label6.Location = new System.Drawing.Point(74, 258);
+            this.label6.Location = new System.Drawing.Point(81, 236);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 19);
+            this.label6.Size = new System.Drawing.Size(33, 15);
             this.label6.TabIndex = 155;
             this.label6.Text = "Area";
             // 
@@ -186,9 +186,10 @@
             // 
             // comboboxArea
             // 
+            this.comboboxArea.AutoRoundedCorners = true;
             this.comboboxArea.BackColor = System.Drawing.Color.Transparent;
             this.comboboxArea.BorderColor = System.Drawing.Color.Black;
-            this.comboboxArea.BorderRadius = 10;
+            this.comboboxArea.BorderRadius = 17;
             this.comboboxArea.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboboxArea.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboboxArea.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -197,10 +198,10 @@
             this.comboboxArea.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboboxArea.ForeColor = System.Drawing.Color.White;
             this.comboboxArea.ItemHeight = 30;
-            this.comboboxArea.Location = new System.Drawing.Point(187, 255);
+            this.comboboxArea.Location = new System.Drawing.Point(82, 255);
             this.comboboxArea.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboboxArea.Name = "comboboxArea";
-            this.comboboxArea.Size = new System.Drawing.Size(139, 36);
+            this.comboboxArea.Size = new System.Drawing.Size(244, 36);
             this.comboboxArea.TabIndex = 159;
             // 
             // bthCancel

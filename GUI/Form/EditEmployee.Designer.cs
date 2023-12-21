@@ -108,9 +108,10 @@
             // 
             // combobox_usergroup
             // 
+            this.combobox_usergroup.AutoRoundedCorners = true;
             this.combobox_usergroup.BackColor = System.Drawing.Color.Transparent;
             this.combobox_usergroup.BorderColor = System.Drawing.Color.Black;
-            this.combobox_usergroup.BorderRadius = 10;
+            this.combobox_usergroup.BorderRadius = 17;
             this.combobox_usergroup.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combobox_usergroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_usergroup.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -119,22 +120,22 @@
             this.combobox_usergroup.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.combobox_usergroup.ForeColor = System.Drawing.Color.White;
             this.combobox_usergroup.ItemHeight = 30;
-            this.combobox_usergroup.Location = new System.Drawing.Point(447, 45);
+            this.combobox_usergroup.Location = new System.Drawing.Point(374, 47);
             this.combobox_usergroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.combobox_usergroup.Name = "combobox_usergroup";
-            this.combobox_usergroup.Size = new System.Drawing.Size(138, 36);
+            this.combobox_usergroup.Size = new System.Drawing.Size(211, 36);
             this.combobox_usergroup.TabIndex = 88;
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label15.Location = new System.Drawing.Point(375, 57);
+            this.label15.Location = new System.Drawing.Point(371, 29);
             this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(56, 12);
+            this.label15.Size = new System.Drawing.Size(69, 15);
             this.label15.TabIndex = 87;
             this.label15.Text = "User group";
             // 
@@ -165,7 +166,7 @@
             this.btnChangeAvatar.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangeAvatar.ForeColor = System.Drawing.Color.White;
             this.btnChangeAvatar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnChangeAvatar.Location = new System.Drawing.Point(118, 371);
+            this.btnChangeAvatar.Location = new System.Drawing.Point(123, 378);
             this.btnChangeAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChangeAvatar.Name = "btnChangeAvatar";
             this.btnChangeAvatar.Size = new System.Drawing.Size(137, 38);
@@ -220,12 +221,12 @@
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label5.Location = new System.Drawing.Point(377, 250);
+            this.label5.Location = new System.Drawing.Point(377, 249);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(30, 12);
+            this.label5.Size = new System.Drawing.Size(35, 13);
             this.label5.TabIndex = 114;
             this.label5.Text = "Email";
             // 
@@ -259,12 +260,12 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(377, 195);
+            this.label4.Location = new System.Drawing.Point(377, 194);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 12);
+            this.label4.Size = new System.Drawing.Size(41, 13);
             this.label4.TabIndex = 112;
             this.label4.Text = "Phone";
             // 
@@ -311,12 +312,12 @@
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label7.Location = new System.Drawing.Point(377, 364);
+            this.label7.Location = new System.Drawing.Point(377, 363);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 12);
+            this.label7.Size = new System.Drawing.Size(51, 13);
             this.label7.TabIndex = 117;
             this.label7.Text = "Birthday";
             // 
@@ -324,12 +325,12 @@
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label6.Location = new System.Drawing.Point(377, 302);
+            this.label6.Location = new System.Drawing.Point(377, 301);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(41, 12);
+            this.label6.Size = new System.Drawing.Size(49, 13);
             this.label6.TabIndex = 116;
             this.label6.Text = "Address";
             // 
@@ -384,12 +385,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label2.Location = new System.Drawing.Point(377, 140);
+            this.label2.Location = new System.Drawing.Point(377, 139);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 106;
             this.label2.Text = "User name";
             // 
@@ -433,12 +434,12 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(377, 82);
+            this.label3.Location = new System.Drawing.Point(377, 81);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(38, 12);
+            this.label3.Size = new System.Drawing.Size(44, 13);
             this.label3.TabIndex = 109;
             this.label3.Text = "User ID";
             // 
@@ -461,11 +462,11 @@
             this.avatar.BorderRadius = 20;
             this.avatar.Image = global::GUI.Properties.Resources.Avatar;
             this.avatar.ImageRotate = 0F;
-            this.avatar.Location = new System.Drawing.Point(46, 82);
+            this.avatar.Location = new System.Drawing.Point(46, 83);
             this.avatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.avatar.Name = "avatar";
             this.avatar.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
-            this.avatar.Size = new System.Drawing.Size(262, 267);
+            this.avatar.Size = new System.Drawing.Size(280, 269);
             this.avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.avatar.TabIndex = 104;
             this.avatar.TabStop = false;
@@ -495,9 +496,10 @@
             // 
             // cbStatus
             // 
+            this.cbStatus.AutoRoundedCorners = true;
             this.cbStatus.BackColor = System.Drawing.Color.Transparent;
             this.cbStatus.BorderColor = System.Drawing.Color.Black;
-            this.cbStatus.BorderRadius = 10;
+            this.cbStatus.BorderRadius = 17;
             this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -509,10 +511,10 @@
             this.cbStatus.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.cbStatus.Location = new System.Drawing.Point(509, 438);
+            this.cbStatus.Location = new System.Drawing.Point(490, 439);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(138, 36);
+            this.cbStatus.Size = new System.Drawing.Size(157, 36);
             this.cbStatus.TabIndex = 89;
             // 
             // label8
@@ -559,12 +561,12 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label9.Location = new System.Drawing.Point(15, 34);
+            this.label9.Location = new System.Drawing.Point(12, 32);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(38, 12);
+            this.label9.Size = new System.Drawing.Size(49, 15);
             this.label9.TabIndex = 112;
             this.label9.Text = "User ID";
             // 

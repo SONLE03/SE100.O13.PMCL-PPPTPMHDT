@@ -57,7 +57,7 @@
             this.panel_areacode.Location = new System.Drawing.Point(56, 92);
             this.panel_areacode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_areacode.Name = "panel_areacode";
-            this.panel_areacode.Size = new System.Drawing.Size(253, 32);
+            this.panel_areacode.Size = new System.Drawing.Size(253, 35);
             this.panel_areacode.TabIndex = 79;
             // 
             // lbAreaID
@@ -120,10 +120,10 @@
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Cancel.Location = new System.Drawing.Point(71, 301);
+            this.btn_Cancel.Location = new System.Drawing.Point(59, 301);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(73, 33);
+            this.btn_Cancel.Size = new System.Drawing.Size(80, 35);
             this.btn_Cancel.TabIndex = 76;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -145,7 +145,7 @@
             this.btn_OK.Location = new System.Drawing.Point(221, 301);
             this.btn_OK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_OK.Name = "btn_OK";
-            this.btn_OK.Size = new System.Drawing.Size(73, 33);
+            this.btn_OK.Size = new System.Drawing.Size(80, 35);
             this.btn_OK.TabIndex = 75;
             this.btn_OK.Text = "OK";
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
@@ -185,7 +185,7 @@
             this.txtAreaname.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtAreaname.PlaceholderText = "Enter area name";
             this.txtAreaname.SelectedText = "";
-            this.txtAreaname.Size = new System.Drawing.Size(253, 32);
+            this.txtAreaname.Size = new System.Drawing.Size(253, 35);
             this.txtAreaname.TabIndex = 73;
             // 
             // label1
@@ -220,7 +220,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(56, 142);
+            this.label3.Location = new System.Drawing.Point(56, 143);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(67, 15);

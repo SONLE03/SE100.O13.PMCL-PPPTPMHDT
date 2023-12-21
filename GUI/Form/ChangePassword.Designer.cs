@@ -97,6 +97,7 @@
             this.txtPass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtPass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtPass.ForeColor = System.Drawing.Color.Gray;
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.Location = new System.Drawing.Point(143, 112);
             this.txtPass.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -132,6 +133,7 @@
             this.txtRetypePass.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtRetypePass.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRetypePass.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtRetypePass.ForeColor = System.Drawing.Color.Gray;
             this.txtRetypePass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRetypePass.Location = new System.Drawing.Point(143, 209);
             this.txtRetypePass.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);

@@ -152,7 +152,7 @@
             this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Edit.ForeColor = System.Drawing.Color.White;
             this.btn_Edit.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Edit.Location = new System.Drawing.Point(241, 321);
+            this.btn_Edit.Location = new System.Drawing.Point(232, 321);
             this.btn_Edit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_Edit.Name = "btn_Edit";
             this.btn_Edit.Size = new System.Drawing.Size(85, 34);
