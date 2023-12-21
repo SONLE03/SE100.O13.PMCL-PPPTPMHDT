@@ -34,9 +34,9 @@ namespace BUS
         {
             return DALImportBill.Instance.GetImportBillByCode(importID);
         }
-        public bool AddImportBill(string ImportName, DateTime ImportDate, SUPPLIER Supplier, C_USER User)
+        public int AddImportBill(string ImportName, DateTime ImportDate, int SupplierID, int UserId)
         {
-            return DALImportBill.Instance.AddImportBill(ImportName, ImportDate, Supplier, User);
+            return DALImportBill.Instance.AddImportBill(ImportName, ImportDate, SupplierID, UserId);
         }
         public bool DelImportBill(int idIB)
         {

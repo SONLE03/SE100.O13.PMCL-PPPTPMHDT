@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -43,24 +44,24 @@ namespace DAL
             if (ImportName != null) res = res.Where(t => t.ImportName == ImportName).Select(t => t).ToList();
             return res;
         }
-        public bool AddImportBill(string ImportName, DateTime ImportDate, SUPPLIER Supplier, C_USER User)
+        public int AddImportBill(string ImportName, DateTime ImportDate, int SupplierId, int UserId)
         {
             try
             {
                 var obj = new IMPORT_BILL();
                 obj.ImportName = ImportName;
-                obj.SupplierID = Supplier.id;
-                obj.UserID = User.id;
+                obj.SupplierID = SupplierId;
+                obj.UserID = UserId;
                 obj.Total = 0;
                 obj.ImportDate = ImportDate;
                 CFEntities.Instance.IMPORT_BILL.Add(obj);
                 CFEntities.Instance.SaveChanges();
-                return true;
+                return obj.id;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.ToString());
-                return false;
+                return -1;
             }
         }
         public bool DelImportBill(int idIB)
@@ -71,13 +72,15 @@ namespace DAL
                 {
                     IMPORT_BILL ib = GetImportBillById(idIB);
                     if (ib == null) return false;
+                    DALImportBillDetail.Instance.DeleteImportBillDetail(idIB, transaction);
                     CFEntities.Instance.IMPORT_BILL.Remove(ib);
                     CFEntities.Instance.SaveChanges();
                     transaction.Commit();
                     return true;
                 }
-                catch
+                catch (Exception ex)
                 {
+                    MessageBox.Show(ex.Message);
                     transaction.Rollback();
                     return false;
                 }

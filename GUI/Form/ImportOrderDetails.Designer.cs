@@ -36,37 +36,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImportOrderDetails));
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnOK = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnCancel = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.gridviewImportedProducts = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ImportedProducts = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.panel_ImportOrderID = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbImportOrderID = new System.Windows.Forms.Label();
+            this.panel_ImportOrderName = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbImportOrderName = new System.Windows.Forms.Label();
+            this.panel_ImportOrderDate = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbImportOrderDate = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panelSupplierName = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbImportOrderSupplier = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panelStaffName = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbImportOrderUser = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panelTotalExpenses = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbTotal = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Unit_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.panel_ImportOrderID = new Guna.UI2.WinForms.Guna2Panel();
-            this.lbAreaID = new System.Windows.Forms.Label();
-            this.panel_ImportOrderName = new Guna.UI2.WinForms.Guna2Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel_ImportOrderDate = new Guna.UI2.WinForms.Guna2Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panelSupplierName = new Guna.UI2.WinForms.Guna2Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelStaffName = new Guna.UI2.WinForms.Guna2Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panelTotalExpenses = new Guna.UI2.WinForms.Guna2Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewImportedProducts)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportedProducts)).BeginInit();
             this.panel_ImportOrderID.SuspendLayout();
             this.panel_ImportOrderName.SuspendLayout();
             this.panel_ImportOrderDate.SuspendLayout();
@@ -99,47 +98,27 @@
             this.label2.TabIndex = 140;
             this.label2.Text = "Import Order ID";
             // 
-            // btnOK
+            // btnCancel
             // 
-            this.btnOK.BackColor = System.Drawing.Color.Transparent;
-            this.btnOK.BorderRadius = 10;
-            this.btnOK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnOK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnOK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOK.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnOK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnOK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnOK.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnOK.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.btnOK.ForeColor = System.Drawing.Color.White;
-            this.btnOK.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnOK.Location = new System.Drawing.Point(195, 598);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(99, 37);
-            this.btnOK.TabIndex = 145;
-            this.btnOK.Text = "OK";
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.BackColor = System.Drawing.Color.Transparent;
-            this.btnEdit.BorderRadius = 10;
-            this.btnEdit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEdit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnEdit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnEdit.Location = new System.Drawing.Point(480, 598);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(99, 37);
-            this.btnEdit.TabIndex = 144;
-            this.btnEdit.Text = "Edit";
+            this.btnCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancel.BorderRadius = 10;
+            this.btnCancel.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCancel.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold);
+            this.btnCancel.ForeColor = System.Drawing.Color.White;
+            this.btnCancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnCancel.Location = new System.Drawing.Point(312, 585);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(231, 37);
+            this.btnCancel.TabIndex = 145;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // guna2Panel2
             // 
@@ -148,7 +127,7 @@
             this.guna2Panel2.BorderRadius = 35;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label14);
-            this.guna2Panel2.Controls.Add(this.gridviewImportedProducts);
+            this.guna2Panel2.Controls.Add(this.ImportedProducts);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(51, 337);
             this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
@@ -168,10 +147,12 @@
             this.label14.TabIndex = 41;
             this.label14.Text = "Imported products";
             // 
-            // gridviewImportedProducts
+            // ImportedProducts
             // 
+            this.ImportedProducts.AllowUserToAddRows = false;
+            this.ImportedProducts.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ImportedProducts.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
@@ -179,11 +160,11 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewImportedProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridviewImportedProducts.ColumnHeadersHeight = 30;
-            this.gridviewImportedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridviewImportedProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Number,
+            this.ImportedProducts.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ImportedProducts.ColumnHeadersHeight = 30;
+            this.ImportedProducts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.ImportedProducts.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.No,
             this.Product_name,
             this.Unit,
             this.Quantity,
@@ -196,79 +177,39 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridviewImportedProducts.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridviewImportedProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewImportedProducts.Location = new System.Drawing.Point(2, 30);
-            this.gridviewImportedProducts.Margin = new System.Windows.Forms.Padding(4);
-            this.gridviewImportedProducts.Name = "gridviewImportedProducts";
-            this.gridviewImportedProducts.RowHeadersVisible = false;
-            this.gridviewImportedProducts.RowHeadersWidth = 50;
+            this.ImportedProducts.DefaultCellStyle = dataGridViewCellStyle3;
+            this.ImportedProducts.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ImportedProducts.Location = new System.Drawing.Point(2, 30);
+            this.ImportedProducts.Margin = new System.Windows.Forms.Padding(4);
+            this.ImportedProducts.Name = "ImportedProducts";
+            this.ImportedProducts.ReadOnly = true;
+            this.ImportedProducts.RowHeadersVisible = false;
+            this.ImportedProducts.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridviewImportedProducts.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewImportedProducts.Size = new System.Drawing.Size(695, 171);
-            this.gridviewImportedProducts.TabIndex = 40;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gridviewImportedProducts.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gridviewImportedProducts.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridviewImportedProducts.ThemeStyle.HeaderStyle.Height = 30;
-            this.gridviewImportedProducts.ThemeStyle.ReadOnly = false;
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.Height = 22;
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewImportedProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Number
-            // 
-            this.Number.FillWeight = 60F;
-            this.Number.HeaderText = "Number";
-            this.Number.MinimumWidth = 6;
-            this.Number.Name = "Number";
-            // 
-            // Product_name
-            // 
-            this.Product_name.HeaderText = "Product name";
-            this.Product_name.MinimumWidth = 6;
-            this.Product_name.Name = "Product_name";
-            // 
-            // Unit
-            // 
-            this.Unit.FillWeight = 49.92708F;
-            this.Unit.HeaderText = "Unit";
-            this.Unit.MinimumWidth = 6;
-            this.Unit.Name = "Unit";
-            // 
-            // Quantity
-            // 
-            this.Quantity.FillWeight = 49.92708F;
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            // 
-            // Unit_Price
-            // 
-            this.Unit_Price.FillWeight = 70F;
-            this.Unit_Price.HeaderText = "Unit Price";
-            this.Unit_Price.MinimumWidth = 6;
-            this.Unit_Price.Name = "Unit_Price";
-            // 
-            // Total_Price
-            // 
-            this.Total_Price.FillWeight = 70F;
-            this.Total_Price.HeaderText = "Total Price";
-            this.Total_Price.MinimumWidth = 6;
-            this.Total_Price.Name = "Total_Price";
+            this.ImportedProducts.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.ImportedProducts.Size = new System.Drawing.Size(695, 171);
+            this.ImportedProducts.TabIndex = 40;
+            this.ImportedProducts.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.ImportedProducts.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.ImportedProducts.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.ImportedProducts.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.ImportedProducts.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.ImportedProducts.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.ImportedProducts.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ImportedProducts.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.ImportedProducts.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.ImportedProducts.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImportedProducts.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.ImportedProducts.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.ImportedProducts.ThemeStyle.HeaderStyle.Height = 30;
+            this.ImportedProducts.ThemeStyle.ReadOnly = true;
+            this.ImportedProducts.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.ImportedProducts.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.ImportedProducts.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ImportedProducts.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.ImportedProducts.ThemeStyle.RowsStyle.Height = 22;
+            this.ImportedProducts.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.ImportedProducts.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
             // label1
             // 
@@ -297,24 +238,24 @@
             this.panel_ImportOrderID.BorderColor = System.Drawing.Color.Silver;
             this.panel_ImportOrderID.BorderRadius = 10;
             this.panel_ImportOrderID.BorderThickness = 2;
-            this.panel_ImportOrderID.Controls.Add(this.lbAreaID);
+            this.panel_ImportOrderID.Controls.Add(this.lbImportOrderID);
             this.panel_ImportOrderID.FillColor = System.Drawing.Color.White;
             this.panel_ImportOrderID.Location = new System.Drawing.Point(51, 90);
             this.panel_ImportOrderID.Name = "panel_ImportOrderID";
             this.panel_ImportOrderID.Size = new System.Drawing.Size(297, 40);
             this.panel_ImportOrderID.TabIndex = 147;
             // 
-            // lbAreaID
+            // lbImportOrderID
             // 
-            this.lbAreaID.AutoSize = true;
-            this.lbAreaID.BackColor = System.Drawing.Color.Transparent;
-            this.lbAreaID.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAreaID.ForeColor = System.Drawing.Color.Gray;
-            this.lbAreaID.Location = new System.Drawing.Point(16, 9);
-            this.lbAreaID.Name = "lbAreaID";
-            this.lbAreaID.Size = new System.Drawing.Size(152, 23);
-            this.lbAreaID.TabIndex = 49;
-            this.lbAreaID.Text = "Imported Order ID";
+            this.lbImportOrderID.AutoSize = true;
+            this.lbImportOrderID.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderID.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderID.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderID.Location = new System.Drawing.Point(16, 9);
+            this.lbImportOrderID.Name = "lbImportOrderID";
+            this.lbImportOrderID.Size = new System.Drawing.Size(152, 23);
+            this.lbImportOrderID.TabIndex = 49;
+            this.lbImportOrderID.Text = "Imported Order ID";
             // 
             // panel_ImportOrderName
             // 
@@ -322,24 +263,24 @@
             this.panel_ImportOrderName.BorderColor = System.Drawing.Color.Silver;
             this.panel_ImportOrderName.BorderRadius = 10;
             this.panel_ImportOrderName.BorderThickness = 2;
-            this.panel_ImportOrderName.Controls.Add(this.label4);
+            this.panel_ImportOrderName.Controls.Add(this.lbImportOrderName);
             this.panel_ImportOrderName.FillColor = System.Drawing.Color.White;
             this.panel_ImportOrderName.Location = new System.Drawing.Point(447, 90);
             this.panel_ImportOrderName.Name = "panel_ImportOrderName";
             this.panel_ImportOrderName.Size = new System.Drawing.Size(297, 40);
             this.panel_ImportOrderName.TabIndex = 148;
             // 
-            // label4
+            // lbImportOrderName
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Gray;
-            this.label4.Location = new System.Drawing.Point(16, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(181, 23);
-            this.label4.TabIndex = 49;
-            this.label4.Text = "Imported Order Name";
+            this.lbImportOrderName.AutoSize = true;
+            this.lbImportOrderName.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderName.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderName.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderName.Location = new System.Drawing.Point(16, 9);
+            this.lbImportOrderName.Name = "lbImportOrderName";
+            this.lbImportOrderName.Size = new System.Drawing.Size(181, 23);
+            this.lbImportOrderName.TabIndex = 49;
+            this.lbImportOrderName.Text = "Imported Order Name";
             // 
             // panel_ImportOrderDate
             // 
@@ -347,24 +288,24 @@
             this.panel_ImportOrderDate.BorderColor = System.Drawing.Color.Silver;
             this.panel_ImportOrderDate.BorderRadius = 10;
             this.panel_ImportOrderDate.BorderThickness = 2;
-            this.panel_ImportOrderDate.Controls.Add(this.label5);
+            this.panel_ImportOrderDate.Controls.Add(this.lbImportOrderDate);
             this.panel_ImportOrderDate.FillColor = System.Drawing.Color.White;
             this.panel_ImportOrderDate.Location = new System.Drawing.Point(51, 171);
             this.panel_ImportOrderDate.Name = "panel_ImportOrderDate";
             this.panel_ImportOrderDate.Size = new System.Drawing.Size(297, 40);
             this.panel_ImportOrderDate.TabIndex = 150;
             // 
-            // label5
+            // lbImportOrderDate
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(16, 9);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 23);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "01/01/2001";
+            this.lbImportOrderDate.AutoSize = true;
+            this.lbImportOrderDate.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderDate.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderDate.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderDate.Location = new System.Drawing.Point(16, 9);
+            this.lbImportOrderDate.Name = "lbImportOrderDate";
+            this.lbImportOrderDate.Size = new System.Drawing.Size(90, 23);
+            this.lbImportOrderDate.TabIndex = 49;
+            this.lbImportOrderDate.Text = "01/01/2001";
             // 
             // label6
             // 
@@ -384,24 +325,24 @@
             this.panelSupplierName.BorderColor = System.Drawing.Color.Silver;
             this.panelSupplierName.BorderRadius = 10;
             this.panelSupplierName.BorderThickness = 2;
-            this.panelSupplierName.Controls.Add(this.label7);
+            this.panelSupplierName.Controls.Add(this.lbImportOrderSupplier);
             this.panelSupplierName.FillColor = System.Drawing.Color.White;
             this.panelSupplierName.Location = new System.Drawing.Point(447, 171);
             this.panelSupplierName.Name = "panelSupplierName";
             this.panelSupplierName.Size = new System.Drawing.Size(297, 40);
             this.panelSupplierName.TabIndex = 152;
             // 
-            // label7
+            // lbImportOrderSupplier
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Gray;
-            this.label7.Location = new System.Drawing.Point(16, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 23);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "Supplier 001";
+            this.lbImportOrderSupplier.AutoSize = true;
+            this.lbImportOrderSupplier.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderSupplier.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderSupplier.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderSupplier.Location = new System.Drawing.Point(16, 9);
+            this.lbImportOrderSupplier.Name = "lbImportOrderSupplier";
+            this.lbImportOrderSupplier.Size = new System.Drawing.Size(102, 23);
+            this.lbImportOrderSupplier.TabIndex = 49;
+            this.lbImportOrderSupplier.Text = "Supplier 001";
             // 
             // label8
             // 
@@ -421,24 +362,24 @@
             this.panelStaffName.BorderColor = System.Drawing.Color.Silver;
             this.panelStaffName.BorderRadius = 10;
             this.panelStaffName.BorderThickness = 2;
-            this.panelStaffName.Controls.Add(this.label9);
+            this.panelStaffName.Controls.Add(this.lbImportOrderUser);
             this.panelStaffName.FillColor = System.Drawing.Color.White;
             this.panelStaffName.Location = new System.Drawing.Point(51, 253);
             this.panelStaffName.Name = "panelStaffName";
             this.panelStaffName.Size = new System.Drawing.Size(297, 40);
             this.panelStaffName.TabIndex = 154;
             // 
-            // label9
+            // lbImportOrderUser
             // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Gray;
-            this.label9.Location = new System.Drawing.Point(16, 9);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 23);
-            this.label9.TabIndex = 49;
-            this.label9.Text = "Staff001";
+            this.lbImportOrderUser.AutoSize = true;
+            this.lbImportOrderUser.BackColor = System.Drawing.Color.Transparent;
+            this.lbImportOrderUser.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbImportOrderUser.ForeColor = System.Drawing.Color.Gray;
+            this.lbImportOrderUser.Location = new System.Drawing.Point(16, 9);
+            this.lbImportOrderUser.Name = "lbImportOrderUser";
+            this.lbImportOrderUser.Size = new System.Drawing.Size(71, 23);
+            this.lbImportOrderUser.TabIndex = 49;
+            this.lbImportOrderUser.Text = "Staff001";
             // 
             // label10
             // 
@@ -448,9 +389,9 @@
             this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.label10.Location = new System.Drawing.Point(49, 235);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 15);
+            this.label10.Size = new System.Drawing.Size(69, 15);
             this.label10.TabIndex = 153;
-            this.label10.Text = "Staff Name";
+            this.label10.Text = "User Name";
             // 
             // panelTotalExpenses
             // 
@@ -458,24 +399,24 @@
             this.panelTotalExpenses.BorderColor = System.Drawing.Color.Silver;
             this.panelTotalExpenses.BorderRadius = 10;
             this.panelTotalExpenses.BorderThickness = 2;
-            this.panelTotalExpenses.Controls.Add(this.label11);
+            this.panelTotalExpenses.Controls.Add(this.lbTotal);
             this.panelTotalExpenses.FillColor = System.Drawing.Color.White;
             this.panelTotalExpenses.Location = new System.Drawing.Point(447, 253);
             this.panelTotalExpenses.Name = "panelTotalExpenses";
             this.panelTotalExpenses.Size = new System.Drawing.Size(297, 40);
             this.panelTotalExpenses.TabIndex = 156;
             // 
-            // label11
+            // lbTotal
             // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(16, 9);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(97, 23);
-            this.label11.TabIndex = 49;
-            this.label11.Text = "100.000.000";
+            this.lbTotal.AutoSize = true;
+            this.lbTotal.BackColor = System.Drawing.Color.Transparent;
+            this.lbTotal.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotal.ForeColor = System.Drawing.Color.Gray;
+            this.lbTotal.Location = new System.Drawing.Point(16, 9);
+            this.lbTotal.Name = "lbTotal";
+            this.lbTotal.Size = new System.Drawing.Size(97, 23);
+            this.lbTotal.TabIndex = 49;
+            this.lbTotal.Text = "100.000.000";
             // 
             // label12
             // 
@@ -488,6 +429,52 @@
             this.label12.Size = new System.Drawing.Size(125, 15);
             this.label12.TabIndex = 155;
             this.label12.Text = "Total Expenses (VND)";
+            // 
+            // No
+            // 
+            this.No.HeaderText = "No";
+            this.No.MinimumWidth = 6;
+            this.No.Name = "No";
+            this.No.ReadOnly = true;
+            // 
+            // Product_name
+            // 
+            this.Product_name.HeaderText = "Product name";
+            this.Product_name.MinimumWidth = 6;
+            this.Product_name.Name = "Product_name";
+            this.Product_name.ReadOnly = true;
+            // 
+            // Unit
+            // 
+            this.Unit.FillWeight = 49.92708F;
+            this.Unit.HeaderText = "Unit";
+            this.Unit.MinimumWidth = 6;
+            this.Unit.Name = "Unit";
+            this.Unit.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.FillWeight = 49.92708F;
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Unit_Price
+            // 
+            this.Unit_Price.FillWeight = 70F;
+            this.Unit_Price.HeaderText = "Unit Price";
+            this.Unit_Price.MinimumWidth = 6;
+            this.Unit_Price.Name = "Unit_Price";
+            this.Unit_Price.ReadOnly = true;
+            // 
+            // Total_Price
+            // 
+            this.Total_Price.FillWeight = 70F;
+            this.Total_Price.HeaderText = "Total Price";
+            this.Total_Price.MinimumWidth = 6;
+            this.Total_Price.Name = "Total_Price";
+            this.Total_Price.ReadOnly = true;
             // 
             // ImportOrderDetails
             // 
@@ -508,8 +495,7 @@
             this.Controls.Add(this.panel_ImportOrderID);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.btnEdit);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.label1);
             this.DoubleBuffered = true;
@@ -520,7 +506,7 @@
             this.Text = "ImportOrderDetails";
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewImportedProducts)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImportedProducts)).EndInit();
             this.panel_ImportOrderID.ResumeLayout(false);
             this.panel_ImportOrderID.PerformLayout();
             this.panel_ImportOrderName.ResumeLayout(false);
@@ -541,34 +527,33 @@
         #endregion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2GradientButton btnOK;
-        private Guna.UI2.WinForms.Guna2GradientButton btnEdit;
+        private Guna.UI2.WinForms.Guna2GradientButton btnCancel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label14;
-        private Guna.UI2.WinForms.Guna2DataGridView gridviewImportedProducts;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private Guna.UI2.WinForms.Guna2DataGridView ImportedProducts;
+        private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private Guna.UI2.WinForms.Guna2Panel panel_ImportOrderDate;
+        private System.Windows.Forms.Label lbImportOrderDate;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI2.WinForms.Guna2Panel panel_ImportOrderName;
+        private System.Windows.Forms.Label lbImportOrderName;
+        private Guna.UI2.WinForms.Guna2Panel panel_ImportOrderID;
+        private System.Windows.Forms.Label lbImportOrderID;
+        private Guna.UI2.WinForms.Guna2Panel panelTotalExpenses;
+        private System.Windows.Forms.Label lbTotal;
+        private System.Windows.Forms.Label label12;
+        private Guna.UI2.WinForms.Guna2Panel panelStaffName;
+        private System.Windows.Forms.Label lbImportOrderUser;
+        private System.Windows.Forms.Label label10;
+        private Guna.UI2.WinForms.Guna2Panel panelSupplierName;
+        private System.Windows.Forms.Label lbImportOrderSupplier;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn Product_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Unit_Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total_Price;
-        private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2Panel panel_ImportOrderDate;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Panel panel_ImportOrderName;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2Panel panel_ImportOrderID;
-        private System.Windows.Forms.Label lbAreaID;
-        private Guna.UI2.WinForms.Guna2Panel panelTotalExpenses;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2Panel panelStaffName;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private Guna.UI2.WinForms.Guna2Panel panelSupplierName;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
     }
 }
