@@ -37,6 +37,13 @@ namespace DAL
             }
             return null;
         }
+        public C_SIZE GetSizeBySizeName(string sizeName)
+        {
+            var res = CFEntities.Instance.C_SIZE.AsNoTracking().Where(n => n.SizeName.ToLower() == sizeName.ToLower());
+            if (res.Any())
+                return res.FirstOrDefault();
+            return null;
+        }
         public List<C_SIZE> FindSize(string sizeName)
         {
             var res = CFEntities.Instance.C_SIZE.ToList();

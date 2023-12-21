@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +21,7 @@ namespace GUI
 
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         public void btn_Add_Click(object sender, EventArgs e)
@@ -28,19 +30,21 @@ namespace GUI
             {
                 if (!String.IsNullOrEmpty(txtSizename.Text.ToString()))
                 {
-                    BUS.BUSSize.Instance.AddSize(getSizeName());
-                    MessageBox.Show("Added successful", "Add new size for product", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    this.Hide();
+                    var isSuccess = BUSSize.Instance.AddSize(getSizeName());
+                    if (isSuccess)
+                    {
+                        MessageBox.Show("Add New Size Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtSizename.Clear();
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter the size name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Please enter the size name", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Added failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.Hide();
+                MessageBox.Show("Add Failure Size", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

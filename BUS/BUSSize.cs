@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -33,8 +34,17 @@ namespace BUS
         {
             return DALSize.Instance.GetSizeByCode(idSize);
         }
+        public C_SIZE GetSizeBySizeName(string sizeName)
+        {
+            return DALSize.Instance.GetSizeBySizeName(sizeName);
+        }
         public bool AddSize(string sizeName)
         {
+            if (GetSizeBySizeName(sizeName) != null)
+            {
+                MessageBox.Show("The SizeName already exists!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             return DALSize.Instance.AddSize(sizeName);
         }
         public bool UpdSize(int idSize, string sizeName)
