@@ -12,10 +12,10 @@ namespace GUI
 {
     public partial class UCMiniProductChoosen : UserControl
     {
-        private UCBill ucBill;
+        private UCBills_TabOrder ucBill;
         private int quantity;
 
-        public UCMiniProductChoosen(UCBill ucBill, string image, string productName, string price)
+        public UCMiniProductChoosen(UCBills_TabOrder ucBill, string image, string productName, string price)
         {
             InitializeComponent();
             guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(image);

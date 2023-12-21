@@ -27,9 +27,14 @@ namespace BUS
             return DALDrink_Size.Instance.AddDrink_Size(Drink, SizeId, price);
         }
 
-        public List<DTO.DRINKS_SIZE> GetAllDrinkSize()
+        public List<DRINKS_SIZE> GetAllDrinkSize()
         {
             return DALDrink_Size.Instance.GetAllDrinkSize();
+        }
+
+        public DRINKS_SIZE FindDrinkSize(string sizeName, int drinkId)
+        {
+            return DALDrink_Size.Instance.FindDrinkSize(sizeName, drinkId);
         }
 
         public bool UpdDrinkSize(int idDrinkSize, int sizeId, double newPrice)

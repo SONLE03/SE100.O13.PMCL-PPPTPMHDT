@@ -13,21 +13,11 @@ namespace GUI
 {
     public partial class UCProductMiniItem : UserControl
     {
-        private bool anyChanged = false;
         private UCProducts_TabProducts ucProduct;
-        private UCBill ucBill;
         public UCProductMiniItem(UCProducts_TabProducts ucProduct)
         {
             InitializeComponent();
             this.ucProduct = ucProduct;
-            pic_AddToCart.Visible = false;
-        }
-
-        public UCProductMiniItem(UCBill uCBill)
-        {
-            InitializeComponent();
-            this.ucBill = uCBill;
-            pic_edit.Visible = false;
         }
 
         public void updatePrice(string price)
@@ -46,8 +36,8 @@ namespace GUI
 
                 foreach (var p in sizes)
                 {
-                    UCMiniSize uCMiniSize = new UCMiniSize(BUS.BUSSize.Instance.GetSizeById(p), this, labelID.Text);
-                    flowLayoutPanel1.Controls.Add(uCMiniSize);
+                    UCMiniSize uCMiniSize = new UCMiniSize(BUS.BUSSize.Instance.GetSizeById(p), this, drink.id);
+                    flowLayoutSize.Controls.Add(uCMiniSize);
                 }
             }
             catch (Exception ex)
@@ -57,17 +47,6 @@ namespace GUI
                 string imagePathError = Path.Combine(resourcesFolder, "NotFoundImage.png");
                 drinkPicture.Image = new System.Drawing.Bitmap(imagePathError);
                 BUS.BUSDrink.Instance.UpdateImageErrorNotFound(drink.id, imagePathError);
-            }
-        }
-
-        private void pic_AddToCart_Click(object sender, EventArgs e)
-        {
-            if (ucBill != null)
-            {
-                var drink = BUS.BUSDrink.Instance.GetDrinkById(int.Parse(labelID.Text.ToString()));
-                UCMiniProductChoosen ucMiniProductChoosen = new UCMiniProductChoosen(ucBill, drink.Image, lbName.Text, lbPrice.Text);
-                ucBill.addMiniItemProduct(ucMiniProductChoosen);
-                ucBill.Show();
             }
         }
 

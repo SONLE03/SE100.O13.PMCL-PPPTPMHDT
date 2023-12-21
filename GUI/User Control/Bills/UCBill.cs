@@ -14,124 +14,55 @@ namespace GUI
 {
     public partial class UCBill : UserControl
     {
-        private double sum = 0;
-        private double? extraFee = 0;
         private C_USER user;
-        private List<BillDetail> nameProductInBill = new List<BillDetail>();
+        private Guna2GradientButton CurrentBtn;
         public UCBill(C_USER user)
         {
             InitializeComponent();
-
-            this.user = user;
-
-            //lbOrderID.Text = "#" + (BUS.BUSOrder.Instance.GetAllBill().Count + 1).ToString();
-            //lbSubTotal.Text = "0 VND";
-
-            //combobox_SelectArea.Items.Add("All");
-            //BUS.BUSArea.Instance.GetAllArea().ToList().ForEach(p =>
-            //{
-            //    combobox_SelectArea.Items.Add(p.AreaName);
-            //});
-            //combobox_SelectArea.SelectedItem = "All";
-
-            //combobox_SelectTable.Items.Add("All");
-            //BUS.BUSTable.Instance.GetAllTable().ToList().ForEach(p =>
-            //{
-            //    combobox_SelectTable.Items.Add(p.TableName);
-            //});
-            //combobox_SelectTable.SelectedItem = "All";
-
-            //combobox_category.Items.Add("All");
-            //BUS.BUSCategory.Instance.GetAllCategory().ToList().ForEach(p =>
-            //{
-            //    combobox_category.Items.Add(p.CategoryName);
-            //});
-            //combobox_category.SelectedItem = "All";
-
-            //LoadProductInFlowLayoutPanel(BUS.BUSDrink.Instance.GetAllDrink(),
-            //                                                  BUS.BUSDrink_Size.Instance.GetAllDrinkSize(),
-            //                                                  BUS.BUSSize.Instance.GetAllSize());
-
-            //flowLayoutPanel.Refresh();
+            CheckedBtnState(btnOrder);
         }
-
-        public void LoadProductInFlowLayoutPanel(List<DRINK> listDrink, List<DRINKS_SIZE> listDrinkSize, List<C_SIZE> listSize)
+        private void CheckedBtnState(object button)
         {
-            //flowLayoutPanelProducts.Controls.Clear();
+            var btn = (Guna2GradientButton)button;
+            btn.BackColor = Color.Transparent;
+            btn.FillColor = Color.FromArgb(147, 90, 21);
+            btn.FillColor2 = Color.FromArgb(147, 90, 21);
+            btn.ForeColor = Color.White;
 
-            //var list = new List<int>();
-            //// Load data for user control
-            //foreach (var drink in listDrink)
-            //{
-            //    list = new List<int>();
-
-            //    foreach (var drinkSize in listDrinkSize)
-            //    {
-            //        if (drink.id == drinkSize.DrinksID)
-            //        {
-            //            list.Add(drinkSize.SizeID);
-            //        }
-            //    }
-            //    UCProductMiniItem productMiniItem = new UCProductMiniItem(this);
-            //    productMiniItem.loadData(drink, list);
-            //    //listMiniItem.Add(productMiniItem);
-            //    flowLayoutPanelProducts.Controls.Add(productMiniItem);
-            //}
-        }
-
-        public void addMiniItemProduct(UCMiniProductChoosen product)
-        {
-            //flowLayoutPanel.Controls.Add(product);
-            //nameProductInBill.Add(new BillDetail(product.getProductName(), product.getQuantity()));
-            //sum += product.getPrice();
-            //lbSubTotal.Text = sum.ToString() + " VND";
-            //LbTotal.Text = (sum + extraFee).ToString() + " VND";
-
-        }
-
-        public void addQuantity(double price)
-        {
-            //sum += price;
-            //lbSubTotal.Text = sum.ToString() + " VND";
-            //LbTotal.Text = (sum + extraFee).ToString() + " VND";
-        }
-
-        public void deleteQuantity(double price)
-        {
-            //sum -= price;
-            //lbSubTotal.Text = sum.ToString() + " VND";
-            //LbTotal.Text = (sum + extraFee).ToString() + " VND";
-        }
-
-        public void deleteMiniItemProduct(UCMiniProductChoosen product)
-        {
-            //flowLayoutPanel.Controls.Remove(product);
-            //BillDetail billDetail = new BillDetail();
-            //foreach (var p in nameProductInBill)
-            //{
-            //    if (p.productName.Equals(product.getProductName()) && p.quantity.Equals(product.getQuantity()))
-            //    {
-            //        billDetail = p;
-            //        break;
-            //    }    
-            //}
-            //nameProductInBill.Remove(billDetail);
-            //sum -= product.getPrice();
-            //lbSubTotal.Text = sum.ToString() + " VND";
-            //LbTotal.Text = (sum + extraFee).ToString() + " VND";
-
+            if (CurrentBtn != null && CurrentBtn != btn)
+            {
+                CurrentBtn.FillColor = Color.FromArgb(234, 182, 134);
+                CurrentBtn.FillColor2 = Color.FromArgb(234, 182, 134);
+                CurrentBtn.ForeColor = Color.White;
+            }
+            CurrentBtn = btn;
         }
 
         private void UCBill_Load(object sender, EventArgs e)
         {
 
+            ucBills_TabOrder = new UCBills_TabOrder(user);
+            ucBills_TabOrder.Dock = DockStyle.Fill;
+            this.PanelDisplayTabs.Controls.Clear();
+            this.PanelDisplayTabs.Controls.Add(ucBills_TabOrder);
         }
-
-        private void btnAddtocart_Click(object sender, EventArgs e)
+        private void btnOrder_Click(object sender, EventArgs e)
         {
-
+            ucBills_TabOrder = new UCBills_TabOrder(user);
+            ucBills_TabOrder.Dock = DockStyle.Fill;
+            this.PanelDisplayTabs.Controls.Clear();
+            this.PanelDisplayTabs.Controls.Add(ucBills_TabOrder);
+            CheckedBtnState(sender);
         }
 
+        private void btnInvoice_Click(object sender, EventArgs e)
+        {
+            ucBills_TabInvoices = new UCBills_TabInvoices();
+            ucBills_TabInvoices.Dock = DockStyle.Fill;
+            this.PanelDisplayTabs.Controls.Clear();
+            this.PanelDisplayTabs.Controls.Add(ucBills_TabInvoices);
+            CheckedBtnState(sender);
+        }
         private void txtEmailCode_TextChanged(object sender, EventArgs e)
         {
             //if (!combobox_category.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtEmailCode.Text.ToString()))
