@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +25,7 @@ namespace GUI
             //model = new DBLogic();
             //LoadData();
             //DisableCustomDatesAndBtUI(btnThisweek);
+            loadTopSelling();
         }
 
         private void UCHome_Load(object sender, EventArgs e)
@@ -31,6 +34,14 @@ namespace GUI
             lbEndDate.Text = dtpEndDate.Text;
         }
 
+        private void loadTopSelling()
+        {
+            chartTopSell.DataSource = BUSAnalysis.Instance.TopSellingDrinks();
+            chartTopSell.Series[0].XValueMember = "DrinkId";
+            chartTopSell.Series[0].YValueMembers = "TotalQuantity";
+            chartTopSell.Series[0].ToolTip = "#DrinkName: #VALY";
+            chartTopSell.DataBind();
+        }
 
         private void LoadData()
         {

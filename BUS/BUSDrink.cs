@@ -40,6 +40,10 @@ namespace BUS
         {
             return DALDrink.Instance.GetDrinkByCode(DrinksID);
         }
+        //public List<KeyValuePair<int, int>> topSellingDrinks()
+        //{
+        //    return DALDrink.Instance.topSellingDrinks();
+        //}
         public bool checkCategoryStatus(int catId, string status)
         {
             CATEGORY cat = DALCategory.Instance.GetCategoryById(catId);
