@@ -23,7 +23,10 @@ namespace GUI
             lbPrice.Text = price;
             this.ucBill = ucBill;
             quantity = 1;
+            
         }
+
+       
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

@@ -71,6 +71,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DBConnection.cs" />
+    <Compile Include="Form\EditEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\EditEvent.Designer.cs">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\EditSize.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -254,10 +260,10 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCChangeRegulations.cs">
+    <Compile Include="User Control\UCChangeRegulations.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCChangeRegulations.Designer.cs">
+    <Compile Include="User Control\UCChangeRegulations.Designer.cs">
       <DependentUpon>UCChangeRegulations.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\Bills\UCBills-TabInvoices.cs">
@@ -410,6 +416,9 @@
     <Compile Include="Form\UserGroupDetails.Designer.cs">
       <DependentUpon>UserGroupDetails.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form\EditEvent.resx">
+      <DependentUpon>EditEvent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form\EditSize.resx">
       <DependentUpon>EditSize.cs</DependentUpon>
     </EmbeddedResource>
@@ -510,7 +519,7 @@
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCChangeRegulations.resx">
+    <EmbeddedResource Include="User Control\UCChangeRegulations.resx">
       <DependentUpon>UCChangeRegulations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\Bills\UCBills-TabInvoices.resx">
