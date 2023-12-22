@@ -132,5 +132,13 @@ namespace GUI
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucSetting);
         }
+
+        private void btnChangeRegulation_Click(object sender, EventArgs e)
+        {
+            ucChangeRegulations = new UCChangeRegulations();
+            ucChangeRegulations.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucChangeRegulations);
+        }
     }
 }

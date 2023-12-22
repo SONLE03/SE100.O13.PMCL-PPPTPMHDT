@@ -57,9 +57,9 @@ namespace GUI
             }
         }
 
-        private void checkbox_male_Click(object sender, EventArgs e)
+        private void checkbox_show_Click(object sender, EventArgs e)
         {
-            if (checkbox_male.Checked == true)
+            if (checkbox_show.Checked == true)
             {
                 txtPass.PasswordChar = '\0';
             }

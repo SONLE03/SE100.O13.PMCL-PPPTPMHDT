@@ -46,7 +46,6 @@
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtRole = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
@@ -55,12 +54,15 @@
             this.lbPassword = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbRole = new System.Windows.Forms.Label();
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AvatarPic)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2CircleProgressBar1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
+            this.guna2Panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnChangeAvatar
@@ -257,13 +259,13 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.DimGray;
             this.guna2Panel1.BorderRadius = 30;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.guna2Panel4);
             this.guna2Panel1.Controls.Add(this.dtpBirthDate);
             this.guna2Panel1.Controls.Add(this.guna2CircleProgressBar1);
             this.guna2Panel1.Controls.Add(this.btnChangeAvatar);
             this.guna2Panel1.Controls.Add(this.txtAddress);
             this.guna2Panel1.Controls.Add(this.txtPhone);
             this.guna2Panel1.Controls.Add(this.txtEmail);
-            this.guna2Panel1.Controls.Add(this.txtRole);
             this.guna2Panel1.Controls.Add(this.txtName);
             this.guna2Panel1.Controls.Add(this.label8);
             this.guna2Panel1.Controls.Add(this.label7);
@@ -391,31 +393,6 @@
             this.txtEmail.Size = new System.Drawing.Size(620, 45);
             this.txtEmail.TabIndex = 67;
             // 
-            // txtRole
-            // 
-            this.txtRole.Animated = true;
-            this.txtRole.AutoRoundedCorners = true;
-            this.txtRole.BorderColor = System.Drawing.Color.Gray;
-            this.txtRole.BorderRadius = 21;
-            this.txtRole.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtRole.DefaultText = "";
-            this.txtRole.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtRole.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtRole.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRole.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtRole.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRole.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.txtRole.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRole.Location = new System.Drawing.Point(688, 45);
-            this.txtRole.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtRole.Name = "txtRole";
-            this.txtRole.PasswordChar = '\0';
-            this.txtRole.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtRole.PlaceholderText = "Manager";
-            this.txtRole.SelectedText = "";
-            this.txtRole.Size = new System.Drawing.Size(297, 45);
-            this.txtRole.TabIndex = 65;
-            // 
             // txtName
             // 
             this.txtName.Animated = true;
@@ -537,6 +514,34 @@
             this.label10.TabIndex = 66;
             this.label10.Text = "Personal information";
             // 
+            // guna2Panel4
+            // 
+            this.guna2Panel4.AutoRoundedCorners = true;
+            this.guna2Panel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel4.BorderColor = System.Drawing.Color.Silver;
+            this.guna2Panel4.BorderRadius = 21;
+            this.guna2Panel4.BorderThickness = 2;
+            this.guna2Panel4.Controls.Add(this.lbRole);
+            this.guna2Panel4.FillColor = System.Drawing.Color.White;
+            this.guna2Panel4.Location = new System.Drawing.Point(689, 45);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2Panel4.Name = "guna2Panel4";
+            this.guna2Panel4.Size = new System.Drawing.Size(296, 45);
+            this.guna2Panel4.TabIndex = 71;
+            // 
+            // lbRole
+            // 
+            this.lbRole.AutoSize = true;
+            this.lbRole.BackColor = System.Drawing.Color.Transparent;
+            this.lbRole.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRole.ForeColor = System.Drawing.Color.Gray;
+            this.lbRole.Location = new System.Drawing.Point(12, 11);
+            this.lbRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbRole.Name = "lbRole";
+            this.lbRole.Size = new System.Drawing.Size(75, 21);
+            this.lbRole.TabIndex = 49;
+            this.lbRole.Text = "Manager";
+            // 
             // UCSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -561,6 +566,8 @@
             this.guna2Panel2.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
+            this.guna2Panel4.ResumeLayout(false);
+            this.guna2Panel4.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -583,7 +590,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private System.Windows.Forms.Label label4;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Guna.UI2.WinForms.Guna2TextBox txtRole;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
         private Guna.UI2.WinForms.Guna2CircleProgressBar guna2CircleProgressBar1;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
@@ -595,5 +601,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpBirthDate;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
+        private System.Windows.Forms.Label lbRole;
     }
 }

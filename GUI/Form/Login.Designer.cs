@@ -36,7 +36,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.checkbox_male = new Guna.UI2.WinForms.Guna2CustomCheckBox();
+            this.checkbox_show = new Guna.UI2.WinForms.Guna2CustomCheckBox();
             this.txtPass = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.btn_login = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -111,7 +111,7 @@
             this.panel1.BackgroundImage = global::GUI.Properties.Resources.Logpan;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.checkbox_male);
+            this.panel1.Controls.Add(this.checkbox_show);
             this.panel1.Controls.Add(this.txtPass);
             this.panel1.Controls.Add(this.txtUsername);
             this.panel1.Controls.Add(this.btn_login);
@@ -139,24 +139,24 @@
             this.label9.Text = "Show password";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
-            // checkbox_male
+            // checkbox_show
             // 
-            this.checkbox_male.Animated = true;
-            this.checkbox_male.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
-            this.checkbox_male.CheckedState.BorderRadius = 2;
-            this.checkbox_male.CheckedState.BorderThickness = 0;
-            this.checkbox_male.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
-            this.checkbox_male.Location = new System.Drawing.Point(48, 313);
-            this.checkbox_male.Margin = new System.Windows.Forms.Padding(2);
-            this.checkbox_male.Name = "checkbox_male";
-            this.checkbox_male.Size = new System.Drawing.Size(15, 16);
-            this.checkbox_male.TabIndex = 97;
-            this.checkbox_male.Text = "Male";
-            this.checkbox_male.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.checkbox_male.UncheckedState.BorderRadius = 2;
-            this.checkbox_male.UncheckedState.BorderThickness = 1;
-            this.checkbox_male.UncheckedState.FillColor = System.Drawing.Color.White;
-            this.checkbox_male.Click += new System.EventHandler(this.checkbox_male_Click);
+            this.checkbox_show.Animated = true;
+            this.checkbox_show.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
+            this.checkbox_show.CheckedState.BorderRadius = 2;
+            this.checkbox_show.CheckedState.BorderThickness = 0;
+            this.checkbox_show.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(127)))), ((int)(((byte)(76)))));
+            this.checkbox_show.Location = new System.Drawing.Point(48, 313);
+            this.checkbox_show.Margin = new System.Windows.Forms.Padding(2);
+            this.checkbox_show.Name = "checkbox_show";
+            this.checkbox_show.Size = new System.Drawing.Size(15, 16);
+            this.checkbox_show.TabIndex = 97;
+            this.checkbox_show.Text = "Male";
+            this.checkbox_show.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.checkbox_show.UncheckedState.BorderRadius = 2;
+            this.checkbox_show.UncheckedState.BorderThickness = 1;
+            this.checkbox_show.UncheckedState.FillColor = System.Drawing.Color.White;
+            this.checkbox_show.Click += new System.EventHandler(this.checkbox_show_Click);
             // 
             // txtPass
             // 
@@ -315,6 +315,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPass;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label label9;
-        private Guna.UI2.WinForms.Guna2CustomCheckBox checkbox_male;
+        private Guna.UI2.WinForms.Guna2CustomCheckBox checkbox_show;
     }
 }

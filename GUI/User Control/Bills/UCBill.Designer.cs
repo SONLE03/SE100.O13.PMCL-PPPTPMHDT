@@ -35,11 +35,13 @@
             // 
             // PanelDisplayTabs
             // 
+            this.PanelDisplayTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelDisplayTabs.BackColor = System.Drawing.Color.Transparent;
-            this.PanelDisplayTabs.Location = new System.Drawing.Point(4, 90);
-            this.PanelDisplayTabs.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelDisplayTabs.Location = new System.Drawing.Point(3, 73);
             this.PanelDisplayTabs.Name = "PanelDisplayTabs";
-            this.PanelDisplayTabs.Size = new System.Drawing.Size(1492, 891);
+            this.PanelDisplayTabs.Size = new System.Drawing.Size(1119, 724);
             this.PanelDisplayTabs.TabIndex = 0;
             // 
             // btnInvoice
@@ -57,10 +59,10 @@
             this.btnInvoice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnInvoice.ForeColor = System.Drawing.Color.White;
             this.btnInvoice.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnInvoice.Location = new System.Drawing.Point(845, 30);
-            this.btnInvoice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnInvoice.Location = new System.Drawing.Point(634, 24);
+            this.btnInvoice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnInvoice.Name = "btnInvoice";
-            this.btnInvoice.Size = new System.Drawing.Size(180, 46);
+            this.btnInvoice.Size = new System.Drawing.Size(135, 37);
             this.btnInvoice.TabIndex = 37;
             this.btnInvoice.Text = "Invoice";
             this.btnInvoice.Click += new System.EventHandler(this.btnInvoice_Click);
@@ -79,17 +81,17 @@
             this.btnOrder.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnOrder.ForeColor = System.Drawing.Color.White;
             this.btnOrder.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnOrder.Location = new System.Drawing.Point(456, 30);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnOrder.Location = new System.Drawing.Point(342, 24);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnOrder.Name = "btnOrder";
-            this.btnOrder.Size = new System.Drawing.Size(180, 46);
+            this.btnOrder.Size = new System.Drawing.Size(135, 37);
             this.btnOrder.TabIndex = 36;
             this.btnOrder.Text = "Order";
             this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // UCBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -97,9 +99,8 @@
             this.Controls.Add(this.btnOrder);
             this.Controls.Add(this.PanelDisplayTabs);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCBill";
-            this.Size = new System.Drawing.Size(1499, 985);
+            this.Size = new System.Drawing.Size(1124, 800);
             this.Load += new System.EventHandler(this.UCBill_Load);
             this.ResumeLayout(false);
 

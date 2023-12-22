@@ -34,7 +34,7 @@
             this.btnMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Menu = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnChangeRegulation = new Guna.UI2.WinForms.Guna2Button();
             this.Report = new Guna.UI2.WinForms.Guna2Button();
             this.Employees = new Guna.UI2.WinForms.Guna2Button();
             this.Import = new Guna.UI2.WinForms.Guna2Button();
@@ -100,7 +100,7 @@
             // Menu
             // 
             this.Menu.BorderRadius = 20;
-            this.Menu.Controls.Add(this.guna2Button1);
+            this.Menu.Controls.Add(this.btnChangeRegulation);
             this.Menu.Controls.Add(this.Report);
             this.Menu.Controls.Add(this.Employees);
             this.Menu.Controls.Add(this.Import);
@@ -126,37 +126,39 @@
             this.Menu.Size = new System.Drawing.Size(72, 800);
             this.Menu.TabIndex = 60;
             // 
-            // guna2Button1
+            // btnChangeRegulation
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.AnimatedGIF = true;
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 10;
-            this.guna2Button1.CustomImages.HoveredImage = global::GUI.Properties.Resources.icon__settings_hover;
-            this.guna2Button1.CustomImages.Image = global::GUI.Properties.Resources.icon__settings;
-            this.guna2Button1.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.CustomImages.ImageOffset = new System.Drawing.Point(13, 0);
-            this.guna2Button1.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Transition1.SetDecoration(this.guna2Button1, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.guna2Button1.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.guna2Button1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.Location = new System.Drawing.Point(0, 474);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(199, 36);
-            this.guna2Button1.TabIndex = 17;
-            this.guna2Button1.Text = "guna2Button1";
-            this.guna2Button1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button1.TextOffset = new System.Drawing.Point(77, 0);
+            this.btnChangeRegulation.Animated = true;
+            this.btnChangeRegulation.AnimatedGIF = true;
+            this.btnChangeRegulation.BackColor = System.Drawing.Color.Transparent;
+            this.btnChangeRegulation.BorderRadius = 10;
+            this.btnChangeRegulation.CustomImages.HoveredImage = global::GUI.Properties.Resources.icon__settings_hover;
+            this.btnChangeRegulation.CustomImages.Image = global::GUI.Properties.Resources.icon__settings;
+            this.btnChangeRegulation.CustomImages.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnChangeRegulation.CustomImages.ImageOffset = new System.Drawing.Point(13, 0);
+            this.btnChangeRegulation.CustomImages.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2Transition1.SetDecoration(this.btnChangeRegulation, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.btnChangeRegulation.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangeRegulation.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnChangeRegulation.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnChangeRegulation.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnChangeRegulation.FillColor = System.Drawing.Color.Transparent;
+            this.btnChangeRegulation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnChangeRegulation.ForeColor = System.Drawing.Color.White;
+            this.btnChangeRegulation.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnChangeRegulation.HoverState.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.btnChangeRegulation.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.btnChangeRegulation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnChangeRegulation.Location = new System.Drawing.Point(0, 474);
+            this.btnChangeRegulation.Margin = new System.Windows.Forms.Padding(2);
+            this.btnChangeRegulation.Name = "btnChangeRegulation";
+            this.btnChangeRegulation.Size = new System.Drawing.Size(199, 36);
+            this.btnChangeRegulation.TabIndex = 17;
+            this.btnChangeRegulation.Text = "Change rules";
+            this.btnChangeRegulation.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnChangeRegulation.TextFormatNoPrefix = true;
+            this.btnChangeRegulation.TextOffset = new System.Drawing.Point(77, 0);
+            this.btnChangeRegulation.Click += new System.EventHandler(this.btnChangeRegulation_Click);
             // 
             // Report
             // 
@@ -689,7 +691,9 @@
         private static UCEvents ucEvents;
         private static UCImport ucImport;
         private static UCEmployees ucEmployees;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private static UCChangeRegulations ucChangeRegulations;
+        private Guna.UI2.WinForms.Guna2Button btnChangeRegulation;
         private Guna.UI2.WinForms.Guna2ControlBox btnMinimize;
+        
     }
 }
