@@ -24,9 +24,9 @@ namespace DAL
         {
             return CFEntities.Instance.C_TABLE.AsNoTracking().ToList();
         }
-        public List<C_TABLE> GetAllTableActive()
+        public List<C_TABLE> GetAllTableByAreaID(int areaId)
         {
-            return CFEntities.Instance.C_TABLE.AsNoTracking().Where(m => m.Status == "Active").ToList();
+            return CFEntities.Instance.C_TABLE.AsNoTracking().Where(m => m.AREA.Status != "InActive").ToList();
         }
         public List<C_TABLE> GetAllTableInActive()
         {

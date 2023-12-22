@@ -84,7 +84,7 @@ namespace BUS
             int gap = createDate.Year - DateofBirth.Year;
             if (createDate.Month < DateofBirth.Month || (createDate.Month == DateofBirth.Month && createDate.Day < DateofBirth.Day))
                 gap -= 1;
-            return gap >= BUSRule.Instance.GetAllThamSo().MinimumAge;
+            return gap >= BUSRule.Instance.GetAllRule().MinimumAge;
         }
         private bool EmailValidator(string email)
         {

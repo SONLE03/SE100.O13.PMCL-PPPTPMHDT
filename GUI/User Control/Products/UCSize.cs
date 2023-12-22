@@ -42,9 +42,10 @@ namespace GUI
         {
             int idx = e.RowIndex;
             if (idx < 0) return;
-            int impId = Convert.ToInt32(gridviewSize.Rows[idx].Cells["ID"].Value);
-            // importOrderDetail = new ImportOrderDetails(impId);
-            //importOrderDetail.Show();
+            int sizeID = Convert.ToInt32(gridviewSize.Rows[idx].Cells["ID"].Value);
+            EditSize editSize = new EditSize(sizeID);
+            editSize.ShowDialog();
+            Binding(BUSSize.Instance.GetAllSize());
         }
 
         private void txtFindSize_TextChanged(object sender, EventArgs e)

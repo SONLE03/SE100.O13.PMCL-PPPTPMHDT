@@ -25,7 +25,9 @@ namespace DTO
         public string TableName { get; set; }
         public int AreaID { get; set; }
         public string Status { get; set; }
-    
+
+        public string TableNameAndStatus => $"{TableName} | {Status}";
+
         public virtual AREA AREA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BILL> BILLs { get; set; }

@@ -6,6 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -22,9 +23,19 @@ namespace BUS
             }
             set => instance = value;
         }
-        public C_RULE GetAllThamSo()
+        public C_RULE GetAllRule()
         {
             return DALRule.Instance.GetAllRule();
+        }
+        public void UpdRule(int minAge, int maxAge, int tax)
+        {
+            if (DALRule.Instance.UpdMinimumAge(minAge) && DALRule.Instance.UpdMaximumAge(maxAge) && DALRule.Instance.UpdTax(tax))
+            {
+                MessageBox.Show("Changes have been saved", "Notifycation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            MessageBox.Show("Invalid information. Please check again", "Notifycation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            return;
         }
         public string UpdMinimumAge(int age)
         {

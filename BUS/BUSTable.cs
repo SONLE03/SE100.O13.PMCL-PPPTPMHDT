@@ -27,9 +27,9 @@ namespace BUS
         {
             return DALTable.Instance.GetAllTable();
         }
-        public List<C_TABLE> GetAllTableActive()
+        public List<C_TABLE> GetAllTableByAreaID(int areaId)
         {
-            return DALTable.Instance.GetAllTableActive();
+            return DALTable.Instance.GetAllTableByAreaID(areaId);
         }
         public List<C_TABLE> GetAllTableInActive()
         {

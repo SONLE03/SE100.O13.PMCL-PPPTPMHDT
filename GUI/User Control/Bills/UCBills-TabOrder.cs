@@ -24,36 +24,24 @@ namespace GUI
             listMiniItem = new List<UCProductsMiniForBills> ();
             this.user = user;
             LoadProduct();
+            LoadArea();
+        }
 
-            //lbOrderID.Text = "#" + (BUS.BUSOrder.Instance.GetAllBill().Count + 1).ToString();
-            //lbSubTotal.Text = "0 VND";
+        private void LoadArea()
+        {
+            cbArea.DataSource = null;
+            cbArea.DataSource = BUSArea.Instance.GetAllAreaActive();
+            cbArea.DisplayMember = "AreaName";
+            cbArea.ValueMember = "id";
+            cbArea.SelectedIndex = 0;
+        }
 
-            //combobox_SelectArea.Items.Add("All");
-            //BUS.BUSArea.Instance.GetAllArea().ToList().ForEach(p =>
-            //{
-            //    combobox_SelectArea.Items.Add(p.AreaName);
-            //});
-            //combobox_SelectArea.SelectedItem = "All";
-
-            //combobox_SelectTable.Items.Add("All");
-            //BUS.BUSTable.Instance.GetAllTable().ToList().ForEach(p =>
-            //{
-            //    combobox_SelectTable.Items.Add(p.TableName);
-            //});
-            //combobox_SelectTable.SelectedItem = "All";
-
-            //combobox_category.Items.Add("All");
-            //BUS.BUSCategory.Instance.GetAllCategory().ToList().ForEach(p =>
-            //{
-            //    combobox_category.Items.Add(p.CategoryName);
-            //});
-            //combobox_category.SelectedItem = "All";
-
-            //LoadProductInFlowLayoutPanel(BUS.BUSDrink.Instance.GetAllDrink(),
-            //                                                  BUS.BUSDrink_Size.Instance.GetAllDrinkSize(),
-            //                                                  BUS.BUSSize.Instance.GetAllSize());
-
-            //flowLayoutPanel.Refresh();
+        private void cbArea_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbTable.DataSource = null;
+            cbTable.DataSource = BUSTable.Instance.GetAllTableByAreaID((int)cbArea.SelectedIndex);
+            cbTable.ValueMember = "id";
+            cbTable.DisplayMember = "TableNameAndStatus";
         }
 
         private void LoadProduct()

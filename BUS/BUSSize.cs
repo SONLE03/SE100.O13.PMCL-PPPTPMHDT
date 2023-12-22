@@ -49,6 +49,11 @@ namespace BUS
         }
         public bool UpdSize(int idSize, string sizeName)
         {
+            if (GetSizeBySizeName(sizeName) != null)
+            {
+                MessageBox.Show("The SizeName already exists!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             return DALSize.Instance.UpdSize(idSize, sizeName);
         }
         public bool DelSize(int idSize)
