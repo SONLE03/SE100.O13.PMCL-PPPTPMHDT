@@ -26,9 +26,9 @@ namespace BUS
         {
             return DALDrink.Instance.GetAllDrink();
         }
-        public List<DRINK> GetAllDrinkActive()
+        public List<DRINK> GetAllDrinkActive(int cateId)
         {
-            return DALDrink.Instance.GetAllDrinkActive();
+            return DALDrink.Instance.GetAllDrinkActive(cateId);
         }
 
         public DRINK GetDrinkById(int id)

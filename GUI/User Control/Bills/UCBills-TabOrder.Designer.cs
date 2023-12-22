@@ -76,7 +76,7 @@
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanel.Location = new System.Drawing.Point(4, 73);
-            this.flowLayoutPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(448, 470);
             this.flowLayoutPanel.TabIndex = 45;
@@ -94,7 +94,7 @@
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2Button4.ForeColor = System.Drawing.Color.Gray;
             this.guna2Button4.Location = new System.Drawing.Point(295, 14);
-            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Button4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(148, 44);
             this.guna2Button4.TabIndex = 44;
@@ -174,7 +174,7 @@
             this.guna2Panel4.Controls.Add(this.label2);
             this.guna2Panel4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Panel4.Location = new System.Drawing.Point(28, 572);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(401, 85);
             this.guna2Panel4.TabIndex = 46;
@@ -236,7 +236,7 @@
             this.guna2Panel5.Controls.Add(this.label10);
             this.guna2Panel5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.guna2Panel5.Location = new System.Drawing.Point(28, 672);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(401, 54);
             this.guna2Panel5.TabIndex = 47;
@@ -258,7 +258,7 @@
             this.guna2Panel3.Controls.Add(this.label1);
             this.guna2Panel3.FillColor = System.Drawing.Color.White;
             this.guna2Panel3.Location = new System.Drawing.Point(988, 21);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(457, 848);
             this.guna2Panel3.TabIndex = 29;
@@ -283,7 +283,7 @@
             this.flowLayoutPanelProducts.AutoScroll = true;
             this.flowLayoutPanelProducts.BackColor = System.Drawing.Color.White;
             this.flowLayoutPanelProducts.Location = new System.Drawing.Point(4, 127);
-            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanelProducts.Margin = new System.Windows.Forms.Padding(4);
             this.flowLayoutPanelProducts.Name = "flowLayoutPanelProducts";
             this.flowLayoutPanelProducts.Size = new System.Drawing.Size(889, 476);
             this.flowLayoutPanelProducts.TabIndex = 55;
@@ -361,7 +361,7 @@
             this.guna2Panel2.Controls.Add(this.txtEmailCode);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(45, 241);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(899, 628);
             this.guna2Panel2.TabIndex = 28;
@@ -371,7 +371,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::GUI.Properties.Resources.searches;
             this.pictureBox1.Location = new System.Drawing.Point(656, 57);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(44, 41);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -417,7 +417,7 @@
             this.cbArea.Name = "cbArea";
             this.cbArea.Size = new System.Drawing.Size(344, 36);
             this.cbArea.TabIndex = 49;
-            this.cbArea.SelectedIndexChanged += new System.EventHandler(this.cbArea_SelectedIndexChanged);
+            this.cbArea.SelectedValueChanged += new System.EventHandler(this.cbArea_SelectedValueChanged);
             // 
             // guna2Button3
             // 
@@ -492,7 +492,7 @@
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(45, 21);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(899, 197);
             this.guna2Panel1.TabIndex = 27;
@@ -528,7 +528,7 @@
             this.guna2CustomRadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2CustomRadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
             this.guna2CustomRadioButton2.Location = new System.Drawing.Point(496, 25);
-            this.guna2CustomRadioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2CustomRadioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2CustomRadioButton2.Name = "guna2CustomRadioButton2";
             this.guna2CustomRadioButton2.Size = new System.Drawing.Size(27, 25);
             this.guna2CustomRadioButton2.TabIndex = 53;
@@ -545,7 +545,7 @@
             this.radioOntheSpot.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.radioOntheSpot.CheckedState.InnerColor = System.Drawing.Color.White;
             this.radioOntheSpot.Location = new System.Drawing.Point(303, 25);
-            this.radioOntheSpot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioOntheSpot.Margin = new System.Windows.Forms.Padding(4);
             this.radioOntheSpot.Name = "radioOntheSpot";
             this.radioOntheSpot.Size = new System.Drawing.Size(27, 25);
             this.radioOntheSpot.TabIndex = 52;
@@ -583,7 +583,7 @@
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.guna2Panel2);
             this.Controls.Add(this.guna2Panel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCBills_TabOrder";
             this.Size = new System.Drawing.Size(1492, 891);
             this.guna2Panel4.ResumeLayout(false);

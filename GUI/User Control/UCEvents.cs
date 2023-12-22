@@ -19,13 +19,15 @@ namespace GUI
             LoadEvent(BUS.BUSEvent.Instance.GetAllEvent());
         }
 
-        private void LoadEvent(List<EVENT> eVENTs)
+        private void LoadEvent(List<EVENT> events)
         {
+            Image edit_img = Properties.Resources.edit_icon;
+            edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
             gridviewEvent.Rows.Clear();
             gridviewEvent.Refresh();
-            eVENTs.ForEach(p =>
+            events.ForEach(p =>
             {
-                gridviewEvent.Rows.Add(p.EventID, p.EventName, p.StartDate, p.DueDate, p.EventType, p.Unit);
+                gridviewEvent.Rows.Add(p.id, p.EventID, p.EventName, p.StartDate, p.DueDate, p.EventType, p.Discount, p.Status, edit_img);
             });
         }
 

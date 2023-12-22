@@ -26,9 +26,9 @@ namespace DAL
         {
             return CFEntities.Instance.DRINKS.AsNoTracking().ToList();
         }
-        public List<DRINK> GetAllDrinkActive()
+        public List<DRINK> GetAllDrinkActive(int catId)
         {
-            return CFEntities.Instance.DRINKS.AsNoTracking().Where(t => t.Status == DALStatus.active.ToString()).ToList();
+            return CFEntities.Instance.DRINKS.AsNoTracking().Where(t =>  t.CategoryID == catId && t.Status != "InActive").ToList();
         }
 
         public DRINK GetDrinkById(int id)

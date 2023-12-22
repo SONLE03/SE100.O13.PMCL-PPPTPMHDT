@@ -26,7 +26,7 @@ namespace DAL
         }
         public List<C_TABLE> GetAllTableByAreaID(int areaId)
         {
-            return CFEntities.Instance.C_TABLE.AsNoTracking().Where(m => m.AREA.Status != "InActive").ToList();
+            return CFEntities.Instance.C_TABLE.AsNoTracking().Where(m => m.AREA.Status != "InActive" && m.AreaID == areaId).ToList();
         }
         public List<C_TABLE> GetAllTableInActive()
         {

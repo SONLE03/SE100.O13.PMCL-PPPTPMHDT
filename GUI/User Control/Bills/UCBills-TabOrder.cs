@@ -33,15 +33,16 @@ namespace GUI
             cbArea.DataSource = BUSArea.Instance.GetAllAreaActive();
             cbArea.DisplayMember = "AreaName";
             cbArea.ValueMember = "id";
-            cbArea.SelectedIndex = 0;
         }
-
-        private void cbArea_SelectedIndexChanged(object sender, EventArgs e)
+        private void cbArea_SelectedValueChanged(object sender, EventArgs e)
         {
-            cbTable.DataSource = null;
-            cbTable.DataSource = BUSTable.Instance.GetAllTableByAreaID((int)cbArea.SelectedIndex);
-            cbTable.ValueMember = "id";
-            cbTable.DisplayMember = "TableNameAndStatus";
+            if (cbArea.SelectedValue != null && cbArea.SelectedValue is int areaId)
+            {
+                cbTable.DataSource = null;
+                cbTable.DataSource = BUSTable.Instance.GetAllTableByAreaID(areaId);
+                cbTable.ValueMember = "id";
+                cbTable.DisplayMember = "TableNameAndStatus";
+            }
         }
 
         private void LoadProduct()

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,26 +17,63 @@ namespace GUI
         public AddNewEvent()
         {
             InitializeComponent();
-            lbAreaID.Text = (BUS.BUSEvent.Instance.GetAllEvent().Count + 1).ToString();
+            getCategory();
+            addEventForCheckBox();
+            //lbAreaID.Text = (BUS.BUSEvent.Instance.GetAllEvent().Count + 1).ToString();
 
-            combobox_category.Items.Add("All");
-            BUS.BUSCategory.Instance.GetAllCategory().ForEach(p =>
-            {
-                combobox_category.Items.Add(p.CategoryName);
-            });
+            //cbcategory.Items.Add("All");
+            //BUS.BUSCategory.Instance.GetAllCategory().ForEach(p =>
+            //{
+            //    cbcategory.Items.Add(p.CategoryName);
+            //});
 
-            combobox_category.Items.Add("All");
-            BUS.BUSDrink.Instance.GetAllDrink().ForEach(p =>
-            {
-                comboboxProduct.Items.Add(p.DrinksName);
-            });
+            //cbcategory.Items.Add("All");
+            //BUS.BUSDrink.Instance.GetAllDrink().ForEach(p =>
+            //{
+            //    cbProduct.Items.Add(p.DrinksName);
+            //});
 
-            i = 1;
+            //i = 1;
         }
-
+        private void addEventForCheckBox()
+        {
+            cbSalePercentage.CheckedChanged += CheckBox_CheckedChanged;
+            cbSaleSamePrice.CheckedChanged += CheckBox_CheckedChanged;
+        }
+        private void CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbSaleSamePrice.Checked)
+            {
+                lbUnit.Text = "VND";
+            }else if (cbSalePercentage.Checked)
+            {
+                lbUnit.Text = "%";
+            }
+            else
+            {
+                lbUnit.Text = "Unit";
+            }
+        }
+        private void getCategory()
+        {
+            cbcategory.DataSource = null;
+            cbcategory.DataSource = BUSCategory.Instance.GetAllCategoryActive();
+            cbcategory.ValueMember = "id";
+            cbcategory.DisplayMember = "CategoryName";
+        }
+        private void cbcategory_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (cbcategory.SelectedValue != null && cbcategory.SelectedValue is int catId)
+            {
+                cbProduct.DataSource = null;
+                cbProduct.DataSource = BUSDrink.Instance.GetAllDrinkActive(catId);
+                cbProduct.ValueMember = "id";
+                cbProduct.DisplayMember = "DrinksName";
+            }
+        }
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            var drink = (from p in BUS.BUSDrink.Instance.GetAllDrink() where p.DrinksName.Equals(comboboxProduct.SelectedItem.ToString()) select p).FirstOrDefault();
+            var drink = (from p in BUS.BUSDrink.Instance.GetAllDrink() where p.DrinksName.Equals(cbProduct.SelectedItem.ToString()) select p).FirstOrDefault();
 
             gridviewEventAppliedProduct.Rows.Add(drink.DrinksID, drink.DrinksName, drink.CATEGORY.CategoryName, "VND");
         }
@@ -82,5 +120,7 @@ namespace GUI
         {
 
         }
+
+      
     }
 }
