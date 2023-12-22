@@ -52,7 +52,7 @@ namespace GUI
                 // 3 first panel
                 lbDailyOrder.Text = model.NumOrder.ToString();
                 lbTotalRevenue.Text = "$" + model.TotalRevenue.ToString();
-                lbTotalCustomers.Text = model.NumCustomer.ToString();
+                lbTotalUsers.Text = model.NumCustomer.ToString();
                 // 3 label at Overview
                 lbTotalEmployees.Text = model.NumEmployee.ToString();
                 lbTotalSuppliers.Text = model.NumSupplier.ToString();

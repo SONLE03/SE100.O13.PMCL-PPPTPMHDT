@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class EditEvent : Form
+    public partial class UCReports : UserControl
     {
-        public EditEvent()
+        public UCReports()
         {
             InitializeComponent();
-        }
-
-        private void EditEvent_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

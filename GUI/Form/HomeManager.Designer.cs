@@ -149,7 +149,7 @@
             this.btnChangeRegulation.HoverState.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnChangeRegulation.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnChangeRegulation.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnChangeRegulation.Location = new System.Drawing.Point(0, 474);
+            this.btnChangeRegulation.Location = new System.Drawing.Point(0, 429);
             this.btnChangeRegulation.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangeRegulation.Name = "btnChangeRegulation";
             this.btnChangeRegulation.Size = new System.Drawing.Size(199, 36);
@@ -357,7 +357,7 @@
             this.Settings.HoverState.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.Settings.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.Settings.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.Settings.Location = new System.Drawing.Point(0, 429);
+            this.Settings.Location = new System.Drawing.Point(0, 474);
             this.Settings.Margin = new System.Windows.Forms.Padding(2);
             this.Settings.Name = "Settings";
             this.Settings.Size = new System.Drawing.Size(199, 36);

@@ -33,12 +33,12 @@
             // 
             // txtSize
             // 
-            this.txtSize.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSize.ForeColor = System.Drawing.Color.White;
+            this.txtSize.BackColor = System.Drawing.Color.White;
+            this.txtSize.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
             this.txtSize.Location = new System.Drawing.Point(0, 2);
-            this.txtSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(29, 28);
+            this.txtSize.Size = new System.Drawing.Size(22, 23);
             this.txtSize.TabIndex = 0;
             this.txtSize.Text = "L";
             this.txtSize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -46,13 +46,12 @@
             // 
             // UCMiniSizeForBill
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
             this.Controls.Add(this.txtSize);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCMiniSizeForBill";
-            this.Size = new System.Drawing.Size(29, 32);
+            this.Size = new System.Drawing.Size(22, 26);
             this.Click += new System.EventHandler(this.UCMiniSizeForBill_Click);
             this.ResumeLayout(false);
 

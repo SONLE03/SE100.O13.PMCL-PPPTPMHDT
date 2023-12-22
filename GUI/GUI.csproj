@@ -260,6 +260,12 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCReports.Designer.cs">
+      <DependentUpon>UCReports.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\UCChangeRegulations.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -519,6 +525,9 @@
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UCReports.resx">
+      <DependentUpon>UCReports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\UCChangeRegulations.resx">
       <DependentUpon>UCChangeRegulations.cs</DependentUpon>
     </EmbeddedResource>
@@ -764,6 +773,7 @@
     <None Include="Resources\Engman.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\spending.png" />
     <None Include="Resources\tax.png" />
     <None Include="Resources\icons8_here_100px.png" />
     <None Include="Resources\icons8_about_100px.png" />
@@ -771,8 +781,10 @@
     <None Include="Resources\edit_icon.png" />
     <None Include="Resources\cafe2.png" />
     <None Include="Resources\age.png" />
+    <None Include="Resources\category.png" />
     <Content Include="Resources\icons8_add_shopping_cart_100px.png" />
     <None Include="Resources\icons8_clear_symbol_100px_3.png" />
+    <None Include="Resources\inventory.png" />
     <Content Include="Resources\NotFoundImage.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -31,12 +31,12 @@
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lbBasePrice = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2NumericUpDown1 = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lbBasePrice = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2NumericUpDown1)).BeginInit();
@@ -61,16 +61,34 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.lbPrice);
             this.guna2CustomGradientPanel1.Controls.Add(this.lbName);
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(9, 6);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(12, 6);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(307, 81);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(396, 81);
             this.guna2CustomGradientPanel1.TabIndex = 2;
+            // 
+            // lbBasePrice
+            // 
+            this.lbBasePrice.AllowDrop = true;
+            this.lbBasePrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbBasePrice.AutoSize = true;
+            this.lbBasePrice.BackColor = System.Drawing.Color.White;
+            this.lbBasePrice.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
+            this.lbBasePrice.ForeColor = System.Drawing.Color.IndianRed;
+            this.lbBasePrice.Location = new System.Drawing.Point(114, 58);
+            this.lbBasePrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbBasePrice.Name = "lbBasePrice";
+            this.lbBasePrice.Size = new System.Drawing.Size(73, 19);
+            this.lbBasePrice.TabIndex = 6;
+            this.lbBasePrice.Text = "$ 000.000";
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_clear_symbol_100px_3;
-            this.pictureBox1.Location = new System.Drawing.Point(267, -6);
+            this.pictureBox1.Location = new System.Drawing.Point(350, -6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -80,16 +98,15 @@
             // 
             // guna2NumericUpDown1
             // 
-            this.guna2NumericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.guna2NumericUpDown1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2NumericUpDown1.BackColor = System.Drawing.Color.Transparent;
             this.guna2NumericUpDown1.BorderRadius = 10;
             this.guna2NumericUpDown1.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.guna2NumericUpDown1.Location = new System.Drawing.Point(223, 34);
+            this.guna2NumericUpDown1.Location = new System.Drawing.Point(252, 34);
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(65, 30);
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(125, 30);
             this.guna2NumericUpDown1.TabIndex = 4;
             this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
             this.guna2NumericUpDown1.Value = new decimal(new int[] {
@@ -109,7 +126,7 @@
             this.lbPrice.BackColor = System.Drawing.Color.White;
             this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lbPrice.ForeColor = System.Drawing.Color.Gray;
-            this.lbPrice.Location = new System.Drawing.Point(93, 38);
+            this.lbPrice.Location = new System.Drawing.Point(114, 39);
             this.lbPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbPrice.Name = "lbPrice";
             this.lbPrice.Size = new System.Drawing.Size(73, 19);
@@ -125,7 +142,7 @@
             this.lbName.AutoSize = true;
             this.lbName.BackColor = System.Drawing.Color.White;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lbName.Location = new System.Drawing.Point(79, 13);
+            this.lbName.Location = new System.Drawing.Point(114, 17);
             this.lbName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbName.Name = "lbName";
             this.lbName.Size = new System.Drawing.Size(103, 19);
@@ -139,31 +156,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.milkco1;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(9, 7);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(16, 6);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(65, 65);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(70, 70);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 1;
             this.guna2CirclePictureBox1.TabStop = false;
-            // 
-            // lbBasePrice
-            // 
-            this.lbBasePrice.AllowDrop = true;
-            this.lbBasePrice.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbBasePrice.AutoSize = true;
-            this.lbBasePrice.BackColor = System.Drawing.Color.White;
-            this.lbBasePrice.Font = new System.Drawing.Font("Segoe UI", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))));
-            this.lbBasePrice.ForeColor = System.Drawing.Color.IndianRed;
-            this.lbBasePrice.Location = new System.Drawing.Point(94, 58);
-            this.lbBasePrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbBasePrice.Name = "lbBasePrice";
-            this.lbBasePrice.Size = new System.Drawing.Size(73, 19);
-            this.lbBasePrice.TabIndex = 6;
-            this.lbBasePrice.Text = "$ 000.000";
             // 
             // UCMiniProductChoosen
             // 
@@ -172,7 +172,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Name = "UCMiniProductChoosen";
-            this.Size = new System.Drawing.Size(330, 93);
+            this.Size = new System.Drawing.Size(420, 93);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
