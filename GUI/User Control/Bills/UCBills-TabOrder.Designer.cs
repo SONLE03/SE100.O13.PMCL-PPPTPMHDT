@@ -53,9 +53,13 @@
             this.combobox_SelectArea = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.combobox_Formofsale = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnClearTable = new Guna.UI2.WinForms.Guna2Button();
+            this.radioOntheSpot = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.guna2CustomRadioButton2 = new Guna.UI2.WinForms.Guna2CustomRadioButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -389,10 +393,10 @@
             this.combobox_SelectTable.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.combobox_SelectTable.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.combobox_SelectTable.ItemHeight = 30;
-            this.combobox_SelectTable.Location = new System.Drawing.Point(374, 113);
+            this.combobox_SelectTable.Location = new System.Drawing.Point(227, 113);
             this.combobox_SelectTable.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_SelectTable.Name = "combobox_SelectTable";
-            this.combobox_SelectTable.Size = new System.Drawing.Size(251, 36);
+            this.combobox_SelectTable.Size = new System.Drawing.Size(259, 36);
             this.combobox_SelectTable.TabIndex = 50;
             // 
             // combobox_SelectArea
@@ -409,10 +413,10 @@
             this.combobox_SelectArea.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.combobox_SelectArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.combobox_SelectArea.ItemHeight = 30;
-            this.combobox_SelectArea.Location = new System.Drawing.Point(374, 62);
+            this.combobox_SelectArea.Location = new System.Drawing.Point(227, 62);
             this.combobox_SelectArea.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_SelectArea.Name = "combobox_SelectArea";
-            this.combobox_SelectArea.Size = new System.Drawing.Size(251, 36);
+            this.combobox_SelectArea.Size = new System.Drawing.Size(259, 36);
             this.combobox_SelectArea.TabIndex = 49;
             // 
             // guna2Button3
@@ -426,7 +430,7 @@
             this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(57, 113);
+            this.guna2Button3.Location = new System.Drawing.Point(39, 113);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(139, 36);
@@ -444,32 +448,12 @@
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(57, 62);
+            this.guna2Button2.Location = new System.Drawing.Point(39, 62);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(139, 36);
             this.guna2Button2.TabIndex = 47;
             this.guna2Button2.Text = "Area";
-            // 
-            // combobox_Formofsale
-            // 
-            this.combobox_Formofsale.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.combobox_Formofsale.BackColor = System.Drawing.Color.Transparent;
-            this.combobox_Formofsale.BorderColor = System.Drawing.Color.Black;
-            this.combobox_Formofsale.BorderRadius = 10;
-            this.combobox_Formofsale.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combobox_Formofsale.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_Formofsale.FillColor = System.Drawing.Color.GhostWhite;
-            this.combobox_Formofsale.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_Formofsale.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_Formofsale.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.combobox_Formofsale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.combobox_Formofsale.ItemHeight = 30;
-            this.combobox_Formofsale.Location = new System.Drawing.Point(374, 11);
-            this.combobox_Formofsale.Margin = new System.Windows.Forms.Padding(2);
-            this.combobox_Formofsale.Name = "combobox_Formofsale";
-            this.combobox_Formofsale.Size = new System.Drawing.Size(251, 36);
-            this.combobox_Formofsale.TabIndex = 46;
             // 
             // guna2Button1
             // 
@@ -481,7 +465,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(57, 11);
+            this.guna2Button1.Location = new System.Drawing.Point(39, 11);
             this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(139, 36);
@@ -494,19 +478,101 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel1.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Panel1.BorderRadius = 30;
+            this.guna2Panel1.BorderRadius = 25;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.label6);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.Controls.Add(this.guna2CustomRadioButton2);
+            this.guna2Panel1.Controls.Add(this.radioOntheSpot);
+            this.guna2Panel1.Controls.Add(this.btnClearTable);
             this.guna2Panel1.Controls.Add(this.combobox_SelectTable);
             this.guna2Panel1.Controls.Add(this.combobox_SelectArea);
             this.guna2Panel1.Controls.Add(this.guna2Button3);
             this.guna2Panel1.Controls.Add(this.guna2Button2);
-            this.guna2Panel1.Controls.Add(this.combobox_Formofsale);
             this.guna2Panel1.Controls.Add(this.guna2Button1);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(34, 17);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(674, 160);
             this.guna2Panel1.TabIndex = 27;
+            // 
+            // btnClearTable
+            // 
+            this.btnClearTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnClearTable.AutoRoundedCorners = true;
+            this.btnClearTable.BorderRadius = 17;
+            this.btnClearTable.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearTable.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnClearTable.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnClearTable.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnClearTable.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnClearTable.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnClearTable.ForeColor = System.Drawing.Color.White;
+            this.btnClearTable.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.btnClearTable.Location = new System.Drawing.Point(517, 113);
+            this.btnClearTable.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearTable.Name = "btnClearTable";
+            this.btnClearTable.Size = new System.Drawing.Size(127, 36);
+            this.btnClearTable.TabIndex = 51;
+            this.btnClearTable.Text = "Clear table";
+            // 
+            // radioOntheSpot
+            // 
+            this.radioOntheSpot.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.radioOntheSpot.CheckedState.BorderThickness = 0;
+            this.radioOntheSpot.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.radioOntheSpot.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.radioOntheSpot.Location = new System.Drawing.Point(227, 20);
+            this.radioOntheSpot.Name = "radioOntheSpot";
+            this.radioOntheSpot.Size = new System.Drawing.Size(20, 20);
+            this.radioOntheSpot.TabIndex = 52;
+            this.radioOntheSpot.Text = "guna2CustomRadioButton1";
+            this.radioOntheSpot.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.radioOntheSpot.UncheckedState.BorderThickness = 2;
+            this.radioOntheSpot.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.radioOntheSpot.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // guna2CustomRadioButton2
+            // 
+            this.guna2CustomRadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2CustomRadioButton2.CheckedState.BorderThickness = 0;
+            this.guna2CustomRadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2CustomRadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.guna2CustomRadioButton2.Location = new System.Drawing.Point(372, 20);
+            this.guna2CustomRadioButton2.Name = "guna2CustomRadioButton2";
+            this.guna2CustomRadioButton2.Size = new System.Drawing.Size(20, 20);
+            this.guna2CustomRadioButton2.TabIndex = 53;
+            this.guna2CustomRadioButton2.Text = "guna2CustomRadioButton2";
+            this.guna2CustomRadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2CustomRadioButton2.UncheckedState.BorderThickness = 2;
+            this.guna2CustomRadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.guna2CustomRadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label3.Location = new System.Drawing.Point(252, 19);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(98, 21);
+            this.label3.TabIndex = 54;
+            this.label3.Text = "On the spot";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(397, 19);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(89, 21);
+            this.label6.TabIndex = 55;
+            this.label6.Text = "Take away";
             // 
             // UCBills_TabOrder
             // 
@@ -528,6 +594,7 @@
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -559,8 +626,12 @@
         private Guna.UI2.WinForms.Guna2ComboBox combobox_SelectArea;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2ComboBox combobox_Formofsale;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Button btnClearTable;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label3;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton guna2CustomRadioButton2;
+        private Guna.UI2.WinForms.Guna2CustomRadioButton radioOntheSpot;
     }
 }

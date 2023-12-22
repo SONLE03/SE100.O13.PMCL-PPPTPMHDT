@@ -61,13 +61,14 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(9, 6);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(315, 81);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(307, 81);
             this.guna2CustomGradientPanel1.TabIndex = 2;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::GUI.Properties.Resources.icons8_clear_symbol_100px_3;
-            this.pictureBox1.Location = new System.Drawing.Point(285, -6);
+            this.pictureBox1.Location = new System.Drawing.Point(267, -6);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(30, 26);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -86,7 +87,7 @@
             this.guna2NumericUpDown1.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.guna2NumericUpDown1.Location = new System.Drawing.Point(223, 34);
             this.guna2NumericUpDown1.Name = "guna2NumericUpDown1";
-            this.guna2NumericUpDown1.Size = new System.Drawing.Size(73, 30);
+            this.guna2NumericUpDown1.Size = new System.Drawing.Size(65, 30);
             this.guna2NumericUpDown1.TabIndex = 4;
             this.guna2NumericUpDown1.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
             this.guna2NumericUpDown1.Value = new decimal(new int[] {
@@ -136,11 +137,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CirclePictureBox1.Image = global::GUI.Properties.Resources.milkco1;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(20, 7);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(19, 11);
             this.guna2CirclePictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(49, 60);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(60, 60);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 1;
             this.guna2CirclePictureBox1.TabStop = false;
