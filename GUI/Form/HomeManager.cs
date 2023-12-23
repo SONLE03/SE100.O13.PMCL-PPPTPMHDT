@@ -1,5 +1,6 @@
 ﻿using BUS;
 using DTO;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,26 @@ namespace GUI
             InitializeComponent();
             this.user = user;
             BUSUser.Instance.idUserLogin = user.id;
+            CheckedBtnState(Home);
         }
 
+        private Guna2Button CurrentBtn;
+
+        private void CheckedBtnState(object button)
+        {
+            var btn = (Guna2Button)button;
+            btn.BackColor = Color.Transparent;
+            btn.FillColor = Color.White;
+            btn.ForeColor = Color.FromArgb(127, 81, 26);
+            //btn.CustomImages.Image = btn.CustomImages.HoveredImage;
+
+            if (CurrentBtn != null && CurrentBtn != btn)
+            {
+                CurrentBtn.FillColor = Color.Transparent;
+                CurrentBtn.ForeColor = Color.White;
+            }
+            CurrentBtn = btn;
+        }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -70,6 +89,7 @@ namespace GUI
             ucHome.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucHome);
+            CheckedBtnState(sender);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -83,6 +103,7 @@ namespace GUI
             ucProducts.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucProducts);
+            CheckedBtnState(sender);
         }
 
         private void Tables_Click(object sender, EventArgs e)
@@ -91,6 +112,7 @@ namespace GUI
             ucTables.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucTables);
+            CheckedBtnState(sender);
         }
 
         private void Bills_Click(object sender, EventArgs e)
@@ -99,6 +121,7 @@ namespace GUI
             ucBills.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucBills);
+            CheckedBtnState(sender);
         }
 
         private void Events_Click(object sender, EventArgs e)
@@ -107,6 +130,7 @@ namespace GUI
             ucEvents.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucEvents);
+            CheckedBtnState(sender);
         }
 
         private void Import_Click(object sender, EventArgs e)
@@ -114,7 +138,8 @@ namespace GUI
             ucImport = new UCImport();
             ucImport.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
-            this.TabUC.Controls.Add(ucImport);        
+            this.TabUC.Controls.Add(ucImport);
+            CheckedBtnState(sender);
         }
 
         private void Employees_Click(object sender, EventArgs e)
@@ -123,6 +148,7 @@ namespace GUI
             ucEmployees.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucEmployees);
+            CheckedBtnState(sender);
         }
 
         private void Settings_Click(object sender, EventArgs e)
@@ -131,6 +157,7 @@ namespace GUI
             ucSetting.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucSetting);
+            CheckedBtnState(sender);
         }
 
         private void btnChangeRegulation_Click(object sender, EventArgs e)
@@ -139,6 +166,15 @@ namespace GUI
             ucChangeRegulations.Dock = DockStyle.Fill;
             this.TabUC.Controls.Clear();
             this.TabUC.Controls.Add(ucChangeRegulations);
+            CheckedBtnState(sender);
+        }
+
+        private void HomeManager_Load(object sender, EventArgs e)
+        {
+            ucHome = new UCHome();
+            ucHome.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucHome);
         }
     }
 }

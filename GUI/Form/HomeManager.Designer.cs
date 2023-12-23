@@ -422,7 +422,9 @@
             this.Tables.HoverState.FillColor = System.Drawing.Color.White;
             this.Tables.HoverState.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.Tables.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.Tables.Image = global::GUI.Properties.Resources.icon__table_;
             this.Tables.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Tables.ImageSize = new System.Drawing.Size(1, 1);
             this.Tables.Location = new System.Drawing.Point(0, 160);
             this.Tables.Margin = new System.Windows.Forms.Padding(2);
             this.Tables.Name = "Tables";
@@ -455,7 +457,9 @@
             this.Bills.HoverState.FillColor = System.Drawing.Color.White;
             this.Bills.HoverState.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.Bills.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.Bills.Image = global::GUI.Properties.Resources.icon_Bill;
             this.Bills.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Bills.ImageSize = new System.Drawing.Size(1, 1);
             this.Bills.Location = new System.Drawing.Point(0, 205);
             this.Bills.Margin = new System.Windows.Forms.Padding(2);
             this.Bills.Name = "Bills";
@@ -488,7 +492,9 @@
             this.Products.HoverState.FillColor = System.Drawing.Color.White;
             this.Products.HoverState.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.Products.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.Products.Image = global::GUI.Properties.Resources.icon__coffee_cup_;
             this.Products.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Products.ImageSize = new System.Drawing.Size(1, 1);
             this.Products.Location = new System.Drawing.Point(0, 115);
             this.Products.Margin = new System.Windows.Forms.Padding(2);
             this.Products.Name = "Products";
@@ -521,7 +527,9 @@
             this.Home.HoverState.FillColor = System.Drawing.Color.White;
             this.Home.HoverState.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.Home.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.Home.Image = global::GUI.Properties.Resources.home_simple_door;
             this.Home.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.Home.ImageSize = new System.Drawing.Size(1, 1);
             this.Home.Location = new System.Drawing.Point(0, 71);
             this.Home.Margin = new System.Windows.Forms.Padding(2);
             this.Home.Name = "Home";
@@ -652,6 +660,7 @@
             this.Name = "HomeManager";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "HomeManager";
+            this.Load += new System.EventHandler(this.HomeManager_Load);
             this.Menu.ResumeLayout(false);
             this.Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();

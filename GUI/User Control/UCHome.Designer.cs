@@ -57,9 +57,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel8 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lbUsername = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.lbUsername = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
@@ -77,6 +77,7 @@
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2CustomGradientPanel1.BorderRadius = 20;
@@ -180,7 +181,7 @@
             // 
             // guna2CustomGradientPanel3
             // 
-            this.guna2CustomGradientPanel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.guna2CustomGradientPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2CustomGradientPanel3.BorderRadius = 20;
@@ -232,8 +233,8 @@
             // 
             // guna2CustomGradientPanel4
             // 
-            this.guna2CustomGradientPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.guna2CustomGradientPanel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -248,8 +249,8 @@
             // 
             // chartTotalRevenue
             // 
-            this.chartTotalRevenue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.chartTotalRevenue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartTotalRevenue.BorderlineColor = System.Drawing.Color.RosyBrown;
             chartArea1.AxisX.IsMarginVisible = false;
@@ -313,7 +314,7 @@
             // 
             // guna2CustomGradientPanel5
             // 
-            this.guna2CustomGradientPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.guna2CustomGradientPanel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -329,15 +330,19 @@
             // 
             // chartTopSell
             // 
+            this.chartTopSell.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             chartArea2.BackColor = System.Drawing.Color.White;
             chartArea2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
             chartArea2.BorderColor = System.Drawing.Color.White;
             chartArea2.Name = "ChartArea1";
             this.chartTopSell.ChartAreas.Add(chartArea2);
             legend2.BackColor = System.Drawing.Color.White;
+            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
             legend2.HeaderSeparator = System.Windows.Forms.DataVisualization.Charting.LegendSeparatorStyle.ThickLine;
             legend2.IsEquallySpacedItems = true;
-            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Column;
+            legend2.LegendStyle = System.Windows.Forms.DataVisualization.Charting.LegendStyle.Row;
             legend2.Name = "Legend1";
             legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Tall;
             this.chartTopSell.Legends.Add(legend2);
@@ -375,6 +380,7 @@
             // 
             // guna2CustomGradientPanel7
             // 
+            this.guna2CustomGradientPanel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2CustomGradientPanel7.BorderRadius = 20;
@@ -426,6 +432,8 @@
             // 
             // guna2CustomGradientPanel8
             // 
+            this.guna2CustomGradientPanel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel8.BackgroundImage = global::GUI.Properties.Resources.HomePan;
             this.guna2CustomGradientPanel8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -445,40 +453,43 @@
             this.guna2CustomGradientPanel8.Size = new System.Drawing.Size(623, 254);
             this.guna2CustomGradientPanel8.TabIndex = 21;
             // 
-            // label8
-            // 
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(84, 106);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(298, 70);
-            this.label8.TabIndex = 2;
-            this.label8.Text = "Welcome to Coffee store management app";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
-            this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(83, 52);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 41);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "Hello";
-            // 
             // lbUsername
             // 
+            this.lbUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.lbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.lbUsername.Location = new System.Drawing.Point(167, 50);
+            this.lbUsername.Location = new System.Drawing.Point(144, 56);
             this.lbUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbUsername.Name = "lbUsername";
             this.lbUsername.Size = new System.Drawing.Size(144, 41);
             this.lbUsername.TabIndex = 3;
             this.lbUsername.Text = "Manager";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Gray;
+            this.label8.Location = new System.Drawing.Point(61, 112);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(474, 70);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Welcome to Coffee store management app";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(60, 58);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(93, 41);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Hello";
             // 
             // UCHome
             // 

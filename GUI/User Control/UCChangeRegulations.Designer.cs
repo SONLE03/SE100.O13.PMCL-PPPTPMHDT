@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.numericMinAge = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbName = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
@@ -40,8 +41,8 @@
             this.numericTax = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.btnChangeRegulations = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.numericMinAge = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericMinAge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.guna2CustomGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -49,11 +50,12 @@
             this.guna2CustomGradientPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericMinAge)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
             // 
+            this.guna2CustomGradientPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.DimGray;
             this.guna2CustomGradientPanel1.BorderRadius = 25;
             this.guna2CustomGradientPanel1.BorderThickness = 1;
@@ -64,6 +66,27 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(957, 81);
             this.guna2CustomGradientPanel1.TabIndex = 3;
+            // 
+            // numericMinAge
+            // 
+            this.numericMinAge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.numericMinAge.BackColor = System.Drawing.Color.Transparent;
+            this.numericMinAge.BorderColor = System.Drawing.Color.DimGray;
+            this.numericMinAge.BorderRadius = 10;
+            this.numericMinAge.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numericMinAge.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.numericMinAge.Location = new System.Drawing.Point(758, 18);
+            this.numericMinAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.numericMinAge.Name = "numericMinAge";
+            this.numericMinAge.Size = new System.Drawing.Size(180, 45);
+            this.numericMinAge.TabIndex = 6;
+            this.numericMinAge.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
+            this.numericMinAge.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // pictureBox1
             // 
@@ -79,9 +102,6 @@
             // lbName
             // 
             this.lbName.AllowDrop = true;
-            this.lbName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lbName.AutoSize = true;
             this.lbName.BackColor = System.Drawing.Color.White;
             this.lbName.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
@@ -94,6 +114,7 @@
             // 
             // guna2CustomGradientPanel2
             // 
+            this.guna2CustomGradientPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel2.BorderColor = System.Drawing.Color.DimGray;
             this.guna2CustomGradientPanel2.BorderRadius = 25;
             this.guna2CustomGradientPanel2.BorderThickness = 1;
@@ -118,8 +139,7 @@
             // 
             // numericMaxAge
             // 
-            this.numericMaxAge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.numericMaxAge.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numericMaxAge.BackColor = System.Drawing.Color.Transparent;
             this.numericMaxAge.BorderColor = System.Drawing.Color.DimGray;
@@ -142,9 +162,6 @@
             // label1
             // 
             this.label1.AllowDrop = true;
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
@@ -157,6 +174,8 @@
             // 
             // guna2CustomGradientPanel3
             // 
+            this.guna2CustomGradientPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.guna2CustomGradientPanel3.BorderColor = System.Drawing.Color.DimGray;
             this.guna2CustomGradientPanel3.BorderRadius = 25;
             this.guna2CustomGradientPanel3.BorderThickness = 1;
@@ -181,8 +200,7 @@
             // 
             // numericTax
             // 
-            this.numericTax.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.numericTax.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.numericTax.BackColor = System.Drawing.Color.Transparent;
             this.numericTax.BorderColor = System.Drawing.Color.DimGray;
@@ -205,9 +223,6 @@
             // label2
             // 
             this.label2.AllowDrop = true;
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
@@ -220,7 +235,7 @@
             // 
             // btnChangeRegulations
             // 
-            this.btnChangeRegulations.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChangeRegulations.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnChangeRegulations.BackColor = System.Drawing.Color.Transparent;
             this.btnChangeRegulations.BorderRadius = 15;
             this.btnChangeRegulations.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -234,34 +249,12 @@
             this.btnChangeRegulations.ForeColor = System.Drawing.Color.White;
             this.btnChangeRegulations.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnChangeRegulations.Location = new System.Drawing.Point(426, 656);
-            this.btnChangeRegulations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChangeRegulations.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangeRegulations.Name = "btnChangeRegulations";
             this.btnChangeRegulations.Size = new System.Drawing.Size(267, 53);
             this.btnChangeRegulations.TabIndex = 39;
             this.btnChangeRegulations.Text = "Change regulations";
             this.btnChangeRegulations.Click += new System.EventHandler(this.btnChangeRegulations_Click);
-            // 
-            // numericMinAge
-            // 
-            this.numericMinAge.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericMinAge.BackColor = System.Drawing.Color.Transparent;
-            this.numericMinAge.BorderColor = System.Drawing.Color.DimGray;
-            this.numericMinAge.BorderRadius = 10;
-            this.numericMinAge.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.numericMinAge.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.numericMinAge.Location = new System.Drawing.Point(758, 18);
-            this.numericMinAge.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.numericMinAge.Name = "numericMinAge";
-            this.numericMinAge.Size = new System.Drawing.Size(180, 45);
-            this.numericMinAge.TabIndex = 6;
-            this.numericMinAge.UpDownButtonFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.numericMinAge.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // UCChangeRegulations
             // 
@@ -278,6 +271,7 @@
             this.Size = new System.Drawing.Size(1124, 800);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericMinAge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.guna2CustomGradientPanel2.ResumeLayout(false);
             this.guna2CustomGradientPanel2.PerformLayout();
@@ -287,7 +281,6 @@
             this.guna2CustomGradientPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericMinAge)).EndInit();
             this.ResumeLayout(false);
 
         }

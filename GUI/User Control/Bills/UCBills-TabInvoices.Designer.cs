@@ -260,7 +260,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(699, 44);
+            this.label3.Location = new System.Drawing.Point(764, 47);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 21);
@@ -269,7 +269,7 @@
             // 
             // cbStatus
             // 
-            this.cbStatus.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbStatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbStatus.BackColor = System.Drawing.Color.Transparent;
             this.cbStatus.BorderColor = System.Drawing.Color.Black;
             this.cbStatus.BorderRadius = 10;
@@ -281,17 +281,17 @@
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.cbStatus.ForeColor = System.Drawing.Color.White;
             this.cbStatus.ItemHeight = 30;
-            this.cbStatus.Location = new System.Drawing.Point(774, 39);
+            this.cbStatus.Location = new System.Drawing.Point(846, 39);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(147, 36);
+            this.cbStatus.Size = new System.Drawing.Size(208, 36);
             this.cbStatus.TabIndex = 58;
             // 
             // panel2
             // 
             this.panel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.panel2.Location = new System.Drawing.Point(694, 39);
+            this.panel2.Location = new System.Drawing.Point(756, 46);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(4, 29);
