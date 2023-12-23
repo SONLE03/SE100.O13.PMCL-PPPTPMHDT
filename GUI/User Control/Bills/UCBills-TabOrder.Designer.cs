@@ -230,6 +230,7 @@
             this.btnAddtocart.Size = new System.Drawing.Size(166, 36);
             this.btnAddtocart.TabIndex = 48;
             this.btnAddtocart.Text = "Add to cart";
+            this.btnAddtocart.Click += new System.EventHandler(this.btnAddtocart_Click);
             // 
             // guna2Panel5
             // 

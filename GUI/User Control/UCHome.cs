@@ -30,8 +30,8 @@ namespace GUI
 
         private void UCHome_Load(object sender, EventArgs e)
         {
-            lbStartDate.Text = dtpStartDate.Text;
-            lbEndDate.Text = dtpEndDate.Text;
+            //lbStartDate.Text = dtpStartDate.Text;
+            //lbEndDate.Text = dtpEndDate.Text;
         }
 
         private void loadTopSelling()
@@ -46,31 +46,31 @@ namespace GUI
         private void LoadData()
         {
 
-            var Refresh = model.LoadData(dtpStartDate.Value, dtpEndDate.Value);
-            if (Refresh == true)
-            {
-                // 3 first panel
-                lbDailyOrder.Text = model.NumOrder.ToString();
-                lbTotalRevenue.Text = "$" + model.TotalRevenue.ToString();
-                lbTotalUsers.Text = model.NumCustomer.ToString();
-                // 3 label at Overview
-                lbTotalEmployees.Text = model.NumEmployee.ToString();
-                lbTotalSuppliers.Text = model.NumSupplier.ToString();
-                lbTotalProducts.Text = model.NumProduct.ToString();
-                //Area chart of Revenue
-                chartTotalRevenue.DataSource = model.TotalRevenues;
-                chartTotalRevenue.Series[1].XValueMember = "Date";
-                chartTotalRevenue.Series[1].YValueMembers = "TotalAmount";
-                chartTotalRevenue.DataBind();
-                //Dounut chart of Top 5 best selling
-                //chartTop5.DataSource = model.TopProduct;
-                //chartTop5.Series[0].XValueMember = "Key";
-                //chartTop5.Series[1].YValueMembers = "Value";
-                //chartTop5.DataBind();
+            //var Refresh = model.LoadData(dtpStartDate.Value, dtpEndDate.Value);
+            //if (Refresh == true)
+            //{
+            //    // 3 first panel
+            //    lbDailyOrder.Text = model.NumOrder.ToString();
+            //    lbTotalRevenue.Text = "$" + model.TotalRevenue.ToString();
+            //    lbTotalUsers.Text = model.NumCustomer.ToString();
+            //    // 3 label at Overview
+            //    //lbTotalEmployees.Text = model.NumEmployee.ToString();
+            //    //lbTotalSuppliers.Text = model.NumSupplier.ToString();
+            //    lbTotalProducts.Text = model.NumProduct.ToString();
+            //    //Area chart of Revenue
+            //    chartTotalRevenue.DataSource = model.TotalRevenues;
+            //    chartTotalRevenue.Series[1].XValueMember = "Date";
+            //    chartTotalRevenue.Series[1].YValueMembers = "TotalAmount";
+            //    chartTotalRevenue.DataBind();
+            //    //Dounut chart of Top 5 best selling
+            //    //chartTop5.DataSource = model.TopProduct;
+            //    //chartTop5.Series[0].XValueMember = "Key";
+            //    //chartTop5.Series[1].YValueMembers = "Value";
+            //    //chartTop5.DataBind();
 
-                Console.WriteLine("Loaded!!!");
-            }
-            else Console.WriteLine("Fail to load!!!");
+            //    Console.WriteLine("Loaded!!!");
+            //}
+            //else Console.WriteLine("Fail to load!!!");
         }
         //Dùng để ẩn các datetimepicker và button OK khi nút Tùy chỉnh ngày (custom) chưa được bấm
         //private void DisableCustomDatesAndBtUI(object button)

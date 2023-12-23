@@ -19,6 +19,7 @@ namespace GUI
         public UCBill(C_USER user)
         {
             InitializeComponent();
+            this.user = user;
             CheckedBtnState(btnOrder);
         }
         private void CheckedBtnState(object button)

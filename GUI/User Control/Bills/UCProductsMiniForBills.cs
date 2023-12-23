@@ -54,7 +54,7 @@ namespace GUI
             if (ucBill != null)
             {
                 var drink = BUS.BUSDrink.Instance.GetDrinkById(int.Parse(labelID.Text.ToString()));
-                UCMiniProductChoosen ucMiniProductChoosen = new UCMiniProductChoosen(ucBill, drink.Image, lbName.Text, lbPrice.Text);
+                UCMiniProductChoosen ucMiniProductChoosen = new UCMiniProductChoosen(ucBill, drink.Image, lbName.Text, lbPrice.Text, int.Parse(labelID.Text));
                 ucBill.addMiniItemProduct(ucMiniProductChoosen);
                 ucBill.Show();
             }

@@ -14,8 +14,9 @@ namespace GUI
     {
         private UCBills_TabOrder ucBill;
         private int quantity;
+        private double salePrice = 0;
 
-        public UCMiniProductChoosen(UCBills_TabOrder ucBill, string image, string productName, string price)
+        public UCMiniProductChoosen(UCBills_TabOrder ucBill, string image, string productName, string price, int idDrink)
         {
             InitializeComponent();
             guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(image);
@@ -23,10 +24,28 @@ namespace GUI
             lbPrice.Text = price;
             this.ucBill = ucBill;
             quantity = 1;
-            
+            foreach (var p in BUS.BUSEvent.Instance.GetAllEvent())
+            {
+                if (p.StartDate <= DateTime.Now && DateTime.Now <= p.DueDate)
+                {
+                    foreach (var d in p.DRINKS)
+                    {
+                        if (d.id == idDrink)
+                        {
+                            if (salePrice < p.Discount)
+                            {
+                                salePrice = (double)p.Discount;
+                            }    
+                        }    
+                    }    
+                }    
+            }
+            lbBasePrice.Text = salePrice.ToString();
+
+
         }
 
-       
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -36,7 +55,7 @@ namespace GUI
 
         public double getPrice()
         {
-            return double.Parse(lbPrice.Text.Replace("VND", "")) * ((int)guna2NumericUpDown1.Value);
+            return double.Parse(lbPrice.Text.Replace("VND", "")) * ((int)guna2NumericUpDown1.Value) - salePrice * ((int)guna2NumericUpDown1.Value);
         }
 
         public int getQuantity()
@@ -53,11 +72,11 @@ namespace GUI
         {
             if (quantity > ((int)guna2NumericUpDown1.Value))
             {
-                ucBill.deleteQuantity(double.Parse(lbPrice.Text.Replace("VND", "")));
+                ucBill.deleteQuantity(double.Parse(lbPrice.Text.Replace("VND", "")), salePrice);
             }    
             else
             {
-                ucBill.addQuantity(double.Parse(lbPrice.Text.Replace("VND", "")));
+                ucBill.addQuantity(double.Parse(lbPrice.Text.Replace("VND", "")), salePrice);
             }
             quantity = ((int)guna2NumericUpDown1.Value);
         }

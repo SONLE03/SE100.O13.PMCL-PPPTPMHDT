@@ -54,9 +54,9 @@
             this.guna2Panel1.Controls.Add(this.guna2Panel2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.Controls.Add(this.lbPrice);
-            this.guna2Panel1.Controls.Add(this.btnAddToCart);
             this.guna2Panel1.Controls.Add(this.lbName);
             this.guna2Panel1.Controls.Add(this.drinkPicture);
+            this.guna2Panel1.Controls.Add(this.btnAddToCart);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(10, 6);
             this.guna2Panel1.Name = "guna2Panel1";
@@ -89,7 +89,7 @@
             this.guna2Panel2.Controls.Add(this.flowLayoutSize);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(98, 130);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(92, 30);
             this.guna2Panel2.TabIndex = 11;
@@ -134,9 +134,9 @@
             this.btnAddToCart.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddToCart.Image = global::GUI.Properties.Resources.info;
+            this.btnAddToCart.Image = global::GUI.Properties.Resources.icons8_add_shopping_cart_100px;
             this.btnAddToCart.Location = new System.Drawing.Point(169, 8);
-            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddToCart.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(27, 28);
             this.btnAddToCart.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -164,7 +164,7 @@
             this.drinkPicture.Image = global::GUI.Properties.Resources.milkco1;
             this.drinkPicture.ImageRotate = 0F;
             this.drinkPicture.Location = new System.Drawing.Point(11, 36);
-            this.drinkPicture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.drinkPicture.Margin = new System.Windows.Forms.Padding(2);
             this.drinkPicture.Name = "drinkPicture";
             this.drinkPicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.drinkPicture.Size = new System.Drawing.Size(67, 67);

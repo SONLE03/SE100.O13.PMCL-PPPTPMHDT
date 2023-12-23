@@ -18,9 +18,13 @@ namespace GUI
         private C_USER user;
         private List<UCProductsMiniForBills> listMiniItem;
         private List<BillDetail> nameProductInBill = new List<BillDetail>();
+        private double tax;
         public UCBills_TabOrder(C_USER user)
         {
             InitializeComponent();
+            tax = (double) BUS.BUSRule.Instance.GetAllRule().Tax / 100;
+            sum = 0;
+            lbSurcharge.Text = "0 VND".ToString();
             listMiniItem = new List<UCProductsMiniForBills> ();
             this.user = user;
             LoadProduct();
@@ -38,10 +42,16 @@ namespace GUI
         {
             if (cbArea.SelectedValue != null && cbArea.SelectedValue is int areaId)
             {
-                cbTable.DataSource = null;
-                cbTable.DataSource = BUSTable.Instance.GetAllTableByAreaID(areaId);
-                cbTable.ValueMember = "id";
-                cbTable.DisplayMember = "TableNameAndStatus";
+                //cbTable.DataSource = null;
+                //cbTable.DataSource = BUSTable.Instance.GetAllTableByAreaID(areaId);
+                //cbTable.ValueMember = "id";
+                //cbTable.DisplayMember = "TableNameAndStatus";
+
+                cbTable.Items.Clear();
+                BUSTable.Instance.GetAllTableByAreaID(areaId).ToList().ForEach(p =>
+                {
+                    cbTable.Items.Add(p.TableName + " | " + p.Status);
+                });
             }
         }
 
@@ -84,22 +94,28 @@ namespace GUI
             flowLayoutPanel.Controls.Add(product);
             nameProductInBill.Add(new BillDetail(product.getProductName(), product.getQuantity()));
             sum += product.getPrice();
+            double taxFee = sum * tax;
+            lbSurcharge.Text = taxFee.ToString() + " VND";
             lbSubTotal.Text = sum.ToString() + " VND";
-            LbTotal.Text = sum.ToString() + " VND";
+            LbTotal.Text = (sum + taxFee).ToString() + " VND";
 
         }
-        public void addQuantity(double price)
+        public void addQuantity(double price, double salePrice)
         {
-            sum += price;
+            sum += (price - salePrice);
+            double taxFee = sum * tax;
+            lbSurcharge.Text = taxFee.ToString() + " VND";
             lbSubTotal.Text = sum.ToString() + " VND";
-            LbTotal.Text = sum.ToString() + " VND";
+            LbTotal.Text = (sum + taxFee).ToString() + " VND";
         }
 
-        public void deleteQuantity(double price)
+        public void deleteQuantity(double price, double salePrice)
         {
-            sum -= price;
+            sum -= (price - salePrice);
+            double taxFee = sum * tax;
+            lbSurcharge.Text = taxFee.ToString() + " VND";
             lbSubTotal.Text = sum.ToString() + " VND";
-            LbTotal.Text = sum.ToString() + " VND";
+            LbTotal.Text = (sum + taxFee).ToString() + " VND";
         }
 
         public void deleteMiniItemProduct(UCMiniProductChoosen product)
@@ -116,9 +132,86 @@ namespace GUI
             }
             nameProductInBill.Remove(billDetail);
             sum -= product.getPrice();
-            lbSubTotal.Text = sum.ToString() + " VND";
-            LbTotal.Text = sum.ToString() + " VND";
+            if (int.Parse(LbTotal.Text.Replace(" VND", "")) <= 0)
+            {
+                lbSubTotal.Text = "0 VND";
+                lbSurcharge.Text = "0 VND";
+                LbTotal.Text = "0 VND";
+            }    
+            else
+            {
+                lbSubTotal.Text = sum.ToString() + " VND";
+                lbSurcharge.Text = (sum * tax).ToString() + " VND";
+                LbTotal.Text = (sum + (sum * tax)).ToString() + " VND";
+            }    
+        }
 
+        private void btnAddtocart_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Are you sure ?", "Create bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (dialog == DialogResult.Yes)
+            {
+                try
+                {
+                    string total = LbTotal.Text.Replace(" VND", "");
+
+                    if (true)
+                    {
+                        var tax = BUS.BUSRule.Instance.GetAllRule();
+                        int id = -1;
+                        if (radioTakeAway.Checked == true)
+                        {
+                            id = BUS.BUSOrder.Instance.AddBill(DateTime.Now, 0, user.id, null, "None", double.Parse(total), float.Parse(lbSurcharge.Text.Replace(" VND", "")));
+                        }
+                        else
+                        {
+                            var separatorIndex = cbTable.SelectedItem.ToString().IndexOf(" | ");
+                            string tableName = cbTable.SelectedItem.ToString().Substring(0, separatorIndex);
+
+                            var table = (from p in BUS.BUSTable.Instance.GetAllTable() where p.TableName.Equals(tableName) select p).FirstOrDefault();
+                            id = BUS.BUSOrder.Instance.AddBill(DateTime.Now, 0, user.id, table.id, "None", double.Parse(total), float.Parse(lbSurcharge.Text.Replace(" VND", ""))) ;
+                        }
+                        if (id > 0)
+                        {
+                            foreach (var p in nameProductInBill)
+                            {
+                                var product = (from s in BUS.BUSDrink.Instance.GetAllDrink() where s.DrinksName.Equals(p.productName) select s).FirstOrDefault();
+                                if (BUS.BUSOrderDetail.Instance.AddBillDetail(id, product.id, "none", p.quantity, 0))
+                                {
+                                    continue;
+                                }
+                                else
+                                {
+                                    MessageBox.Show("There are some errors when trying to create bill detail !", "Create bill detail", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    break;
+                                }
+                            }
+                            MessageBox.Show("Created bill successfully", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            flowLayoutPanel.Controls.Clear();
+                            flowLayoutPanel.Refresh();
+                            cbArea.SelectedItem = "All";
+                            cbTable.SelectedItem = "All";
+                            combobox_category.SelectedItem = "All";
+                            lbSubTotal.Text = "0 VND";
+                            lbSurcharge.Text = "0 VND";
+                            LbTotal.Text = "0 VND";
+                            lbOrderID.Text = "#" + (BUS.BUSOrder.Instance.GetAllBill().Count + 1).ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("There are some errors when trying to create bill !", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please choose table !", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Please choose all information of bill like table, area , product !", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

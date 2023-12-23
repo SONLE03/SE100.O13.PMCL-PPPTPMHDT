@@ -44,7 +44,7 @@ namespace DAL
                     Amount = Quantity * Rate
                 };
                 CFEntities.Instance.BILL_DETAIL.Add(dt);
-                DALOrder.Instance.UpdBill(idBill, bill.Total + dt.Amount, null, null);
+                //DALOrder.Instance.UpdBill(idBill, bill.Total + dt.Amount, null, null);
                 CFEntities.Instance.SaveChanges();
                 return true;
             }
