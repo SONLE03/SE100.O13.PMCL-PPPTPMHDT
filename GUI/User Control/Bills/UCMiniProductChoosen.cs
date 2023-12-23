@@ -72,11 +72,11 @@ namespace GUI
         {
             if (quantity > ((int)guna2NumericUpDown1.Value))
             {
-                ucBill.deleteQuantity(double.Parse(lbPrice.Text.Replace("VND", "")), salePrice);
+                ucBill.deleteQuantity(double.Parse(lbPrice.Text.Replace("VND", "")), salePrice, getProductName());
             }    
             else
             {
-                ucBill.addQuantity(double.Parse(lbPrice.Text.Replace("VND", "")), salePrice);
+                ucBill.addQuantity(double.Parse(lbPrice.Text.Replace("VND", "")), salePrice, this);
             }
             quantity = ((int)guna2NumericUpDown1.Value);
         }

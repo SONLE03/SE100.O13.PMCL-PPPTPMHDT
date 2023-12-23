@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 
 namespace DAL
@@ -26,6 +27,24 @@ namespace DAL
         public BILL_DETAIL GetBillDetail(int idBill, int idDrink)
         {
             return CFEntities.Instance.BILL_DETAIL.Find(new object[] { idBill, idDrink });
+        }
+
+        public bool updateQuantity(int idBill, int idDrink)
+        {
+            try
+            {
+                var BillDetail = (from p in CFEntities.Instance.BILL_DETAIL.AsNoTracking().ToList() where p.BillID == idBill && p.DrinksID == idDrink select p).FirstOrDefault();
+                if (BillDetail == null) return false;
+                BillDetail.Quantity++;
+                CFEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+                Console.WriteLine(ex.InnerException.ToString());
+                return false;
+            }
         }
 
         public bool AddBillDetail(int idBill, int DrinksID, int Quantity, float Rate)

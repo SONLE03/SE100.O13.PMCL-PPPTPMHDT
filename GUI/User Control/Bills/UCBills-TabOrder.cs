@@ -29,6 +29,7 @@ namespace GUI
             this.user = user;
             LoadProduct();
             LoadArea();
+            lbOrderID.Text = "#" + (BUS.BUSOrder.Instance.GetAllBill().Count + 1).ToString();
         }
 
         private void LoadArea()
@@ -100,8 +101,9 @@ namespace GUI
             LbTotal.Text = (sum + taxFee).ToString() + " VND";
 
         }
-        public void addQuantity(double price, double salePrice)
+        public void addQuantity(double price, double salePrice, UCMiniProductChoosen product)
         {
+            nameProductInBill.Add(new BillDetail(product.getProductName(), product.getQuantity()));
             sum += (price - salePrice);
             double taxFee = sum * tax;
             lbSurcharge.Text = taxFee.ToString() + " VND";
@@ -109,8 +111,20 @@ namespace GUI
             LbTotal.Text = (sum + taxFee).ToString() + " VND";
         }
 
-        public void deleteQuantity(double price, double salePrice)
+        public void deleteQuantity(double price, double salePrice, string productName)
         {
+            BillDetail billDetail = new BillDetail();
+            foreach(var p in nameProductInBill)
+            {
+                if (p.productName.Equals(productName))
+                {
+                    billDetail = p;
+                }    
+            }    
+            if (billDetail.productName.Equals(productName))
+            {
+                nameProductInBill.Remove(billDetail);
+            }    
             sum -= (price - salePrice);
             double taxFee = sum * tax;
             lbSurcharge.Text = taxFee.ToString() + " VND";
@@ -173,20 +187,41 @@ namespace GUI
                         }
                         if (id > 0)
                         {
+                            var listProduct = new List<string>();
                             foreach (var p in nameProductInBill)
                             {
+                                bool check = false;
                                 var product = (from s in BUS.BUSDrink.Instance.GetAllDrink() where s.DrinksName.Equals(p.productName) select s).FirstOrDefault();
-                                if (BUS.BUSOrderDetail.Instance.AddBillDetail(id, product.id, "none", p.quantity, 0))
+                                foreach(var s in listProduct)
                                 {
-                                    continue;
+                                    if (s.Equals(p.productName))
+                                    {
+                                        check = true;
+                                        break;
+                                    }    
                                 }
-                                else
+                                if (check == false)
                                 {
-                                    MessageBox.Show("There are some errors when trying to create bill detail !", "Create bill detail", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    break;
+                                    int i = 0;
+                                    foreach (var pd in nameProductInBill)
+                                    {
+                                        if (pd.productName.Equals(p.productName))
+                                        {
+                                            i++;
+                                        }
+                                    }
+                                    if (BUS.BUSOrderDetail.Instance.AddBillDetail(id, product.id, "none", i, 0))
+                                    {
+                                        listProduct.Add(product.DrinksName);
+                                        continue;
+                                    }
+                                    else
+                                    {
+                                        MessageBox.Show("Please number of item must at least 1", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    }
                                 }
                             }
-                            MessageBox.Show("Created bill successfully", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            //MessageBox.Show("Created bill successfully", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             flowLayoutPanel.Controls.Clear();
                             flowLayoutPanel.Refresh();
                             cbArea.SelectedItem = "All";
@@ -195,6 +230,8 @@ namespace GUI
                             lbSubTotal.Text = "0 VND";
                             lbSurcharge.Text = "0 VND";
                             LbTotal.Text = "0 VND";
+                            sum = 0;
+                            nameProductInBill = new List<BillDetail>();
                             lbOrderID.Text = "#" + (BUS.BUSOrder.Instance.GetAllBill().Count + 1).ToString();
                         }
                         else
