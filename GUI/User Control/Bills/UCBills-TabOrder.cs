@@ -29,6 +29,12 @@ namespace GUI
             this.user = user;
             LoadProduct();
             LoadArea();
+            combobox_category.Items.Add("All");
+            combobox_category.Text = "All";
+            BUS.BUSCategory.Instance.GetAllCategory().ToList().ForEach(p =>
+            {
+                combobox_category.Items.Add(p.CategoryName);
+            });
             lbOrderID.Text = "#" + (BUS.BUSOrder.Instance.GetAllBill().Count + 1).ToString();
         }
 
@@ -162,6 +168,12 @@ namespace GUI
 
         private void btnAddtocart_Click(object sender, EventArgs e)
         {
+            string[] parts = cbTable.SelectedItem.ToString().Split(new[] { " | " }, StringSplitOptions.None);
+            if (parts[1].Contains("InActive"))
+            {
+                MessageBox.Show("This table is in used", "Create Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }    
             DialogResult dialog = MessageBox.Show("Are you sure ?", "Create bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
@@ -183,6 +195,7 @@ namespace GUI
                             string tableName = cbTable.SelectedItem.ToString().Substring(0, separatorIndex);
 
                             var table = (from p in BUS.BUSTable.Instance.GetAllTable() where p.TableName.Equals(tableName) select p).FirstOrDefault();
+                            BUS.BUSTable.Instance.UpdTable(table.id, tableName, table.AreaID, "InActive");
                             id = BUS.BUSOrder.Instance.AddBill(DateTime.Now, 0, user.id, table.id, "None", double.Parse(total), float.Parse(lbSurcharge.Text.Replace(" VND", ""))) ;
                         }
                         if (id > 0)
@@ -215,13 +228,10 @@ namespace GUI
                                         listProduct.Add(product.DrinksName);
                                         continue;
                                     }
-                                    else
-                                    {
-                                        MessageBox.Show("Please number of item must at least 1", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    }
                                 }
                             }
-                            //MessageBox.Show("Created bill successfully", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Created bill successfully", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadArea();
                             flowLayoutPanel.Controls.Clear();
                             flowLayoutPanel.Refresh();
                             cbArea.SelectedItem = "All";
@@ -249,6 +259,135 @@ namespace GUI
                     MessageBox.Show("Please choose all information of bill like table, area , product !", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            flowLayoutPanel.Controls.Clear();
+            sum = 0;
+            lbSubTotal.Text = "0 VND";
+            lbSurcharge.Text = "0 VND";
+            LbTotal.Text = "0 VND";
+        }
+
+
+        private void combobox_category_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (!combobox_category.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtEmailCode.Text.ToString()))
+            {
+                List<DRINK> listDrinkbyCategoryAndSearching = new List<DRINK>();
+                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
+                {
+                    if (p.DrinksName.ToLower().Contains(txtEmailCode.Text.ToString().ToLower()) && p.CATEGORY.CategoryName.Equals(combobox_category.SelectedItem.ToString()))
+                    {
+                        listDrinkbyCategoryAndSearching.Add(p);
+                    }
+                }
+                LoadProductInFlowLayoutPanel(listDrinkbyCategoryAndSearching, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
+            }
+            else if (!combobox_category.SelectedItem.ToString().Equals("All") && String.IsNullOrEmpty(txtEmailCode.Text.ToString()))
+            {
+                List<DRINK> listDrinkbyCategory = new List<DRINK>();
+                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
+                {
+                    if (p.CATEGORY.CategoryName.Equals(combobox_category.SelectedItem.ToString()))
+                    {
+                        listDrinkbyCategory.Add(p);
+                    }
+                }
+                LoadProductInFlowLayoutPanel(listDrinkbyCategory, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
+            }
+            else if (combobox_category.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtEmailCode.Text.ToString()))
+            {
+                List<DRINK> listDrinkbySearching = new List<DRINK>();
+                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
+                {
+                    if (p.DrinksName.ToLower().Contains(txtEmailCode.Text.ToString().ToLower()))
+                    {
+                        listDrinkbySearching.Add(p);
+                    }
+                }
+                LoadProductInFlowLayoutPanel(listDrinkbySearching, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
+            }
+            else
+            {
+                LoadProductInFlowLayoutPanel(BUS.BUSDrink.Instance.GetAllDrink(),
+                                                  BUS.BUSDrink_Size.Instance.GetAllDrinkSize(),
+                                                  BUS.BUSSize.Instance.GetAllSize());
+            }
+        }
+
+        private void txtEmailCode_TextChanged_1(object sender, EventArgs e)
+        {
+            if (!combobox_category.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtEmailCode.Text.ToString()))
+            {
+                List<DRINK> listDrinkbyCategoryAndSearching = new List<DRINK>();
+                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
+                {
+                    if (p.DrinksName.ToLower().Contains(txtEmailCode.Text.ToString().ToLower()) && p.CATEGORY.CategoryName.Equals(combobox_category.SelectedItem.ToString()))
+                    {
+                        listDrinkbyCategoryAndSearching.Add(p);
+                    }
+                }
+                LoadProductInFlowLayoutPanel(listDrinkbyCategoryAndSearching, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
+            }
+            else if (!combobox_category.SelectedItem.ToString().Equals("All") && String.IsNullOrEmpty(txtEmailCode.Text.ToString()))
+            {
+                List<DRINK> listDrinkbyCategory = new List<DRINK>();
+                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
+                {
+                    if (p.CATEGORY.CategoryName.Equals(combobox_category.SelectedItem.ToString()))
+                    {
+                        listDrinkbyCategory.Add(p);
+                    }
+                }
+                LoadProductInFlowLayoutPanel(listDrinkbyCategory, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
+            }
+            else if (combobox_category.SelectedItem.ToString().Equals("All") && !String.IsNullOrEmpty(txtEmailCode.Text.ToString()))
+            {
+                List<DRINK> listDrinkbySearching = new List<DRINK>();
+                foreach (var p in BUS.BUSDrink.Instance.GetAllDrink())
+                {
+                    if (p.DrinksName.ToLower().Contains(txtEmailCode.Text.ToString().ToLower()))
+                    {
+                        listDrinkbySearching.Add(p);
+                    }
+                }
+                LoadProductInFlowLayoutPanel(listDrinkbySearching, BUS.BUSDrink_Size.Instance.GetAllDrinkSize(), BUS.BUSSize.Instance.GetAllSize());
+            }
+            else
+            {
+                LoadProductInFlowLayoutPanel(BUS.BUSDrink.Instance.GetAllDrink(),
+                                                  BUS.BUSDrink_Size.Instance.GetAllDrinkSize(),
+                                                  BUS.BUSSize.Instance.GetAllSize());
+            }
+        }
+
+        private void btnClearTable_Click(object sender, EventArgs e)
+        {
+            string[] parts = cbTable.SelectedItem.ToString().Split(new[] { " | " }, StringSplitOptions.None);
+            if (parts[1].Contains("InActive"))
+            {
+                var tableName = parts[0];
+                var tb = (from p in BUS.BUSTable.Instance.GetAllTable() where p.TableName.Equals(tableName) select p).FirstOrDefault();
+                if (BUS.BUSTable.Instance.UpdTable(tb.id, tb.TableName, tb.AreaID, "Active"))
+                {
+                    LoadArea();
+                    MessageBox.Show("This table is clear", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("There are some error orcurred while trying to clear table", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }   
+            else if (parts[1].Contains("Active"))
+            {
+                MessageBox.Show("This table was cleared", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }   
+            else
+            {
+
+            }    
         }
     }
 }

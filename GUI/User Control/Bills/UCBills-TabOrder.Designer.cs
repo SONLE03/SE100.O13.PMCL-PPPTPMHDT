@@ -45,7 +45,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.flowLayoutPanelProducts = new System.Windows.Forms.FlowLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
-            this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.txtEmailCode = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -60,6 +59,7 @@
             this.radioTakeAway = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.radioOntheSpot = new Guna.UI2.WinForms.Guna2CustomRadioButton();
             this.btnClearTable = new Guna.UI2.WinForms.Guna2Button();
+            this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2Panel4.SuspendLayout();
             this.guna2Panel5.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -97,6 +97,7 @@
             this.guna2Button4.Size = new System.Drawing.Size(111, 36);
             this.guna2Button4.TabIndex = 44;
             this.guna2Button4.Text = "Clear all";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // lbOrderID
             // 
@@ -305,26 +306,6 @@
             this.label5.TabIndex = 54;
             this.label5.Text = "Products";
             // 
-            // combobox_category
-            // 
-            this.combobox_category.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.combobox_category.BackColor = System.Drawing.Color.Transparent;
-            this.combobox_category.BorderColor = System.Drawing.Color.Black;
-            this.combobox_category.BorderRadius = 10;
-            this.combobox_category.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.combobox_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.combobox_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.combobox_category.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_category.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_category.Font = new System.Drawing.Font("Segoe UI", 14F);
-            this.combobox_category.ForeColor = System.Drawing.Color.White;
-            this.combobox_category.ItemHeight = 30;
-            this.combobox_category.Location = new System.Drawing.Point(65, 45);
-            this.combobox_category.Margin = new System.Windows.Forms.Padding(2);
-            this.combobox_category.Name = "combobox_category";
-            this.combobox_category.Size = new System.Drawing.Size(139, 36);
-            this.combobox_category.TabIndex = 53;
-            // 
             // txtEmailCode
             // 
             this.txtEmailCode.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -349,6 +330,7 @@
             this.txtEmailCode.SelectedText = "";
             this.txtEmailCode.Size = new System.Drawing.Size(264, 36);
             this.txtEmailCode.TabIndex = 50;
+            this.txtEmailCode.TextChanged += new System.EventHandler(this.txtEmailCode_TextChanged_1);
             // 
             // guna2Panel2
             // 
@@ -580,6 +562,28 @@
             this.btnClearTable.Size = new System.Drawing.Size(127, 36);
             this.btnClearTable.TabIndex = 51;
             this.btnClearTable.Text = "Clear table";
+            this.btnClearTable.Click += new System.EventHandler(this.btnClearTable_Click);
+            // 
+            // combobox_category
+            // 
+            this.combobox_category.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.combobox_category.BackColor = System.Drawing.Color.Transparent;
+            this.combobox_category.BorderColor = System.Drawing.Color.Black;
+            this.combobox_category.BorderRadius = 10;
+            this.combobox_category.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.combobox_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combobox_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.combobox_category.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_category.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.combobox_category.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.combobox_category.ForeColor = System.Drawing.Color.White;
+            this.combobox_category.ItemHeight = 30;
+            this.combobox_category.Location = new System.Drawing.Point(65, 45);
+            this.combobox_category.Margin = new System.Windows.Forms.Padding(2);
+            this.combobox_category.Name = "combobox_category";
+            this.combobox_category.Size = new System.Drawing.Size(139, 36);
+            this.combobox_category.TabIndex = 53;
+            this.combobox_category.SelectedValueChanged += new System.EventHandler(this.combobox_category_SelectedValueChanged);
             // 
             // UCBills_TabOrder
             // 
@@ -625,7 +629,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelProducts;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2ComboBox combobox_category;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtEmailCode;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
@@ -640,5 +643,6 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CustomRadioButton radioTakeAway;
         private Guna.UI2.WinForms.Guna2CustomRadioButton radioOntheSpot;
+        private Guna.UI2.WinForms.Guna2ComboBox combobox_category;
     }
 }
