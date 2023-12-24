@@ -61,16 +61,16 @@ namespace DAL
                 obj.EventType = EventType;
                 obj.Unit = Unit;
                 obj.Status = "Active";
-
-                foreach(var p in drinks)
-                {
-                    DRINK drink = DALDrink.Instance.GetDrinkById(p.id);
-                    if (!drink.EVENTs.Any(c => c.EventName.Equals(EventName)))
-                    {
-                        drink.EVENTs.Add(obj);
-                        obj.DRINKS.Add(drink);
-                    }
-                }    
+                obj.DRINKS = drinks;
+                //foreach(var p in drinks)
+                //{
+                //    DRINK drink = DALDrink.Instance.GetDrinkById(p.id);
+                //    if (!drink.EVENTs.Any(c => c.EventName.Equals(EventName)))
+                //    {
+                //        drink.EVENTs.Add(obj);
+                //        obj.DRINKS.Add(drink);
+                //    }
+                //}    
 
                 CFEntities.Instance.EVENTs.Add(obj);
                 CFEntities.Instance.SaveChanges();

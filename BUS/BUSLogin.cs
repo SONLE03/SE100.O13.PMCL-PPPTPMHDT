@@ -26,11 +26,11 @@ namespace BUS
         {
             foreach (var user in DALUser.Instance.GetAllUser())
             {
-                if (user.UserName.Equals(usrname) && user.Password.Equals(usrpwd))
-                {
-                    c_user = user;
-                    return c_user;
+                if (user.UserName.Equals(usrname) && BCrypt.Net.BCrypt.EnhancedVerify(usrpwd, user.Password)){ 
+                        c_user = user;
+                        return c_user;
                 }
+                
             }
             return null;
         }

@@ -42,7 +42,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2CustomGradientPanel2 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.lbTotalRevenue = new System.Windows.Forms.Label();
+            this.lbTotalSupplier = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel3 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -85,11 +85,11 @@
             this.guna2CustomGradientPanel1.Controls.Add(this.lbDailyOrder);
             this.guna2CustomGradientPanel1.Controls.Add(this.label1);
             this.guna2CustomGradientPanel1.Controls.Add(this.pictureBox1);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(604, 38);
-            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(805, 47);
+            this.guna2CustomGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(234, 77);
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(312, 95);
             this.guna2CustomGradientPanel1.TabIndex = 9;
             // 
             // lbDailyOrder
@@ -97,10 +97,9 @@
             this.lbDailyOrder.AutoSize = true;
             this.lbDailyOrder.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.lbDailyOrder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.lbDailyOrder.Location = new System.Drawing.Point(82, 43);
-            this.lbDailyOrder.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbDailyOrder.Location = new System.Drawing.Point(109, 53);
             this.lbDailyOrder.Name = "lbDailyOrder";
-            this.lbDailyOrder.Size = new System.Drawing.Size(52, 25);
+            this.lbDailyOrder.Size = new System.Drawing.Size(65, 30);
             this.lbDailyOrder.TabIndex = 2;
             this.lbDailyOrder.Text = "0000";
             // 
@@ -109,20 +108,19 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.label1.Location = new System.Drawing.Point(82, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(109, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 25);
+            this.label1.Size = new System.Drawing.Size(137, 30);
             this.label1.TabIndex = 1;
             this.label1.Text = "Total orders";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::GUI.Properties.Resources.food_delivery;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 10);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 74);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -135,49 +133,47 @@
             this.guna2CustomGradientPanel2.BorderRadius = 20;
             this.guna2CustomGradientPanel2.BorderThickness = 2;
             this.guna2CustomGradientPanel2.Controls.Add(this.pictureBox3);
-            this.guna2CustomGradientPanel2.Controls.Add(this.lbTotalRevenue);
+            this.guna2CustomGradientPanel2.Controls.Add(this.lbTotalSupplier);
             this.guna2CustomGradientPanel2.Controls.Add(this.label3);
-            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(848, 125);
-            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel2.Location = new System.Drawing.Point(1131, 154);
+            this.guna2CustomGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel2.Name = "guna2CustomGradientPanel2";
             this.guna2CustomGradientPanel2.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(234, 77);
+            this.guna2CustomGradientPanel2.Size = new System.Drawing.Size(312, 95);
             this.guna2CustomGradientPanel2.TabIndex = 10;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Image = global::GUI.Properties.Resources.profit;
-            this.pictureBox3.Location = new System.Drawing.Point(11, 9);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox3.Location = new System.Drawing.Point(15, 11);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox3.Size = new System.Drawing.Size(80, 74);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
-            // lbTotalRevenue
+            // lbTotalSupplier
             // 
-            this.lbTotalRevenue.AutoSize = true;
-            this.lbTotalRevenue.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
-            this.lbTotalRevenue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.lbTotalRevenue.Location = new System.Drawing.Point(81, 43);
-            this.lbTotalRevenue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTotalRevenue.Name = "lbTotalRevenue";
-            this.lbTotalRevenue.Size = new System.Drawing.Size(52, 25);
-            this.lbTotalRevenue.TabIndex = 4;
-            this.lbTotalRevenue.Text = "0000";
+            this.lbTotalSupplier.AutoSize = true;
+            this.lbTotalSupplier.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.lbTotalSupplier.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
+            this.lbTotalSupplier.Location = new System.Drawing.Point(108, 53);
+            this.lbTotalSupplier.Name = "lbTotalSupplier";
+            this.lbTotalSupplier.Size = new System.Drawing.Size(65, 30);
+            this.lbTotalSupplier.TabIndex = 4;
+            this.lbTotalSupplier.Text = "0000";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.label3.Location = new System.Drawing.Point(81, 8);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(108, 10);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(128, 25);
+            this.label3.Size = new System.Drawing.Size(164, 30);
             this.label3.TabIndex = 3;
-            this.label3.Text = "Total revenue";
+            this.label3.Text = "Total suppliers";
             // 
             // guna2CustomGradientPanel3
             // 
@@ -189,20 +185,20 @@
             this.guna2CustomGradientPanel3.Controls.Add(this.pictureBox2);
             this.guna2CustomGradientPanel3.Controls.Add(this.lbTotalUsers);
             this.guna2CustomGradientPanel3.Controls.Add(this.label2);
-            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(848, 38);
-            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel3.Location = new System.Drawing.Point(1131, 47);
+            this.guna2CustomGradientPanel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel3.Name = "guna2CustomGradientPanel3";
             this.guna2CustomGradientPanel3.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(234, 77);
+            this.guna2CustomGradientPanel3.Size = new System.Drawing.Size(312, 95);
             this.guna2CustomGradientPanel3.TabIndex = 11;
             // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::GUI.Properties.Resources.division1;
-            this.pictureBox2.Location = new System.Drawing.Point(11, 8);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox2.Location = new System.Drawing.Point(15, 10);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox2.Size = new System.Drawing.Size(80, 74);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
@@ -212,10 +208,9 @@
             this.lbTotalUsers.AutoSize = true;
             this.lbTotalUsers.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.lbTotalUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.lbTotalUsers.Location = new System.Drawing.Point(81, 43);
-            this.lbTotalUsers.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTotalUsers.Location = new System.Drawing.Point(108, 53);
             this.lbTotalUsers.Name = "lbTotalUsers";
-            this.lbTotalUsers.Size = new System.Drawing.Size(52, 25);
+            this.lbTotalUsers.Size = new System.Drawing.Size(65, 30);
             this.lbTotalUsers.TabIndex = 3;
             this.lbTotalUsers.Text = "0000";
             // 
@@ -224,10 +219,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.label2.Location = new System.Drawing.Point(77, 9);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(103, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 25);
+            this.label2.Size = new System.Drawing.Size(124, 30);
             this.label2.TabIndex = 2;
             this.label2.Text = "Total users";
             // 
@@ -241,10 +235,10 @@
             this.guna2CustomGradientPanel4.BorderRadius = 30;
             this.guna2CustomGradientPanel4.BorderThickness = 2;
             this.guna2CustomGradientPanel4.Controls.Add(this.chartTotalRevenue);
-            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(40, 237);
-            this.guna2CustomGradientPanel4.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel4.Location = new System.Drawing.Point(53, 292);
+            this.guna2CustomGradientPanel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel4.Name = "guna2CustomGradientPanel4";
-            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(565, 532);
+            this.guna2CustomGradientPanel4.Size = new System.Drawing.Size(753, 655);
             this.guna2CustomGradientPanel4.TabIndex = 13;
             // 
             // chartTotalRevenue
@@ -285,8 +279,8 @@
             legend1.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             legend1.TitleSeparatorColor = System.Drawing.Color.Bisque;
             this.chartTotalRevenue.Legends.Add(legend1);
-            this.chartTotalRevenue.Location = new System.Drawing.Point(12, 13);
-            this.chartTotalRevenue.Margin = new System.Windows.Forms.Padding(2);
+            this.chartTotalRevenue.Location = new System.Drawing.Point(16, 16);
+            this.chartTotalRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartTotalRevenue.Name = "chartTotalRevenue";
             series1.BackSecondaryColor = System.Drawing.Color.MediumTurquoise;
             series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(91)))), ((int)(((byte)(170)))));
@@ -302,7 +296,7 @@
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series1.Name = "Series1";
             this.chartTotalRevenue.Series.Add(series1);
-            this.chartTotalRevenue.Size = new System.Drawing.Size(539, 498);
+            this.chartTotalRevenue.Size = new System.Drawing.Size(719, 613);
             this.chartTotalRevenue.TabIndex = 27;
             this.chartTotalRevenue.Text = "chart2";
             title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -321,11 +315,11 @@
             this.guna2CustomGradientPanel5.BorderRadius = 30;
             this.guna2CustomGradientPanel5.BorderThickness = 2;
             this.guna2CustomGradientPanel5.Controls.Add(this.chartTopSell);
-            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(646, 237);
-            this.guna2CustomGradientPanel5.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel5.Location = new System.Drawing.Point(861, 292);
+            this.guna2CustomGradientPanel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel5.Name = "guna2CustomGradientPanel5";
             this.guna2CustomGradientPanel5.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 5, 10, 10);
-            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(436, 532);
+            this.guna2CustomGradientPanel5.Size = new System.Drawing.Size(581, 655);
             this.guna2CustomGradientPanel5.TabIndex = 14;
             // 
             // chartTopSell
@@ -346,8 +340,8 @@
             legend2.Name = "Legend1";
             legend2.TableStyle = System.Windows.Forms.DataVisualization.Charting.LegendTableStyle.Tall;
             this.chartTopSell.Legends.Add(legend2);
-            this.chartTopSell.Location = new System.Drawing.Point(10, 14);
-            this.chartTopSell.Margin = new System.Windows.Forms.Padding(2);
+            this.chartTopSell.Location = new System.Drawing.Point(13, 17);
+            this.chartTopSell.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chartTopSell.Name = "chartTopSell";
             this.chartTopSell.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
             this.chartTopSell.PaletteCustomColors = new System.Drawing.Color[] {
@@ -368,7 +362,7 @@
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chartTopSell.Series.Add(series2);
-            this.chartTopSell.Size = new System.Drawing.Size(417, 500);
+            this.chartTopSell.Size = new System.Drawing.Size(556, 615);
             this.chartTopSell.TabIndex = 28;
             this.chartTopSell.Text = "Top 6 best selling products";
             title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -388,11 +382,11 @@
             this.guna2CustomGradientPanel7.Controls.Add(this.lbTotalProducts);
             this.guna2CustomGradientPanel7.Controls.Add(this.label9);
             this.guna2CustomGradientPanel7.Controls.Add(this.pictureBox4);
-            this.guna2CustomGradientPanel7.Location = new System.Drawing.Point(604, 125);
-            this.guna2CustomGradientPanel7.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel7.Location = new System.Drawing.Point(805, 154);
+            this.guna2CustomGradientPanel7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel7.Name = "guna2CustomGradientPanel7";
             this.guna2CustomGradientPanel7.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.guna2CustomGradientPanel7.Size = new System.Drawing.Size(234, 77);
+            this.guna2CustomGradientPanel7.Size = new System.Drawing.Size(312, 95);
             this.guna2CustomGradientPanel7.TabIndex = 20;
             // 
             // lbTotalProducts
@@ -400,10 +394,9 @@
             this.lbTotalProducts.AutoSize = true;
             this.lbTotalProducts.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.lbTotalProducts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.lbTotalProducts.Location = new System.Drawing.Point(82, 43);
-            this.lbTotalProducts.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTotalProducts.Location = new System.Drawing.Point(109, 53);
             this.lbTotalProducts.Name = "lbTotalProducts";
-            this.lbTotalProducts.Size = new System.Drawing.Size(52, 25);
+            this.lbTotalProducts.Size = new System.Drawing.Size(65, 30);
             this.lbTotalProducts.TabIndex = 2;
             this.lbTotalProducts.Text = "0000";
             // 
@@ -412,20 +405,19 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.label9.Location = new System.Drawing.Point(82, 9);
-            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Location = new System.Drawing.Point(109, 11);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 25);
+            this.label9.Size = new System.Drawing.Size(134, 30);
             this.label9.TabIndex = 1;
-            this.label9.Text = "Total products";
+            this.label9.Text = "Total drinks";
             // 
             // pictureBox4
             // 
             this.pictureBox4.Image = global::GUI.Properties.Resources.coffee_bean__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(12, 8);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox4.Location = new System.Drawing.Point(16, 10);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(60, 60);
+            this.pictureBox4.Size = new System.Drawing.Size(80, 74);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
@@ -447,10 +439,10 @@
             this.guna2CustomGradientPanel8.FillColor3 = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel8.FillColor4 = System.Drawing.Color.Transparent;
             this.guna2CustomGradientPanel8.Location = new System.Drawing.Point(0, 1);
-            this.guna2CustomGradientPanel8.Margin = new System.Windows.Forms.Padding(2);
+            this.guna2CustomGradientPanel8.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2CustomGradientPanel8.Name = "guna2CustomGradientPanel8";
             this.guna2CustomGradientPanel8.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 10, 10);
-            this.guna2CustomGradientPanel8.Size = new System.Drawing.Size(623, 254);
+            this.guna2CustomGradientPanel8.Size = new System.Drawing.Size(831, 313);
             this.guna2CustomGradientPanel8.TabIndex = 21;
             // 
             // lbUsername
@@ -459,10 +451,9 @@
             this.lbUsername.AutoSize = true;
             this.lbUsername.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.lbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.lbUsername.Location = new System.Drawing.Point(144, 56);
-            this.lbUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbUsername.Location = new System.Drawing.Point(192, 69);
             this.lbUsername.Name = "lbUsername";
-            this.lbUsername.Size = new System.Drawing.Size(144, 41);
+            this.lbUsername.Size = new System.Drawing.Size(177, 50);
             this.lbUsername.TabIndex = 3;
             this.lbUsername.Text = "Manager";
             // 
@@ -471,10 +462,9 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Gray;
-            this.label8.Location = new System.Drawing.Point(61, 112);
-            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Location = new System.Drawing.Point(81, 138);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(474, 70);
+            this.label8.Size = new System.Drawing.Size(632, 86);
             this.label8.TabIndex = 2;
             this.label8.Text = "Welcome to Coffee store management app";
             // 
@@ -484,17 +474,16 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Segoe UI", 22F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(60, 58);
-            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Location = new System.Drawing.Point(80, 71);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(93, 41);
+            this.label10.Size = new System.Drawing.Size(115, 50);
             this.label10.TabIndex = 1;
             this.label10.Text = "Hello";
             // 
             // UCHome
             // 
             this.AllowDrop = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -506,9 +495,9 @@
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.Controls.Add(this.guna2CustomGradientPanel8);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCHome";
-            this.Size = new System.Drawing.Size(1124, 800);
+            this.Size = new System.Drawing.Size(1499, 985);
             this.Load += new System.EventHandler(this.UCHome_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.guna2CustomGradientPanel1.PerformLayout();
@@ -541,7 +530,7 @@
         private System.Windows.Forms.Label lbTotalUsers;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label lbTotalRevenue;
+        private System.Windows.Forms.Label lbTotalSupplier;
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel4;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartTotalRevenue;

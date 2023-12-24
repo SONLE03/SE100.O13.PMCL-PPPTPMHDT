@@ -16,6 +16,7 @@ namespace GUI
         public Login()
         {
             InitializeComponent();
+            BUSInitProject.Instance.AddFirstUser();
         }
 
         private void resetTextboxs()

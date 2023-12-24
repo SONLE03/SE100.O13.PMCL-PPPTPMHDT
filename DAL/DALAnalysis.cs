@@ -39,5 +39,23 @@ namespace DAL
             return topSellingDrinks;
         }
 
+        public List<MonthlyRevenueDTO> MonthlyRevenues()
+        {
+            int currentYear = DateTime.Now.Year;
+
+            var monthlyRevenues = CFEntities.Instance.BILLs
+                .Where(bill => bill.BillDate.Year == currentYear)
+                .GroupBy(bill => new { Month = bill.BillDate.Month })
+                .Select(group => new MonthlyRevenueDTO
+                {
+                    Month = group.Key.Month,
+                    TotalRevenue = (double)group.Sum(bill => bill.Total)
+                })
+                .OrderBy(result => result.Month)
+                .ToList();
+
+            return monthlyRevenues;
+        }
+
     }
 }
