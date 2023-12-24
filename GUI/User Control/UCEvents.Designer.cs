@@ -189,6 +189,7 @@
             this.gridviewEvent.ThemeStyle.RowsStyle.Height = 22;
             this.gridviewEvent.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewEvent.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.gridviewEvent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewEvent_CellContentClick);
             // 
             // ID
             // 
@@ -273,7 +274,7 @@
             this.btnAddEvent.ForeColor = System.Drawing.Color.White;
             this.btnAddEvent.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnAddEvent.Location = new System.Drawing.Point(804, 46);
-            this.btnAddEvent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddEvent.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddEvent.Name = "btnAddEvent";
             this.btnAddEvent.Size = new System.Drawing.Size(148, 38);
             this.btnAddEvent.TabIndex = 47;

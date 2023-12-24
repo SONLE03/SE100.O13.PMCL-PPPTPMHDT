@@ -61,7 +61,17 @@ namespace DAL
                 obj.EventType = EventType;
                 obj.Unit = Unit;
                 obj.Status = "Active";
-                obj.DRINKS = drinks;
+
+                foreach(var p in drinks)
+                {
+                    DRINK drink = DALDrink.Instance.GetDrinkById(p.id);
+                    if (!drink.EVENTs.Any(c => c.EventName.Equals(EventName)))
+                    {
+                        drink.EVENTs.Add(obj);
+                        obj.DRINKS.Add(drink);
+                    }
+                }    
+
                 CFEntities.Instance.EVENTs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return obj.id;
@@ -81,11 +91,24 @@ namespace DAL
                 if (DueDate != null) ev.DueDate = DueDate;
                 if (Discount != ev.Discount) ev.Discount = Discount;
                 if (status != ev.Status) ev.Status = status;
-                if (drinks != null) ev.DRINKS = drinks;
+                //if (drinks != null) ev.DRINKS = drinks;
+                foreach(var p in drinks)
+                {
+                    if (!p.EVENTs.Any(s => s.id == ev.id))
+                    {
+                        p.EVENTs.Add(ev);
+                        ev.DRINKS.Add(p);
+                    }    
+                    else
+                    {
+                        p.EVENTs.Remove(ev);
+                        ev.DRINKS.Remove(p);
+                    }    
+                }    
                 CFEntities.Instance.SaveChanges();
                 return true;
             }
-            catch
+            catch (Exception ex)
             {
                 return false;
             }

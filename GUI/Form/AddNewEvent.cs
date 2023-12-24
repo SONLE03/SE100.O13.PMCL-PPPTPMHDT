@@ -17,6 +17,8 @@ namespace GUI
         private int i;
         private List<string> listDrinks = new List<string>();
         private bool anyChanged = false;
+        private List<DRINK> drinks = new List<DRINK>();
+        private EVENT existingEvent;
         public AddNewEvent()
         {
             InitializeComponent();
@@ -36,9 +38,40 @@ namespace GUI
             //{
             //    cbProduct.Items.Add(p.DrinksName);
             //});
-
+            btnUpdate.Visible = false;
+            btnDelete.Visible = false;
             //i = 1;
         }
+
+        public AddNewEvent(string id)
+        {
+            InitializeComponent();
+            existingEvent = BUS.BUSEvent.Instance.GetEventByCode(id);
+            txtEventname.Text = existingEvent.EventName;
+            dtpStartDate.Value = existingEvent.StartDate.Value;
+            dtpEndDate.Value = existingEvent.DueDate.Value;
+            lbAreaID.Text = id;
+            if (existingEvent.EventType == true)
+            {
+                cbSalePercentage.Checked = true;
+            }
+            else
+            {
+                cbSaleSamePrice.Checked = true;
+            }
+            txtSaleValue.Text = existingEvent.Discount.ToString();
+            getCategory();
+
+            foreach (var drink in existingEvent.DRINKS)
+            {
+                listDrinks.Add(drink.DrinksName);
+                //drinks.Add(drink);
+                gridviewEventAppliedProduct.Rows.Add(drink.DrinksID, drink.DrinksName, drink.CATEGORY.CategoryName, "VND");
+            }
+            btnCreate.Visible = false;
+            i = 2;
+        }
+
         public bool getAnyChanged()
         {
             return anyChanged;
@@ -85,6 +118,7 @@ namespace GUI
             var drink = (from p in BUS.BUSDrink.Instance.GetAllDrink() where p.DrinksName.Equals(cbProduct.SelectedItem.ToString()) select p).FirstOrDefault();
             gridviewEventAppliedProduct.Rows.Add(drink.DrinksID, drink.DrinksName, drink.CATEGORY.CategoryName, "VND");
             listDrinks.Add(drink.DrinksName);
+            drinks.Add(drink);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -106,6 +140,7 @@ namespace GUI
                     string nameProduct = gridviewEventAppliedProduct.Rows[e.RowIndex].Cells["Product_name"].Value.ToString();
                     var drink = (from p in BUS.BUSDrink.Instance.GetAllDrink() where p.DrinksName.Equals(nameProduct) select p).FirstOrDefault();
                     listDrinks.Remove(drink.DrinksName);
+                    drinks.Remove(drink);
                 }
                 else
                 {
@@ -130,24 +165,15 @@ namespace GUI
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            var obj = new EVENT();
-            obj.EventName = txtEventname.Text;
-            obj.StartDate = dtpStartDate.Value;
-            obj.DueDate = dtpEndDate.Value;
-            obj.Discount = float.Parse(txtSaleValue.Text);
-            obj.EventType = cbSalePercentage.Checked;
-            obj.Unit = lbUnit.Text;
-            obj.Status = "Active";
-
-            if (true)
+            var drinks = new List<DRINK>();
+            foreach (var p in listDrinks)
             {
-                foreach (var p in listDrinks)
-                {
-                    var drink = (from s in BUS.BUSDrink.Instance.GetAllDrink() where s.DrinksName.Equals(p) select s).FirstOrDefault();
-                    drink.EVENTs.Add(obj);
-                    BUS.BUSDrink.Instance.UpdDrinkEvent(drink.id, obj); 
-                }
+                var drink = (from s in BUS.BUSDrink.Instance.GetAllDrink() where s.DrinksName.Equals(p) select s).FirstOrDefault();
+                drinks.Add(drink);
+            }
 
+            if (BUS.BUSEvent.Instance.AddEvent(txtEventname.Text, cbSalePercentage.Checked, lbUnit.Text, dtpStartDate.Value, dtpEndDate.Value, float.Parse(txtSaleValue.Text), drinks) > 0)
+            {
                 if (true)
                 {
                     MessageBox.Show("Add event successfully", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -162,6 +188,32 @@ namespace GUI
             }
         }
 
-      
+        private void guna2GradientButton1_Click(object sender, EventArgs e)
+        {
+            if (BUS.BUSEvent.Instance.UpdEvent(existingEvent.id, dtpEndDate.Value, float.Parse(txtSaleValue.Text), drinks, "Active"))
+            {
+                MessageBox.Show("Update successfully", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                anyChanged = true;
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("There are some errors while trying to update event", "Event", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (BUS.BUSEvent.Instance.DelEvent(existingEvent.id))
+            {
+                MessageBox.Show("Delete successfully", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                anyChanged = true;
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("There are some errors while trying to update event", "Event", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

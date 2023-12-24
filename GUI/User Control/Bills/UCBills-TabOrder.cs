@@ -30,7 +30,7 @@ namespace GUI
             LoadProduct();
             LoadArea();
             combobox_category.Items.Add("All");
-            combobox_category.Text = "All";
+            combobox_category.SelectedItem = "All";
             BUS.BUSCategory.Instance.GetAllCategory().ToList().ForEach(p =>
             {
                 combobox_category.Items.Add(p.CategoryName);
@@ -168,17 +168,27 @@ namespace GUI
 
         private void btnAddtocart_Click(object sender, EventArgs e)
         {
-            if (cbTable.SelectedItem == null)
+            if (radioTakeAway.Checked == false && radioOntheSpot.Checked == false)
             {
-                MessageBox.Show("Please choose table !", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please choose form of sale !", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            string[] parts = cbTable.SelectedItem.ToString().Split(new[] { " | " }, StringSplitOptions.None);
-            if (parts[1].Contains("InActive"))
+
+            if (radioTakeAway.Checked == false)
             {
-                MessageBox.Show("This table is in used", "Create Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }    
+                if (cbTable.SelectedItem == null)
+                {
+                    MessageBox.Show("Please choose table !", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                string[] parts = cbTable.SelectedItem.ToString().Split(new[] { " | " }, StringSplitOptions.None);
+
+                if (parts[1].Contains("InActive"))
+                {
+                    MessageBox.Show("This table is in used", "Create Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
             DialogResult dialog = MessageBox.Show("Are you sure ?", "Create bill", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
@@ -370,29 +380,32 @@ namespace GUI
 
         private void btnClearTable_Click(object sender, EventArgs e)
         {
-            string[] parts = cbTable.SelectedItem.ToString().Split(new[] { " | " }, StringSplitOptions.None);
-            if (parts[1].Contains("InActive"))
+            if (cbTable.SelectedItem != null)
             {
-                var tableName = parts[0];
-                var tb = (from p in BUS.BUSTable.Instance.GetAllTable() where p.TableName.Equals(tableName) select p).FirstOrDefault();
-                if (BUS.BUSTable.Instance.UpdTable(tb.id, tb.TableName, tb.AreaID, "Active"))
+                string[] parts = cbTable.SelectedItem.ToString().Split(new[] { " | " }, StringSplitOptions.None);
+                if (parts[1].Contains("InActive"))
                 {
-                    LoadArea();
-                    MessageBox.Show("This table is clear", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    var tableName = parts[0];
+                    var tb = (from p in BUS.BUSTable.Instance.GetAllTable() where p.TableName.Equals(tableName) select p).FirstOrDefault();
+                    if (BUS.BUSTable.Instance.UpdTable(tb.id, tb.TableName, tb.AreaID, "Active"))
+                    {
+                        LoadArea();
+                        MessageBox.Show("This table is clear", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("There are some error orcurred while trying to clear table", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (parts[1].Contains("Active"))
+                {
+                    MessageBox.Show("This table was cleared", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    MessageBox.Show("There are some error orcurred while trying to clear table", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }   
-            else if (parts[1].Contains("Active"))
-            {
-                MessageBox.Show("This table was cleared", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }   
-            else
-            {
 
-            }    
+                }
+            }
         }
     }
 }

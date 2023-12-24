@@ -53,5 +53,17 @@ namespace GUI
             }
             LoadEvent(events);
         }
+
+        private void gridviewEvent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int idx = e.RowIndex;
+            if (idx < 0) return;
+            if (e.ColumnIndex == gridviewEvent.Columns["Edit"].Index)
+            {
+                var editEvent = new AddNewEvent(gridviewEvent.Rows[idx].Cells["Event_ID"].Value.ToString());
+                editEvent.ShowDialog();
+                LoadEvent(BUS.BUSEvent.Instance.GetAllEvent());
+            }
+        }
     }
 }

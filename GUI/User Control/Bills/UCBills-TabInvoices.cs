@@ -21,8 +21,8 @@ namespace GUI
         }
         private void setBillFormality()
         {
-            cbStatus.Items.AddRange(new string[] { "All", "On Spot", "Take Away" });
-            cbStatus.SelectedIndex = 0;
+            //cbStatus.Items.AddRange(new string[] { "All", "On Spot", "Take Away" });
+            //cbStatus.SelectedIndex = 0;
         }
 
         private void Binding(List<BILL> bills)
@@ -35,7 +35,15 @@ namespace GUI
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-
+            var list = new List<BILL>();
+            foreach (var p in BUSOrder.Instance.GetAllBill())
+            {
+                if (p.BillID.ToLower().Contains(txtSearch.Text.ToLower()))
+                {
+                    list.Add(p);
+                }
+            }
+            Binding(list);
         }
 
         private void gridviewInvoice_CellClick(object sender, DataGridViewCellEventArgs e)
