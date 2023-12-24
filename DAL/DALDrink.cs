@@ -104,6 +104,27 @@ namespace DAL
             }
         }
 
+        public bool UpdDrinkEvent(int idDrink, EVENT ev)
+        {
+            using (var context = new CFEntities())
+            {
+                try
+                {
+                    DRINK Drink = context.DRINKS.Find(idDrink);
+                    if (Drink == null) return false;
+                    Drink.EVENTs.Add(ev);
+                    context.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    Console.WriteLine(ex.InnerException.ToString());
+                    return false;
+                }
+            }
+        }
+
         public bool UpdDrinkImageNotFound(int idDrink, string Image)
         {
             try

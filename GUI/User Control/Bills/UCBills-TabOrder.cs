@@ -152,7 +152,7 @@ namespace GUI
             }
             nameProductInBill.Remove(billDetail);
             sum -= product.getPrice();
-            if (int.Parse(LbTotal.Text.Replace(" VND", "")) <= 0)
+            if (float.Parse(LbTotal.Text.Replace(" VND", "")) <= 0)
             {
                 lbSubTotal.Text = "0 VND";
                 lbSurcharge.Text = "0 VND";
@@ -168,6 +168,11 @@ namespace GUI
 
         private void btnAddtocart_Click(object sender, EventArgs e)
         {
+            if (cbTable.SelectedItem == null)
+            {
+                MessageBox.Show("Please choose table !", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
             string[] parts = cbTable.SelectedItem.ToString().Split(new[] { " | " }, StringSplitOptions.None);
             if (parts[1].Contains("InActive"))
             {

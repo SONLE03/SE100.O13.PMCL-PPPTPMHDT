@@ -49,7 +49,7 @@ namespace DAL
             if (EventID != null) res = res.Where(t => t.EventID == EventID).Select(t => t).ToList();
             return res;
         }
-        public bool AddEvent (string EventName, bool EventType, string Unit,  DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks)
+        public int AddEvent (string EventName, bool EventType, string Unit,  DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks)
         {
             try
             {
@@ -64,12 +64,12 @@ namespace DAL
                 obj.DRINKS = drinks;
                 CFEntities.Instance.EVENTs.Add(obj);
                 CFEntities.Instance.SaveChanges();
-                return true;
+                return obj.id;
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.InnerException.ToString());
-                return false;
+                return -1;
             }
         }
         public bool UpdEvent(int idEV, DateTime DueDate, float Discount, string status, List<DRINK> drinks)

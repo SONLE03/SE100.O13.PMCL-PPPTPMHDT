@@ -24,6 +24,7 @@ namespace GUI
             lbPrice.Text = price;
             this.ucBill = ucBill;
             quantity = 1;
+
             foreach (var p in BUS.BUSEvent.Instance.GetAllEvent())
             {
                 if (p.StartDate <= DateTime.Now && DateTime.Now <= p.DueDate)
@@ -32,16 +33,39 @@ namespace GUI
                     {
                         if (d.id == idDrink)
                         {
-                            if (salePrice < p.Discount)
+                            if (p.Unit.Contains("VND"))
                             {
-                                salePrice = (double)p.Discount;
+                                if (salePrice < p.Discount)
+                                {
+                                    salePrice = (double)p.Discount;
+                                }
+                            }
+                            else if (p.Unit.Contains("%"))
+                            {
+                                double discount = double.Parse(lbPrice.Text.Replace("VND", "")) * ((double)p.Discount / 100);
+                                if (salePrice < discount)
+                                {
+                                    salePrice = discount;
+                                }
+                            }   
+                            else
+                            {
+
                             }    
                         }    
                     }    
                 }    
             }
-            lbBasePrice.Text = salePrice.ToString();
 
+            if (salePrice > double.Parse(lbPrice.Text.Replace("VND", "")))
+            {
+                lbBasePrice.Text = "Bigger than original price".ToString();
+                salePrice = 0;
+            }
+            else
+            {
+                lbBasePrice.Text = salePrice.ToString();
+            }
 
         }
 

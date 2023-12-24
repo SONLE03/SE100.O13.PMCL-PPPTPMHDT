@@ -34,7 +34,7 @@ namespace BUS
         {
             return DALEvent.Instance.GetEventByCode(EventID);
         }
-        public bool AddEvent(string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks)
+        public int AddEvent(string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks)
         {
             return DALEvent.Instance.AddEvent(EventName, EventType, Unit, StartDate, DueDate, Discount, drinks);
         }

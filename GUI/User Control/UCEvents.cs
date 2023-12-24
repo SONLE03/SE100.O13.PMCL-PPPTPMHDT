@@ -35,6 +35,23 @@ namespace GUI
         {
             AddNewEvent addNewEvent = new AddNewEvent();
             addNewEvent.ShowDialog();
+            if (addNewEvent.getAnyChanged() == true)
+            {
+                LoadEvent(BUS.BUSEvent.Instance.GetAllEvent());
+            }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            var events = new List<EVENT>();
+            foreach(var p in BUS.BUSEvent.Instance.GetAllEvent())
+            {
+                if (p.EventName.Contains(txtSearch.Text))
+                {
+                    events.Add(p);
+                }    
+            }
+            LoadEvent(events);
         }
     }
 }

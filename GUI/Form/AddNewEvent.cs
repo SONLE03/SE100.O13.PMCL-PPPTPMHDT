@@ -8,17 +8,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI
 {
     public partial class AddNewEvent : Form
     {
         private int i;
+        private List<string> listDrinks = new List<string>();
+        private bool anyChanged = false;
         public AddNewEvent()
         {
             InitializeComponent();
             getCategory();
             addEventForCheckBox();
+            i = 1;
             //lbAreaID.Text = (BUS.BUSEvent.Instance.GetAllEvent().Count + 1).ToString();
 
             //cbcategory.Items.Add("All");
@@ -34,6 +38,10 @@ namespace GUI
             //});
 
             //i = 1;
+        }
+        public bool getAnyChanged()
+        {
+            return anyChanged;
         }
         private void addEventForCheckBox()
         {
@@ -65,17 +73,18 @@ namespace GUI
         {
             if (cbcategory.SelectedValue != null && cbcategory.SelectedValue is int catId)
             {
-                cbProduct.DataSource = null;
-                cbProduct.DataSource = BUSDrink.Instance.GetAllDrinkActive(catId);
-                cbProduct.ValueMember = "id";
-                cbProduct.DisplayMember = "DrinksName";
+                cbProduct.Items.Clear();
+                BUSDrink.Instance.GetAllDrinkActive(catId).ToList().ForEach(p =>
+                {
+                    cbProduct.Items.Add(p.DrinksName);
+                });
             }
         }
         private void btn_Add_Click(object sender, EventArgs e)
         {
             var drink = (from p in BUS.BUSDrink.Instance.GetAllDrink() where p.DrinksName.Equals(cbProduct.SelectedItem.ToString()) select p).FirstOrDefault();
-
             gridviewEventAppliedProduct.Rows.Add(drink.DrinksID, drink.DrinksName, drink.CATEGORY.CategoryName, "VND");
+            listDrinks.Add(drink.DrinksName);
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -94,6 +103,9 @@ namespace GUI
                 if (i == 1)
                 {
                     gridviewEventAppliedProduct.Rows.Remove(gridviewEventAppliedProduct.Rows[e.RowIndex]);
+                    string nameProduct = gridviewEventAppliedProduct.Rows[e.RowIndex].Cells["Product_name"].Value.ToString();
+                    var drink = (from p in BUS.BUSDrink.Instance.GetAllDrink() where p.DrinksName.Equals(nameProduct) select p).FirstOrDefault();
+                    listDrinks.Remove(drink.DrinksName);
                 }
                 else
                 {
@@ -112,13 +124,42 @@ namespace GUI
             }
             else
             {
-                //MessageBox.Show("Please double click at rows to update or delete", "Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please click at rows to update or delete", "Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
+            var obj = new EVENT();
+            obj.EventName = txtEventname.Text;
+            obj.StartDate = dtpStartDate.Value;
+            obj.DueDate = dtpEndDate.Value;
+            obj.Discount = float.Parse(txtSaleValue.Text);
+            obj.EventType = cbSalePercentage.Checked;
+            obj.Unit = lbUnit.Text;
+            obj.Status = "Active";
 
+            if (true)
+            {
+                foreach (var p in listDrinks)
+                {
+                    var drink = (from s in BUS.BUSDrink.Instance.GetAllDrink() where s.DrinksName.Equals(p) select s).FirstOrDefault();
+                    drink.EVENTs.Add(obj);
+                    BUS.BUSDrink.Instance.UpdDrinkEvent(drink.id, obj); 
+                }
+
+                if (true)
+                {
+                    MessageBox.Show("Add event successfully", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    anyChanged = true;
+                    listDrinks.Clear();
+                    this.Hide();
+                }
+            }
+            else
+            {
+                MessageBox.Show("There are some errors while trying to add event", "Event", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
       
