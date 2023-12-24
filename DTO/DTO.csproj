@@ -138,6 +138,7 @@
     <Compile Include="IMPORT_BILL_DETAIL.cs">
       <DependentUpon>Coffee.tt</DependentUpon>
     </Compile>
+    <Compile Include="MonthlyRevenueDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SERVICE.cs">
       <DependentUpon>Coffee.tt</DependentUpon>

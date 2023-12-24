@@ -25,5 +25,9 @@ namespace BUS
         {
             return DALAnalysis.Instance.topSellingDrinks();
         }
+        public List<MonthlyRevenueDTO> monthlyRevenueDTOs()
+        {
+            return DALAnalysis.Instance.MonthlyRevenues();
+        }
     }
 }

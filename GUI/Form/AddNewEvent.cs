@@ -107,7 +107,7 @@ namespace GUI
             if (cbcategory.SelectedValue != null && cbcategory.SelectedValue is int catId)
             {
                 cbProduct.Items.Clear();
-                BUSDrink.Instance.GetAllDrinkActive(catId).ToList().ForEach(p =>
+                BUSDrink.Instance.GetAllDrinkActiveByCategory(catId).ToList().ForEach(p =>
                 {
                     cbProduct.Items.Add(p.DrinksName);
                 });

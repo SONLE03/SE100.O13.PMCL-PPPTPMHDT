@@ -26,9 +26,13 @@ namespace BUS
         {
             return DALDrink.Instance.GetAllDrink();
         }
-        public List<DRINK> GetAllDrinkActive(int cateId)
+        public List<DRINK> GetAllDrinkActive()
         {
-            return DALDrink.Instance.GetAllDrinkActive(cateId);
+            return DALDrink.Instance.GetAllDrinkActive();
+        }
+        public List<DRINK> GetAllDrinkActiveByCategory(int cateId)
+        {
+            return DALDrink.Instance.GetAllDrinkActiveByCategory(cateId);
         }
 
         public DRINK GetDrinkById(int id)
@@ -40,10 +44,6 @@ namespace BUS
         {
             return DALDrink.Instance.GetDrinkByCode(DrinksID);
         }
-        //public List<KeyValuePair<int, int>> topSellingDrinks()
-        //{
-        //    return DALDrink.Instance.topSellingDrinks();
-        //}
         public bool checkCategoryStatus(int catId, string status)
         {
             CATEGORY cat = DALCategory.Instance.GetCategoryById(catId);
