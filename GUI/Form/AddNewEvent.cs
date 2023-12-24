@@ -120,6 +120,16 @@ namespace GUI
             listDrinks.Add(drink.DrinksName);
             drinks.Add(drink);
         }
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            var drinks = new List<DRINK>();
+            foreach (var p in listDrinks)
+            {
+                var drink = (from s in BUS.BUSDrink.Instance.GetAllDrink() where s.DrinksName.Equals(p) select s).FirstOrDefault();
+                drinks.Add(drink);
+            }
+            MessageBox.Show(drinks.Count.ToString());
+        }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -215,5 +225,7 @@ namespace GUI
                 MessageBox.Show("There are some errors while trying to update event", "Event", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
     }
 }

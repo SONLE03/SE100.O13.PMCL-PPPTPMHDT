@@ -4,13 +4,12 @@ using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using BCrypt.Net;
 
 namespace BUS
 {
@@ -130,7 +129,7 @@ namespace BUS
         {
             if (!CheckValidator(DateofBirth, Phone, UserName, Password, retypePass, Email, GroupUserID, status)) return false;
             
-            if (!DALUser.Instance.AddUser(UserFullName, DateofBirth, Address, Phone, UserName, Password, Email, GroupUserID, image, status))
+            if (!DALUser.Instance.AddUser(UserFullName, DateofBirth, Address, Phone, UserName, GeneratePassword(Password), Email, GroupUserID, image, status))
             {
                 MessageBox.Show("Add failure user", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -150,9 +149,9 @@ namespace BUS
             MessageBox.Show("Update user information successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return true;
         }
-        public bool DelUser(int id)
+        public string GeneratePassword(string password)
         {
-            return DALUser.Instance.DelUser(id);
+            return BCrypt.Net.BCrypt.EnhancedHashPassword(password, 13);
         }
         public bool UpdPassword(int id, string password)
         {
