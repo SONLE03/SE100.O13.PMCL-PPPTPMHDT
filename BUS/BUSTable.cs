@@ -48,14 +48,12 @@ namespace BUS
             return DALTable.Instance.GetTableByCode(idTable);
         }
         public bool AddTable(string tableName, int areaid, string status)
-        {
-            if(!checkAreaStatus(areaid, status)) return false;          
+        { 
             return DALTable.Instance.AddTable(tableName, areaid, status);
         }
-        public bool UpdTable(int tableID, string tableName, int areaid, string status)
+        public bool UpdTable(int tableID, string status)
         {
-            if (!checkAreaStatus(areaid, status)) return false;
-            return DALTable.Instance.UpdTable(tableID, tableName, areaid, status);
+            return DALTable.Instance.UpdTable(tableID, status);
         }
         public bool checkAreaStatus(int areaid, string status)
         {

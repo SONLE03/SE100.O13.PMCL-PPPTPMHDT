@@ -58,8 +58,9 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.gridviewEventAppliedProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Drink_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Drink_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Category_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnCreate = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -72,9 +73,6 @@
             this.lbUnit = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.panelEventID.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -395,7 +393,7 @@
             this.guna2Panel2.Controls.Add(this.gridviewEventAppliedProduct);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(49, 522);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(835, 239);
             this.guna2Panel2.TabIndex = 109;
@@ -432,8 +430,9 @@
             this.gridviewEventAppliedProduct.ColumnHeadersHeight = 30;
             this.gridviewEventAppliedProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewEventAppliedProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Number,
-            this.Product_name,
+            this.ID,
+            this.Drink_ID,
+            this.Drink_name,
             this.Category_name,
             this.Delete});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -446,7 +445,7 @@
             this.gridviewEventAppliedProduct.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewEventAppliedProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewEventAppliedProduct.Location = new System.Drawing.Point(3, 34);
-            this.gridviewEventAppliedProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridviewEventAppliedProduct.Margin = new System.Windows.Forms.Padding(4);
             this.gridviewEventAppliedProduct.Name = "gridviewEventAppliedProduct";
             this.gridviewEventAppliedProduct.ReadOnly = true;
             this.gridviewEventAppliedProduct.RowHeadersVisible = false;
@@ -478,21 +477,29 @@
             this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridviewEventAppliedProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewEventAppliedProduct_CellClick);
             // 
-            // Number
+            // ID
             // 
-            this.Number.FillWeight = 49.92708F;
-            this.Number.HeaderText = "Product ID";
-            this.Number.MinimumWidth = 6;
-            this.Number.Name = "Number";
-            this.Number.ReadOnly = true;
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             // 
-            // Product_name
+            // Drink_ID
             // 
-            this.Product_name.FillWeight = 74.89062F;
-            this.Product_name.HeaderText = "Product name";
-            this.Product_name.MinimumWidth = 6;
-            this.Product_name.Name = "Product_name";
-            this.Product_name.ReadOnly = true;
+            this.Drink_ID.FillWeight = 49.92708F;
+            this.Drink_ID.HeaderText = "Drink ID";
+            this.Drink_ID.MinimumWidth = 6;
+            this.Drink_ID.Name = "Drink_ID";
+            this.Drink_ID.ReadOnly = true;
+            // 
+            // Drink_name
+            // 
+            this.Drink_name.FillWeight = 74.89062F;
+            this.Drink_name.HeaderText = "Drink name";
+            this.Drink_name.MinimumWidth = 6;
+            this.Drink_name.Name = "Drink_name";
+            this.Drink_name.ReadOnly = true;
             // 
             // Category_name
             // 
@@ -579,6 +586,7 @@
             this.txtSaleValue.SelectedText = "";
             this.txtSaleValue.Size = new System.Drawing.Size(283, 46);
             this.txtSaleValue.TabIndex = 113;
+            this.txtSaleValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaleValue_KeyPress);
             // 
             // guna2ControlBox3
             // 
@@ -622,7 +630,7 @@
             this.cbSalePercentage.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.cbSalePercentage.CheckedState.InnerColor = System.Drawing.Color.White;
             this.cbSalePercentage.Location = new System.Drawing.Point(324, 303);
-            this.cbSalePercentage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSalePercentage.Margin = new System.Windows.Forms.Padding(4);
             this.cbSalePercentage.Name = "cbSalePercentage";
             this.cbSalePercentage.Size = new System.Drawing.Size(27, 25);
             this.cbSalePercentage.TabIndex = 117;
@@ -641,7 +649,7 @@
             this.cbSaleSamePrice.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.cbSaleSamePrice.CheckedState.InnerColor = System.Drawing.Color.White;
             this.cbSaleSamePrice.Location = new System.Drawing.Point(148, 303);
-            this.cbSaleSamePrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSaleSamePrice.Margin = new System.Windows.Forms.Padding(4);
             this.cbSaleSamePrice.Name = "cbSaleSamePrice";
             this.cbSaleSamePrice.Size = new System.Drawing.Size(27, 25);
             this.cbSaleSamePrice.TabIndex = 116;
@@ -689,65 +697,6 @@
             this.label13.TabIndex = 49;
             this.label13.Text = "Category";
             // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackColor = System.Drawing.Color.Transparent;
-            this.btnUpdate.BorderRadius = 10;
-            this.btnUpdate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUpdate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdate.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUpdate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUpdate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnUpdate.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnUpdate.Location = new System.Drawing.Point(564, 790);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(140, 43);
-            this.btnUpdate.TabIndex = 148;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.Click += new System.EventHandler(this.guna2GradientButton1_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Transparent;
-            this.btnDelete.BorderRadius = 10;
-            this.btnDelete.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDelete.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDelete.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnDelete.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnDelete.Location = new System.Drawing.Point(391, 790);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(140, 43);
-            this.btnDelete.TabIndex = 149;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(429, 374);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 150;
-            this.guna2Button1.Text = "guna2Button1";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // AddNewEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -755,9 +704,6 @@
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(933, 862);
-            this.Controls.Add(this.guna2Button1);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.cbSalePercentage);
             this.Controls.Add(this.cbSaleSamePrice);
@@ -838,17 +784,15 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSaleValue;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category_name;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private Guna.UI2.WinForms.Guna2CustomRadioButton cbSalePercentage;
         private Guna.UI2.WinForms.Guna2CustomRadioButton cbSaleSamePrice;
         private System.Windows.Forms.Label lbUnit;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2GradientButton btnUpdate;
-        private Guna.UI2.WinForms.Guna2GradientButton btnDelete;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Drink_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Drink_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category_name;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
     }
 }

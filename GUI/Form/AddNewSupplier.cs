@@ -31,16 +31,20 @@ namespace GUI
             string status = cbStatus.Text;
             try
             {
-                if (!String.IsNullOrEmpty(supplierName) && !String.IsNullOrEmpty(phone) && !String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(status))
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    if(BUSSupplier.Instance.AddSupplier(supplierName, address, phone, status))
+                    if (!String.IsNullOrEmpty(supplierName) && !String.IsNullOrEmpty(phone) && !String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(status))
                     {
-                        Clear();
+                        if (BUSSupplier.Instance.AddSupplier(supplierName, address, phone, status))
+                        {
+                            Clear();
+                        }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }catch(Exception ex)
             {

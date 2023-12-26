@@ -51,11 +51,12 @@ namespace DAL
         }
         public List<C_TABLE> SearchTable(string searchText, string selectedArea, string selectedStatus)
         {
+            var transformedNameArea = DALConstraint.Instance.TransformString(searchText);
             List<C_TABLE> listTables = CFEntities.Instance.C_TABLE.ToList();
             List<C_TABLE> filteredList = new List<C_TABLE>();
             filteredList = listTables
                 .Where(p =>
-                    (string.IsNullOrEmpty(searchText) || p.TableName.ToLower().Contains(searchText)) &&
+                    (string.IsNullOrEmpty(transformedNameArea) || p.TableName.ToLower().Contains(transformedNameArea)) &&
                     (selectedArea == "All" || string.Equals(p.AREA.AreaName, selectedArea, StringComparison.OrdinalIgnoreCase)) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )
@@ -80,14 +81,12 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdTable(int tableID, string tableName, int area, string status)
+        public bool UpdTable(int tableID, string status)
         {
             try
             {
                 C_TABLE table = GetTableById(tableID);
                 if (table == null) return false;
-                if (tableName != null) table.TableName = tableName;
-                if (area != table.AreaID) table.AreaID = area;
                 if (status != table.Status) table.Status = status;
                 CFEntities.Instance.SaveChanges();
                 return true;

@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.MonthCalendar;
 
 namespace BUS
 {
@@ -38,25 +40,55 @@ namespace BUS
         {
             return DALCategory.Instance.GetCategoryById(id);
         }
-        public CATEGORY GetCategoryByCode(string cateID)
+        public CATEGORY GetCategoryByName(string cateName)
         {
-            return DALCategory.Instance.GetCategoryByCode(cateID);
+            return DALCategory.Instance.GetCategoryByName(cateName);
         }       
         public bool AddCategory(string CategoryName, string status)
         {
-            return DALCategory.Instance.AddCategory(CategoryName, status);
+            try
+            {
+                if (GetCategoryByName(CategoryName) != null)
+                {
+                    MessageBox.Show("The category already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (DALCategory.Instance.AddCategory(CategoryName, status)) return true;
+                MessageBox.Show("Add failure category", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch
+            {
+                MessageBox.Show("Add failure category", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
         public bool UpdCategory(int idCat, string CategoryName, string Status)
         {
-            return DALCategory.Instance.UpdCategory(idCat, CategoryName, Status);
-        }
-        public bool DelCategory(int idCat)
-        {
-            return DALCategory.Instance.DelCategory(idCat);
+            try
+            {
+                var cate = GetCategoryByName(CategoryName);
+                if (cate != null && cate.id != idCat)
+                {
+                    MessageBox.Show("The category already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (DALCategory.Instance.UpdCategory(idCat, CategoryName, Status)) return true;
+                return false;
+            }
+            catch
+            {
+                MessageBox.Show("Modify failure category", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
         public bool categoryIsBlocked(int id)
         {
             return DALCategory.Instance.categoryIsBlocked(id);
+        }
+        public List<CATEGORY> Search(string searchText, string selectedStatus)
+        {
+            return DALCategory.Instance.SearchCategory(searchText, selectedStatus);
         }
     }
 }

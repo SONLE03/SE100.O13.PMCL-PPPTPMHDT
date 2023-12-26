@@ -37,21 +37,25 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to modify?", "Confirm modify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    bool isSuccess = BUSArea.Instance.UpdArea(area.id, txtAreaname.Text, cbStatus.Text);
-                    if (isSuccess)
+                    if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
                     {
-                        MessageBox.Show("Update Area Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        bool isSuccess = BUSArea.Instance.UpdArea(area.id, txtAreaname.Text, cbStatus.Text);
+                        if (isSuccess)
+                        {
+                            MessageBox.Show("Update Area Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Update Failure Area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Update Failure Area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch

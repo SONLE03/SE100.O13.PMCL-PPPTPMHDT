@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,13 +22,24 @@ namespace GUI
 
         private void LoadEvent(List<EVENT> events)
         {
+            string unit = "%";
             Image edit_img = Properties.Resources.edit_icon;
             edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
+            Image del_img = Properties.Resources.trash;
+            del_img = (Image)(new Bitmap(del_img, new Size(25, 25)));
             gridviewEvent.Rows.Clear();
             gridviewEvent.Refresh();
             events.ForEach(p =>
             {
-                gridviewEvent.Rows.Add(p.id, p.EventID, p.EventName, p.StartDate, p.DueDate, p.EventType, p.Discount, p.Status, edit_img);
+                if (p.Unit.Equals("%"))
+                {
+                    unit = "Percentage";
+                }
+                else
+                {
+                    unit = "VND";
+                }
+                gridviewEvent.Rows.Add(p.id, p.EventID, p.EventName, p.StartDate, p.DueDate, p.Discount, unit, p.Status, edit_img, del_img);
             });
         }
 
@@ -35,23 +47,13 @@ namespace GUI
         {
             AddNewEvent addNewEvent = new AddNewEvent();
             addNewEvent.ShowDialog();
-            if (addNewEvent.getAnyChanged() == true)
-            {
-                LoadEvent(BUS.BUSEvent.Instance.GetAllEvent());
-            }
+            LoadEvent(BUS.BUSEvent.Instance.GetAllEvent());
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            var events = new List<EVENT>();
-            foreach(var p in BUS.BUSEvent.Instance.GetAllEvent())
-            {
-                if (p.EventName.Contains(txtSearch.Text))
-                {
-                    events.Add(p);
-                }    
-            }
-            LoadEvent(events);
+            string searchText = txtSearch.Text.Trim().ToLower();
+            LoadEvent(BUSEvent.Instance.SearchEvent(searchText));
         }
 
         private void gridviewEvent_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -60,9 +62,22 @@ namespace GUI
             if (idx < 0) return;
             if (e.ColumnIndex == gridviewEvent.Columns["Edit"].Index)
             {
-                var editEvent = new AddNewEvent(gridviewEvent.Rows[idx].Cells["Event_ID"].Value.ToString());
+                var editEvent = new EditEvent(Convert.ToInt32(gridviewEvent.Rows[idx].Cells["ID"].Value));
                 editEvent.ShowDialog();
-                LoadEvent(BUS.BUSEvent.Instance.GetAllEvent());
+                LoadEvent(BUSEvent.Instance.GetAllEvent());
+            }else if (e.ColumnIndex == gridviewEvent.Columns["Delete"].Index)
+            {
+                DialogResult result = MessageBox.Show("Are you sure want to remove?", "Confirm deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    BUSEvent.Instance.DelEvent(Convert.ToInt32(gridviewEvent.Rows[idx].Cells["ID"].Value));
+                    LoadEvent(BUSEvent.Instance.GetAllEvent());
+                }
+            }
+            else
+            {
+                var eventdetail = new EventDetails(Convert.ToInt32(gridviewEvent.Rows[idx].Cells["ID"].Value));
+                eventdetail.ShowDialog();
             }
         }
     }

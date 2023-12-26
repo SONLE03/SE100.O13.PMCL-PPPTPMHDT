@@ -14,67 +14,14 @@ namespace GUI
 {
     public partial class AddNewEvent : Form
     {
-        private int i;
-        private List<string> listDrinks = new List<string>();
-        private bool anyChanged = false;
-        private List<DRINK> drinks = new List<DRINK>();
-        private EVENT existingEvent;
+        private List<DRINK> drinkList = new List<DRINK>();
+        private List<DRINK> drinkListToAdd = new List<DRINK>();
+        private List<int> listDrinkID = new List<int>();
         public AddNewEvent()
         {
             InitializeComponent();
             getCategory();
             addEventForCheckBox();
-            i = 1;
-            //lbAreaID.Text = (BUS.BUSEvent.Instance.GetAllEvent().Count + 1).ToString();
-
-            //cbcategory.Items.Add("All");
-            //BUS.BUSCategory.Instance.GetAllCategory().ForEach(p =>
-            //{
-            //    cbcategory.Items.Add(p.CategoryName);
-            //});
-
-            //cbcategory.Items.Add("All");
-            //BUS.BUSDrink.Instance.GetAllDrink().ForEach(p =>
-            //{
-            //    cbProduct.Items.Add(p.DrinksName);
-            //});
-            btnUpdate.Visible = false;
-            btnDelete.Visible = false;
-            //i = 1;
-        }
-
-        public AddNewEvent(string id)
-        {
-            InitializeComponent();
-            existingEvent = BUS.BUSEvent.Instance.GetEventByCode(id);
-            txtEventname.Text = existingEvent.EventName;
-            dtpStartDate.Value = existingEvent.StartDate.Value;
-            dtpEndDate.Value = existingEvent.DueDate.Value;
-            lbAreaID.Text = id;
-            if (existingEvent.EventType == true)
-            {
-                cbSalePercentage.Checked = true;
-            }
-            else
-            {
-                cbSaleSamePrice.Checked = true;
-            }
-            txtSaleValue.Text = existingEvent.Discount.ToString();
-            getCategory();
-
-            foreach (var drink in existingEvent.DRINKS)
-            {
-                listDrinks.Add(drink.DrinksName);
-                //drinks.Add(drink);
-                gridviewEventAppliedProduct.Rows.Add(drink.DrinksID, drink.DrinksName, drink.CATEGORY.CategoryName, "VND");
-            }
-            btnCreate.Visible = false;
-            i = 2;
-        }
-
-        public bool getAnyChanged()
-        {
-            return anyChanged;
         }
         private void addEventForCheckBox()
         {
@@ -97,135 +44,154 @@ namespace GUI
         }
         private void getCategory()
         {
+            var categories = BUSCategory.Instance.GetAllCategoryActive();
+            if (categories == null) return;
+            var allCategory = new CATEGORY { id = 0, CategoryID = "CT0000", CategoryName = "All" };
+            categories.Insert(0, allCategory);
             cbcategory.DataSource = null;
-            cbcategory.DataSource = BUSCategory.Instance.GetAllCategoryActive();
+            cbcategory.DataSource = categories;
             cbcategory.ValueMember = "id";
             cbcategory.DisplayMember = "CategoryName";
         }
         private void cbcategory_SelectedValueChanged(object sender, EventArgs e)
         {
+            var allDrink = new DRINK { id = 0, DrinksID = "DK0000", DrinksName = "All", CategoryID = 0, Description = null, Image = "", Status = "Active" };
+            cbProduct.DataSource = null;
             if (cbcategory.SelectedValue != null && cbcategory.SelectedValue is int catId)
             {
-                cbProduct.Items.Clear();
-                BUSDrink.Instance.GetAllDrinkActiveByCategory(catId).ToList().ForEach(p =>
+                if (Convert.ToInt32(cbcategory.SelectedValue) == 0)
                 {
-                    cbProduct.Items.Add(p.DrinksName);
-                });
+                    drinkList = BUSDrink.Instance.GetAllDrinkActive();
+                }
+                else
+                {
+                    drinkList = BUSDrink.Instance.GetAllDrinkActiveByCategory(catId);
+                }
             }
+            if (drinkList.Count != 0)
+            {
+                drinkList.Insert(0, allDrink);
+            }
+            cbProduct.DataSource = drinkList;
+            cbProduct.ValueMember = "id";
+            cbProduct.DisplayMember = "DrinksName";
+        }
+        private void txtSaleValue_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
         private void btn_Add_Click(object sender, EventArgs e)
         {
-            var drink = (from p in BUS.BUSDrink.Instance.GetAllDrink() where p.DrinksName.Equals(cbProduct.SelectedItem.ToString()) select p).FirstOrDefault();
-            gridviewEventAppliedProduct.Rows.Add(drink.DrinksID, drink.DrinksName, drink.CATEGORY.CategoryName, "VND");
-            listDrinks.Add(drink.DrinksName);
-            drinks.Add(drink);
-        }
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            var drinks = new List<DRINK>();
-            foreach (var p in listDrinks)
+            try
             {
-                var drink = (from s in BUS.BUSDrink.Instance.GetAllDrink() where s.DrinksName.Equals(p) select s).FirstOrDefault();
-                drinks.Add(drink);
+                if (String.IsNullOrEmpty(cbcategory.Text) || (!String.IsNullOrEmpty(cbcategory.Text) && String.IsNullOrEmpty(cbProduct.Text)))
+                {
+                    MessageBox.Show("Lack of information. Please check again", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                drinkListToAdd.Clear();
+                int catId = Convert.ToInt32(cbcategory.SelectedValue);
+                int drinkId = Convert.ToInt32(cbProduct.SelectedValue);
+                if (catId == 0 && drinkId == 0)
+                {
+                    drinkListToAdd = drinkList.Skip(1).ToList();
+
+                }
+                else if (catId != 0 && drinkId == 0)
+                {
+                    drinkListToAdd = drinkList.Skip(1).ToList();
+
+                }
+                else
+                {
+                    drinkListToAdd.Add(BUSDrink.Instance.GetDrinkById(drinkId));
+                }
+                foreach (var drink in drinkListToAdd)
+                {
+                    // Khởi tạo
+                    if (!listDrinkID.Contains(drink.id))
+                    {
+                        gridviewEventAppliedProduct.Rows.Add(drink.id, drink.DrinksID, drink.DrinksName, drink.CATEGORY.CategoryName);
+                        listDrinkID.Add(drink.id);
+                    }
+                }
             }
-            MessageBox.Show(drinks.Count.ToString());
+            catch
+            {
+
+            }
+        }
+        private void Clear()
+        {
+            txtEventname.Clear();
+            txtSaleValue.Clear();
+            gridviewEventAppliedProduct.Rows.Clear();
+            listDrinkID.Clear();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
         }
 
         private void gridviewEventAppliedProduct_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex == -1)
+            try
             {
-                return;
-            }
-            if (e.ColumnIndex == gridviewEventAppliedProduct.Columns["Delete"].Index)
-            {
-                if (i == 1)
+                if (e.RowIndex == -1)
                 {
-                    gridviewEventAppliedProduct.Rows.Remove(gridviewEventAppliedProduct.Rows[e.RowIndex]);
-                    string nameProduct = gridviewEventAppliedProduct.Rows[e.RowIndex].Cells["Product_name"].Value.ToString();
-                    var drink = (from p in BUS.BUSDrink.Instance.GetAllDrink() where p.DrinksName.Equals(nameProduct) select p).FirstOrDefault();
-                    listDrinks.Remove(drink.DrinksName);
-                    drinks.Remove(drink);
+                    return;
+                }
+                if (e.ColumnIndex == gridviewEventAppliedProduct.Columns["Delete"].Index)
+                {
+                    int idx = Convert.ToInt32(gridviewEventAppliedProduct.Rows[e.RowIndex].Cells["ID"].Value);
+                    gridviewEventAppliedProduct.Rows.RemoveAt(e.RowIndex);
+                    listDrinkID.Remove(idx);
                 }
                 else
                 {
-                    /*string SizeName = gridviewEventAppliedProduct.Rows[e.RowIndex].Cells["Size_name"].Value.ToString();
-                    var size = (from p in BUS.BUSSize.Instance.GetAllSize() where p.SizeName.Equals(SizeName) select p).FirstOrDefault();
-                    var drinkSize = (from p in BUS.BUSDrink_Size.Instance.GetAllDrinkSize() where p.DrinksID == drink.id && p.C_SIZE.SizeName.Equals(SizeName) select p).FirstOrDefault();
-                    if (BUS.BUSDrink_Size.Instance.delDrinkSize(drinkSize, drink, size))
-                    {
-                        DialogResult dialog = MessageBox.Show("are you sure ?", "Info Product", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                        if (dialog == DialogResult.Yes)
-                        {
-                            guna2DataGridView1.Rows.Remove(guna2DataGridView1.Rows[e.RowIndex]);
-                        }
-                    }*/
+                    MessageBox.Show("Please click at rows to delete", "Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch
             {
-                MessageBox.Show("Please click at rows to update or delete", "Category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
             }
+         
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            var drinks = new List<DRINK>();
-            foreach (var p in listDrinks)
+            try
             {
-                var drink = (from s in BUS.BUSDrink.Instance.GetAllDrink() where s.DrinksName.Equals(p) select s).FirstOrDefault();
-                drinks.Add(drink);
-            }
-
-            if (BUS.BUSEvent.Instance.AddEvent(txtEventname.Text, cbSalePercentage.Checked, lbUnit.Text, dtpStartDate.Value, dtpEndDate.Value, float.Parse(txtSaleValue.Text), drinks) > 0)
-            {
-                if (true)
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Add event successfully", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    anyChanged = true;
-                    listDrinks.Clear();
-                    this.Hide();
+                    if (String.IsNullOrEmpty(txtEventname.Text) || gridviewEventAppliedProduct.Rows == null || String.IsNullOrEmpty(txtSaleValue.Text) || !(cbSalePercentage.Checked || cbSaleSamePrice.Checked))
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    var drinks = new List<DRINK>();
+                    foreach (var p in listDrinkID)
+                    {
+                        drinks.Add(BUSDrink.Instance.GetDrinkById(p));
+                    }
+
+                    if (BUSEvent.Instance.AddEvent(txtEventname.Text, cbSalePercentage.Checked, lbUnit.Text, dtpStartDate.Value, dtpEndDate.Value, float.Parse(txtSaleValue.Text), drinks) > 0)
+                    {
+                        MessageBox.Show("Add event successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Clear();
+
+                    }
                 }
             }
-            else
+            catch
             {
-                MessageBox.Show("There are some errors while trying to add event", "Event", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
-        private void guna2GradientButton1_Click(object sender, EventArgs e)
-        {
-            if (BUS.BUSEvent.Instance.UpdEvent(existingEvent.id, dtpEndDate.Value, float.Parse(txtSaleValue.Text), drinks, "Active"))
-            {
-                MessageBox.Show("Update successfully", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                anyChanged = true;
-                this.Hide();
             }
-            else
-            {
-                MessageBox.Show("There are some errors while trying to update event", "Event", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            if (BUS.BUSEvent.Instance.DelEvent(existingEvent.id))
-            {
-                MessageBox.Show("Delete successfully", "Event", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                anyChanged = true;
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("There are some errors while trying to update event", "Event", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-
+            
+        }       
     }
 }

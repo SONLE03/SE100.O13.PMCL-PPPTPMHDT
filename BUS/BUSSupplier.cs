@@ -69,10 +69,6 @@ namespace BUS
             MessageBox.Show("Modify Supplier Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return true;
         }
-        public bool DelNhaCungCap(int SupplierID)
-        {
-            return DALSupplier.Instance.DelNhaCungCap(SupplierID);
-        }
         public List<SUPPLIER> SearchSupplier(string searchText, string selectedStatus)
         {
             return DALSupplier.Instance.SearchSupplier(searchText, selectedStatus);

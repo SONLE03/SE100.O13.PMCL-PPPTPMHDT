@@ -38,10 +38,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.gridviewEventAppliedProduct = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Category_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_Add = new Guna.UI2.WinForms.Guna2GradientButton();
             this.cbProduct = new Guna.UI2.WinForms.Guna2ComboBox();
             this.cbSalePercentage = new Guna.UI2.WinForms.Guna2CustomRadioButton();
@@ -54,7 +50,7 @@
             this.lbUnit = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.cbcategory = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lbAreaID = new System.Windows.Forms.Label();
+            this.lbEventID = new System.Windows.Forms.Label();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.label10 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -72,7 +68,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.label13 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Product_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Category_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.guna2Panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewEventAppliedProduct)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -89,7 +91,7 @@
             this.cbSaleSamePrice.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.cbSaleSamePrice.CheckedState.InnerColor = System.Drawing.Color.White;
             this.cbSaleSamePrice.Location = new System.Drawing.Point(147, 305);
-            this.cbSaleSamePrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSaleSamePrice.Margin = new System.Windows.Forms.Padding(4);
             this.cbSaleSamePrice.Name = "cbSaleSamePrice";
             this.cbSaleSamePrice.Size = new System.Drawing.Size(27, 25);
             this.cbSaleSamePrice.TabIndex = 144;
@@ -109,7 +111,7 @@
             this.guna2Panel2.Controls.Add(this.gridviewEventAppliedProduct);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
             this.guna2Panel2.Location = new System.Drawing.Point(48, 528);
-            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel2.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel2.Name = "guna2Panel2";
             this.guna2Panel2.Size = new System.Drawing.Size(835, 235);
             this.guna2Panel2.TabIndex = 138;
@@ -146,6 +148,7 @@
             this.gridviewEventAppliedProduct.ColumnHeadersHeight = 30;
             this.gridviewEventAppliedProduct.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.gridviewEventAppliedProduct.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.Number,
             this.Product_name,
             this.Category_name,
@@ -160,7 +163,7 @@
             this.gridviewEventAppliedProduct.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewEventAppliedProduct.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewEventAppliedProduct.Location = new System.Drawing.Point(3, 34);
-            this.gridviewEventAppliedProduct.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridviewEventAppliedProduct.Margin = new System.Windows.Forms.Padding(4);
             this.gridviewEventAppliedProduct.Name = "gridviewEventAppliedProduct";
             this.gridviewEventAppliedProduct.ReadOnly = true;
             this.gridviewEventAppliedProduct.RowHeadersVisible = false;
@@ -190,39 +193,7 @@
             this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.Height = 22;
             this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewEventAppliedProduct.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            // 
-            // Number
-            // 
-            this.Number.FillWeight = 49.92708F;
-            this.Number.HeaderText = "Product ID";
-            this.Number.MinimumWidth = 6;
-            this.Number.Name = "Number";
-            this.Number.ReadOnly = true;
-            // 
-            // Product_name
-            // 
-            this.Product_name.FillWeight = 74.89062F;
-            this.Product_name.HeaderText = "Product name";
-            this.Product_name.MinimumWidth = 6;
-            this.Product_name.Name = "Product_name";
-            this.Product_name.ReadOnly = true;
-            // 
-            // Category_name
-            // 
-            this.Category_name.HeaderText = "Category name";
-            this.Category_name.MinimumWidth = 6;
-            this.Category_name.Name = "Category_name";
-            this.Category_name.ReadOnly = true;
-            // 
-            // Delete
-            // 
-            this.Delete.FillWeight = 25F;
-            this.Delete.HeaderText = "Delete";
-            this.Delete.MinimumWidth = 6;
-            this.Delete.Name = "Delete";
-            this.Delete.ReadOnly = true;
-            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.gridviewEventAppliedProduct.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewEventAppliedProduct_CellClick);
             // 
             // btn_Add
             // 
@@ -244,6 +215,7 @@
             this.btn_Add.Size = new System.Drawing.Size(80, 44);
             this.btn_Add.TabIndex = 137;
             this.btn_Add.Text = "Add";
+            this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
             // 
             // cbProduct
             // 
@@ -274,7 +246,7 @@
             this.cbSalePercentage.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.cbSalePercentage.CheckedState.InnerColor = System.Drawing.Color.White;
             this.cbSalePercentage.Location = new System.Drawing.Point(323, 305);
-            this.cbSalePercentage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbSalePercentage.Margin = new System.Windows.Forms.Padding(4);
             this.cbSalePercentage.Name = "cbSalePercentage";
             this.cbSalePercentage.Size = new System.Drawing.Size(27, 25);
             this.cbSalePercentage.TabIndex = 145;
@@ -341,6 +313,7 @@
             this.txtSaleValue.SelectedText = "";
             this.txtSaleValue.Size = new System.Drawing.Size(283, 46);
             this.txtSaleValue.TabIndex = 141;
+            this.txtSaleValue.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSaleValue_KeyPress);
             // 
             // btnCancel
             // 
@@ -362,6 +335,7 @@
             this.btnCancel.Size = new System.Drawing.Size(140, 43);
             this.btnCancel.TabIndex = 140;
             this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -383,6 +357,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(140, 43);
             this.btnUpdate.TabIndex = 139;
             this.btnUpdate.Text = "Update";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label12
             // 
@@ -441,18 +416,19 @@
             this.cbcategory.Name = "cbcategory";
             this.cbcategory.Size = new System.Drawing.Size(217, 36);
             this.cbcategory.TabIndex = 134;
+            this.cbcategory.SelectedValueChanged += new System.EventHandler(this.cbcategory_SelectedValueChanged);
             // 
-            // lbAreaID
+            // lbEventID
             // 
-            this.lbAreaID.AutoSize = true;
-            this.lbAreaID.BackColor = System.Drawing.Color.Transparent;
-            this.lbAreaID.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbAreaID.ForeColor = System.Drawing.Color.Gray;
-            this.lbAreaID.Location = new System.Drawing.Point(16, 9);
-            this.lbAreaID.Name = "lbAreaID";
-            this.lbAreaID.Size = new System.Drawing.Size(75, 23);
-            this.lbAreaID.TabIndex = 49;
-            this.lbAreaID.Text = "Event ID";
+            this.lbEventID.AutoSize = true;
+            this.lbEventID.BackColor = System.Drawing.Color.Transparent;
+            this.lbEventID.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbEventID.ForeColor = System.Drawing.Color.Gray;
+            this.lbEventID.Location = new System.Drawing.Point(16, 9);
+            this.lbEventID.Name = "lbEventID";
+            this.lbEventID.Size = new System.Drawing.Size(75, 23);
+            this.lbEventID.TabIndex = 49;
+            this.lbEventID.Text = "Event ID";
             // 
             // guna2BorderlessForm1
             // 
@@ -624,7 +600,7 @@
             this.panelEventID.BorderColor = System.Drawing.Color.Silver;
             this.panelEventID.BorderRadius = 10;
             this.panelEventID.BorderThickness = 2;
-            this.panelEventID.Controls.Add(this.lbAreaID);
+            this.panelEventID.Controls.Add(this.lbEventID);
             this.panelEventID.FillColor = System.Drawing.Color.White;
             this.panelEventID.Location = new System.Drawing.Point(51, 101);
             this.panelEventID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -682,20 +658,81 @@
             this.label13.TabIndex = 49;
             this.label13.Text = "Category";
             // 
-            // guna2Button1
+            // ID
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(474, 366);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 147;
-            this.guna2Button1.Text = "guna2Button1";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // Number
+            // 
+            this.Number.FillWeight = 49.92708F;
+            this.Number.HeaderText = "Drink ID";
+            this.Number.MinimumWidth = 6;
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            // 
+            // Product_name
+            // 
+            this.Product_name.FillWeight = 74.89062F;
+            this.Product_name.HeaderText = "Drink name";
+            this.Product_name.MinimumWidth = 6;
+            this.Product_name.Name = "Product_name";
+            this.Product_name.ReadOnly = true;
+            // 
+            // Category_name
+            // 
+            this.Category_name.HeaderText = "Category name";
+            this.Category_name.MinimumWidth = 6;
+            this.Category_name.Name = "Category_name";
+            this.Category_name.ReadOnly = true;
+            // 
+            // Delete
+            // 
+            this.Delete.FillWeight = 25F;
+            this.Delete.HeaderText = "Delete";
+            this.Delete.MinimumWidth = 6;
+            this.Delete.Name = "Delete";
+            this.Delete.ReadOnly = true;
+            this.Delete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Delete.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // cbStatus
+            // 
+            this.cbStatus.AutoRoundedCorners = true;
+            this.cbStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cbStatus.BorderColor = System.Drawing.Color.Black;
+            this.cbStatus.BorderRadius = 17;
+            this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbStatus.ForeColor = System.Drawing.Color.White;
+            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.Items.AddRange(new object[] {
+            "Active",
+            "InActive"});
+            this.cbStatus.Location = new System.Drawing.Point(503, 380);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbStatus.Name = "cbStatus";
+            this.cbStatus.Size = new System.Drawing.Size(225, 36);
+            this.cbStatus.TabIndex = 147;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.label11.Location = new System.Drawing.Point(426, 380);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 20);
+            this.label11.TabIndex = 148;
+            this.label11.Text = "Status";
             // 
             // EditEvent
             // 
@@ -704,7 +741,8 @@
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(933, 862);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.cbStatus);
             this.Controls.Add(this.guna2Panel3);
             this.Controls.Add(this.cbSaleSamePrice);
             this.Controls.Add(this.guna2Panel2);
@@ -736,11 +774,10 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "EditEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditEvent";
-            this.Load += new System.EventHandler(this.EditEvent_Load);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewEventAppliedProduct)).EndInit();
@@ -761,10 +798,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private System.Windows.Forms.Label label14;
         private Guna.UI2.WinForms.Guna2DataGridView gridviewEventAppliedProduct;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Product_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Category_name;
-        private System.Windows.Forms.DataGridViewButtonColumn Delete;
         private Guna.UI2.WinForms.Guna2GradientButton btn_Add;
         private Guna.UI2.WinForms.Guna2ComboBox cbProduct;
         private Guna.UI2.WinForms.Guna2CustomRadioButton cbSalePercentage;
@@ -777,7 +810,7 @@
         private System.Windows.Forms.Label lbUnit;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ComboBox cbcategory;
-        private System.Windows.Forms.Label lbAreaID;
+        private System.Windows.Forms.Label lbEventID;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
@@ -795,6 +828,12 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
         private System.Windows.Forms.Label label13;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Number;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Product_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Category_name;
+        private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2ComboBox cbStatus;
     }
 }

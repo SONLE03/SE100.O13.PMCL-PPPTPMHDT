@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALAnalysis.cs" />
+    <Compile Include="DALConstraint.cs" />
     <Compile Include="DALRule.cs" />
     <Compile Include="DALStatus.cs" />
     <Compile Include="DALTable.cs" />

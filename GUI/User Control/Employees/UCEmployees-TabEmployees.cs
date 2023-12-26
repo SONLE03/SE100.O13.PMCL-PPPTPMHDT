@@ -70,7 +70,7 @@ namespace GUI
             int idUser = Convert.ToInt32(gridviewEmployee.Rows[idx].Cells["ID"].Value);
             if (e.ColumnIndex == gridviewEmployee.Columns["Edit"].Index)
             {
-                if(idUser == 1 && idUser != BUSUser.Instance.idUserLogin)
+                if(BUSUser.Instance.GetUserById(idUser).UserName.Equals("admin") && idUser == BUSUser.Instance.idUserLogin)
                 {
                     MessageBox.Show("This user cannot be modified", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;

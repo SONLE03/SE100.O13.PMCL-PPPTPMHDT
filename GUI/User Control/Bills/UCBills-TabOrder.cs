@@ -210,7 +210,7 @@ namespace GUI
                             string tableName = cbTable.SelectedItem.ToString().Substring(0, separatorIndex);
 
                             var table = (from p in BUS.BUSTable.Instance.GetAllTable() where p.TableName.Equals(tableName) select p).FirstOrDefault();
-                            BUS.BUSTable.Instance.UpdTable(table.id, tableName, table.AreaID, "InActive");
+                            BUS.BUSTable.Instance.UpdTable(table.id, "InActive");
                             id = BUS.BUSOrder.Instance.AddBill(DateTime.Now, 0, user.id, table.id, "None", double.Parse(total), float.Parse(lbSurcharge.Text.Replace(" VND", ""))) ;
                         }
                         if (id > 0)
@@ -387,7 +387,7 @@ namespace GUI
                 {
                     var tableName = parts[0];
                     var tb = (from p in BUS.BUSTable.Instance.GetAllTable() where p.TableName.Equals(tableName) select p).FirstOrDefault();
-                    if (BUS.BUSTable.Instance.UpdTable(tb.id, tb.TableName, tb.AreaID, "Active"))
+                    if (BUS.BUSTable.Instance.UpdTable(tb.id, "Active"))
                     {
                         LoadArea();
                         MessageBox.Show("This table is clear", "Clear table", MessageBoxButtons.OK, MessageBoxIcon.Information);

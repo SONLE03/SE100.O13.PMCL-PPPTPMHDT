@@ -37,21 +37,21 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtCategoryname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to modify?", "Confirm modify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    bool isSuccess = BUSCategory.Instance.UpdCategory(cat.id, txtCategoryname.Text, cbStatus.Text);
-                    if (isSuccess)
+                    if (!String.IsNullOrEmpty(txtCategoryname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
                     {
-                        MessageBox.Show("Update Category Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        bool isSuccess = BUSCategory.Instance.UpdCategory(cat.id, txtCategoryname.Text, cbStatus.Text);
+                        if (isSuccess)
+                        {
+                            MessageBox.Show("Update category successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Update Failure Category", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Update failure category", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Update Failure Category", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch

@@ -47,21 +47,24 @@ namespace GUI
 
         private void Search()
         {
-            List<AREA> listArea;
-            if (string.Equals(cbStatus.Text, "All", StringComparison.OrdinalIgnoreCase))
-            {
-                listArea = BUSArea.Instance.GetAllArea();
-            }
-            else if(string.Equals(cbStatus.Text, "Active", StringComparison.OrdinalIgnoreCase))
-            {
-                listArea = BUS.BUSArea.Instance.GetAllAreaActive();
-            }
-            else
-            {
-                listArea = BUS.BUSArea.Instance.GetAllAreaInActive();
-            }
-            List<AREA> filteredList = listArea.Where(p => p.AreaName.ToLower().Contains(txtSearch.Text.ToLower())).ToList();
-            LoadArea(filteredList);
+            //List<AREA> listArea;
+            //if (string.Equals(cbStatus.Text, "All", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    listArea = BUSArea.Instance.GetAllArea();
+            //}
+            //else if(string.Equals(cbStatus.Text, "Active", StringComparison.OrdinalIgnoreCase))
+            //{
+            //    listArea = BUS.BUSArea.Instance.GetAllAreaActive();
+            //}
+            //else
+            //{
+            //    listArea = BUS.BUSArea.Instance.GetAllAreaInActive();
+            //}
+            //List<AREA> filteredList = listArea.Where(p => p.AreaName.ToLower().Contains(txtSearch.Text.ToLower())).ToList();
+            //LoadArea(filteredList);
+            string searchText = txtSearch.Text.Trim().ToLower();
+            string selectedStatus = cbStatus.Text;
+            LoadArea(BUSArea.Instance.Search(searchText, selectedStatus));
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

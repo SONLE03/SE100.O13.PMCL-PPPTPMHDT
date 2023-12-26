@@ -40,24 +40,32 @@ namespace GUI
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            List<IMPORT_BILL> list = new List<IMPORT_BILL>();
-            foreach (var p in BUSImportBill.Instance.GetAllImportBill())
+            try
             {
-                if (p.ImportName.ToLower().Contains(txtSearch.Text.ToLower()) || p.SUPPLIER.SupplierName.ToLower().Contains(txtSearch.Text.ToLower()))
-                {
-                    list.Add(p);
-                }
+                string searchText = txtSearch.Text.Trim().ToLower();
+                Binding(BUSImportBill.Instance.SearchImportBill(searchText));
             }
-            Binding(list);
+            catch
+            {
+
+            }
+          
         }
 
         private void gridviewImportOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int idx = e.RowIndex;
-            if (idx < 0) return;
-            int impId = Convert.ToInt32(gridviewImportOrder.Rows[idx].Cells["ID"].Value);
-            ImportOrderDetails importOrderDetail = new ImportOrderDetails(impId);
-            importOrderDetail.Show();
+            try
+            {
+                int idx = e.RowIndex;
+                if (idx < 0) return;
+                int impId = Convert.ToInt32(gridviewImportOrder.Rows[idx].Cells["ID"].Value);
+                ImportOrderDetails importOrderDetail = new ImportOrderDetails(impId);
+                importOrderDetail.Show();
+            }
+            catch 
+            {
+
+            }
         }
     }
 }

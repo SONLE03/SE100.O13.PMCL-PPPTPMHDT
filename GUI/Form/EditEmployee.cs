@@ -87,15 +87,19 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtAddress.Text) && !String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtUserFullName.Text)
+                DialogResult result = MessageBox.Show("Are you sure want to modify?", "Confirm modify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (!String.IsNullOrEmpty(txtAddress.Text) && !String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtUserFullName.Text)
                     && !String.IsNullOrEmpty(txtPhone.Text) && !String.IsNullOrEmpty(cbStatus.Text) && !String.IsNullOrEmpty(combobox_usergroup.Text) && !String.IsNullOrEmpty(fileImageAvatar))
-                {
-                    var isSuccess = BUSUser.Instance.UpdUser(user.id, txtUserFullName.Text, DateOfBirth.Value, txtAddress.Text
-                        , txtEmail.Text, txtPhone.Text, Convert.ToInt32(combobox_usergroup.SelectedValue), cbStatus.Text, fileImageAvatar, user.Password);
-                }
-                else
-                {
-                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    {
+                        var isSuccess = BUSUser.Instance.UpdUser(user.id, txtUserFullName.Text, DateOfBirth.Value, txtAddress.Text
+                            , txtEmail.Text, txtPhone.Text, Convert.ToInt32(combobox_usergroup.SelectedValue), cbStatus.Text, fileImageAvatar, user.Password);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch

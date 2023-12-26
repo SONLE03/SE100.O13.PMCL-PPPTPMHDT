@@ -36,27 +36,37 @@ namespace DAL
         {
             return CFEntities.Instance.AREAs.Find(id);
         }
-        public AREA GetAreaByCode(string AreaId)
+        public AREA GetAreaByName(string nameArea)
         {
-            var res = CFEntities.Instance.AREAs.AsNoTracking().Where(m => m.AreaID == AreaId);
+            var transformedNameArea = DALConstraint.Instance.TransformString(nameArea);
+            var allAreas = CFEntities.Instance.AREAs.AsNoTracking().ToList();
+            var res = allAreas.Where(m => DALConstraint.Instance.TransformString(m.AreaName) == transformedNameArea);
             if (res.Any())
             {
                 return res.FirstOrDefault();
             }
             return null;
         }
-        public List<AREA> FindArea(string name)
+        public List<AREA> SearchArea(string searchText, string selectedStatus)
         {
-            var res = CFEntities.Instance.AREAs.ToList();
-            if (name != null) res = res.Where(t => t.AreaName == name).Select(t => t).ToList();
-            return res;
+            var transformedNameArea = DALConstraint.Instance.TransformString(searchText);
+            List<AREA> listAreas = CFEntities.Instance.AREAs.ToList();
+            List<AREA> filteredList = new List<AREA>();
+            filteredList = listAreas
+                .Where(p =>
+                    (string.IsNullOrEmpty(transformedNameArea) || p.AreaName.ToLower().Contains(transformedNameArea)) &&
+                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                )
+                .ToList();
+            return filteredList;
         }
         public bool AddArea(string AreaName, string status)
         {
             try
             {
+                var transformedNameArea = DALConstraint.Instance.TransformString(AreaName);
                 var obj = new AREA();
-                obj.AreaName = AreaName;
+                obj.AreaName = transformedNameArea;
                 obj.Status = status;
                 CFEntities.Instance.AREAs.Add(obj);
                 CFEntities.Instance.SaveChanges();
@@ -64,7 +74,7 @@ namespace DAL
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.InnerException.ToString());
+                Console.WriteLine(ex.Message);
                 return false;
             }
         }
@@ -74,14 +84,15 @@ namespace DAL
             {
                 AREA area = GetAreaById(idArea);
                 if (area == null) return false;
-                if (AreaName != null) area.AreaName = AreaName;
+                var transformedNameArea = DALConstraint.Instance.TransformString(AreaName);
+                if (AreaName != null) area.AreaName = transformedNameArea;
                 if (Status != area.Status)
                 {
                     area.Status = Status;
                     bool checkTableStatus = area.C_TABLE.Any(table => table.Status == "InUse");
-                    if(!checkTableStatus)
+                    if (!checkTableStatus)
                     {
-                        foreach(var table in area.C_TABLE)
+                        foreach (var table in area.C_TABLE)
                         {
                             table.Status = Status;
                         }
@@ -93,40 +104,6 @@ namespace DAL
             catch
             {
                 return false;
-            }
-        }
-
-        public bool UpdArea(AREA area)
-        {
-            try
-            {
-                CFEntities.Instance.SaveChanges();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-           
-        }
-        public bool DelArea(int idArea)
-        {
-            using (var transaction = CFEntities.Instance.Database.BeginTransaction())
-            {
-                try
-                {
-                    AREA area = GetAreaById(idArea);
-                    if (area == null) return false;
-                    CFEntities.Instance.AREAs.Remove(area);
-                    CFEntities.Instance.SaveChanges();
-                    transaction.Commit();
-                    return true;
-                }
-                catch
-                {
-                    transaction.Rollback();
-                    return false;
-                }
             }
         }
     }

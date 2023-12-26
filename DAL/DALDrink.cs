@@ -40,22 +40,27 @@ namespace DAL
             return CFEntities.Instance.DRINKS.Find(id);
         }
 
-        public DRINK GetDrinkByCode(string DrinksID)
+        public DRINK GetDrinkByName(string drinkName)
         {
-            var res = CFEntities.Instance.DRINKS.AsNoTracking().Where(t => t.DrinksID == DrinksID);
+            var transformedNameDrink = DALConstraint.Instance.TransformString(drinkName);
+            var allDrink= CFEntities.Instance.DRINKS.AsNoTracking().ToList();
+            var res = allDrink.Where(m => DALConstraint.Instance.TransformString(m.DrinksName) == transformedNameDrink);
             if (res.Any())
+            {
                 return res.FirstOrDefault();
+            }
             return null;
         }
-      
+
 
         public List<DRINK> SearchDrinks(string searchText, string selectedCategory, string selectedStatus)
         {
+            var transformedNameDrink = DALConstraint.Instance.TransformString(searchText);
             List<DRINK> listDrinks = CFEntities.Instance.DRINKS.ToList();
             List<DRINK> filteredList = new List<DRINK>();
             filteredList = listDrinks
                 .Where(p =>
-                    (string.IsNullOrEmpty(searchText) || p.DrinksName.ToLower().Contains(searchText)) &&
+                    (string.IsNullOrEmpty(transformedNameDrink) || p.DrinksName.ToLower().Contains(transformedNameDrink)) &&
                     (selectedCategory == "All" || string.Equals(p.CATEGORY.CategoryName, selectedCategory, StringComparison.OrdinalIgnoreCase)) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )
@@ -68,10 +73,12 @@ namespace DAL
         {
             try
             {
+                var transformedNameDrink = DALConstraint.Instance.TransformString(DrinksName);
+                var transformedDescription = DALConstraint.Instance.TransformString(Description);
                 DRINK Drink = new DRINK();
-                Drink.DrinksName = DrinksName;
+                Drink.DrinksName = transformedNameDrink;
                 Drink.CategoryID = drinkCategory;
-                Drink.Description = Description;
+                Drink.Description = transformedDescription;
                 Drink.Image = Image;
                 Drink.Status = status;
                 CFEntities.Instance.DRINKS.Add(Drink);
@@ -90,11 +97,13 @@ namespace DAL
         {
             try
             {
+                var transformedNameDrink = DALConstraint.Instance.TransformString(DrinksName);
+                var transformedDescription = DALConstraint.Instance.TransformString(Description);
                 DRINK Drink = CFEntities.Instance.DRINKS.Find(idDrink);
                 if (Drink == null) return false;
-                if (DrinksName != null) Drink.DrinksName = DrinksName;
+                if (DrinksName != null) Drink.DrinksName = transformedNameDrink;
                 if (drinkCategory != Drink.CategoryID) Drink.CategoryID = drinkCategory;
-                if (Description != null) Drink.Description = Description;
+                if (Description != null) Drink.Description = transformedDescription;
                 if (Image != null) Drink.Image = Image;
                 if (Status != Drink.Status) Drink.Status = Status;
                 if (Drink_SIZEs != null) Drink.DRINKS_SIZE = Drink_SIZEs;
@@ -144,27 +153,5 @@ namespace DAL
                 return false;
             }
         }
-
-        public bool DelDrink(int id)
-        {
-            using (var transaction = CFEntities.Instance.Database.BeginTransaction())
-            {
-                try
-                {
-                    DRINK Drink = GetDrinkById(id);
-                    if (Drink == null) return false;
-                    CFEntities.Instance.DRINKS.Remove(Drink);
-                    CFEntities.Instance.SaveChanges();
-                    transaction.Commit();
-                    return true;
-                }
-                catch
-                {
-                    transaction.Rollback();
-                    return false;
-                }
-            }
-        }
-
     }
 }

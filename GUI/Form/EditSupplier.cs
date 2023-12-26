@@ -29,19 +29,23 @@ namespace GUI
 
         private void btn_Update_Click(object sender, EventArgs e)
         {
-            string supplierName = txtSupname.Text;
-            string phone = txtPhone.Text;
-            string address = txtAddress.Text;
-            string status = cbStatus.Text;
             try
             {
-                if (!String.IsNullOrEmpty(supplierName) && !String.IsNullOrEmpty(phone) && !String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(status))
+                DialogResult result = MessageBox.Show("Are you sure want to modify?", "Confirm modify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    BUSSupplier.Instance.UpdSupplier(supplier.id, supplierName, address, phone, status);
-                }
-                else
-                {
-                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    string supplierName = txtSupname.Text;
+                    string phone = txtPhone.Text;
+                    string address = txtAddress.Text;
+                    string status = cbStatus.Text;
+                    if (!String.IsNullOrEmpty(supplierName) && !String.IsNullOrEmpty(phone) && !String.IsNullOrEmpty(address) && !String.IsNullOrEmpty(status))
+                    {
+                        BUSSupplier.Instance.UpdSupplier(supplier.id, supplierName, address, phone, status);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)

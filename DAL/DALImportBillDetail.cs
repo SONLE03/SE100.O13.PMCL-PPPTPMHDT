@@ -41,7 +41,7 @@ namespace DAL
                     No = idx,
                     ImportID = idIB,
                     IMPORT_BILL = DALImportBill.Instance.GetImportBillById(idIB),
-                    ImportMName = Name,
+                    ImportMName = DALConstraint.Instance.TransformString(Name),
                     Unit = Unit,
                     Quantity = Quantity,
                     Rate = Rate,

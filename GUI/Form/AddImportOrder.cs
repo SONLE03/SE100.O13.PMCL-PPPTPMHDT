@@ -61,10 +61,10 @@ namespace GUI
             {
                 int idx = e.RowIndex;
                 if (idx < 0) return;
-                double totalPriceofProductDelete = Convert.ToDouble(lbTotal.Text) - Convert.ToDouble(gridviewSelectedProducts.Rows[idx].Cells[4].Value);
-                lbTotal.Text = totalPriceofProductDelete.ToString();
                 if (e.ColumnIndex == gridviewSelectedProducts.Columns["Delete"].Index)
                 {
+                    double totalPriceofProductDelete = Convert.ToDouble(lbTotal.Text) - Convert.ToDouble(gridviewSelectedProducts.Rows[idx].Cells[4].Value);
+                    lbTotal.Text = totalPriceofProductDelete.ToString();
                     gridviewSelectedProducts.Rows.RemoveAt(idx);
                 }
             }
@@ -113,14 +113,18 @@ namespace GUI
         {
             try
             {
-                if (String.IsNullOrEmpty(txtImportOrderName.Text) || gridviewSelectedProducts.Rows.Count == 0 || String.IsNullOrEmpty(cbSupplier.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else
-                {
-                    addNewImportOrder(txtImportOrderName.Text, Convert.ToInt32(cbSupplier.SelectedValue));
+                    if (String.IsNullOrEmpty(txtImportOrderName.Text) || gridviewSelectedProducts.Rows.Count == 0 || String.IsNullOrEmpty(cbSupplier.Text))
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        addNewImportOrder(txtImportOrderName.Text, Convert.ToInt32(cbSupplier.SelectedValue));
+                    }
                 }
             }
             catch (Exception ex)

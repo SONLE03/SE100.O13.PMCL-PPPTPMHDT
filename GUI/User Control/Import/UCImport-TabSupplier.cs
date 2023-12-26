@@ -64,20 +64,23 @@ namespace GUI
 
         private void gridviewSupplier_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int idx = e.RowIndex;
-            if (idx < 0) return;
-            int supplierId = Convert.ToInt32(gridviewSupplier.Rows[idx].Cells["ID"].Value);
-            if (e.ColumnIndex == gridviewSupplier.Columns["Edit"].Index)
+            try
             {
-                EditSupplier editSupplier = new EditSupplier(supplierId);
-                editSupplier.ShowDialog();
-                Binding(BUSSupplier.Instance.GetAllSupplier());
-            }
-            else
-            {
-                SupplierDetails supplierDetails = new SupplierDetails(supplierId);
-                supplierDetails.Show();
-            }
+                int idx = e.RowIndex;
+                if (idx < 0) return;
+                int supplierId = Convert.ToInt32(gridviewSupplier.Rows[idx].Cells["ID"].Value);
+                if (e.ColumnIndex == gridviewSupplier.Columns["Edit"].Index)
+                {
+                    EditSupplier editSupplier = new EditSupplier(supplierId);
+                    editSupplier.ShowDialog();
+                    Binding(BUSSupplier.Instance.GetAllSupplier());
+                }
+                else
+                {
+                    SupplierDetails supplierDetails = new SupplierDetails(supplierId);
+                    supplierDetails.Show();
+                }
+            }catch { }           
         }
 
         private void cbStatus_SelectedValueChanged(object sender, EventArgs e)

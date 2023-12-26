@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -38,21 +39,55 @@ namespace BUS
         {
             return DALArea.Instance.GetAreaById(id);
         }
-        public AREA GetAreaByCode(string AreaId)
+        public AREA GetAreaByName(string nameArea)
         {
-            return DALArea.Instance.GetAreaByCode(AreaId);
+            return DALArea.Instance.GetAreaByName(nameArea);
         }
         public bool AddArea(string AreaName, string Status)
         {
-            return DALArea.Instance.AddArea(AreaName, Status);
+            try
+            {
+                if (GetAreaByName(AreaName) != null)
+                {
+                    MessageBox.Show("The area already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (DALArea.Instance.AddArea(AreaName, Status)) return true;
+                MessageBox.Show("Add failure area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }catch
+            {
+                MessageBox.Show("Add failure area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+           
         }
         public bool UpdArea(int idArea, string AreaName, string Status)
         {
-            return DALArea.Instance.UpdArea(idArea, AreaName, Status);
+            try
+            {
+                var area = GetAreaByName(AreaName);
+                if (area != null  && area.id != idArea)
+                {
+                    MessageBox.Show("The area already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (DALArea.Instance.UpdArea(idArea, AreaName, Status))
+                {
+                    return true;
+                }
+                
+                return false;
+            }
+            catch
+            {
+                MessageBox.Show("Modify failure area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
-        public bool DelArea(int idArea)
+        public List<AREA> Search(string searchText, string selectedStatus)
         {
-            return DALArea.Instance.DelArea(idArea);
+            return DALArea.Instance.SearchArea(searchText, selectedStatus);
         }
     }
 }

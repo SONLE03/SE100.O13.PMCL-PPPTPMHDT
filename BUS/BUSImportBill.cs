@@ -46,5 +46,9 @@ namespace BUS
         {
             return DALImportBill.Instance.UpdImportBill(id, total);
         }
+        public List<IMPORT_BILL> SearchImportBill(string searchText)
+        {
+            return DALImportBill.Instance.SearchImportBill(searchText);
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DAL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,14 @@ namespace BUS
             }
             set { instance = value; }
         }
-        public bool PhoneNumberValidator(string phoneNumber)
+        public bool PhoneNumberValidator(string phone)
         {
+            string phoneNumber = DALConstraint.Instance.TransformString(phone); 
             return phoneNumber.Length == 10 && phoneNumber.StartsWith("0");
+        }
+        public bool DateTimeValidatorInEvent(DateTime startDate, DateTime dueDate)
+        {
+            return (startDate.Date >= DateTime.Now.Date) && (dueDate.Date >= startDate.Date);
         }
     }
 }
