@@ -201,7 +201,7 @@ namespace GUI
                         drinks.Add(BUSDrink.Instance.GetDrinkById(p));
                     }
 
-                    if (BUSEvent.Instance.UpdEvent(Event.id, txtEventname.Text, cbSalePercentage.Checked, lbUnit.Text, dtpStartDate.Value, dtpEndDate.Value, float.Parse(txtSaleValue.Text), drinks, cbStatus.Text))
+                    if (BUSEvent.Instance.UpdEvent(Event.id, txtEventname.Text, cbSalePercentage.Checked, lbUnit.Text, dtpStartDate.Value, dtpEndDate.Value, float.Parse(txtSaleValue.Text), drinks, cbStatus.Text, BUSUser.Instance.idUserLogin))
                     {
                         MessageBox.Show("Modify event successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }

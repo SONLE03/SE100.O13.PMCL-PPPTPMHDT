@@ -179,7 +179,7 @@ namespace GUI
                         drinks.Add(BUSDrink.Instance.GetDrinkById(p));
                     }
 
-                    if (BUSEvent.Instance.AddEvent(txtEventname.Text, cbSalePercentage.Checked, lbUnit.Text, dtpStartDate.Value, dtpEndDate.Value, float.Parse(txtSaleValue.Text), drinks) > 0)
+                    if (BUSEvent.Instance.AddEvent(txtEventname.Text, cbSalePercentage.Checked, lbUnit.Text, dtpStartDate.Value, dtpEndDate.Value, float.Parse(txtSaleValue.Text), drinks, BUSUser.Instance.idUserLogin) > 0)
                     {
                         MessageBox.Show("Add event successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         Clear();

@@ -46,7 +46,7 @@ namespace DAL
         {
             var transformedNameCategory = DALConstraint.Instance.TransformString(nameCategory);
             var allCategory = CFEntities.Instance.CATEGORies.AsNoTracking().ToList();
-            var res = allCategory.Where(m => DALConstraint.Instance.TransformString(m.CategoryName) == transformedNameCategory);
+            var res = allCategory.Where(m => DALConstraint.Instance.TransformString(m.CategoryName.ToLower()) == transformedNameCategory);
             if (res.Any())
             {
                 return res.FirstOrDefault();

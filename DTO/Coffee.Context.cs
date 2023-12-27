@@ -26,8 +26,6 @@ namespace DTO
             }
             set => instance = value;
         }
-
-
         public CFEntities()
             : base("name=CFEntities")
         {

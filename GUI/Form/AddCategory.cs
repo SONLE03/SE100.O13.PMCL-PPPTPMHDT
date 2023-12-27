@@ -38,6 +38,7 @@ namespace GUI
                         if (isSuccess)
                         {
                             MessageBox.Show("Add category successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCategoryname.Clear();
                         }
                     }
                     else

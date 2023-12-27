@@ -43,7 +43,7 @@ namespace BUS
         {
             return DALArea.Instance.GetAreaByName(nameArea);
         }
-        public bool AddArea(string AreaName, string Status)
+        public bool AddArea(string AreaName, int capacity, string Status)
         {
             try
             {
@@ -52,7 +52,7 @@ namespace BUS
                     MessageBox.Show("The area already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-                if (DALArea.Instance.AddArea(AreaName, Status)) return true;
+                if (DALArea.Instance.AddArea(AreaName, capacity, Status)) return true;
                 MessageBox.Show("Add failure area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }catch
@@ -62,7 +62,7 @@ namespace BUS
             }
            
         }
-        public bool UpdArea(int idArea, string AreaName, string Status)
+        public bool UpdArea(int idArea, string AreaName, int capacity, string Status)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace BUS
                     MessageBox.Show("The area already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
-                if (DALArea.Instance.UpdArea(idArea, AreaName, Status))
+                if (DALArea.Instance.UpdArea(idArea, AreaName, Status, capacity))
                 {
                     return true;
                 }

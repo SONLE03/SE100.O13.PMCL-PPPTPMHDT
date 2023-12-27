@@ -16,10 +16,12 @@ namespace DTO
     {
         public int BillID { get; set; }
         public int DrinksID { get; set; }
+        public int SizeID { get; set; }
         public Nullable<int> Quantity { get; set; }
         public double Rate { get; set; }
         public Nullable<double> Amount { get; set; }
     
+        public virtual C_SIZE C_SIZE { get; set; }
         public virtual BILL BILL { get; set; }
         public virtual DRINK DRINK { get; set; }
     }

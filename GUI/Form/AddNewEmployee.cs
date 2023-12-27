@@ -38,6 +38,7 @@ namespace GUI
             txtRetypePass.Clear();
             txtUsername.Clear();
             fileImageAvatar = null;
+            avatar.Image = null;
         }
 
         private void btnAddAvatar_Click(object sender, EventArgs e)

@@ -18,7 +18,7 @@ namespace DTO
         public int MinimumAge { get; set; }
         public int MaximumAge { get; set; }
         public int Tax { get; set; }
-        public int MinimumPrice { get; set; }
-        public int MaximumPrice { get; set; }
+        public int MaximumDateForEvent { get; set; }
+        public int MaximumPercentDiscount { get; set; }
     }
 }

@@ -40,7 +40,7 @@ namespace DAL
         {
             var transformedNameArea = DALConstraint.Instance.TransformString(nameArea);
             var allAreas = CFEntities.Instance.AREAs.AsNoTracking().ToList();
-            var res = allAreas.Where(m => DALConstraint.Instance.TransformString(m.AreaName) == transformedNameArea);
+            var res = allAreas.Where(m => DALConstraint.Instance.TransformString(m.AreaName.ToLower()) == transformedNameArea);
             if (res.Any())
             {
                 return res.FirstOrDefault();
@@ -60,7 +60,7 @@ namespace DAL
                 .ToList();
             return filteredList;
         }
-        public bool AddArea(string AreaName, string status)
+        public bool AddArea(string AreaName, int capacity, string status)
         {
             try
             {
@@ -68,6 +68,7 @@ namespace DAL
                 var obj = new AREA();
                 obj.AreaName = transformedNameArea;
                 obj.Status = status;
+                obj.Capacity = capacity;
                 CFEntities.Instance.AREAs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return true;
@@ -78,7 +79,7 @@ namespace DAL
                 return false;
             }
         }
-        public bool UpdArea(int idArea, string AreaName, string Status)
+        public bool UpdArea(int idArea, string AreaName, string Status, int capacity)
         {
             try
             {
@@ -86,6 +87,7 @@ namespace DAL
                 if (area == null) return false;
                 var transformedNameArea = DALConstraint.Instance.TransformString(AreaName);
                 if (AreaName != null) area.AreaName = transformedNameArea;
+                if (capacity > 0) area.Capacity = capacity;
                 if (Status != area.Status)
                 {
                     area.Status = Status;

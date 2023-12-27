@@ -39,7 +39,7 @@ namespace BUS
             return DALEvent.Instance.SearchEvent(searchText);
         }
 
-        public int AddEvent(string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks)
+        public int AddEvent(string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, int userId)
         {
             if(!BUSConstraint.Instance.DateTimeValidatorInEvent(StartDate, DueDate))
             {
@@ -51,9 +51,9 @@ namespace BUS
                 MessageBox.Show("Invalid discount value. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
-            return DALEvent.Instance.AddEvent(EventName, EventType, Unit, StartDate, DueDate, Discount, drinks);
+            return DALEvent.Instance.AddEvent(EventName, EventType, Unit, StartDate, DueDate, Discount, drinks, userId);
         }
-        public bool UpdEvent(int idEV, string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, string Status)
+        public bool UpdEvent(int idEV, string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, string Status, int userId)
         {
             if (!BUSConstraint.Instance.DateTimeValidatorInEvent(StartDate, DueDate))
             {
@@ -65,7 +65,7 @@ namespace BUS
                 MessageBox.Show("Invalid discount value. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            return DALEvent.Instance.UpdEvent(idEV, EventName, EventType, Unit, StartDate, DueDate, Discount, drinks, Status);
+            return DALEvent.Instance.UpdEvent(idEV, EventName, EventType, Unit, StartDate, DueDate, Discount, drinks, Status, userId);
         }
         public bool DelEvent(int idEV)
         {

@@ -45,7 +45,15 @@ namespace GUI
 
         private void gridviewImport_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            try
+            {
+                int idx = e.RowIndex;
+                if (idx < 0) return;
+                int supplierId = Convert.ToInt32(gridviewImport.Rows[idx].Cells["ID"].Value);
+                ImportOrderDetails importOrderDetails = new ImportOrderDetails(supplierId);
+                importOrderDetails.ShowDialog();
+            }
+            catch { }
         }
     }
 }

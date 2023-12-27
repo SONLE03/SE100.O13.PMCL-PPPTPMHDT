@@ -46,7 +46,7 @@ namespace DAL
             return filteredList;
 
         }
-        public int AddEvent (string EventName, bool EventType, string Unit,  DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks)
+        public int AddEvent (string EventName, bool EventType, string Unit,  DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, int userId)
         {
             try
             {
@@ -58,7 +58,7 @@ namespace DAL
                 obj.Discount = Discount;
                 obj.EventType = EventType;
                 obj.Unit = Unit;
-                obj.Status = "Active";
+                obj.UserID = userId;
                 obj.DRINKS = drinks;
                 //foreach(var p in drinks)
                 //{
@@ -80,7 +80,7 @@ namespace DAL
                 return -1;
             }
         }
-        public bool UpdEvent(int idEV, string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, string Status)
+        public bool UpdEvent(int idEV, string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, string Status, int userId)
         {
             try
             {
@@ -97,6 +97,7 @@ namespace DAL
                 if (DueDate != null) ev.DueDate = DueDate;
                 if (Discount != ev.Discount) ev.Discount = Discount;
                 if (Status != ev.Status) ev.Status = Status;
+                if (userId != ev.UserID) ev.UserID = userId;
                 if (drinks != null) ev.DRINKS = drinks;
                 //foreach (var p in drinks)
                 //{

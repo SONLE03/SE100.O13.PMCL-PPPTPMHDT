@@ -238,11 +238,11 @@ namespace GUI
                                             i++;
                                         }
                                     }
-                                    if (BUS.BUSOrderDetail.Instance.AddBillDetail(id, product.id, "none", i, 0))
-                                    {
-                                        listProduct.Add(product.DrinksName);
-                                        continue;
-                                    }
+                                    //if (BUS.BUSOrderDetail.Instance.AddBillDetail(id, product.id, "none", i, 0))
+                                    //{
+                                    //    listProduct.Add(product.DrinksName);
+                                    //    continue;
+                                    //}
                                 }
                             }
                             MessageBox.Show("Created bill successfully", "Create bill", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -23,7 +23,7 @@ namespace DAL
         public string TransformString(string input)
         {
             var normalizedInput = Regex.Replace(input.Trim(), @"\s+", " ");
-            return normalizedInput;
+            return normalizedInput.ToLower();
         }
     }
 }

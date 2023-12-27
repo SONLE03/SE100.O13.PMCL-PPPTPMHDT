@@ -44,7 +44,7 @@ namespace DAL
         {
             var transformedNameDrink = DALConstraint.Instance.TransformString(drinkName);
             var allDrink= CFEntities.Instance.DRINKS.AsNoTracking().ToList();
-            var res = allDrink.Where(m => DALConstraint.Instance.TransformString(m.DrinksName) == transformedNameDrink);
+            var res = allDrink.Where(m => DALConstraint.Instance.TransformString(m.DrinksName.ToLower()) == transformedNameDrink);
             if (res.Any())
             {
                 return res.FirstOrDefault();

@@ -44,6 +44,7 @@ namespace GUI
                 }
             }
             Binding(list);
+            // Adđ createBy
         }
 
         private void gridviewInvoice_CellClick(object sender, DataGridViewCellEventArgs e)

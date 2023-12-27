@@ -30,6 +30,8 @@ namespace DAL
                     MinimumAge = 18,
                     MaximumAge = 25,
                     Tax = 8,
+                    MaximumDateForEvent = 7,
+                    MaximumPercentDiscount = 20,
                 });
                 CFEntities.Instance.SaveChanges();
             }
@@ -75,6 +77,36 @@ namespace DAL
             {
                 C_RULE ts = GetAllRule();
                 ts.Tax = tax;
+                CFEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+        public bool UpdMaximumDateForEvent(int MaximumDateForEvent)
+        {
+            try
+            {
+                C_RULE ts = GetAllRule();
+                ts.MaximumDateForEvent = MaximumDateForEvent;
+                CFEntities.Instance.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+
+        }
+        public bool UpdMaximumPercentDiscount(int MaximumPercentDiscount)
+        {
+            try
+            {
+                C_RULE ts = GetAllRule();
+                ts.MaximumPercentDiscount = MaximumPercentDiscount;
                 CFEntities.Instance.SaveChanges();
                 return true;
             }

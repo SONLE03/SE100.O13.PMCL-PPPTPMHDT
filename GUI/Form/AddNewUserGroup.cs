@@ -59,18 +59,18 @@ namespace GUI
                             MessageBox.Show("User group already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-                        int isSucces = BUSGroupUser.Instance.AddGroupUser(txtUserGroupName.Text, cbStatus.Text);
-                        if (isSucces == -1)
+                        int isSuccess = BUSGroupUser.Instance.AddGroupUser(txtUserGroupName.Text, cbStatus.Text);
+                        if (isSuccess == -1)
                         {
-                            MessageBox.Show("Added failed", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Add Failure User Group", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-                        if (!BUSGroupUser.Instance.AddGroupService(isSucces, listService()))
+                        if (!BUSGroupUser.Instance.AddGroupService(isSuccess, listService()))
                         {
-                            MessageBox.Show("Added failed", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Add Failure User Group", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             return;
                         }
-                        MessageBox.Show("Added successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Add User Group successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                     else

@@ -29,12 +29,13 @@ namespace GUI
                 DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (result == DialogResult.Yes)
                 {
-                    if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                    if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text) && !String.IsNullOrEmpty(txtCapacity.Text))
                     {
-                        bool isSuccess = BUSArea.Instance.AddArea(txtAreaname.Text, cbStatus.Text);
+                        bool isSuccess = BUSArea.Instance.AddArea(txtAreaname.Text, Convert.ToInt32(txtCapacity.Text), cbStatus.Text);
                         if (isSuccess)
                         {
                             MessageBox.Show("Add area successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Clear();
                         }
                     }
                     else
@@ -49,6 +50,15 @@ namespace GUI
             }
             
         }
-
+        private void Clear()
+        {
+            txtAreaname.Clear();
+            txtCapacity.Clear();    
+        }
+        private void txtCapacity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

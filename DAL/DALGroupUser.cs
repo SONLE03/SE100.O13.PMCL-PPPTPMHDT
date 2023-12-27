@@ -31,9 +31,13 @@ namespace DAL
         }
         public bool GetGroupUserByName(string name)
         {
-            var res = CFEntities.Instance.GROUPUSERs.AsNoTracking().Where(n => n.GroupUserName.ToLower().Contains(name)).ToList();
+            var transformedGroupUserName = DALConstraint.Instance.TransformString(name);
+            var allGroupUser = CFEntities.Instance.GROUPUSERs.AsNoTracking().ToList();
+            var res = allGroupUser.Where(m => DALConstraint.Instance.TransformString(m.GroupUserName.ToLower()) == transformedGroupUserName);
             if (res.Any())
+            {
                 return true;
+            }
             return false;
         }
         public GROUPUSER GetGroupUserById(int id)

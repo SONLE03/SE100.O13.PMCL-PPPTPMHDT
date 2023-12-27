@@ -77,6 +77,7 @@ namespace GUI
         {
             try
             {
+                // Check capacity
                 if (!BUSTable.Instance.checkAreaStatus(Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text))
                 {
                     MessageBox.Show("Add Failure Table, Area Is Blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
