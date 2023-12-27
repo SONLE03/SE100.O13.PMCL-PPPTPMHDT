@@ -64,6 +64,10 @@ namespace GUI
         {
             int index = 0;
             string tableName = BUSTable.Instance.GetAllTableByAreaID(Convert.ToInt32(comboboxArea.SelectedValue)).LastOrDefault()?.TableName;
+            if (tableName == null)
+            {
+                return index;
+            }
             string pattern = @"Table\s*(\S+)";
             Match match = Regex.Match(tableName, pattern);
             if (match.Success)
@@ -99,9 +103,9 @@ namespace GUI
                     MessageBox.Show("Add Failure Table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch
+            catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 

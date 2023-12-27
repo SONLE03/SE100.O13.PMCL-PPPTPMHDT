@@ -242,7 +242,13 @@ VALUES
   ('Cappuccino', 1, 'Espresso coffee with steamed milk foam', 'cappuccino.jpg', 'Active'),
   ('Green Tea', 2, 'Healthy green tea', 'green_tea.jpg', 'Active'),
   ('Mango Smoothie', 3, 'Blended mango goodness', 'mango_smoothie.jpg', 'Active');
-
+  ('Latte', 1, 'Espresso coffee with steamed milk', 'latte.jpg', 'Active'),
+  ('Black Tea', 2, 'Classic black tea', 'black_tea.jpg', 'Active'),
+  ('Strawberry Smoothie', 3, 'Blended strawberry delight', 'strawberry_smoothie.jpg', 'Active');
+  
+  INSERT INTO _TABLE (TableName, AreaID, Status)
+VALUES
+    ('Table 1', 1, 'Active');
 INSERT INTO _SIZE (SizeName) VALUES
   ('S'),
   ('M'),
@@ -259,7 +265,15 @@ VALUES
   (3, 1, 30000), -- Mango Smoothie, Small, OriginalPrice: $5.99, No Discount
   (3, 2, 40000), -- Mango Smoothie, Medium, OriginalPrice: $6.99, Discount: 10%
   (3, 3, 50000); -- Mango Smoothie, Large, OriginalPrice: $7.99, No Discount
-
+  (4, 1, 30000), -- Cappuccino, Small, OriginalPrice: $3.99, Discount: 20%
+  (4, 2, 40000), -- Cappuccino, Medium, OriginalPrice: $4.99, Discount: 10%
+  (4, 3, 50000), -- Cappuccino, Large, OriginalPrice: $5.99, No Discount
+  (5, 1, 30000), -- Green Tea, Small, OriginalPrice: $2.49, No Discount
+  (5, 2, 40000), -- Green Tea, Medium, OriginalPrice: $3.49, Discount: 15%
+  (5, 3, 50000), -- Green Tea, Large, OriginalPrice: $4.49, No Discount
+  (6, 1, 30000), -- Mango Smoothie, Small, OriginalPrice: $5.99, No Discount
+  (6, 2, 40000), -- Mango Smoothie, Medium, OriginalPrice: $6.99, Discount: 10%
+  (6, 3, 50000); -- Mango Smoothie, Large, OriginalPrice: $7.99, No Discount
 INSERT INTO SUPPLIER (SupplierName, Address, Phone, Status)
 VALUES
   ('ABC Suppliers', '123 Main Street, Cityville', '0945679061', 'Active'),
@@ -272,6 +286,39 @@ VALUES
   ('Area 2',50, 'Active'),
   ('Area 3',50, 'Inactive');
 
+-- Insert data into BILL table
+DECLARE @StartDate DATETIME = '2023-01-01';
+DECLARE @EndDate DATETIME = '2023-12-28';
+
+WHILE @StartDate <= @EndDate
+BEGIN
+  INSERT INTO BILL (BillDate, UserID, TableID, Status, Note, SubTotal, Tax, Total)
+  VALUES
+    (@StartDate, 1, 1, 'Paid', 'Bill note for ' + CONVERT(NVARCHAR(MAX), @StartDate), 50.0, 5.0, 55.0);
+
+  SET @StartDate = DATEADD(DAY, 1, @StartDate);
+END
+
+DECLARE @StartDate DATETIME = '2023-06-29';
+DECLARE @EndDate DATETIME = '2023-12-28';
+-- Insert data into BILL_DETAIL table
+DECLARE @BillID INT;
+
+SET @StartDate = '2023-01-01';
+
+WHILE @StartDate <= @EndDate
+BEGIN
+  SET @BillID = (SELECT id FROM BILL WHERE BillDate = @StartDate);
+
+  INSERT INTO BILL_DETAIL (BillID, DrinksID, SizeID, Quantity, Rate, Amount)
+  VALUES
+    (@BillID, 1, 4, 2, 3.99, 7.98),
+    (@BillID, 2, 5, 1, 3.49, 3.49),
+    (@BillID, 3, 6, 3, 7.99, 23.97);
+
+  SET @StartDate = DATEADD(DAY, 1, @StartDate);
+END
+
 
 select * from _USER
 select * from Supplier
@@ -279,3 +326,4 @@ select * from _TABLE
 select * from DRINKS
 select * from DRINKS_SIZE
 select * from CATEGORY
+select * from BILL_DETAIL
