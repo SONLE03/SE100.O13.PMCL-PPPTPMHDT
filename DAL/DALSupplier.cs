@@ -42,11 +42,12 @@ namespace DAL
         }
         public List<SUPPLIER> SearchSupplier(string searchText, string selectedStatus)
         {
+            var transformedNameSupplier = DALConstraint.Instance.TransformString(searchText);
             List<SUPPLIER> listSupplier = CFEntities.Instance.SUPPLIERs.ToList();
             List<SUPPLIER> filteredList = new List<SUPPLIER>();
             filteredList = listSupplier
                 .Where(p =>
-                    (string.IsNullOrEmpty(searchText) || p.SupplierName.ToLower().Contains(searchText.ToLower())) &&
+                    (string.IsNullOrEmpty(transformedNameSupplier) || p.SupplierName.ToLower().Contains(transformedNameSupplier.ToLower())) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )
                 .ToList();
@@ -58,8 +59,8 @@ namespace DAL
             try
             {
                 var obj = new SUPPLIER();
-                obj.SupplierName = SupplierName;
-                obj.Address = Address;
+                obj.SupplierName = DALConstraint.Instance.TransformString(SupplierName);
+                obj.Address = DALConstraint.Instance.TransformString(Address);
                 obj.Phone = Phone;
                 obj.Status = Status;
                 CFEntities.Instance.SUPPLIERs.Add(obj);
@@ -78,8 +79,8 @@ namespace DAL
             {
                 SUPPLIER obj = GetSupplierById(SupplierID);
                 if (obj == null) return false;
-                if (SupplierName != null) obj.SupplierName = SupplierName;
-                if (Address != null) obj.Address = Address;
+                if (SupplierName != null) obj.SupplierName = DALConstraint.Instance.TransformString(SupplierName); 
+                if (Address != null) obj.Address = DALConstraint.Instance.TransformString(Address);
                 if (Phone != null) obj.Phone = Phone;
                 if (Status != obj.Status) obj.Status = Status;
                 CFEntities.Instance.SaveChanges();
@@ -88,26 +89,6 @@ namespace DAL
             catch
             {
                 return false;
-            }
-        }
-        public bool DelNhaCungCap(int SupplierID)
-        {
-            using (var transaction = CFEntities.Instance.Database.BeginTransaction())
-            {
-                try
-                {
-                    SUPPLIER obj = GetSupplierById(SupplierID);
-                    if (obj == null) return false;
-                    CFEntities.Instance.SUPPLIERs.Remove(obj);
-                    CFEntities.Instance.SaveChanges();
-                    transaction.Commit();
-                    return true;
-                }
-                catch
-                {
-                    transaction.Rollback();
-                    return false;
-                }
             }
         }
     }

@@ -52,10 +52,6 @@ namespace BUS
         {
             return DALGroupUser.Instance.UpdGroupUser(id, GroupUserName, status, service);
         }
-        public bool DelGroupUser(int id)
-        {
-            return DALGroupUser.Instance.DelGroupUser(id);
-        }
         public bool AddGroupService(int id, List<SERVICE> listService)
         {
             return DALGroupUser.Instance.AddGroupService(id, listService);

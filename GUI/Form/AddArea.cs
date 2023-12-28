@@ -26,21 +26,22 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    bool isSuccess = BUSArea.Instance.AddArea(txtAreaname.Text, cbStatus.Text);
-                    if (isSuccess)
+                    if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text) && !String.IsNullOrEmpty(txtCapacity.Text))
                     {
-                        MessageBox.Show("Add Area Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        bool isSuccess = BUSArea.Instance.AddArea(txtAreaname.Text, Convert.ToInt32(txtCapacity.Text), cbStatus.Text);
+                        if (isSuccess)
+                        {
+                            MessageBox.Show("Add area successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            Clear();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Add Failure Area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Add Failure Area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch
@@ -49,6 +50,15 @@ namespace GUI
             }
             
         }
-
+        private void Clear()
+        {
+            txtAreaname.Clear();
+            txtCapacity.Clear();    
+        }
+        private void txtCapacity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
     }
 }

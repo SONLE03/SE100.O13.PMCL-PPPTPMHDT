@@ -76,18 +76,24 @@ namespace GUI
         {
             try
             {
-                string drinkName = txtProductname.Text;
-                int idCategory = Convert.ToInt32(combobox_category.SelectedValue);
-                string category = combobox_category.Text;
-                string description = txtDescibe.Text;
-                if (String.IsNullOrEmpty(drinkName) || SizeGrid.Rows.Count == 0 || String.IsNullOrEmpty(category) || String.IsNullOrEmpty(filePath) || String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to modify?", "Confirm modify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else
-                {
-                    updateProduct(drink.id, drinkName, idCategory, category, description);
+                    string drinkName = txtProductname.Text;
+                    int idCategory = Convert.ToInt32(combobox_category.SelectedValue);
+                    string category = combobox_category.Text;
+                    string description = txtDescibe.Text;
+                    if (String.IsNullOrEmpty(drinkName) || SizeGrid.Rows.Count == 0 || String.IsNullOrEmpty(category) || String.IsNullOrEmpty(filePath) || String.IsNullOrEmpty(cbStatus.Text))
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (!BUSDrink.Instance.checkCategoryStatus(idCategory, cbStatus.Text))
+                    {
+                        MessageBox.Show("Add failure drink. Category is blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    updateDrinkt(drink.id, drinkName, idCategory, description);
                 }
             }
             catch (Exception ex)
@@ -95,15 +101,10 @@ namespace GUI
                 MessageBox.Show("Update Failure Product", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        private void updateProduct(int drinkId, string drinkName, int idCategory, string category, string description)
+        private void updateDrinkt(int drinkId, string drinkName, int idCategory, string description)
         {
             try
             {
-                if (BUSCategory.Instance.categoryIsBlocked(idCategory) && cbStatus.Text.Equals("Active"))
-                {
-                    MessageBox.Show("Update Failure Product, Category Is Blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return; 
-                }
                 List<DRINKS_SIZE> dRINKS_SIZEs = new List<DRINKS_SIZE>();
                 foreach (DataGridViewRow rows in SizeGrid.Rows)
                 {
@@ -118,12 +119,8 @@ namespace GUI
                 bool isSuccess = BUSDrink.Instance.UpdDrink(drinkId, drinkName, idCategory, description, filePath, dRINKS_SIZEs, cbStatus.Text);
                 if (isSuccess)
                 {
-                    MessageBox.Show("Update Product Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Modify Product Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                else
-                {
-                    MessageBox.Show("Update Failure Product", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }   
             }
             catch
             {

@@ -25,7 +25,6 @@ namespace DTO
         public string TableName { get; set; }
         public int AreaID { get; set; }
         public string Status { get; set; }
-
         public string TableNameAndStatus => $"{TableName} | {Status}";
 
         public virtual AREA AREA { get; set; }

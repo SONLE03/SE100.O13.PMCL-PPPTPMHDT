@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace GUI
 {
-    public partial class EditImportOrder : Form
+    public partial class OrderDetail : Form
     {
-        public EditImportOrder(int id)
+        public OrderDetail()
         {
             InitializeComponent();
         }

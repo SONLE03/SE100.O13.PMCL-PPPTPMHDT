@@ -29,5 +29,9 @@ namespace BUS
         {
             return DALAnalysis.Instance.MonthlyRevenues();
         }
+        public List<CustomRevenueDTO> customRevenueDTOs(DateTime startDate, DateTime endDate)
+        {
+            return DALAnalysis.Instance.CustomRevenues(startDate, endDate);
+        }
     }
 }

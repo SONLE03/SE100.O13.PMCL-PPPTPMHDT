@@ -35,9 +35,9 @@ namespace BUS
             return DALOrderDetail.Instance.updateQuantity(idBill, idDrink);
         }
 
-        public bool AddBillDetail(int idBill, int DrinksID, string Unit, int Quantity, float Rate)
+        public bool AddBillDetail(int idBill, int DrinksID, int SizeID, int Quantity, float Rate)
         {
-            return DALOrderDetail.Instance.AddBillDetail(idBill, DrinksID, Quantity, Rate);
+            return DALOrderDetail.Instance.AddBillDetail(idBill, DrinksID, SizeID, Quantity, Rate);
         }
     }
 }

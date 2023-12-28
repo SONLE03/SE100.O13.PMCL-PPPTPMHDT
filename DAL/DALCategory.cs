@@ -42,28 +42,37 @@ namespace DAL
             if (category.Status.Equals("Active")) return false;
             return true;
         }
-        public CATEGORY GetCategoryByCode(string cateID)
+        public CATEGORY GetCategoryByName(string nameCategory)
         {
-            var res = CFEntities.Instance.CATEGORies.AsNoTracking().Where(m => m.CategoryID == cateID);
+            var transformedNameCategory = DALConstraint.Instance.TransformString(nameCategory);
+            var allCategory = CFEntities.Instance.CATEGORies.AsNoTracking().ToList();
+            var res = allCategory.Where(m => DALConstraint.Instance.TransformString(m.CategoryName.ToLower()) == transformedNameCategory);
             if (res.Any())
             {
                 return res.FirstOrDefault();
             }
             return null;
         }
-        public List<CATEGORY> FindCategory(string CategoryID, string CategoryName)
+        public List<CATEGORY> SearchCategory(string searchText, string selectedStatus)
         {
-            var res = CFEntities.Instance.CATEGORies.ToList();
-            if (CategoryID != null) res = res.Where(t => t.CategoryID == CategoryID).Select(t => t).ToList();
-            if (CategoryName != null) res = res.Where(t => t.CategoryName == CategoryName).Select(t => t).ToList();
-            return res;
+            var transformedNameCategory = DALConstraint.Instance.TransformString(searchText);
+            List<CATEGORY> listCategory = CFEntities.Instance.CATEGORies.ToList();
+            List<CATEGORY> filteredList = new List<CATEGORY>();
+            filteredList = listCategory
+                .Where(p =>
+                    (string.IsNullOrEmpty(transformedNameCategory) || p.CategoryName.ToLower().Contains(transformedNameCategory)) &&
+                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                )
+                .ToList();
+            return filteredList;
         }
         public bool AddCategory(string CategoryName, string status)
         {
             try
             {
+                var transformedCategory = DALConstraint.Instance.TransformString(CategoryName);
                 var obj = new CATEGORY();
-                obj.CategoryName = CategoryName;
+                obj.CategoryName = transformedCategory;
                 obj.Status = status;
                 CFEntities.Instance.CATEGORies.Add(obj);
                 CFEntities.Instance.SaveChanges();
@@ -79,9 +88,10 @@ namespace DAL
         {
             try
             {
+                var transformedCategory = DALConstraint.Instance.TransformString(CategoryName);
                 CATEGORY cat = GetCategoryById(idCat);
                 if (cat == null) return false;
-                if (CategoryName != null) cat.CategoryName = CategoryName;
+                if (CategoryName != null) cat.CategoryName = transformedCategory;
                 if (Status != cat.Status)
                 {
                     cat.Status = Status;
@@ -96,26 +106,6 @@ namespace DAL
             catch
             {
                 return false;
-            }
-        }
-        public bool DelCategory(int idCat)
-        {
-            using (var transaction = CFEntities.Instance.Database.BeginTransaction())
-            {
-                try
-                {
-                    CATEGORY cat = GetCategoryById(idCat);
-                    if (cat == null) return false;
-                    CFEntities.Instance.CATEGORies.Remove(cat);
-                    CFEntities.Instance.SaveChanges();
-                    transaction.Commit();
-                    return true;
-                }
-                catch
-                {
-                    transaction.Rollback();
-                    return false;
-                }
             }
         }
     }

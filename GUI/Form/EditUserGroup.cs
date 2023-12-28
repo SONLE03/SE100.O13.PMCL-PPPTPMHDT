@@ -67,26 +67,30 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtUGName.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to modify?", "Confirm modify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    if (!groupUserName.Equals(txtUGName.Text) && BUSGroupUser.Instance.GetGroupUserByName(txtUGName.Text))
+                    if (!String.IsNullOrEmpty(txtUGName.Text) && !String.IsNullOrEmpty(cbStatus.Text))
                     {
-                        MessageBox.Show("User group already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    bool isSuccess = BUSGroupUser.Instance.UpdGroupUser(id, txtUGName.Text, cbStatus.Text, listService());
-                    if (isSuccess)
-                    {
-                        MessageBox.Show("Update User Group Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (!groupUserName.Equals(txtUGName.Text) && BUSGroupUser.Instance.GetGroupUserByName(txtUGName.Text))
+                        {
+                            MessageBox.Show("User group already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        bool isSuccess = BUSGroupUser.Instance.UpdGroupUser(id, txtUGName.Text, cbStatus.Text, listService());
+                        if (isSuccess)
+                        {
+                            MessageBox.Show("Update User Group Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Update Failure User Group", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
                         MessageBox.Show("Update Failure User Group", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Update Failure User Group", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch

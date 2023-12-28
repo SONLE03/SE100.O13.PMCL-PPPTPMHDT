@@ -138,23 +138,29 @@ namespace GUI
         {
             try
             {
-                string productName = txtProductname.Text;
-                int idCategory = Convert.ToInt32(combobox_category.SelectedValue);
-                string category = combobox_category.Text;
-                string description = txtDescibe.Text;
-                if (String.IsNullOrEmpty(productName) || SizeGrid.Rows.Count == 0 || String.IsNullOrEmpty(category) || String.IsNullOrEmpty(filePath) || String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else
-                {
+                    string productName = txtProductname.Text;
+                    int idCategory = Convert.ToInt32(combobox_category.SelectedValue);
+                    string category = combobox_category.Text;
+                    string description = txtDescibe.Text;
+                    if (String.IsNullOrEmpty(productName) || SizeGrid.Rows.Count == 0 || String.IsNullOrEmpty(category) || String.IsNullOrEmpty(filePath) || String.IsNullOrEmpty(cbStatus.Text))
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    if (!BUSDrink.Instance.checkCategoryStatus(idCategory, cbStatus.Text))
+                    {
+                        MessageBox.Show("Add failure drink. Category is blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
                     addNewProduct(productName, idCategory, category, description);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Add Failure Product", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Add failure drink", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -170,14 +176,13 @@ namespace GUI
                 DRINK drink = BUSDrink.Instance.AddDrink(productName, idCategory, description, filePath, cbStatus.Text);
                 if(drink == null)
                 {
-                    MessageBox.Show("Add Failure Product, Category Is Blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
                 foreach (DataGridViewRow rows in SizeGrid.Rows)
                 {
                     BUSDrink_Size.Instance.AddDrink_Size(drink, Convert.ToInt32(rows.Cells[0].Value), Convert.ToDouble(rows.Cells[2].Value));
                 }
-                MessageBox.Show("Add Product Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Add drink successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Clear();
             }
             catch

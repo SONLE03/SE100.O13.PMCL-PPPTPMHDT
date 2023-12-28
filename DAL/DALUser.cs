@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.UI.WebControls;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -75,7 +77,6 @@ namespace DAL
                 return true;
             return false;
         }
-
         public bool AddUser(string UserFullName, DateTime DateofBirth, string Address, string Phone,
                                  string UserName, string Password, string Email, int GroupUserID, string Image, string status)
         {
@@ -99,8 +100,9 @@ namespace DAL
                 CFEntities.Instance.SaveChanges();
                 return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                MessageBox.Show(ex.Message);
                 return false;
             }
         }

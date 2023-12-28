@@ -26,6 +26,7 @@ namespace GUI
             lbAreaID.Text = area.AreaID;
             txtAreaname.Text = area.AreaName;
             cbStatus.Text = area.Status;
+            txtCapacity.Text = area.Capacity.ToString();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
@@ -37,27 +38,37 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to modify?", "Confirm modify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    bool isSuccess = BUSArea.Instance.UpdArea(area.id, txtAreaname.Text, cbStatus.Text);
-                    if (isSuccess)
+                    if (!String.IsNullOrEmpty(txtAreaname.Text) && !String.IsNullOrEmpty(cbStatus.Text) && !String.IsNullOrEmpty(txtCapacity.Text))
                     {
-                        MessageBox.Show("Update Area Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        bool isSuccess = BUSArea.Instance.UpdArea(area.id, txtAreaname.Text, Convert.ToInt32(txtCapacity.Text), cbStatus.Text);
+                        if (isSuccess)
+                        {
+                            MessageBox.Show("Update Area Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Update Failure Area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Update Failure Area", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch
             {
 
             }
+        }
+
+        private void txtCapacity_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

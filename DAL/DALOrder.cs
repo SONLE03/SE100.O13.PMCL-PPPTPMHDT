@@ -21,7 +21,7 @@ namespace DAL
         }
         public List<BILL> GetAllBill()
         {
-            return CFEntities.Instance.BILLs.AsNoTracking().ToList();
+            return CFEntities.Instance.BILLs.AsNoTracking().OrderByDescending(bill => bill.BillDate).ToList();
         }
         public BILL GetBillById(int id)
         {
@@ -36,15 +36,13 @@ namespace DAL
             }
             return null;
         }
-        //public List<BILL> FindPhieuNhap(DateTime BillDate, int? Status, int? UserID, int? TableID)
-        //{
-        //    var res = CFEntities.Instance.BILLs.ToList();
-        //    if (Status != null) res = res.Where(t => t.Status == Status).Select(t => t).ToList();
-        //    if (UserID != null) res = res.Where(t => t.UserID == UserID).Select(t => t).ToList();
-        //    if (TableID != null) res = res.Where(t => t.TableID == TableID).Select(t => t).ToList();
-        //    if (BillDate != null) res = res.Where(t => t.BillDate == BillDate).Select(t => t).ToList();
-        //    return res;
-        //}
+        public List<BILL> GetAllInvoicesForYourShift(int userID, DateTime dateLogin)
+        {
+            var invoices = CFEntities.Instance.BILLs.AsNoTracking()
+                .Where(bill => bill.UserID == userID && bill.BillDate >= dateLogin)
+                .ToList();
+            return invoices;
+        }
         public int AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note, double total, float tax)
         {
             try

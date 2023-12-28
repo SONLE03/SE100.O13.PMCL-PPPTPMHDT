@@ -29,21 +29,22 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtCategoryname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    bool isSucces = BUSCategory.Instance.AddCategory(txtCategoryname.Text, cbStatus.Text);
-                    if (isSucces)
+                    if (!String.IsNullOrEmpty(txtCategoryname.Text) && !String.IsNullOrEmpty(cbStatus.Text))
                     {
-                        MessageBox.Show("Added successfully", "Add category", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        bool isSuccess = BUSCategory.Instance.AddCategory(txtCategoryname.Text, cbStatus.Text);
+                        if (isSuccess)
+                        {
+                            MessageBox.Show("Add category successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCategoryname.Clear();
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Added failed", "Add category", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Lack of information", "Add category", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch

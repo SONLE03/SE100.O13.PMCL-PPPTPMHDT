@@ -38,6 +38,7 @@ namespace GUI
             txtRetypePass.Clear();
             txtUsername.Clear();
             fileImageAvatar = null;
+            avatar.Image = null;
         }
 
         private void btnAddAvatar_Click(object sender, EventArgs e)
@@ -69,21 +70,25 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtAddress.Text) && !String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtUserFullName.Text)
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    if (!String.IsNullOrEmpty(txtAddress.Text) && !String.IsNullOrEmpty(txtEmail.Text) && !String.IsNullOrEmpty(txtUserFullName.Text)
                     && !String.IsNullOrEmpty(txtPass.Text) && !String.IsNullOrEmpty(txtPhone.Text) && !String.IsNullOrEmpty(txtRetypePass.Text)
                     && !String.IsNullOrEmpty(txtUsername.Text) && !String.IsNullOrEmpty(cbStatus.Text) && !String.IsNullOrEmpty(combobox_usergroup.Text) && !String.IsNullOrEmpty(fileImageAvatar))
-                {
-                    var isSuccess = BUSUser.Instance.AddUser(txtUserFullName.Text, DateOfBirth.Value, txtAddress.Text, txtPhone.Text, txtUsername.Text
-                        , txtPass.Text, txtRetypePass.Text,  txtEmail.Text, Convert.ToInt32(combobox_usergroup.SelectedValue), fileImageAvatar, cbStatus.Text);
-                    if(isSuccess)
                     {
-                        Clear();
-                    }
+                        var isSuccess = BUSUser.Instance.AddUser(txtUserFullName.Text, DateOfBirth.Value, txtAddress.Text, txtPhone.Text, txtUsername.Text
+                            , txtPass.Text, txtRetypePass.Text, txtEmail.Text, Convert.ToInt32(combobox_usergroup.SelectedValue), fileImageAvatar, cbStatus.Text);
+                        if (isSuccess)
+                        {
+                            Clear();
+                        }
 
-                }
-                else
-                {
-                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch

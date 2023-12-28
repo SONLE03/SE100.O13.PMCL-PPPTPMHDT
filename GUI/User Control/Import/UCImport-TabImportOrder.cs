@@ -1,4 +1,5 @@
 ﻿using BUS;
+using BUS.BUSPrint;
 using DTO;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace GUI
 {
     public partial class UCImport_TabImportOrder : UserControl
     {
+        private BUSPrintImportOrder printImport;
         public UCImport_TabImportOrder()
         {
             InitializeComponent();
@@ -24,10 +26,12 @@ namespace GUI
         {
             Image edit_img = Properties.Resources.edit_icon;
             edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
+            Image print_img = Properties.Resources.printer;
+            print_img = (Image)(new Bitmap(print_img, new Size(25, 25)));
             gridviewImportOrder.Rows.Clear();
             foreach (IMPORT_BILL im in import)
             {
-                gridviewImportOrder.Rows.Add(im.id, im.ImportID, im.ImportName, im.ImportDate, im.SUPPLIER.SupplierName, im.IMPORT_BILL_DETAIL.Count, im.Total, edit_img);
+                gridviewImportOrder.Rows.Add(im.id, im.ImportID, im.ImportName, im.ImportDate, im.SUPPLIER.SupplierName, im.IMPORT_BILL_DETAIL.Count, im.Total, edit_img, print_img);
             }
         }
 
@@ -40,24 +44,56 @@ namespace GUI
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            List<IMPORT_BILL> list = new List<IMPORT_BILL>();
-            foreach (var p in BUSImportBill.Instance.GetAllImportBill())
+            try
             {
-                if (p.ImportName.ToLower().Contains(txtSearch.Text.ToLower()) || p.SUPPLIER.SupplierName.ToLower().Contains(txtSearch.Text.ToLower()))
-                {
-                    list.Add(p);
-                }
+                string searchText = txtSearch.Text.Trim().ToLower();
+                Binding(BUSImportBill.Instance.SearchImportBill(searchText));
             }
-            Binding(list);
+            catch
+            {
+
+            }
+          
         }
 
         private void gridviewImportOrder_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            int idx = e.RowIndex;
-            if (idx < 0) return;
-            int impId = Convert.ToInt32(gridviewImportOrder.Rows[idx].Cells["ID"].Value);
-            ImportOrderDetails importOrderDetail = new ImportOrderDetails(impId);
-            importOrderDetail.Show();
+            try
+            {
+                int idx = e.RowIndex;
+                if (idx < 0) return;
+                int impId = Convert.ToInt32(gridviewImportOrder.Rows[idx].Cells["ID"].Value);
+                if (e.ColumnIndex == gridviewImportOrder.Columns["Edit"].Index)
+                {
+                    EditImportOrder importOrder = new EditImportOrder(impId);
+                    importOrder.ShowDialog();
+                    Binding(BUSImportBill.Instance.GetAllImportBill());
+                }
+                else if(e.ColumnIndex == gridviewImportOrder.Columns["Print"].Index)
+                {
+                    print(impId);
+                }
+                else
+                {
+                    ImportOrderDetails importOrderDetail = new ImportOrderDetails(impId);
+                    importOrderDetail.Show();
+                }
+            }
+            catch(Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        private void print(int importID)
+        {
+            var importBill = BUSImportBill.Instance.GetImportBillById(importID);
+            var importBillDetail = importBill.IMPORT_BILL_DETAIL.ToList();
+            foreach (var im in importBillDetail)
+            {
+                dataGridViewPrint.Rows.Add(im.No, im.ImportMName, im.Unit, im.Quantity, im.Rate, im.Amount);
+            }
+            printImport = new BUSPrintImportOrder(dataGridViewPrint, importBill);
+            printImport.PrintReport();
         }
     }
 }

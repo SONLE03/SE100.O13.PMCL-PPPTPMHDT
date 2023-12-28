@@ -25,6 +25,8 @@ namespace GUI
             numericMaxAge.Value = (int)rule.MaximumAge;
             numericMinAge.Value = (int)rule.MinimumAge; 
             numericTax.Value = (int)rule.Tax;
+            numericMaxDateForEvent.Value = (int)rule.MaximumDateForEvent;
+            numericMaxPercentDiscount.Value = (int)rule.MaximumPercentDiscount;
         }
         private void numericMinAge_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -46,8 +48,20 @@ namespace GUI
 
         private void btnChangeRegulations_Click(object sender, EventArgs e)
         {
-            BUSRule.Instance.UpdRule((int)numericMaxAge.Value, (int)numericMinAge.Value, (int)numericTax.Value);
+            BUSRule.Instance.UpdRule((int)numericMinAge.Value, (int)numericMaxAge.Value, (int)numericTax.Value, (int)numericMaxDateForEvent.Value, (int)numericMaxPercentDiscount.Value);
             Bind();
+        }
+
+        private void numericMaxPercentDiscount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void numericMaxDateForEvent_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

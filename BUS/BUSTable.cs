@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Caching;
 
 namespace BUS
 {
@@ -48,20 +49,32 @@ namespace BUS
             return DALTable.Instance.GetTableByCode(idTable);
         }
         public bool AddTable(string tableName, int areaid, string status)
-        {
-            if(!checkAreaStatus(areaid, status)) return false;          
+        { 
             return DALTable.Instance.AddTable(tableName, areaid, status);
         }
-        public bool UpdTable(int tableID, string tableName, int areaid, string status)
+        public bool UpdTable(int tableID, string status)
         {
-            if (!checkAreaStatus(areaid, status)) return false;
-            return DALTable.Instance.UpdTable(tableID, tableName, areaid, status);
+            return DALTable.Instance.UpdTable(tableID, status);
         }
         public bool checkAreaStatus(int areaid, string status)
         {
             AREA area = DALArea.Instance.GetAreaById(areaid);
             if (area.Status.Equals("InActive") && status.Equals("Active")) return false;
             return true;
+        }
+        public int checkAreaCapacity(int areaid, int capacity)
+        {
+            AREA area = DALArea.Instance.GetAreaById(areaid);
+            int numberOfEmptyTable = area.Capacity - area.C_TABLE.Count;
+            if (numberOfEmptyTable == 0)
+            {
+                return 0;
+            }
+            if (numberOfEmptyTable >= capacity)
+            {
+                return capacity;
+            }
+            return numberOfEmptyTable;
         }
         public List<C_TABLE> Search(string searchText, string selectedArea, string selectedStatus)
         {

@@ -17,6 +17,7 @@ namespace DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public C_SIZE()
         {
+            this.BILL_DETAIL = new HashSet<BILL_DETAIL>();
             this.DRINKS_SIZE = new HashSet<DRINKS_SIZE>();
         }
     
@@ -24,6 +25,8 @@ namespace DTO
         public string SizeID { get; set; }
         public string SizeName { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<BILL_DETAIL> BILL_DETAIL { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DRINKS_SIZE> DRINKS_SIZE { get; set; }
     }

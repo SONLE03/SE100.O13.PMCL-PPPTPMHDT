@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -32,18 +33,26 @@ namespace GUI
         {
             this.Close();
         }
+        private void Clear()
+        {
+            txtQuantity.Clear();
+        }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
-                if(!String.IsNullOrEmpty(txtTableName.Text) && !String.IsNullOrEmpty(comboboxArea.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    addNewTable();
-                }
-                else
-                {
-                    MessageBox.Show("Add Failure Table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    if (!String.IsNullOrEmpty(comboboxArea.Text) && !String.IsNullOrEmpty(cbStatus.Text) && !String.IsNullOrEmpty(txtQuantity.Text))
+                    {
+                        addNewTable();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch
@@ -51,32 +60,68 @@ namespace GUI
 
             }
         }
+        private int getLastOfTableNumber()
+        {
+            int index = 0;
+            string tableName = BUSTable.Instance.GetAllTableByAreaID(Convert.ToInt32(comboboxArea.SelectedValue)).LastOrDefault()?.TableName;
+            if (tableName == null)
+            {
+                return index;
+            }
+            string pattern = @"Table\s*(\S+)";
+            Match match = Regex.Match(tableName, pattern);
+            if (match.Success)
+            {
+                index = Convert.ToInt32(match.Groups[1].Value.Trim());
+            }
+            //MessageBox.Show(getLastOfTableNumber().ToString());
+            return index;
+        }
         private void addNewTable()
         {
             try
             {
-                int quantity = 1;
-                int i = 1;
-                if (!String.IsNullOrEmpty(txtQuantity.Text))
+                // Check area status
+                if (!BUSTable.Instance.checkAreaStatus(Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text))
                 {
-                    quantity = Convert.ToInt32(txtQuantity.Text);
+                    MessageBox.Show("Add Failure Table, Area Is Blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                for (i = 1; i <= quantity; i++)
+                // Check area capacity
+                int inputQuantity = Convert.ToInt32(txtQuantity.Text);
+                int numberOfTableEmpty = BUSTable.Instance.checkAreaCapacity(Convert.ToInt32(comboboxArea.SelectedValue), inputQuantity);
+                if (numberOfTableEmpty == 0)
                 {
-                    BUSTable.Instance.AddTable(txtTableName.Text + i.ToString(), Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text);
+                    MessageBox.Show("No vacancy", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                if (i == quantity + 1)
+                if (numberOfTableEmpty != inputQuantity)
+                {
+                    DialogResult result = MessageBox.Show($"The number of remaining vacancies is {numberOfTableEmpty}?. Do you want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
+                int i = getLastOfTableNumber() + 1;
+                numberOfTableEmpty += i;
+                for (; i < numberOfTableEmpty; i++)
+                {
+                    BUSTable.Instance.AddTable("Table " + i.ToString(), Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text);
+                }
+                if (i == numberOfTableEmpty)
                 {
                     MessageBox.Show("Add Table Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Clear();
                 }
                 else
                 {
                     MessageBox.Show("Add Failure Table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch
+            catch(Exception ex)
             {
-
+                MessageBox.Show(ex.Message);
             }
         }
 
@@ -84,11 +129,6 @@ namespace GUI
         {
             if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
                 e.Handled = true;
-        }
-
-        private void comboboxArea_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -19,25 +19,15 @@ namespace GUI
         {
             InitializeComponent();
             table = BUSTable.Instance.GetTableById(id);
-            getArea();
             getTable(table);
            
         }
         private void getTable(C_TABLE table)
         {
             lbTableID.Text = table.TableID;
-            txtTableName.Text = table.TableName;
-            comboboxArea.SelectedValue = table.AREA.id;
+            lbArea.Text = table.AREA.AreaName;
             cbStatus.Text = table.Status;
         }
-        private void getArea()
-        {
-            var listAreas = BUSArea.Instance.GetAllArea();
-            comboboxArea.DataSource = listAreas;
-            comboboxArea.ValueMember = "id";
-            comboboxArea.DisplayMember = "AreaName";
-        }
-
         private void bthCancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -47,21 +37,29 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtTableName.Text) && !String.IsNullOrEmpty(comboboxArea.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to modify?", "Confirm modify", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    bool isSuccess = BUSTable.Instance.UpdTable(table.id, txtTableName.Text, Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text);
-                    if (isSuccess)
+                    if (!String.IsNullOrEmpty(cbStatus.Text))
                     {
-                        MessageBox.Show("Update Table Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        if (!BUSTable.Instance.checkAreaStatus(table.AreaID, cbStatus.Text))
+                        {
+                            MessageBox.Show("Add failure table, area is blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        if (BUSTable.Instance.UpdTable(table.id, cbStatus.Text))
+                        {
+                            MessageBox.Show("Modify table successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Modify failure table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                     {
-                        MessageBox.Show("Update Failure Table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Update Failure Table", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch

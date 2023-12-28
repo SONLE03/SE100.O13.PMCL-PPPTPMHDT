@@ -17,12 +17,23 @@ namespace GUI
         public UCBills_TabInvoices()
         {
             InitializeComponent();
-            Binding(BUSOrder.Instance.GetAllBill());
+            cbFilter.SelectedIndex = 0;
         }
-        private void setBillFormality()
+        private void cbFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //cbStatus.Items.AddRange(new string[] { "All", "On Spot", "Take Away" });
-            //cbStatus.SelectedIndex = 0;
+            if (!cbFilter.Text.Contains("All"))
+            {
+                lbRevenue.Visible = true;
+                lbRevenueValue.Visible = true;
+                Binding(BUSOrder.Instance.GetAllInvoicesForYourShift());
+                lbRevenueValue.Text = BUSOrder.Instance.revenue.ToString() + " VND";
+            }
+            else
+            {
+                lbRevenue.Visible = false;
+                lbRevenueValue.Visible = false;
+                Binding(BUSOrder.Instance.GetAllBill());
+            }
         }
 
         private void Binding(List<BILL> bills)
@@ -44,6 +55,7 @@ namespace GUI
                 }
             }
             Binding(list);
+            // Adđ createBy
         }
 
         private void gridviewInvoice_CellClick(object sender, DataGridViewCellEventArgs e)

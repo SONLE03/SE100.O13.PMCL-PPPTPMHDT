@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BUS
 {
@@ -40,10 +42,11 @@ namespace BUS
             return DALDrink.Instance.GetDrinkById(id);
         }
 
-        public DRINK GetDrinkByCode(string DrinksID)
+        public DRINK GetDrinkyByName(string drinkName)
         {
-            return DALDrink.Instance.GetDrinkByCode(DrinksID);
-        }
+            return DALDrink.Instance.GetDrinkByName(drinkName);
+        } 
+
         public bool checkCategoryStatus(int catId, string status)
         {
             CATEGORY cat = DALCategory.Instance.GetCategoryById(catId);
@@ -54,15 +57,45 @@ namespace BUS
         public DRINK AddDrink(string DrinksName, int drinkCategory,
             string Description, string Image, string status)
         {
-            if (!checkCategoryStatus(drinkCategory, status)) return null;
-            return DALDrink.Instance.AddDrink(DrinksName, drinkCategory, Description, Image, status);
+            try
+            {
+                if (GetDrinkyByName(DrinksName) != null)
+                {
+                    MessageBox.Show("The drink already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return null;
+                }
+                DRINK drink = DALDrink.Instance.AddDrink(DrinksName, drinkCategory, Description, Image, status);
+                if (drink != null) return drink;
+                MessageBox.Show("Add failure drink", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
+            catch
+            {
+                MessageBox.Show("Add failure drink", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return null;
+            }
         }
 
         public bool UpdDrink(int idDrink, string DrinksName, int drinkCategory,
             string Description, string Image, List<DRINKS_SIZE> Drink_SIZEs, string Status)
         {
-            if (!checkCategoryStatus(drinkCategory, Status)) return false;
-            return DALDrink.Instance.UpdDrink(idDrink, DrinksName, drinkCategory, Description, Image, Drink_SIZEs, Status);
+            try
+            {
+                var drink = GetDrinkyByName(DrinksName);
+                if (drink != null && drink.id != idDrink)
+                {
+                    MessageBox.Show("The drink already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
+                if (DALDrink.Instance.UpdDrink(idDrink, DrinksName, drinkCategory, Description, Image, Drink_SIZEs, Status)) return true;
+                MessageBox.Show("Modify failure drink", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            catch
+            {
+                MessageBox.Show("Modify failure drink", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
         }
 
         public bool UpdDrinkEvent(int idDrink, EVENT ev)
@@ -73,11 +106,6 @@ namespace BUS
         public bool UpdateImageErrorNotFound(int idDrink, string Image)
         {
             return DALDrink.Instance.UpdDrinkImageNotFound(idDrink, Image);
-        }
-
-        public bool DelDrink(int id)
-        {
-            return DALDrink.Instance.DelDrink(id);
         }
         public List<DRINK> SearchDrinks(string searchText, string selectedCategory, string selectedStatus)
         {

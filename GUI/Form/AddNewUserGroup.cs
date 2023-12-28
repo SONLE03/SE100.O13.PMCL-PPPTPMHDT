@@ -49,30 +49,34 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtUserGroupName.Text) && !String.IsNullOrEmpty(cbStatus.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    if (BUSGroupUser.Instance.GetGroupUserByName(txtUserGroupName.Text))
+                    if (!String.IsNullOrEmpty(txtUserGroupName.Text) && !String.IsNullOrEmpty(cbStatus.Text))
                     {
-                        MessageBox.Show("User group already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        if (BUSGroupUser.Instance.GetGroupUserByName(txtUserGroupName.Text))
+                        {
+                            MessageBox.Show("User group already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        int isSuccess = BUSGroupUser.Instance.AddGroupUser(txtUserGroupName.Text, cbStatus.Text);
+                        if (isSuccess == -1)
+                        {
+                            MessageBox.Show("Add Failure User Group", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        if (!BUSGroupUser.Instance.AddGroupService(isSuccess, listService()))
+                        {
+                            MessageBox.Show("Add Failure User Group", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            return;
+                        }
+                        MessageBox.Show("Add User Group successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
-                    int isSucces = BUSGroupUser.Instance.AddGroupUser(txtUserGroupName.Text, cbStatus.Text);
-                    if (isSucces == -1)
+                    else
                     {
-                        MessageBox.Show("Added failed", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    if(!BUSGroupUser.Instance.AddGroupService(isSucces, listService()))
-                    {
-                        MessageBox.Show("Added failed", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                    MessageBox.Show("Added successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    
-                }
-                else
-                {
-                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch

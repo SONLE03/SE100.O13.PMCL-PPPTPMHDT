@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -37,19 +38,24 @@ namespace DAL
             }
             return null;
         }
-        public List<IMPORT_BILL> FindImportBill(string ImportID, string ImportName)
+        public List<IMPORT_BILL> SearchImportBill(string searchText)
         {
-            var res = CFEntities.Instance.IMPORT_BILL.ToList();
-            if (ImportID != null) res = res.Where(t => t.ImportID == ImportID).Select(t => t).ToList();
-            if (ImportName != null) res = res.Where(t => t.ImportName == ImportName).Select(t => t).ToList();
-            return res;
+            var transformedNameImportBill = DALConstraint.Instance.TransformString(searchText);
+            List<IMPORT_BILL> listSImportBill = CFEntities.Instance.IMPORT_BILL.ToList();
+            List<IMPORT_BILL> filteredList = new List<IMPORT_BILL>();
+            filteredList = listSImportBill
+                .Where(p =>
+                    (string.IsNullOrEmpty(transformedNameImportBill) || p.ImportName.ToLower().Contains(transformedNameImportBill.ToLower()))
+                )
+                .ToList();
+            return filteredList;
         }
         public int AddImportBill(string ImportName, DateTime ImportDate, int SupplierId, int UserId)
         {
             try
             {
                 var obj = new IMPORT_BILL();
-                obj.ImportName = ImportName;
+                obj.ImportName = DALConstraint.Instance.TransformString(ImportName);
                 obj.SupplierID = SupplierId;
                 obj.UserID = UserId;
                 obj.Total = 0;

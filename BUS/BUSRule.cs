@@ -27,33 +27,16 @@ namespace BUS
         {
             return DALRule.Instance.GetAllRule();
         }
-        public void UpdRule(int minAge, int maxAge, int tax)
+        public void UpdRule(int minAge, int maxAge, int tax, int maxDate, int maxPercent)
         {
-            if (DALRule.Instance.UpdMinimumAge(minAge) && DALRule.Instance.UpdMaximumAge(maxAge) && DALRule.Instance.UpdTax(tax))
+            if (DALRule.Instance.UpdMinimumAge(minAge) && DALRule.Instance.UpdMaximumAge(maxAge) && DALRule.Instance.UpdTax(tax) 
+                && DALRule.Instance.UpdMaximumDateForEvent(maxDate) && DALRule.Instance.UpdMaximumPercentDiscount(maxPercent))
             {
-                MessageBox.Show("Changes have been saved", "Notifycation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Changes have been saved", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
             MessageBox.Show("Invalid information. Please check again", "Notifycation", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return;
-        }
-        public string UpdMinimumAge(int age)
-        {
-            if (DALRule.Instance.UpdMinimumAge(age))
-                return "";
-            return "Error";
-        }
-        public string UpdMaximumAge(int age)
-        {
-            if (DALRule.Instance.UpdMaximumAge(age))
-                return "";
-            return "Error";
-        }
-        public string UpdTax(int tax)
-        {
-            if (DALRule.Instance.UpdTax(tax))
-                return "";
-            return "Error";
         }
     }
 }

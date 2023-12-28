@@ -14,8 +14,6 @@ namespace GUI
 {
     public partial class UCHome : UserControl
     {
-        private DBLogic model;
-        private Guna.UI2.WinForms.Guna2Button CurrentBtn;
         public UCHome()
         {
             InitializeComponent();

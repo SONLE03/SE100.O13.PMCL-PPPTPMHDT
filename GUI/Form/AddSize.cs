@@ -28,18 +28,22 @@ namespace GUI
         {
             try
             {
-                if (!String.IsNullOrEmpty(txtSizename.Text.ToString()))
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    var isSuccess = BUSSize.Instance.AddSize(getSizeName());
-                    if (isSuccess)
+                    if (!String.IsNullOrEmpty(txtSizename.Text.ToString()))
                     {
-                        MessageBox.Show("Add New Size Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtSizename.Clear();
+                        var isSuccess = BUSSize.Instance.AddSize(getSizeName());
+                        if (isSuccess)
+                        {
+                            MessageBox.Show("Add New Size Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtSizename.Clear();
+                        }
                     }
-                }
-                else
-                {
-                    MessageBox.Show("Please enter the size name", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    else
+                    {
+                        MessageBox.Show("Please enter the size name", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)

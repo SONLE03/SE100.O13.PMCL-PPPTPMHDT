@@ -1,4 +1,5 @@
 ﻿using BUS;
+using BUS.BUSPrint;
 using DTO;
 using Guna.UI2.WinForms.Suite;
 using System;
@@ -17,6 +18,7 @@ namespace GUI
 {
     public partial class AddImportOrder : Form
     {
+        private BUSPrintImportOrder printImport;
         public AddImportOrder()
         {
             InitializeComponent();
@@ -61,10 +63,10 @@ namespace GUI
             {
                 int idx = e.RowIndex;
                 if (idx < 0) return;
-                double totalPriceofProductDelete = Convert.ToDouble(lbTotal.Text) - Convert.ToDouble(gridviewSelectedProducts.Rows[idx].Cells[4].Value);
-                lbTotal.Text = totalPriceofProductDelete.ToString();
                 if (e.ColumnIndex == gridviewSelectedProducts.Columns["Delete"].Index)
                 {
+                    double totalPriceofProductDelete = Convert.ToDouble(lbTotal.Text) - Convert.ToDouble(gridviewSelectedProducts.Rows[idx].Cells[4].Value);
+                    lbTotal.Text = totalPriceofProductDelete.ToString();
                     gridviewSelectedProducts.Rows.RemoveAt(idx);
                 }
             }
@@ -102,6 +104,7 @@ namespace GUI
                     idx++;
                 }
                 MessageBox.Show("Add New Import Order Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Print(addImportOrder);
                 Clear();
             }
             catch
@@ -113,14 +116,18 @@ namespace GUI
         {
             try
             {
-                if (String.IsNullOrEmpty(txtImportOrderName.Text) || gridviewSelectedProducts.Rows.Count == 0 || String.IsNullOrEmpty(cbSupplier.Text))
+                DialogResult result = MessageBox.Show("Are you sure want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
                 {
-                    MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-                else
-                {
-                    addNewImportOrder(txtImportOrderName.Text, Convert.ToInt32(cbSupplier.SelectedValue));
+                    if (String.IsNullOrEmpty(txtImportOrderName.Text) || gridviewSelectedProducts.Rows.Count == 0 || String.IsNullOrEmpty(cbSupplier.Text))
+                    {
+                        MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+                    else
+                    {
+                        addNewImportOrder(txtImportOrderName.Text, Convert.ToInt32(cbSupplier.SelectedValue));
+                    }
                 }
             }
             catch (Exception ex)
@@ -161,7 +168,16 @@ namespace GUI
                 MessageBox.Show(ex.Message);
             }
         }
-
-       
+        private void Print(int importID)
+        {
+            var importBill = BUSImportBill.Instance.GetImportBillById(importID);
+            var importBillDetail = importBill.IMPORT_BILL_DETAIL.ToList();
+            foreach(var im in importBillDetail)
+            {
+                dataGridViewPrint.Rows.Add(im.No, im.ImportMName, im.Unit, im.Quantity, im.Rate, im.Amount);
+            }
+            printImport = new BUSPrintImportOrder(dataGridViewPrint, importBill);
+            printImport.PrintReport();
+        }
     }
 }

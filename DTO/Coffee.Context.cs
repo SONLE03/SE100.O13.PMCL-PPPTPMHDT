@@ -16,6 +16,7 @@ namespace DTO
     public partial class CFEntities : DbContext
     {
         private static CFEntities instance;
+
         public static CFEntities Instance
         {
             get
@@ -25,7 +26,6 @@ namespace DTO
             }
             set => instance = value;
         }
-
         public CFEntities()
             : base("name=CFEntities")
         {

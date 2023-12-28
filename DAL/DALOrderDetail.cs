@@ -47,7 +47,7 @@ namespace DAL
             }
         }
 
-        public bool AddBillDetail(int idBill, int DrinksID, int Quantity, float Rate)
+        public bool AddBillDetail(int idBill, int DrinksID, int sizeID, int Quantity, float Rate)
         {
             try
             {
@@ -58,6 +58,7 @@ namespace DAL
                     BillID = idBill,
                     BILL = bill,
                     DrinksID = DrinksID,
+                    SizeID = sizeID,
                     Quantity = Quantity,
                     Rate = Rate,
                     Amount = Quantity * Rate

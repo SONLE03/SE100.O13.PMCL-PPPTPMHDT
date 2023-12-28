@@ -108,6 +108,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Coffee.edmx</DependentUpon>
     </Compile>
+    <Compile Include="CustomRevenueDTO.cs" />
     <Compile Include="C_RULE.cs">
       <DependentUpon>Coffee.tt</DependentUpon>
     </Compile>
