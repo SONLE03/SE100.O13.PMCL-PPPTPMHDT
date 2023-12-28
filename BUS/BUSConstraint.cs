@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace BUS
 {
@@ -27,7 +28,9 @@ namespace BUS
         }
         public bool DateTimeValidatorInEvent(DateTime startDate, DateTime dueDate)
         {
-            return (startDate.Date >= DateTime.Now.Date) && (dueDate.Date >= startDate.Date);
+            TimeSpan span = dueDate - startDate;
+            int gap = span.Days;
+            return (startDate.Date >= DateTime.Now.Date) && (dueDate.Date >= startDate.Date) && gap <= BUSRule.Instance.GetAllRule().MaximumDateForEvent;
         }
     }
 }

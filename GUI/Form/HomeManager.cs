@@ -32,7 +32,7 @@ namespace GUI
         {
             InitializeComponent();
             this.user = user;
-            BUSUser.Instance.idUserLogin = user.id;
+            BUSUser.Instance.SetUserLoginInfo(user.id);
             foreach (var service in BUSUser.Instance.GetUserById(user.id).GROUPUSER.SERVICEs)
             {
                 services.Add(service.id);
@@ -64,7 +64,7 @@ namespace GUI
 
         private void Log_out_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Are you sure to log out ?", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            if (MessageBox.Show($"Your revenue is {BUSOrder.Instance.revenue} VND. Are you sure to log out ?", "Log out", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 this.Hide();
                 Login login = new Login();

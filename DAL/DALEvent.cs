@@ -60,7 +60,8 @@ namespace DAL
                 obj.Unit = Unit;
                 obj.UserID = userId;
                 obj.DRINKS = drinks;
-                //foreach(var p in drinks)
+                obj.Status = "Active";
+                //foreach (var p in drinks)
                 //{
                 //    DRINK drink = DALDrink.Instance.GetDrinkById(p.id);
                 //    if (!drink.EVENTs.Any(c => c.EventName.Equals(EventName)))
@@ -68,7 +69,7 @@ namespace DAL
                 //        drink.EVENTs.Add(obj);
                 //        obj.DRINKS.Add(drink);
                 //    }
-                //}    
+                //}
 
                 CFEntities.Instance.EVENTs.Add(obj);
                 CFEntities.Instance.SaveChanges();

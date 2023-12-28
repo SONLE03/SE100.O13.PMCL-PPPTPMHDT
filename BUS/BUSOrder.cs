@@ -22,9 +22,17 @@ namespace BUS
             set { instance = value; }
         }
 
+        public double revenue { get; set; }  
+
         public List<BILL> GetAllBill()
         {
             return DALOrder.Instance.GetAllBill();
+        }
+        public List<BILL> GetAllInvoicesForYourShift()
+        {
+            List<BILL> listBills = DALOrder.Instance.GetAllInvoicesForYourShift(BUSUser.Instance.idUserLogin, BUSUser.Instance.dateLogin);
+            revenue = (double)listBills.Sum(bill => bill.Total);
+            return listBills;
         }
         public BILL GetBillById(int id)
         {

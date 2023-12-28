@@ -27,6 +27,13 @@ namespace BUS
             set { instance = value; }
         }
         public int idUserLogin { get; set; }
+        public DateTime dateLogin { get; set; }
+        public void SetUserLoginInfo(int userID)
+        {
+            idUserLogin = userID;
+            dateLogin = DateTime.Now;
+            BUSOrder.Instance.GetAllInvoicesForYourShift();
+        }
         public List<C_USER> GetAllUser()
         {
             return DALUser.Instance.GetAllUser();
@@ -73,6 +80,18 @@ namespace BUS
             if (groupUser.Status.Equals("InActive") && status.Equals("Active")) return false;
             return true;
         }
+        private bool UserNameValidator(string username)
+        {
+            if (username.Length < 6)
+                return false;
+            // Kiểm tra ký tự chấp nhận
+            if (!Regex.IsMatch(username, "^[a-zA-Z0-9_.]+$"))
+                return false;
+            // Kiểm tra không để trống
+            if (string.IsNullOrWhiteSpace(username))
+                return false;
+            return true;
+        }
         private bool PasswordValidator(string password, string retypePass)
         {
             return password.Length >= 8 && password.Equals(retypePass) && Regex.IsMatch(password, "[a-zA-Z]") && Regex.IsMatch(password, "\\d");
@@ -83,11 +102,11 @@ namespace BUS
             int gap = createDate.Year - DateofBirth.Year;
             if (createDate.Month < DateofBirth.Month || (createDate.Month == DateofBirth.Month && createDate.Day < DateofBirth.Day))
                 gap -= 1;
-            return gap >= BUSRule.Instance.GetAllRule().MinimumAge;
+            return gap >= BUSRule.Instance.GetAllRule().MinimumAge && gap <= BUSRule.Instance.GetAllRule().MaximumAge;
         }
         private bool EmailValidator(string email)
         {
-            return Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@gmail\.com$");
+            return string.IsNullOrWhiteSpace(email) && Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@gmail\.com$");
         }
         private bool CheckValidator(DateTime DateofBirth, string Phone, string UserName,string Password
                                     ,string retypePass, string Email, int GroupUserID, string status)
@@ -102,6 +121,11 @@ namespace BUS
                 MessageBox.Show("The UserName already exists!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
+            else if (UserNameValidator(UserName))
+            {
+                MessageBox.Show("Invalid UserName", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             else if (!BUSConstraint.Instance.PhoneNumberValidator(Phone))
             {
                 MessageBox.Show("Invalid phone number", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -114,7 +138,7 @@ namespace BUS
             }
             else if (!DateOfBirthValidator(DateofBirth))
             {
-                MessageBox.Show("User must be over 18 years old", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"User must be over 18 years old and under {BUSRule.Instance.GetAllRule().MaximumAge} years old ", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (!EmailValidator(Email))

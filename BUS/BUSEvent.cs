@@ -46,7 +46,7 @@ namespace BUS
                 MessageBox.Show("Date validation failed. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
-            if (Unit.Equals("%") && Discount > 100)
+            if (Unit.Equals("%") && Discount > BUSRule.Instance.GetAllRule().MaximumPercentDiscount)
             {
                 MessageBox.Show("Invalid discount value. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
@@ -60,7 +60,7 @@ namespace BUS
                 MessageBox.Show("Date validation failed. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (Unit.Equals("%") && Discount > 100)
+            if (Unit.Equals("%") && Discount > BUSRule.Instance.GetAllRule().MaximumPercentDiscount)
             {
                 MessageBox.Show("Invalid discount value. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;

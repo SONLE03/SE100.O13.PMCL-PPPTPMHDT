@@ -56,6 +56,19 @@ namespace DAL
 
             return monthlyRevenues;
         }
-
+        public List<CustomRevenueDTO> CustomRevenues(DateTime startDate, DateTime endDate)
+        {
+            var customRevenues = CFEntities.Instance.BILLs
+                .Where(bill => bill.BillDate >= startDate && bill.BillDate <= endDate)
+                .GroupBy(bill => new { Date = bill.BillDate })
+                .Select(group => new CustomRevenueDTO
+                {
+                    Day = group.Key.Date,
+                    TotalRevenue = (double)group.Sum(bill => bill.Total)
+                })
+                .OrderBy(result => result.Day)
+                .ToList();
+            return customRevenues;
+        }
     }
 }
