@@ -81,19 +81,35 @@ namespace GUI
         {
             try
             {
-                // Check capacity
+                // Check area status
                 if (!BUSTable.Instance.checkAreaStatus(Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text))
                 {
                     MessageBox.Show("Add Failure Table, Area Is Blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                // Check area capacity
+                int inputQuantity = Convert.ToInt32(txtQuantity.Text);
+                int numberOfTableEmpty = BUSTable.Instance.checkAreaCapacity(Convert.ToInt32(comboboxArea.SelectedValue), inputQuantity);
+                if (numberOfTableEmpty == 0)
+                {
+                    MessageBox.Show("No vacancy", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (numberOfTableEmpty != inputQuantity)
+                {
+                    DialogResult result = MessageBox.Show($"The number of remaining vacancies is {numberOfTableEmpty}?. Do you want to add?", "Confirm add", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (result == DialogResult.No)
+                    {
+                        return;
+                    }
+                }
                 int i = getLastOfTableNumber() + 1;
-                int quantity = Convert.ToInt32(txtQuantity.Text) + i;
-                for (; i < quantity; i++)
+                numberOfTableEmpty += i;
+                for (; i < numberOfTableEmpty; i++)
                 {
                     BUSTable.Instance.AddTable("Table " + i.ToString(), Convert.ToInt32(comboboxArea.SelectedValue), cbStatus.Text);
                 }
-                if (i == quantity)
+                if (i == numberOfTableEmpty)
                 {
                     MessageBox.Show("Add Table Successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Clear();

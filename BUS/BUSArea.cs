@@ -72,6 +72,11 @@ namespace BUS
                     MessageBox.Show("The area already exists", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return false;
                 }
+                if (area.C_TABLE.Count > capacity)
+                {
+                    MessageBox.Show("The number of tables entered is invalid.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return false;
+                }
                 if (DALArea.Instance.UpdArea(idArea, AreaName, Status, capacity))
                 {
                     return true;

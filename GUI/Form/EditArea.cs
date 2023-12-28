@@ -26,6 +26,7 @@ namespace GUI
             lbAreaID.Text = area.AreaID;
             txtAreaname.Text = area.AreaName;
             cbStatus.Text = area.Status;
+            txtCapacity.Text = area.Capacity.ToString();
         }
 
         private void btn_Cancel_Click(object sender, EventArgs e)
