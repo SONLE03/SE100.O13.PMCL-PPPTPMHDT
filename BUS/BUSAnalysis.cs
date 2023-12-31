@@ -33,5 +33,9 @@ namespace BUS
         {
             return DALAnalysis.Instance.CustomRevenues(startDate, endDate);
         }
+        public List<DrinkReportDTO> drinkReportDTOs(DateTime date)
+        {
+            return DALAnalysis.Instance.DrinkReports(date);
+        }
     }
 }

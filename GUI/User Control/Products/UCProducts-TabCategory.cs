@@ -47,21 +47,6 @@ namespace GUI
         }
         private void Search()
         {
-            //List<CATEGORY> listCategories;
-            //if (string.Equals(cbStatus.Text, "All", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    listCategories = BUSCategory.Instance.GetAllCategory();
-            //}
-            //else if (string.Equals(cbStatus.Text, "Active", StringComparison.OrdinalIgnoreCase))
-            //{
-            //    listCategories = BUSCategory.Instance.GetAllCategoryActive();
-            //}
-            //else
-            //{
-            //    listCategories = BUSCategory.Instance.GetAllCategoryInActive();
-            //}
-            //List<CATEGORY> filteredList = listCategories.Where(p => p.CategoryName.ToLower().Contains(txtFindCategory.Text.ToLower())).ToList();
-            //LoadCategory(filteredList);
             string searchText = txtFindCategory.Text.Trim().ToLower();
             string selectedStatus = cbStatus.Text;
             LoadCategory(BUSCategory.Instance.Search(searchText, selectedStatus));

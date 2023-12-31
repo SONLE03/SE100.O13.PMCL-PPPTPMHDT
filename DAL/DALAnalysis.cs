@@ -1,6 +1,7 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,15 +61,34 @@ namespace DAL
         {
             var customRevenues = CFEntities.Instance.BILLs
                 .Where(bill => bill.BillDate >= startDate && bill.BillDate <= endDate)
-                .GroupBy(bill => new { Date = bill.BillDate })
+                .GroupBy(bill => EntityFunctions.TruncateTime(bill.BillDate))
                 .Select(group => new CustomRevenueDTO
                 {
-                    Day = group.Key.Date,
-                    TotalRevenue = (double)group.Sum(bill => bill.Total)
+                    Day = group.Key.Value,
+                    TotalAmount = (double)group.Sum(bill => bill.Total)
                 })
                 .OrderBy(result => result.Day)
                 .ToList();
+
             return customRevenues;
+        }
+        public List<DrinkReportDTO> DrinkReports(DateTime date)
+        {
+            DateTime startDate = new DateTime(date.Year, date.Month, 1);
+            DateTime endDate = startDate.AddMonths(1).AddDays(-1);
+
+            var drinkReports = CFEntities.Instance.BILL_DETAIL
+                .Where(billDetail => billDetail.BILL.BillDate >= startDate && billDetail.BILL.BillDate <= endDate)
+                .GroupBy(billDetail => new { drinkId = billDetail.DrinksID, drinkName = billDetail.DRINK.DrinksName })
+                .Select(group => new DrinkReportDTO
+                {
+                    drinkId = group.Key.drinkId,
+                    drinkName = group.Key.drinkName,
+                    drinkQuantity = (int)group.Sum(billDetail => billDetail.Quantity),
+                    drinkTotalPrice = (double)group.Sum(billDetail => billDetail.Amount)
+                })
+                .ToList();
+            return drinkReports;
         }
     }
 }

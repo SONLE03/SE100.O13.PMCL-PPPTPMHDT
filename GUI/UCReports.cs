@@ -1,4 +1,5 @@
 ﻿using BUS;
+using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,26 +17,51 @@ namespace GUI
         public UCReports()
         {
             InitializeComponent();
-            dtpStartDate.Value = DateTime.Now;
-            dtpEndDate.Value = DateTime.Now;
-            LoadData(dtpStartDate.Value, dtpEndDate.Value);
+            InitializeContainer();
+            CheckedBtnState(btnRevenue);
         }
-        private void LoadData(DateTime startDate, DateTime endDate)
+        private UCReportRevenue _reportRevenue;
+        private UCReportDrink _reportDrink;
+
+        private void InitializeContainer()
         {
-            // load Total Revenue This Year
-            chartTotalRevenue.DataSource = BUSAnalysis.Instance.customRevenueDTOs(startDate, endDate);
-            chartTotalRevenue.Series[0].XValueMember = "Day";
-            chartTotalRevenue.Series[0].YValueMembers = "TotalRevenue";
-            chartTotalRevenue.DataBind();
+            this.PanelImport.Controls.Clear();
+            _reportRevenue = new UCReportRevenue() { Dock = DockStyle.Fill, Name = "RR" };
+            _reportDrink = new UCReportDrink() { Dock = DockStyle.Fill, Name = "RD" };
+            this.PanelImport.Controls.Add(_reportRevenue);
+            this.PanelImport.Controls.Add(_reportDrink);
         }
 
-        private void btnOK_Click(object sender, EventArgs e)
+        private Guna2GradientButton CurrentBtn;
+
+        private void CheckedBtnState(object button)
         {
-            if (dtpStartDate.Value > dtpEndDate.Value) 
+            var btn = (Guna2GradientButton)button;
+            btn.BackColor = Color.Transparent;
+            btn.FillColor = Color.FromArgb(147, 90, 21);
+            btn.FillColor2 = Color.FromArgb(147, 90, 21);
+            btn.ForeColor = Color.White;
+
+            if (CurrentBtn != null && CurrentBtn != btn)
             {
-                MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                CurrentBtn.FillColor = Color.FromArgb(234, 182, 134);
+                CurrentBtn.FillColor2 = Color.FromArgb(234, 182, 134);
+                CurrentBtn.ForeColor = Color.White;
             }
-            LoadData(dtpStartDate.Value, dtpEndDate.Value);
+            CurrentBtn = btn;
+        }
+        private void btnRevenue_Click(object sender, EventArgs e)
+        {
+            Control[] con = PanelImport.Controls.Find("RR", false);
+            con[0].BringToFront();
+            CheckedBtnState(sender);
+        }
+
+        private void btnDrink_Click(object sender, EventArgs e)
+        {
+            Control[] con = PanelImport.Controls.Find("RD", false);
+            con[0].BringToFront();
+            CheckedBtnState(sender);
         }
     }
 }

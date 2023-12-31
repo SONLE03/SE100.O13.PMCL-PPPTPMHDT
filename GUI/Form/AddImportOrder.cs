@@ -161,6 +161,10 @@ namespace GUI
                     gridviewSelectedProducts.Rows.Add(txtProductName.Text, txtUnit.Text, txtQuantity.Text, txtUnitPrice.Text, totalPriceofProduct);
                     totalPriceofProduct += Convert.ToDouble(lbTotal.Text);
                     lbTotal.Text = totalPriceofProduct.ToString();
+                    txtProductName.Clear();
+                    txtQuantity.Clear();
+                    txtUnit.Clear();
+                    txtUnitPrice.Clear();
                 }
             }
             catch(Exception ex)
@@ -170,6 +174,7 @@ namespace GUI
         }
         private void Print(int importID)
         {
+            dataGridViewPrint.Rows.Clear();
             var importBill = BUSImportBill.Instance.GetImportBillById(importID);
             var importBillDetail = importBill.IMPORT_BILL_DETAIL.ToList();
             foreach(var im in importBillDetail)

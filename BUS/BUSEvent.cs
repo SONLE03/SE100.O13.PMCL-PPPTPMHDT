@@ -55,11 +55,11 @@ namespace BUS
         }
         public bool UpdEvent(int idEV, string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, string Status, int userId)
         {
-            if (!BUSConstraint.Instance.DateTimeValidatorInEvent(StartDate, DueDate))
-            {
-                MessageBox.Show("Date validation failed. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
+            //if (!BUSConstraint.Instance.DateTimeValidatorInEvent(StartDate, DueDate))
+            //{
+            //    MessageBox.Show("Date validation failed. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return false;
+            //}
             if (Unit.Equals("%") && Discount > BUSRule.Instance.GetAllRule().MaximumPercentDiscount)
             {
                 MessageBox.Show("Invalid discount value. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -70,6 +70,10 @@ namespace BUS
         public bool DelEvent(int idEV)
         {
             return DALEvent.Instance.DelEvent(idEV);
+        }
+        public void UpdateStatusEvent()
+        {
+            DALEvent.Instance.UpdateStatusEvent();
         }
     }
 }

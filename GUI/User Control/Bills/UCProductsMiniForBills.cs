@@ -15,13 +15,15 @@ namespace GUI
     public partial class UCProductsMiniForBills : UserControl
     {
         private UCBills_TabOrder ucBill;
+        public static List<(int,int)> Drink_Size = new List<(int,int)> ();
         public UCProductsMiniForBills(UCBills_TabOrder ucBill)
         {
             InitializeComponent();
             this.ucBill = ucBill;
         }
-        public void updatePrice(string price)
+        public void updatePriceAndSize(string price, int sizeID)
         {
+            lbSizeID.Text = sizeID.ToString();
             lbPrice.Text = price + " VND";
         }
         public void loadData(DRINK drink, List<int> sizes)
@@ -53,8 +55,11 @@ namespace GUI
         {
             if (ucBill != null)
             {
+                if(ucBill.listDrinkSize(int.Parse(labelID.Text), int.Parse(lbSizeID.Text))){
+                    return;
+                }
                 var drink = BUS.BUSDrink.Instance.GetDrinkById(int.Parse(labelID.Text.ToString()));
-                UCMiniProductChoosen ucMiniProductChoosen = new UCMiniProductChoosen(ucBill, drink.Image, lbName.Text, lbPrice.Text, int.Parse(labelID.Text));
+                UCMiniProductChoosen ucMiniProductChoosen = new UCMiniProductChoosen(ucBill, drink.Image, lbName.Text, lbPrice.Text, int.Parse(labelID.Text), int.Parse(lbSizeID.Text));
                 ucBill.addMiniItemProduct(ucMiniProductChoosen);
                 ucBill.Show();
             }

@@ -106,7 +106,7 @@ namespace BUS
         }
         private bool EmailValidator(string email)
         {
-            return string.IsNullOrWhiteSpace(email) && Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@gmail\.com$");
+            return Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@gmail\.com$");
         }
         private bool CheckValidator(DateTime DateofBirth, string Phone, string UserName,string Password
                                     ,string retypePass, string Email, int GroupUserID, string status)
@@ -179,7 +179,7 @@ namespace BUS
         }
         public bool UpdPassword(int id, string password)
         {
-            return DALUser.Instance.UpdPassword(id, password);
+            return DALUser.Instance.UpdPassword(id, GeneratePassword(password));
         }
         public List<C_USER> SearchUser(string searchText, string selectedStatus)
         {

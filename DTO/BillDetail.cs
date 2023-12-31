@@ -8,13 +8,17 @@ namespace DTO
 {
     public class BillDetail
     {
-        public string productName;
+        public int drinkID;
         public int quantity;
+        public int sizeID;
+        public double unitPrice;
 
-        public BillDetail(string productName, int quantity)
+        public BillDetail(int drinkID, int quantity, int sizeID, double unitPrice)
         {
-            this.productName = productName;
+            this.drinkID = drinkID;
             this.quantity = quantity;
+            this.sizeID = sizeID;
+            this.unitPrice = unitPrice;
         }
 
         public BillDetail()

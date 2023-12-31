@@ -1,8 +1,8 @@
 ﻿using DTO;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Drawing.Printing;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace BUS.BUSPrint
 {
-    public class BUSPrintImportOrder
+    public class BUSPrintInvoice
     {
         private int rowIndex = 0;
         private int x = 80;
         private DataGridView dataGrid;
-        private IMPORT_BILL importBill;
-        public BUSPrintImportOrder(DataGridView dataGrid, IMPORT_BILL importBill)
+        private BILL bill;
+        public BUSPrintInvoice(DataGridView dataGrid, BILL bill)
         {
             this.dataGrid = dataGrid;
-            this.importBill = importBill;
+            this.bill = bill;
         }
         public void PrintReport()
         {
@@ -33,6 +33,7 @@ namespace BUS.BUSPrint
                 printPreviewDialogPN.ShowDialog();
             }
         }
+
         public List<string> SplitString(string input, int maxLength)
         {
             List<string> parts = new List<string>();
@@ -70,7 +71,7 @@ namespace BUS.BUSPrint
             int rowCount = dataGrid.Rows.Count;
             if (rowIndex == 0)
             {
-                string text = "COMMERCIAL INVOICE";
+                string text = "THE COFFEE HOUSE";
                 Font font = new Font("Arial", 14, FontStyle.Bold);
 
                 // Lấy kích thước của văn bản
@@ -83,20 +84,20 @@ namespace BUS.BUSPrint
                 e.Graphics.DrawString(text, font, Brushes.Black, new Point(centerX, 80));
 
                 // Định nghĩa vị trí x cho các thành phần
-                int xLeft = 100;
+                int xLeft = 80;
                 int xRight = centerX + 230;
 
-                // Vẽ các thành phần khác
-                e.Graphics.DrawString("No: " + importBill.ImportID, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xLeft, 150));
-                e.Graphics.DrawString("Date: " + importBill.ImportDate, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xRight, 150));
-                e.Graphics.DrawString("Create by: " + importBill.C_USER.UserFullName, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xLeft, 180));
-                e.Graphics.DrawString("Total: " + importBill.Total + " VND", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xRight, 180));
-              
+                //Vẽ các thành phần khác
+
+                e.Graphics.DrawString("No: " + bill.BillID, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xLeft, 150));
+                e.Graphics.DrawString("Date: " + bill.BillDate, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xRight, 150));
+                e.Graphics.DrawString("Table: " + (bill.TableID != null ? (bill.C_TABLE.AREA.AreaName + " | " + bill.C_TABLE.TableName.ToString()) : "Take away"), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xLeft, 180));
+                e.Graphics.DrawString("Customer: Walk-in guest", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xRight, 180));
+                e.Graphics.DrawString("Create by: " + bill.C_USER.UserID + " | " + bill.C_USER.UserFullName, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(xLeft, 210));
 
 
-                e.Graphics.DrawString("No", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(60, 310));
-                e.Graphics.DrawString("Product Name", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(110, 310));
-                e.Graphics.DrawString("Unit", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(360, 310));
+                e.Graphics.DrawString("Drink Name", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, 310));
+                e.Graphics.DrawString("Size", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(360, 310));
                 e.Graphics.DrawString("Quantity", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(460, 310));
                 e.Graphics.DrawString("Unit Price", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(580, 310));
                 e.Graphics.DrawString("Total", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, 310));
@@ -105,19 +106,18 @@ namespace BUS.BUSPrint
             while (rowIndex < rowCount)
             {
                 DataGridViewRow row = dataGrid.Rows[rowIndex];
-                e.Graphics.DrawString(row.Cells[0].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(60, x));
-                string productName = row.Cells[1].Value.ToString();
+                string productName = row.Cells[0].Value.ToString();
                 List<string> productNameParts = SplitString(productName, 30);
-                foreach(var part in productNameParts)
+                foreach (var part in productNameParts)
                 {
-                    e.Graphics.DrawString(part, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(110, x));
+                    e.Graphics.DrawString(part, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(80, x));
                     x += 20;
                 }
                 //e.Graphics.DrawString(productName, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(110, x));
-                e.Graphics.DrawString(row.Cells[2].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(360, x - productNameParts.Count * 20));
-                e.Graphics.DrawString(row.Cells[3].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(460, x - productNameParts.Count * 20));
-                e.Graphics.DrawString(row.Cells[4].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(580, x - productNameParts.Count * 20));
-                e.Graphics.DrawString(row.Cells[5].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, x - productNameParts.Count * 20));
+                e.Graphics.DrawString(row.Cells[1].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(360, x - productNameParts.Count * 20));
+                e.Graphics.DrawString(row.Cells[2].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(460, x - productNameParts.Count * 20));
+                e.Graphics.DrawString(row.Cells[3].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(580, x - productNameParts.Count * 20));
+                e.Graphics.DrawString(row.Cells[4].Value.ToString(), new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(700, x - productNameParts.Count * 20));
                 x += 40;
                 rowIndex++;
                 if (rowsPerPage - x <= 100 && rowCount > rowIndex)
@@ -128,9 +128,9 @@ namespace BUS.BUSPrint
                 }
             }
 
-            string date = "..., " + DateTime.Now.ToString("dddd, MMMM d, yyyy");
-            e.Graphics.DrawString(date, new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(490, x + 20));
-            e.Graphics.DrawString("Authorized signature", new Font("Arial", 12, FontStyle.Bold), Brushes.Black, new Point(520, x + 50));
+            e.Graphics.DrawString("Subtotal: " + bill.SubTotal + " VND", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(490, x + 20));
+            e.Graphics.DrawString("Tax: " + bill.Tax + " VND", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(490, x + 50));
+            e.Graphics.DrawString("Total: " + bill.Total + " VND", new Font("Arial", 12, FontStyle.Regular), Brushes.Black, new Point(490, x + 80));
         }
     }
 }
