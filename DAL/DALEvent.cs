@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace DAL
 {
@@ -61,16 +62,6 @@ namespace DAL
                 obj.UserID = userId;
                 obj.DRINKS = drinks;
                 obj.Status = "Active";
-                //foreach (var p in drinks)
-                //{
-                //    DRINK drink = DALDrink.Instance.GetDrinkById(p.id);
-                //    if (!drink.EVENTs.Any(c => c.EventName.Equals(EventName)))
-                //    {
-                //        drink.EVENTs.Add(obj);
-                //        obj.DRINKS.Add(drink);
-                //    }
-                //}
-
                 CFEntities.Instance.EVENTs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return obj.id;
@@ -99,20 +90,7 @@ namespace DAL
                 if (Discount != ev.Discount) ev.Discount = Discount;
                 if (Status != ev.Status) ev.Status = Status;
                 if (userId != ev.UserID) ev.UserID = userId;
-                if (drinks != null) ev.DRINKS = drinks;
-                //foreach (var p in drinks)
-                //{
-                //    if (!p.EVENTs.Any(s => s.id == ev.id))
-                //    {
-                //        p.EVENTs.Add(ev);
-                //        ev.DRINKS.Add(p);
-                //    }    
-                //    else
-                //    {
-                //        p.EVENTs.Remove(ev);
-                //        ev.DRINKS.Remove(p);
-                //    }    
-                //}    
+                if (drinks != null) ev.DRINKS = drinks;     
                 CFEntities.Instance.SaveChanges();
                 return true;
             }
@@ -139,6 +117,25 @@ namespace DAL
                     transaction.Rollback();
                     return false;
                 }
+            }
+        }
+        public void UpdateStatusEvent()
+        {
+            try
+            {
+                DateTime currentDate = DateTime.Now;
+                var events = CFEntities.Instance.EVENTs
+                    .Where(p => p.DueDate < currentDate && p.Status.Equals("Active"))
+                    .ToList();
+                foreach (var ev in events)
+                {
+                    ev.Status = "Expire";
+                }
+                CFEntities.Instance.SaveChanges();
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }

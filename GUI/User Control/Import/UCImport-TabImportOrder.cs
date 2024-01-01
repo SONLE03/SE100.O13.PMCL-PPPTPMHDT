@@ -86,6 +86,7 @@ namespace GUI
         }
         private void print(int importID)
         {
+            dataGridViewPrint.Rows.Clear();
             var importBill = BUSImportBill.Instance.GetImportBillById(importID);
             var importBillDetail = importBill.IMPORT_BILL_DETAIL.ToList();
             foreach (var im in importBillDetail)

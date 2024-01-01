@@ -20,18 +20,18 @@ namespace GUI
         {
             InitializeComponent();
         }
-        public UCMiniSizeForBill(C_SIZE size, UCProductsMiniForBills productMiniItem, int id)
+        public UCMiniSizeForBill(C_SIZE size, UCProductsMiniForBills productMiniItem, int drinkId)
         {
             InitializeComponent();
             this.productMiniItem = productMiniItem;
-            this.id = id;
+            this.id = drinkId;
             txtSize.Text = size.SizeName;
             showOriginalPriceOfSize();
         }
         private void showOriginalPriceOfSize()
         {
             var drinkSize = BUSDrink_Size.Instance.FindDrinkSize(txtSize.Text, id);
-            productMiniItem.updatePrice(drinkSize.OriginalPrice.ToString());
+            productMiniItem.updatePriceAndSize(drinkSize.OriginalPrice.ToString(), drinkSize.SizeID);
             productMiniItem.Show();
         }
 

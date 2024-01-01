@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,18 +17,21 @@ namespace GUI
         private int quantity;
         private double salePrice = 0;
 
-        public UCMiniProductChoosen(UCBills_TabOrder ucBill, string image, string productName, string price, int idDrink)
+        public UCMiniProductChoosen(UCBills_TabOrder ucBill, string image, string productName, string originalPrice, int idDrink, int idSize)
         {
             InitializeComponent();
-            guna2CirclePictureBox1.Image = new System.Drawing.Bitmap(image);
+            drinkImage.Image = new System.Drawing.Bitmap(image);
             lbName.Text = productName;
-            lbPrice.Text = price;
+            lbPrice.Text = originalPrice;
             this.ucBill = ucBill;
             quantity = 1;
+            lbSize.Text = idSize.ToString(); 
+            lbDrinkID.Text = idDrink.ToString();
+            lbSizeName.Text = BUSSize.Instance.GetSizeById(idSize).SizeName;
 
             foreach (var p in BUS.BUSEvent.Instance.GetAllEvent())
             {
-                if (p.StartDate <= DateTime.Now && DateTime.Now <= p.DueDate)
+                if (p.Status == "Active" && p.StartDate <= DateTime.Now && DateTime.Now <= p.DueDate)
                 {
                     foreach (var d in p.DRINKS)
                     {
@@ -42,7 +46,7 @@ namespace GUI
                             }
                             else if (p.Unit.Contains("%"))
                             {
-                                double discount = double.Parse(lbPrice.Text.Replace("VND", "")) * ((double)p.Discount / 100);
+                                double discount = double.Parse(lbPrice.Text.Replace(" VND", "")) * ((100 - (double)p.Discount) / 100);
                                 if (salePrice < discount)
                                 {
                                     salePrice = discount;
@@ -57,52 +61,58 @@ namespace GUI
                 }    
             }
 
-            if (salePrice > double.Parse(lbPrice.Text.Replace("VND", "")))
+            if (salePrice > double.Parse(lbPrice.Text.Replace(" VND", "")))
             {
                 lbBasePrice.Text = "Bigger than original price".ToString();
                 salePrice = 0;
             }
             else
             {
-                lbBasePrice.Text = salePrice.ToString();
+                lbBasePrice.Text = lbPrice.Text;
+                lbPrice.Text = salePrice.ToString() + " VND";
             }
 
         }
 
-
-
-        private void pictureBox1_Click(object sender, EventArgs e)
+        public int getDrinkID()
         {
-            ucBill.deleteMiniItemProduct(this);
-            ucBill.Show();
+            return Convert.ToInt32(lbDrinkID.Text);
         }
-
         public double getPrice()
         {
-            return double.Parse(lbPrice.Text.Replace("VND", "")) * ((int)guna2NumericUpDown1.Value) - salePrice * ((int)guna2NumericUpDown1.Value);
+            return double.Parse(lbPrice.Text.Replace(" VND", "")) * ((int)drinkQuantity.Value); /*- salePrice * ((int)drinkQuantity.Value);*/
+        }
+        public double getUnitPrice()
+        {
+            return double.Parse(lbPrice.Text.Replace(" VND", ""));
         }
 
         public int getQuantity()
         {
-            return ((int)guna2NumericUpDown1.Value);
+            return ((int)drinkQuantity.Value);
         }
 
-        public string getProductName()
+        public int getSizeID()
         {
-            return lbName.Text;
+            return Convert.ToInt32(lbSize.Text);
         }
-
-        private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void drinkQuantity_ValueChanged(object sender, EventArgs e)
         {
-            if (quantity > ((int)guna2NumericUpDown1.Value))
+            if (quantity > ((int)drinkQuantity.Value))
             {
-                ucBill.deleteQuantity(double.Parse(lbPrice.Text.Replace("VND", "")), salePrice, getProductName());
-            }    
+                ucBill.deleteQuantity(double.Parse(lbPrice.Text.Replace(" VND", "")), this);
+            }
             else
             {
-                ucBill.addQuantity(double.Parse(lbPrice.Text.Replace("VND", "")), salePrice, this);
+                ucBill.addQuantity(double.Parse(lbPrice.Text.Replace(" VND", "")), this);
             }
-            quantity = ((int)guna2NumericUpDown1.Value);
+            quantity = ((int)drinkQuantity.Value);
+        }
+
+        private void deleteDrink_Click(object sender, EventArgs e)
+        {
+            ucBill.deleteMiniItemProduct(this);
+            ucBill.Show();
         }
     }
 }

@@ -32,6 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -43,6 +46,7 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Print = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,9 +54,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbRevenue = new System.Windows.Forms.Label();
             this.lbRevenueValue = new System.Windows.Forms.Label();
+            this.dataGridViewPrint = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Unit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this._Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrint)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -124,7 +135,8 @@
             this.Create_By,
             this.Quantity,
             this.Status,
-            this.Total});
+            this.Total,
+            this.Print});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -218,6 +230,13 @@
             this.Total.MinimumWidth = 6;
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
+            // 
+            // Print
+            // 
+            this.Print.HeaderText = "Print";
+            this.Print.MinimumWidth = 6;
+            this.Print.Name = "Print";
+            this.Print.ReadOnly = true;
             // 
             // txtSearch
             // 
@@ -329,11 +348,109 @@
             this.lbRevenueValue.TabIndex = 61;
             this.lbRevenueValue.Text = "revenue";
             // 
+            // dataGridViewPrint
+            // 
+            this.dataGridViewPrint.AllowUserToAddRows = false;
+            this.dataGridViewPrint.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            this.dataGridViewPrint.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewPrint.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewPrint.ColumnHeadersHeight = 34;
+            this.dataGridViewPrint.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridViewPrint.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ProductName,
+            this._Unit,
+            this._Quantity,
+            this._UnitPrice,
+            this._Total_Price});
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewPrint.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dataGridViewPrint.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewPrint.Location = new System.Drawing.Point(1438, 199);
+            this.dataGridViewPrint.Name = "dataGridViewPrint";
+            this.dataGridViewPrint.ReadOnly = true;
+            this.dataGridViewPrint.RowHeadersVisible = false;
+            this.dataGridViewPrint.RowHeadersWidth = 51;
+            this.dataGridViewPrint.RowTemplate.Height = 24;
+            this.dataGridViewPrint.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewPrint.TabIndex = 163;
+            this.dataGridViewPrint.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewPrint.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.dataGridViewPrint.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewPrint.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.dataGridViewPrint.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.dataGridViewPrint.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewPrint.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewPrint.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.dataGridViewPrint.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridViewPrint.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.dataGridViewPrint.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.dataGridViewPrint.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.dataGridViewPrint.ThemeStyle.HeaderStyle.Height = 34;
+            this.dataGridViewPrint.ThemeStyle.ReadOnly = true;
+            this.dataGridViewPrint.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.dataGridViewPrint.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dataGridViewPrint.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
+            this.dataGridViewPrint.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewPrint.ThemeStyle.RowsStyle.Height = 24;
+            this.dataGridViewPrint.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.dataGridViewPrint.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dataGridViewPrint.Visible = false;
+            // 
+            // ProductName
+            // 
+            this.ProductName.HeaderText = "Product Name";
+            this.ProductName.MinimumWidth = 6;
+            this.ProductName.Name = "ProductName";
+            this.ProductName.ReadOnly = true;
+            // 
+            // _Unit
+            // 
+            this._Unit.HeaderText = "Unit";
+            this._Unit.MinimumWidth = 6;
+            this._Unit.Name = "_Unit";
+            this._Unit.ReadOnly = true;
+            // 
+            // _Quantity
+            // 
+            this._Quantity.HeaderText = "Quantity";
+            this._Quantity.MinimumWidth = 6;
+            this._Quantity.Name = "_Quantity";
+            this._Quantity.ReadOnly = true;
+            // 
+            // _UnitPrice
+            // 
+            this._UnitPrice.HeaderText = "Unit Price";
+            this._UnitPrice.MinimumWidth = 6;
+            this._UnitPrice.Name = "_UnitPrice";
+            this._UnitPrice.ReadOnly = true;
+            // 
+            // _Total_Price
+            // 
+            this._Total_Price.HeaderText = "Totol_price";
+            this._Total_Price.MinimumWidth = 6;
+            this._Total_Price.Name = "_Total_Price";
+            this._Total_Price.ReadOnly = true;
+            // 
             // UCBills_TabInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
+            this.Controls.Add(this.dataGridViewPrint);
             this.Controls.Add(this.lbRevenueValue);
             this.Controls.Add(this.lbRevenue);
             this.Controls.Add(this.label4);
@@ -349,6 +466,7 @@
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewInvoice)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrint)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -362,6 +480,11 @@
         private Guna.UI2.WinForms.Guna2DataGridView gridviewInvoice;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private System.Windows.Forms.Label label4;
+        private Guna.UI2.WinForms.Guna2ComboBox cbFilter;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbRevenue;
+        private System.Windows.Forms.Label lbRevenueValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn InvoiceID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Invoice_Date;
@@ -369,10 +492,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Quantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Status;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.Label label4;
-        private Guna.UI2.WinForms.Guna2ComboBox cbFilter;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbRevenue;
-        private System.Windows.Forms.Label lbRevenueValue;
+        private System.Windows.Forms.DataGridViewImageColumn Print;
+        private Guna.UI2.WinForms.Guna2DataGridView dataGridViewPrint;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Unit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _UnitPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn _Total_Price;
     }
 }

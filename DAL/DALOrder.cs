@@ -43,7 +43,22 @@ namespace DAL
                 .ToList();
             return invoices;
         }
-        public int AddBill(DateTime BillDate, int Status, int UserID, int? TableID, string Note, double total, float tax)
+        public List<BILL> SearchOrder(string searchText)
+        {
+            var transformedSearchText = DALConstraint.Instance.TransformString(searchText);
+            List<BILL> listOrders = CFEntities.Instance.BILLs.ToList();
+            List<BILL> filteredList = new List<BILL>();
+            filteredList = listOrders
+                .Where(p =>
+                    (string.IsNullOrEmpty(transformedSearchText) || p.C_USER.UserFullName.ToLower().Contains(transformedSearchText)) ||
+                    (string.IsNullOrEmpty(transformedSearchText) || p.BillID.ToLower().Contains(transformedSearchText))
+                )
+                .OrderByDescending(bill => bill.BillDate)
+                .ToList();
+            return filteredList;
+        }
+
+        public int AddBill(DateTime BillDate, int UserID, int? TableID, string Note, double total, float tax, double subTotal)
         {
             try
             {
@@ -55,6 +70,7 @@ namespace DAL
                 obj.Status = "Paid";
                 obj.Note = Note;
                 obj.Tax = tax;
+                obj.SubTotal = subTotal;
                 CFEntities.Instance.BILLs.Add(obj);
                 CFEntities.Instance.SaveChanges();
                 return obj.id;

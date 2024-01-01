@@ -45,11 +45,23 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="EPPlus, Version=7.0.5.0, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.7.0.5\lib\net462\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.Interfaces, Version=6.1.1.0, Culture=neutral, PublicKeyToken=a694d7f3b0907a61, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.Interfaces.6.1.1\lib\net462\EPPlus.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus.System.Drawing, Version=6.1.1.0, Culture=neutral, PublicKeyToken=2308d35469c9bac0, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.System.Drawing.6.1.1\lib\net462\EPPlus.System.Drawing.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.Charts.WinForms, Version=1.0.9.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.Charts.WinForms.1.0.9\lib\net472\Guna.Charts.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System">
@@ -58,7 +70,11 @@
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
@@ -72,6 +88,8 @@
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
     <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
@@ -262,11 +280,11 @@
     <Compile Include="Form\ImportOrderDetails.Designer.cs">
       <DependentUpon>ImportOrderDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="OrderDetail.cs">
+    <Compile Include="InvoiceDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderDetail.Designer.cs">
-      <DependentUpon>OrderDetail.cs</DependentUpon>
+    <Compile Include="InvoiceDetail.Designer.cs">
+      <DependentUpon>InvoiceDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -282,11 +300,23 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="UCReportDrink.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCReportDrink.Designer.cs">
+      <DependentUpon>UCReportDrink.cs</DependentUpon>
+    </Compile>
     <Compile Include="UCReports.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCReports.Designer.cs">
       <DependentUpon>UCReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCReportRevenue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCReportRevenue.Designer.cs">
+      <DependentUpon>UCReportRevenue.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\UCChangeRegulations.cs">
       <SubType>UserControl</SubType>
@@ -531,6 +561,9 @@
     <EmbeddedResource Include="Form\ImportOrderDetails.resx">
       <DependentUpon>ImportOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceDetail.resx">
+      <DependentUpon>InvoiceDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -546,6 +579,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCReportDrink.resx">
+      <DependentUpon>UCReportDrink.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCReportRevenue.resx">
+      <DependentUpon>UCReportRevenue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCReports.resx">
       <DependentUpon>UCReports.cs</DependentUpon>

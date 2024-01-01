@@ -37,6 +37,8 @@ namespace GUI
             {
                 services.Add(service.id);
             }
+            // Update state of event in the system
+            BUSEvent.Instance.UpdateStatusEvent();
         }
 
         private Guna2Button CurrentBtn;
