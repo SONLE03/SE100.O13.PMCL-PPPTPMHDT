@@ -37,7 +37,7 @@
             this.txtSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
             this.txtSize.Location = new System.Drawing.Point(0, 7);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(41, 23);
+            this.txtSize.Size = new System.Drawing.Size(30, 23);
             this.txtSize.TabIndex = 0;
             this.txtSize.Text = "L";
             this.txtSize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -51,7 +51,7 @@
             this.Controls.Add(this.txtSize);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
             this.Name = "UCMiniSize";
-            this.Size = new System.Drawing.Size(41, 36);
+            this.Size = new System.Drawing.Size(30, 36);
             this.Click += new System.EventHandler(this.UCMiniSize_Click);
             this.ResumeLayout(false);
 

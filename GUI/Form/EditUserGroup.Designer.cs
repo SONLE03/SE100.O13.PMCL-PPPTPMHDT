@@ -156,10 +156,10 @@
             this.panelUserGroupID.BorderThickness = 2;
             this.panelUserGroupID.Controls.Add(this.lbGroupID);
             this.panelUserGroupID.FillColor = System.Drawing.Color.White;
-            this.panelUserGroupID.Location = new System.Drawing.Point(204, 79);
-            this.panelUserGroupID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelUserGroupID.Location = new System.Drawing.Point(194, 79);
+            this.panelUserGroupID.Margin = new System.Windows.Forms.Padding(2);
             this.panelUserGroupID.Name = "panelUserGroupID";
-            this.panelUserGroupID.Size = new System.Drawing.Size(272, 36);
+            this.panelUserGroupID.Size = new System.Drawing.Size(271, 40);
             this.panelUserGroupID.TabIndex = 180;
             // 
             // lbGroupID
@@ -168,7 +168,7 @@
             this.lbGroupID.BackColor = System.Drawing.Color.Transparent;
             this.lbGroupID.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGroupID.ForeColor = System.Drawing.Color.Gray;
-            this.lbGroupID.Location = new System.Drawing.Point(6, 8);
+            this.lbGroupID.Location = new System.Drawing.Point(7, 10);
             this.lbGroupID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbGroupID.Name = "lbGroupID";
             this.lbGroupID.Size = new System.Drawing.Size(51, 19);
@@ -194,7 +194,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label2.Location = new System.Drawing.Point(55, 88);
+            this.label2.Location = new System.Drawing.Point(45, 88);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(103, 19);
@@ -213,7 +213,7 @@
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox3.Location = new System.Drawing.Point(442, 11);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 182;
@@ -229,7 +229,7 @@
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox1.Location = new System.Drawing.Point(480, 11);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 181;
@@ -249,7 +249,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(55, 153);
+            this.label3.Location = new System.Drawing.Point(45, 153);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 19);
@@ -269,43 +269,46 @@
             this.txtUGName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUGName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtUGName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUGName.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtUGName.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtUGName.ForeColor = System.Drawing.Color.DimGray;
             this.txtUGName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUGName.Location = new System.Drawing.Point(204, 144);
+            this.txtUGName.Location = new System.Drawing.Point(194, 144);
             this.txtUGName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtUGName.Name = "txtUGName";
             this.txtUGName.PasswordChar = '\0';
             this.txtUGName.PlaceholderForeColor = System.Drawing.Color.Gray;
             this.txtUGName.PlaceholderText = "Enter User group name";
             this.txtUGName.SelectedText = "";
-            this.txtUGName.Size = new System.Drawing.Size(272, 37);
+            this.txtUGName.Size = new System.Drawing.Size(271, 40);
             this.txtUGName.TabIndex = 183;
             // 
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Panel2.BorderColor = System.Drawing.Color.Gray;
-            this.guna2Panel2.BorderRadius = 35;
+            this.guna2Panel2.BorderRadius = 25;
             this.guna2Panel2.BorderThickness = 1;
             this.guna2Panel2.Controls.Add(this.label14);
             this.guna2Panel2.Controls.Add(this.gridviewUserGroupDetails);
             this.guna2Panel2.FillColor = System.Drawing.Color.White;
-            this.guna2Panel2.Location = new System.Drawing.Point(55, 281);
+            this.guna2Panel2.Location = new System.Drawing.Point(39, 281);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(420, 228);
+            this.guna2Panel2.ShadowDecoration.BorderRadius = 25;
+            this.guna2Panel2.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.guna2Panel2.ShadowDecoration.Enabled = true;
+            this.guna2Panel2.Size = new System.Drawing.Size(436, 228);
             this.guna2Panel2.TabIndex = 185;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(17, 6);
+            this.label14.Location = new System.Drawing.Point(17, 7);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(150, 15);
+            this.label14.Size = new System.Drawing.Size(180, 19);
             this.label14.TabIndex = 41;
             this.label14.Text = "List of managed functions";
             // 
@@ -319,10 +322,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewUserGroupDetails.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -338,18 +341,19 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewUserGroupDetails.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewUserGroupDetails.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewUserGroupDetails.Location = new System.Drawing.Point(3, 27);
+            this.gridviewUserGroupDetails.Location = new System.Drawing.Point(3, 36);
             this.gridviewUserGroupDetails.Name = "gridviewUserGroupDetails";
             this.gridviewUserGroupDetails.RowHeadersVisible = false;
             this.gridviewUserGroupDetails.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewUserGroupDetails.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewUserGroupDetails.Size = new System.Drawing.Size(414, 180);
+            this.gridviewUserGroupDetails.RowTemplate.Height = 30;
+            this.gridviewUserGroupDetails.Size = new System.Drawing.Size(430, 177);
             this.gridviewUserGroupDetails.TabIndex = 40;
             this.gridviewUserGroupDetails.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewUserGroupDetails.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -369,7 +373,7 @@
             this.gridviewUserGroupDetails.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridviewUserGroupDetails.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridviewUserGroupDetails.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridviewUserGroupDetails.ThemeStyle.RowsStyle.Height = 22;
+            this.gridviewUserGroupDetails.ThemeStyle.RowsStyle.Height = 30;
             this.gridviewUserGroupDetails.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewUserGroupDetails.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
@@ -424,9 +428,15 @@
             this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnDelete.Location = new System.Drawing.Point(121, 534);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnDelete.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnDelete.Location = new System.Drawing.Point(116, 537);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ShadowDecoration.BorderRadius = 15;
+            this.btnDelete.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
+            this.btnDelete.ShadowDecoration.Enabled = true;
+            this.btnDelete.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
             this.btnDelete.Size = new System.Drawing.Size(90, 35);
             this.btnDelete.TabIndex = 187;
             this.btnDelete.Text = "Delete";
@@ -445,9 +455,15 @@
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
             this.btnUpdate.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnUpdate.Location = new System.Drawing.Point(318, 534);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnUpdate.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnUpdate.Location = new System.Drawing.Point(318, 537);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.ShadowDecoration.BorderRadius = 15;
+            this.btnUpdate.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
+            this.btnUpdate.ShadowDecoration.Enabled = true;
+            this.btnUpdate.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
             this.btnUpdate.Size = new System.Drawing.Size(90, 35);
             this.btnUpdate.TabIndex = 186;
             this.btnUpdate.Text = "Update";
@@ -459,7 +475,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(58, 220);
+            this.label4.Location = new System.Drawing.Point(45, 223);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(49, 19);
@@ -477,14 +493,14 @@
             this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.ItemHeight = 34;
             this.cbStatus.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.cbStatus.Location = new System.Drawing.Point(204, 211);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStatus.Location = new System.Drawing.Point(194, 213);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(271, 36);
+            this.cbStatus.Size = new System.Drawing.Size(271, 40);
             this.cbStatus.TabIndex = 189;
             // 
             // EditUserGroup

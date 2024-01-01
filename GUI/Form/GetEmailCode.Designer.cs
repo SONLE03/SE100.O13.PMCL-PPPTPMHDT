@@ -40,6 +40,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btn_sendcode = new Guna.UI2.WinForms.Guna2GradientButton();
             this.link_Back = new System.Windows.Forms.LinkLabel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -89,7 +91,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(206, 44);
+            this.label1.Location = new System.Drawing.Point(114, 6);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(169, 28);
@@ -110,7 +112,7 @@
             this.txtUsername.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(166, 127);
+            this.txtUsername.Location = new System.Drawing.Point(75, 79);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -132,7 +134,7 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(166, 204);
+            this.txtEmail.Location = new System.Drawing.Point(75, 169);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -147,7 +149,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(166, 109);
+            this.label2.Location = new System.Drawing.Point(75, 61);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 15);
@@ -160,7 +162,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(166, 185);
+            this.label3.Location = new System.Drawing.Point(75, 150);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 15);
@@ -180,7 +182,7 @@
             this.btn_sendcode.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sendcode.ForeColor = System.Drawing.Color.White;
             this.btn_sendcode.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_sendcode.Location = new System.Drawing.Point(227, 299);
+            this.btn_sendcode.Location = new System.Drawing.Point(141, 242);
             this.btn_sendcode.Margin = new System.Windows.Forms.Padding(2);
             this.btn_sendcode.Name = "btn_sendcode";
             this.btn_sendcode.Size = new System.Drawing.Size(110, 36);
@@ -195,7 +197,7 @@
             this.link_Back.DisabledLinkColor = System.Drawing.Color.Transparent;
             this.link_Back.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_Back.LinkColor = System.Drawing.Color.White;
-            this.link_Back.Location = new System.Drawing.Point(223, 352);
+            this.link_Back.Location = new System.Drawing.Point(146, 294);
             this.link_Back.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.link_Back.Name = "link_Back";
             this.link_Back.Size = new System.Drawing.Size(105, 21);
@@ -205,19 +207,30 @@
             this.link_Back.UseWaitCursor = true;
             this.link_Back.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.link_Back_LinkClicked);
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderRadius = 30;
+            this.guna2Panel1.Controls.Add(this.txtUsername);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.link_Back);
+            this.guna2Panel1.Controls.Add(this.txtEmail);
+            this.guna2Panel1.Controls.Add(this.btn_sendcode);
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(81, 33);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(390, 334);
+            this.guna2Panel1.TabIndex = 25;
+            // 
             // GetEmailCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.cafe2;
             this.ClientSize = new System.Drawing.Size(548, 398);
-            this.Controls.Add(this.link_Back);
-            this.Controls.Add(this.btn_sendcode);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.txtUsername);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -226,8 +239,9 @@
             this.Name = "GetEmailCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GetEmailCode";
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -243,5 +257,6 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientButton btn_sendcode;
         private System.Windows.Forms.LinkLabel link_Back;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

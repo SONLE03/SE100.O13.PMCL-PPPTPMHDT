@@ -359,5 +359,10 @@ namespace GUI
             printInvoice = new BUSPrintInvoice(dataGridViewPrint, invoice);
             printInvoice.PrintReport();
         }
+
+        private void UCBills_TabOrder_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

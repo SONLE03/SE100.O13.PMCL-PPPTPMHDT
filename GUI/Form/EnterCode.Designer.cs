@@ -39,6 +39,8 @@
             this.link_get_again = new System.Windows.Forms.LinkLabel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2ControlBox3 = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -54,10 +56,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(116, 67);
+            this.label1.Location = new System.Drawing.Point(23, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(306, 26);
+            this.label1.Size = new System.Drawing.Size(345, 26);
             this.label1.TabIndex = 6;
             this.label1.Text = "We have sent to your registered email ";
             // 
@@ -72,15 +74,15 @@
             this.txtEmailCode.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmailCode.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtEmailCode.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailCode.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtEmailCode.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtEmailCode.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmailCode.Location = new System.Drawing.Point(162, 163);
+            this.txtEmailCode.Location = new System.Drawing.Point(57, 125);
             this.txtEmailCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEmailCode.Name = "txtEmailCode";
             this.txtEmailCode.PasswordChar = '\0';
             this.txtEmailCode.PlaceholderText = "Enter code";
             this.txtEmailCode.SelectedText = "";
-            this.txtEmailCode.Size = new System.Drawing.Size(214, 35);
+            this.txtEmailCode.Size = new System.Drawing.Size(262, 45);
             this.txtEmailCode.TabIndex = 7;
             // 
             // btn_confirm
@@ -96,10 +98,10 @@
             this.btn_confirm.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_confirm.ForeColor = System.Drawing.Color.White;
             this.btn_confirm.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_confirm.Location = new System.Drawing.Point(207, 242);
+            this.btn_confirm.Location = new System.Drawing.Point(120, 216);
             this.btn_confirm.Margin = new System.Windows.Forms.Padding(2);
             this.btn_confirm.Name = "btn_confirm";
-            this.btn_confirm.Size = new System.Drawing.Size(116, 35);
+            this.btn_confirm.Size = new System.Drawing.Size(130, 42);
             this.btn_confirm.TabIndex = 11;
             this.btn_confirm.Text = "Confirm";
             this.btn_confirm.Click += new System.EventHandler(this.btn_confirm_Click);
@@ -110,7 +112,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(194, 93);
+            this.label2.Location = new System.Drawing.Point(107, 39);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(173, 25);
@@ -123,7 +125,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(157, 121);
+            this.label3.Location = new System.Drawing.Point(66, 67);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(249, 25);
@@ -137,7 +139,7 @@
             this.link_get_again.DisabledLinkColor = System.Drawing.Color.Transparent;
             this.link_get_again.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.link_get_again.LinkColor = System.Drawing.Color.White;
-            this.link_get_again.Location = new System.Drawing.Point(155, 298);
+            this.link_get_again.Location = new System.Drawing.Point(79, 275);
             this.link_get_again.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.link_get_again.Name = "link_get_again";
             this.link_get_again.Size = new System.Drawing.Size(245, 21);
@@ -180,28 +182,40 @@
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 16;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2Panel1.BorderRadius = 30;
+            this.guna2Panel1.Controls.Add(this.label2);
+            this.guna2Panel1.Controls.Add(this.label1);
+            this.guna2Panel1.Controls.Add(this.txtEmailCode);
+            this.guna2Panel1.Controls.Add(this.link_get_again);
+            this.guna2Panel1.Controls.Add(this.btn_confirm);
+            this.guna2Panel1.Controls.Add(this.label3);
+            this.guna2Panel1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Panel1.Location = new System.Drawing.Point(81, 45);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(377, 312);
+            this.guna2Panel1.TabIndex = 17;
+            // 
             // EnterCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.cafe2;
-            this.ClientSize = new System.Drawing.Size(534, 368);
+            this.ClientSize = new System.Drawing.Size(534, 389);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.guna2ControlBox3);
             this.Controls.Add(this.guna2ControlBox1);
-            this.Controls.Add(this.link_get_again);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.btn_confirm);
-            this.Controls.Add(this.txtEmailCode);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EnterCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EnterCode";
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -216,5 +230,6 @@
         private System.Windows.Forms.LinkLabel link_get_again;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox3;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
     }
 }

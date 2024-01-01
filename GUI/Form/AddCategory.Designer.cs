@@ -64,7 +64,7 @@
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox3.Location = new System.Drawing.Point(327, 10);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 66;
@@ -80,7 +80,7 @@
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox1.Location = new System.Drawing.Point(361, 10);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 65;
@@ -99,10 +99,16 @@
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Cancel.Location = new System.Drawing.Point(82, 261);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancel.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_Cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_Cancel.Location = new System.Drawing.Point(79, 261);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancel.Name = "btn_Cancel";
-            this.btn_Cancel.Size = new System.Drawing.Size(78, 36);
+            this.btn_Cancel.ShadowDecoration.BorderRadius = 15;
+            this.btn_Cancel.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btn_Cancel.ShadowDecoration.Enabled = true;
+            this.btn_Cancel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
+            this.btn_Cancel.Size = new System.Drawing.Size(90, 37);
             this.btn_Cancel.TabIndex = 64;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -121,10 +127,16 @@
             this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Add.Location = new System.Drawing.Point(240, 261);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Add.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_Add.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_Add.Location = new System.Drawing.Point(237, 261);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
-            this.btn_Add.Size = new System.Drawing.Size(82, 36);
+            this.btn_Add.ShadowDecoration.BorderRadius = 15;
+            this.btn_Add.ShadowDecoration.Color = System.Drawing.Color.Gray;
+            this.btn_Add.ShadowDecoration.Enabled = true;
+            this.btn_Add.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
+            this.btn_Add.Size = new System.Drawing.Size(90, 37);
             this.btn_Add.TabIndex = 63;
             this.btn_Add.Text = "Add";
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -133,9 +145,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label2.Location = new System.Drawing.Point(76, 76);
+            this.label2.Location = new System.Drawing.Point(45, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 15);
@@ -156,13 +168,14 @@
             this.txtCategoryname.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCategoryname.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.txtCategoryname.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCategoryname.Location = new System.Drawing.Point(78, 94);
+            this.txtCategoryname.Location = new System.Drawing.Point(48, 94);
             this.txtCategoryname.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCategoryname.Name = "txtCategoryname";
             this.txtCategoryname.PasswordChar = '\0';
+            this.txtCategoryname.PlaceholderForeColor = System.Drawing.Color.DarkGray;
             this.txtCategoryname.PlaceholderText = "Enter category name";
             this.txtCategoryname.SelectedText = "";
-            this.txtCategoryname.Size = new System.Drawing.Size(244, 35);
+            this.txtCategoryname.Size = new System.Drawing.Size(310, 40);
             this.txtCategoryname.TabIndex = 61;
             // 
             // label1
@@ -171,7 +184,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label1.Location = new System.Drawing.Point(130, 22);
+            this.label1.Location = new System.Drawing.Point(136, 22);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(136, 25);
@@ -182,9 +195,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(79, 163);
+            this.label4.Location = new System.Drawing.Point(48, 163);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 15);
@@ -203,14 +216,14 @@
             this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbStatus.ForeColor = System.Drawing.Color.White;
-            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.ItemHeight = 35;
             this.cbStatus.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.cbStatus.Location = new System.Drawing.Point(79, 181);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStatus.Location = new System.Drawing.Point(48, 181);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(243, 36);
+            this.cbStatus.Size = new System.Drawing.Size(310, 41);
             this.cbStatus.TabIndex = 72;
             // 
             // AddCategory
@@ -232,7 +245,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddCategory";

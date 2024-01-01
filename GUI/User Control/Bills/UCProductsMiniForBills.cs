@@ -39,6 +39,7 @@ namespace GUI
                 {
                     UCMiniSizeForBill uCMiniSize = new UCMiniSizeForBill(BUS.BUSSize.Instance.GetSizeById(p), this, drink.id);
                     flowLayoutSize.Controls.Add(uCMiniSize);
+                    //uCMiniSize.Click += new EventHandler(UCMiniSizeForBill_Click);
                 }
             }
             catch (Exception ex)
@@ -64,5 +65,25 @@ namespace GUI
                 ucBill.Show();
             }
         }
+
+        //private void UCMiniSizeForBill_Click(object sender, EventArgs e)
+        //{
+        //    UserControl clickedControl = sender as UserControl;
+        //    if (clickedControl != null)
+        //    {
+        //        // Trở về màu nền trắng cho tất cả UserControl
+        //        foreach (Control control in flowLayoutSize.Controls)
+        //        {
+        //            if (control is UserControl)
+        //            {
+        //                control.BackColor = Color.White;
+        //            }
+        //        }
+
+        //        // Chuyển màu đỏ cho UserControl được click
+        //        clickedControl.BackColor = Color.WhiteSmoke;
+        //    }
+
+        //}
     }
 }

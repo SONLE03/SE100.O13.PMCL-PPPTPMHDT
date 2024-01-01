@@ -40,9 +40,23 @@ namespace GUI
             showOriginalPriceOfSize();
         }
 
+        public event EventHandler UserControlClicked;
         private void UCMiniSizeForBill_Click(object sender, EventArgs e)
         {
             showOriginalPriceOfSize();
+
+            UserControlClicked?.Invoke(this, EventArgs.Empty);
+            ////Code đổi màu
+            //foreach (Control control in Parent.Controls)
+            //{
+            //    if (control is UserControl)
+            //    {
+            //        control.BackColor = Color.White;
+            //    }
+            //}
+
+            //this.BackColor = Color.FromArgb(127,81,26);
+            //txtSize.ForeColor = Color.White;
         }
     }
 }

@@ -61,6 +61,10 @@
             this.btnProductList.Location = new System.Drawing.Point(206, 27);
             this.btnProductList.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductList.Name = "btnProductList";
+            this.btnProductList.ShadowDecoration.BorderRadius = 15;
+            this.btnProductList.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnProductList.ShadowDecoration.Enabled = true;
+            this.btnProductList.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btnProductList.Size = new System.Drawing.Size(135, 37);
             this.btnProductList.TabIndex = 33;
             this.btnProductList.Text = "Product list";
@@ -94,6 +98,10 @@
             this.btnCategory.Location = new System.Drawing.Point(787, 27);
             this.btnCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategory.Name = "btnCategory";
+            this.btnCategory.ShadowDecoration.BorderRadius = 15;
+            this.btnCategory.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnCategory.ShadowDecoration.Enabled = true;
+            this.btnCategory.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btnCategory.Size = new System.Drawing.Size(135, 37);
             this.btnCategory.TabIndex = 34;
             this.btnCategory.Text = "Category";
@@ -122,7 +130,11 @@
             this.PanelDisplayTabs.Location = new System.Drawing.Point(53, 91);
             this.PanelDisplayTabs.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDisplayTabs.Name = "PanelDisplayTabs";
-            this.PanelDisplayTabs.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.PanelDisplayTabs.ShadowDecoration.BorderRadius = 40;
+            this.PanelDisplayTabs.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.PanelDisplayTabs.ShadowDecoration.Depth = 40;
+            this.PanelDisplayTabs.ShadowDecoration.Enabled = true;
+            this.PanelDisplayTabs.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(8, 8, 15, 20);
             this.PanelDisplayTabs.Size = new System.Drawing.Size(1017, 665);
             this.PanelDisplayTabs.TabIndex = 23;
             // 
@@ -152,6 +164,10 @@
             this.btnSize.Location = new System.Drawing.Point(498, 27);
             this.btnSize.Margin = new System.Windows.Forms.Padding(2);
             this.btnSize.Name = "btnSize";
+            this.btnSize.ShadowDecoration.BorderRadius = 15;
+            this.btnSize.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnSize.ShadowDecoration.Enabled = true;
+            this.btnSize.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btnSize.Size = new System.Drawing.Size(135, 37);
             this.btnSize.TabIndex = 35;
             this.btnSize.Text = "Size list";

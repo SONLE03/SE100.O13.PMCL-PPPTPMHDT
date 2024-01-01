@@ -110,7 +110,7 @@
             this.txtProductname.PasswordChar = '\0';
             this.txtProductname.PlaceholderText = "Enter product name";
             this.txtProductname.SelectedText = "";
-            this.txtProductname.Size = new System.Drawing.Size(345, 38);
+            this.txtProductname.Size = new System.Drawing.Size(345, 40);
             this.txtProductname.TabIndex = 20;
             // 
             // label2
@@ -131,7 +131,7 @@
             this.combobox_category.AutoRoundedCorners = true;
             this.combobox_category.BackColor = System.Drawing.Color.Transparent;
             this.combobox_category.BorderColor = System.Drawing.Color.Black;
-            this.combobox_category.BorderRadius = 17;
+            this.combobox_category.BorderRadius = 19;
             this.combobox_category.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.combobox_category.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combobox_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -139,11 +139,11 @@
             this.combobox_category.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.combobox_category.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.combobox_category.ForeColor = System.Drawing.Color.White;
-            this.combobox_category.ItemHeight = 30;
-            this.combobox_category.Location = new System.Drawing.Point(490, 153);
-            this.combobox_category.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combobox_category.ItemHeight = 34;
+            this.combobox_category.Location = new System.Drawing.Point(369, 155);
+            this.combobox_category.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_category.Name = "combobox_category";
-            this.combobox_category.Size = new System.Drawing.Size(224, 36);
+            this.combobox_category.Size = new System.Drawing.Size(224, 40);
             this.combobox_category.TabIndex = 24;
             // 
             // label4
@@ -152,7 +152,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label4.Location = new System.Drawing.Point(366, 159);
+            this.label4.Location = new System.Drawing.Point(366, 137);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 15);
@@ -175,6 +175,7 @@
             // txtDescibe
             // 
             this.txtDescibe.AllowDrop = true;
+            this.txtDescibe.Animated = true;
             this.txtDescibe.BackColor = System.Drawing.Color.Transparent;
             this.txtDescibe.BorderColor = System.Drawing.Color.Silver;
             this.txtDescibe.BorderRadius = 15;
@@ -189,9 +190,11 @@
             this.txtDescibe.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDescibe.Location = new System.Drawing.Point(369, 233);
             this.txtDescibe.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDescibe.Multiline = true;
             this.txtDescibe.Name = "txtDescibe";
             this.txtDescibe.PasswordChar = '\0';
             this.txtDescibe.PlaceholderText = "Description";
+            this.txtDescibe.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtDescibe.SelectedText = "";
             this.txtDescibe.Size = new System.Drawing.Size(345, 54);
             this.txtDescibe.TabIndex = 26;
@@ -211,8 +214,11 @@
             this.guna2Panel1.Controls.Add(this.combobox_size);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(39, 393);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.BorderRadius = 15;
+            this.guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.guna2Panel1.ShadowDecoration.Enabled = true;
             this.guna2Panel1.Size = new System.Drawing.Size(684, 85);
             this.guna2Panel1.TabIndex = 28;
             // 
@@ -231,8 +237,12 @@
             this.btnAddDrinkSize.ForeColor = System.Drawing.Color.White;
             this.btnAddDrinkSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnAddDrinkSize.Location = new System.Drawing.Point(549, 24);
-            this.btnAddDrinkSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddDrinkSize.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddDrinkSize.Name = "btnAddDrinkSize";
+            this.btnAddDrinkSize.ShadowDecoration.BorderRadius = 15;
+            this.btnAddDrinkSize.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
+            this.btnAddDrinkSize.ShadowDecoration.Enabled = true;
+            this.btnAddDrinkSize.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
             this.btnAddDrinkSize.Size = new System.Drawing.Size(125, 36);
             this.btnAddDrinkSize.TabIndex = 32;
             this.btnAddDrinkSize.Text = "Add drink size";
@@ -258,7 +268,7 @@
             this.txtPrice.PasswordChar = '\0';
             this.txtPrice.PlaceholderText = "000.000.000";
             this.txtPrice.SelectedText = "";
-            this.txtPrice.Size = new System.Drawing.Size(103, 33);
+            this.txtPrice.Size = new System.Drawing.Size(103, 36);
             this.txtPrice.TabIndex = 29;
             this.txtPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrice_KeyPress);
             // 
@@ -279,7 +289,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
             this.panel1.Location = new System.Drawing.Point(9, 24);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(4, 29);
             this.panel1.TabIndex = 30;
@@ -299,8 +309,12 @@
             this.btn_AddSize.ForeColor = System.Drawing.Color.White;
             this.btn_AddSize.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_AddSize.Location = new System.Drawing.Point(162, 24);
-            this.btn_AddSize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_AddSize.Margin = new System.Windows.Forms.Padding(2);
             this.btn_AddSize.Name = "btn_AddSize";
+            this.btn_AddSize.ShadowDecoration.BorderRadius = 15;
+            this.btn_AddSize.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
+            this.btn_AddSize.ShadowDecoration.Enabled = true;
+            this.btn_AddSize.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
             this.btn_AddSize.Size = new System.Drawing.Size(116, 36);
             this.btn_AddSize.TabIndex = 29;
             this.btn_AddSize.Text = "Add new size";
@@ -334,7 +348,7 @@
             this.combobox_size.ForeColor = System.Drawing.Color.White;
             this.combobox_size.ItemHeight = 30;
             this.combobox_size.Location = new System.Drawing.Point(54, 24);
-            this.combobox_size.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combobox_size.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_size.Name = "combobox_size";
             this.combobox_size.Size = new System.Drawing.Size(99, 36);
             this.combobox_size.TabIndex = 29;
@@ -353,9 +367,15 @@
             this.btn_Add.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add.ForeColor = System.Drawing.Color.White;
             this.btn_Add.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btn_Add.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_Add.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_Add.Location = new System.Drawing.Point(459, 633);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
+            this.btn_Add.ShadowDecoration.BorderRadius = 15;
+            this.btn_Add.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
+            this.btn_Add.ShadowDecoration.Enabled = true;
+            this.btn_Add.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
             this.btn_Add.Size = new System.Drawing.Size(115, 40);
             this.btn_Add.TabIndex = 30;
             this.btn_Add.Text = "Add";
@@ -364,13 +384,16 @@
             // picture_product
             // 
             this.picture_product.BackColor = System.Drawing.Color.Transparent;
-            this.picture_product.BorderRadius = 20;
+            this.picture_product.BorderRadius = 25;
+            this.picture_product.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picture_product.Image = global::GUI.Properties.Resources.NotFoundImage;
             this.picture_product.ImageRotate = 0F;
             this.picture_product.Location = new System.Drawing.Point(48, 63);
-            this.picture_product.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picture_product.Margin = new System.Windows.Forms.Padding(2);
             this.picture_product.Name = "picture_product";
-            this.picture_product.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
+            this.picture_product.ShadowDecoration.BorderRadius = 20;
+            this.picture_product.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.picture_product.ShadowDecoration.Enabled = true;
             this.picture_product.Size = new System.Drawing.Size(250, 252);
             this.picture_product.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture_product.TabIndex = 2;
@@ -390,7 +413,7 @@
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox3.Location = new System.Drawing.Point(685, 14);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 33;
@@ -406,7 +429,7 @@
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox1.Location = new System.Drawing.Point(718, 14);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 32;
@@ -447,6 +470,7 @@
             this.SizeGrid.ReadOnly = true;
             this.SizeGrid.RowHeadersVisible = false;
             this.SizeGrid.RowHeadersWidth = 51;
+            this.SizeGrid.RowTemplate.Height = 25;
             this.SizeGrid.Size = new System.Drawing.Size(682, 84);
             this.SizeGrid.TabIndex = 40;
             this.SizeGrid.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -467,7 +491,7 @@
             this.SizeGrid.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.SizeGrid.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SizeGrid.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.SizeGrid.ThemeStyle.RowsStyle.Height = 22;
+            this.SizeGrid.ThemeStyle.RowsStyle.Height = 25;
             this.SizeGrid.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.SizeGrid.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.SizeGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SizeGrid_CellClick);
@@ -527,7 +551,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.label3.Location = new System.Drawing.Point(365, 327);
+            this.label3.Location = new System.Drawing.Point(366, 310);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
@@ -536,8 +560,9 @@
             // 
             // cbStatus
             // 
+            this.cbStatus.AutoRoundedCorners = true;
             this.cbStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cbStatus.BorderRadius = 15;
+            this.cbStatus.BorderRadius = 19;
             this.cbStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
@@ -545,14 +570,14 @@
             this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cbStatus.ForeColor = System.Drawing.Color.White;
-            this.cbStatus.ItemHeight = 30;
+            this.cbStatus.ItemHeight = 34;
             this.cbStatus.Items.AddRange(new object[] {
             "Active",
             "InActive"});
-            this.cbStatus.Location = new System.Drawing.Point(490, 317);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStatus.Location = new System.Drawing.Point(369, 328);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(224, 36);
+            this.cbStatus.Size = new System.Drawing.Size(224, 40);
             this.cbStatus.TabIndex = 72;
             // 
             // btn_Cancel
@@ -569,9 +594,15 @@
             this.btn_Cancel.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Cancel.ForeColor = System.Drawing.Color.White;
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btn_Cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btn_Cancel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_Cancel.Location = new System.Drawing.Point(186, 633);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancel.Name = "btn_Cancel";
+            this.btn_Cancel.ShadowDecoration.BorderRadius = 15;
+            this.btn_Cancel.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
+            this.btn_Cancel.ShadowDecoration.Enabled = true;
+            this.btn_Cancel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
             this.btn_Cancel.Size = new System.Drawing.Size(115, 40);
             this.btn_Cancel.TabIndex = 31;
             this.btn_Cancel.Text = "Cancel";
@@ -604,7 +635,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddNewProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewProduct";

@@ -39,8 +39,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.gridviewImportOrder = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.btnAddIO = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IO_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IO_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,8 +47,10 @@
             this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total_expense = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Edit = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Print = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btnAddIO = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewPrint = new Guna.UI2.WinForms.Guna2DataGridView();
             this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,11 +69,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.DarkGray;
-            this.label2.Location = new System.Drawing.Point(31, 48);
+            this.label2.Location = new System.Drawing.Point(23, 39);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(453, 28);
+            this.label2.Size = new System.Drawing.Size(331, 20);
             this.label2.TabIndex = 42;
             this.label2.Text = "These are list of all IOs in our store up to now ";
             // 
@@ -81,11 +82,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(33, 7);
+            this.label1.Location = new System.Drawing.Point(25, 6);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 32);
+            this.label1.Size = new System.Drawing.Size(228, 25);
             this.label1.TabIndex = 41;
             this.label1.Text = "Import order information";
             // 
@@ -102,10 +104,9 @@
             this.guna2Panel1.Controls.Add(this.label2);
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
-            this.guna2Panel1.Location = new System.Drawing.Point(63, 144);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(47, 117);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1221, 612);
+            this.guna2Panel1.Size = new System.Drawing.Size(916, 497);
             this.guna2Panel1.TabIndex = 64;
             // 
             // gridviewImportOrder
@@ -118,10 +119,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gainsboro;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(236)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewImportOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
@@ -139,22 +140,22 @@
             this.Print});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 10.5F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.gridviewImportOrder.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewImportOrder.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridviewImportOrder.Location = new System.Drawing.Point(4, 95);
-            this.gridviewImportOrder.Margin = new System.Windows.Forms.Padding(4);
+            this.gridviewImportOrder.Location = new System.Drawing.Point(3, 77);
             this.gridviewImportOrder.Name = "gridviewImportOrder";
             this.gridviewImportOrder.ReadOnly = true;
             this.gridviewImportOrder.RowHeadersVisible = false;
             this.gridviewImportOrder.RowHeadersWidth = 50;
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.gridviewImportOrder.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.gridviewImportOrder.Size = new System.Drawing.Size(1213, 476);
+            this.gridviewImportOrder.RowTemplate.Height = 40;
+            this.gridviewImportOrder.Size = new System.Drawing.Size(910, 387);
             this.gridviewImportOrder.TabIndex = 43;
             this.gridviewImportOrder.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.gridviewImportOrder.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -174,58 +175,10 @@
             this.gridviewImportOrder.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.gridviewImportOrder.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gridviewImportOrder.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridviewImportOrder.ThemeStyle.RowsStyle.Height = 22;
+            this.gridviewImportOrder.ThemeStyle.RowsStyle.Height = 40;
             this.gridviewImportOrder.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewImportOrder.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridviewImportOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewImportOrder_CellClick);
-            // 
-            // btnAddIO
-            // 
-            this.btnAddIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddIO.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddIO.BorderRadius = 15;
-            this.btnAddIO.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddIO.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddIO.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddIO.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddIO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddIO.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btnAddIO.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btnAddIO.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
-            this.btnAddIO.ForeColor = System.Drawing.Color.White;
-            this.btnAddIO.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddIO.Location = new System.Drawing.Point(978, 47);
-            this.btnAddIO.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAddIO.Name = "btnAddIO";
-            this.btnAddIO.Size = new System.Drawing.Size(306, 46);
-            this.btnAddIO.TabIndex = 62;
-            this.btnAddIO.Text = "Add Import Order";
-            this.btnAddIO.Click += new System.EventHandler(this.btnAddIO_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
-            this.txtSearch.BorderColor = System.Drawing.Color.Gray;
-            this.txtSearch.BorderRadius = 10;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(61, 44);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PasswordChar = '\0';
-            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
-            this.txtSearch.PlaceholderText = "Search Import order";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(408, 49);
-            this.txtSearch.TabIndex = 60;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // ID
             // 
@@ -292,14 +245,6 @@
             this.Edit.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Edit.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Print";
-            this.dataGridViewImageColumn1.Image = global::GUI.Properties.Resources.printer;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 90;
-            // 
             // Print
             // 
             this.Print.HeaderText = "Print";
@@ -308,14 +253,69 @@
             this.Print.Name = "Print";
             this.Print.ReadOnly = true;
             // 
+            // btnAddIO
+            // 
+            this.btnAddIO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddIO.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddIO.BorderRadius = 15;
+            this.btnAddIO.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddIO.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddIO.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddIO.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddIO.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddIO.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnAddIO.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnAddIO.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            this.btnAddIO.ForeColor = System.Drawing.Color.White;
+            this.btnAddIO.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnAddIO.Location = new System.Drawing.Point(826, 38);
+            this.btnAddIO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddIO.Name = "btnAddIO";
+            this.btnAddIO.Size = new System.Drawing.Size(138, 37);
+            this.btnAddIO.TabIndex = 62;
+            this.btnAddIO.Text = "Add I.O";
+            this.btnAddIO.Click += new System.EventHandler(this.btnAddIO_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderColor = System.Drawing.Color.Gray;
+            this.txtSearch.BorderRadius = 10;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(46, 36);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderForeColor = System.Drawing.Color.Gray;
+            this.txtSearch.PlaceholderText = "Search Import order";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(306, 40);
+            this.txtSearch.TabIndex = 60;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Print";
+            this.dataGridViewImageColumn1.Image = global::GUI.Properties.Resources.printer;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 90;
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::GUI.Properties.Resources.searches;
-            this.pictureBox1.Location = new System.Drawing.Point(407, 47);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(305, 38);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(49, 46);
+            this.pictureBox1.Size = new System.Drawing.Size(37, 37);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 63;
             this.pictureBox1.TabStop = false;
@@ -352,13 +352,14 @@
             dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewPrint.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewPrint.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dataGridViewPrint.Location = new System.Drawing.Point(1287, 151);
+            this.dataGridViewPrint.Location = new System.Drawing.Point(965, 123);
+            this.dataGridViewPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewPrint.Name = "dataGridViewPrint";
             this.dataGridViewPrint.ReadOnly = true;
             this.dataGridViewPrint.RowHeadersVisible = false;
             this.dataGridViewPrint.RowHeadersWidth = 51;
             this.dataGridViewPrint.RowTemplate.Height = 24;
-            this.dataGridViewPrint.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewPrint.Size = new System.Drawing.Size(180, 122);
             this.dataGridViewPrint.TabIndex = 162;
             this.dataGridViewPrint.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dataGridViewPrint.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -427,17 +428,16 @@
             // 
             // UCImport_TabImportOrder
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.dataGridViewPrint);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnAddIO);
             this.Controls.Add(this.txtSearch);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCImport_TabImportOrder";
-            this.Size = new System.Drawing.Size(1347, 806);
+            this.Size = new System.Drawing.Size(1010, 655);
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewImportOrder)).EndInit();

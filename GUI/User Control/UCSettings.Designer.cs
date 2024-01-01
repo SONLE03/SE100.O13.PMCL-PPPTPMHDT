@@ -44,31 +44,32 @@
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbRole = new System.Windows.Forms.Label();
             this.DateOfBirth = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUserFullName = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2CircleProgressBar1 = new Guna.UI2.WinForms.Guna2CircleProgressBar();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbPassword = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.guna2Panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.avatar)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.guna2CircleProgressBar1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnChangeAvatar
             // 
+            this.btnChangeAvatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnChangeAvatar.BackColor = System.Drawing.Color.Transparent;
             this.btnChangeAvatar.BorderRadius = 15;
             this.btnChangeAvatar.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -81,11 +82,15 @@
             this.btnChangeAvatar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnChangeAvatar.ForeColor = System.Drawing.Color.White;
             this.btnChangeAvatar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnChangeAvatar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.btnChangeAvatar.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(128)))), ((int)(((byte)(76)))));
-            this.btnChangeAvatar.Location = new System.Drawing.Point(21, 397);
-            this.btnChangeAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChangeAvatar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnChangeAvatar.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnChangeAvatar.Location = new System.Drawing.Point(51, 410);
+            this.btnChangeAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangeAvatar.Name = "btnChangeAvatar";
+            this.btnChangeAvatar.ShadowDecoration.BorderRadius = 15;
+            this.btnChangeAvatar.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnChangeAvatar.ShadowDecoration.Enabled = true;
+            this.btnChangeAvatar.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btnChangeAvatar.Size = new System.Drawing.Size(280, 42);
             this.btnChangeAvatar.TabIndex = 61;
             this.btnChangeAvatar.Text = "Change avatar";
@@ -156,7 +161,7 @@
             this.guna2Panel5.Controls.Add(this.lbUserName);
             this.guna2Panel5.FillColor = System.Drawing.Color.White;
             this.guna2Panel5.Location = new System.Drawing.Point(34, 44);
-            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel5.Name = "guna2Panel5";
             this.guna2Panel5.Size = new System.Drawing.Size(297, 45);
             this.guna2Panel5.TabIndex = 56;
@@ -193,9 +198,15 @@
             this.btnChangeProfile.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnChangeProfile.ForeColor = System.Drawing.Color.White;
             this.btnChangeProfile.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnChangeProfile.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnChangeProfile.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btnChangeProfile.Location = new System.Drawing.Point(548, 406);
-            this.btnChangeProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChangeProfile.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangeProfile.Name = "btnChangeProfile";
+            this.btnChangeProfile.ShadowDecoration.BorderRadius = 15;
+            this.btnChangeProfile.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnChangeProfile.ShadowDecoration.Enabled = true;
+            this.btnChangeProfile.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btnChangeProfile.Size = new System.Drawing.Size(260, 46);
             this.btnChangeProfile.TabIndex = 48;
             this.btnChangeProfile.Text = "Change profile";
@@ -245,9 +256,15 @@
             this.btnChangePass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnChangePass.ForeColor = System.Drawing.Color.White;
             this.btnChangePass.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnChangePass.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.btnChangePass.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btnChangePass.Location = new System.Drawing.Point(812, 43);
-            this.btnChangePass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChangePass.Margin = new System.Windows.Forms.Padding(2);
             this.btnChangePass.Name = "btnChangePass";
+            this.btnChangePass.ShadowDecoration.BorderRadius = 15;
+            this.btnChangePass.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnChangePass.ShadowDecoration.Enabled = true;
+            this.btnChangePass.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btnChangePass.Size = new System.Drawing.Size(173, 46);
             this.btnChangePass.TabIndex = 63;
             this.btnChangePass.Text = "Change password";
@@ -277,6 +294,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.DimGray;
             this.guna2Panel1.BorderRadius = 30;
             this.guna2Panel1.BorderThickness = 1;
+            this.guna2Panel1.Controls.Add(this.btnChangeAvatar);
             this.guna2Panel1.Controls.Add(this.guna2Panel4);
             this.guna2Panel1.Controls.Add(this.DateOfBirth);
             this.guna2Panel1.Controls.Add(this.txtAddress);
@@ -309,7 +327,7 @@
             this.guna2Panel4.Controls.Add(this.lbRole);
             this.guna2Panel4.FillColor = System.Drawing.Color.White;
             this.guna2Panel4.Location = new System.Drawing.Point(689, 45);
-            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
             this.guna2Panel4.Size = new System.Drawing.Size(296, 45);
             this.guna2Panel4.TabIndex = 71;
@@ -346,27 +364,6 @@
             this.DateOfBirth.Size = new System.Drawing.Size(297, 45);
             this.DateOfBirth.TabIndex = 70;
             this.DateOfBirth.Value = new System.DateTime(2023, 12, 22, 0, 25, 37, 829);
-            // 
-            // guna2CircleProgressBar1
-            // 
-            this.guna2CircleProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar1.Controls.Add(this.avatar);
-            this.guna2CircleProgressBar1.Enabled = false;
-            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
-            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(4, 39);
-            this.guna2CircleProgressBar1.Minimum = 0;
-            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
-            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(314, 314);
-            this.guna2CircleProgressBar1.TabIndex = 65;
-            this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
             // 
             // txtAddress
             // 
@@ -486,6 +483,38 @@
             this.label4.TabIndex = 51;
             this.label4.Text = "Role";
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.guna2CircleProgressBar1);
+            this.panel1.Location = new System.Drawing.Point(21, 13);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(323, 353);
+            this.panel1.TabIndex = 72;
+            // 
+            // guna2CircleProgressBar1
+            // 
+            this.guna2CircleProgressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2CircleProgressBar1.BackColor = System.Drawing.Color.White;
+            this.guna2CircleProgressBar1.Controls.Add(this.avatar);
+            this.guna2CircleProgressBar1.Enabled = false;
+            this.guna2CircleProgressBar1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.guna2CircleProgressBar1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.guna2CircleProgressBar1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleProgressBar1.Location = new System.Drawing.Point(6, 9);
+            this.guna2CircleProgressBar1.Minimum = 0;
+            this.guna2CircleProgressBar1.Name = "guna2CircleProgressBar1";
+            this.guna2CircleProgressBar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.guna2CircleProgressBar1.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
+            this.guna2CircleProgressBar1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleProgressBar1.Size = new System.Drawing.Size(314, 314);
+            this.guna2CircleProgressBar1.TabIndex = 65;
+            this.guna2CircleProgressBar1.Text = "guna2CircleProgressBar1";
+            // 
             // guna2Panel2
             // 
             this.guna2Panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -527,7 +556,7 @@
             this.guna2Panel3.Controls.Add(this.lbPassword);
             this.guna2Panel3.FillColor = System.Drawing.Color.White;
             this.guna2Panel3.Location = new System.Drawing.Point(427, 44);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(297, 45);
             this.guna2Panel3.TabIndex = 58;
@@ -572,18 +601,6 @@
             this.label10.TabIndex = 66;
             this.label10.Text = "Personal information";
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.btnChangeAvatar);
-            this.panel1.Controls.Add(this.guna2CircleProgressBar1);
-            this.panel1.Location = new System.Drawing.Point(21, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(323, 447);
-            this.panel1.TabIndex = 72;
-            // 
             // UCSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -605,12 +622,12 @@
             this.guna2Panel1.PerformLayout();
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.guna2CircleProgressBar1.ResumeLayout(false);
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

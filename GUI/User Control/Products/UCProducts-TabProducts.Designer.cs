@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSearch = new System.Windows.Forms.PictureBox();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnSearch = new System.Windows.Forms.PictureBox();
             this.PanelProductlist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.SuspendLayout();
@@ -74,12 +74,12 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(738, 37);
+            this.label1.Location = new System.Drawing.Point(738, 40);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 25);
+            this.label1.Size = new System.Drawing.Size(53, 20);
             this.label1.TabIndex = 58;
             this.label1.Text = "Status";
             // 
@@ -94,13 +94,13 @@
             this.cbStatus.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.cbStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cbStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.cbStatus.Font = new System.Drawing.Font("Segoe UI", 11.5F);
             this.cbStatus.ForeColor = System.Drawing.Color.White;
-            this.cbStatus.ItemHeight = 30;
-            this.cbStatus.Location = new System.Drawing.Point(811, 32);
+            this.cbStatus.ItemHeight = 34;
+            this.cbStatus.Location = new System.Drawing.Point(808, 32);
             this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
-            this.cbStatus.Size = new System.Drawing.Size(166, 36);
+            this.cbStatus.Size = new System.Drawing.Size(166, 40);
             this.cbStatus.TabIndex = 57;
             this.cbStatus.SelectedValueChanged += new System.EventHandler(this.cbStatus_SelectedValueChanged);
             // 
@@ -113,17 +113,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 36);
             this.panel2.TabIndex = 56;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::GUI.Properties.Resources.searches;
-            this.btnSearch.Location = new System.Drawing.Point(299, 37);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(32, 32);
-            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSearch.TabIndex = 49;
-            this.btnSearch.TabStop = false;
             // 
             // btnAddProduct
             // 
@@ -140,9 +129,13 @@
             this.btnAddProduct.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddProduct.ForeColor = System.Drawing.Color.White;
             this.btnAddProduct.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btnAddProduct.Location = new System.Drawing.Point(844, 85);
+            this.btnAddProduct.Location = new System.Drawing.Point(844, 87);
             this.btnAddProduct.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.ShadowDecoration.BorderRadius = 16;
+            this.btnAddProduct.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnAddProduct.ShadowDecoration.Enabled = true;
+            this.btnAddProduct.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btnAddProduct.Size = new System.Drawing.Size(133, 40);
             this.btnAddProduct.TabIndex = 32;
             this.btnAddProduct.Text = "Add product";
@@ -153,12 +146,12 @@
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(403, 37);
+            this.label4.Location = new System.Drawing.Point(403, 40);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 25);
+            this.label4.Size = new System.Drawing.Size(73, 20);
             this.label4.TabIndex = 27;
             this.label4.Text = "Category";
             // 
@@ -173,13 +166,13 @@
             this.combobox_category.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.combobox_category.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.combobox_category.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.combobox_category.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.combobox_category.Font = new System.Drawing.Font("Segoe UI", 11.5F);
             this.combobox_category.ForeColor = System.Drawing.Color.White;
-            this.combobox_category.ItemHeight = 30;
-            this.combobox_category.Location = new System.Drawing.Point(498, 32);
+            this.combobox_category.ItemHeight = 34;
+            this.combobox_category.Location = new System.Drawing.Point(491, 32);
             this.combobox_category.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_category.Name = "combobox_category";
-            this.combobox_category.Size = new System.Drawing.Size(167, 36);
+            this.combobox_category.Size = new System.Drawing.Size(167, 40);
             this.combobox_category.TabIndex = 26;
             this.combobox_category.SelectedValueChanged += new System.EventHandler(this.combobox_category_SelectedValueChanged);
             // 
@@ -225,10 +218,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel.AutoScroll = true;
             this.flowLayoutPanel.BackColor = System.Drawing.Color.White;
-            this.flowLayoutPanel.Location = new System.Drawing.Point(3, 147);
+            this.flowLayoutPanel.Location = new System.Drawing.Point(42, 147);
             this.flowLayoutPanel.Name = "flowLayoutPanel";
-            this.flowLayoutPanel.Size = new System.Drawing.Size(1011, 475);
+            this.flowLayoutPanel.Size = new System.Drawing.Size(935, 475);
             this.flowLayoutPanel.TabIndex = 33;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::GUI.Properties.Resources.searches;
+            this.btnSearch.Location = new System.Drawing.Point(301, 37);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(32, 32);
+            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSearch.TabIndex = 49;
+            this.btnSearch.TabStop = false;
             // 
             // UCProducts_TabProducts
             // 

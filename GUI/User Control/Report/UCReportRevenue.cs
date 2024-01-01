@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace GUI
 {
@@ -38,6 +39,26 @@ namespace GUI
                 MessageBox.Show("Error", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             LoadData(dtpStartDate.Value, dtpEndDate.Value);
+        }
+
+        private void chartTotalRevenue_MouseMove(object sender, MouseEventArgs e)
+        {
+            //Code tooltip
+            //var chart = sender as Chart;
+            //if (chart != null)
+            //{
+            //    var result = chart.HitTest(e.X, e.Y);
+            //    if (result.ChartElementType == ChartElementType.DataPoint)
+            //    {
+            //        var dataPoint = result.Series.Points[result.PointIndex];
+            //        var xValue = dataPoint.XValue;
+            //        var yValue = dataPoint.YValues[0]; // Assuming single Y value per point
+
+            //        // Show tooltip with point values
+            //        ToolTip tooltip = new ToolTip();
+            //        tooltip.SetToolTip(chart, $"Point ({xValue}, {yValue})");
+            //    }
+            //}
         }
     }
 }

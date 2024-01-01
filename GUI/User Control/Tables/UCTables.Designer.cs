@@ -45,6 +45,10 @@
             this.PanelTables.FillColor = System.Drawing.Color.White;
             this.PanelTables.Location = new System.Drawing.Point(58, 99);
             this.PanelTables.Name = "PanelTables";
+            this.PanelTables.ShadowDecoration.BorderRadius = 35;
+            this.PanelTables.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.PanelTables.ShadowDecoration.Enabled = true;
+            this.PanelTables.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 5, 20, 20);
             this.PanelTables.Size = new System.Drawing.Size(1010, 655);
             this.PanelTables.TabIndex = 23;
             // 
@@ -63,9 +67,15 @@
             this.btnArea.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnArea.ForeColor = System.Drawing.Color.White;
             this.btnArea.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnArea.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.btnArea.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnArea.Location = new System.Drawing.Point(681, 29);
             this.btnArea.Margin = new System.Windows.Forms.Padding(2);
             this.btnArea.Name = "btnArea";
+            this.btnArea.ShadowDecoration.BorderRadius = 15;
+            this.btnArea.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnArea.ShadowDecoration.Enabled = true;
+            this.btnArea.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btnArea.Size = new System.Drawing.Size(117, 41);
             this.btnArea.TabIndex = 36;
             this.btnArea.Text = "Area";
@@ -85,9 +95,15 @@
             this.btnTable.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.btnTable.ForeColor = System.Drawing.Color.White;
             this.btnTable.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.btnTable.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
+            this.btnTable.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnTable.Location = new System.Drawing.Point(318, 29);
             this.btnTable.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable.Name = "btnTable";
+            this.btnTable.ShadowDecoration.BorderRadius = 15;
+            this.btnTable.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.btnTable.ShadowDecoration.Enabled = true;
+            this.btnTable.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btnTable.Size = new System.Drawing.Size(129, 41);
             this.btnTable.TabIndex = 35;
             this.btnTable.Text = "Tables";

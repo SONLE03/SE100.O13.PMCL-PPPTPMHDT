@@ -280,10 +280,10 @@
     <Compile Include="Form\ImportOrderDetails.Designer.cs">
       <DependentUpon>ImportOrderDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="InvoiceDetail.cs">
+    <Compile Include="Form\InvoiceDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InvoiceDetail.Designer.cs">
+    <Compile Include="Form\InvoiceDetail.Designer.cs">
       <DependentUpon>InvoiceDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -300,22 +300,22 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCReportDrink.cs">
+    <Compile Include="User Control\Report\UCReportDrink.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCReportDrink.Designer.cs">
+    <Compile Include="User Control\Report\UCReportDrink.Designer.cs">
       <DependentUpon>UCReportDrink.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCReports.cs">
+    <Compile Include="User Control\Report\UCReports.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCReports.Designer.cs">
+    <Compile Include="User Control\Report\UCReports.Designer.cs">
       <DependentUpon>UCReports.cs</DependentUpon>
     </Compile>
-    <Compile Include="UCReportRevenue.cs">
+    <Compile Include="User Control\Report\UCReportRevenue.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UCReportRevenue.Designer.cs">
+    <Compile Include="User Control\Report\UCReportRevenue.Designer.cs">
       <DependentUpon>UCReportRevenue.cs</DependentUpon>
     </Compile>
     <Compile Include="User Control\UCChangeRegulations.cs">
@@ -561,7 +561,7 @@
     <EmbeddedResource Include="Form\ImportOrderDetails.resx">
       <DependentUpon>ImportOrderDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InvoiceDetail.resx">
+    <EmbeddedResource Include="Form\InvoiceDetail.resx">
       <DependentUpon>InvoiceDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -580,13 +580,13 @@
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCReportDrink.resx">
+    <EmbeddedResource Include="User Control\Report\UCReportDrink.resx">
       <DependentUpon>UCReportDrink.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCReportRevenue.resx">
+    <EmbeddedResource Include="User Control\Report\UCReportRevenue.resx">
       <DependentUpon>UCReportRevenue.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCReports.resx">
+    <EmbeddedResource Include="User Control\Report\UCReports.resx">
       <DependentUpon>UCReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User Control\UCChangeRegulations.resx">
@@ -834,6 +834,8 @@
     <None Include="Resources\Engman.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sale.png" />
+    <None Include="Resources\schedule.png" />
     <None Include="Resources\printer.png" />
     <None Include="Resources\spending.png" />
     <None Include="Resources\tax.png" />

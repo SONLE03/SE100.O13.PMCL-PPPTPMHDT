@@ -35,5 +35,15 @@ namespace GUI
                 gridInvoiceDetails.Rows.Add(billDetail.DRINK.DrinksName, billDetail.C_SIZE.SizeName, billDetail.Quantity, billDetail.Rate, billDetail.Amount);
             }
         }
+
+        private void InvoiceDetail_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bthClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

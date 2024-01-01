@@ -161,6 +161,7 @@
             // txtPass
             // 
             this.txtPass.BackColor = System.Drawing.Color.Transparent;
+            this.txtPass.BorderColor = System.Drawing.Color.Gray;
             this.txtPass.BorderRadius = 15;
             this.txtPass.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtPass.DefaultText = "";
@@ -183,6 +184,7 @@
             // txtUsername
             // 
             this.txtUsername.BackColor = System.Drawing.Color.Transparent;
+            this.txtUsername.BorderColor = System.Drawing.Color.Gray;
             this.txtUsername.BorderRadius = 15;
             this.txtUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtUsername.DefaultText = "";
@@ -218,6 +220,10 @@
             this.btn_login.Location = new System.Drawing.Point(111, 395);
             this.btn_login.Margin = new System.Windows.Forms.Padding(2);
             this.btn_login.Name = "btn_login";
+            this.btn_login.ShadowDecoration.BorderRadius = 15;
+            this.btn_login.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
+            this.btn_login.ShadowDecoration.Enabled = true;
+            this.btn_login.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
             this.btn_login.Size = new System.Drawing.Size(130, 40);
             this.btn_login.TabIndex = 7;
             this.btn_login.Text = "Login";

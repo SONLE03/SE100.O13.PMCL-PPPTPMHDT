@@ -24,9 +24,13 @@ namespace GUI
             showOriginalPriceOfSize();
         }
 
+
+        //public event EventHandler UserControlClicked;
         private void UCMiniSize_Click(object sender, EventArgs e)
         {
             showOriginalPriceOfSize();
+            //UserControlClicked?.Invoke(this, EventArgs.Empty);
+            this.BackColor = Color.WhiteSmoke;
         }
         private void showOriginalPriceOfSize()
         {

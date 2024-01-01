@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace GUI
 {
@@ -148,6 +149,26 @@ namespace GUI
         private void btnExportToExcel_Click(object sender, EventArgs e)
         {
             ExportToExcel(dtpDate.Value);
+        }
+
+        private void chartDrinkColumn_MouseMove(object sender, MouseEventArgs e)
+        {
+            //Code tooltip
+            //var chart = sender as Chart;
+            //if (chart != null)
+            //{
+            //    var result = chart.HitTest(e.X, e.Y);
+            //    if (result.ChartElementType == ChartElementType.DataPoint)
+            //    {
+            //        var dataPoint = result.Series.Points[result.PointIndex];
+            //        var xValue = dataPoint.XValue;
+            //        var yValue = dataPoint.YValues[0]; // Assuming single Y value per point
+
+            //        // Show tooltip with point values
+            //        ToolTip tooltip = new ToolTip();
+            //        tooltip.SetToolTip(chart, $"Point ({xValue}, {yValue})");
+            //    }
+            //}
         }
     }
 }
