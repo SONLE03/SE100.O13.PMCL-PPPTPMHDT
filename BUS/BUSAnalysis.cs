@@ -25,13 +25,17 @@ namespace BUS
         {
             return DALAnalysis.Instance.topSellingDrinks();
         }
-        public List<MonthlyRevenueDTO> monthlyRevenueDTOs()
+        public List<CustomRevenueDTO> monthOfYearRevenueDTOs(int year)
         {
-            return DALAnalysis.Instance.MonthlyRevenues();
+            return DALAnalysis.Instance.MonthlyRevenues(year);
         }
-        public List<CustomRevenueDTO> customRevenueDTOs(DateTime startDate, DateTime endDate)
+        public List<CustomRevenueDTO> dayOfMonthRevenueDTOs(int month, int year)
         {
-            return DALAnalysis.Instance.CustomRevenues(startDate, endDate);
+            return DALAnalysis.Instance.dayOfMonthRevenueDTOs(month, year);
+        } 
+        public List<CustomRevenueDTO> yearsRevenueDTOs(int startYear, int endYear)
+        {
+            return DALAnalysis.Instance.yearsRevenueDTOs(startYear, endYear);
         }
         public List<DrinkReportDTO> drinkReportDTOs(DateTime date)
         {

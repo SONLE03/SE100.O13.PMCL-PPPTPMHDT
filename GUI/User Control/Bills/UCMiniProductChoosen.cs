@@ -39,18 +39,12 @@ namespace GUI
                         {
                             if (p.Unit.Contains("VND"))
                             {
-                                if (salePrice < p.Discount)
-                                {
-                                    salePrice = (double)p.Discount;
-                                }
+                                 salePrice = (double)p.Discount;
                             }
                             else if (p.Unit.Contains("%"))
                             {
                                 double discount = double.Parse(lbPrice.Text.Replace(" VND", "")) * ((100 - (double)p.Discount) / 100);
-                                if (salePrice < discount)
-                                {
-                                    salePrice = discount;
-                                }
+                                salePrice = discount;
                             }   
                             else
                             {
@@ -61,17 +55,11 @@ namespace GUI
                 }    
             }
 
-            if (salePrice > double.Parse(lbPrice.Text.Replace(" VND", "")))
-            {
-                lbBasePrice.Text = "Bigger than original price".ToString();
-                salePrice = 0;
-            }
-            else
+            if (salePrice < double.Parse(lbPrice.Text.Replace(" VND", "")))
             {
                 lbBasePrice.Text = lbPrice.Text;
                 lbPrice.Text = salePrice.ToString() + " VND";
             }
-
         }
 
         public int getDrinkID()

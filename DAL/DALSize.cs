@@ -22,7 +22,7 @@ namespace DAL
         }
         public List<C_SIZE> GetAllSize()
         {
-            return CFEntities.Instance.C_SIZE.AsNoTracking().ToList();
+            return CFEntities.Instance.C_SIZE.AsNoTracking().OrderByDescending(size => size.id).ToList();
         }
         public C_SIZE GetSizeById(int id)
         {

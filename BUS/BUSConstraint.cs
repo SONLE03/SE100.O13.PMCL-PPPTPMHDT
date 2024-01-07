@@ -26,11 +26,12 @@ namespace BUS
             string phoneNumber = DALConstraint.Instance.TransformString(phone); 
             return phoneNumber.Length == 10 && phoneNumber.StartsWith("0");
         }
-        public bool DateTimeValidatorInEvent(DateTime startDate, DateTime dueDate)
+        public bool DateTimeValidatorInEvent(DateTime startDate, DateTime dueDate, int type)
         {
             TimeSpan span = dueDate - startDate;
             int gap = span.Days;
-            return (startDate.Date >= DateTime.Now.Date) && (dueDate.Date >= startDate.Date) && gap <= BUSRule.Instance.GetAllRule().MaximumDateForEvent;
+            DateTime checkDate = type == 1 ? startDate: dueDate;
+            return (checkDate >= DateTime.Now) && (dueDate.Date >= startDate.Date) && gap <= BUSRule.Instance.GetAllRule().MaximumDateForEvent;
         }
     }
 }

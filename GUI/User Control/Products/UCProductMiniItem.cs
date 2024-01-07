@@ -8,7 +8,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 using DTO;
+using static System.Windows.Forms.LinkLabel;
+
 namespace GUI
 {
     public partial class UCProductMiniItem : UserControl
@@ -20,9 +23,9 @@ namespace GUI
             this.ucProduct = ucProduct;
         }
 
-        public void updatePrice(string price)
+        public void updatePrice(string price, string size)
         {
-            lbPrice.Text = price + " VND";
+            lbPrice.Text = price + " VND" + $" ({size})";
         }
 
         public void loadData(DRINK drink, List<int> sizes)
@@ -38,7 +41,6 @@ namespace GUI
                 {
                     UCMiniSize uCMiniSize = new UCMiniSize(BUS.BUSSize.Instance.GetSizeById(p), this, drink.id);
                     flowLayoutSize.Controls.Add(uCMiniSize);
-                    //uCMiniSize.Click += new EventHandler(UCMiniSize_Click);
                 }
             }
             catch (Exception ex)
@@ -65,24 +67,14 @@ namespace GUI
             ucProduct.Show();
         }
 
-        private void UCMiniSize_Click(object sender, EventArgs e)
+        private void UCProductMiniItem_Load(object sender, EventArgs e)
         {
-            UserControl clickedControl = sender as UserControl;
-            if (clickedControl != null)
-            {
-                // Trở về màu nền trắng cho tất cả UserControl
-                foreach (Control control in flowLayoutSize.Controls)
-                {
-                    if (control is UserControl)
-                    {
-                        control.BackColor = Color.White;
-                    }
-                }
-
-                // Chuyển màu cho UserControl được click
-                clickedControl.BackColor = Color.WhiteSmoke;
-            }
-
+            //foreach (var p in ucProduct.S)
+            //{
+            //    UCMiniSize uCMiniSize = new UCMiniSize(BUSSize.Instance.GetSizeById(p), this, drink.id);
+            //    flowLayoutSize.Controls.Add(uCMiniSize);
+            //    uCMiniSize.UCMiniSizeClicked += UCMiniSize_UcMiniSizeClicked;
+            //}
         }
     }
 }

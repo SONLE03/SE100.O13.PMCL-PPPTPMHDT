@@ -21,7 +21,7 @@ namespace DAL
         }
         public List<SUPPLIER> GetAllSupplier()
         {
-            return CFEntities.Instance.SUPPLIERs.AsNoTracking().ToList();
+            return CFEntities.Instance.SUPPLIERs.AsNoTracking().OrderByDescending(supplier => supplier.id).ToList();
         }
         public List<SUPPLIER> GetAllSupplierActive()
         {

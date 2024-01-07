@@ -109,12 +109,6 @@ namespace GUI
             CheckPermissionAndOpenControl(1, new UCHome());
             CheckedBtnState(sender);
         }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void CheckPermissionAndOpenControl(int service, UserControl userControl)
         {
             try
@@ -228,6 +222,14 @@ namespace GUI
         {
             CheckPermissionAndOpenControl(8, new UCReports());
             CheckedBtnState(sender);
+        }
+
+        private void btnClose_Click_1(object sender, EventArgs e)
+        {
+            if (MessageBox.Show($"Your revenue is {BUSOrder.Instance.revenue} VND. Are you sure to exit ?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+               Environment.Exit(0);
+            }
         }
     }
 }

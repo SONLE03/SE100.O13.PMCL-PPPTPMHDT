@@ -31,7 +31,7 @@ namespace GUI
             gridviewImportOrder.Rows.Clear();
             foreach (IMPORT_BILL im in import)
             {
-                gridviewImportOrder.Rows.Add(im.id, im.ImportID, im.ImportName, im.ImportDate, im.SUPPLIER.SupplierName, im.IMPORT_BILL_DETAIL.Count, im.Total, edit_img, print_img);
+                gridviewImportOrder.Rows.Add(im.id, im.ImportID, im.ImportName, im.ImportDate.ToString("dd/MM/yyyy HH:mm:ss"), im.SUPPLIER.SupplierName, im.IMPORT_BILL_DETAIL.Count, im.Total, edit_img, print_img);
             }
         }
 

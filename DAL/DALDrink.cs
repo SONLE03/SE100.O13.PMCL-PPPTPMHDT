@@ -24,15 +24,15 @@ namespace DAL
         }
         public List<DRINK> GetAllDrink()
         {
-            return CFEntities.Instance.DRINKS.AsNoTracking().ToList();
+            return CFEntities.Instance.DRINKS.AsNoTracking().OrderByDescending(drink => drink.Status == "Active").ToList();
         }
         public List<DRINK> GetAllDrinkActive()
         {
             return CFEntities.Instance.DRINKS.AsNoTracking().Where(t => t.Status == "Active").ToList();
         }
-        public List<DRINK> GetAllDrinkActiveByCategory(int catId)
+        public List<DRINK> GetAllDrinkForEvent(int catId)
         {
-            return CFEntities.Instance.DRINKS.AsNoTracking().Where(t =>  t.CategoryID == catId && t.Status != "InActive").ToList();
+            return CFEntities.Instance.DRINKS.AsNoTracking().Where(t => t.CategoryID == catId && t.Status != "InActive").ToList();
         }
 
         public DRINK GetDrinkById(int id)

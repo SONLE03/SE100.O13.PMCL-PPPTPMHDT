@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
+            this.lbSizeName = new System.Windows.Forms.Label();
             this.lbDrinkID = new System.Windows.Forms.Label();
             this.lbSize = new System.Windows.Forms.Label();
             this.lbBasePrice = new System.Windows.Forms.Label();
@@ -39,7 +40,6 @@
             this.lbPrice = new System.Windows.Forms.Label();
             this.lbName = new System.Windows.Forms.Label();
             this.drinkImage = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lbSizeName = new System.Windows.Forms.Label();
             this.guna2CustomGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.deleteDrink)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drinkQuantity)).BeginInit();
@@ -73,6 +73,22 @@
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(528, 100);
             this.guna2CustomGradientPanel1.TabIndex = 2;
             // 
+            // lbSizeName
+            // 
+            this.lbSizeName.AllowDrop = true;
+            this.lbSizeName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbSizeName.AutoSize = true;
+            this.lbSizeName.BackColor = System.Drawing.Color.White;
+            this.lbSizeName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.lbSizeName.ForeColor = System.Drawing.Color.Gray;
+            this.lbSizeName.Location = new System.Drawing.Point(280, 48);
+            this.lbSizeName.Name = "lbSizeName";
+            this.lbSizeName.Size = new System.Drawing.Size(89, 23);
+            this.lbSizeName.TabIndex = 9;
+            this.lbSizeName.Text = "SizeName";
+            // 
             // lbDrinkID
             // 
             this.lbDrinkID.AllowDrop = true;
@@ -88,6 +104,7 @@
             this.lbDrinkID.Size = new System.Drawing.Size(71, 23);
             this.lbDrinkID.TabIndex = 8;
             this.lbDrinkID.Text = "drinkID";
+            this.lbDrinkID.Visible = false;
             // 
             // lbSize
             // 
@@ -104,6 +121,7 @@
             this.lbSize.Size = new System.Drawing.Size(57, 23);
             this.lbSize.TabIndex = 7;
             this.lbSize.Text = "sizeID";
+            this.lbSize.Visible = false;
             // 
             // lbBasePrice
             // 
@@ -207,22 +225,6 @@
             this.drinkImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.drinkImage.TabIndex = 1;
             this.drinkImage.TabStop = false;
-            // 
-            // lbSizeName
-            // 
-            this.lbSizeName.AllowDrop = true;
-            this.lbSizeName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbSizeName.AutoSize = true;
-            this.lbSizeName.BackColor = System.Drawing.Color.White;
-            this.lbSizeName.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.lbSizeName.ForeColor = System.Drawing.Color.Gray;
-            this.lbSizeName.Location = new System.Drawing.Point(248, 48);
-            this.lbSizeName.Name = "lbSizeName";
-            this.lbSizeName.Size = new System.Drawing.Size(89, 23);
-            this.lbSizeName.TabIndex = 9;
-            this.lbSizeName.Text = "SizeName";
             // 
             // UCMiniProductChoosen
             // 

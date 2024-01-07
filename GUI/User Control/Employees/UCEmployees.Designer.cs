@@ -32,7 +32,7 @@ namespace GUI
         {
             this.btnUsergroup = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnEmployees = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.panelControl = new Guna.UI2.WinForms.Guna2Panel();
+            this.panelControl = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.SuspendLayout();
             // 
             // btnUsergroup
@@ -52,14 +52,14 @@ namespace GUI
             this.btnUsergroup.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnUsergroup.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnUsergroup.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnUsergroup.Location = new System.Drawing.Point(675, 29);
-            this.btnUsergroup.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUsergroup.Location = new System.Drawing.Point(900, 36);
+            this.btnUsergroup.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUsergroup.Name = "btnUsergroup";
             this.btnUsergroup.ShadowDecoration.BorderRadius = 15;
             this.btnUsergroup.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnUsergroup.ShadowDecoration.Enabled = true;
             this.btnUsergroup.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnUsergroup.Size = new System.Drawing.Size(141, 41);
+            this.btnUsergroup.Size = new System.Drawing.Size(188, 50);
             this.btnUsergroup.TabIndex = 44;
             this.btnUsergroup.Text = "User group";
             this.btnUsergroup.Click += new System.EventHandler(this.btnUsergroup_Click);
@@ -80,14 +80,14 @@ namespace GUI
             this.btnEmployees.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnEmployees.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnEmployees.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnEmployees.Location = new System.Drawing.Point(282, 29);
-            this.btnEmployees.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEmployees.Location = new System.Drawing.Point(376, 36);
+            this.btnEmployees.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.ShadowDecoration.BorderRadius = 15;
             this.btnEmployees.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnEmployees.ShadowDecoration.Enabled = true;
             this.btnEmployees.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnEmployees.Size = new System.Drawing.Size(140, 41);
+            this.btnEmployees.Size = new System.Drawing.Size(187, 50);
             this.btnEmployees.TabIndex = 43;
             this.btnEmployees.Text = "Employees";
             this.btnEmployees.Click += new System.EventHandler(this.btnEmployees_Click);
@@ -97,32 +97,25 @@ namespace GUI
             this.panelControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl.BackColor = System.Drawing.Color.Transparent;
-            this.panelControl.BorderColor = System.Drawing.Color.DarkGray;
-            this.panelControl.BorderRadius = 40;
-            this.panelControl.BorderThickness = 1;
-            this.panelControl.FillColor = System.Drawing.Color.White;
-            this.panelControl.Location = new System.Drawing.Point(57, 100);
+            this.panelControl.Location = new System.Drawing.Point(76, 123);
             this.panelControl.Name = "panelControl";
-            this.panelControl.ShadowDecoration.BorderRadius = 35;
-            this.panelControl.ShadowDecoration.Color = System.Drawing.Color.Silver;
-            this.panelControl.ShadowDecoration.Enabled = true;
-            this.panelControl.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 5, 20, 20);
-            this.panelControl.Size = new System.Drawing.Size(1010, 655);
-            this.panelControl.TabIndex = 42;
+            this.panelControl.Size = new System.Drawing.Size(1347, 806);
+            this.panelControl.TabIndex = 45;
+            this.panelControl.Text = "guna2ContainerControl1";
             // 
             // UCEmployees
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Controls.Add(this.panelControl);
             this.Controls.Add(this.btnUsergroup);
             this.Controls.Add(this.btnEmployees);
-            this.Controls.Add(this.panelControl);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCEmployees";
-            this.Size = new System.Drawing.Size(1124, 800);
+            this.Size = new System.Drawing.Size(1499, 985);
             this.ResumeLayout(false);
 
         }
@@ -131,8 +124,8 @@ namespace GUI
 
         private Guna.UI2.WinForms.Guna2GradientButton btnUsergroup;
         private Guna.UI2.WinForms.Guna2GradientButton btnEmployees;
-        private Guna.UI2.WinForms.Guna2Panel panelControl;
         private UCEmployees_TabEmployees tabEmployee;
         private UCEmployees_TabUserGroup tabUserGroup;
+        private Guna.UI2.WinForms.Guna2ContainerControl panelControl;
     }
 }

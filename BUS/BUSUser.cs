@@ -87,9 +87,6 @@ namespace BUS
             // Kiểm tra ký tự chấp nhận
             if (!Regex.IsMatch(username, "^[a-zA-Z0-9_.]+$"))
                 return false;
-            // Kiểm tra không để trống
-            if (string.IsNullOrWhiteSpace(username))
-                return false;
             return true;
         }
         private bool PasswordValidator(string password, string retypePass)

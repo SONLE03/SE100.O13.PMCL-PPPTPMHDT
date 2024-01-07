@@ -38,10 +38,14 @@ namespace BUS
         {
             return DALEvent.Instance.SearchEvent(searchText);
         }
-
+        public bool CheckDrinkEvent(DRINK drink, DateTime startDate, DateTime dueDate)
+        {
+            return DALEvent.Instance.CheckDrinkEvent(drink, startDate, dueDate);
+        }
+        // DateTimeValidatorInEvent(StartDate, DueDate, Type) => AddEvent : Type = 1; ModifyEvent : Type = 2
         public int AddEvent(string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, int userId)
         {
-            if(!BUSConstraint.Instance.DateTimeValidatorInEvent(StartDate, DueDate))
+            if(!BUSConstraint.Instance.DateTimeValidatorInEvent(StartDate, DueDate, 1))
             {
                 MessageBox.Show("Date validation failed. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
@@ -55,11 +59,12 @@ namespace BUS
         }
         public bool UpdEvent(int idEV, string EventName, bool EventType, string Unit, DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, string Status, int userId)
         {
-            //if (!BUSConstraint.Instance.DateTimeValidatorInEvent(StartDate, DueDate))
-            //{
-            //    MessageBox.Show("Date validation failed. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return false;
-            //}
+
+            if (!BUSConstraint.Instance.DateTimeValidatorInEvent(StartDate, DueDate, 2))
+            {
+                MessageBox.Show("Date validation failed. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
             if (Unit.Equals("%") && Discount > BUSRule.Instance.GetAllRule().MaximumPercentDiscount)
             {
                 MessageBox.Show("Invalid discount value. Please check again.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);

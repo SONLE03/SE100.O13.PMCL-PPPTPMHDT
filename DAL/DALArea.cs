@@ -22,7 +22,7 @@ namespace DAL
         }
         public List<AREA> GetAllArea()
         {
-            return CFEntities.Instance.AREAs.AsNoTracking().ToList();
+            return CFEntities.Instance.AREAs.AsNoTracking().OrderByDescending(area => area.id).ToList();
         }
         public List<AREA> GetAllAreaActive()
         {

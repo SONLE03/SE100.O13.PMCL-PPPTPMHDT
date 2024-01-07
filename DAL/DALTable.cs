@@ -22,7 +22,7 @@ namespace DAL
         }
         public List<C_TABLE> GetAllTable()
         {
-            return CFEntities.Instance.C_TABLE.AsNoTracking().ToList();
+            return CFEntities.Instance.C_TABLE.AsNoTracking().OrderByDescending(table => table.id).ToList();
         }
         public List<C_TABLE> GetAllTableByAreaID(int areaId)
         {

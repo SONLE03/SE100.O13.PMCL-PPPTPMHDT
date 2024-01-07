@@ -8,10 +8,8 @@ namespace DTO
 {
     public class CustomRevenueDTO
     {
-        public DateTime Date { get; set; }
-        public DateTime Day { get; set; }  
-        //public int Month { get; set; }
-        //public int Year { get; set; }
-        public double TotalAmount { get; set; }
+        public int Month { get; set; }  
+        public string Date { get; set; }
+        public double TotalRevenue { get; set; }
     }
 }

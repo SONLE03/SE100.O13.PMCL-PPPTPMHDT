@@ -15,6 +15,8 @@ namespace GUI
     {
         private UCProductMiniItem productMiniItem;
         private int id;
+
+
         public UCMiniSize(C_SIZE size, UCProductMiniItem productMiniItem, int id)
         {
             InitializeComponent();
@@ -29,19 +31,35 @@ namespace GUI
         private void UCMiniSize_Click(object sender, EventArgs e)
         {
             showOriginalPriceOfSize();
-            //UserControlClicked?.Invoke(this, EventArgs.Empty);
-            this.BackColor = Color.WhiteSmoke;
         }
+
+
         private void showOriginalPriceOfSize()
         {
             var drinkSize = BUSDrink_Size.Instance.FindDrinkSize(txtSize.Text, id);
-            productMiniItem.updatePrice(drinkSize.OriginalPrice.ToString());
+            productMiniItem.updatePrice(drinkSize.OriginalPrice.ToString(), drinkSize.C_SIZE.SizeName);
             productMiniItem.Show();
         }
 
         private void txtSize_Click_1(object sender, EventArgs e)
         {
             showOriginalPriceOfSize();
+        }
+
+        private void UCMiniSize_MouseEnter(object sender, EventArgs e)
+        {
+            //this.BackColor = Color.Red;
+        }
+
+        private void UCMiniSize_MouseLeave(object sender, EventArgs e)
+        {
+            //this.BackColor = Color.White;
+        }
+
+        private void UCMiniSize_MouseClick(object sender, MouseEventArgs e)
+        {
+            //this.BackColor = Color.Blue;
+            //showOriginalPriceOfSize();
         }
     }
 }

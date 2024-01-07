@@ -45,7 +45,7 @@ namespace GUI
             gridviewInvoice.Rows.Clear();
             bills.ForEach(p =>
             {
-                gridviewInvoice.Rows.Add(p.id, p.BillID, p.BillDate, p.C_USER.UserFullName, p.BILL_DETAIL.Count, p.Status, p.Total, print_img);
+                gridviewInvoice.Rows.Add(p.id, p.BillID, p.BillDate.ToString("dd/MM/yyyy HH:mm:ss"), p.C_USER.UserFullName, p.BILL_DETAIL.Count, p.Status, p.Total, print_img);
             });
         }
         private void txtSearch_TextChanged(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace GUI
             int idx = e.RowIndex;
             if (idx < 0) return;
             int billId = Convert.ToInt32(gridviewInvoice.Rows[idx].Cells["ID"].Value);
-            if (e.ColumnIndex == gridviewInvoice.Columns["Print"].Index)
+            if (e.ColumnIndex == gridviewInvoice.Columns["pinvoice"].Index)
             {
                 print(billId);
                 return;

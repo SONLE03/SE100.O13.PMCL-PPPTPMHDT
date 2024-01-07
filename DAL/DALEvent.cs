@@ -23,7 +23,7 @@ namespace DAL
         }
         public List<EVENT> GetAllEvent()
         {
-            return CFEntities.Instance.EVENTs.AsNoTracking().ToList();
+            return CFEntities.Instance.EVENTs.AsNoTracking().OrderByDescending(ev => ev.StartDate).ThenBy(ev => ev.Status != "Active").ToList();
         }
 
         public List<EVENT> GetAllEventActive()
@@ -46,6 +46,15 @@ namespace DAL
                 .ToList();
             return filteredList;
 
+        }
+
+        public bool CheckDrinkEvent(DRINK drink, DateTime startDate, DateTime dueDate)
+        {
+            var isEventExist = CFEntities.Instance.EVENTs
+                              .Any(e => e.DRINKS.Any(d => d.DrinksID == drink.DrinksID)
+                                  && e.Status == "Active"
+                                  && !(dueDate < e.StartDate && e.DueDate < startDate));
+            return isEventExist;
         }
         public int AddEvent (string EventName, bool EventType, string Unit,  DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, int userId)
         {

@@ -19,6 +19,7 @@ namespace GUI
     public partial class UCReportDrink : UserControl
     {
         List<DrinkReportDTO> drinkReportsForChart = new List<DrinkReportDTO>();
+        DateTime reportDate;
         public UCReportDrink()
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace GUI
         private void btnOK_Click(object sender, EventArgs e)
         {
             LoadData(dtpDate.Value);
+            reportDate = dtpDate.Value;
         }
         private void ExportToExcel(DateTime date)
         {
@@ -67,7 +69,7 @@ namespace GUI
                     ExcelWorksheet ws = p.Workbook.Worksheets.Add("Sheet1");
 
                     // Title
-                    ws.Cells["A1"].Value = "Monthly sales report";
+                    ws.Cells["A1"].Value = $"Sales of {date.ToString("MMMM")} {date.Year}";
                     ws.Cells["A1"].Style.Font.Bold = true;
                     ws.Cells["A1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                     ws.Cells["A1:C1"].Merge = true;
@@ -79,7 +81,7 @@ namespace GUI
                     ws.Cells["A3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
                     ws.Cells["A3:C3"].Merge = true;
 
-                    ws.Cells["A4"].Value = "Report date: " + date.ToString("dd/MM/yyyy");
+                    ws.Cells["A4"].Value = "Report date: " + DateTime.Now.ToString("dd/MM/yyyy");
                     ws.Cells["A4"].Style.Font.Bold = true;
                     ws.Cells["A4"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
                     ws.Cells["A4:C4"].Merge = true;
@@ -124,12 +126,17 @@ namespace GUI
             chartDrinkColumn.DataSource = drinkReportsForChart;
             chartDrinkColumn.Series[0].XValueMember = "drinkName";
             chartDrinkColumn.Series[0].YValueMembers = "drinkTotalPrice";
+            chartDrinkColumn.ChartAreas[0].AxisX.MajorGrid.Enabled = true;
+            chartDrinkColumn.ChartAreas[0].AxisY.MajorGrid.Enabled = true;
+            chartDrinkColumn.Series[0].ToolTip = "#VALY";
+            chartDrinkColumn.Series[0].IsValueShownAsLabel = true;
+            chartDrinkColumn.ChartAreas[0].AxisY.Title = "Total Revenue (VND)";
             chartDrinkColumn.DataBind();
 
             chartDrinkDoughnut.DataSource = drinkReportsForChart;
-            chartDrinkDoughnut.Series[0].XValueMember = "drinkName";
-            chartDrinkDoughnut.Series[0].YValueMembers = "drinkQuantity";
-            chartDrinkDoughnut.DataBind();
+            chartDrinkDoughnut.Series[0].Points.DataBind((System.Collections.IEnumerable)chartDrinkDoughnut.DataSource, "drinkName", "drinkQuantity", "LegendText=drinkName,Label=drinkQuantity");
+            chartDrinkDoughnut.Series[0].ToolTip = "#VALY";
+            chartDrinkDoughnut.Series[0].LegendText = "#PERCENT{P0}";
 
             // Load data for DataGridView without drinkId
             gridDrinkReport.Rows.Clear(); // Clear existing rows
@@ -148,7 +155,7 @@ namespace GUI
 
         private void btnExportToExcel_Click(object sender, EventArgs e)
         {
-            ExportToExcel(dtpDate.Value);
+            ExportToExcel(reportDate);
         }
 
         private void chartDrinkColumn_MouseMove(object sender, MouseEventArgs e)

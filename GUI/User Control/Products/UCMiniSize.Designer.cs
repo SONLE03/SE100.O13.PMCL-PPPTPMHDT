@@ -35,9 +35,10 @@
             // 
             this.txtSize.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
-            this.txtSize.Location = new System.Drawing.Point(0, 7);
+            this.txtSize.Location = new System.Drawing.Point(0, 9);
+            this.txtSize.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtSize.Name = "txtSize";
-            this.txtSize.Size = new System.Drawing.Size(30, 23);
+            this.txtSize.Size = new System.Drawing.Size(40, 28);
             this.txtSize.TabIndex = 0;
             this.txtSize.Text = "L";
             this.txtSize.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -45,14 +46,18 @@
             // 
             // UCMiniSize
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.txtSize);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(159)))), ((int)(((byte)(105)))), ((int)(((byte)(39)))));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "UCMiniSize";
-            this.Size = new System.Drawing.Size(30, 36);
+            this.Size = new System.Drawing.Size(40, 44);
             this.Click += new System.EventHandler(this.UCMiniSize_Click);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.UCMiniSize_MouseClick);
+            this.MouseEnter += new System.EventHandler(this.UCMiniSize_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.UCMiniSize_MouseLeave);
             this.ResumeLayout(false);
 
         }

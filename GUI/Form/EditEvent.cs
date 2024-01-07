@@ -48,6 +48,7 @@ namespace GUI
                 listDrinkID.Add(ev.id);
             }
             cbStatus.Text = Event.Status;
+            lbUnit.Text = Event.Unit;
         }
         private void addEventForCheckBox()
         {
@@ -84,6 +85,7 @@ namespace GUI
         {
             try
             {
+                bool Checked = false;
                 if (String.IsNullOrEmpty(cbcategory.Text) || (!String.IsNullOrEmpty(cbcategory.Text) && String.IsNullOrEmpty(cbProduct.Text)))
                 {
                     MessageBox.Show("Lack of information. Please check again", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -108,6 +110,22 @@ namespace GUI
                 }
                 foreach (var drink in drinkListToAdd)
                 {
+                    if (BUSEvent.Instance.CheckDrinkEvent(drink, dtpStartDate.Value, dtpEndDate.Value))
+                    {
+                        if (!Checked)
+                        {
+                            if (MessageBox.Show("Another event that existed the selected drink. Do you want to continue.? ", "Confirm to continue", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                            {
+                                Checked = true;
+                                continue;
+                            }
+                            break;
+                        }
+                        else
+                        { 
+                            continue;
+                        }
+                    }
                     // Khởi tạo
                     if (!listDrinkID.Contains(drink.id))
                     {
@@ -133,7 +151,7 @@ namespace GUI
                 }
                 else
                 {
-                    drinkList = BUSDrink.Instance.GetAllDrinkActiveByCategory(catId);
+                    drinkList = BUSDrink.Instance.GetAllDrinkForEvent(catId);
                 }
             }
             if (drinkList.Count != 0)

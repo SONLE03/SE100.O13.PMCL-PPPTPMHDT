@@ -106,74 +106,74 @@ namespace GUI
                     read.Close();
 
 
-                    //Group by Hours
-                    if (NumsOfDays <= 1)
-                    {
-                        //Đây là Ngôn gữ LINQ được tích hợp bởi Microsoft, hỗ trợ ver .NET3.5 - truy vấn dl từ tập dl
-                        TotalRevenues = (from orderList in resultTable
-                                         group orderList by orderList.Key.ToString("hh tt")
-                                        into order
-                                         select new RevenueByDate
-                                         {
-                                             Date = order.Key,
-                                             TotalAmount = order.Sum(amount => amount.Value)
-                                         }).ToList();
-                    }
-                    //Group by Days
-                    else if (NumsOfDays <= 30)
-                    {
-                        foreach (var item in resultTable)
+                        //Group by Hours
+                        if (NumsOfDays <= 1)
                         {
-                            TotalRevenues.Add(new RevenueByDate()
+                            //Đây là Ngôn gữ LINQ được tích hợp bởi Microsoft, hỗ trợ ver .NET3.5 - truy vấn dl từ tập dl
+                            TotalRevenues = (from orderList in resultTable
+                                             group orderList by orderList.Key.ToString("hh tt")
+                                            into order
+                                             select new RevenueByDate
+                                             {
+                                                 Date = order.Key,
+                                                 TotalAmount = order.Sum(amount => amount.Value)
+                                             }).ToList();
+                        }
+                        //Group by Days
+                        else if (NumsOfDays <= 30)
+                        {
+                            foreach (var item in resultTable)
                             {
-                                Date = item.Key.ToString("dd MMM"),
-                                TotalAmount = item.Value
-                            });
+                                TotalRevenues.Add(new RevenueByDate()
+                                {
+                                    Date = item.Key.ToString("dd MMM"),
+                                    TotalAmount = item.Value
+                                });
+                            }
                         }
-                    }
-                    //Group by Weeks
-                    else if (NumsOfDays <= 92)
-                    {
-                        TotalRevenues = (from orderList in resultTable
-                                         group orderList by CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
-                                             orderList.Key, CalendarWeekRule.FirstDay, DayOfWeek.Monday)
-                                           into order
-                                         select new RevenueByDate
-                                         {
-                                             Date = "Week " + order.Key.ToString(),
-                                             TotalAmount = order.Sum(amount => amount.Value)
-                                         }).ToList();
-                    }
-                    //Group by Months
-                    else if (NumsOfDays <= (365 * 2))
-                    {
-                        bool isyear;
-                        if (NumsOfDays <= 365)
+                        //Group by Weeks
+                        else if (NumsOfDays <= 92)
                         {
-                            isyear = true;
+                            TotalRevenues = (from orderList in resultTable
+                                             group orderList by CultureInfo.CurrentCulture.Calendar.GetWeekOfYear(
+                                                 orderList.Key, CalendarWeekRule.FirstDay, DayOfWeek.Monday)
+                                               into order
+                                             select new RevenueByDate
+                                             {
+                                                 Date = "Week " + order.Key.ToString(),
+                                                 TotalAmount = order.Sum(amount => amount.Value)
+                                             }).ToList();
                         }
-                        else isyear = false;
-                        TotalRevenues = (from orderList in resultTable
-                                         group orderList by orderList.Key.ToString("MMM yyyy")
-                                        into order
-                                         select new RevenueByDate
-                                         {
-                                             Date = isyear ? order.Key.Substring(0, order.Key.IndexOf(" ")) : order.Key,
-                                             TotalAmount = order.Sum(amount => amount.Value)
-                                         }).ToList();
-                    }
-                    //Group by Years
-                    else
-                    {
-                        TotalRevenues = (from orderList in resultTable
-                                         group orderList by orderList.Key.ToString("yyyy")
-                                       into order
-                                         select new RevenueByDate
-                                         {
-                                             Date = order.Key,
-                                             TotalAmount = order.Sum(amount => amount.Value)
-                                         }).ToList();
-                    }
+                        //Group by Months
+                        else if (NumsOfDays <= (365 * 2))
+                        {
+                            bool isyear;
+                            if (NumsOfDays <= 365)
+                            {
+                                isyear = true;
+                            }
+                            else isyear = false;
+                            TotalRevenues = (from orderList in resultTable
+                                             group orderList by orderList.Key.ToString("MMM yyyy")
+                                            into order
+                                             select new RevenueByDate
+                                             {
+                                                 Date = isyear ? order.Key.Substring(0, order.Key.IndexOf(" ")) : order.Key,
+                                                 TotalAmount = order.Sum(amount => amount.Value)
+                                             }).ToList();
+                        }
+                        //Group by Years
+                        else
+                        {
+                            TotalRevenues = (from orderList in resultTable
+                                             group orderList by orderList.Key.ToString("yyyy")
+                                           into order
+                                             select new RevenueByDate
+                                             {
+                                                 Date = order.Key,
+                                                 TotalAmount = order.Sum(amount => amount.Value)
+                                             }).ToList();
+                        }
                 }
             }
         }

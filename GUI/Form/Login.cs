@@ -85,7 +85,10 @@ namespace GUI
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            if (MessageBox.Show("Are you sure to exit ? ", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+               Environment.Exit(0);
+            }
         }
 
         private void guna2ControlBox3_Click(object sender, EventArgs e)

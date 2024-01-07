@@ -23,7 +23,7 @@ namespace DAL
         }
         public List<IMPORT_BILL> GetAllImportBill()
         {
-            return CFEntities.Instance.IMPORT_BILL.AsNoTracking().ToList();
+            return CFEntities.Instance.IMPORT_BILL.AsNoTracking().OrderByDescending(importBill => importBill.ImportDate).ToList();
         }
         public IMPORT_BILL GetImportBillById(int id)
         {

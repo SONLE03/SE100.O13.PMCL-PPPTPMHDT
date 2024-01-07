@@ -39,7 +39,7 @@ namespace GUI
                 {
                     unit = "VND";
                 }
-                gridviewEvent.Rows.Add(p.id, p.EventID, p.EventName, p.StartDate, p.DueDate, p.Discount, unit, p.Status, edit_img, del_img);
+                gridviewEvent.Rows.Add(p.id, p.EventID, p.EventName, p.StartDate.Value.ToString("dd/MM/yyyy"), p.DueDate.Value.ToString("dd/MM/yyyy"), p.Discount, unit, p.Status, edit_img, del_img);
             });
         }
 

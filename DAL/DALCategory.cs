@@ -22,7 +22,7 @@ namespace DAL
         }
         public List<CATEGORY> GetAllCategory()
         {
-            return CFEntities.Instance.CATEGORies.AsNoTracking().ToList();
+            return CFEntities.Instance.CATEGORies.AsNoTracking().OrderByDescending(cate => cate.id).ToList();
         }
         public List<CATEGORY> GetAllCategoryActive()
         {
