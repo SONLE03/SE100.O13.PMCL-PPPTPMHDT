@@ -95,6 +95,11 @@ namespace GUI
                     MessageBox.Show("Lack of information", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (int.Parse(txtPrice.Text) <= 0)
+                {
+                    MessageBox.Show("Price must be greater than zero", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 int id = Convert.ToInt32(combobox_size.SelectedValue);
                 string sizeName = combobox_size.Text;
                 double price = Convert.ToDouble(txtPrice.Text);

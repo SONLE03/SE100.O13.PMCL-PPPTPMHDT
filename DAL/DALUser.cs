@@ -60,11 +60,12 @@ namespace DAL
         }
         public List<C_USER> SearchUser(string searchText, string selectedStatus)
         {
+            var transformedUser = DALConstraint.Instance.TransformString(searchText);
             List<C_USER> listUser = CFEntities.Instance.C_USER.ToList();
             List<C_USER> filteredList = new List<C_USER>();
             filteredList = listUser
                 .Where(p =>
-                    (string.IsNullOrEmpty(searchText) || p.UserFullName.ToLower().Contains(searchText.ToLower())) &&
+                    (string.IsNullOrEmpty(transformedUser) || p.UserFullName.ToLower().Contains(transformedUser.ToLower()) || p.Status.ToLower().Equals(transformedUser)) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )
                 .ToList();
@@ -82,12 +83,14 @@ namespace DAL
         {
             try
             {
+                var transformedUserFullName = DALConstraint.Instance.TransformString(UserFullName);
+                var transformedUserAddress = DALConstraint.Instance.TransformString(Address);
                 var us = new C_USER
                 {
-                    UserFullName = UserFullName,
+                    UserFullName = transformedUserFullName,
                     DateOfBirth = DateofBirth,
                     Phone = Phone,
-                    Address = Address,
+                    Address = transformedUserAddress,
                     Email = Email,
                     UserName = UserName,
                     Password = Password,
@@ -111,12 +114,14 @@ namespace DAL
         {
             try
             {
+                var transformedUserFullName = DALConstraint.Instance.TransformString(UserFullName);
+                var transformedUserAddress = DALConstraint.Instance.TransformString(Address);
                 var us = GetUserById(id);
                 if (us == null) return false;
-                if (UserFullName != null) us.UserFullName = UserFullName;
+                if (UserFullName != null) us.UserFullName = transformedUserFullName;
                 if (Phone != null) us.Phone = Phone;
                 if (DateofBirth != null) us.DateOfBirth = DateofBirth;
-                if (Address != null) us.Address = Address;
+                if (Address != null) us.Address = transformedUserAddress;
                 if (GroupUserID != us.GroupUserID) us.GroupUserID = GroupUserID;
                 if (Email != null) us.Email = Email;
                 if (Status != us.Status) us.Status = Status;

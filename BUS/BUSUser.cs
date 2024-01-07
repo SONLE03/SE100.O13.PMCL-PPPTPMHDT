@@ -85,7 +85,7 @@ namespace BUS
             if (username.Length < 6)
                 return false;
             // Kiểm tra ký tự chấp nhận
-            if (!Regex.IsMatch(username, "^[a-zA-Z0-9_.]+$"))
+            if (!Regex.IsMatch(username, "^[a-z0-9A-Z_àáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹýÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ ]*$"))
                 return false;
             return true;
         }
@@ -105,7 +105,7 @@ namespace BUS
         {
             return Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@gmail\.com$");
         }
-        private bool CheckValidator(DateTime DateofBirth, string Phone, string UserName,string Password
+        private bool CheckAddUserValidator(DateTime DateofBirth, string Phone, string UserName,string Password
                                     ,string retypePass, string Email, int GroupUserID, string status)
         {
             if (!checkGroupUserStatus(GroupUserID, status))
@@ -148,7 +148,7 @@ namespace BUS
         public bool AddUser(string UserFullName, DateTime DateofBirth, string Address, string Phone, string UserName, 
                             string Password, string retypePass, string Email, int GroupUserID, string image, string status)
         {
-            if (!CheckValidator(DateofBirth, Phone, UserName, Password, retypePass, Email, GroupUserID, status)) return false;
+            if (!CheckAddUserValidator(DateofBirth, Phone, UserName, Password, retypePass, Email, GroupUserID, status)) return false;
             
             if (!DALUser.Instance.AddUser(UserFullName, DateofBirth, Address, Phone, UserName, GeneratePassword(Password), Email, GroupUserID, image, status))
             {
@@ -158,10 +158,36 @@ namespace BUS
             MessageBox.Show("Add new user successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
             return true;
         }
-        public bool UpdUser(int id, string UserFullName, DateTime DateofBirth, string Address, string Email, string Phone,
-                                 int GroupUserID, string status, string image, string password)
+
+        private bool CheckUpdateUserValidator(DateTime DateofBirth, string Phone, string Email, int GroupUserID, string status)
         {
-            if(!CheckValidator(DateofBirth, Phone, null, password, password, Email, GroupUserID, status)) return false;
+            if (!checkGroupUserStatus(GroupUserID, status))
+            {
+                MessageBox.Show("Add Failure User, User Group Is Blocked", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!BUSConstraint.Instance.PhoneNumberValidator(Phone))
+            {
+                MessageBox.Show("Invalid phone number", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!DateOfBirthValidator(DateofBirth))
+            {
+                MessageBox.Show($"User must be over 18 years old and under {BUSRule.Instance.GetAllRule().MaximumAge} years old ", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else if (!EmailValidator(Email))
+            {
+                MessageBox.Show("Invalid email address format. The template is \"example@gmail.com\"", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            return true;
+        }
+
+        public bool UpdUser(int id, string UserFullName, DateTime DateofBirth, string Address, string Email, string Phone,
+                                 int GroupUserID, string status, string image)
+        {
+            if(!CheckUpdateUserValidator(DateofBirth, Phone, Email, GroupUserID, status)) return false;
             if(!DALUser.Instance.UpdUser(id, UserFullName, DateofBirth, Address, Email, Phone, GroupUserID, status, image))
             {
                 MessageBox.Show("Update failure user", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);

@@ -91,6 +91,11 @@ namespace GUI
                     MessageBox.Show("Lack of information. Please check again", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (int.Parse(txtSaleValue.Text) <= 0)
+                {
+                    MessageBox.Show("Sale value must be greater than zero", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 drinkListToAdd.Clear();
                 int catId = Convert.ToInt32(cbcategory.SelectedValue);
                 int drinkId = Convert.ToInt32(cbProduct.SelectedValue);

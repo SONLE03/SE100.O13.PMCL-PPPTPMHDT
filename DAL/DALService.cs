@@ -28,7 +28,7 @@ namespace DAL
         }
         public List<SERVICE> GetService()
         {
-            return CFEntities.Instance.SERVICEs.Where(service => service.id != 11).AsNoTracking().ToList();
+            return CFEntities.Instance.SERVICEs.Where(service => service.id != 10).AsNoTracking().ToList();
         }
 
         public SERVICE GetServiceById(int id)

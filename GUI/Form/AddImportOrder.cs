@@ -146,6 +146,11 @@ namespace GUI
                     MessageBox.Show("Lack of information in import detail", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                if (int.Parse(txtUnitPrice.Text) <= 0)
+                {
+                    MessageBox.Show("Price must be greater than zero", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 foreach (DataGridViewRow row in gridviewSelectedProducts.Rows)
                 {
                     if (txtProductName.Text.ToLower().Equals(row.Cells[0].Value.ToString().ToLower()))

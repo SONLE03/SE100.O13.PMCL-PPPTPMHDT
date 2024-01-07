@@ -54,7 +54,7 @@ namespace DAL
             List<AREA> filteredList = new List<AREA>();
             filteredList = listAreas
                 .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameArea) || p.AreaName.ToLower().Contains(transformedNameArea)) &&
+                    (string.IsNullOrEmpty(transformedNameArea) || p.AreaName.ToLower().Contains(transformedNameArea) || p.Status.ToLower().Equals(transformedNameArea)) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )
                 .ToList();

@@ -39,6 +39,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.gridviewInvoice = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Invoice_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Create_By = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pinvoice = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -52,14 +60,6 @@
             this._UnitPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this._Total_Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.InvoiceID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Invoice_Date = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Create_By = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pinvoice = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewInvoice)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewPrint)).BeginInit();
@@ -104,7 +104,7 @@
             this.guna2Panel1.Controls.Add(this.label1);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(84, 149);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.ShadowDecoration.BorderRadius = 35;
             this.guna2Panel1.ShadowDecoration.Color = System.Drawing.Color.Silver;
@@ -151,7 +151,7 @@
             this.gridviewInvoice.DefaultCellStyle = dataGridViewCellStyle3;
             this.gridviewInvoice.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewInvoice.Location = new System.Drawing.Point(4, 100);
-            this.gridviewInvoice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gridviewInvoice.Margin = new System.Windows.Forms.Padding(4);
             this.gridviewInvoice.Name = "gridviewInvoice";
             this.gridviewInvoice.ReadOnly = true;
             this.gridviewInvoice.RowHeadersVisible = false;
@@ -182,6 +182,67 @@
             this.gridviewInvoice.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.gridviewInvoice.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.gridviewInvoice.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridviewInvoice_CellClick);
+            // 
+            // ID
+            // 
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // InvoiceID
+            // 
+            this.InvoiceID.FillWeight = 150F;
+            this.InvoiceID.HeaderText = "Invoice ID";
+            this.InvoiceID.MinimumWidth = 6;
+            this.InvoiceID.Name = "InvoiceID";
+            this.InvoiceID.ReadOnly = true;
+            // 
+            // Invoice_Date
+            // 
+            this.Invoice_Date.HeaderText = "Invoice Date";
+            this.Invoice_Date.MinimumWidth = 6;
+            this.Invoice_Date.Name = "Invoice_Date";
+            this.Invoice_Date.ReadOnly = true;
+            // 
+            // Create_By
+            // 
+            this.Create_By.HeaderText = "Create By";
+            this.Create_By.MinimumWidth = 6;
+            this.Create_By.Name = "Create_By";
+            this.Create_By.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.HeaderText = "Quantity";
+            this.Quantity.MinimumWidth = 6;
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // Status
+            // 
+            this.Status.HeaderText = "Status";
+            this.Status.MinimumWidth = 6;
+            this.Status.Name = "Status";
+            this.Status.ReadOnly = true;
+            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.MinimumWidth = 6;
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // pinvoice
+            // 
+            this.pinvoice.HeaderText = "Print";
+            this.pinvoice.MinimumWidth = 6;
+            this.pinvoice.Name = "pinvoice";
+            this.pinvoice.ReadOnly = true;
+            this.pinvoice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.pinvoice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // txtSearch
             // 
@@ -275,7 +336,7 @@
             this.lbRevenueValue.BackColor = System.Drawing.Color.Transparent;
             this.lbRevenueValue.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Bold);
             this.lbRevenueValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbRevenueValue.Location = new System.Drawing.Point(808, 59);
+            this.lbRevenueValue.Location = new System.Drawing.Point(805, 60);
             this.lbRevenueValue.Name = "lbRevenueValue";
             this.lbRevenueValue.Size = new System.Drawing.Size(96, 30);
             this.lbRevenueValue.TabIndex = 61;
@@ -384,73 +445,12 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Image = global::GUI.Properties.Resources.searches;
             this.pictureBox1.Location = new System.Drawing.Point(553, 52);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 44);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 55;
             this.pictureBox1.TabStop = false;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 6;
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // InvoiceID
-            // 
-            this.InvoiceID.FillWeight = 150F;
-            this.InvoiceID.HeaderText = "Invoice ID";
-            this.InvoiceID.MinimumWidth = 6;
-            this.InvoiceID.Name = "InvoiceID";
-            this.InvoiceID.ReadOnly = true;
-            // 
-            // Invoice_Date
-            // 
-            this.Invoice_Date.HeaderText = "Invoice Date";
-            this.Invoice_Date.MinimumWidth = 6;
-            this.Invoice_Date.Name = "Invoice_Date";
-            this.Invoice_Date.ReadOnly = true;
-            // 
-            // Create_By
-            // 
-            this.Create_By.HeaderText = "Create By";
-            this.Create_By.MinimumWidth = 6;
-            this.Create_By.Name = "Create_By";
-            this.Create_By.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.HeaderText = "Quantity";
-            this.Quantity.MinimumWidth = 6;
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // Status
-            // 
-            this.Status.HeaderText = "Status";
-            this.Status.MinimumWidth = 6;
-            this.Status.Name = "Status";
-            this.Status.ReadOnly = true;
-            this.Status.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.MinimumWidth = 6;
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // pinvoice
-            // 
-            this.pinvoice.HeaderText = "Print";
-            this.pinvoice.MinimumWidth = 6;
-            this.pinvoice.Name = "pinvoice";
-            this.pinvoice.ReadOnly = true;
-            this.pinvoice.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.pinvoice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // UCBills_TabInvoices
             // 
@@ -466,7 +466,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.dataGridViewPrint);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCBills_TabInvoices";
             this.Size = new System.Drawing.Size(1492, 891);
             this.guna2Panel1.ResumeLayout(false);

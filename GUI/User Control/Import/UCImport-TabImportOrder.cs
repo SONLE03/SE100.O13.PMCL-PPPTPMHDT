@@ -24,14 +24,12 @@ namespace GUI
 
         public void Binding(List<IMPORT_BILL> import)
         {
-            Image edit_img = Properties.Resources.edit_icon;
-            edit_img = (Image)(new Bitmap(edit_img, new Size(25, 25)));
             Image print_img = Properties.Resources.printer;
             print_img = (Image)(new Bitmap(print_img, new Size(25, 25)));
             gridviewImportOrder.Rows.Clear();
             foreach (IMPORT_BILL im in import)
             {
-                gridviewImportOrder.Rows.Add(im.id, im.ImportID, im.ImportName, im.ImportDate.ToString("dd/MM/yyyy HH:mm:ss"), im.SUPPLIER.SupplierName, im.IMPORT_BILL_DETAIL.Count, im.Total, edit_img, print_img);
+                gridviewImportOrder.Rows.Add(im.id, im.ImportID, im.ImportName, im.ImportDate.ToString("dd/MM/yyyy HH:mm:ss"), im.SUPPLIER.SupplierName, im.IMPORT_BILL_DETAIL.Count, im.Total, print_img);
             }
         }
 
@@ -63,13 +61,7 @@ namespace GUI
                 int idx = e.RowIndex;
                 if (idx < 0) return;
                 int impId = Convert.ToInt32(gridviewImportOrder.Rows[idx].Cells["ID"].Value);
-                if (e.ColumnIndex == gridviewImportOrder.Columns["Edit"].Index)
-                {
-                    EditImportOrder importOrder = new EditImportOrder(impId);
-                    importOrder.ShowDialog();
-                    Binding(BUSImportBill.Instance.GetAllImportBill());
-                }
-                else if(e.ColumnIndex == gridviewImportOrder.Columns["Print"].Index)
+                if(e.ColumnIndex == gridviewImportOrder.Columns["Print"].Index)
                 {
                     print(impId);
                 }

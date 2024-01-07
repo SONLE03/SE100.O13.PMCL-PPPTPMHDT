@@ -60,7 +60,7 @@ namespace DAL
             List<CATEGORY> filteredList = new List<CATEGORY>();
             filteredList = listCategory
                 .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameCategory) || p.CategoryName.ToLower().Contains(transformedNameCategory)) &&
+                    (string.IsNullOrEmpty(transformedNameCategory) || p.CategoryName.ToLower().Contains(transformedNameCategory) || p.Status.ToLower().Equals(transformedNameCategory)) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )
                 .ToList();

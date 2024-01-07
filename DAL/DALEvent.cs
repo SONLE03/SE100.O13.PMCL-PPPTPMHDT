@@ -42,7 +42,7 @@ namespace DAL
             List<EVENT> filteredList = new List<EVENT>();
             filteredList = listEvents
                 .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameEvent) || p.EventName.ToLower().Contains(transformedNameEvent)))
+                    (string.IsNullOrEmpty(transformedNameEvent) || p.EventName.ToLower().Contains(transformedNameEvent) || p.Status.ToLower().Equals(transformedNameEvent)))
                 .ToList();
             return filteredList;
 

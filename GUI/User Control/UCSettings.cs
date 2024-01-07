@@ -56,7 +56,7 @@ namespace GUI
                     && !String.IsNullOrEmpty(txtPhone.Text)  && !String.IsNullOrEmpty(fileImageAvatar))
                 {
                     var isSuccess = BUSUser.Instance.UpdUser(user.id, txtUserFullName.Text, DateOfBirth.Value, txtAddress.Text, txtEmail.Text, txtPhone.Text
-                        , user.GroupUserID, user.Status, fileImageAvatar, user.Password);
+                        , user.GroupUserID, user.Status, fileImageAvatar);
                 }
                 else
                 {

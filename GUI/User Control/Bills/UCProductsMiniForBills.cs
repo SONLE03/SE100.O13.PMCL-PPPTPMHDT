@@ -1,4 +1,5 @@
-﻿using DTO;
+﻿using BUS;
+using DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,7 @@ namespace GUI
         public void updatePriceAndSize(string price, int sizeID)
         {
             lbSizeID.Text = sizeID.ToString();
-            lbPrice.Text = price + " VND";
+            lbPrice.Text = $"{price}D ({BUSSize.Instance.GetSizeById(sizeID).SizeName})";
         }
         public void loadData(DRINK drink, List<int> sizes)
         {

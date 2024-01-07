@@ -60,7 +60,7 @@ namespace DAL
             List<DRINK> filteredList = new List<DRINK>();
             filteredList = listDrinks
                 .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameDrink) || p.DrinksName.ToLower().Contains(transformedNameDrink)) &&
+                    (string.IsNullOrEmpty(transformedNameDrink) || p.DrinksName.ToLower().Contains(transformedNameDrink) || p.Status.ToLower().Equals(transformedNameDrink)) &&
                     (selectedCategory == "All" || string.Equals(p.CATEGORY.CategoryName, selectedCategory, StringComparison.OrdinalIgnoreCase)) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )

@@ -56,7 +56,7 @@ namespace DAL
             List<C_TABLE> filteredList = new List<C_TABLE>();
             filteredList = listTables
                 .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameArea) || p.TableName.ToLower().Contains(transformedNameArea)) &&
+                    (string.IsNullOrEmpty(transformedNameArea) || p.TableName.ToLower().Contains(transformedNameArea) || p.Status.ToLower().Equals(transformedNameArea)) &&
                     (selectedArea == "All" || string.Equals(p.AREA.AreaName, selectedArea, StringComparison.OrdinalIgnoreCase)) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )

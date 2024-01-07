@@ -53,7 +53,7 @@ namespace GUI
                         list.Add(BUSService.Instance.GetServiceById(Convert.ToInt32(row.Cells["IDD"].Value)));
                     }
                 }
-                list.Add(BUSService.Instance.GetServiceById(11));
+                list.Add(BUSService.Instance.GetServiceById(10));
                 return list;
             }catch(Exception ex)
             {

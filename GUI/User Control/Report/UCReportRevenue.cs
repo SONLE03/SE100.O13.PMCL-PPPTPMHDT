@@ -24,8 +24,6 @@ namespace GUI
         public UCReportRevenue()
         {
             InitializeComponent();
-            dtpStartDate.Value = DateTime.Now;
-            dtpEndDate.Value = DateTime.Now;
         }
         private void LoadData(Object dataSource)
         {
@@ -119,6 +117,8 @@ namespace GUI
                 cbDate2.Items.Add(year);
             }
             cbDate2.Visible = true;
+            lbEd.Visible = true;
+            lbSd.Text = "Start date";
         }
         private void filterMonthOfYear()
         {
@@ -131,6 +131,9 @@ namespace GUI
                 cbDate1.Items.Add(year);
             }
             cbDate2.Visible = false;
+            lbEd.Visible = false;
+            lbSd.Text = "Year";
+
         }
         private void filterYears()
         {
@@ -145,6 +148,8 @@ namespace GUI
                 cbDate2.Items.Add(year);
             }
             cbDate2.Visible = true;
+            lbEd.Visible = true;
+            lbSd.Text = "Start date";
         }
 
         private void btnExportToExcel_Click(object sender, EventArgs e)

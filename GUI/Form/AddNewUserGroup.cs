@@ -42,7 +42,7 @@ namespace GUI
                     list.Add(BUSService.Instance.GetServiceById(Convert.ToInt32(row.Cells["id"].Value)));
                 }
             }
-            list.Add(BUSService.Instance.GetServiceById(11));
+            list.Add(BUSService.Instance.GetServiceById(10));
             return list;
         }
         private void btnAdd_Click(object sender, EventArgs e)

@@ -47,7 +47,7 @@ namespace DAL
             List<SUPPLIER> filteredList = new List<SUPPLIER>();
             filteredList = listSupplier
                 .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameSupplier) || p.SupplierName.ToLower().Contains(transformedNameSupplier.ToLower())) &&
+                    (string.IsNullOrEmpty(transformedNameSupplier) || p.SupplierName.ToLower().Contains(transformedNameSupplier.ToLower()) || p.Status.ToLower().Equals(transformedNameSupplier)) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )
                 .ToList();

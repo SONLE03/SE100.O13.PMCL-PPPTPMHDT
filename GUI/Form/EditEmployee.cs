@@ -94,7 +94,7 @@ namespace GUI
                     && !String.IsNullOrEmpty(txtPhone.Text) && !String.IsNullOrEmpty(cbStatus.Text) && !String.IsNullOrEmpty(combobox_usergroup.Text) && !String.IsNullOrEmpty(fileImageAvatar))
                     {
                         var isSuccess = BUSUser.Instance.UpdUser(user.id, txtUserFullName.Text, DateOfBirth.Value, txtAddress.Text
-                            , txtEmail.Text, txtPhone.Text, Convert.ToInt32(combobox_usergroup.SelectedValue), cbStatus.Text, fileImageAvatar, user.Password);
+                            , txtEmail.Text, txtPhone.Text, Convert.ToInt32(combobox_usergroup.SelectedValue), cbStatus.Text, fileImageAvatar);
                     }
                     else
                     {

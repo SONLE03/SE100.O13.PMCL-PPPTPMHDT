@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DAL
 {
@@ -46,11 +47,12 @@ namespace DAL
         }
         public List<GROUPUSER> SearchGroupUser(string searchText, string selectedStatus)
         {
+            var transformedGroupUserName = DALConstraint.Instance.TransformString(searchText);
             List<GROUPUSER> listGroupUser = CFEntities.Instance.GROUPUSERs.ToList();
             List<GROUPUSER> filteredList = new List<GROUPUSER>();
             filteredList = listGroupUser
                 .Where(p =>
-                    (string.IsNullOrEmpty(searchText) || p.GroupUserName.ToLower().Contains(searchText.ToLower())) &&
+                    (string.IsNullOrEmpty(transformedGroupUserName) || p.GroupUserName.ToLower().Contains(transformedGroupUserName.ToLower()) || p.Status.ToLower().Equals(transformedGroupUserName)) &&
                     (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
                 )
                 .ToList();

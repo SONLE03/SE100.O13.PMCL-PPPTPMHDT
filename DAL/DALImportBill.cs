@@ -45,7 +45,7 @@ namespace DAL
             List<IMPORT_BILL> filteredList = new List<IMPORT_BILL>();
             filteredList = listSImportBill
                 .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameImportBill) || p.ImportName.ToLower().Contains(transformedNameImportBill.ToLower()))
+                    (string.IsNullOrEmpty(transformedNameImportBill) || p.ImportName.ToLower().Contains(transformedNameImportBill.ToLower()) || p.SUPPLIER.SupplierName.ToLower().Contains(transformedNameImportBill.ToLower()))
                 )
                 .ToList();
             return filteredList;
