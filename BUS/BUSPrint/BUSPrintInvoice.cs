@@ -131,7 +131,7 @@ namespace BUS.BUSPrint
                 e.Graphics.DrawRectangle(Pens.Black, new Rectangle(230, x - productNameParts.Count * 10 - 5, 60, 20 * productNameParts.Count));
                 x += 10;
                 rowIndex++;
-                if (e.MarginBounds.Bottom - x <= 20 && rowCount > rowIndex)
+                if (e.PageBounds.Height - x <= 20 && rowCount > rowIndex)
                 {
                     x = 20;
                     e.HasMorePages = true;

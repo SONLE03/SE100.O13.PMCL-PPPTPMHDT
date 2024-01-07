@@ -16,6 +16,7 @@ namespace GUI
         private UCBills_TabOrder ucBill;
         private int quantity;
         private double salePrice = 0;
+        private bool hasEvent = false;
 
         public UCMiniProductChoosen(UCBills_TabOrder ucBill, string image, string productName, string originalPrice, int idDrink, int idSize)
         {
@@ -28,6 +29,7 @@ namespace GUI
             lbSize.Text = idSize.ToString(); 
             lbDrinkID.Text = idDrink.ToString();
             lbSizeName.Text = BUSSize.Instance.GetSizeById(idSize).SizeName;
+            hasEvent = false;
 
             foreach (var p in BUS.BUSEvent.Instance.GetAllEvent())
             {
@@ -39,12 +41,14 @@ namespace GUI
                         {
                             if (p.Unit.Contains("VND"))
                             {
-                                 salePrice = (double)p.Discount;
+                                salePrice = (double)p.Discount;
+                                hasEvent = true;
                             }
                             else if (p.Unit.Contains("%"))
                             {
                                 double discount = double.Parse(lbPrice.Text.Replace(" VND", "")) * ((100 - (double)p.Discount) / 100);
                                 salePrice = discount;
+                                hasEvent = true;
                             }   
                             else
                             {
@@ -55,7 +59,7 @@ namespace GUI
                 }    
             }
 
-            if (salePrice < double.Parse(lbPrice.Text.Replace(" VND", "")))
+            if (salePrice < double.Parse(lbPrice.Text.Replace(" VND", "")) && hasEvent)
             {
                 lbBasePrice.Text = lbPrice.Text;
                 lbPrice.Text = salePrice.ToString() + " VND";

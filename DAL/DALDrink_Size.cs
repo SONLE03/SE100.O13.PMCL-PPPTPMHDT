@@ -28,14 +28,22 @@ namespace DAL
 
         public DRINKS_SIZE FindDrinkSize(string sizeName, int drinkId)
         {
-            List<DRINKS_SIZE> listDrinkSize = CFEntities.Instance.DRINKS_SIZE.ToList();
-            DRINKS_SIZE filteredDrinkSize = new DRINKS_SIZE();
-            filteredDrinkSize = listDrinkSize
-                .FirstOrDefault(p =>
-                    (p.C_SIZE.SizeName.ToLower().Contains(sizeName.ToLower())) &&
-                    (p.DRINK.id == drinkId)
-                );
-            return filteredDrinkSize;
+            try
+            {
+                List<DRINKS_SIZE> listDrinkSize = CFEntities.Instance.DRINKS_SIZE.ToList();
+                DRINKS_SIZE filteredDrinkSize = new DRINKS_SIZE();
+                filteredDrinkSize = listDrinkSize
+                    .FirstOrDefault(p =>
+                        (p.C_SIZE.SizeName.ToLower().Contains(sizeName.ToLower())) &&
+                        (p.DRINK.id == drinkId)
+                    );
+                return filteredDrinkSize;
+            }
+            catch
+            {
+                return null;
+            }
+          
         }
         public bool AddDrink_Size(DRINK Drink, int? SizeId, double price)
         {

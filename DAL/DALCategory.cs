@@ -22,49 +22,98 @@ namespace DAL
         }
         public List<CATEGORY> GetAllCategory()
         {
-            return CFEntities.Instance.CATEGORies.AsNoTracking().OrderByDescending(cate => cate.id).ToList();
+            try
+            {
+                return CFEntities.Instance.CATEGORies.AsNoTracking().OrderByDescending(cate => cate.id).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
+
         public List<CATEGORY> GetAllCategoryActive()
         {
-            return CFEntities.Instance.CATEGORies.AsNoTracking().Where(m => m.Status == "Active").ToList();
+            try
+            {
+                return CFEntities.Instance.CATEGORies.AsNoTracking().Where(m => m.Status == "Active").ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
+
         public List<CATEGORY> GetAllCategoryInActive()
         {
-            return CFEntities.Instance.CATEGORies.AsNoTracking().Where(m => m.Status == "InActive").ToList();
+            try
+            {
+                return CFEntities.Instance.CATEGORies.AsNoTracking().Where(m => m.Status == "InActive").ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
+
         public CATEGORY GetCategoryById(int id)
         {
-            return CFEntities.Instance.CATEGORies.Find(id);
+            try
+            {
+                return CFEntities.Instance.CATEGORies.Find(id);
+            }
+            catch
+            {
+                return null;
+            }
         }
+
         public bool categoryIsBlocked(int id)
         {
-            CATEGORY category = GetCategoryById(id);
-            if (category.Status.Equals("Active")) return false;
-            return true;
+            try
+            {
+                CATEGORY category = GetCategoryById(id);
+                return category.Status.Equals("Active") == false;
+            }
+            catch
+            {
+                return false;
+            }
         }
+
         public CATEGORY GetCategoryByName(string nameCategory)
         {
-            var transformedNameCategory = DALConstraint.Instance.TransformString(nameCategory);
-            var allCategory = CFEntities.Instance.CATEGORies.AsNoTracking().ToList();
-            var res = allCategory.Where(m => DALConstraint.Instance.TransformString(m.CategoryName.ToLower()) == transformedNameCategory);
-            if (res.Any())
+            try
             {
+                var transformedNameCategory = DALConstraint.Instance.TransformString(nameCategory);
+                var allCategory = CFEntities.Instance.CATEGORies.AsNoTracking().ToList();
+                var res = allCategory.Where(m => DALConstraint.Instance.TransformString(m.CategoryName.ToLower()) == transformedNameCategory);
                 return res.FirstOrDefault();
             }
-            return null;
+            catch
+            {
+                return null;
+            }
         }
+
         public List<CATEGORY> SearchCategory(string searchText, string selectedStatus)
         {
-            var transformedNameCategory = DALConstraint.Instance.TransformString(searchText);
-            List<CATEGORY> listCategory = CFEntities.Instance.CATEGORies.ToList();
-            List<CATEGORY> filteredList = new List<CATEGORY>();
-            filteredList = listCategory
-                .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameCategory) || p.CategoryName.ToLower().Contains(transformedNameCategory) || p.Status.ToLower().Equals(transformedNameCategory)) &&
-                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
-                )
-                .ToList();
-            return filteredList;
+            try
+            {
+                var transformedNameCategory = DALConstraint.Instance.TransformString(searchText);
+                List<CATEGORY> listCategory = CFEntities.Instance.CATEGORies.ToList();
+                List<CATEGORY> filteredList = listCategory
+                    .Where(p =>
+                        (string.IsNullOrEmpty(transformedNameCategory) || p.CategoryName.ToLower().Contains(transformedNameCategory) || p.Status.ToLower().Equals(transformedNameCategory)) &&
+                        (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                    )
+                    .ToList();
+                return filteredList;
+            }
+            catch
+            {
+                return null;
+            }
         }
         public bool AddCategory(string CategoryName, string status)
         {

@@ -60,16 +60,23 @@ namespace DAL
         }
         public List<C_USER> SearchUser(string searchText, string selectedStatus)
         {
-            var transformedUser = DALConstraint.Instance.TransformString(searchText);
-            List<C_USER> listUser = CFEntities.Instance.C_USER.ToList();
-            List<C_USER> filteredList = new List<C_USER>();
-            filteredList = listUser
-                .Where(p =>
-                    (string.IsNullOrEmpty(transformedUser) || p.UserFullName.ToLower().Contains(transformedUser.ToLower()) || p.Status.ToLower().Equals(transformedUser)) &&
-                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
-                )
-                .ToList();
-            return filteredList;
+            try
+            {
+                var transformedUser = DALConstraint.Instance.TransformString(searchText);
+                List<C_USER> listUser = CFEntities.Instance.C_USER.ToList();
+                List<C_USER> filteredList = new List<C_USER>();
+                filteredList = listUser
+                    .Where(p =>
+                        (string.IsNullOrEmpty(transformedUser) || p.UserFullName.ToLower().Contains(transformedUser.ToLower()) || p.Status.ToLower().Equals(transformedUser)) &&
+                        (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                    )
+                    .ToList();
+                return filteredList;
+            }
+            catch
+            {
+                return null;
+            }
         }
         public bool GetUserByIDGroupUser(int idGU)
         {

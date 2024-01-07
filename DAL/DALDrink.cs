@@ -42,30 +42,46 @@ namespace DAL
 
         public DRINK GetDrinkByName(string drinkName)
         {
-            var transformedNameDrink = DALConstraint.Instance.TransformString(drinkName);
-            var allDrink= CFEntities.Instance.DRINKS.AsNoTracking().ToList();
-            var res = allDrink.Where(m => DALConstraint.Instance.TransformString(m.DrinksName.ToLower()) == transformedNameDrink);
-            if (res.Any())
+            try
             {
-                return res.FirstOrDefault();
+                var transformedNameDrink = DALConstraint.Instance.TransformString(drinkName);
+                var allDrink = CFEntities.Instance.DRINKS.AsNoTracking().ToList();
+                var res = allDrink.Where(m => DALConstraint.Instance.TransformString(m.DrinksName.ToLower()) == transformedNameDrink);
+                if (res.Any())
+                {
+                    return res.FirstOrDefault();
+                }
+                return null;
             }
-            return null;
+            catch
+            {
+                return null;
+            }
+     
         }
 
 
         public List<DRINK> SearchDrinks(string searchText, string selectedCategory, string selectedStatus)
         {
-            var transformedNameDrink = DALConstraint.Instance.TransformString(searchText);
-            List<DRINK> listDrinks = CFEntities.Instance.DRINKS.ToList();
-            List<DRINK> filteredList = new List<DRINK>();
-            filteredList = listDrinks
-                .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameDrink) || p.DrinksName.ToLower().Contains(transformedNameDrink) || p.Status.ToLower().Equals(transformedNameDrink)) &&
-                    (selectedCategory == "All" || string.Equals(p.CATEGORY.CategoryName, selectedCategory, StringComparison.OrdinalIgnoreCase)) &&
-                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
-                )
-                .ToList();
-            return filteredList;
+            try
+            {
+                var transformedNameDrink = DALConstraint.Instance.TransformString(searchText);
+                List<DRINK> listDrinks = CFEntities.Instance.DRINKS.ToList();
+                List<DRINK> filteredList = new List<DRINK>();
+                filteredList = listDrinks
+                    .Where(p =>
+                        (string.IsNullOrEmpty(transformedNameDrink) || p.DrinksName.ToLower().Contains(transformedNameDrink) || p.Status.ToLower().Equals(transformedNameDrink)) &&
+                        (selectedCategory == "All" || string.Equals(p.CATEGORY.CategoryName, selectedCategory, StringComparison.OrdinalIgnoreCase)) &&
+                        (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                    )
+                    .ToList();
+                return filteredList;
+            }
+            catch
+            {
+                return null;
+            }
+          
         }
 
         public DRINK AddDrink(string DrinksName, int drinkCategory, 

@@ -32,14 +32,23 @@ namespace DAL
         }
         public bool GetGroupUserByName(string name)
         {
-            var transformedGroupUserName = DALConstraint.Instance.TransformString(name);
-            var allGroupUser = CFEntities.Instance.GROUPUSERs.AsNoTracking().ToList();
-            var res = allGroupUser.Where(m => DALConstraint.Instance.TransformString(m.GroupUserName.ToLower()) == transformedGroupUserName);
-            if (res.Any())
+            try
             {
-                return true;
+                var transformedGroupUserName = DALConstraint.Instance.TransformString(name);
+                var allGroupUser = CFEntities.Instance.GROUPUSERs.AsNoTracking().ToList();
+                var res = allGroupUser.Where(m => DALConstraint.Instance.TransformString(m.GroupUserName.ToLower()) == transformedGroupUserName);
+                if (res.Any())
+                {
+                    return true;
+                }
+                return false;
+
             }
-            return false;
+            catch
+            {
+                return false;
+            }
+            
         }
         public GROUPUSER GetGroupUserById(int id)
         {
@@ -47,22 +56,34 @@ namespace DAL
         }
         public List<GROUPUSER> SearchGroupUser(string searchText, string selectedStatus)
         {
-            var transformedGroupUserName = DALConstraint.Instance.TransformString(searchText);
-            List<GROUPUSER> listGroupUser = CFEntities.Instance.GROUPUSERs.ToList();
-            List<GROUPUSER> filteredList = new List<GROUPUSER>();
-            filteredList = listGroupUser
-                .Where(p =>
-                    (string.IsNullOrEmpty(transformedGroupUserName) || p.GroupUserName.ToLower().Contains(transformedGroupUserName.ToLower()) || p.Status.ToLower().Equals(transformedGroupUserName)) &&
-                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
-                )
-                .ToList();
-            return filteredList;
+            try
+            {
+                var transformedGroupUserName = DALConstraint.Instance.TransformString(searchText);
+                List<GROUPUSER> listGroupUser = CFEntities.Instance.GROUPUSERs.ToList();
+                List<GROUPUSER> filteredList = new List<GROUPUSER>();
+                filteredList = listGroupUser
+                    .Where(p =>
+                        (string.IsNullOrEmpty(transformedGroupUserName) || p.GroupUserName.ToLower().Contains(transformedGroupUserName.ToLower()) || p.Status.ToLower().Equals(transformedGroupUserName)) &&
+                        (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                    )
+                    .ToList();
+                return filteredList;
+            }
+            catch
+            {
+                return null;
+            }
+            
         }
 
         public GROUPUSER GetGroupUserByCode(string GroupUserID)
         {
-            var res = CFEntities.Instance.GROUPUSERs.AsNoTracking().Where(n => n.GroupUserID == GroupUserID);
-            return (res.Any() ? res.First() : null);
+            try
+            {
+                var res = CFEntities.Instance.GROUPUSERs.AsNoTracking().Where(n => n.GroupUserID == GroupUserID);
+                return (res.Any() ? res.First() : null);
+            }
+            catch { return null; }
         }
 
         public int AddGroupUser(string GroupUserName, string status)

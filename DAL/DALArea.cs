@@ -22,43 +22,90 @@ namespace DAL
         }
         public List<AREA> GetAllArea()
         {
-            return CFEntities.Instance.AREAs.AsNoTracking().OrderByDescending(area => area.id).ToList();
+            try
+            {
+                return CFEntities.Instance.AREAs.AsNoTracking().OrderByDescending(area => area.id).ToList();
+            }
+            catch 
+            {
+                return null;
+            }
         }
+
         public List<AREA> GetAllAreaActive()
         {
-            return CFEntities.Instance.AREAs.AsNoTracking().Where(m => m.Status == "Active").ToList();
+            try
+            {
+                return CFEntities.Instance.AREAs.AsNoTracking().Where(m => m.Status == "Active").ToList();
+            }
+            catch 
+            {
+                return null;
+            }
         }
+
         public List<AREA> GetAllAreaInActive()
         {
-            return CFEntities.Instance.AREAs.AsNoTracking().Where(m => m.Status == "InActive").ToList();
+            try
+            {
+                return CFEntities.Instance.AREAs.AsNoTracking().Where(m => m.Status == "InActive").ToList();
+            }
+            catch 
+            {
+                return null;
+            }
         }
+
         public AREA GetAreaById(int id)
         {
-            return CFEntities.Instance.AREAs.Find(id);
+            try
+            {
+                return CFEntities.Instance.AREAs.Find(id);
+            }
+            catch 
+            {
+                return null;
+            }
         }
+
         public AREA GetAreaByName(string nameArea)
         {
-            var transformedNameArea = DALConstraint.Instance.TransformString(nameArea);
-            var allAreas = CFEntities.Instance.AREAs.AsNoTracking().ToList();
-            var res = allAreas.Where(m => DALConstraint.Instance.TransformString(m.AreaName.ToLower()) == transformedNameArea);
-            if (res.Any())
+            try
             {
-                return res.FirstOrDefault();
+                var transformedNameArea = DALConstraint.Instance.TransformString(nameArea);
+                var allAreas = CFEntities.Instance.AREAs.AsNoTracking().ToList();
+                var res = allAreas.Where(m => DALConstraint.Instance.TransformString(m.AreaName.ToLower()) == transformedNameArea);
+                if (res.Any())
+                {
+                    return res.FirstOrDefault();
+                }
+                return null;
             }
-            return null;
+            catch 
+            {
+                return null;
+            }
         }
         public List<AREA> SearchArea(string searchText, string selectedStatus)
         {
-            var transformedNameArea = DALConstraint.Instance.TransformString(searchText);
-            List<AREA> listAreas = CFEntities.Instance.AREAs.ToList();
-            List<AREA> filteredList = new List<AREA>();
-            filteredList = listAreas
-                .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameArea) || p.AreaName.ToLower().Contains(transformedNameArea) || p.Status.ToLower().Equals(transformedNameArea)) &&
-                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
-                )
-                .ToList();
-            return filteredList;
+            try
+            {
+                var transformedNameArea = DALConstraint.Instance.TransformString(searchText);
+                List<AREA> listAreas = CFEntities.Instance.AREAs.ToList();
+                List<AREA> filteredList = new List<AREA>();
+                filteredList = listAreas
+                    .Where(p =>
+                        (string.IsNullOrEmpty(transformedNameArea) || p.AreaName.ToLower().Contains(transformedNameArea) || p.Status.ToLower().Equals(transformedNameArea)) &&
+                        (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                    )
+                    .ToList();
+                return filteredList;
+            }
+            catch
+            {
+                return null;
+            }
+         
         }
         public bool AddArea(string AreaName, int capacity, string status)
         {

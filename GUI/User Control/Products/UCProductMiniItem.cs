@@ -25,7 +25,7 @@ namespace GUI
 
         public void updatePrice(string price, string size)
         {
-            lbPrice.Text = price + " VND" + $" ({size})";
+            lbPrice.Text = price + " D" + $" ({size})";
         }
 
         public void loadData(DRINK drink, List<int> sizes)

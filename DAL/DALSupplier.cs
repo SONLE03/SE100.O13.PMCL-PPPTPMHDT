@@ -42,16 +42,24 @@ namespace DAL
         }
         public List<SUPPLIER> SearchSupplier(string searchText, string selectedStatus)
         {
-            var transformedNameSupplier = DALConstraint.Instance.TransformString(searchText);
-            List<SUPPLIER> listSupplier = CFEntities.Instance.SUPPLIERs.ToList();
-            List<SUPPLIER> filteredList = new List<SUPPLIER>();
-            filteredList = listSupplier
-                .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameSupplier) || p.SupplierName.ToLower().Contains(transformedNameSupplier.ToLower()) || p.Status.ToLower().Equals(transformedNameSupplier)) &&
-                    (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
-                )
-                .ToList();
-            return filteredList;
+            try
+            {
+                var transformedNameSupplier = DALConstraint.Instance.TransformString(searchText);
+                List<SUPPLIER> listSupplier = CFEntities.Instance.SUPPLIERs.ToList();
+                List<SUPPLIER> filteredList = new List<SUPPLIER>();
+                filteredList = listSupplier
+                    .Where(p =>
+                        (string.IsNullOrEmpty(transformedNameSupplier) || p.SupplierName.ToLower().Contains(transformedNameSupplier.ToLower()) || p.Status.ToLower().Equals(transformedNameSupplier)) &&
+                        (selectedStatus == "All" || string.Equals(p.Status, selectedStatus, StringComparison.OrdinalIgnoreCase))
+                    )
+                    .ToList();
+                return filteredList;
+            }
+            catch
+            {
+                return null;
+            }
+        
         }
 
         public bool AddSupplier(string SupplierName, string Address, string Phone, string Status)

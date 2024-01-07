@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace GUI
 {
@@ -25,7 +26,17 @@ namespace GUI
         public void updatePriceAndSize(string price, int sizeID)
         {
             lbSizeID.Text = sizeID.ToString();
-            lbPrice.Text = $"{price}D ({BUSSize.Instance.GetSizeById(sizeID).SizeName})";
+            lbPrice.Text = $"{price} VND";
+            lbSizeName.Text = $"({BUSSize.Instance.GetSizeById(sizeID).SizeName})";
+        }
+        public void loadSize(DRINK drink, List<int> sizes)
+        {
+            foreach (var p in sizes)
+            {
+                UCMiniSizeForBill uCMiniSize = new UCMiniSizeForBill(BUS.BUSSize.Instance.GetSizeById(p), this, drink.id);
+                flowLayoutSize.Controls.Add(uCMiniSize);
+                //uCMiniSize.Click += new EventHandler(UCMiniSizeForBill_Click);
+            }
         }
         public void loadData(DRINK drink, List<int> sizes)
         {
@@ -35,13 +46,8 @@ namespace GUI
                 lbPrice.Text = "0 VND";
                 labelID.Text = drink.id.ToString();
                 drinkPicture.Image = new System.Drawing.Bitmap(drink.Image);
-
-                foreach (var p in sizes)
-                {
-                    UCMiniSizeForBill uCMiniSize = new UCMiniSizeForBill(BUS.BUSSize.Instance.GetSizeById(p), this, drink.id);
-                    flowLayoutSize.Controls.Add(uCMiniSize);
-                    //uCMiniSize.Click += new EventHandler(UCMiniSizeForBill_Click);
-                }
+                loadSize(drink, sizes);
+                
             }
             catch (Exception ex)
             {
@@ -65,6 +71,11 @@ namespace GUI
                 ucBill.addMiniItemProduct(ucMiniProductChoosen);
                 ucBill.Show();
             }
+        }
+
+        private void guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         //private void UCMiniSizeForBill_Click(object sender, EventArgs e)

@@ -37,24 +37,40 @@ namespace DAL
         }
         public List<EVENT> SearchEvent(string searchText)
         {
-            var transformedNameEvent = DALConstraint.Instance.TransformString(searchText);
-            List<EVENT> listEvents = CFEntities.Instance.EVENTs.ToList();
-            List<EVENT> filteredList = new List<EVENT>();
-            filteredList = listEvents
-                .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameEvent) || p.EventName.ToLower().Contains(transformedNameEvent) || p.Status.ToLower().Equals(transformedNameEvent)))
-                .ToList();
-            return filteredList;
+            try
+            {
+                var transformedNameEvent = DALConstraint.Instance.TransformString(searchText);
+                List<EVENT> listEvents = CFEntities.Instance.EVENTs.ToList();
+                List<EVENT> filteredList = new List<EVENT>();
+                filteredList = listEvents
+                    .Where(p =>
+                        (string.IsNullOrEmpty(transformedNameEvent) || p.EventName.ToLower().Contains(transformedNameEvent) || p.Status.ToLower().Equals(transformedNameEvent)))
+                    .ToList();
+                return filteredList;
+            }
+            catch
+            {
+                return null;
+            }
+        
 
         }
 
         public bool CheckDrinkEvent(DRINK drink, DateTime startDate, DateTime dueDate)
         {
-            var isEventExist = CFEntities.Instance.EVENTs
-                              .Any(e => e.DRINKS.Any(d => d.DrinksID == drink.DrinksID)
-                                  && e.Status == "Active"
-                                  && !(dueDate < e.StartDate && e.DueDate < startDate));
-            return isEventExist;
+            try
+            {
+                var isEventExist = CFEntities.Instance.EVENTs
+                            .Any(e => e.DRINKS.Any(d => d.DrinksID == drink.DrinksID)
+                                && e.Status == "Active"
+                                && !(dueDate < e.StartDate && e.DueDate < startDate));
+                return isEventExist;
+            }
+            catch
+            {
+                return false;
+            }
+          
         }
         public int AddEvent (string EventName, bool EventType, string Unit,  DateTime StartDate, DateTime DueDate, float Discount, List<DRINK> drinks, int userId)
         {

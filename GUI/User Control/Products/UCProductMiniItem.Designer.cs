@@ -135,10 +135,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbPrice.AutoSize = true;
-            this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.lbPrice.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrice.Location = new System.Drawing.Point(161, 123);
             this.lbPrice.Name = "lbPrice";
-            this.lbPrice.Size = new System.Drawing.Size(107, 28);
+            this.lbPrice.Size = new System.Drawing.Size(90, 23);
             this.lbPrice.TabIndex = 3;
             this.lbPrice.Text = "$ 000.000";
             // 
@@ -187,7 +187,7 @@
             // pic_AddToCart
             // 
             this.pic_AddToCart.Location = new System.Drawing.Point(0, 0);
-            this.pic_AddToCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_AddToCart.Margin = new System.Windows.Forms.Padding(4);
             this.pic_AddToCart.Name = "pic_AddToCart";
             this.pic_AddToCart.Size = new System.Drawing.Size(133, 62);
             this.pic_AddToCart.TabIndex = 12;

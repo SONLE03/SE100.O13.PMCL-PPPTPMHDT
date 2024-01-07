@@ -38,24 +38,40 @@ namespace DAL
         }
         public List<BILL> GetAllInvoicesForYourShift(int userID, DateTime dateLogin)
         {
-            var invoices = CFEntities.Instance.BILLs.AsNoTracking()
-                .Where(bill => bill.UserID == userID && bill.BillDate >= dateLogin)
-                .ToList();
-            return invoices;
+            try
+            {
+                var invoices = CFEntities.Instance.BILLs.AsNoTracking()
+               .Where(bill => bill.UserID == userID && bill.BillDate >= dateLogin)
+               .ToList();
+                return invoices;
+            }
+            catch
+            {
+                return null;
+            }
+           
         }
         public List<BILL> SearchOrder(string searchText)
         {
-            var transformedSearchText = DALConstraint.Instance.TransformString(searchText);
-            List<BILL> listOrders = CFEntities.Instance.BILLs.ToList();
-            List<BILL> filteredList = new List<BILL>();
-            filteredList = listOrders
-                .Where(p =>
-                    (string.IsNullOrEmpty(transformedSearchText) || p.C_USER.UserFullName.ToLower().Contains(transformedSearchText)) ||
-                    (string.IsNullOrEmpty(transformedSearchText) || p.BillID.ToLower().Contains(transformedSearchText))
-                )
-                .OrderByDescending(bill => bill.BillDate)
-                .ToList();
-            return filteredList;
+            try
+            {
+                var transformedSearchText = DALConstraint.Instance.TransformString(searchText);
+                List<BILL> listOrders = CFEntities.Instance.BILLs.ToList();
+                List<BILL> filteredList = new List<BILL>();
+                filteredList = listOrders
+                    .Where(p =>
+                        (string.IsNullOrEmpty(transformedSearchText) || p.C_USER.UserFullName.ToLower().Contains(transformedSearchText)) ||
+                        (string.IsNullOrEmpty(transformedSearchText) || p.BillID.ToLower().Contains(transformedSearchText))
+                    )
+                    .OrderByDescending(bill => bill.BillDate)
+                    .ToList();
+                return filteredList;
+            }
+            catch
+            {
+                return null;
+            }
+           
         }
 
         public int AddBill(DateTime BillDate, int UserID, int? TableID, string Note, double total, float tax, double subTotal)

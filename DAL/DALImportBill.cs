@@ -40,15 +40,23 @@ namespace DAL
         }
         public List<IMPORT_BILL> SearchImportBill(string searchText)
         {
-            var transformedNameImportBill = DALConstraint.Instance.TransformString(searchText);
-            List<IMPORT_BILL> listSImportBill = CFEntities.Instance.IMPORT_BILL.ToList();
-            List<IMPORT_BILL> filteredList = new List<IMPORT_BILL>();
-            filteredList = listSImportBill
-                .Where(p =>
-                    (string.IsNullOrEmpty(transformedNameImportBill) || p.ImportName.ToLower().Contains(transformedNameImportBill.ToLower()) || p.SUPPLIER.SupplierName.ToLower().Contains(transformedNameImportBill.ToLower()))
-                )
-                .ToList();
-            return filteredList;
+            try
+            {
+                var transformedNameImportBill = DALConstraint.Instance.TransformString(searchText);
+                List<IMPORT_BILL> listSImportBill = CFEntities.Instance.IMPORT_BILL.ToList();
+                List<IMPORT_BILL> filteredList = new List<IMPORT_BILL>();
+                filteredList = listSImportBill
+                    .Where(p =>
+                        (string.IsNullOrEmpty(transformedNameImportBill) || p.ImportName.ToLower().Contains(transformedNameImportBill.ToLower()) || p.SUPPLIER.SupplierName.ToLower().Contains(transformedNameImportBill.ToLower()))
+                    )
+                    .ToList();
+                return filteredList;
+            }
+            catch
+            {
+                return null;
+            }
+         
         }
         public int AddImportBill(string ImportName, DateTime ImportDate, int SupplierId, int UserId)
         {
