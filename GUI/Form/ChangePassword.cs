@@ -36,15 +36,7 @@ namespace GUI
                 {
                     if (BUSUser.Instance.UpdPassword(user.id, newPassword))
                     {
-                        MessageBox.Show("Change password successfully");
                         this.Hide();
-
-                        Login login = new Login();
-                        login.Show();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Change password failed, please check again your password");
                     }
                 }
                 else

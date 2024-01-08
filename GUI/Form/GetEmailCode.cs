@@ -52,9 +52,9 @@ namespace GUI
             {
                 if (SendEmail(user.Email, OTP) == true)
                 {
+                    this.Hide();
                     EnterCode enterCode = new EnterCode(user, OTP);
                     enterCode.ShowDialog();
-                    this.Hide();
                 }
                 else
                 {

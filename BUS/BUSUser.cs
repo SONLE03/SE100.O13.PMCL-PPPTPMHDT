@@ -202,7 +202,18 @@ namespace BUS
         }
         public bool UpdPassword(int id, string password)
         {
-            return DALUser.Instance.UpdPassword(id, GeneratePassword(password));
+            if (!PasswordValidator(password, password))
+            {
+                MessageBox.Show("Password validation failed. Please make sure the passwords match and meet the requirements.", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            if (DALUser.Instance.UpdPassword(id, GeneratePassword(password)))
+            {
+                MessageBox.Show("Change password successfully", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            MessageBox.Show("Change password failed, please check again your password", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            return false;
         }
         public List<C_USER> SearchUser(string searchText, string selectedStatus)
         {

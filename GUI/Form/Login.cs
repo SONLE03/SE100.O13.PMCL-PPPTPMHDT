@@ -99,7 +99,6 @@ namespace GUI
         private void link_forgot_pass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             GetEmailCode getEmailCode = new GetEmailCode();
-            this.Hide();
             getEmailCode.Show();
         }
 
