@@ -152,6 +152,7 @@
     <Compile Include="GROUPUSER.cs">
       <DependentUpon>Coffee.tt</DependentUpon>
     </Compile>
+    <Compile Include="ImportDTO.cs" />
     <Compile Include="IMPORT_BILL.cs">
       <DependentUpon>Coffee.tt</DependentUpon>
     </Compile>

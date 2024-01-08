@@ -81,6 +81,31 @@ namespace DAL
                 return monthlyRevenues;
             }catch { return null; }
         }
+        public List<ImportDTO> MonthlyCost(int year)
+        {
+            try
+            {
+                var monthlyCost = CFEntities.Instance.IMPORT_BILL
+                .Where(import => import.ImportDate.Year == year)
+                .GroupBy(import => new { Month = import.ImportDate.Month })
+                .Select(group => new
+                {
+                    Month = group.Key.Month,
+                    TotalCost = (double)group.Sum(import => import.Total)
+                })
+                .OrderBy(result => result.Month)
+                .ToList()
+                .Select(result => new ImportDTO
+                {
+                    Month = result.Month,
+                    Date = $"{result.Month}/{year}",
+                    TotalCost = result.TotalCost
+                })
+                .ToList();
+                return monthlyCost;
+            }catch
+            { return null; }
+        }
         public List<CustomRevenueDTO> dayOfMonthRevenueDTOs(int month, int year)
         {
             try
@@ -104,8 +129,30 @@ namespace DAL
                     return customRevenues;
             }
             catch { return null; }
-             
-
+        }
+        public List<ImportDTO> dayOfMonthCostDTOs(int month, int year)
+        {
+            try
+            {
+                var costDays = CFEntities.Instance.IMPORT_BILL
+                .Where(import => import.ImportDate.Month == month && import.ImportDate.Year == year)
+                .GroupBy(import => EntityFunctions.TruncateTime(import.ImportDate))
+                .Select(group => new
+                {
+                    Day = EntityFunctions.TruncateTime(group.Key.Value),
+                    TotalCost = (double)group.Sum(import => import.Total)
+                })
+                .OrderBy(result => result.Day)
+                .ToList()
+                .Select(result => new ImportDTO
+                {
+                    Date = result.Day?.ToString("dd/MM/yyyy"),
+                    TotalCost = result.TotalCost
+                })
+                .ToList();
+                return costDays;
+            }
+            catch { return null; }
         }
         public List<CustomRevenueDTO> yearsRevenueDTOs(int startYear, int endYear)
         {
@@ -135,6 +182,35 @@ namespace DAL
             }
             catch { return null; }
             
+        }
+        public List<ImportDTO> yearsCostDTOs(int startYear, int endYear)
+        {
+            try
+            {
+                DateTime startDate = new DateTime(startYear, 1, 1);
+                DateTime endDate = new DateTime(endYear, 12, 31);
+
+                var yearsCost = CFEntities.Instance.IMPORT_BILL
+                    .Where(import => import.ImportDate >= startDate && import.ImportDate <= endDate)
+                    .GroupBy(import => import.ImportDate.Year)
+                    .Select(group => new
+                    {
+                        Year = group.Key,
+                        TotalCost = (double)group.Sum(import => import.Total)
+                    })
+                    .OrderBy(result => result.Year)
+                    .ToList()
+                    .Select(result => new ImportDTO
+                    {
+                        Date = result.Year.ToString(),
+                        TotalCost = result.TotalCost
+                    })
+                    .ToList();
+
+                return yearsCost;
+            }
+            catch { return null; }
+
         }
         public List<DrinkReportDTO> DrinkReports(DateTime date)
         {

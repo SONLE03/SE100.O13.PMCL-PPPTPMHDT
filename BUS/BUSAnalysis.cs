@@ -41,5 +41,17 @@ namespace BUS
         {
             return DALAnalysis.Instance.DrinkReports(date);
         }
+        public List<ImportDTO> monthOfYearCostDTOs(int year)
+        {
+            return DALAnalysis.Instance.MonthlyCost(year);
+        }
+        public List<ImportDTO> dayOfMonthCostDTOs(int month, int year)
+        {
+            return DALAnalysis.Instance.dayOfMonthCostDTOs(month, year);
+        }
+        public List<ImportDTO> yearsCostDTOs(int startYear, int endYear)
+        {
+            return DALAnalysis.Instance.yearsCostDTOs(startYear, endYear);
+        }
     }
 }

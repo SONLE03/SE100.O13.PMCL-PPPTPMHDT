@@ -20,31 +20,42 @@ namespace GUI
 {
     public partial class UCReportRevenue : UserControl
     {
-        List<CustomRevenueDTO> revenueReportsForChart = new List<CustomRevenueDTO>();
+        List<CustomRevenueDTO> revenueReports = new List<CustomRevenueDTO>();
+        List<ImportDTO> importReports = new List<ImportDTO>();
         public UCReportRevenue()
         {
             InitializeComponent();
         }
-        private void LoadData(Object dataSource)
+        private void LoadData(Object dataSourceRevenue, Object dataSourceCost)
         {
-            chartTotalRevenue.DataSource = dataSource;
-            chartTotalRevenue.Series[0].XValueMember = "Date";
-            chartTotalRevenue.Series[0].YValueMembers = "TotalRevenue";
-            chartTotalRevenue.ChartAreas[0].AxisX.MajorGrid.Enabled = true;
-            chartTotalRevenue.ChartAreas[0].AxisY.MajorGrid.Enabled = true;
-            chartTotalRevenue.Series[0].ToolTip = "#VALY";
-            chartTotalRevenue.Series[0].IsValueShownAsLabel = true;
-            chartTotalRevenue.ChartAreas[0].AxisY.Title = "Total Revenue (VND)";
-            chartTotalRevenue.DataBind();
-            gridRevenue.DataSource = dataSource;
-            revenueReportsForChart = (List<CustomRevenueDTO>)dataSource;
+            chartTotalCostAndRevenue.Series[0].XValueMember = "Date";
+            chartTotalCostAndRevenue.Series[0].YValueMembers = "TotalRevenue";
+            chartTotalCostAndRevenue.Series[0].ToolTip = "#VALY";
+            chartTotalCostAndRevenue.Series[0].IsValueShownAsLabel = true;
+
+            chartTotalCostAndRevenue.Series[1].XValueMember = "Date";
+            chartTotalCostAndRevenue.Series[1].YValueMembers = "TotalCost";
+            chartTotalCostAndRevenue.Series[1].ToolTip = "#VALY";
+            chartTotalCostAndRevenue.Series[1].IsValueShownAsLabel = true;
+            chartTotalCostAndRevenue.Series[0].Points.DataBindXY((System.Collections.IEnumerable)dataSourceRevenue, "Date", (System.Collections.IEnumerable)dataSourceRevenue, "TotalRevenue");
+            chartTotalCostAndRevenue.Series[1].Points.DataBindXY((System.Collections.IEnumerable)dataSourceCost, "Date", (System.Collections.IEnumerable)dataSourceCost, "TotalCost");
+            chartTotalCostAndRevenue.DataBind();
+
+            chartTotalCostAndRevenue.ChartAreas[0].AxisX.MajorGrid.Enabled = true;
+            chartTotalCostAndRevenue.ChartAreas[0].AxisY.MajorGrid.Enabled = true;
+            chartTotalCostAndRevenue.ChartAreas[0].AxisY.Title = "Total (VND)";
+
+            revenueReports = (List<CustomRevenueDTO>)dataSourceRevenue;
+            importReports = (List<ImportDTO>)dataSourceCost;
+
         }
 
         private void btnOK_Click(object sender, EventArgs e)
         {
             try
             {
-                Object dataSource = null;
+                Object dataSourceRevenue = null;
+                Object dataSourceCost = null;
                 if (cbType.SelectedIndex == 0)
                 {
                     if(String.IsNullOrEmpty(cbDate1.Text) || String.IsNullOrEmpty(cbDate2.Text))
@@ -52,7 +63,8 @@ namespace GUI
                         MessageBox.Show("Lack of information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    dataSource = BUSAnalysis.Instance.dayOfMonthRevenueDTOs(int.Parse(cbDate1.Text), int.Parse(cbDate2.Text));
+                    dataSourceRevenue = BUSAnalysis.Instance.dayOfMonthRevenueDTOs(int.Parse(cbDate1.Text), int.Parse(cbDate2.Text));
+                    dataSourceCost = BUSAnalysis.Instance.dayOfMonthCostDTOs(int.Parse(cbDate1.Text), int.Parse(cbDate2.Text));
 
                 }
                 else if (cbType.SelectedIndex == 1)
@@ -62,8 +74,8 @@ namespace GUI
                         MessageBox.Show("Lack of information", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-
-                    dataSource = BUSAnalysis.Instance.monthOfYearRevenueDTOs(Convert.ToInt32(cbDate1.Text));
+                    dataSourceRevenue = BUSAnalysis.Instance.monthOfYearRevenueDTOs(Convert.ToInt32(cbDate1.Text));
+                    dataSourceCost = BUSAnalysis.Instance.monthOfYearCostDTOs(Convert.ToInt32(cbDate1.Text));
                 }
                 else
                 {
@@ -77,15 +89,16 @@ namespace GUI
                         MessageBox.Show("The starting year cannot be greater than the ending year", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
-                    dataSource = BUSAnalysis.Instance.yearsRevenueDTOs(Convert.ToInt32(cbDate1.Text), Convert.ToInt32(cbDate2.Text));
+                    dataSourceRevenue = BUSAnalysis.Instance.yearsRevenueDTOs(Convert.ToInt32(cbDate1.Text), Convert.ToInt32(cbDate2.Text));
+                    dataSourceCost = BUSAnalysis.Instance.yearsCostDTOs(Convert.ToInt32(cbDate1.Text), Convert.ToInt32(cbDate2.Text));
                 }
-                LoadData(dataSource);
+                LoadData(dataSourceRevenue, dataSourceCost);
             }
-            catch(Exception ex)
+            catch 
             {
-                MessageBox.Show(ex.Message);
+
             }
-           
+
         }
         private void cbType_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -118,7 +131,7 @@ namespace GUI
             }
             cbDate2.Visible = true;
             lbEd.Visible = true;
-            lbSd.Text = "Start date";
+            lbSd.Text = "Month";
         }
         private void filterMonthOfYear()
         {
@@ -149,7 +162,7 @@ namespace GUI
             }
             cbDate2.Visible = true;
             lbEd.Visible = true;
-            lbSd.Text = "Start date";
+            lbSd.Text = "Year";
         }
 
         private void btnExportToExcel_Click(object sender, EventArgs e)
@@ -160,7 +173,7 @@ namespace GUI
         {
             try
             {
-                if(gridRevenue.Rows.Count <= 0)
+                if(revenueReports.Count == 0 && importReports.Count == 0)
                 {
                     MessageBox.Show("No data available", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -190,14 +203,21 @@ namespace GUI
                     p.Workbook.Properties.Title = "Revenue Report";
                     ExcelWorksheet ws = p.Workbook.Worksheets.Add("Sheet1");
 
-                    // Title
+                    // Title Revenue
                     ws.Cells["A1"].Value = "Revenue Report";
                     ws.Cells["A1"].Style.Font.Bold = true;
                     ws.Cells["A1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
                     ws.Cells["A1:B1"].Merge = true;
 
+                    // Title Cost
+                    ws.Cells["D1"].Value = "Cost Report";
+                    ws.Cells["D1"].Style.Font.Bold = true;
+                    ws.Cells["D1"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Center;
+                    ws.Cells["D1:E1"].Merge = true;
+
+
                     var user = BUSUser.Instance.GetUserById(BUSUser.Instance.idUserLogin);
-                    // Report Date and Reporter
+                    // Report Date and Reporter Revenue
                     ws.Cells["A3"].Value = "Reporter: " + user.UserID + " | " + user.UserFullName;
                     ws.Cells["A3"].Style.Font.Bold = true;
                     ws.Cells["A3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
@@ -208,9 +228,20 @@ namespace GUI
                     ws.Cells["A4"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
                     ws.Cells["A4:B4"].Merge = true;
 
-                    // Headers
-                    string[] arrColumnHeader = { "Date", "Total Revenue (VNĐ)" };
-                    ws.Cells["A6:B6"].LoadFromArrays(new List<string[]> { arrColumnHeader });
+                    // Report Date and Reporter Cost
+                    ws.Cells["D3"].Value = "Reporter: " + user.UserID + " | " + user.UserFullName;
+                    ws.Cells["D3"].Style.Font.Bold = true;
+                    ws.Cells["D3"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                    ws.Cells["D3:E3"].Merge = true;
+
+                    ws.Cells["D4"].Value = "Report Date: " + DateTime.Now.ToString("dd/MM/yyyy");
+                    ws.Cells["D4"].Style.Font.Bold = true;
+                    ws.Cells["D4"].Style.HorizontalAlignment = ExcelHorizontalAlignment.Left;
+                    ws.Cells["D4:E4"].Merge = true;
+
+                    // Headers Revenue
+                    string[] arrColumnHeaderRevenue = { "Date", "Total Revenue (VNĐ)" };
+                    ws.Cells["A6:B6"].LoadFromArrays(new List<string[]> { arrColumnHeaderRevenue });
 
                     using (var headerRange = ws.Cells["A6:B6"])
                     {
@@ -219,13 +250,34 @@ namespace GUI
                         headerRange.Style.Font.Bold = true; // Make text bold
                     }
 
-                    var modifiedReports = revenueReportsForChart.Select(report => new
+                    // Headers Cost
+                    string[] arrColumnHeaderCost = { "Date", "Total Cost (VNĐ)" };
+                    ws.Cells["D6:E6"].LoadFromArrays(new List<string[]> { arrColumnHeaderCost });
+
+                    using (var headerRange = ws.Cells["D6:E6"])
+                    {
+                        headerRange.Style.HorizontalAlignment = ExcelHorizontalAlignment.Center; // Center align
+                        headerRange.Style.VerticalAlignment = ExcelVerticalAlignment.Center; // Center vertically
+                        headerRange.Style.Font.Bold = true; // Make text bold
+                    }
+
+                    // Load data revenue
+                    var modifiedRevenueReports = revenueReports.Select(report => new
                     {
                        date = report.Date,
                        chartTotalRevenue = report.TotalRevenue,
                     }).ToList();
 
-                    ws.Cells["A7"].LoadFromCollection(modifiedReports, false);
+                    // Load data cost
+                    var modifiedCostReports = importReports.Select(report => new
+                    {
+                        date = report.Date,
+                        chartTotalCost = report.TotalCost,
+                    }).ToList();
+
+                    ws.Cells["A7"].LoadFromCollection(modifiedRevenueReports, false);
+
+                    ws.Cells["D7"].LoadFromCollection(modifiedCostReports, false);
 
                     Byte[] bin = p.GetAsByteArray();
                     File.WriteAllBytes(filePath, bin);

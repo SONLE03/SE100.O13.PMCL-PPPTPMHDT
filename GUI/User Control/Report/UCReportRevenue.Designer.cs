@@ -31,13 +31,10 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnOK = new Guna.UI2.WinForms.Guna2Button();
-            this.chartTotalRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.gridRevenue = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.chartTotalCostAndRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnExportToExcel = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.cbType = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -46,8 +43,7 @@
             this.lbSd = new System.Windows.Forms.Label();
             this.lbEd = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.chartTotalRevenue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridRevenue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotalCostAndRevenue)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,13 +70,13 @@
             this.btnOK.Text = "Create report";
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
-            // chartTotalRevenue
+            // chartTotalCostAndRevenue
             // 
-            this.chartTotalRevenue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.chartTotalCostAndRevenue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.chartTotalRevenue.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            this.chartTotalRevenue.BorderlineColor = System.Drawing.Color.RosyBrown;
+            this.chartTotalCostAndRevenue.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            this.chartTotalCostAndRevenue.BorderlineColor = System.Drawing.Color.RosyBrown;
             chartArea1.AxisX.IsMarginVisible = false;
             chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.MidnightBlue;
             chartArea1.AxisX.LineColor = System.Drawing.Color.WhiteSmoke;
@@ -104,21 +100,20 @@
             chartArea1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
             chartArea1.BorderColor = System.Drawing.Color.WhiteSmoke;
             chartArea1.Name = "ChartArea1";
-            this.chartTotalRevenue.ChartAreas.Add(chartArea1);
+            this.chartTotalCostAndRevenue.ChartAreas.Add(chartArea1);
             legend1.BackColor = System.Drawing.Color.White;
             legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
             legend1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             legend1.ShadowColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            legend1.Title = "Revenue";
             legend1.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             legend1.TitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             legend1.TitleSeparatorColor = System.Drawing.Color.Bisque;
-            this.chartTotalRevenue.Legends.Add(legend1);
-            this.chartTotalRevenue.Location = new System.Drawing.Point(15, 12);
-            this.chartTotalRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.chartTotalRevenue.Name = "chartTotalRevenue";
+            this.chartTotalCostAndRevenue.Legends.Add(legend1);
+            this.chartTotalCostAndRevenue.Location = new System.Drawing.Point(15, 12);
+            this.chartTotalCostAndRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.chartTotalCostAndRevenue.Name = "chartTotalCostAndRevenue";
             series1.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(83)))), ((int)(((byte)(255)))));
             series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             series1.BorderWidth = 3;
@@ -128,77 +123,27 @@
             series1.LabelBackColor = System.Drawing.Color.Transparent;
             series1.LabelBorderColor = System.Drawing.Color.Transparent;
             series1.Legend = "Legend1";
-            series1.LegendText = "By date";
+            series1.LegendText = "Revenue";
             series1.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series1.Name = "Series1";
-            this.chartTotalRevenue.Series.Add(series1);
-            this.chartTotalRevenue.Size = new System.Drawing.Size(1188, 596);
-            this.chartTotalRevenue.TabIndex = 98;
-            this.chartTotalRevenue.Text = "chart2";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.LegendText = "Cost";
+            series2.MarkerColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            series2.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series2.Name = "Series2";
+            this.chartTotalCostAndRevenue.Series.Add(series1);
+            this.chartTotalCostAndRevenue.Series.Add(series2);
+            this.chartTotalCostAndRevenue.Size = new System.Drawing.Size(1188, 596);
+            this.chartTotalCostAndRevenue.TabIndex = 98;
+            this.chartTotalCostAndRevenue.Text = "chart2";
             title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
             title1.Font = new System.Drawing.Font("Segoe UI Semibold", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             title1.Name = "Title1";
-            title1.Text = "Total revenue";
-            this.chartTotalRevenue.Titles.Add(title1);
-            // 
-            // gridRevenue
-            // 
-            this.gridRevenue.AllowUserToAddRows = false;
-            this.gridRevenue.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.gridRevenue.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.gridRevenue.BackgroundColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.gridRevenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.gridRevenue.ColumnHeadersHeight = 4;
-            this.gridRevenue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.gridRevenue.DefaultCellStyle = dataGridViewCellStyle3;
-            this.gridRevenue.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridRevenue.Location = new System.Drawing.Point(1107, 111);
-            this.gridRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.gridRevenue.Name = "gridRevenue";
-            this.gridRevenue.ReadOnly = true;
-            this.gridRevenue.RowHeadersVisible = false;
-            this.gridRevenue.RowHeadersWidth = 51;
-            this.gridRevenue.RowTemplate.Height = 24;
-            this.gridRevenue.Size = new System.Drawing.Size(240, 150);
-            this.gridRevenue.TabIndex = 99;
-            this.gridRevenue.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridRevenue.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.gridRevenue.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.gridRevenue.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.gridRevenue.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.gridRevenue.ThemeStyle.BackColor = System.Drawing.Color.DimGray;
-            this.gridRevenue.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridRevenue.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gridRevenue.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.gridRevenue.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.gridRevenue.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.gridRevenue.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.gridRevenue.ThemeStyle.HeaderStyle.Height = 4;
-            this.gridRevenue.ThemeStyle.ReadOnly = true;
-            this.gridRevenue.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.gridRevenue.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.gridRevenue.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(254)));
-            this.gridRevenue.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridRevenue.ThemeStyle.RowsStyle.Height = 24;
-            this.gridRevenue.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.gridRevenue.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.gridRevenue.Visible = false;
+            title1.Text = "Total cost and revenue";
+            this.chartTotalCostAndRevenue.Titles.Add(title1);
             // 
             // btnExportToExcel
             // 
@@ -232,7 +177,7 @@
             this.guna2Panel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.guna2Panel1.BorderRadius = 20;
             this.guna2Panel1.BorderThickness = 2;
-            this.guna2Panel1.Controls.Add(this.chartTotalRevenue);
+            this.guna2Panel1.Controls.Add(this.chartTotalCostAndRevenue);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(60, 142);
             this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
@@ -305,9 +250,9 @@
             this.lbSd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.lbSd.Location = new System.Drawing.Point(281, 30);
             this.lbSd.Name = "lbSd";
-            this.lbSd.Size = new System.Drawing.Size(78, 20);
+            this.lbSd.Size = new System.Drawing.Size(56, 20);
             this.lbSd.TabIndex = 111;
-            this.lbSd.Text = "Start date";
+            this.lbSd.Text = "Month";
             // 
             // lbEd
             // 
@@ -317,9 +262,9 @@
             this.lbEd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.lbEd.Location = new System.Drawing.Point(477, 30);
             this.lbEd.Name = "lbEd";
-            this.lbEd.Size = new System.Drawing.Size(70, 20);
+            this.lbEd.Size = new System.Drawing.Size(39, 20);
             this.lbEd.TabIndex = 112;
-            this.lbEd.Text = "End date";
+            this.lbEd.Text = "Year";
             // 
             // label1
             // 
@@ -347,12 +292,10 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.btnExportToExcel);
             this.Controls.Add(this.btnOK);
-            this.Controls.Add(this.gridRevenue);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UCReportRevenue";
             this.Size = new System.Drawing.Size(1347, 806);
-            ((System.ComponentModel.ISupportInitialize)(this.chartTotalRevenue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridRevenue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartTotalCostAndRevenue)).EndInit();
             this.guna2Panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -362,8 +305,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Button btnOK;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartTotalRevenue;
-        private Guna.UI2.WinForms.Guna2DataGridView gridRevenue;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartTotalCostAndRevenue;
         private Guna.UI2.WinForms.Guna2Button btnExportToExcel;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ComboBox cbType;

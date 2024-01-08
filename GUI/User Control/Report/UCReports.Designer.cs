@@ -49,16 +49,16 @@
             this.btnRevenue.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnRevenue.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnRevenue.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnRevenue.Location = new System.Drawing.Point(421, 32);
+            this.btnRevenue.Location = new System.Drawing.Point(306, 32);
             this.btnRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRevenue.Name = "btnRevenue";
             this.btnRevenue.ShadowDecoration.BorderRadius = 15;
             this.btnRevenue.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnRevenue.ShadowDecoration.Enabled = true;
             this.btnRevenue.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnRevenue.Size = new System.Drawing.Size(205, 49);
+            this.btnRevenue.Size = new System.Drawing.Size(320, 49);
             this.btnRevenue.TabIndex = 40;
-            this.btnRevenue.Text = "Revenue Report";
+            this.btnRevenue.Text = "Revenue And Cost Report";
             this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
             // btnDrink
@@ -78,14 +78,14 @@
             this.btnDrink.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnDrink.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnDrink.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnDrink.Location = new System.Drawing.Point(905, 32);
+            this.btnDrink.Location = new System.Drawing.Point(854, 32);
             this.btnDrink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDrink.Name = "btnDrink";
             this.btnDrink.ShadowDecoration.BorderRadius = 15;
             this.btnDrink.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnDrink.ShadowDecoration.Enabled = true;
             this.btnDrink.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnDrink.Size = new System.Drawing.Size(205, 49);
+            this.btnDrink.Size = new System.Drawing.Size(320, 49);
             this.btnDrink.TabIndex = 41;
             this.btnDrink.Text = "Drink Report";
             this.btnDrink.Click += new System.EventHandler(this.btnDrink_Click);
@@ -111,7 +111,7 @@
             this.Controls.Add(this.btnDrink);
             this.Controls.Add(this.btnRevenue);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCReports";
             this.Size = new System.Drawing.Size(1499, 985);
             this.ResumeLayout(false);
