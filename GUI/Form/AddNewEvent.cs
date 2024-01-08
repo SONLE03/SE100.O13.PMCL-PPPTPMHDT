@@ -21,6 +21,8 @@ namespace GUI
         public AddNewEvent()
         {
             InitializeComponent();
+            dtpStartDate.Value = DateTime.Now;
+            dtpEndDate.Value = DateTime.Now;    
             getCategory();
             addEventForCheckBox();
         }

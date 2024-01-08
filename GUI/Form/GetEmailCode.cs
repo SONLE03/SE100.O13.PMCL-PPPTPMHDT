@@ -53,7 +53,7 @@ namespace GUI
                 if (SendEmail(user.Email, OTP) == true)
                 {
                     EnterCode enterCode = new EnterCode(user, OTP);
-                    enterCode.Show();
+                    enterCode.ShowDialog();
                     this.Hide();
                 }
                 else
@@ -63,15 +63,15 @@ namespace GUI
             }
             else
             {
-                MessageBox.Show("You must enter your username");
+                MessageBox.Show("You must enter your username and email");
             }
 
         }
 
         private bool SendEmail(string toEmail, object otp)
         {
-            string fromEmail = "phamduythong600@gmail.com";
-            string password = "byhk ahxe yymz stwg";
+            string fromEmail = "sonle102003@gmail.com";
+            string password = "ykzqjdquybpdbzkt";
 
             SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
             {
@@ -97,7 +97,6 @@ namespace GUI
         private void link_Back_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-
             Login login = new Login();
             login.Show();
         }
