@@ -300,6 +300,12 @@
     <Compile Include="Form\TableDetails.Designer.cs">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="User Control\UCWelcome.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\UCWelcome.Designer.cs">
+      <DependentUpon>UCWelcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="User Control\Report\UCReportDrink.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -580,6 +586,9 @@
     <EmbeddedResource Include="Form\TableDetails.resx">
       <DependentUpon>TableDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="User Control\UCWelcome.resx">
+      <DependentUpon>UCWelcome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="User Control\Report\UCReportDrink.resx">
       <DependentUpon>UCReportDrink.cs</DependentUpon>
     </EmbeddedResource>
@@ -834,6 +843,7 @@
     <None Include="Resources\Engman.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\whitebox.png" />
     <None Include="Resources\sale.png" />
     <None Include="Resources\schedule.png" />
     <None Include="Resources\printer.png" />

@@ -57,7 +57,7 @@
             this.panel_areacode.Controls.Add(this.lbAreaID);
             this.panel_areacode.FillColor = System.Drawing.Color.White;
             this.panel_areacode.Location = new System.Drawing.Point(54, 92);
-            this.panel_areacode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_areacode.Margin = new System.Windows.Forms.Padding(2);
             this.panel_areacode.Name = "panel_areacode";
             this.panel_areacode.Size = new System.Drawing.Size(318, 40);
             this.panel_areacode.TabIndex = 79;
@@ -87,7 +87,7 @@
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox3.Location = new System.Drawing.Point(344, 8);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 78;
@@ -103,7 +103,7 @@
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox1.Location = new System.Drawing.Point(376, 8);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 77;
@@ -124,14 +124,14 @@
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_Cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_Cancel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_Cancel.Location = new System.Drawing.Point(95, 405);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancel.Location = new System.Drawing.Point(80, 405);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.ShadowDecoration.BorderRadius = 15;
             this.btn_Cancel.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
             this.btn_Cancel.ShadowDecoration.Enabled = true;
             this.btn_Cancel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Cancel.Size = new System.Drawing.Size(80, 35);
+            this.btn_Cancel.Size = new System.Drawing.Size(100, 35);
             this.btn_Cancel.TabIndex = 76;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -153,13 +153,13 @@
             this.btn_OK.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_OK.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_OK.Location = new System.Drawing.Point(247, 405);
-            this.btn_OK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_OK.Margin = new System.Windows.Forms.Padding(2);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.ShadowDecoration.BorderRadius = 15;
             this.btn_OK.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
             this.btn_OK.ShadowDecoration.Enabled = true;
             this.btn_OK.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_OK.Size = new System.Drawing.Size(80, 35);
+            this.btn_OK.Size = new System.Drawing.Size(100, 35);
             this.btn_OK.TabIndex = 75;
             this.btn_OK.Text = "OK";
             this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
@@ -267,7 +267,7 @@
             "Active",
             "InActive"});
             this.cbStatus.Location = new System.Drawing.Point(54, 331);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(318, 40);
             this.cbStatus.TabIndex = 83;
@@ -334,7 +334,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditArea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditArea";

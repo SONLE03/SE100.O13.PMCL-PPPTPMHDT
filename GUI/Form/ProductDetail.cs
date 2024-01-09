@@ -46,5 +46,10 @@ namespace GUI
             }
            
         }
+
+        private void btn_OK_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

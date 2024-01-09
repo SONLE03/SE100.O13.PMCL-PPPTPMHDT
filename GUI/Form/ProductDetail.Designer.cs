@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetail));
-            this.btn_Edit = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btn_OK = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -66,33 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SizeGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // btn_Edit
-            // 
-            this.btn_Edit.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Edit.BorderRadius = 15;
-            this.btn_Edit.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Edit.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_Edit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Edit.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_Edit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_Edit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btn_Edit.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btn_Edit.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Edit.ForeColor = System.Drawing.Color.White;
-            this.btn_Edit.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_Edit.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_Edit.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_Edit.Location = new System.Drawing.Point(420, 529);
-            this.btn_Edit.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_Edit.Name = "btn_Edit";
-            this.btn_Edit.ShadowDecoration.BorderRadius = 15;
-            this.btn_Edit.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
-            this.btn_Edit.ShadowDecoration.Enabled = true;
-            this.btn_Edit.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Edit.Size = new System.Drawing.Size(110, 35);
-            this.btn_Edit.TabIndex = 46;
-            this.btn_Edit.Text = "Edit";
-            // 
             // btn_OK
             // 
             this.btn_OK.BackColor = System.Drawing.Color.Transparent;
@@ -109,16 +81,17 @@
             this.btn_OK.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_OK.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_OK.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_OK.Location = new System.Drawing.Point(186, 529);
+            this.btn_OK.Location = new System.Drawing.Point(279, 527);
             this.btn_OK.Margin = new System.Windows.Forms.Padding(2);
             this.btn_OK.Name = "btn_OK";
             this.btn_OK.ShadowDecoration.BorderRadius = 15;
             this.btn_OK.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
             this.btn_OK.ShadowDecoration.Enabled = true;
             this.btn_OK.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_OK.Size = new System.Drawing.Size(110, 35);
+            this.btn_OK.Size = new System.Drawing.Size(145, 35);
             this.btn_OK.TabIndex = 45;
-            this.btn_OK.Text = "OK";
+            this.btn_OK.Text = "Close";
+            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
             // 
             // label4
             // 
@@ -465,7 +438,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel_unit);
             this.Controls.Add(this.panel_productname);
-            this.Controls.Add(this.btn_Edit);
             this.Controls.Add(this.btn_OK);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -494,8 +466,6 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2GradientButton btn_Edit;
         private Guna.UI2.WinForms.Guna2GradientButton btn_OK;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;

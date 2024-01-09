@@ -58,14 +58,14 @@
             this.btnProductList.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
             this.btnProductList.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProductList.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnProductList.Location = new System.Drawing.Point(275, 33);
-            this.btnProductList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnProductList.Location = new System.Drawing.Point(206, 27);
+            this.btnProductList.Margin = new System.Windows.Forms.Padding(2);
             this.btnProductList.Name = "btnProductList";
             this.btnProductList.ShadowDecoration.BorderRadius = 15;
             this.btnProductList.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnProductList.ShadowDecoration.Enabled = true;
             this.btnProductList.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnProductList.Size = new System.Drawing.Size(180, 46);
+            this.btnProductList.Size = new System.Drawing.Size(150, 40);
             this.btnProductList.TabIndex = 33;
             this.btnProductList.Text = "Product list";
             this.btnProductList.Click += new System.EventHandler(this.btnProductList_Click);
@@ -95,14 +95,14 @@
             this.btnCategory.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
             this.btnCategory.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCategory.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCategory.Location = new System.Drawing.Point(1049, 33);
-            this.btnCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCategory.Location = new System.Drawing.Point(787, 26);
+            this.btnCategory.Margin = new System.Windows.Forms.Padding(2);
             this.btnCategory.Name = "btnCategory";
             this.btnCategory.ShadowDecoration.BorderRadius = 15;
             this.btnCategory.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnCategory.ShadowDecoration.Enabled = true;
             this.btnCategory.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnCategory.Size = new System.Drawing.Size(180, 46);
+            this.btnCategory.Size = new System.Drawing.Size(150, 40);
             this.btnCategory.TabIndex = 34;
             this.btnCategory.Text = "Category";
             this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
@@ -111,7 +111,7 @@
             // 
             this.pictureBox4.Image = global::GUI.Properties.Resources.raucu;
             this.pictureBox4.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(0, 0);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -141,14 +141,14 @@
             this.btnSize.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
             this.btnSize.HoverState.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSize.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSize.Location = new System.Drawing.Point(664, 33);
-            this.btnSize.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSize.Location = new System.Drawing.Point(498, 27);
+            this.btnSize.Margin = new System.Windows.Forms.Padding(2);
             this.btnSize.Name = "btnSize";
             this.btnSize.ShadowDecoration.BorderRadius = 15;
             this.btnSize.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnSize.ShadowDecoration.Enabled = true;
             this.btnSize.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnSize.Size = new System.Drawing.Size(180, 46);
+            this.btnSize.Size = new System.Drawing.Size(150, 40);
             this.btnSize.TabIndex = 35;
             this.btnSize.Text = "Size list";
             this.btnSize.Click += new System.EventHandler(this.btnSize_Click);
@@ -158,15 +158,24 @@
             this.PanelDisplayTabs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelDisplayTabs.Location = new System.Drawing.Point(71, 112);
+            this.PanelDisplayTabs.BackColor = System.Drawing.Color.Transparent;
+            this.PanelDisplayTabs.BorderColor = System.Drawing.Color.Silver;
+            this.PanelDisplayTabs.BorderRadius = 35;
+            this.PanelDisplayTabs.BorderThickness = 1;
+            this.PanelDisplayTabs.Location = new System.Drawing.Point(58, 92);
+            this.PanelDisplayTabs.Margin = new System.Windows.Forms.Padding(2);
             this.PanelDisplayTabs.Name = "PanelDisplayTabs";
-            this.PanelDisplayTabs.Size = new System.Drawing.Size(1356, 818);
+            this.PanelDisplayTabs.ShadowDecoration.BorderRadius = 35;
+            this.PanelDisplayTabs.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.PanelDisplayTabs.ShadowDecoration.Enabled = true;
+            this.PanelDisplayTabs.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 5, 15, 15);
+            this.PanelDisplayTabs.Size = new System.Drawing.Size(1017, 665);
             this.PanelDisplayTabs.TabIndex = 36;
             this.PanelDisplayTabs.Text = "guna2ContainerControl1";
             // 
             // UCProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -176,9 +185,9 @@
             this.Controls.Add(this.btnProductList);
             this.Controls.Add(this.pictureBox4);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UCProducts";
-            this.Size = new System.Drawing.Size(1499, 985);
+            this.Size = new System.Drawing.Size(1124, 800);
             this.Load += new System.EventHandler(this.UCProducts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);

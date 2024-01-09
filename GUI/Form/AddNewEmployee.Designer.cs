@@ -210,7 +210,7 @@
             this.panel_areacode.Controls.Add(this.lbEmployeeID);
             this.panel_areacode.FillColor = System.Drawing.Color.White;
             this.panel_areacode.Location = new System.Drawing.Point(380, 96);
-            this.panel_areacode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_areacode.Margin = new System.Windows.Forms.Padding(2);
             this.panel_areacode.Name = "panel_areacode";
             this.panel_areacode.Size = new System.Drawing.Size(305, 38);
             this.panel_areacode.TabIndex = 84;
@@ -240,7 +240,7 @@
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox3.Location = new System.Drawing.Point(647, 14);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 82;
@@ -256,7 +256,7 @@
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox1.Location = new System.Drawing.Point(681, 14);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 81;
@@ -330,7 +330,7 @@
             this.avatar.Image = global::GUI.Properties.Resources.Avatar;
             this.avatar.ImageRotate = 0F;
             this.avatar.Location = new System.Drawing.Point(47, 80);
-            this.avatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.avatar.Margin = new System.Windows.Forms.Padding(2);
             this.avatar.Name = "avatar";
             this.avatar.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(10);
             this.avatar.Size = new System.Drawing.Size(267, 271);
@@ -361,7 +361,7 @@
             this.DateOfBirth.ForeColor = System.Drawing.Color.White;
             this.DateOfBirth.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.DateOfBirth.Location = new System.Drawing.Point(380, 442);
-            this.DateOfBirth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DateOfBirth.Margin = new System.Windows.Forms.Padding(2);
             this.DateOfBirth.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.DateOfBirth.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.DateOfBirth.Name = "DateOfBirth";
@@ -386,7 +386,7 @@
             this.guna2Panel1.Controls.Add(this.label11);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(47, 500);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(639, 167);
             this.guna2Panel1.TabIndex = 99;
@@ -406,7 +406,7 @@
             this.combobox_usergroup.ForeColor = System.Drawing.Color.White;
             this.combobox_usergroup.ItemHeight = 30;
             this.combobox_usergroup.Location = new System.Drawing.Point(368, 47);
-            this.combobox_usergroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combobox_usergroup.Margin = new System.Windows.Forms.Padding(2);
             this.combobox_usergroup.Name = "combobox_usergroup";
             this.combobox_usergroup.Size = new System.Drawing.Size(250, 36);
             this.combobox_usergroup.TabIndex = 88;
@@ -570,14 +570,14 @@
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_Cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_Cancel.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_Cancel.Location = new System.Drawing.Point(174, 690);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancel.Location = new System.Drawing.Point(181, 690);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.ShadowDecoration.BorderRadius = 15;
             this.btn_Cancel.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
             this.btn_Cancel.ShadowDecoration.Enabled = true;
             this.btn_Cancel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Cancel.Size = new System.Drawing.Size(130, 36);
+            this.btn_Cancel.Size = new System.Drawing.Size(100, 38);
             this.btn_Cancel.TabIndex = 101;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -598,14 +598,14 @@
             this.btn_Add.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_Add.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_Add.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_Add.Location = new System.Drawing.Point(447, 690);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Add.Location = new System.Drawing.Point(454, 690);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.ShadowDecoration.BorderRadius = 15;
             this.btn_Add.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
             this.btn_Add.ShadowDecoration.Enabled = true;
             this.btn_Add.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Add.Size = new System.Drawing.Size(130, 36);
+            this.btn_Add.Size = new System.Drawing.Size(100, 38);
             this.btn_Add.TabIndex = 100;
             this.btn_Add.Text = "Add";
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -627,7 +627,7 @@
             this.btnAddAvatar.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btnAddAvatar.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btnAddAvatar.Location = new System.Drawing.Point(126, 368);
-            this.btnAddAvatar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAddAvatar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAddAvatar.Name = "btnAddAvatar";
             this.btnAddAvatar.ShadowDecoration.BorderRadius = 15;
             this.btnAddAvatar.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
@@ -656,7 +656,7 @@
             "Active",
             "InActive"});
             this.cbStatus.Location = new System.Drawing.Point(126, 444);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(186, 36);
             this.cbStatus.TabIndex = 89;
@@ -707,7 +707,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddNewEmployee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddNewEmployee";

@@ -171,7 +171,7 @@
             this.bthCancel.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.bthCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
             this.bthCancel.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.bthCancel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.bthCancel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.bthCancel.ForeColor = System.Drawing.Color.White;
             this.bthCancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.bthCancel.Location = new System.Drawing.Point(114, 402);
@@ -179,7 +179,7 @@
             this.bthCancel.Name = "bthCancel";
             this.bthCancel.Size = new System.Drawing.Size(162, 36);
             this.bthCancel.TabIndex = 136;
-            this.bthCancel.Text = "Cancel";
+            this.bthCancel.Text = "Close";
             this.bthCancel.Click += new System.EventHandler(this.bthCancel_Click);
             // 
             // guna2ControlBox3

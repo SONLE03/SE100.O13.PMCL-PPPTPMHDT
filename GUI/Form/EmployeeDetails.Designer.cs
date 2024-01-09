@@ -519,7 +519,7 @@
             this.btn_Cancel.ShadowDecoration.Enabled = true;
             this.btn_Cancel.Size = new System.Drawing.Size(165, 36);
             this.btn_Cancel.TabIndex = 79;
-            this.btn_Cancel.Text = "Cancel";
+            this.btn_Cancel.Text = "Close";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
             // 
             // EmployeeDetails
