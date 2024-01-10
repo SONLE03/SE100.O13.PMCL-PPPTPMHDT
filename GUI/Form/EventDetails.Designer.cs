@@ -191,13 +191,13 @@
             this.bthClose.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.bthClose.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
             this.bthClose.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.bthClose.Font = new System.Drawing.Font("Segoe UI", 9.5F, System.Drawing.FontStyle.Bold);
+            this.bthClose.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.bthClose.ForeColor = System.Drawing.Color.White;
             this.bthClose.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.bthClose.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.bthClose.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.bthClose.Location = new System.Drawing.Point(185, 541);
-            this.bthClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bthClose.Margin = new System.Windows.Forms.Padding(2);
             this.bthClose.Name = "bthClose";
             this.bthClose.ShadowDecoration.BorderRadius = 15;
             this.bthClose.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
@@ -304,7 +304,7 @@
             this.panelEventID.Controls.Add(this.lbEventID);
             this.panelEventID.FillColor = System.Drawing.Color.White;
             this.panelEventID.Location = new System.Drawing.Point(39, 82);
-            this.panelEventID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelEventID.Margin = new System.Windows.Forms.Padding(2);
             this.panelEventID.Name = "panelEventID";
             this.panelEventID.Size = new System.Drawing.Size(240, 40);
             this.panelEventID.TabIndex = 114;
@@ -344,7 +344,7 @@
             this.panelEventName.Controls.Add(this.lbEventName);
             this.panelEventName.FillColor = System.Drawing.Color.White;
             this.panelEventName.Location = new System.Drawing.Point(315, 82);
-            this.panelEventName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelEventName.Margin = new System.Windows.Forms.Padding(2);
             this.panelEventName.Name = "panelEventName";
             this.panelEventName.Size = new System.Drawing.Size(248, 40);
             this.panelEventName.TabIndex = 137;
@@ -371,7 +371,7 @@
             this.panelUnit.Controls.Add(this.lbValue);
             this.panelUnit.FillColor = System.Drawing.Color.White;
             this.panelUnit.Location = new System.Drawing.Point(321, 234);
-            this.panelUnit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelUnit.Margin = new System.Windows.Forms.Padding(2);
             this.panelUnit.Name = "panelUnit";
             this.panelUnit.Size = new System.Drawing.Size(242, 40);
             this.panelUnit.TabIndex = 138;
@@ -411,7 +411,7 @@
             this.guna2Panel1.Controls.Add(this.lbStartdate);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(105, 155);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(174, 40);
             this.guna2Panel1.TabIndex = 140;
@@ -438,7 +438,7 @@
             this.guna2Panel3.Controls.Add(this.lbEndDate);
             this.guna2Panel3.FillColor = System.Drawing.Color.White;
             this.guna2Panel3.Location = new System.Drawing.Point(382, 155);
-            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.Size = new System.Drawing.Size(181, 40);
             this.guna2Panel3.TabIndex = 141;
@@ -481,7 +481,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EventDetails";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EventDetails";

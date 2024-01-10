@@ -60,7 +60,7 @@
             this.guna2ControlBox3.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox3.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox3.Location = new System.Drawing.Point(310, 10);
-            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox3.Name = "guna2ControlBox3";
             this.guna2ControlBox3.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox3.TabIndex = 66;
@@ -76,7 +76,7 @@
             this.guna2ControlBox1.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2ControlBox1.IconColor = System.Drawing.Color.Brown;
             this.guna2ControlBox1.Location = new System.Drawing.Point(342, 10);
-            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.guna2ControlBox1.Margin = new System.Windows.Forms.Padding(2);
             this.guna2ControlBox1.Name = "guna2ControlBox1";
             this.guna2ControlBox1.Size = new System.Drawing.Size(34, 24);
             this.guna2ControlBox1.TabIndex = 65;
@@ -97,14 +97,14 @@
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_Cancel.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_Cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_Cancel.Location = new System.Drawing.Point(62, 411);
-            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Cancel.Location = new System.Drawing.Point(52, 410);
+            this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.ShadowDecoration.BorderRadius = 15;
             this.btn_Cancel.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.btn_Cancel.ShadowDecoration.Enabled = true;
             this.btn_Cancel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Cancel.Size = new System.Drawing.Size(100, 36);
+            this.btn_Cancel.Size = new System.Drawing.Size(100, 38);
             this.btn_Cancel.TabIndex = 64;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -125,14 +125,14 @@
             this.btn_Add.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_Add.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_Add.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_Add.Location = new System.Drawing.Point(225, 411);
-            this.btn_Add.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btn_Add.Location = new System.Drawing.Point(227, 410);
+            this.btn_Add.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Add.Name = "btn_Add";
             this.btn_Add.ShadowDecoration.BorderRadius = 15;
             this.btn_Add.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.btn_Add.ShadowDecoration.Enabled = true;
             this.btn_Add.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Add.Size = new System.Drawing.Size(100, 36);
+            this.btn_Add.Size = new System.Drawing.Size(100, 38);
             this.btn_Add.TabIndex = 63;
             this.btn_Add.Text = "Add";
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -197,7 +197,7 @@
             this.panel_areacode.Controls.Add(this.lbAreaID);
             this.panel_areacode.FillColor = System.Drawing.Color.White;
             this.panel_areacode.Location = new System.Drawing.Point(44, 83);
-            this.panel_areacode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel_areacode.Margin = new System.Windows.Forms.Padding(2);
             this.panel_areacode.Name = "panel_areacode";
             this.panel_areacode.Size = new System.Drawing.Size(301, 40);
             this.panel_areacode.TabIndex = 67;
@@ -268,7 +268,7 @@
             "Active",
             "InActive"});
             this.cbStatus.Location = new System.Drawing.Point(43, 332);
-            this.cbStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbStatus.Margin = new System.Windows.Forms.Padding(2);
             this.cbStatus.Name = "cbStatus";
             this.cbStatus.Size = new System.Drawing.Size(301, 41);
             this.cbStatus.TabIndex = 71;
@@ -336,7 +336,7 @@
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddArea";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddArea";

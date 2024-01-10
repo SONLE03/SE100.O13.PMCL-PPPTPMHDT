@@ -122,7 +122,7 @@
             this.btn_Add.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.btn_Add.ShadowDecoration.Enabled = true;
             this.btn_Add.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Add.Size = new System.Drawing.Size(90, 33);
+            this.btn_Add.Size = new System.Drawing.Size(90, 35);
             this.btn_Add.TabIndex = 46;
             this.btn_Add.Text = "Add";
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);
@@ -150,7 +150,7 @@
             this.btn_Cancel.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.btn_Cancel.ShadowDecoration.Enabled = true;
             this.btn_Cancel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Cancel.Size = new System.Drawing.Size(90, 33);
+            this.btn_Cancel.Size = new System.Drawing.Size(90, 35);
             this.btn_Cancel.TabIndex = 47;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);

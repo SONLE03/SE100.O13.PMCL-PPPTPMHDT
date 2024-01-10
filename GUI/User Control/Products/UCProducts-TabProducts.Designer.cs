@@ -32,13 +32,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cbStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.PictureBox();
             this.btnAddProduct = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label4 = new System.Windows.Forms.Label();
             this.combobox_category = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.flowLayoutPanel = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnSearch = new System.Windows.Forms.PictureBox();
             this.PanelProductlist.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +51,6 @@
             this.PanelProductlist.BackColor = System.Drawing.Color.Transparent;
             this.PanelProductlist.BorderColor = System.Drawing.Color.DarkGray;
             this.PanelProductlist.BorderRadius = 40;
-            this.PanelProductlist.BorderThickness = 1;
             this.PanelProductlist.Controls.Add(this.label1);
             this.PanelProductlist.Controls.Add(this.cbStatus);
             this.PanelProductlist.Controls.Add(this.panel2);
@@ -62,6 +61,10 @@
             this.PanelProductlist.Controls.Add(this.panel1);
             this.PanelProductlist.Controls.Add(this.txtSearch);
             this.PanelProductlist.Controls.Add(this.flowLayoutPanel);
+            this.PanelProductlist.FillColor = System.Drawing.Color.Transparent;
+            this.PanelProductlist.FillColor2 = System.Drawing.Color.Transparent;
+            this.PanelProductlist.FillColor3 = System.Drawing.Color.Transparent;
+            this.PanelProductlist.FillColor4 = System.Drawing.Color.Transparent;
             this.PanelProductlist.Location = new System.Drawing.Point(0, 2);
             this.PanelProductlist.Margin = new System.Windows.Forms.Padding(2);
             this.PanelProductlist.Name = "PanelProductlist";
@@ -113,6 +116,17 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(5, 36);
             this.panel2.TabIndex = 56;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::GUI.Properties.Resources.searches;
+            this.btnSearch.Location = new System.Drawing.Point(301, 37);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(32, 32);
+            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSearch.TabIndex = 49;
+            this.btnSearch.TabStop = false;
             // 
             // btnAddProduct
             // 
@@ -222,17 +236,6 @@
             this.flowLayoutPanel.Name = "flowLayoutPanel";
             this.flowLayoutPanel.Size = new System.Drawing.Size(935, 475);
             this.flowLayoutPanel.TabIndex = 33;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.BackColor = System.Drawing.Color.White;
-            this.btnSearch.Image = global::GUI.Properties.Resources.searches;
-            this.btnSearch.Location = new System.Drawing.Point(301, 37);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(32, 32);
-            this.btnSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSearch.TabIndex = 49;
-            this.btnSearch.TabStop = false;
             // 
             // UCProducts_TabProducts
             // 

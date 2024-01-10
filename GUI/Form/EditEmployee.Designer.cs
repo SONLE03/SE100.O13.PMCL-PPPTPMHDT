@@ -89,7 +89,7 @@
             this.btn_Update.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
             this.btn_Update.ShadowDecoration.Enabled = true;
             this.btn_Update.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Update.Size = new System.Drawing.Size(115, 39);
+            this.btn_Update.Size = new System.Drawing.Size(100, 38);
             this.btn_Update.TabIndex = 125;
             this.btn_Update.Text = "Update";
             this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
@@ -545,7 +545,7 @@
             this.btn_Cancel.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
             this.btn_Cancel.ShadowDecoration.Enabled = true;
             this.btn_Cancel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Cancel.Size = new System.Drawing.Size(115, 39);
+            this.btn_Cancel.Size = new System.Drawing.Size(100, 38);
             this.btn_Cancel.TabIndex = 126;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);

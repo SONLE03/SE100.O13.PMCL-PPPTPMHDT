@@ -213,10 +213,10 @@ namespace GUI
 
         private void HomeManager_Load(object sender, EventArgs e)
         {
-            //ucHome = new UCHome();
-            //ucHome.Dock = DockStyle.Fill;
-            //this.TabUC.Controls.Clear();
-            //this.TabUC.Controls.Add(ucHome);
+            ucWelcome = new UCWelcome();
+            ucWelcome.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucWelcome);
         }
 
         private void Report_Click(object sender, EventArgs e)
@@ -231,6 +231,14 @@ namespace GUI
             {
                Environment.Exit(0);
             }
+        }
+
+        private void guna2CirclePictureBox1_Click(object sender, EventArgs e)
+        {
+            ucWelcome = new UCWelcome();
+            ucWelcome.Dock = DockStyle.Fill;
+            this.TabUC.Controls.Clear();
+            this.TabUC.Controls.Add(ucWelcome);
         }
     }
 }

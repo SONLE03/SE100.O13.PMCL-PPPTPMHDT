@@ -101,14 +101,14 @@
             this.btn_Cancel.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btn_Cancel.HoverState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
             this.btn_Cancel.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_Cancel.Location = new System.Drawing.Point(79, 261);
+            this.btn_Cancel.Location = new System.Drawing.Point(71, 261);
             this.btn_Cancel.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.ShadowDecoration.BorderRadius = 15;
             this.btn_Cancel.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.btn_Cancel.ShadowDecoration.Enabled = true;
             this.btn_Cancel.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Cancel.Size = new System.Drawing.Size(90, 37);
+            this.btn_Cancel.Size = new System.Drawing.Size(100, 38);
             this.btn_Cancel.TabIndex = 64;
             this.btn_Cancel.Text = "Cancel";
             this.btn_Cancel.Click += new System.EventHandler(this.btn_Cancel_Click);
@@ -136,7 +136,7 @@
             this.btn_Add.ShadowDecoration.Color = System.Drawing.Color.Gray;
             this.btn_Add.ShadowDecoration.Enabled = true;
             this.btn_Add.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_Add.Size = new System.Drawing.Size(90, 37);
+            this.btn_Add.Size = new System.Drawing.Size(100, 38);
             this.btn_Add.TabIndex = 63;
             this.btn_Add.Text = "Add";
             this.btn_Add.Click += new System.EventHandler(this.btn_Add_Click);

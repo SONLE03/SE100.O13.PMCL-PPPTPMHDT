@@ -49,14 +49,14 @@
             this.btnRevenue.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnRevenue.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnRevenue.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnRevenue.Location = new System.Drawing.Point(306, 32);
-            this.btnRevenue.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRevenue.Location = new System.Drawing.Point(251, 26);
+            this.btnRevenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRevenue.Name = "btnRevenue";
             this.btnRevenue.ShadowDecoration.BorderRadius = 15;
             this.btnRevenue.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnRevenue.ShadowDecoration.Enabled = true;
             this.btnRevenue.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnRevenue.Size = new System.Drawing.Size(320, 49);
+            this.btnRevenue.Size = new System.Drawing.Size(219, 40);
             this.btnRevenue.TabIndex = 40;
             this.btnRevenue.Text = "Revenue And Cost Report";
             this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
@@ -78,14 +78,14 @@
             this.btnDrink.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnDrink.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnDrink.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnDrink.Location = new System.Drawing.Point(854, 32);
-            this.btnDrink.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDrink.Location = new System.Drawing.Point(675, 26);
+            this.btnDrink.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDrink.Name = "btnDrink";
             this.btnDrink.ShadowDecoration.BorderRadius = 15;
             this.btnDrink.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnDrink.ShadowDecoration.Enabled = true;
             this.btnDrink.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnDrink.Size = new System.Drawing.Size(320, 49);
+            this.btnDrink.Size = new System.Drawing.Size(215, 40);
             this.btnDrink.TabIndex = 41;
             this.btnDrink.Text = "Drink Report";
             this.btnDrink.Click += new System.EventHandler(this.btnDrink_Click);
@@ -95,15 +95,24 @@
             this.PanelImport.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelImport.Location = new System.Drawing.Point(77, 121);
+            this.PanelImport.BackColor = System.Drawing.Color.Transparent;
+            this.PanelImport.BorderColor = System.Drawing.Color.Silver;
+            this.PanelImport.BorderRadius = 35;
+            this.PanelImport.BorderThickness = 1;
+            this.PanelImport.Location = new System.Drawing.Point(58, 98);
+            this.PanelImport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PanelImport.Name = "PanelImport";
-            this.PanelImport.Size = new System.Drawing.Size(1347, 806);
+            this.PanelImport.ShadowDecoration.BorderRadius = 35;
+            this.PanelImport.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.PanelImport.ShadowDecoration.Enabled = true;
+            this.PanelImport.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 5, 15, 15);
+            this.PanelImport.Size = new System.Drawing.Size(1010, 655);
             this.PanelImport.TabIndex = 42;
             this.PanelImport.Text = "guna2ContainerControl1";
             // 
             // UCReports
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -111,9 +120,8 @@
             this.Controls.Add(this.btnDrink);
             this.Controls.Add(this.btnRevenue);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCReports";
-            this.Size = new System.Drawing.Size(1499, 985);
+            this.Size = new System.Drawing.Size(1124, 800);
             this.ResumeLayout(false);
 
         }

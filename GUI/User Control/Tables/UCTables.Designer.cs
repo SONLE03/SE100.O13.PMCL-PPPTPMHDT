@@ -50,14 +50,14 @@
             this.btnArea.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnArea.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnArea.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnArea.Location = new System.Drawing.Point(908, 36);
-            this.btnArea.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnArea.Location = new System.Drawing.Point(681, 29);
+            this.btnArea.Margin = new System.Windows.Forms.Padding(2);
             this.btnArea.Name = "btnArea";
             this.btnArea.ShadowDecoration.BorderRadius = 15;
             this.btnArea.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnArea.ShadowDecoration.Enabled = true;
             this.btnArea.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnArea.Size = new System.Drawing.Size(156, 50);
+            this.btnArea.Size = new System.Drawing.Size(135, 40);
             this.btnArea.TabIndex = 36;
             this.btnArea.Text = "Area";
             this.btnArea.Click += new System.EventHandler(this.btnArea_Click);
@@ -78,14 +78,14 @@
             this.btnTable.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.btnTable.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
             this.btnTable.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(81)))), ((int)(((byte)(26)))));
-            this.btnTable.Location = new System.Drawing.Point(424, 36);
-            this.btnTable.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnTable.Location = new System.Drawing.Point(318, 29);
+            this.btnTable.Margin = new System.Windows.Forms.Padding(2);
             this.btnTable.Name = "btnTable";
             this.btnTable.ShadowDecoration.BorderRadius = 15;
             this.btnTable.ShadowDecoration.Color = System.Drawing.Color.Silver;
             this.btnTable.ShadowDecoration.Enabled = true;
             this.btnTable.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 8, 8);
-            this.btnTable.Size = new System.Drawing.Size(172, 50);
+            this.btnTable.Size = new System.Drawing.Size(135, 40);
             this.btnTable.TabIndex = 35;
             this.btnTable.Text = "Tables";
             this.btnTable.Click += new System.EventHandler(this.btnTable_Click);
@@ -95,15 +95,24 @@
             this.PanelTables.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.PanelTables.Location = new System.Drawing.Point(77, 122);
+            this.PanelTables.BackColor = System.Drawing.Color.Transparent;
+            this.PanelTables.BorderColor = System.Drawing.Color.Silver;
+            this.PanelTables.BorderRadius = 35;
+            this.PanelTables.BorderThickness = 1;
+            this.PanelTables.Location = new System.Drawing.Point(58, 99);
+            this.PanelTables.Margin = new System.Windows.Forms.Padding(2);
             this.PanelTables.Name = "PanelTables";
-            this.PanelTables.Size = new System.Drawing.Size(1347, 806);
+            this.PanelTables.ShadowDecoration.BorderRadius = 35;
+            this.PanelTables.ShadowDecoration.Color = System.Drawing.Color.Silver;
+            this.PanelTables.ShadowDecoration.Enabled = true;
+            this.PanelTables.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(5, 5, 15, 15);
+            this.PanelTables.Size = new System.Drawing.Size(1010, 655);
             this.PanelTables.TabIndex = 37;
             this.PanelTables.Text = "guna2ContainerControl1";
             // 
             // UCTables
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::GUI.Properties.Resources.raucu;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -111,9 +120,8 @@
             this.Controls.Add(this.btnArea);
             this.Controls.Add(this.btnTable);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "UCTables";
-            this.Size = new System.Drawing.Size(1499, 985);
+            this.Size = new System.Drawing.Size(1124, 800);
             this.Load += new System.EventHandler(this.UCTables_Load);
             this.ResumeLayout(false);
 
