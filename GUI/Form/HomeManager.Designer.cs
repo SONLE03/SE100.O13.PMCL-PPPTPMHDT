@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Guna.UI2.AnimatorNS.Animation animation2 = new Guna.UI2.AnimatorNS.Animation();
+            Guna.UI2.AnimatorNS.Animation animation1 = new Guna.UI2.AnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeManager));
             this.btnMaximize = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnClose = new Guna.UI2.WinForms.Guna2ControlBox();
@@ -39,9 +39,7 @@
             this.Employees = new Guna.UI2.WinForms.Guna2Button();
             this.Import = new Guna.UI2.WinForms.Guna2Button();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.lbRole = new System.Windows.Forms.Label();
             this.Log_out = new Guna.UI2.WinForms.Guna2Button();
-            this.Avatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.Settings = new Guna.UI2.WinForms.Guna2Button();
             this.Events = new Guna.UI2.WinForms.Guna2Button();
             this.Tables = new Guna.UI2.WinForms.Guna2Button();
@@ -52,12 +50,11 @@
             this.guna2Transition1 = new Guna.UI2.WinForms.Guna2Transition();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.btnMinimize = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.TabUC = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.MouseDetect = new System.Windows.Forms.Timer(this.components);
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
-            this.TabUC = new Guna.UI2.WinForms.Guna2ContainerControl();
             this.Menu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Avatar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,9 +104,7 @@
             this.Menu.Controls.Add(this.Employees);
             this.Menu.Controls.Add(this.Import);
             this.Menu.Controls.Add(this.guna2CirclePictureBox1);
-            this.Menu.Controls.Add(this.lbRole);
             this.Menu.Controls.Add(this.Log_out);
-            this.Menu.Controls.Add(this.Avatar);
             this.Menu.Controls.Add(this.Settings);
             this.Menu.Controls.Add(this.Events);
             this.Menu.Controls.Add(this.Tables);
@@ -277,20 +272,6 @@
             this.guna2CirclePictureBox1.TabStop = false;
             this.guna2CirclePictureBox1.UseTransparentBackground = true;
             // 
-            // lbRole
-            // 
-            this.lbRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbRole.AutoSize = true;
-            this.lbRole.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.lbRole, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lbRole.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lbRole.ForeColor = System.Drawing.Color.White;
-            this.lbRole.Location = new System.Drawing.Point(96, 850);
-            this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(96, 28);
-            this.lbRole.TabIndex = 3;
-            this.lbRole.Text = "Manager";
-            // 
             // Log_out
             // 
             this.Log_out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -319,22 +300,6 @@
             this.Log_out.Text = "Log out";
             this.Log_out.TextOffset = new System.Drawing.Point(15, 0);
             this.Log_out.Click += new System.EventHandler(this.Log_out_Click);
-            // 
-            // Avatar
-            // 
-            this.Avatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Avatar.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.Avatar, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Avatar.Image = global::GUI.Properties.Resources.Ellipse_5;
-            this.Avatar.ImageRotate = 0F;
-            this.Avatar.Location = new System.Drawing.Point(21, 836);
-            this.Avatar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Avatar.Name = "Avatar";
-            this.Avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Avatar.Size = new System.Drawing.Size(53, 53);
-            this.Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Avatar.TabIndex = 8;
-            this.Avatar.TabStop = false;
             // 
             // Settings
             // 
@@ -559,22 +524,22 @@
             // 
             this.guna2Transition1.AnimationType = Guna.UI2.AnimatorNS.AnimationType.HorizBlind;
             this.guna2Transition1.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.guna2Transition1.DefaultAnimation = animation2;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 0;
+            animation1.Padding = new System.Windows.Forms.Padding(0);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 0F;
+            animation1.TransparencyCoeff = 0F;
+            this.guna2Transition1.DefaultAnimation = animation1;
             // 
             // guna2ControlBox1
             // 
@@ -612,6 +577,18 @@
             this.btnMinimize.Size = new System.Drawing.Size(41, 21);
             this.btnMinimize.TabIndex = 63;
             // 
+            // TabUC
+            // 
+            this.TabUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Transition1.SetDecoration(this.TabUC, Guna.UI2.AnimatorNS.DecorationType.None);
+            this.TabUC.Location = new System.Drawing.Point(101, 0);
+            this.TabUC.Name = "TabUC";
+            this.TabUC.Size = new System.Drawing.Size(1499, 985);
+            this.TabUC.TabIndex = 64;
+            this.TabUC.Text = "guna2ContainerControl1";
+            // 
             // MouseDetect
             // 
             this.MouseDetect.Enabled = true;
@@ -625,18 +602,6 @@
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // TabUC
-            // 
-            this.TabUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.guna2Transition1.SetDecoration(this.TabUC, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.TabUC.Location = new System.Drawing.Point(101, 0);
-            this.TabUC.Name = "TabUC";
-            this.TabUC.Size = new System.Drawing.Size(1499, 985);
-            this.TabUC.TabIndex = 64;
-            this.TabUC.Text = "guna2ContainerControl1";
             // 
             // HomeManager
             // 
@@ -662,9 +627,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.HomeManager_Load);
             this.Menu.ResumeLayout(false);
-            this.Menu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Avatar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -675,9 +638,7 @@
         private Guna.UI2.WinForms.Guna2Button Employees;
         private Guna.UI2.WinForms.Guna2Button Import;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private System.Windows.Forms.Label lbRole;
         private Guna.UI2.WinForms.Guna2Button Log_out;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox Avatar;
         private Guna.UI2.WinForms.Guna2Button Settings;
         private Guna.UI2.WinForms.Guna2Button Events;
         private Guna.UI2.WinForms.Guna2Button Tables;

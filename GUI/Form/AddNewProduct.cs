@@ -52,6 +52,7 @@ namespace GUI
             txtPrice.Clear();
             txtProductname.Clear();
             SizeGrid.Rows.Clear();
+            picture_product.Image = null;
         }
 
         private void btn_AddSize_Click(object sender, EventArgs e)

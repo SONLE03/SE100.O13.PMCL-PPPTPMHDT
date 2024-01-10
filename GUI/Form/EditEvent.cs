@@ -91,7 +91,7 @@ namespace GUI
                     MessageBox.Show("Lack of information. Please check again", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                if (int.Parse(txtSaleValue.Text) <= 0)
+                if (!String.IsNullOrEmpty(txtSaleValue.Text) && Convert.ToInt32(txtSaleValue.Text) <= 0)
                 {
                     MessageBox.Show("Sale value must be greater than zero", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;

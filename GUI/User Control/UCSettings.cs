@@ -17,16 +17,16 @@ namespace GUI
     {
         private C_USER user;
         private string fileImageAvatar;
-        public UCSettings(C_USER user)
+        public UCSettings()
         {
             InitializeComponent();
-            this.user = user;
-            Bind();
+            Bind(BUSUser.Instance.GetUserById(BUSUser.Instance.idUserLogin));
         }
-        private void Bind()
+        private void Bind(C_USER user)
         {
             try
             {
+                this.user = user;
                 lbRole.Text = user.GROUPUSER.GroupUserName;
                 txtUserFullName.Text = user.UserFullName;
                 txtEmail.Text = user.Email;
@@ -57,6 +57,7 @@ namespace GUI
                 {
                     var isSuccess = BUSUser.Instance.UpdUser(user.id, txtUserFullName.Text, DateOfBirth.Value, txtAddress.Text, txtEmail.Text, txtPhone.Text
                         , user.GroupUserID, user.Status, fileImageAvatar);
+                    Bind(BUSUser.Instance.GetUserById(BUSUser.Instance.idUserLogin));
                 }
                 else
                 {
@@ -93,7 +94,7 @@ namespace GUI
         {
             ChangePassword changePassword = new ChangePassword(user);
             changePassword.ShowDialog();
-            Bind();
+            Bind(BUSUser.Instance.GetUserById(BUSUser.Instance.idUserLogin));
         }
     }
 }

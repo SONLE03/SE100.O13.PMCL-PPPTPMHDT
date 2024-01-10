@@ -33,12 +33,23 @@ namespace GUI
 
             foreach (var sv in listService)
             {
-                if (userGroup.SERVICEs.Contains(sv))
+                bool containsService = false;
+                foreach (var userGroupService in userGroup.SERVICEs)
                 {
-                    gridviewUserGroupDetails.Rows.Add(1, sv.ServiceID, sv.ServiceID, sv.ServiceName, sv.ScreenName);
+                    if (userGroupService.id == sv.id)
+                    {
+                        containsService = true;
+                        break;
+                    }
+                }
+                if (containsService)
+                {
+                    gridviewUserGroupDetails.Rows.Add(1, sv.id, sv.ServiceID, sv.ServiceName, sv.ScreenName);
                 }
                 else
-                    gridviewUserGroupDetails.Rows.Add(0, sv.ServiceID, sv.ServiceID, sv.ServiceName, sv.ScreenName);
+                {
+                    gridviewUserGroupDetails.Rows.Add(0, sv.id, sv.ServiceID, sv.ServiceName, sv.ScreenName);
+                }
             }
         }
         private List<SERVICE> listService()

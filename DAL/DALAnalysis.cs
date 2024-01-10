@@ -34,9 +34,10 @@ namespace DAL
         {
             try
             {
+                int currentYear = DateTime.Now.Year;
                 var topSellingDrinks = CFEntities.Instance.DRINKS
                     .GroupJoin(
-                        CFEntities.Instance.BILL_DETAIL,
+                        CFEntities.Instance.BILL_DETAIL.Where(detail => detail.BILL.BillDate.Year == currentYear),
                         drink => drink.id,
                         detail => detail.DrinksID,
                         (drink, details) => new TopSellingDrinkDTO

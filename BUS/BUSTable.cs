@@ -59,7 +59,7 @@ namespace BUS
         public bool checkAreaStatus(int areaid, string status)
         {
             AREA area = DALArea.Instance.GetAreaById(areaid);
-            if (area.Status.Equals("InActive") && status.Equals("Active")) return false;
+            if (area.Status.ToLower().Equals("inactive") && status.Equals("Active")) return false;
             return true;
         }
         public int checkAreaCapacity(int areaid, int capacity)

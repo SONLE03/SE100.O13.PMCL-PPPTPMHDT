@@ -28,9 +28,9 @@ namespace DTO
             string inputOTP = txtEmailCode.Text.ToString();
             if (otp.Equals(inputOTP))
             {
+                this.Hide();
                 ChangePassword changePassword = new ChangePassword(user);
                 changePassword.Show();
-                this.Hide();
             }   
             else
             {

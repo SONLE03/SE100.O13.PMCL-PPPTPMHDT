@@ -43,29 +43,40 @@ namespace GUI
 
         private void btn_sendcode_Click(object sender, EventArgs e)
         {
-            string userName = txtUsername.Text.ToString();
-            string OTP = GenerateOTP();
-            
-            var user = BUSUser.Instance.GetUserByUsername(userName);
-
-            if (!String.IsNullOrEmpty(userName))
+            try
             {
-                if (SendEmail(user.Email, OTP) == true)
+                string userName = txtUsername.Text.ToString();
+
+                var user = BUSUser.Instance.GetUserByUsername(userName);
+                if (user == null)
                 {
-                    this.Hide();
-                    EnterCode enterCode = new EnterCode(user, OTP);
-                    enterCode.ShowDialog();
+                    MessageBox.Show("Not found username: " + userName, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string OTP = GenerateOTP();
+                if (!String.IsNullOrEmpty(userName))
+                {
+                    if (SendEmail(user.Email, OTP) == true)
+                    {
+                        this.Hide();
+                        EnterCode enterCode = new EnterCode(user, OTP);
+                        enterCode.ShowDialog();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Send OTP failed ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Not found username: " + userName);
+                    MessageBox.Show("You must enter your username and email", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch
             {
-                MessageBox.Show("You must enter your username and email");
-            }
 
+            }
         }
 
         private bool SendEmail(string toEmail, object otp)

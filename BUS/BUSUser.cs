@@ -84,8 +84,7 @@ namespace BUS
         {
             if (username.Length < 6)
                 return false;
-            // Kiểm tra ký tự chấp nhận
-            if (!Regex.IsMatch(username, "^[a-z0-9A-Z_àáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹýÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ ]*$"))
+            if (!Regex.IsMatch(username, "^[a-z0-9A-Z_àáãạảăắằẳẵặâấầẩẫậèéẹẻẽêềếểễệđìíĩỉịòóõọỏôốồổỗộơớờởỡợùúũụủưứừửữựỳỵỷỹýÀÁÃẠẢĂẮẰẲẴẶÂẤẦẨẪẬÈÉẸẺẼÊỀẾỂỄỆĐÌÍĨỈỊÒÓÕỌỎÔỐỒỔỖỘƠỚỜỞỠỢÙÚŨỤỦƯỨỪỬỮỰỲỴỶỸÝ]*$"))
                 return false;
             return true;
         }
@@ -118,7 +117,7 @@ namespace BUS
                 MessageBox.Show("The UserName already exists!", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            else if (UserNameValidator(UserName))
+            else if (!UserNameValidator(UserName))
             {
                 MessageBox.Show("Invalid UserName", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -135,7 +134,7 @@ namespace BUS
             }
             else if (!DateOfBirthValidator(DateofBirth))
             {
-                MessageBox.Show($"User must be over 18 years old and under {BUSRule.Instance.GetAllRule().MaximumAge} years old ", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"User must be over {BUSRule.Instance.GetAllRule().MinimumAge} years old and under {BUSRule.Instance.GetAllRule().MaximumAge} years old ", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (!EmailValidator(Email))
@@ -173,7 +172,7 @@ namespace BUS
             }
             else if (!DateOfBirthValidator(DateofBirth))
             {
-                MessageBox.Show($"User must be over 18 years old and under {BUSRule.Instance.GetAllRule().MaximumAge} years old ", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"User must be over {BUSRule.Instance.GetAllRule().MinimumAge} years old and under {BUSRule.Instance.GetAllRule().MaximumAge} years old ", "Notification", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else if (!EmailValidator(Email))

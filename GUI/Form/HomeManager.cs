@@ -27,12 +27,13 @@ namespace GUI
         // Service 9: Rule
         // Service 10: Setting
         private C_USER user;
-        private static List<int> services = new List<int>();
+        private static List<int> services;
         public HomeManager(C_USER user)
         {
             InitializeComponent();
             this.user = user;
             BUSUser.Instance.SetUserLoginInfo(user.id);
+            services = new List<int>();
             foreach (var service in BUSUser.Instance.GetUserById(user.id).GROUPUSER.SERVICEs)
             {
                 services.Add(service.id);
@@ -77,27 +78,27 @@ namespace GUI
         bool menuExpand = false;
         private void MouseDetect_Tick(object sender, EventArgs e)
         {
-            if (!guna2Transition1.IsCompleted) return;
-            if (Menu.ClientRectangle.Contains(PointToClient(Control.MousePosition)))
-            {
-                if (!menuExpand)
-                {
-                    menuExpand = true;
-                    Menu.Visible = false;
-                    Menu.Width = 200;
-                    guna2Transition1.Show(Menu);
-                }
-            }
-            else
-            {
-                if (menuExpand)
-                {
-                    menuExpand = false;
-                    Menu.Visible = false;
-                    Menu.Width = 75;
-                    guna2Transition1.Show(Menu);
-                }
-            }
+            //if (!guna2Transition1.IsCompleted) return;
+            //if (Menu.ClientRectangle.Contains(PointToClient(Control.MousePosition)))
+            //{
+            //    if (!menuExpand)
+            //    {
+            //        menuExpand = true;
+            //        Menu.Visible = false;
+            //        Menu.Width = 200;
+            //        guna2Transition1.Show(Menu);
+            //    }
+            //}
+            //else
+            //{
+            //    if (menuExpand)
+            //    {
+            //        menuExpand = false;
+            //        Menu.Visible = false;
+            //        Menu.Width = 75;
+            //        guna2Transition1.Show(Menu);
+            //    }
+            //}
         }
 
         private void Home_Click(object sender, EventArgs e)
@@ -196,7 +197,7 @@ namespace GUI
             //ucSetting.Dock = DockStyle.Fill;
             //this.TabUC.Controls.Clear();
             //this.TabUC.Controls.Add(ucSetting);
-            CheckPermissionAndOpenControl(10, new UCSettings(user));
+            CheckPermissionAndOpenControl(10, new UCSettings());
             CheckedBtnState(sender);
         }
 

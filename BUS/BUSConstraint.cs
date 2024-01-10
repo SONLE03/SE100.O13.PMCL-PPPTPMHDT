@@ -31,7 +31,7 @@ namespace BUS
             TimeSpan span = dueDate - startDate;
             int gap = span.Days;
             DateTime checkDate = type == 1 ? startDate: dueDate;
-            return (checkDate >= DateTime.Now) && (dueDate.Date >= startDate.Date) && gap <= BUSRule.Instance.GetAllRule().MaximumDateForEvent;
+            return (checkDate.Date >= DateTime.Now.Date) && (dueDate.Date >= startDate.Date) && gap <= BUSRule.Instance.GetAllRule().MaximumDateForEvent;
         }
     }
 }
