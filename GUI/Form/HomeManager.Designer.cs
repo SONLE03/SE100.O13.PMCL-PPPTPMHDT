@@ -273,24 +273,6 @@
             this.guna2CirclePictureBox1.UseTransparentBackground = true;
             this.guna2CirclePictureBox1.Click += new System.EventHandler(this.guna2CirclePictureBox1_Click);
             // 
-<<<<<<< HEAD
-=======
-            // lbRole
-            // 
-            this.lbRole.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbRole.AutoSize = true;
-            this.lbRole.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.lbRole, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.lbRole.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.lbRole.ForeColor = System.Drawing.Color.White;
-            this.lbRole.Location = new System.Drawing.Point(72, 691);
-            this.lbRole.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(78, 21);
-            this.lbRole.TabIndex = 3;
-            this.lbRole.Text = "Manager";
-            // 
->>>>>>> 262b3f2c826ac3daa57364e4400ade13280c9a9d
             // Log_out
             // 
             this.Log_out.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
@@ -320,25 +302,6 @@
             this.Log_out.TextOffset = new System.Drawing.Point(15, 0);
             this.Log_out.Click += new System.EventHandler(this.Log_out_Click);
             // 
-<<<<<<< HEAD
-=======
-            // Avatar
-            // 
-            this.Avatar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.Avatar.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.Avatar, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.Avatar.Image = global::GUI.Properties.Resources.Ellipse_5;
-            this.Avatar.ImageRotate = 0F;
-            this.Avatar.Location = new System.Drawing.Point(16, 679);
-            this.Avatar.Margin = new System.Windows.Forms.Padding(2);
-            this.Avatar.Name = "Avatar";
-            this.Avatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.Avatar.Size = new System.Drawing.Size(40, 43);
-            this.Avatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.Avatar.TabIndex = 8;
-            this.Avatar.TabStop = false;
-            // 
->>>>>>> 262b3f2c826ac3daa57364e4400ade13280c9a9d
             // Settings
             // 
             this.Settings.Animated = true;
@@ -620,20 +583,10 @@
             this.TabUC.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< HEAD
             this.guna2Transition1.SetDecoration(this.TabUC, Guna.UI2.AnimatorNS.DecorationType.None);
             this.TabUC.Location = new System.Drawing.Point(101, 0);
             this.TabUC.Name = "TabUC";
             this.TabUC.Size = new System.Drawing.Size(1499, 985);
-=======
-            this.TabUC.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Transition1.SetDecoration(this.TabUC, Guna.UI2.AnimatorNS.DecorationType.None);
-            this.TabUC.FillColor = System.Drawing.Color.Transparent;
-            this.TabUC.Location = new System.Drawing.Point(76, 0);
-            this.TabUC.Margin = new System.Windows.Forms.Padding(2);
-            this.TabUC.Name = "TabUC";
-            this.TabUC.Size = new System.Drawing.Size(1124, 800);
->>>>>>> 262b3f2c826ac3daa57364e4400ade13280c9a9d
             this.TabUC.TabIndex = 64;
             this.TabUC.Text = "guna2ContainerControl1";
             // 

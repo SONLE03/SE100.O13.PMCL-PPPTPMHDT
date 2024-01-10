@@ -33,10 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductDetail));
-<<<<<<< HEAD
-=======
-            this.btn_OK = new Guna.UI2.WinForms.Guna2GradientButton();
->>>>>>> 262b3f2c826ac3daa57364e4400ade13280c9a9d
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -68,37 +64,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.SizeGrid)).BeginInit();
             this.SuspendLayout();
             // 
-<<<<<<< HEAD
-=======
-            // btn_OK
-            // 
-            this.btn_OK.BackColor = System.Drawing.Color.Transparent;
-            this.btn_OK.BorderRadius = 15;
-            this.btn_OK.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btn_OK.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btn_OK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_OK.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btn_OK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btn_OK.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btn_OK.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(90)))), ((int)(((byte)(21)))));
-            this.btn_OK.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_OK.ForeColor = System.Drawing.Color.White;
-            this.btn_OK.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
-            this.btn_OK.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_OK.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(182)))), ((int)(((byte)(134)))));
-            this.btn_OK.Location = new System.Drawing.Point(279, 527);
-            this.btn_OK.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_OK.Name = "btn_OK";
-            this.btn_OK.ShadowDecoration.BorderRadius = 15;
-            this.btn_OK.ShadowDecoration.Color = System.Drawing.Color.DarkGray;
-            this.btn_OK.ShadowDecoration.Enabled = true;
-            this.btn_OK.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(2, 2, 7, 7);
-            this.btn_OK.Size = new System.Drawing.Size(145, 35);
-            this.btn_OK.TabIndex = 45;
-            this.btn_OK.Text = "Close";
-            this.btn_OK.Click += new System.EventHandler(this.btn_OK_Click);
-            // 
->>>>>>> 262b3f2c826ac3daa57364e4400ade13280c9a9d
             // label4
             // 
             this.label4.AutoSize = true;
@@ -437,10 +402,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel_unit);
             this.Controls.Add(this.panel_productname);
-<<<<<<< HEAD
-=======
-            this.Controls.Add(this.btn_OK);
->>>>>>> 262b3f2c826ac3daa57364e4400ade13280c9a9d
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -468,10 +429,6 @@
         }
 
         #endregion
-<<<<<<< HEAD
-=======
-        private Guna.UI2.WinForms.Guna2GradientButton btn_OK;
->>>>>>> 262b3f2c826ac3daa57364e4400ade13280c9a9d
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
